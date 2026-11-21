@@ -21,12 +21,16 @@ def dump(jar, prefix, dest):
             for i in range(0, len(cls), 300):
                 r = subprocess.run(['javap', '-p', '-cp', jar] + cls[i:i+300], capture_output=True, text=True)
                 f.write(r.stdout)
-if mc:
-    dump(mc[0], 'net/minecraft/', 'minecraft')
-    dump(mc[0], 'com/mojang/', 'minecraft')
-    z = zipfile.ZipFile(mc[0])
+pick = [j for j in mc if os.path.basename(j) in ('minecraft-client.jar', 'minecraft-common.jar')] or mc[:1]
+print('dumping', pick)
+for j in pick:
+    dest = 'minecraft-client' if 'client' in os.path.basename(j) else 'minecraft'
+    dump(j, 'net/minecraft/', dest)
+    dump(j, 'com/mojang/', dest)
+    z = zipfile.ZipFile(j)
     for n in z.namelist():
-        if n.startswith('data/minecraft/recipe/') or n == 'assets/minecraft/lang/en_us.json':
+        if n.endswith('/'): continue
+        if n.startswith('data/minecraft/recipe/') or n.startswith('assets/minecraft/lang/'):
             p = os.path.join(out, 'files', n); os.makedirs(os.path.dirname(p), exist_ok=True)
             open(p, 'wb').write(z.read(n))
 seen = set()
