@@ -1,0 +1,780 @@
+Compiled from "BlockColumnConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final java.util.List<net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration$Layer> layers;
+  private final net.minecraft.core.Direction direction;
+  private final net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate allowedPlacement;
+  private final boolean prioritizeTip;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration(java.util.List<net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration$Layer>, net.minecraft.core.Direction, net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate, boolean);
+  public static net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration$Layer layer(net.minecraft.util.valueproviders.IntProvider, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider);
+  public static net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration simple(net.minecraft.util.valueproviders.IntProvider, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration$Layer> layers();
+  public net.minecraft.core.Direction direction();
+  public net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate allowedPlacement();
+  public boolean prioritizeTip();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "SculkPatchConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.SculkPatchConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final int chargeCount;
+  private final int amountPerCharge;
+  private final int spreadAttempts;
+  private final int growthRounds;
+  private final int spreadRounds;
+  private final net.minecraft.util.valueproviders.IntProvider extraRareGrowths;
+  private final float catalystChance;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.SculkPatchConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.SculkPatchConfiguration(int, int, int, int, int, net.minecraft.util.valueproviders.IntProvider, float);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int chargeCount();
+  public int amountPerCharge();
+  public int spreadAttempts();
+  public int growthRounds();
+  public int spreadRounds();
+  public net.minecraft.util.valueproviders.IntProvider extraRareGrowths();
+  public float catalystChance();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "SimpleBlockConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider toPlace;
+  private final boolean scheduleTick;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration(net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider);
+  public net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration(net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, boolean);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider toPlace();
+  public boolean scheduleTick();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Boolean lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration);
+  private static net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration);
+  static {};
+}
+Compiled from "BlockColumnConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration$Layer extends java.lang.Record {
+  private final net.minecraft.util.valueproviders.IntProvider height;
+  private final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider state;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration$Layer> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration$Layer(net.minecraft.util.valueproviders.IntProvider, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.util.valueproviders.IntProvider height();
+  public net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider state();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "FeatureConfiguration.java"
+public interface net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration NONE;
+  public default java.util.stream.Stream<net.minecraft.core.Holder<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>> getSubFeatures();
+  static {};
+}
+Compiled from "RandomFeatureConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final java.util.List<net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature> features;
+  private final net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature> defaultFeature;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration(java.util.List<net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature>, net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature>);
+  public java.util.stream.Stream<net.minecraft.core.Holder<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>> getSubFeatures();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature> features();
+  public net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature> defaultFeature();
+  private static java.util.stream.Stream lambda$getSubFeatures$0(net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.core.Holder lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration);
+  private static java.util.List lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration);
+  static {};
+}
+Compiled from "ReplaceBlockConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.ReplaceBlockConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.ReplaceBlockConfiguration> CODEC;
+  public final java.util.List<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration$TargetBlockState> targetStates;
+  public net.minecraft.world.level.levelgen.feature.configurations.ReplaceBlockConfiguration(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.BlockState);
+  public net.minecraft.world.level.levelgen.feature.configurations.ReplaceBlockConfiguration(java.util.List<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration$TargetBlockState>);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.util.List lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.ReplaceBlockConfiguration);
+  static {};
+}
+Compiled from "SpeleothemClusterConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final net.minecraft.world.level.block.state.BlockState baseBlock;
+  private final net.minecraft.world.level.block.state.BlockState pointedBlock;
+  private final net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block> replaceableBlocks;
+  private final int floorToCeilingSearchRange;
+  private final net.minecraft.util.valueproviders.IntProvider height;
+  private final net.minecraft.util.valueproviders.IntProvider radius;
+  private final int maxStalagmiteStalactiteHeightDiff;
+  private final int heightDeviation;
+  private final net.minecraft.util.valueproviders.IntProvider speleothemBlockLayerThickness;
+  private final net.minecraft.util.valueproviders.FloatProvider density;
+  private final net.minecraft.util.valueproviders.FloatProvider wetness;
+  private final float chanceOfSpeleothemAtMaxDistanceFromCenter;
+  private final int maxDistanceFromEdgeAffectingChanceOfSpeleothem;
+  private final int maxDistanceFromCenterAffectingHeightBias;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block>, int, net.minecraft.util.valueproviders.IntProvider, net.minecraft.util.valueproviders.IntProvider, int, int, net.minecraft.util.valueproviders.IntProvider, net.minecraft.util.valueproviders.FloatProvider, net.minecraft.util.valueproviders.FloatProvider, float, int, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.block.state.BlockState baseBlock();
+  public net.minecraft.world.level.block.state.BlockState pointedBlock();
+  public net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block> replaceableBlocks();
+  public int floorToCeilingSearchRange();
+  public net.minecraft.util.valueproviders.IntProvider height();
+  public net.minecraft.util.valueproviders.IntProvider radius();
+  public int maxStalagmiteStalactiteHeightDiff();
+  public int heightDeviation();
+  public net.minecraft.util.valueproviders.IntProvider speleothemBlockLayerThickness();
+  public net.minecraft.util.valueproviders.FloatProvider density();
+  public net.minecraft.util.valueproviders.FloatProvider wetness();
+  public float chanceOfSpeleothemAtMaxDistanceFromCenter();
+  public int maxDistanceFromEdgeAffectingChanceOfSpeleothem();
+  public int maxDistanceFromCenterAffectingHeightBias();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Integer lambda$static$14(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private static java.lang.Integer lambda$static$13(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private static java.lang.Float lambda$static$12(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private static net.minecraft.util.valueproviders.FloatProvider lambda$static$11(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private static net.minecraft.util.valueproviders.FloatProvider lambda$static$10(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private static net.minecraft.util.valueproviders.IntProvider lambda$static$9(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private static java.lang.Integer lambda$static$8(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private static java.lang.Integer lambda$static$7(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private static net.minecraft.util.valueproviders.IntProvider lambda$static$6(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private static net.minecraft.util.valueproviders.IntProvider lambda$static$5(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private static java.lang.Integer lambda$static$4(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private static net.minecraft.core.HolderSet lambda$static$3(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  static {};
+}
+Compiled from "DiskConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.DiskConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider stateProvider;
+  private final net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate target;
+  private final net.minecraft.util.valueproviders.IntProvider radius;
+  private final int halfHeight;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.DiskConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.DiskConfiguration(net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate, net.minecraft.util.valueproviders.IntProvider, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider stateProvider();
+  public net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate target();
+  public net.minecraft.util.valueproviders.IntProvider radius();
+  public int halfHeight();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "FallenTreeConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration> CODEC;
+  public final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider trunkProvider;
+  public final net.minecraft.util.valueproviders.IntProvider logLength;
+  public final java.util.List<net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator> stumpDecorators;
+  public final java.util.List<net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator> logDecorators;
+  protected net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration(net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, net.minecraft.util.valueproviders.IntProvider, java.util.List<net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator>, java.util.List<net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator>);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.util.List lambda$static$4(net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration);
+  private static java.util.List lambda$static$3(net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration);
+  private static net.minecraft.util.valueproviders.IntProvider lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration);
+  private static net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration);
+  static {};
+}
+Compiled from "TwistingVinesConfig.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.TwistingVinesConfig extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final int spreadWidth;
+  private final int spreadHeight;
+  private final int maxHeight;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.TwistingVinesConfig> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.TwistingVinesConfig(int, int, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int spreadWidth();
+  public int spreadHeight();
+  public int maxHeight();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "DeltaFeatureConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration> CODEC;
+  private final net.minecraft.world.level.block.state.BlockState contents;
+  private final net.minecraft.world.level.block.state.BlockState rim;
+  private final net.minecraft.util.valueproviders.IntProvider size;
+  private final net.minecraft.util.valueproviders.IntProvider rimSize;
+  public net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.BlockState, net.minecraft.util.valueproviders.IntProvider, net.minecraft.util.valueproviders.IntProvider);
+  public net.minecraft.world.level.block.state.BlockState contents();
+  public net.minecraft.world.level.block.state.BlockState rim();
+  public net.minecraft.util.valueproviders.IntProvider size();
+  public net.minecraft.util.valueproviders.IntProvider rimSize();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.util.valueproviders.IntProvider lambda$static$4(net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration);
+  private static net.minecraft.util.valueproviders.IntProvider lambda$static$3(net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration);
+  static {};
+}
+Compiled from "SpringConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration> CODEC;
+  public final net.minecraft.world.level.material.FluidState state;
+  public final boolean requiresBlockBelow;
+  public final int rockCount;
+  public final int holeCount;
+  public final net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block> validBlocks;
+  public net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration(net.minecraft.world.level.material.FluidState, boolean, int, int, net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block>);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.core.HolderSet lambda$static$5(net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration);
+  private static java.lang.Integer lambda$static$4(net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration);
+  private static java.lang.Integer lambda$static$3(net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration);
+  private static java.lang.Boolean lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration);
+  private static net.minecraft.world.level.material.FluidState lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration);
+  static {};
+}
+Compiled from "NetherForestVegetationConfig.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.NetherForestVegetationConfig extends net.minecraft.world.level.levelgen.feature.configurations.BlockPileConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NetherForestVegetationConfig> CODEC;
+  public final int spreadWidth;
+  public final int spreadHeight;
+  public net.minecraft.world.level.levelgen.feature.configurations.NetherForestVegetationConfig(net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, int, int);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Integer lambda$static$3(net.minecraft.world.level.levelgen.feature.configurations.NetherForestVegetationConfig);
+  private static java.lang.Integer lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.NetherForestVegetationConfig);
+  private static net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.NetherForestVegetationConfig);
+  static {};
+}
+Compiled from "OreConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration> CODEC;
+  public final java.util.List<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration$TargetBlockState> targetStates;
+  public final int size;
+  public final float discardChanceOnAirExposure;
+  public net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration(java.util.List<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration$TargetBlockState>, int, float);
+  public net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration(java.util.List<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration$TargetBlockState>, int);
+  public net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration(net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest, net.minecraft.world.level.block.state.BlockState, int, float);
+  public net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration(net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest, net.minecraft.world.level.block.state.BlockState, int);
+  public static net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration$TargetBlockState target(net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest, net.minecraft.world.level.block.state.BlockState);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Float lambda$static$3(net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration);
+  private static java.lang.Integer lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration);
+  private static java.util.List lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration);
+  static {};
+}
+Compiled from "UnderwaterMagmaConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.UnderwaterMagmaConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.UnderwaterMagmaConfiguration> CODEC;
+  public final int floorSearchRange;
+  public final int placementRadiusAroundFloor;
+  public final float placementProbabilityPerValidPosition;
+  public net.minecraft.world.level.levelgen.feature.configurations.UnderwaterMagmaConfiguration(int, int, float);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Float lambda$static$3(net.minecraft.world.level.levelgen.feature.configurations.UnderwaterMagmaConfiguration);
+  private static java.lang.Integer lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.UnderwaterMagmaConfiguration);
+  private static java.lang.Integer lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.UnderwaterMagmaConfiguration);
+  static {};
+}
+Compiled from "VegetationPatchConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block> replaceable;
+  private final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider groundState;
+  private final net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature> vegetationFeature;
+  private final net.minecraft.world.level.levelgen.placement.CaveSurface surface;
+  private final net.minecraft.util.valueproviders.IntProvider depth;
+  private final float extraBottomBlockChance;
+  private final int verticalRange;
+  private final float vegetationChance;
+  private final net.minecraft.util.valueproviders.IntProvider xzRadius;
+  private final float extraEdgeColumnChance;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration(net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block>, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature>, net.minecraft.world.level.levelgen.placement.CaveSurface, net.minecraft.util.valueproviders.IntProvider, float, int, float, net.minecraft.util.valueproviders.IntProvider, float);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block> replaceable();
+  public net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider groundState();
+  public net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature> vegetationFeature();
+  public net.minecraft.world.level.levelgen.placement.CaveSurface surface();
+  public net.minecraft.util.valueproviders.IntProvider depth();
+  public float extraBottomBlockChance();
+  public int verticalRange();
+  public float vegetationChance();
+  public net.minecraft.util.valueproviders.IntProvider xzRadius();
+  public float extraEdgeColumnChance();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "ReplaceSphereConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.ReplaceSphereConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.ReplaceSphereConfiguration> CODEC;
+  public final net.minecraft.world.level.block.state.BlockState targetState;
+  public final net.minecraft.world.level.block.state.BlockState replaceState;
+  private final net.minecraft.util.valueproviders.IntProvider radius;
+  public net.minecraft.world.level.levelgen.feature.configurations.ReplaceSphereConfiguration(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.BlockState, net.minecraft.util.valueproviders.IntProvider);
+  public net.minecraft.util.valueproviders.IntProvider radius();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.util.valueproviders.IntProvider lambda$static$3(net.minecraft.world.level.levelgen.feature.configurations.ReplaceSphereConfiguration);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.ReplaceSphereConfiguration);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.ReplaceSphereConfiguration);
+  static {};
+}
+Compiled from "NoneFeatureConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration INSTANCE;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration();
+  static {};
+}
+Compiled from "EndSpikeConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.EndSpikeConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.EndSpikeConfiguration> CODEC;
+  private final boolean crystalInvulnerable;
+  private final java.util.List<net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike> spikes;
+  private final net.minecraft.core.BlockPos crystalBeamTarget;
+  public net.minecraft.world.level.levelgen.feature.configurations.EndSpikeConfiguration(boolean, java.util.List<net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike>, net.minecraft.core.BlockPos);
+  private net.minecraft.world.level.levelgen.feature.configurations.EndSpikeConfiguration(boolean, java.util.List<net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike>, java.util.Optional<net.minecraft.core.BlockPos>);
+  public boolean isCrystalInvulnerable();
+  public java.util.List<net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike> getSpikes();
+  public net.minecraft.core.BlockPos getCrystalBeamTarget();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.util.Optional lambda$static$3(net.minecraft.world.level.levelgen.feature.configurations.EndSpikeConfiguration);
+  private static java.util.List lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.EndSpikeConfiguration);
+  private static java.lang.Boolean lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.EndSpikeConfiguration);
+  static {};
+}
+Compiled from "GeodeConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.GeodeConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final net.minecraft.world.level.levelgen.GeodeBlockSettings geodeBlockSettings;
+  private final net.minecraft.world.level.levelgen.GeodeLayerSettings geodeLayerSettings;
+  private final net.minecraft.world.level.levelgen.GeodeCrackSettings geodeCrackSettings;
+  private final double usePotentialPlacementsChance;
+  private final double useAlternateLayer0Chance;
+  private final boolean placementsRequireLayer0Alternate;
+  private final net.minecraft.util.valueproviders.IntProvider outerWallDistance;
+  private final net.minecraft.util.valueproviders.IntProvider distributionPoints;
+  private final net.minecraft.util.valueproviders.IntProvider pointOffset;
+  private final int minGenOffset;
+  private final int maxGenOffset;
+  private final double noiseMultiplier;
+  private final int invalidBlocksThreshold;
+  public static final com.mojang.serialization.Codec<java.lang.Double> CHANCE_RANGE;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.GeodeConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.GeodeConfiguration(net.minecraft.world.level.levelgen.GeodeBlockSettings, net.minecraft.world.level.levelgen.GeodeLayerSettings, net.minecraft.world.level.levelgen.GeodeCrackSettings, double, double, boolean, net.minecraft.util.valueproviders.IntProvider, net.minecraft.util.valueproviders.IntProvider, net.minecraft.util.valueproviders.IntProvider, int, int, double, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.levelgen.GeodeBlockSettings geodeBlockSettings();
+  public net.minecraft.world.level.levelgen.GeodeLayerSettings geodeLayerSettings();
+  public net.minecraft.world.level.levelgen.GeodeCrackSettings geodeCrackSettings();
+  public double usePotentialPlacementsChance();
+  public double useAlternateLayer0Chance();
+  public boolean placementsRequireLayer0Alternate();
+  public net.minecraft.util.valueproviders.IntProvider outerWallDistance();
+  public net.minecraft.util.valueproviders.IntProvider distributionPoints();
+  public net.minecraft.util.valueproviders.IntProvider pointOffset();
+  public int minGenOffset();
+  public int maxGenOffset();
+  public double noiseMultiplier();
+  public int invalidBlocksThreshold();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "SpikeConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.SpikeConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final net.minecraft.world.level.block.state.BlockState state;
+  private final net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate canPlaceOn;
+  private final net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate canReplace;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.SpikeConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.SpikeConfiguration(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate, net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.block.state.BlockState state();
+  public net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate canPlaceOn();
+  public net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate canReplace();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "HugeMushroomFeatureConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider capProvider;
+  private final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider stemProvider;
+  private final int foliageRadius;
+  private final net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate canPlaceOn;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration(net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, int, net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider capProvider();
+  public net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider stemProvider();
+  public int foliageRadius();
+  public net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate canPlaceOn();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate lambda$static$4(net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration);
+  private static java.lang.Integer lambda$static$3(net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration);
+  private static net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration);
+  private static net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.level.levelgen.feature.configurations.package-info {
+}
+Compiled from "LargeDripstoneConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration> CODEC;
+  public final net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block> replaceableBlocks;
+  public final int floorToCeilingSearchRange;
+  public final net.minecraft.util.valueproviders.IntProvider columnRadius;
+  public final net.minecraft.util.valueproviders.FloatProvider heightScale;
+  public final float maxColumnRadiusToCaveHeightRatio;
+  public final net.minecraft.util.valueproviders.FloatProvider stalactiteBluntness;
+  public final net.minecraft.util.valueproviders.FloatProvider stalagmiteBluntness;
+  public final net.minecraft.util.valueproviders.FloatProvider windSpeed;
+  public final int minRadiusForWind;
+  public final float minBluntnessForWind;
+  public net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration(net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block>, int, net.minecraft.util.valueproviders.IntProvider, net.minecraft.util.valueproviders.FloatProvider, float, net.minecraft.util.valueproviders.FloatProvider, net.minecraft.util.valueproviders.FloatProvider, net.minecraft.util.valueproviders.FloatProvider, int, float);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Float lambda$static$10(net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration);
+  private static java.lang.Integer lambda$static$9(net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration);
+  private static net.minecraft.util.valueproviders.FloatProvider lambda$static$8(net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration);
+  private static net.minecraft.util.valueproviders.FloatProvider lambda$static$7(net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration);
+  private static net.minecraft.util.valueproviders.FloatProvider lambda$static$6(net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration);
+  private static java.lang.Float lambda$static$5(net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration);
+  private static net.minecraft.util.valueproviders.FloatProvider lambda$static$4(net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration);
+  private static net.minecraft.util.valueproviders.IntProvider lambda$static$3(net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration);
+  private static java.lang.Integer lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration);
+  private static net.minecraft.core.HolderSet lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration);
+  static {};
+}
+Compiled from "BlockStateConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration> CODEC;
+  public final net.minecraft.world.level.block.state.BlockState state;
+  public net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration(net.minecraft.world.level.block.state.BlockState);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$0(net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration);
+  static {};
+}
+Compiled from "LayerConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.LayerConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.LayerConfiguration> CODEC;
+  public final int height;
+  public final net.minecraft.world.level.block.state.BlockState state;
+  public net.minecraft.world.level.levelgen.feature.configurations.LayerConfiguration(int, net.minecraft.world.level.block.state.BlockState);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.LayerConfiguration);
+  private static java.lang.Integer lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.LayerConfiguration);
+  static {};
+}
+Compiled from "TreeConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration$TreeConfigurationBuilder {
+  public final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider trunkProvider;
+  private final net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer trunkPlacer;
+  public final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider foliageProvider;
+  private final net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer foliagePlacer;
+  private final java.util.Optional<net.minecraft.world.level.levelgen.feature.rootplacers.RootPlacer> rootPlacer;
+  private final net.minecraft.world.level.levelgen.feature.featuresize.FeatureSize minimumSize;
+  private java.util.List<net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator> decorators;
+  private boolean ignoreVines;
+  private net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider belowTrunkProvider;
+  public net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration$TreeConfigurationBuilder(net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer, java.util.Optional<net.minecraft.world.level.levelgen.feature.rootplacers.RootPlacer>, net.minecraft.world.level.levelgen.feature.featuresize.FeatureSize, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider);
+  public net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration$TreeConfigurationBuilder(net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer, net.minecraft.world.level.levelgen.feature.featuresize.FeatureSize, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider);
+  public net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration$TreeConfigurationBuilder belowTrunkProvider(net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider);
+  public net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration$TreeConfigurationBuilder decorators(java.util.List<net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator>);
+  public net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration$TreeConfigurationBuilder ignoreVines();
+  public net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration build();
+}
+Compiled from "TemplateFeatureConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.TemplateFeatureConfiguration$TemplateEntry extends java.lang.Record {
+  private final net.minecraft.resources.Identifier template;
+  private final java.util.List<net.minecraft.world.level.block.Rotation> rotations;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.TemplateFeatureConfiguration$TemplateEntry> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.TemplateFeatureConfiguration$TemplateEntry(net.minecraft.resources.Identifier, java.util.List<net.minecraft.world.level.block.Rotation>);
+  public static net.minecraft.world.level.levelgen.feature.configurations.TemplateFeatureConfiguration$TemplateEntry of(net.minecraft.resources.Identifier);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier template();
+  public java.util.List<net.minecraft.world.level.block.Rotation> rotations();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "RootSystemConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.RootSystemConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature> treeFeature;
+  private final int requiredVerticalSpaceForTree;
+  private final int levelTestDistance;
+  private final int maxLevelDeviation;
+  private final int rootRadius;
+  private final net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block> rootReplaceable;
+  private final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider rootStateProvider;
+  private final int rootPlacementAttempts;
+  private final int rootColumnMaxHeight;
+  private final int hangingRootRadius;
+  private final int hangingRootsVerticalSpan;
+  private final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider hangingRootStateProvider;
+  private final int hangingRootPlacementAttempts;
+  private final int allowedVerticalWaterForTree;
+  private final net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate allowedTreePosition;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.RootSystemConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.RootSystemConfiguration(net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature>, int, int, int, int, net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block>, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, int, int, int, int, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, int, int, net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature> treeFeature();
+  public int requiredVerticalSpaceForTree();
+  public int levelTestDistance();
+  public int maxLevelDeviation();
+  public int rootRadius();
+  public net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block> rootReplaceable();
+  public net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider rootStateProvider();
+  public int rootPlacementAttempts();
+  public int rootColumnMaxHeight();
+  public int hangingRootRadius();
+  public int hangingRootsVerticalSpan();
+  public net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider hangingRootStateProvider();
+  public int hangingRootPlacementAttempts();
+  public int allowedVerticalWaterForTree();
+  public net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate allowedTreePosition();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "TemplateFeatureConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.TemplateFeatureConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final net.minecraft.util.random.WeightedList<net.minecraft.world.level.levelgen.feature.configurations.TemplateFeatureConfiguration$TemplateEntry> templates;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.TemplateFeatureConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.TemplateFeatureConfiguration(net.minecraft.util.random.WeightedList<net.minecraft.world.level.levelgen.feature.configurations.TemplateFeatureConfiguration$TemplateEntry>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.util.random.WeightedList<net.minecraft.world.level.levelgen.feature.configurations.TemplateFeatureConfiguration$TemplateEntry> templates();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "CompositeFeatureConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.CompositeFeatureConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final net.minecraft.core.HolderSet<net.minecraft.world.level.levelgen.placement.PlacedFeature> features;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.CompositeFeatureConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.CompositeFeatureConfiguration(net.minecraft.core.HolderSet<net.minecraft.world.level.levelgen.placement.PlacedFeature>);
+  public java.util.stream.Stream<net.minecraft.core.Holder<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>> getSubFeatures();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.HolderSet<net.minecraft.world.level.levelgen.placement.PlacedFeature> features();
+  private static java.util.stream.Stream lambda$getSubFeatures$0(net.minecraft.core.Holder);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "BlockBlobConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.BlockBlobConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final net.minecraft.world.level.block.state.BlockState state;
+  private final net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate canPlaceOn;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.BlockBlobConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.BlockBlobConfiguration(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.block.state.BlockState state();
+  public net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate canPlaceOn();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "EndGatewayConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.EndGatewayConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.EndGatewayConfiguration> CODEC;
+  private final java.util.Optional<net.minecraft.core.BlockPos> exit;
+  private final boolean exact;
+  private net.minecraft.world.level.levelgen.feature.configurations.EndGatewayConfiguration(java.util.Optional<net.minecraft.core.BlockPos>, boolean);
+  public static net.minecraft.world.level.levelgen.feature.configurations.EndGatewayConfiguration knownExit(net.minecraft.core.BlockPos, boolean);
+  public static net.minecraft.world.level.levelgen.feature.configurations.EndGatewayConfiguration delayedExitSearch();
+  public java.util.Optional<net.minecraft.core.BlockPos> getExit();
+  public boolean isExitExact();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Boolean lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.EndGatewayConfiguration);
+  private static java.util.Optional lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.EndGatewayConfiguration);
+  static {};
+}
+Compiled from "BlockPileConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.BlockPileConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.BlockPileConfiguration> CODEC;
+  public final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider stateProvider;
+  public net.minecraft.world.level.levelgen.feature.configurations.BlockPileConfiguration(net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider);
+  private static net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider lambda$static$0(net.minecraft.world.level.levelgen.feature.configurations.BlockPileConfiguration);
+  static {};
+}
+Compiled from "TreeConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate CAN_PLACE_BELOW_TREE_TRUNKS;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration> CODEC;
+  public final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider trunkProvider;
+  public final net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer trunkPlacer;
+  public final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider foliageProvider;
+  public final net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer foliagePlacer;
+  public final java.util.Optional<net.minecraft.world.level.levelgen.feature.rootplacers.RootPlacer> rootPlacer;
+  public final net.minecraft.world.level.levelgen.feature.featuresize.FeatureSize minimumSize;
+  public final java.util.List<net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator> decorators;
+  public final boolean ignoreVines;
+  public final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider belowTrunkProvider;
+  protected net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration(net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer, java.util.Optional<net.minecraft.world.level.levelgen.feature.rootplacers.RootPlacer>, net.minecraft.world.level.levelgen.feature.featuresize.FeatureSize, java.util.List<net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator>, boolean, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider);
+  public static net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider defaultPlaceBelowTreeTrunkProvider(net.minecraft.core.HolderGetter<net.minecraft.world.level.biome.Biome>);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider lambda$static$9(net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration);
+  private static java.lang.Boolean lambda$static$8(net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration);
+  private static java.util.List lambda$static$7(net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration);
+  private static net.minecraft.world.level.levelgen.feature.featuresize.FeatureSize lambda$static$6(net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration);
+  private static java.util.Optional lambda$static$5(net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration);
+  private static net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer lambda$static$4(net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration);
+  private static net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider lambda$static$3(net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration);
+  private static net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacer lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration);
+  private static net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration);
+  static {};
+}
+Compiled from "ProbabilityFeatureConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration> CODEC;
+  public final float probability;
+  public net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration(float);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Float lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration);
+  static {};
+}
+Compiled from "SpeleothemConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final net.minecraft.world.level.block.state.BlockState baseBlock;
+  private final net.minecraft.world.level.block.state.BlockState pointedBlock;
+  private final net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block> replaceableBlocks;
+  private final float chanceOfTallerGeneration;
+  private final float chanceOfDirectionalSpread;
+  private final float chanceOfSpreadRadius2;
+  private final float chanceOfSpreadRadius3;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block>, float, float, float, float);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.block.state.BlockState baseBlock();
+  public net.minecraft.world.level.block.state.BlockState pointedBlock();
+  public net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block> replaceableBlocks();
+  public float chanceOfTallerGeneration();
+  public float chanceOfDirectionalSpread();
+  public float chanceOfSpreadRadius2();
+  public float chanceOfSpreadRadius3();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Float lambda$static$7(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration);
+  private static java.lang.Float lambda$static$6(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration);
+  private static java.lang.Float lambda$static$5(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration);
+  private static java.lang.Float lambda$static$4(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration);
+  private static net.minecraft.core.HolderSet lambda$static$3(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration);
+  static {};
+}
+Compiled from "RandomBooleanFeatureConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.RandomBooleanFeatureConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.RandomBooleanFeatureConfiguration> CODEC;
+  public final net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature> featureTrue;
+  public final net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature> featureFalse;
+  public net.minecraft.world.level.levelgen.feature.configurations.RandomBooleanFeatureConfiguration(net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature>, net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature>);
+  public java.util.stream.Stream<net.minecraft.core.Holder<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>> getSubFeatures();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.core.Holder lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.RandomBooleanFeatureConfiguration);
+  private static net.minecraft.core.Holder lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.RandomBooleanFeatureConfiguration);
+  static {};
+}
+Compiled from "FallenTreeConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration$FallenTreeConfigurationBuilder {
+  private final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider trunkProvider;
+  private final net.minecraft.util.valueproviders.IntProvider logLength;
+  private java.util.List<net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator> stumpDecorators;
+  private java.util.List<net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator> logDecorators;
+  public net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration$FallenTreeConfigurationBuilder(net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, net.minecraft.util.valueproviders.IntProvider);
+  public net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration$FallenTreeConfigurationBuilder stumpDecorators(java.util.List<net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator>);
+  public net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration$FallenTreeConfigurationBuilder logDecorators(java.util.List<net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator>);
+  public net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration build();
+}
+Compiled from "MultifaceGrowthConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration> CODEC;
+  public final net.minecraft.world.level.block.Block placeBlock;
+  public final int searchRange;
+  public final boolean canPlaceOnFloor;
+  public final boolean canPlaceOnCeiling;
+  public final boolean canPlaceOnWall;
+  public final float chanceOfSpreading;
+  public final net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block> canBePlacedOn;
+  private final it.unimi.dsi.fastutil.objects.ObjectArrayList<net.minecraft.core.Direction> validDirections;
+  private static com.mojang.serialization.DataResult<net.minecraft.world.level.block.Block> validateBlock(net.minecraft.world.level.block.Block);
+  public net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration(net.minecraft.world.level.block.Block, int, boolean, boolean, boolean, float, net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block>);
+  public java.util.List<net.minecraft.core.Direction> getShuffledDirectionsExcept(net.minecraft.util.RandomSource, net.minecraft.core.Direction);
+  public java.util.List<net.minecraft.core.Direction> getShuffledDirections(net.minecraft.util.RandomSource);
+  private static boolean lambda$getShuffledDirectionsExcept$0(net.minecraft.core.Direction, net.minecraft.core.Direction);
+  private static java.lang.String lambda$validateBlock$0();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.core.HolderSet lambda$static$7(net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration);
+  private static java.lang.Float lambda$static$6(net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration);
+  private static java.lang.Boolean lambda$static$5(net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration);
+  private static java.lang.Boolean lambda$static$4(net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration);
+  private static java.lang.Boolean lambda$static$3(net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration);
+  private static java.lang.Integer lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration);
+  private static net.minecraft.world.level.block.Block lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration);
+  static {};
+}
+Compiled from "ColumnFeatureConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.ColumnFeatureConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.ColumnFeatureConfiguration> CODEC;
+  private final net.minecraft.util.valueproviders.IntProvider reach;
+  private final net.minecraft.util.valueproviders.IntProvider height;
+  public net.minecraft.world.level.levelgen.feature.configurations.ColumnFeatureConfiguration(net.minecraft.util.valueproviders.IntProvider, net.minecraft.util.valueproviders.IntProvider);
+  public net.minecraft.util.valueproviders.IntProvider reach();
+  public net.minecraft.util.valueproviders.IntProvider height();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.util.valueproviders.IntProvider lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.ColumnFeatureConfiguration);
+  private static net.minecraft.util.valueproviders.IntProvider lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.ColumnFeatureConfiguration);
+  static {};
+}
+Compiled from "WeightedRandomFeatureConfiguration.java"
+public final class net.minecraft.world.level.levelgen.feature.configurations.WeightedRandomFeatureConfiguration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final net.minecraft.util.random.WeightedList<net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature>> features;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.WeightedRandomFeatureConfiguration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.configurations.WeightedRandomFeatureConfiguration(net.minecraft.util.random.WeightedList<net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature>>);
+  public java.util.stream.Stream<net.minecraft.core.Holder<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>> getSubFeatures();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.util.random.WeightedList<net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature>> features();
+  private static java.util.stream.Stream lambda$getSubFeatures$0(net.minecraft.util.random.Weighted);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "CountConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.CountConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.CountConfiguration> CODEC;
+  private final net.minecraft.util.valueproviders.IntProvider count;
+  public net.minecraft.world.level.levelgen.feature.configurations.CountConfiguration(int);
+  public net.minecraft.world.level.levelgen.feature.configurations.CountConfiguration(net.minecraft.util.valueproviders.IntProvider);
+  public net.minecraft.util.valueproviders.IntProvider count();
+  static {};
+}
+Compiled from "OreConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration$TargetBlockState {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration$TargetBlockState> CODEC;
+  public final net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest target;
+  public final net.minecraft.world.level.block.state.BlockState state;
+  private net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration$TargetBlockState(net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest, net.minecraft.world.level.block.state.BlockState);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$2(net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration$TargetBlockState);
+  private static net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest lambda$static$1(net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration$TargetBlockState);
+  static {};
+}

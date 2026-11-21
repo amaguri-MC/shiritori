@@ -1,0 +1,31 @@
+Compiled from "FluidVariantRenderHandler.java"
+public interface net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRenderHandler {
+  public default void appendTooltip(net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant, java.util.List<net.minecraft.network.chat.Component>, net.minecraft.world.item.TooltipFlag);
+  public default int getColor(net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant, net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos);
+}
+Compiled from "FluidVariantRendering.java"
+class net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRendering$1 implements net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRenderHandler {
+  net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRendering$1();
+}
+Compiled from "FluidVariantRendering.java"
+class net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRendering$2 implements net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRenderHandler {
+  net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRendering$2();
+  public int getColor(net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant, net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos);
+}
+Compiled from "FluidVariantRendering.java"
+public final class net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRendering {
+  private static final net.fabricmc.fabric.api.lookup.v1.custom.ApiProviderMap<net.minecraft.world.level.material.Fluid, net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRenderHandler> HANDLERS;
+  private static final net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRenderHandler DEFAULT_HANDLER;
+  private net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRendering();
+  public static void register(net.minecraft.world.level.material.Fluid, net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRenderHandler);
+  public static net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRenderHandler getHandler(net.minecraft.world.level.material.Fluid);
+  public static net.fabricmc.fabric.api.transfer.v1.client.fluid.FluidVariantRenderHandler getHandlerOrDefault(net.minecraft.world.level.material.Fluid);
+  public static java.util.List<net.minecraft.network.chat.Component> getTooltip(net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant);
+  public static java.util.List<net.minecraft.network.chat.Component> getTooltip(net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant, net.minecraft.world.item.TooltipFlag);
+  public static int getColor(net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant);
+  public static int getColor(net.fabricmc.fabric.api.transfer.v1.fluid.FluidVariant, net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.fabricmc.fabric.api.transfer.v1.client.fluid.package-info {
+}

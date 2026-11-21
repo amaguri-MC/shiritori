@@ -1,0 +1,16 @@
+Compiled from "package-info.java"
+interface net.minecraft.data.metadata.package-info {
+}
+Compiled from "PackMetadataGenerator.java"
+public class net.minecraft.data.metadata.PackMetadataGenerator implements net.minecraft.data.DataProvider {
+  private final net.minecraft.data.PackOutput output;
+  private final java.util.Map<java.lang.String, java.util.function.Supplier<com.google.gson.JsonElement>> elements;
+  public net.minecraft.data.metadata.PackMetadataGenerator(net.minecraft.data.PackOutput);
+  public <T> net.minecraft.data.metadata.PackMetadataGenerator add(net.minecraft.server.packs.metadata.MetadataSectionType<T>, T);
+  public java.util.concurrent.CompletableFuture<?> run(net.minecraft.data.CachedOutput);
+  public final java.lang.String getName();
+  public static net.minecraft.data.metadata.PackMetadataGenerator forFeaturePack(net.minecraft.data.PackOutput, net.minecraft.network.chat.Component);
+  public static net.minecraft.data.metadata.PackMetadataGenerator forFeaturePack(net.minecraft.data.PackOutput, net.minecraft.network.chat.Component, net.minecraft.world.flag.FeatureFlagSet);
+  private static void lambda$run$0(com.google.gson.JsonObject, java.lang.String, java.util.function.Supplier);
+  private static com.google.gson.JsonElement lambda$add$0(net.minecraft.server.packs.metadata.MetadataSectionType, java.lang.Object);
+}

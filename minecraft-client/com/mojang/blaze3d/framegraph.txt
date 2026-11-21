@@ -1,0 +1,105 @@
+Compiled from "FrameGraphBuilder.java"
+class com.mojang.blaze3d.framegraph.FrameGraphBuilder$ExternalResource<T> extends com.mojang.blaze3d.framegraph.FrameGraphBuilder$VirtualResource<T> {
+  private final T resource;
+  public com.mojang.blaze3d.framegraph.FrameGraphBuilder$ExternalResource(java.lang.String, com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass, T);
+  public T get();
+}
+Compiled from "FrameGraphBuilder.java"
+class com.mojang.blaze3d.framegraph.FrameGraphBuilder$Handle<T> implements com.mojang.blaze3d.resource.ResourceHandle<T> {
+  private final com.mojang.blaze3d.framegraph.FrameGraphBuilder$VirtualResource<T> holder;
+  private final int version;
+  private final com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass createdBy;
+  private final java.util.BitSet readBy;
+  private com.mojang.blaze3d.framegraph.FrameGraphBuilder$Handle<T> aliasedBy;
+  private com.mojang.blaze3d.framegraph.FrameGraphBuilder$Handle(com.mojang.blaze3d.framegraph.FrameGraphBuilder$VirtualResource<T>, int, com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass);
+  public T get();
+  private com.mojang.blaze3d.framegraph.FrameGraphBuilder$Handle<T> writeAndAlias(com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass);
+  public java.lang.String toString();
+}
+Compiled from "FrameGraphBuilder.java"
+class com.mojang.blaze3d.framegraph.FrameGraphBuilder$Inspector$1 implements com.mojang.blaze3d.framegraph.FrameGraphBuilder$Inspector {
+  com.mojang.blaze3d.framegraph.FrameGraphBuilder$Inspector$1();
+}
+Compiled from "FrameGraphBuilder.java"
+public interface com.mojang.blaze3d.framegraph.FrameGraphBuilder$Inspector {
+  public static final com.mojang.blaze3d.framegraph.FrameGraphBuilder$Inspector NONE;
+  public default void acquireResource(java.lang.String);
+  public default void releaseResource(java.lang.String);
+  public default void beforeExecutePass(java.lang.String);
+  public default void afterExecutePass(java.lang.String);
+  static {};
+}
+Compiled from "FrameGraphBuilder.java"
+class com.mojang.blaze3d.framegraph.FrameGraphBuilder$InternalVirtualResource<T> extends com.mojang.blaze3d.framegraph.FrameGraphBuilder$VirtualResource<T> {
+  private final int id;
+  private final com.mojang.blaze3d.resource.ResourceDescriptor<T> descriptor;
+  private T physicalResource;
+  public com.mojang.blaze3d.framegraph.FrameGraphBuilder$InternalVirtualResource(int, java.lang.String, com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass, com.mojang.blaze3d.resource.ResourceDescriptor<T>);
+  public T get();
+  public void acquire(com.mojang.blaze3d.resource.GraphicsResourceAllocator);
+  public void release(com.mojang.blaze3d.resource.GraphicsResourceAllocator);
+}
+Compiled from "FrameGraphBuilder.java"
+class com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass implements com.mojang.blaze3d.framegraph.FramePass {
+  private final int id;
+  private final java.lang.String name;
+  private final java.util.List<com.mojang.blaze3d.framegraph.FrameGraphBuilder$Handle<?>> writesFrom;
+  private final java.util.BitSet requiredResourceIds;
+  private final java.util.BitSet requiredPassIds;
+  private java.lang.Runnable task;
+  private final java.util.List<com.mojang.blaze3d.framegraph.FrameGraphBuilder$InternalVirtualResource<?>> resourcesToAcquire;
+  private final java.util.BitSet resourcesToRelease;
+  private boolean disableCulling;
+  final com.mojang.blaze3d.framegraph.FrameGraphBuilder this$0;
+  public com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass(com.mojang.blaze3d.framegraph.FrameGraphBuilder, int, java.lang.String);
+  private <T> void markResourceRequired(com.mojang.blaze3d.framegraph.FrameGraphBuilder$Handle<T>);
+  private void markPassRequired(com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass);
+  public <T> com.mojang.blaze3d.resource.ResourceHandle<T> createsInternal(java.lang.String, com.mojang.blaze3d.resource.ResourceDescriptor<T>);
+  public <T> void reads(com.mojang.blaze3d.resource.ResourceHandle<T>);
+  private <T> void _reads(com.mojang.blaze3d.framegraph.FrameGraphBuilder$Handle<T>);
+  public <T> com.mojang.blaze3d.resource.ResourceHandle<T> readsAndWrites(com.mojang.blaze3d.resource.ResourceHandle<T>);
+  public void requires(com.mojang.blaze3d.framegraph.FramePass);
+  public void disableCulling();
+  private <T> com.mojang.blaze3d.framegraph.FrameGraphBuilder$Handle<T> _readsAndWrites(com.mojang.blaze3d.framegraph.FrameGraphBuilder$Handle<T>);
+  public void executes(java.lang.Runnable);
+  public java.lang.String toString();
+  private static void lambda$new$0();
+}
+Compiled from "FrameGraphBuilder.java"
+abstract class com.mojang.blaze3d.framegraph.FrameGraphBuilder$VirtualResource<T> {
+  public final java.lang.String name;
+  public com.mojang.blaze3d.framegraph.FrameGraphBuilder$Handle<T> handle;
+  public com.mojang.blaze3d.framegraph.FrameGraphBuilder$VirtualResource(java.lang.String, com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass);
+  public abstract T get();
+  public java.lang.String toString();
+}
+Compiled from "FrameGraphBuilder.java"
+public class com.mojang.blaze3d.framegraph.FrameGraphBuilder {
+  private final java.util.List<com.mojang.blaze3d.framegraph.FrameGraphBuilder$InternalVirtualResource<?>> internalResources;
+  private final java.util.List<com.mojang.blaze3d.framegraph.FrameGraphBuilder$ExternalResource<?>> externalResources;
+  private final java.util.List<com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass> passes;
+  public com.mojang.blaze3d.framegraph.FrameGraphBuilder();
+  public com.mojang.blaze3d.framegraph.FramePass addPass(java.lang.String);
+  public <T> com.mojang.blaze3d.resource.ResourceHandle<T> importExternal(java.lang.String, T);
+  public <T> com.mojang.blaze3d.resource.ResourceHandle<T> createInternal(java.lang.String, com.mojang.blaze3d.resource.ResourceDescriptor<T>);
+  private <T> com.mojang.blaze3d.framegraph.FrameGraphBuilder$InternalVirtualResource<T> createInternalResource(java.lang.String, com.mojang.blaze3d.resource.ResourceDescriptor<T>, com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass);
+  public void execute(com.mojang.blaze3d.resource.GraphicsResourceAllocator);
+  public void execute(com.mojang.blaze3d.resource.GraphicsResourceAllocator, com.mojang.blaze3d.framegraph.FrameGraphBuilder$Inspector);
+  private java.util.BitSet identifyPassesToKeep();
+  private void discoverAllRequiredPasses(com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass, java.util.BitSet, java.util.Deque<com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass>);
+  private void resolvePassOrder(com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass, java.util.BitSet, java.util.BitSet, java.util.List<com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass>);
+  private void assignResourceLifetimes(java.util.Collection<com.mojang.blaze3d.framegraph.FrameGraphBuilder$Pass>);
+  private java.lang.String lambda$resolvePassOrder$0(int);
+}
+Compiled from "FramePass.java"
+public interface com.mojang.blaze3d.framegraph.FramePass {
+  public abstract <T> com.mojang.blaze3d.resource.ResourceHandle<T> createsInternal(java.lang.String, com.mojang.blaze3d.resource.ResourceDescriptor<T>);
+  public abstract <T> void reads(com.mojang.blaze3d.resource.ResourceHandle<T>);
+  public abstract <T> com.mojang.blaze3d.resource.ResourceHandle<T> readsAndWrites(com.mojang.blaze3d.resource.ResourceHandle<T>);
+  public abstract void requires(com.mojang.blaze3d.framegraph.FramePass);
+  public abstract void disableCulling();
+  public abstract void executes(java.lang.Runnable);
+}
+Compiled from "package-info.java"
+interface com.mojang.blaze3d.framegraph.package-info {
+}

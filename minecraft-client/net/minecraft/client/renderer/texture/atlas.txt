@@ -1,0 +1,62 @@
+Compiled from "SpriteResourceLoader.java"
+public interface net.minecraft.client.renderer.texture.atlas.SpriteResourceLoader {
+  public static final org.slf4j.Logger LOGGER;
+  public static net.minecraft.client.renderer.texture.atlas.SpriteResourceLoader create(java.util.Set<net.minecraft.server.packs.metadata.MetadataSectionType<?>>);
+  public abstract net.minecraft.client.renderer.texture.SpriteContents loadSprite(net.minecraft.resources.Identifier, net.minecraft.server.packs.resources.Resource);
+  private static net.minecraft.client.renderer.texture.SpriteContents lambda$create$0(java.util.Set, net.minecraft.resources.Identifier, net.minecraft.server.packs.resources.Resource);
+  static {};
+}
+Compiled from "SpriteSource.java"
+public interface net.minecraft.client.renderer.texture.atlas.SpriteSource$DiscardableLoader extends net.minecraft.client.renderer.texture.atlas.SpriteSource$Loader {
+  public default void discard();
+}
+Compiled from "SpriteSource.java"
+public interface net.minecraft.client.renderer.texture.atlas.SpriteSource$Loader {
+  public abstract net.minecraft.client.renderer.texture.SpriteContents get(net.minecraft.client.renderer.texture.atlas.SpriteResourceLoader);
+}
+Compiled from "SpriteSource.java"
+public interface net.minecraft.client.renderer.texture.atlas.SpriteSource$Output {
+  public default void add(net.minecraft.resources.Identifier, net.minecraft.server.packs.resources.Resource);
+  public abstract void add(net.minecraft.resources.Identifier, net.minecraft.client.renderer.texture.atlas.SpriteSource$DiscardableLoader);
+  public abstract void removeAll(java.util.function.Predicate<net.minecraft.resources.Identifier>);
+  private static net.minecraft.client.renderer.texture.SpriteContents lambda$add$0(net.minecraft.resources.Identifier, net.minecraft.server.packs.resources.Resource, net.minecraft.client.renderer.texture.atlas.SpriteResourceLoader);
+}
+Compiled from "SpriteSource.java"
+public interface net.minecraft.client.renderer.texture.atlas.SpriteSource {
+  public static final net.minecraft.resources.FileToIdConverter TEXTURE_ID_CONVERTER;
+  public abstract void run(net.minecraft.server.packs.resources.ResourceManager, net.minecraft.client.renderer.texture.atlas.SpriteSource$Output);
+  public abstract com.mojang.serialization.MapCodec<? extends net.minecraft.client.renderer.texture.atlas.SpriteSource> codec();
+  static {};
+}
+Compiled from "SpriteSourceList.java"
+class net.minecraft.client.renderer.texture.atlas.SpriteSourceList$1 implements net.minecraft.client.renderer.texture.atlas.SpriteSource$Output {
+  final java.util.Map val$sprites;
+  net.minecraft.client.renderer.texture.atlas.SpriteSourceList$1();
+  public void add(net.minecraft.resources.Identifier, net.minecraft.client.renderer.texture.atlas.SpriteSource$DiscardableLoader);
+  public void removeAll(java.util.function.Predicate<net.minecraft.resources.Identifier>);
+}
+Compiled from "SpriteSourceList.java"
+public class net.minecraft.client.renderer.texture.atlas.SpriteSourceList {
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.resources.FileToIdConverter ATLAS_INFO_CONVERTER;
+  private final java.util.List<net.minecraft.client.renderer.texture.atlas.SpriteSource> sources;
+  private net.minecraft.client.renderer.texture.atlas.SpriteSourceList(java.util.List<net.minecraft.client.renderer.texture.atlas.SpriteSource>);
+  public java.util.List<net.minecraft.client.renderer.texture.atlas.SpriteSource$Loader> list(net.minecraft.server.packs.resources.ResourceManager);
+  public static net.minecraft.client.renderer.texture.atlas.SpriteSourceList load(net.minecraft.server.packs.resources.ResourceManager, net.minecraft.resources.Identifier);
+  private static net.minecraft.client.renderer.texture.SpriteContents lambda$list$1(net.minecraft.client.renderer.texture.atlas.SpriteResourceLoader);
+  private static void lambda$list$0(net.minecraft.server.packs.resources.ResourceManager, net.minecraft.client.renderer.texture.atlas.SpriteSource$Output, net.minecraft.client.renderer.texture.atlas.SpriteSource);
+  static {};
+}
+Compiled from "SpriteSources.java"
+public class net.minecraft.client.renderer.texture.atlas.SpriteSources {
+  private static final net.minecraft.util.ExtraCodecs$LateBoundIdMapper<net.minecraft.resources.Identifier, com.mojang.serialization.MapCodec<? extends net.minecraft.client.renderer.texture.atlas.SpriteSource>> ID_MAPPER;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.renderer.texture.atlas.SpriteSource> CODEC;
+  public static final com.mojang.serialization.Codec<java.util.List<net.minecraft.client.renderer.texture.atlas.SpriteSource>> FILE_CODEC;
+  public net.minecraft.client.renderer.texture.atlas.SpriteSources();
+  public static void bootstrap();
+  private static com.mojang.serialization.MapCodec lambda$static$0(com.mojang.serialization.MapCodec);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.renderer.texture.atlas.package-info {
+}

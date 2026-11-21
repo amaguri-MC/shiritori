@@ -1,0 +1,63 @@
+Compiled from "MinecraftServerGui.java"
+class net.minecraft.server.gui.MinecraftServerGui$1 extends java.awt.event.WindowAdapter {
+  final net.minecraft.server.gui.MinecraftServerGui val$gui;
+  final javax.swing.JFrame val$frame;
+  final net.minecraft.server.dedicated.DedicatedServer val$server;
+  net.minecraft.server.gui.MinecraftServerGui$1(net.minecraft.server.gui.MinecraftServerGui, javax.swing.JFrame, net.minecraft.server.dedicated.DedicatedServer);
+  public void windowClosing(java.awt.event.WindowEvent);
+}
+Compiled from "MinecraftServerGui.java"
+class net.minecraft.server.gui.MinecraftServerGui$2 extends java.awt.event.FocusAdapter {
+  net.minecraft.server.gui.MinecraftServerGui$2(net.minecraft.server.gui.MinecraftServerGui);
+  public void focusGained(java.awt.event.FocusEvent);
+}
+Compiled from "MinecraftServerGui.java"
+public class net.minecraft.server.gui.MinecraftServerGui extends javax.swing.JComponent {
+  private static final java.awt.Font MONOSPACED;
+  private static final org.slf4j.Logger LOGGER;
+  private static final java.lang.String TITLE;
+  private static final java.lang.String SHUTDOWN_TITLE;
+  private final net.minecraft.server.dedicated.DedicatedServer server;
+  private java.lang.Thread logAppenderThread;
+  private final java.util.Collection<java.lang.Runnable> finalizers;
+  private final java.util.concurrent.atomic.AtomicBoolean isClosing;
+  public static net.minecraft.server.gui.MinecraftServerGui showFrameFor(net.minecraft.server.dedicated.DedicatedServer);
+  private net.minecraft.server.gui.MinecraftServerGui(net.minecraft.server.dedicated.DedicatedServer);
+  public void addFinalizer(java.lang.Runnable);
+  private javax.swing.JComponent buildInfoPanel();
+  private javax.swing.JComponent buildPlayerPanel();
+  private javax.swing.JComponent buildChatPanel();
+  public void start();
+  public void close();
+  private void runFinalizers();
+  public void print(javax.swing.JTextArea, javax.swing.JScrollPane, java.lang.String);
+  private void lambda$print$0(javax.swing.JTextArea, javax.swing.JScrollPane, java.lang.String);
+  private void lambda$buildChatPanel$1(javax.swing.JTextArea, javax.swing.JScrollPane);
+  private void lambda$buildChatPanel$0(javax.swing.JTextField, java.awt.event.ActionEvent);
+  static {};
+}
+Compiled from "PlayerListComponent.java"
+public class net.minecraft.server.gui.PlayerListComponent extends javax.swing.JList<java.lang.String> {
+  private final net.minecraft.server.MinecraftServer server;
+  private int tickCount;
+  public net.minecraft.server.gui.PlayerListComponent(net.minecraft.server.MinecraftServer);
+  public void tick();
+}
+Compiled from "StatsComponent.java"
+public class net.minecraft.server.gui.StatsComponent extends javax.swing.JComponent {
+  private static final java.text.DecimalFormat DECIMAL_FORMAT;
+  private final int[] values;
+  private int vp;
+  private final java.lang.String[] msgs;
+  private final net.minecraft.server.MinecraftServer server;
+  private final javax.swing.Timer timer;
+  public net.minecraft.server.gui.StatsComponent(net.minecraft.server.MinecraftServer);
+  private void tick();
+  public void paint(java.awt.Graphics);
+  public void close();
+  private void lambda$new$0(java.awt.event.ActionEvent);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.server.gui.package-info {
+}

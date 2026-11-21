@@ -1,0 +1,286 @@
+Compiled from "FabricAdvancementProvider.java"
+public abstract class net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider implements net.minecraft.data.DataProvider {
+  protected final net.fabricmc.fabric.api.datagen.v1.FabricPackOutput output;
+  private final net.minecraft.data.PackOutput$PathProvider pathProvider;
+  private final java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider> registryLookup;
+  protected net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+  public abstract void generateAdvancement(net.minecraft.core.HolderLookup$Provider, java.util.function.Consumer<net.minecraft.advancements.AdvancementHolder>);
+  protected java.util.function.Consumer<net.minecraft.advancements.AdvancementHolder> withConditions(java.util.function.Consumer<net.minecraft.advancements.AdvancementHolder>, net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition...);
+  public static net.minecraft.advancements.AdvancementHolder createPlaceholder(net.minecraft.resources.Identifier);
+  public java.util.concurrent.CompletableFuture<?> run(net.minecraft.data.CachedOutput);
+  private java.nio.file.Path getOutputPath(net.minecraft.advancements.AdvancementHolder);
+  public java.lang.String getName();
+  private java.util.concurrent.CompletionStage lambda$run$0(net.minecraft.data.CachedOutput, net.minecraft.core.HolderLookup$Provider);
+  private static java.util.concurrent.CompletableFuture[] lambda$run$1(int);
+  private static void lambda$withConditions$0(net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition[], java.util.function.Consumer, net.minecraft.advancements.AdvancementHolder);
+}
+Compiled from "FabricBlockLootSubProvider.java"
+public abstract class net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider extends net.minecraft.data.loot.BlockLootSubProvider implements net.fabricmc.fabric.api.datagen.v1.provider.FabricLootTableSubProvider {
+  private final net.fabricmc.fabric.api.datagen.v1.FabricPackOutput output;
+  private final java.util.Set<net.minecraft.resources.Identifier> excludedFromStrictValidation;
+  private final java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider> registriesFuture;
+  protected net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootSubProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+  public abstract void generate();
+  public void excludeFromStrictValidation(net.minecraft.world.level.block.Block);
+  public void generate(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>);
+  public java.util.concurrent.CompletableFuture<?> run(net.minecraft.data.CachedOutput);
+  public java.lang.String getName();
+}
+Compiled from "FabricCodecDataProvider.java"
+public abstract class net.fabricmc.fabric.api.datagen.v1.provider.FabricCodecDataProvider<T> implements net.minecraft.data.DataProvider {
+  private final net.minecraft.data.PackOutput$PathProvider pathProvider;
+  private final java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider> registriesFuture;
+  private final com.mojang.serialization.Codec<T> codec;
+  private final java.lang.String extension;
+  private net.fabricmc.fabric.api.datagen.v1.provider.FabricCodecDataProvider(net.minecraft.data.PackOutput$PathProvider, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>, com.mojang.serialization.Codec<T>, java.lang.String);
+  protected net.fabricmc.fabric.api.datagen.v1.provider.FabricCodecDataProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>, net.minecraft.data.PackOutput$Target, java.lang.String, com.mojang.serialization.Codec<T>);
+  protected net.fabricmc.fabric.api.datagen.v1.provider.FabricCodecDataProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>, net.minecraft.data.PackOutput$Target, java.lang.String, com.mojang.serialization.Codec<T>, java.lang.String);
+  protected net.fabricmc.fabric.api.datagen.v1.provider.FabricCodecDataProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>, net.minecraft.resources.ResourceKey<? extends net.minecraft.core.Registry<?>>, com.mojang.serialization.Codec<T>);
+  protected net.fabricmc.fabric.api.datagen.v1.provider.FabricCodecDataProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>, net.minecraft.resources.ResourceKey<? extends net.minecraft.core.Registry<?>>, com.mojang.serialization.Codec<T>, java.lang.String);
+  public java.util.concurrent.CompletableFuture<?> run(net.minecraft.data.CachedOutput);
+  protected abstract void configure(java.util.function.BiConsumer<net.minecraft.resources.Identifier, T>, net.minecraft.core.HolderLookup$Provider);
+  private com.google.gson.JsonElement convert(net.minecraft.resources.Identifier, T, com.mojang.serialization.DynamicOps<com.google.gson.JsonElement>);
+  private java.util.concurrent.CompletableFuture<?> write(net.minecraft.data.CachedOutput, java.util.Map<net.minecraft.resources.Identifier, com.google.gson.JsonElement>);
+  private static java.util.concurrent.CompletableFuture[] lambda$write$1(int);
+  private java.util.concurrent.CompletableFuture lambda$write$0(net.minecraft.data.CachedOutput, java.util.Map$Entry);
+  private static java.lang.String lambda$convert$0(net.minecraft.resources.Identifier, java.lang.String);
+  private java.util.concurrent.CompletionStage lambda$run$0(net.minecraft.data.CachedOutput, net.minecraft.core.HolderLookup$Provider);
+  private void lambda$run$1(net.minecraft.resources.RegistryOps, java.util.Map, net.minecraft.resources.Identifier, java.lang.Object);
+}
+Compiled from "FabricDynamicRegistryProvider.java"
+final class net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$ConditionalEntry<T> extends java.lang.Record {
+  private final T value;
+  private final net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition[] conditions;
+  private net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$ConditionalEntry(T, net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition...);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public T value();
+  public net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition[] conditions();
+}
+Compiled from "FabricDynamicRegistryProvider.java"
+public final class net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$Entries {
+  private final net.minecraft.core.HolderLookup$Provider registries;
+  private final java.util.Map<net.minecraft.resources.Identifier, net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$RegistryEntries<?>> queuedEntries;
+  private final java.lang.String modId;
+  net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$Entries(net.minecraft.core.HolderLookup$Provider, java.lang.String);
+  public net.minecraft.core.HolderLookup$Provider getLookups();
+  public <T> net.minecraft.core.HolderGetter<T> getLookup(net.minecraft.resources.ResourceKey<? extends net.minecraft.core.Registry<T>>);
+  public net.minecraft.core.HolderGetter<net.minecraft.world.level.levelgen.placement.PlacedFeature> placedFeatures();
+  public net.minecraft.core.HolderGetter<net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver<?>> configuredCarvers();
+  public <T> net.minecraft.core.Holder<T> ref(net.minecraft.resources.ResourceKey<T>);
+  public <T> net.minecraft.core.Holder<T> add(net.minecraft.resources.ResourceKey<T>, T);
+  public <T> net.minecraft.core.Holder<T> add(net.minecraft.resources.ResourceKey<T>, T, net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition...);
+  public <T> void add(net.minecraft.core.Holder$Reference<T>);
+  public <T> void add(net.minecraft.core.Holder$Reference<T>, net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition...);
+  public <T> net.minecraft.core.Holder<T> add(net.minecraft.core.HolderLookup$RegistryLookup<T>, net.minecraft.resources.ResourceKey<T>);
+  public <T> net.minecraft.core.Holder<T> add(net.minecraft.core.HolderLookup$RegistryLookup<T>, net.minecraft.resources.ResourceKey<T>, net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition...);
+  public <T> java.util.List<net.minecraft.core.Holder<T>> addAll(net.minecraft.core.HolderLookup$RegistryLookup<T>);
+  <T> net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$RegistryEntries<T> getQueuedEntries(net.minecraft.resources.ResourceKey<T>);
+  private net.minecraft.core.Holder lambda$addAll$1(net.minecraft.core.HolderLookup$RegistryLookup, net.minecraft.resources.ResourceKey);
+  private boolean lambda$addAll$0(net.minecraft.resources.ResourceKey);
+  private static net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$RegistryEntries lambda$new$2(net.minecraft.core.HolderLookup$Provider, net.minecraft.resources.RegistryDataLoader$RegistryData);
+  private static net.minecraft.resources.Identifier lambda$new$1(net.minecraft.resources.RegistryDataLoader$RegistryData);
+  private static boolean lambda$new$0(net.minecraft.core.HolderLookup$Provider, net.minecraft.resources.RegistryDataLoader$RegistryData);
+}
+Compiled from "FabricDynamicRegistryProvider.java"
+class net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$RegistryEntries<T> {
+  final net.minecraft.core.HolderOwner<T> lookup;
+  final net.minecraft.resources.ResourceKey<? extends net.minecraft.core.Registry<T>> registry;
+  final com.mojang.serialization.Codec<T> elementCodec;
+  java.util.Map<net.minecraft.resources.ResourceKey<T>, net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$ConditionalEntry<T>> resources;
+  net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$RegistryEntries(net.minecraft.core.HolderOwner<T>, net.minecraft.resources.ResourceKey<? extends net.minecraft.core.Registry<T>>, com.mojang.serialization.Codec<T>);
+  static <T> net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$RegistryEntries<T> create(net.minecraft.core.HolderLookup$Provider, net.minecraft.resources.RegistryDataLoader$RegistryData<T>);
+  net.minecraft.core.Holder<T> add(net.minecraft.resources.ResourceKey<T>, T, net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition[]);
+}
+Compiled from "FabricDynamicRegistryProvider.java"
+public abstract class net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider implements net.minecraft.data.DataProvider {
+  private static final org.slf4j.Logger LOGGER;
+  private final net.fabricmc.fabric.api.datagen.v1.FabricPackOutput output;
+  private final java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider> registriesFuture;
+  public net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+  protected abstract void configure(net.minecraft.core.HolderLookup$Provider, net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$Entries);
+  public java.util.concurrent.CompletableFuture<?> run(net.minecraft.data.CachedOutput);
+  private <T> java.util.concurrent.CompletableFuture<?> writeHolders(net.minecraft.data.CachedOutput, net.minecraft.resources.RegistryOps<com.google.gson.JsonElement>, net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$RegistryEntries<T>);
+  private static <E> java.util.concurrent.CompletableFuture<?> writeToPath(java.nio.file.Path, net.minecraft.data.CachedOutput, com.mojang.serialization.DynamicOps<com.google.gson.JsonElement>, com.mojang.serialization.Encoder<E>, E, net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition[]);
+  private static void lambda$writeToPath$0(java.nio.file.Path, java.lang.String);
+  private static java.util.concurrent.CompletableFuture[] lambda$writeHolders$0(int);
+  private java.util.concurrent.CompletionStage lambda$run$0(net.minecraft.data.CachedOutput, net.minecraft.core.HolderLookup$Provider);
+  private java.util.concurrent.CompletionStage lambda$run$2(net.minecraft.core.HolderLookup$Provider, net.minecraft.data.CachedOutput, net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$Entries);
+  private static java.util.concurrent.CompletableFuture[] lambda$run$3(int);
+  private net.fabricmc.fabric.api.datagen.v1.provider.FabricDynamicRegistryProvider$Entries lambda$run$1(net.minecraft.core.HolderLookup$Provider);
+  static {};
+}
+Compiled from "FabricEntityLootSubProvider.java"
+public abstract class net.fabricmc.fabric.api.datagen.v1.provider.FabricEntityLootSubProvider extends net.minecraft.data.loot.EntityLootSubProvider implements net.fabricmc.fabric.api.datagen.v1.provider.FabricLootTableSubProvider {
+  private final net.fabricmc.fabric.api.datagen.v1.FabricPackOutput output;
+  private final java.util.Set<net.minecraft.resources.Identifier> excludedFromStrictValidation;
+  private final java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider> registriesFuture;
+  protected net.fabricmc.fabric.api.datagen.v1.provider.FabricEntityLootSubProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+  public abstract void generate();
+  public void excludeFromStrictValidation(net.minecraft.world.entity.EntityType<?>);
+  public void generate(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>);
+  public java.util.concurrent.CompletableFuture<?> run(net.minecraft.data.CachedOutput);
+  public java.lang.String getName();
+  private void lambda$generate$0(net.minecraft.world.entity.EntityType, java.util.Set, net.minecraft.resources.Identifier, net.minecraft.resources.ResourceKey);
+}
+Compiled from "FabricLanguageProvider.java"
+public interface net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider$TranslationBuilder {
+  public abstract void add(java.lang.String, java.lang.String);
+  public default void add(net.minecraft.world.item.Item, java.lang.String);
+  public default void add(net.minecraft.world.level.block.Block, java.lang.String);
+  public default void add(net.minecraft.resources.ResourceKey<net.minecraft.world.item.CreativeModeTab>, java.lang.String);
+  public default void add(net.minecraft.world.entity.EntityType<?>, java.lang.String);
+  public default void addEnchantment(net.minecraft.resources.ResourceKey<net.minecraft.world.item.enchantment.Enchantment>, java.lang.String);
+  public default void add(net.minecraft.core.Holder<net.minecraft.world.entity.ai.attributes.Attribute>, java.lang.String);
+  public default void add(net.minecraft.stats.StatType<?>, java.lang.String);
+  public default void add(net.minecraft.world.effect.MobEffect, java.lang.String);
+  public default void add(net.minecraft.resources.Identifier, java.lang.String);
+  public default void add(net.minecraft.tags.TagKey<?>, java.lang.String);
+  public default void add(net.minecraft.sounds.SoundEvent, java.lang.String);
+  public default void add(java.nio.file.Path) throws java.io.IOException;
+}
+Compiled from "FabricLanguageProvider.java"
+public abstract class net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider implements net.minecraft.data.DataProvider {
+  protected final net.fabricmc.fabric.api.datagen.v1.FabricPackOutput packOutput;
+  private final java.lang.String languageCode;
+  private final java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider> registryLookup;
+  protected net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+  protected net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.lang.String, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+  public abstract void generateTranslations(net.minecraft.core.HolderLookup$Provider, net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider$TranslationBuilder);
+  public java.util.concurrent.CompletableFuture<?> run(net.minecraft.data.CachedOutput);
+  protected java.nio.file.Path getLangFilePath(java.lang.String);
+  public java.lang.String getName();
+  private java.util.concurrent.CompletionStage lambda$run$0(java.util.TreeMap, net.minecraft.data.CachedOutput, net.minecraft.core.HolderLookup$Provider);
+  private static void lambda$run$1(java.util.TreeMap, java.lang.String, java.lang.String);
+}
+Compiled from "FabricLootTableSubProvider.java"
+public interface net.fabricmc.fabric.api.datagen.v1.provider.FabricLootTableSubProvider extends net.minecraft.data.loot.LootTableSubProvider,net.minecraft.data.DataProvider {
+  public default java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder> withConditions(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>, net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition...);
+  private static void lambda$withConditions$0(net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition[], java.util.function.BiConsumer, net.minecraft.resources.ResourceKey, net.minecraft.world.level.storage.loot.LootTable$Builder);
+}
+Compiled from "FabricRecipeProvider.java"
+class net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider$1 implements net.minecraft.data.recipes.RecipeOutput {
+  final net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition[] val$conditions;
+  final net.minecraft.data.recipes.RecipeOutput val$output;
+  net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider$1();
+  public void accept(net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>, net.minecraft.world.item.crafting.Recipe<?>, net.minecraft.advancements.AdvancementHolder);
+  public net.minecraft.advancements.Advancement$Builder advancement();
+  public void includeRootAdvancement();
+  public net.minecraft.resources.Identifier getRecipeIdentifier(net.minecraft.resources.Identifier);
+}
+Compiled from "FabricRecipeProvider.java"
+class net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider$2 implements net.minecraft.data.recipes.RecipeOutput {
+  final java.util.Set val$generatedRecipes;
+  final net.minecraft.core.HolderLookup$Provider val$registries;
+  final java.util.List val$list;
+  final net.minecraft.data.CachedOutput val$output;
+  final net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider this$0;
+  net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider$2();
+  public void accept(net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>, net.minecraft.world.item.crafting.Recipe<?>, net.minecraft.advancements.AdvancementHolder);
+  public net.minecraft.advancements.Advancement$Builder advancement();
+  public void includeRootAdvancement();
+  public net.minecraft.resources.Identifier getRecipeIdentifier(net.minecraft.resources.Identifier);
+}
+Compiled from "FabricRecipeProvider.java"
+public abstract class net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider extends net.minecraft.data.recipes.RecipeProvider$Runner {
+  protected final net.fabricmc.fabric.api.datagen.v1.FabricPackOutput output;
+  private final java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider> registriesFuture;
+  public net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+  protected abstract net.minecraft.data.recipes.RecipeProvider createRecipeProvider(net.minecraft.core.HolderLookup$Provider, net.minecraft.data.recipes.RecipeOutput);
+  protected net.minecraft.data.recipes.RecipeOutput withConditions(net.minecraft.data.recipes.RecipeOutput, net.fabricmc.fabric.api.resource.conditions.v1.ResourceCondition...);
+  public java.util.concurrent.CompletableFuture<?> run(net.minecraft.data.CachedOutput);
+  protected net.minecraft.resources.Identifier getRecipeIdentifier(net.minecraft.resources.Identifier);
+  private java.util.concurrent.CompletionStage lambda$run$0(net.minecraft.data.CachedOutput, net.minecraft.core.HolderLookup$Provider);
+  private static java.util.concurrent.CompletableFuture[] lambda$run$1(int);
+}
+Compiled from "FabricTagAppender.java"
+public interface net.fabricmc.fabric.api.datagen.v1.provider.FabricTagAppender<T> {
+  public default net.minecraft.data.tags.TagAppender<T> setReplace(boolean);
+  public default net.minecraft.data.tags.TagAppender<T> forceAddTag(net.minecraft.tags.TagKey<T>);
+  public default net.minecraft.data.tags.TagAppender<T> remove(net.minecraft.resources.ResourceKey<T>);
+  public default net.minecraft.data.tags.TagAppender<T> remove(net.minecraft.resources.ResourceKey<T>...);
+  public default net.minecraft.data.tags.TagAppender<T> removeAll(java.util.Collection<net.minecraft.resources.ResourceKey<T>>);
+  public default net.minecraft.data.tags.TagAppender<T> removeAll(java.util.stream.Stream<net.minecraft.resources.ResourceKey<T>>);
+  public default net.minecraft.data.tags.TagAppender<T> removeTag(net.minecraft.tags.TagKey<T>);
+  public default net.minecraft.tags.TagBuilder getBuilder();
+}
+Compiled from "FabricTagsProvider.java"
+public final class net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$AliasGroupBuilder {
+  private final java.util.List<net.minecraft.tags.TagKey<T>> tags;
+  final net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider this$0;
+  private net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$AliasGroupBuilder(net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider);
+  public java.util.List<net.minecraft.tags.TagKey<T>> getTags();
+  public net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider<T>.AliasGroupBuilder add(net.minecraft.tags.TagKey<T>);
+  public final net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider<T>.AliasGroupBuilder add(net.minecraft.tags.TagKey<T>...);
+  public net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider<T>.AliasGroupBuilder add(net.minecraft.resources.Identifier);
+  public net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider<T>.AliasGroupBuilder add(net.minecraft.resources.Identifier...);
+}
+Compiled from "FabricTagsProvider.java"
+public abstract class net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$BlockEntityTypeTagsProvider extends net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider<net.minecraft.world.level.block.entity.BlockEntityType<?>> {
+  public net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$BlockEntityTypeTagsProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+}
+Compiled from "FabricTagsProvider.java"
+class net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$BlockTagsProvider$1 extends net.minecraft.data.tags.BlockItemTagAppender<net.minecraft.world.level.block.Block> {
+  net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$BlockTagsProvider$1(net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$BlockTagsProvider, net.minecraft.data.tags.TagAppender);
+  protected net.minecraft.resources.ResourceKey<net.minecraft.world.level.block.Block> convertElement(net.minecraft.references.BlockItemId);
+}
+Compiled from "FabricTagsProvider.java"
+public abstract class net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$BlockTagsProvider extends net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider<net.minecraft.world.level.block.Block> {
+  public net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$BlockTagsProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+  protected net.minecraft.data.tags.BlockItemTagAppender<net.minecraft.world.level.block.Block> builder(net.minecraft.tags.TagKey<net.minecraft.world.level.block.Block>);
+  protected net.minecraft.data.tags.TagAppender builder(net.minecraft.tags.TagKey);
+}
+Compiled from "FabricTagsProvider.java"
+public abstract class net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$EntityTypeTagsProvider extends net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider<net.minecraft.world.entity.EntityType<?>> {
+  public net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$EntityTypeTagsProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+}
+Compiled from "FabricTagsProvider.java"
+public abstract class net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$FluidTagsProvider extends net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider<net.minecraft.world.level.material.Fluid> {
+  public net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$FluidTagsProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+}
+Compiled from "FabricTagsProvider.java"
+class net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$ItemTagsProvider$1 extends net.minecraft.data.tags.BlockItemTagAppender<net.minecraft.world.item.Item> {
+  net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$ItemTagsProvider$1(net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$ItemTagsProvider, net.minecraft.data.tags.TagAppender);
+  protected net.minecraft.resources.ResourceKey<net.minecraft.world.item.Item> convertElement(net.minecraft.references.BlockItemId);
+}
+Compiled from "FabricTagsProvider.java"
+public abstract class net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$ItemTagsProvider extends net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider<net.minecraft.world.item.Item> {
+  private final java.util.function.Function<net.minecraft.tags.TagKey<net.minecraft.world.level.block.Block>, net.minecraft.tags.TagBuilder> blockTagBuilderProvider;
+  public net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$ItemTagsProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>, net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$BlockTagsProvider);
+  public net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$ItemTagsProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+  public void copy(net.minecraft.tags.TagKey<net.minecraft.world.level.block.Block>, net.minecraft.tags.TagKey<net.minecraft.world.item.Item>);
+  protected net.minecraft.data.tags.BlockItemTagAppender<net.minecraft.world.item.Item> builder(net.minecraft.tags.TagKey<net.minecraft.world.item.Item>);
+  protected net.minecraft.data.tags.TagAppender builder(net.minecraft.tags.TagKey);
+  private static net.minecraft.tags.TagBuilder lambda$new$0(net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$BlockTagsProvider, net.minecraft.tags.TagKey);
+}
+Compiled from "FabricTagsProvider.java"
+public abstract class net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider<T> extends net.minecraft.data.tags.TagsProvider<T> {
+  private final net.fabricmc.fabric.api.datagen.v1.FabricPackOutput output;
+  private final java.util.Map<net.minecraft.resources.Identifier, net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider<T>.AliasGroupBuilder> aliasGroupBuilders;
+  public net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, net.minecraft.resources.ResourceKey<? extends net.minecraft.core.Registry<T>>, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+  protected abstract void addTags(net.minecraft.core.HolderLookup$Provider);
+  protected net.minecraft.data.tags.TagAppender<T> builder(net.minecraft.tags.TagKey<T>);
+  protected net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider<T>.AliasGroupBuilder aliasGroup(net.minecraft.resources.Identifier);
+  protected net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider<T>.AliasGroupBuilder aliasGroup(java.lang.String);
+  public java.util.Map<net.minecraft.resources.Identifier, net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider<T>.AliasGroupBuilder> getAliasGroupBuilders();
+  static net.minecraft.tags.TagBuilder access$000(net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider, net.minecraft.tags.TagKey);
+  static net.minecraft.resources.ResourceKey access$100(net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider);
+  static net.minecraft.resources.ResourceKey access$200(net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider);
+  static net.minecraft.resources.ResourceKey access$300(net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider);
+  static net.minecraft.resources.ResourceKey access$400(net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider);
+  private net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$AliasGroupBuilder lambda$aliasGroup$1(net.minecraft.resources.Identifier);
+  private net.fabricmc.fabric.api.datagen.v1.provider.FabricTagsProvider$AliasGroupBuilder lambda$aliasGroup$0(net.minecraft.resources.Identifier);
+}
+Compiled from "SimpleFabricLootTableSubProvider.java"
+public abstract class net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableSubProvider implements net.fabricmc.fabric.api.datagen.v1.provider.FabricLootTableSubProvider {
+  protected final net.fabricmc.fabric.api.datagen.v1.FabricPackOutput output;
+  private final java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider> registryLookupFuture;
+  protected final net.minecraft.util.context.ContextKeySet contextParamSet;
+  public net.fabricmc.fabric.api.datagen.v1.provider.SimpleFabricLootTableSubProvider(net.fabricmc.fabric.api.datagen.v1.FabricPackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>, net.minecraft.util.context.ContextKeySet);
+  public java.util.concurrent.CompletableFuture<?> run(net.minecraft.data.CachedOutput);
+  public java.lang.String getName();
+}
+Compiled from "package-info.java"
+interface net.fabricmc.fabric.api.datagen.v1.provider.package-info {
+}

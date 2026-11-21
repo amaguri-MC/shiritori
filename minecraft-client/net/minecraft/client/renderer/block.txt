@@ -1,0 +1,453 @@
+Compiled from "BlockAndTintGetter.java"
+class net.minecraft.client.renderer.block.BlockAndTintGetter$1 implements net.minecraft.client.renderer.block.BlockAndTintGetter {
+  net.minecraft.client.renderer.block.BlockAndTintGetter$1();
+  public net.minecraft.world.level.CardinalLighting cardinalLighting();
+  public net.minecraft.world.level.lighting.LevelLightEngine getLightEngine();
+  public int getBlockTint(net.minecraft.core.BlockPos, net.minecraft.world.level.ColorResolver);
+  public net.minecraft.world.level.block.entity.BlockEntity getBlockEntity(net.minecraft.core.BlockPos);
+  public net.minecraft.world.level.block.state.BlockState getBlockState(net.minecraft.core.BlockPos);
+  public net.minecraft.world.level.material.FluidState getFluidState(net.minecraft.core.BlockPos);
+  public int getHeight();
+  public int getMinY();
+}
+Compiled from "BlockAndTintGetter.java"
+public interface net.minecraft.client.renderer.block.BlockAndTintGetter extends net.minecraft.world.level.BlockAndLightGetter {
+  public static final net.minecraft.client.renderer.block.BlockAndTintGetter EMPTY;
+  public abstract net.minecraft.world.level.CardinalLighting cardinalLighting();
+  public abstract int getBlockTint(net.minecraft.core.BlockPos, net.minecraft.world.level.ColorResolver);
+  static {};
+}
+Compiled from "BlockModelLighter.java"
+class net.minecraft.client.renderer.block.BlockModelLighter$1 {
+  static final int[] $SwitchMap$net$minecraft$core$Direction;
+  static {};
+}
+Compiled from "BlockModelLighter.java"
+final class net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo extends java.lang.Enum<net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo> {
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo DOWN;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo UP;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo NORTH;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo SOUTH;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo WEST;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo EAST;
+  private final net.minecraft.core.Direction[] corners;
+  private final boolean doNonCubicWeight;
+  private final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo[] vert0Weights;
+  private final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo[] vert1Weights;
+  private final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo[] vert2Weights;
+  private final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo[] vert3Weights;
+  private static final net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo[] BY_FACING;
+  private static final net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo[] $VALUES;
+  public static net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo[] values();
+  public static net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo valueOf(java.lang.String);
+  private net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo(net.minecraft.core.Direction[], float, boolean, net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo[], net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo[], net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo[], net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo[]);
+  public static net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo fromFacing(net.minecraft.core.Direction);
+  private static net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo[] $values();
+  private static void lambda$static$0(net.minecraft.client.renderer.block.BlockModelLighter$AdjacencyInfo[]);
+  static {};
+}
+Compiled from "BlockModelLighter.java"
+final class net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap extends java.lang.Enum<net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap> {
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap DOWN;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap UP;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap NORTH;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap SOUTH;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap WEST;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap EAST;
+  private final int vert0;
+  private final int vert1;
+  private final int vert2;
+  private final int vert3;
+  private static final net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap[] BY_FACING;
+  private static final net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap[] $VALUES;
+  public static net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap[] values();
+  public static net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap valueOf(java.lang.String);
+  private net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap(int, int, int, int);
+  public static net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap fromFacing(net.minecraft.core.Direction);
+  private static net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap[] $values();
+  private static void lambda$static$0(net.minecraft.client.renderer.block.BlockModelLighter$AmbientVertexRemap[]);
+  static {};
+}
+Compiled from "BlockModelLighter.java"
+class net.minecraft.client.renderer.block.BlockModelLighter$Cache$1 extends it.unimi.dsi.fastutil.longs.Long2IntLinkedOpenHashMap {
+  final net.minecraft.client.renderer.block.BlockModelLighter$Cache this$0;
+  net.minecraft.client.renderer.block.BlockModelLighter$Cache$1(net.minecraft.client.renderer.block.BlockModelLighter$Cache, int, float);
+  protected void rehash(int);
+}
+Compiled from "BlockModelLighter.java"
+class net.minecraft.client.renderer.block.BlockModelLighter$Cache$2 extends it.unimi.dsi.fastutil.longs.Long2FloatLinkedOpenHashMap {
+  final net.minecraft.client.renderer.block.BlockModelLighter$Cache this$0;
+  net.minecraft.client.renderer.block.BlockModelLighter$Cache$2(net.minecraft.client.renderer.block.BlockModelLighter$Cache, int, float);
+  protected void rehash(int);
+}
+Compiled from "BlockModelLighter.java"
+public class net.minecraft.client.renderer.block.BlockModelLighter$Cache {
+  private boolean enabled;
+  private final it.unimi.dsi.fastutil.longs.Long2IntLinkedOpenHashMap colorCache;
+  private final it.unimi.dsi.fastutil.longs.Long2FloatLinkedOpenHashMap brightnessCache;
+  private final net.minecraft.util.LightCoordsUtil$BrightnessGetter cachedBrightnessGetter;
+  public net.minecraft.client.renderer.block.BlockModelLighter$Cache();
+  public void enable();
+  public void disable();
+  public int getLightCoords(net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos);
+  public float getShadeBrightness(net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos);
+  private int lambda$new$2(net.minecraft.world.level.BlockAndLightGetter, net.minecraft.core.BlockPos);
+  private it.unimi.dsi.fastutil.longs.Long2FloatLinkedOpenHashMap lambda$new$1();
+  private it.unimi.dsi.fastutil.longs.Long2IntLinkedOpenHashMap lambda$new$0();
+}
+Compiled from "BlockModelLighter.java"
+final class net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo extends java.lang.Enum<net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo> {
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo DOWN;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo UP;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo NORTH;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo SOUTH;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo WEST;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo EAST;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo FLIP_DOWN;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo FLIP_UP;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo FLIP_NORTH;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo FLIP_SOUTH;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo FLIP_WEST;
+  public static final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo FLIP_EAST;
+  public static final int COUNT;
+  private final int index;
+  private static final net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo[] $VALUES;
+  public static net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo[] values();
+  public static net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo valueOf(java.lang.String);
+  private net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo(int);
+  private static net.minecraft.client.renderer.block.BlockModelLighter$SizeInfo[] $values();
+  static {};
+}
+Compiled from "BlockModelLighter.java"
+public class net.minecraft.client.renderer.block.BlockModelLighter {
+  private static final int CACHE_SIZE;
+  private static final java.lang.ThreadLocal<net.minecraft.client.renderer.block.BlockModelLighter$Cache> CACHE;
+  public static final int CHECK_LIGHT;
+  private final net.minecraft.client.renderer.block.BlockModelLighter$Cache cache;
+  private final net.minecraft.core.BlockPos$MutableBlockPos scratchPos;
+  private boolean faceCubic;
+  private boolean facePartial;
+  private final float[] faceShape;
+  public net.minecraft.client.renderer.block.BlockModelLighter();
+  public int getLightCoords(net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos);
+  public void prepareQuadAmbientOcclusion(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, net.minecraft.client.resources.model.geometry.BakedQuad, com.mojang.blaze3d.vertex.QuadInstance);
+  public void prepareQuadFlat(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, int, net.minecraft.client.resources.model.geometry.BakedQuad, com.mojang.blaze3d.vertex.QuadInstance);
+  private void prepareQuadShape(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, net.minecraft.client.resources.model.geometry.BakedQuad, boolean);
+  public static void enableCaching();
+  public static void clearCache();
+  static {};
+}
+Compiled from "BlockModelRenderState.java"
+public class net.minecraft.client.renderer.block.BlockModelRenderState {
+  public static final int[] EMPTY_TINTS;
+  private java.util.List<net.minecraft.client.renderer.block.dispatch.BlockStateModelPart> modelParts;
+  private org.joml.Matrix4fc transformation;
+  private net.minecraft.client.renderer.rendertype.RenderType renderType;
+  private net.minecraft.client.renderer.special.SpecialModelRenderer<?> specialRenderer;
+  private org.joml.Matrix4fc specialRendererTransformation;
+  private it.unimi.dsi.fastutil.ints.IntList tintLayers;
+  public int blockLightCoords;
+  private net.minecraft.util.RandomSource randomSource;
+  public net.minecraft.client.renderer.block.BlockModelRenderState();
+  public void clear();
+  public it.unimi.dsi.fastutil.ints.IntList tintLayers();
+  public <T> void setupSpecialModel(net.minecraft.client.renderer.special.SpecialModelRenderer<T>, org.joml.Matrix4fc);
+  public java.util.List<net.minecraft.client.renderer.block.dispatch.BlockStateModelPart> setupModel(org.joml.Matrix4fc, boolean);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, int, int);
+  private static org.joml.Matrix4fc identityToNull(org.joml.Matrix4fc);
+  private void submitModel(net.minecraft.client.renderer.rendertype.RenderType, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, int, int);
+  private static void submitSpecialRenderer(net.minecraft.client.renderer.special.SpecialModelRenderer<?>, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, int, int);
+  public void submitOnlyOutline(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, int, int);
+  public void submitWithZOffset(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, int, int);
+  public boolean isEmpty();
+  public net.minecraft.util.RandomSource scratchRandomSource(long);
+  static {};
+}
+Compiled from "BlockModelResolver.java"
+public class net.minecraft.client.renderer.block.BlockModelResolver {
+  private static final long MODEL_SEED;
+  private final net.minecraft.client.resources.model.ModelManager modelManager;
+  public net.minecraft.client.renderer.block.BlockModelResolver(net.minecraft.client.resources.model.ModelManager);
+  public void update(net.minecraft.client.renderer.block.BlockModelRenderState, net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.model.BlockDisplayContext);
+  public void updateForItemFrame(net.minecraft.client.renderer.block.BlockModelRenderState, boolean, boolean);
+}
+Compiled from "BlockModelSet.java"
+public class net.minecraft.client.renderer.block.BlockModelSet {
+  private static final org.joml.Matrix4fc IDENTITY;
+  private final net.minecraft.client.renderer.block.BlockStateModelSet fallback;
+  private final net.minecraft.client.color.block.BlockColors blockColors;
+  private final java.util.Map<net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.model.BlockModel> blockModelByStateCache;
+  public net.minecraft.client.renderer.block.BlockModelSet(net.minecraft.client.renderer.block.BlockStateModelSet, java.util.Map<net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.model.BlockModel>, net.minecraft.client.color.block.BlockColors);
+  public net.minecraft.client.renderer.block.model.BlockModel get(net.minecraft.world.level.block.state.BlockState);
+  private net.minecraft.client.renderer.block.model.BlockModel createFallbackModel(net.minecraft.world.level.block.state.BlockState);
+  static {};
+}
+Compiled from "BlockQuadOutput.java"
+public interface net.minecraft.client.renderer.block.BlockQuadOutput {
+  public abstract void put(float, float, float, net.minecraft.client.resources.model.geometry.BakedQuad, com.mojang.blaze3d.vertex.QuadInstance);
+}
+Compiled from "BlockStateModelSet.java"
+public class net.minecraft.client.renderer.block.BlockStateModelSet {
+  private final java.util.Map<net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.dispatch.BlockStateModel> modelByState;
+  private final net.minecraft.client.renderer.block.dispatch.BlockStateModel missingModel;
+  public net.minecraft.client.renderer.block.BlockStateModelSet(java.util.Map<net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.dispatch.BlockStateModel>, net.minecraft.client.renderer.block.dispatch.BlockStateModel);
+  public net.minecraft.client.renderer.block.dispatch.BlockStateModel get(net.minecraft.world.level.block.state.BlockState);
+  public net.minecraft.client.renderer.block.dispatch.BlockStateModel missingModel();
+  public net.minecraft.client.resources.model.sprite.Material$Baked getParticleMaterial(net.minecraft.world.level.block.state.BlockState);
+}
+Compiled from "BuiltInBlockModels.java"
+class net.minecraft.client.renderer.block.BuiltInBlockModels$Builder {
+  private final net.minecraft.client.color.block.BlockColors blockColors;
+  private final java.util.Map<net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.model.BlockModel$Unbaked> result;
+  private net.minecraft.client.renderer.block.BuiltInBlockModels$Builder(net.minecraft.client.color.block.BlockColors);
+  private void put(net.minecraft.client.renderer.block.BuiltInBlockModels$ModelFactory, net.minecraft.world.level.block.Block, net.minecraft.world.level.block.Block);
+  private void put(net.minecraft.client.renderer.block.model.BlockModel$Unbaked, net.minecraft.world.level.block.Block);
+  private void put(net.minecraft.client.renderer.block.BuiltInBlockModels$ModelFactory, net.minecraft.world.level.block.Block);
+  public java.util.Map<net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.model.BlockModel$Unbaked> build();
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$put$0(net.minecraft.client.renderer.block.model.BlockModel$Unbaked, net.minecraft.world.level.block.state.BlockState);
+}
+Compiled from "BuiltInBlockModels.java"
+interface net.minecraft.client.renderer.block.BuiltInBlockModels$ModelFactory {
+  public abstract net.minecraft.client.renderer.block.model.BlockModel$Unbaked create(net.minecraft.client.color.block.BlockColors, net.minecraft.world.level.block.state.BlockState);
+}
+Compiled from "BuiltInBlockModels.java"
+interface net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory extends net.minecraft.client.renderer.block.BuiltInBlockModels$ModelFactory {
+  public default net.minecraft.client.renderer.block.model.BlockModel$Unbaked create(net.minecraft.client.color.block.BlockColors, net.minecraft.world.level.block.state.BlockState);
+  public abstract net.minecraft.client.renderer.block.model.BlockModel$Unbaked createSpecial(net.minecraft.world.level.block.state.BlockState);
+}
+Compiled from "BuiltInBlockModels.java"
+public class net.minecraft.client.renderer.block.BuiltInBlockModels {
+  public net.minecraft.client.renderer.block.BuiltInBlockModels();
+  private static void addDefaults(net.minecraft.client.renderer.block.BuiltInBlockModels$Builder);
+  private static void createAir(net.minecraft.client.renderer.block.BuiltInBlockModels$Builder, net.minecraft.world.level.block.Block);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked special(net.minecraft.client.renderer.special.SpecialModelRenderer$Unbaked<?>);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked special(net.minecraft.client.renderer.special.SpecialModelRenderer$Unbaked<?>, com.mojang.math.Transformation);
+  private static net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory createMobHead(net.minecraft.world.level.block.SkullBlock$Types);
+  private static net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory createMobWallHead(net.minecraft.world.level.block.SkullBlock$Types);
+  private static void createMobHeads(net.minecraft.client.renderer.block.BuiltInBlockModels$Builder, net.minecraft.world.level.block.SkullBlock$Types, net.minecraft.world.level.block.Block, net.minecraft.world.level.block.Block);
+  private static net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory createPlayerHead();
+  private static net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory createPlayerWallHead();
+  private static net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory createBanner(net.minecraft.world.item.DyeColor);
+  private static net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory createWallBanner(net.minecraft.world.item.DyeColor);
+  private static net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory createShulkerBox();
+  private static net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory createDyedShulkerBox(net.minecraft.world.item.DyeColor);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked createChest(net.minecraft.resources.Identifier, net.minecraft.world.level.block.state.properties.ChestType, net.minecraft.core.Direction);
+  private static net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory createSingletonChest(net.minecraft.resources.Identifier);
+  private static net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory createChest(net.minecraft.client.renderer.MultiblockChestResources<net.minecraft.resources.Identifier>);
+  private static net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory createXmasChest(net.minecraft.client.renderer.MultiblockChestResources<net.minecraft.resources.Identifier>);
+  private static net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory createCopperGolem(net.minecraft.world.level.block.WeatheringCopper$WeatherState);
+  private static net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory createDecoratedPot();
+  private static net.minecraft.client.renderer.block.model.BlockStateModelWrapper$Unbaked createBlockStateModelWrapper(net.minecraft.client.color.block.BlockColors, net.minecraft.world.level.block.state.BlockState);
+  private static net.minecraft.client.renderer.block.model.CompositeBlockModel$Unbaked combineSpecialAndBlockModels(net.minecraft.client.renderer.block.model.BlockModel$Unbaked, net.minecraft.client.color.block.BlockColors, net.minecraft.world.level.block.state.BlockState);
+  private static net.minecraft.client.renderer.block.SelectBlockModel$Unbaked createFlowerBedModel(net.minecraft.client.color.block.BlockColors, net.minecraft.world.level.block.state.BlockState);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked createEnchantingTable();
+  private static <P extends java.lang.Comparable<P>> net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory specialModelWithPropertyDispatch(net.minecraft.world.level.block.state.properties.Property<P>, java.util.function.Function<P, net.minecraft.client.renderer.block.model.BlockModel$Unbaked>);
+  private static <P1 extends java.lang.Comparable<P1>, P2 extends java.lang.Comparable<P2>> net.minecraft.client.renderer.block.BuiltInBlockModels$SpecialModelFactory specialModelWithPropertyDispatch(net.minecraft.world.level.block.state.properties.Property<P1>, net.minecraft.world.level.block.state.properties.Property<P2>, java.util.function.BiFunction<P1, P2, net.minecraft.client.renderer.block.model.BlockModel$Unbaked>);
+  public static java.util.Map<net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.model.BlockModel$Unbaked> createBlockModels(net.minecraft.client.color.block.BlockColors);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$specialModelWithPropertyDispatch$1(net.minecraft.world.level.block.state.properties.Property, net.minecraft.world.level.block.state.properties.Property, java.util.function.BiFunction, net.minecraft.world.level.block.state.BlockState);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$specialModelWithPropertyDispatch$0(net.minecraft.world.level.block.state.properties.Property, java.util.function.Function, net.minecraft.world.level.block.state.BlockState);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$createDecoratedPot$0(net.minecraft.core.Direction);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$createCopperGolem$0(net.minecraft.world.level.block.WeatheringCopper$WeatherState, net.minecraft.core.Direction, net.minecraft.world.level.block.CopperGolemStatueBlock$Pose);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$createXmasChest$0(net.minecraft.client.renderer.MultiblockChestResources, net.minecraft.core.Direction, net.minecraft.world.level.block.state.properties.ChestType);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$createChest$0(net.minecraft.client.renderer.MultiblockChestResources, net.minecraft.core.Direction, net.minecraft.world.level.block.state.properties.ChestType);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$createSingletonChest$0(net.minecraft.resources.Identifier, net.minecraft.core.Direction);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$createDyedShulkerBox$0(net.minecraft.world.item.DyeColor, net.minecraft.core.Direction);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$createShulkerBox$0(net.minecraft.core.Direction);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$createWallBanner$0(net.minecraft.world.item.DyeColor, net.minecraft.core.Direction);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$createBanner$0(net.minecraft.world.item.DyeColor, java.lang.Integer);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$createPlayerWallHead$0(net.minecraft.core.Direction);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$createPlayerHead$0(java.lang.Integer);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$createMobWallHead$0(net.minecraft.world.level.block.SkullBlock$Types, net.minecraft.core.Direction);
+  private static net.minecraft.client.renderer.block.model.BlockModel$Unbaked lambda$createMobHead$0(net.minecraft.world.level.block.SkullBlock$Types, java.lang.Integer);
+  private static void lambda$addDefaults$3(net.minecraft.client.renderer.block.BuiltInBlockModels$Builder, net.minecraft.world.level.block.WeatheringCopper$WeatherState);
+  private static void lambda$addDefaults$2(net.minecraft.client.renderer.block.BuiltInBlockModels$Builder, net.minecraft.world.item.DyeColor, net.minecraft.world.level.block.Block);
+  private static void lambda$addDefaults$1(net.minecraft.client.renderer.block.BuiltInBlockModels$Builder, net.minecraft.world.item.DyeColor, net.minecraft.world.level.block.Block);
+  private static void lambda$addDefaults$0(net.minecraft.client.renderer.block.BuiltInBlockModels$Builder, net.minecraft.world.item.DyeColor, net.minecraft.world.level.block.Block);
+}
+Compiled from "FluidModel.java"
+public final class net.minecraft.client.renderer.block.FluidModel$Unbaked extends java.lang.Record {
+  private final net.minecraft.client.resources.model.sprite.Material stillMaterial;
+  private final net.minecraft.client.resources.model.sprite.Material flowingMaterial;
+  private final net.minecraft.client.resources.model.sprite.Material overlayMaterial;
+  private final net.minecraft.client.color.block.BlockTintSource tintSource;
+  public net.minecraft.client.renderer.block.FluidModel$Unbaked(net.minecraft.client.resources.model.sprite.Material, net.minecraft.client.resources.model.sprite.Material, net.minecraft.client.resources.model.sprite.Material, net.minecraft.client.color.block.BlockTintSource);
+  public net.minecraft.client.renderer.block.FluidModel bake(net.minecraft.client.resources.model.sprite.MaterialBaker, net.minecraft.client.resources.model.ModelDebugName);
+  private static com.mojang.blaze3d.platform.Transparency getTransparency(net.minecraft.client.resources.model.sprite.Material$Baked);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.resources.model.sprite.Material stillMaterial();
+  public net.minecraft.client.resources.model.sprite.Material flowingMaterial();
+  public net.minecraft.client.resources.model.sprite.Material overlayMaterial();
+  public net.minecraft.client.color.block.BlockTintSource tintSource();
+}
+Compiled from "FluidModel.java"
+public final class net.minecraft.client.renderer.block.FluidModel extends java.lang.Record {
+  private final net.minecraft.client.renderer.chunk.ChunkSectionLayer layer;
+  private final net.minecraft.client.resources.model.sprite.Material$Baked stillMaterial;
+  private final net.minecraft.client.resources.model.sprite.Material$Baked flowingMaterial;
+  private final net.minecraft.client.resources.model.sprite.Material$Baked overlayMaterial;
+  private final net.minecraft.client.color.block.BlockTintSource tintSource;
+  public net.minecraft.client.renderer.block.FluidModel(net.minecraft.client.renderer.chunk.ChunkSectionLayer, net.minecraft.client.resources.model.sprite.Material$Baked, net.minecraft.client.resources.model.sprite.Material$Baked, net.minecraft.client.resources.model.sprite.Material$Baked, net.minecraft.client.color.block.BlockTintSource);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.renderer.chunk.ChunkSectionLayer layer();
+  public net.minecraft.client.resources.model.sprite.Material$Baked stillMaterial();
+  public net.minecraft.client.resources.model.sprite.Material$Baked flowingMaterial();
+  public net.minecraft.client.resources.model.sprite.Material$Baked overlayMaterial();
+  public net.minecraft.client.color.block.BlockTintSource tintSource();
+}
+Compiled from "FluidRenderer.java"
+class net.minecraft.client.renderer.block.FluidRenderer$1 {
+  static final int[] $SwitchMap$net$minecraft$core$Direction;
+  static {};
+}
+Compiled from "FluidRenderer.java"
+public interface net.minecraft.client.renderer.block.FluidRenderer$Output {
+  public abstract com.mojang.blaze3d.vertex.VertexConsumer getBuilder(net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+}
+Compiled from "FluidRenderer.java"
+public class net.minecraft.client.renderer.block.FluidRenderer {
+  private static final float MAX_FLUID_HEIGHT;
+  private final net.minecraft.client.renderer.block.FluidStateModelSet fluidModels;
+  public net.minecraft.client.renderer.block.FluidRenderer(net.minecraft.client.renderer.block.FluidStateModelSet);
+  private static boolean isNeighborSameFluid(net.minecraft.world.level.material.FluidState, net.minecraft.world.level.material.FluidState);
+  private static boolean isFaceOccludedByState(net.minecraft.core.Direction, float, net.minecraft.world.level.block.state.BlockState);
+  private static boolean isFaceOccludedByNeighbor(net.minecraft.core.Direction, float, net.minecraft.world.level.block.state.BlockState);
+  private static boolean isFaceOccludedBySelf(net.minecraft.world.level.block.state.BlockState, net.minecraft.core.Direction);
+  public static boolean shouldRenderFace(net.minecraft.world.level.material.FluidState, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.Direction, net.minecraft.world.level.material.FluidState);
+  public void tesselate(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos, net.minecraft.client.renderer.block.FluidRenderer$Output, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.material.FluidState);
+  private void addFace(com.mojang.blaze3d.vertex.VertexConsumer, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, int, int, boolean);
+  private float calculateAverageHeight(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.world.level.material.Fluid, float, float, float, net.minecraft.core.BlockPos);
+  private void addWeightedHeight(float[], float);
+  private float getHeight(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.world.level.material.Fluid, net.minecraft.core.BlockPos);
+  private float getHeight(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.world.level.material.Fluid, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.material.FluidState);
+  private void vertex(com.mojang.blaze3d.vertex.VertexConsumer, float, float, float, int, float, float, int);
+  private int getLightCoords(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos);
+}
+Compiled from "FluidStateModelSet.java"
+public class net.minecraft.client.renderer.block.FluidStateModelSet {
+  private static final net.minecraft.client.renderer.block.FluidModel$Unbaked WATER_MODEL;
+  private static final net.minecraft.client.renderer.block.FluidModel$Unbaked LAVA_MODEL;
+  private final java.util.Map<net.minecraft.world.level.material.Fluid, net.minecraft.client.renderer.block.FluidModel> modelByFluid;
+  private final net.minecraft.client.renderer.block.FluidModel missingModel;
+  public net.minecraft.client.renderer.block.FluidStateModelSet(java.util.Map<net.minecraft.world.level.material.Fluid, net.minecraft.client.renderer.block.FluidModel>, net.minecraft.client.renderer.block.FluidModel);
+  public static java.util.Map<net.minecraft.world.level.material.Fluid, net.minecraft.client.renderer.block.FluidModel> bake(net.minecraft.client.resources.model.sprite.MaterialBaker);
+  public net.minecraft.client.renderer.block.FluidModel get(net.minecraft.world.level.material.FluidState);
+  private static java.lang.String lambda$bake$1();
+  private static java.lang.String lambda$bake$0();
+  static {};
+}
+Compiled from "LoadedBlockModels.java"
+public class net.minecraft.client.renderer.block.LoadedBlockModels {
+  private static final org.joml.Matrix4fc IDENTITY;
+  private final java.util.Map<net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.model.BlockModel$Unbaked> unbakedModels;
+  private final net.minecraft.client.model.geom.EntityModelSet entityModelSet;
+  private final net.minecraft.client.resources.model.sprite.SpriteGetter sprites;
+  private final net.minecraft.client.renderer.PlayerSkinRenderCache playerSkinRenderCache;
+  public net.minecraft.client.renderer.block.LoadedBlockModels(java.util.Map<net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.model.BlockModel$Unbaked>, net.minecraft.client.model.geom.EntityModelSet, net.minecraft.client.resources.model.sprite.SpriteGetter, net.minecraft.client.renderer.PlayerSkinRenderCache);
+  public java.util.concurrent.CompletableFuture<java.util.Map<net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.model.BlockModel>> bake(java.util.function.Function<net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.dispatch.BlockStateModel>, net.minecraft.client.renderer.block.dispatch.BlockStateModel, java.util.concurrent.Executor);
+  private java.util.Map lambda$bake$0(net.minecraft.client.renderer.block.dispatch.BlockStateModel, java.util.function.Function);
+  private static void lambda$bake$1(com.google.common.collect.ImmutableMap$Builder, net.minecraft.client.renderer.block.model.BlockModel$BakingContext, net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.model.BlockModel$Unbaked);
+  static {};
+}
+Compiled from "ModelBlockRenderer.java"
+public class net.minecraft.client.renderer.block.ModelBlockRenderer {
+  private static final net.minecraft.core.Direction[] DIRECTIONS;
+  private final net.minecraft.client.renderer.block.BlockModelLighter lighter;
+  private final boolean ambientOcclusion;
+  private final boolean cull;
+  private final net.minecraft.client.color.block.BlockColors blockColors;
+  private final net.minecraft.util.RandomSource random;
+  private final java.util.List<net.minecraft.client.renderer.block.dispatch.BlockStateModelPart> parts;
+  private final net.minecraft.core.BlockPos$MutableBlockPos scratchPos;
+  private final com.mojang.blaze3d.vertex.QuadInstance quadInstance;
+  private int tintCacheIndex;
+  private int tintCacheValue;
+  private boolean tintSourcesInitialized;
+  private final java.util.List<net.minecraft.client.color.block.BlockTintSource> tintSources;
+  private final it.unimi.dsi.fastutil.ints.IntList computedTintValues;
+  public net.minecraft.client.renderer.block.ModelBlockRenderer(boolean, boolean, net.minecraft.client.color.block.BlockColors);
+  public static boolean forceOpaque(boolean, net.minecraft.world.level.block.state.BlockState);
+  public void tesselateBlock(net.minecraft.client.renderer.block.BlockQuadOutput, float, float, float, net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.dispatch.BlockStateModel, long);
+  private void configureTintCache(net.minecraft.world.level.block.state.BlockState);
+  private void resetTintCache();
+  private void tesselateAmbientOcclusion(net.minecraft.client.renderer.block.BlockQuadOutput, float, float, float, java.util.List<net.minecraft.client.renderer.block.dispatch.BlockStateModelPart>, net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos);
+  private void tesselateFlat(net.minecraft.client.renderer.block.BlockQuadOutput, float, float, float, java.util.List<net.minecraft.client.renderer.block.dispatch.BlockStateModelPart>, net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos);
+  private boolean shouldRenderFace(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.Direction, net.minecraft.core.BlockPos);
+  private void putQuadWithTint(net.minecraft.client.renderer.block.BlockQuadOutput, float, float, float, net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, net.minecraft.client.resources.model.geometry.BakedQuad);
+  private int getTintColor(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, int);
+  private int computeTintColor(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, int);
+  static {};
+}
+Compiled from "MovingBlockRenderState.java"
+public class net.minecraft.client.renderer.block.MovingBlockRenderState implements net.minecraft.client.renderer.block.BlockAndTintGetter {
+  public net.minecraft.core.BlockPos randomSeedPos;
+  public net.minecraft.core.BlockPos blockPos;
+  public net.minecraft.world.level.block.state.BlockState blockState;
+  public net.minecraft.core.Holder<net.minecraft.world.level.biome.Biome> biome;
+  public net.minecraft.world.level.CardinalLighting cardinalLighting;
+  public net.minecraft.world.level.lighting.LevelLightEngine lightEngine;
+  public net.minecraft.client.renderer.block.MovingBlockRenderState();
+  public net.minecraft.world.level.CardinalLighting cardinalLighting();
+  public net.minecraft.world.level.lighting.LevelLightEngine getLightEngine();
+  public int getBlockTint(net.minecraft.core.BlockPos, net.minecraft.world.level.ColorResolver);
+  public net.minecraft.world.level.block.entity.BlockEntity getBlockEntity(net.minecraft.core.BlockPos);
+  public net.minecraft.world.level.block.state.BlockState getBlockState(net.minecraft.core.BlockPos);
+  public net.minecraft.world.level.material.FluidState getFluidState(net.minecraft.core.BlockPos);
+  public int getHeight();
+  public int getMinY();
+}
+Compiled from "SelectBlockModel.java"
+public interface net.minecraft.client.renderer.block.SelectBlockModel$ModelSelector<T> {
+  public abstract net.minecraft.client.renderer.block.model.BlockModel get(T);
+}
+Compiled from "SelectBlockModel.java"
+public final class net.minecraft.client.renderer.block.SelectBlockModel$SwitchCase<T> extends java.lang.Record {
+  private final java.util.List<T> values;
+  private final net.minecraft.client.renderer.block.model.BlockModel$Unbaked model;
+  public net.minecraft.client.renderer.block.SelectBlockModel$SwitchCase(java.util.List<T>, net.minecraft.client.renderer.block.model.BlockModel$Unbaked);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<T> values();
+  public net.minecraft.client.renderer.block.model.BlockModel$Unbaked model();
+}
+Compiled from "SelectBlockModel.java"
+public final class net.minecraft.client.renderer.block.SelectBlockModel$Unbaked extends java.lang.Record implements net.minecraft.client.renderer.block.model.BlockModel$Unbaked {
+  private final java.util.Optional<com.mojang.math.Transformation> transformation;
+  private final net.minecraft.client.renderer.block.SelectBlockModel$UnbakedSwitch<?, ?> unbakedSwitch;
+  private final java.util.Optional<net.minecraft.client.renderer.block.model.BlockModel$Unbaked> fallback;
+  public net.minecraft.client.renderer.block.SelectBlockModel$Unbaked(java.util.Optional<com.mojang.math.Transformation>, net.minecraft.client.renderer.block.SelectBlockModel$UnbakedSwitch<?, ?>, java.util.Optional<net.minecraft.client.renderer.block.model.BlockModel$Unbaked>);
+  public net.minecraft.client.renderer.block.model.BlockModel bake(net.minecraft.client.renderer.block.model.BlockModel$BakingContext, org.joml.Matrix4fc);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Optional<com.mojang.math.Transformation> transformation();
+  public net.minecraft.client.renderer.block.SelectBlockModel$UnbakedSwitch<?, ?> unbakedSwitch();
+  public java.util.Optional<net.minecraft.client.renderer.block.model.BlockModel$Unbaked> fallback();
+  private static net.minecraft.client.renderer.block.model.BlockModel lambda$bake$0(net.minecraft.client.renderer.block.model.BlockModel$BakingContext, org.joml.Matrix4fc, net.minecraft.client.renderer.block.model.BlockModel$Unbaked);
+}
+Compiled from "SelectBlockModel.java"
+public final class net.minecraft.client.renderer.block.SelectBlockModel$UnbakedSwitch<P extends net.minecraft.client.renderer.block.model.properties.select.SelectBlockModelProperty<T>, T> extends java.lang.Record {
+  private final P property;
+  private final java.util.List<net.minecraft.client.renderer.block.SelectBlockModel$SwitchCase<T>> cases;
+  public net.minecraft.client.renderer.block.SelectBlockModel$UnbakedSwitch(P, java.util.List<net.minecraft.client.renderer.block.SelectBlockModel$SwitchCase<T>>);
+  public net.minecraft.client.renderer.block.model.BlockModel bake(net.minecraft.client.renderer.block.model.BlockModel$BakingContext, org.joml.Matrix4fc, net.minecraft.client.renderer.block.model.BlockModel);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public P property();
+  public java.util.List<net.minecraft.client.renderer.block.SelectBlockModel$SwitchCase<T>> cases();
+}
+Compiled from "SelectBlockModel.java"
+public class net.minecraft.client.renderer.block.SelectBlockModel<T> implements net.minecraft.client.renderer.block.model.BlockModel {
+  private final net.minecraft.client.renderer.block.model.properties.select.SelectBlockModelProperty<T> property;
+  private final net.minecraft.client.renderer.block.SelectBlockModel$ModelSelector<T> models;
+  public net.minecraft.client.renderer.block.SelectBlockModel(net.minecraft.client.renderer.block.model.properties.select.SelectBlockModelProperty<T>, net.minecraft.client.renderer.block.SelectBlockModel$ModelSelector<T>);
+  public void update(net.minecraft.client.renderer.block.BlockModelRenderState, net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.model.BlockDisplayContext, long);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.renderer.block.package-info {
+}

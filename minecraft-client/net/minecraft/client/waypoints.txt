@@ -1,0 +1,17 @@
+Compiled from "ClientWaypointManager.java"
+public class net.minecraft.client.waypoints.ClientWaypointManager implements net.minecraft.world.waypoints.TrackedWaypointManager {
+  private final java.util.Map<com.mojang.datafixers.util.Either<java.util.UUID, java.lang.String>, net.minecraft.world.waypoints.TrackedWaypoint> waypoints;
+  public net.minecraft.client.waypoints.ClientWaypointManager();
+  public void trackWaypoint(net.minecraft.world.waypoints.TrackedWaypoint);
+  public void updateWaypoint(net.minecraft.world.waypoints.TrackedWaypoint);
+  public void untrackWaypoint(net.minecraft.world.waypoints.TrackedWaypoint);
+  public boolean hasWaypoints();
+  public void forEachWaypoint(net.minecraft.world.entity.Entity, java.util.function.Consumer<net.minecraft.world.waypoints.TrackedWaypoint>);
+  public void untrackWaypoint(net.minecraft.world.waypoints.Waypoint);
+  public void updateWaypoint(net.minecraft.world.waypoints.Waypoint);
+  public void trackWaypoint(net.minecraft.world.waypoints.Waypoint);
+  private static double lambda$forEachWaypoint$0(net.minecraft.world.entity.Entity, net.minecraft.world.waypoints.TrackedWaypoint);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.waypoints.package-info {
+}

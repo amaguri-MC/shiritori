@@ -1,0 +1,320 @@
+Compiled from "ChunkEntities.java"
+public class net.minecraft.world.level.entity.ChunkEntities<T> {
+  private final net.minecraft.world.level.ChunkPos pos;
+  private final java.util.List<T> entities;
+  public net.minecraft.world.level.entity.ChunkEntities(net.minecraft.world.level.ChunkPos, java.util.List<T>);
+  public net.minecraft.world.level.ChunkPos getPos();
+  public java.util.stream.Stream<T> getEntities();
+  public boolean isEmpty();
+}
+Compiled from "ChunkStatusUpdateListener.java"
+public interface net.minecraft.world.level.entity.ChunkStatusUpdateListener {
+  public abstract void onChunkStatusChange(net.minecraft.world.level.ChunkPos, net.minecraft.server.level.FullChunkStatus);
+}
+Compiled from "EntityAccess.java"
+public interface net.minecraft.world.level.entity.EntityAccess extends net.minecraft.world.level.entity.UniquelyIdentifyable {
+  public abstract int getId();
+  public abstract net.minecraft.core.BlockPos blockPosition();
+  public abstract net.minecraft.world.phys.AABB getBoundingBox();
+  public abstract void setLevelCallback(net.minecraft.world.level.entity.EntityInLevelCallback);
+  public abstract java.util.stream.Stream<? extends net.minecraft.world.level.entity.EntityAccess> getSelfAndPassengers();
+  public abstract java.util.stream.Stream<? extends net.minecraft.world.level.entity.EntityAccess> getPassengersAndSelf();
+  public abstract void setRemoved(net.minecraft.world.entity.Entity$RemovalReason);
+  public abstract boolean shouldBeSaved();
+  public abstract boolean isAlwaysTicking();
+}
+Compiled from "EntityInLevelCallback.java"
+class net.minecraft.world.level.entity.EntityInLevelCallback$1 implements net.minecraft.world.level.entity.EntityInLevelCallback {
+  net.minecraft.world.level.entity.EntityInLevelCallback$1();
+  public void onMove();
+  public void onRemove(net.minecraft.world.entity.Entity$RemovalReason);
+}
+Compiled from "EntityInLevelCallback.java"
+public interface net.minecraft.world.level.entity.EntityInLevelCallback {
+  public static final net.minecraft.world.level.entity.EntityInLevelCallback NULL;
+  public abstract void onMove();
+  public abstract void onRemove(net.minecraft.world.entity.Entity$RemovalReason);
+  static {};
+}
+Compiled from "EntityLookup.java"
+public class net.minecraft.world.level.entity.EntityLookup<T extends net.minecraft.world.level.entity.EntityAccess> {
+  private static final org.slf4j.Logger LOGGER;
+  private final it.unimi.dsi.fastutil.ints.Int2ObjectMap<T> byId;
+  private final java.util.Map<java.util.UUID, T> byUuid;
+  public net.minecraft.world.level.entity.EntityLookup();
+  public <U extends T> void getEntities(net.minecraft.world.level.entity.EntityTypeTest<T, U>, net.minecraft.util.AbortableIterationConsumer<U>);
+  public java.lang.Iterable<T> getAllEntities();
+  public void add(T);
+  public void remove(T);
+  public T getEntity(int);
+  public T getEntity(java.util.UUID);
+  public int count();
+  static {};
+}
+Compiled from "EntityPersistentStorage.java"
+public interface net.minecraft.world.level.entity.EntityPersistentStorage<T> extends java.lang.AutoCloseable {
+  public abstract java.util.concurrent.CompletableFuture<net.minecraft.world.level.entity.ChunkEntities<T>> loadEntities(net.minecraft.world.level.ChunkPos);
+  public abstract void storeEntities(net.minecraft.world.level.entity.ChunkEntities<T>);
+  public abstract void flush(boolean);
+  public default void close() throws java.io.IOException;
+}
+Compiled from "EntitySection.java"
+public class net.minecraft.world.level.entity.EntitySection<T extends net.minecraft.world.level.entity.EntityAccess> {
+  private static final org.slf4j.Logger LOGGER;
+  private final net.minecraft.util.ClassInstanceMultiMap<T> storage;
+  private net.minecraft.world.level.entity.Visibility chunkStatus;
+  public net.minecraft.world.level.entity.EntitySection(java.lang.Class<T>, net.minecraft.world.level.entity.Visibility);
+  public void add(T);
+  public boolean remove(T);
+  public net.minecraft.util.AbortableIterationConsumer$Continuation getEntities(net.minecraft.world.phys.AABB, net.minecraft.util.AbortableIterationConsumer<T>);
+  public <U extends T> net.minecraft.util.AbortableIterationConsumer$Continuation getEntities(net.minecraft.world.level.entity.EntityTypeTest<T, U>, net.minecraft.world.phys.AABB, net.minecraft.util.AbortableIterationConsumer<? super U>);
+  public boolean isEmpty();
+  public java.util.stream.Stream<T> getEntities();
+  public net.minecraft.world.level.entity.Visibility getStatus();
+  public net.minecraft.world.level.entity.Visibility updateChunkStatus(net.minecraft.world.level.entity.Visibility);
+  public int size();
+  static {};
+}
+Compiled from "EntitySectionStorage.java"
+public class net.minecraft.world.level.entity.EntitySectionStorage<T extends net.minecraft.world.level.entity.EntityAccess> {
+  public static final int CHONKY_ENTITY_SEARCH_GRACE;
+  public static final int MAX_NON_CHONKY_ENTITY_SIZE;
+  private final java.lang.Class<T> entityClass;
+  private final it.unimi.dsi.fastutil.longs.Long2ObjectFunction<net.minecraft.world.level.entity.Visibility> intialSectionVisibility;
+  private final it.unimi.dsi.fastutil.longs.Long2ObjectMap<net.minecraft.world.level.entity.EntitySection<T>> sections;
+  private final it.unimi.dsi.fastutil.longs.LongSortedSet sectionIds;
+  public net.minecraft.world.level.entity.EntitySectionStorage(java.lang.Class<T>, it.unimi.dsi.fastutil.longs.Long2ObjectFunction<net.minecraft.world.level.entity.Visibility>);
+  public void forEachAccessibleNonEmptySection(net.minecraft.world.phys.AABB, net.minecraft.util.AbortableIterationConsumer<net.minecraft.world.level.entity.EntitySection<T>>);
+  public java.util.stream.LongStream getExistingSectionPositionsInChunk(long);
+  private it.unimi.dsi.fastutil.longs.LongSortedSet getChunkSections(int, int);
+  public java.util.stream.Stream<net.minecraft.world.level.entity.EntitySection<T>> getExistingSectionsInChunk(long);
+  private static long getChunkKeyFromSectionKey(long);
+  public net.minecraft.world.level.entity.EntitySection<T> getOrCreateSection(long);
+  public net.minecraft.world.level.entity.EntitySection<T> getSection(long);
+  private net.minecraft.world.level.entity.EntitySection<T> createSection(long);
+  public it.unimi.dsi.fastutil.longs.LongSet getAllChunksWithExistingSections();
+  public void getEntities(net.minecraft.world.phys.AABB, net.minecraft.util.AbortableIterationConsumer<T>);
+  public <U extends T> void getEntities(net.minecraft.world.level.entity.EntityTypeTest<T, U>, net.minecraft.world.phys.AABB, net.minecraft.util.AbortableIterationConsumer<U>);
+  public void remove(long);
+  public int count();
+  private static net.minecraft.util.AbortableIterationConsumer$Continuation lambda$getEntities$1(net.minecraft.world.level.entity.EntityTypeTest, net.minecraft.world.phys.AABB, net.minecraft.util.AbortableIterationConsumer, net.minecraft.world.level.entity.EntitySection);
+  private static net.minecraft.util.AbortableIterationConsumer$Continuation lambda$getEntities$0(net.minecraft.world.phys.AABB, net.minecraft.util.AbortableIterationConsumer, net.minecraft.world.level.entity.EntitySection);
+  private static void lambda$getAllChunksWithExistingSections$0(it.unimi.dsi.fastutil.longs.LongSet, long);
+}
+Compiled from "EntityTickList.java"
+public class net.minecraft.world.level.entity.EntityTickList {
+  private it.unimi.dsi.fastutil.ints.Int2ObjectMap<net.minecraft.world.entity.Entity> active;
+  private it.unimi.dsi.fastutil.ints.Int2ObjectMap<net.minecraft.world.entity.Entity> passive;
+  private it.unimi.dsi.fastutil.ints.Int2ObjectMap<net.minecraft.world.entity.Entity> iterated;
+  public net.minecraft.world.level.entity.EntityTickList();
+  private void ensureActiveIsNotIterated();
+  public void add(net.minecraft.world.entity.Entity);
+  public void remove(net.minecraft.world.entity.Entity);
+  public boolean contains(net.minecraft.world.entity.Entity);
+  public void forEach(java.util.function.Consumer<net.minecraft.world.entity.Entity>);
+}
+Compiled from "EntityTypeTest.java"
+class net.minecraft.world.level.entity.EntityTypeTest$1 implements net.minecraft.world.level.entity.EntityTypeTest<B, T> {
+  final java.lang.Class val$cls;
+  net.minecraft.world.level.entity.EntityTypeTest$1(java.lang.Class);
+  public T tryCast(B);
+  public java.lang.Class<? extends B> getBaseClass();
+}
+Compiled from "EntityTypeTest.java"
+class net.minecraft.world.level.entity.EntityTypeTest$2 implements net.minecraft.world.level.entity.EntityTypeTest<B, T> {
+  final java.lang.Class val$cls;
+  net.minecraft.world.level.entity.EntityTypeTest$2(java.lang.Class);
+  public T tryCast(B);
+  public java.lang.Class<? extends B> getBaseClass();
+}
+Compiled from "EntityTypeTest.java"
+public interface net.minecraft.world.level.entity.EntityTypeTest<B, T extends B> {
+  public static <B, T extends B> net.minecraft.world.level.entity.EntityTypeTest<B, T> forClass(java.lang.Class<T>);
+  public static <B, T extends B> net.minecraft.world.level.entity.EntityTypeTest<B, T> forExactClass(java.lang.Class<T>);
+  public abstract T tryCast(B);
+  public abstract java.lang.Class<? extends B> getBaseClass();
+}
+Compiled from "LevelCallback.java"
+public interface net.minecraft.world.level.entity.LevelCallback<T> {
+  public abstract void onCreated(T);
+  public abstract void onDestroyed(T);
+  public abstract void onTickingStart(T);
+  public abstract void onTickingEnd(T);
+  public abstract void onTrackingStart(T);
+  public abstract void onTrackingEnd(T);
+  public abstract void onSectionChange(T);
+}
+Compiled from "LevelEntityGetter.java"
+public interface net.minecraft.world.level.entity.LevelEntityGetter<T extends net.minecraft.world.level.entity.EntityAccess> {
+  public abstract T get(int);
+  public abstract T get(java.util.UUID);
+  public abstract java.lang.Iterable<T> getAll();
+  public abstract <U extends T> void get(net.minecraft.world.level.entity.EntityTypeTest<T, U>, net.minecraft.util.AbortableIterationConsumer<U>);
+  public abstract void get(net.minecraft.world.phys.AABB, java.util.function.Consumer<T>);
+  public abstract <U extends T> void get(net.minecraft.world.level.entity.EntityTypeTest<T, U>, net.minecraft.world.phys.AABB, net.minecraft.util.AbortableIterationConsumer<U>);
+}
+Compiled from "LevelEntityGetterAdapter.java"
+public class net.minecraft.world.level.entity.LevelEntityGetterAdapter<T extends net.minecraft.world.level.entity.EntityAccess> implements net.minecraft.world.level.entity.LevelEntityGetter<T> {
+  private final net.minecraft.world.level.entity.EntityLookup<T> visibleEntities;
+  private final net.minecraft.world.level.entity.EntitySectionStorage<T> sectionStorage;
+  public net.minecraft.world.level.entity.LevelEntityGetterAdapter(net.minecraft.world.level.entity.EntityLookup<T>, net.minecraft.world.level.entity.EntitySectionStorage<T>);
+  public T get(int);
+  public T get(java.util.UUID);
+  public java.lang.Iterable<T> getAll();
+  public <U extends T> void get(net.minecraft.world.level.entity.EntityTypeTest<T, U>, net.minecraft.util.AbortableIterationConsumer<U>);
+  public void get(net.minecraft.world.phys.AABB, java.util.function.Consumer<T>);
+  public <U extends T> void get(net.minecraft.world.level.entity.EntityTypeTest<T, U>, net.minecraft.world.phys.AABB, net.minecraft.util.AbortableIterationConsumer<U>);
+}
+Compiled from "PersistentEntitySectionManager.java"
+class net.minecraft.world.level.entity.PersistentEntitySectionManager$Callback implements net.minecraft.world.level.entity.EntityInLevelCallback {
+  private final T entity;
+  private long currentSectionKey;
+  private net.minecraft.world.level.entity.EntitySection<T> currentSection;
+  final net.minecraft.world.level.entity.PersistentEntitySectionManager this$0;
+  private net.minecraft.world.level.entity.PersistentEntitySectionManager$Callback(T, long, net.minecraft.world.level.entity.EntitySection<T>);
+  public void onMove();
+  private void updateStatus(net.minecraft.world.level.entity.Visibility, net.minecraft.world.level.entity.Visibility);
+  public void onRemove(net.minecraft.world.entity.Entity$RemovalReason);
+}
+Compiled from "PersistentEntitySectionManager.java"
+final class net.minecraft.world.level.entity.PersistentEntitySectionManager$ChunkLoadStatus extends java.lang.Enum<net.minecraft.world.level.entity.PersistentEntitySectionManager$ChunkLoadStatus> {
+  public static final net.minecraft.world.level.entity.PersistentEntitySectionManager$ChunkLoadStatus FRESH;
+  public static final net.minecraft.world.level.entity.PersistentEntitySectionManager$ChunkLoadStatus PENDING;
+  public static final net.minecraft.world.level.entity.PersistentEntitySectionManager$ChunkLoadStatus LOADED;
+  private static final net.minecraft.world.level.entity.PersistentEntitySectionManager$ChunkLoadStatus[] $VALUES;
+  public static net.minecraft.world.level.entity.PersistentEntitySectionManager$ChunkLoadStatus[] values();
+  public static net.minecraft.world.level.entity.PersistentEntitySectionManager$ChunkLoadStatus valueOf(java.lang.String);
+  private net.minecraft.world.level.entity.PersistentEntitySectionManager$ChunkLoadStatus();
+  private static net.minecraft.world.level.entity.PersistentEntitySectionManager$ChunkLoadStatus[] $values();
+  static {};
+}
+Compiled from "PersistentEntitySectionManager.java"
+public class net.minecraft.world.level.entity.PersistentEntitySectionManager<T extends net.minecraft.world.level.entity.EntityAccess> implements java.lang.AutoCloseable {
+  private static final org.slf4j.Logger LOGGER;
+  private final java.util.Set<java.util.UUID> knownUuids;
+  private final net.minecraft.world.level.entity.LevelCallback<T> callbacks;
+  private final net.minecraft.world.level.entity.EntityPersistentStorage<T> permanentStorage;
+  private final net.minecraft.world.level.entity.EntityLookup<T> visibleEntityStorage;
+  private final net.minecraft.world.level.entity.EntitySectionStorage<T> sectionStorage;
+  private final net.minecraft.world.level.entity.LevelEntityGetter<T> entityGetter;
+  private final it.unimi.dsi.fastutil.longs.Long2ObjectMap<net.minecraft.world.level.entity.Visibility> chunkVisibility;
+  private final it.unimi.dsi.fastutil.longs.Long2ObjectMap<net.minecraft.world.level.entity.PersistentEntitySectionManager$ChunkLoadStatus> chunkLoadStatuses;
+  private final it.unimi.dsi.fastutil.longs.LongSet chunksToUnload;
+  private final java.util.Queue<net.minecraft.world.level.entity.ChunkEntities<T>> loadingInbox;
+  public net.minecraft.world.level.entity.PersistentEntitySectionManager(java.lang.Class<T>, net.minecraft.world.level.entity.LevelCallback<T>, net.minecraft.world.level.entity.EntityPersistentStorage<T>);
+  private void removeSectionIfEmpty(long, net.minecraft.world.level.entity.EntitySection<T>);
+  private boolean addEntityUuid(T);
+  public boolean addNewEntity(T);
+  private boolean addEntity(T, boolean);
+  private static <T extends net.minecraft.world.level.entity.EntityAccess> net.minecraft.world.level.entity.Visibility getEffectiveStatus(T, net.minecraft.world.level.entity.Visibility);
+  public boolean isTicking(net.minecraft.world.level.ChunkPos);
+  public void addLegacyChunkEntities(java.util.stream.Stream<T>);
+  public void addWorldGenChunkEntities(java.util.stream.Stream<T>);
+  private void startTicking(T);
+  private void stopTicking(T);
+  private void startTracking(T);
+  private void stopTracking(T);
+  public void updateChunkStatus(net.minecraft.world.level.ChunkPos, net.minecraft.server.level.FullChunkStatus);
+  public void updateChunkStatus(net.minecraft.world.level.ChunkPos, net.minecraft.world.level.entity.Visibility);
+  private void ensureChunkQueuedForLoad(long);
+  private boolean storeChunkSections(long, java.util.function.Consumer<T>);
+  private void requestChunkLoad(long);
+  private boolean processChunkUnload(long);
+  private void unloadEntity(net.minecraft.world.level.entity.EntityAccess);
+  private void processUnloads();
+  public void processPendingLoads();
+  public void tick();
+  private it.unimi.dsi.fastutil.longs.LongSet getAllChunksToSave();
+  public void autoSave();
+  public void saveAll();
+  public void close() throws java.io.IOException;
+  public boolean isLoaded(java.util.UUID);
+  public net.minecraft.world.level.entity.LevelEntityGetter<T> getEntityGetter();
+  public boolean canPositionTick(net.minecraft.core.BlockPos);
+  public boolean canPositionTick(net.minecraft.world.level.ChunkPos);
+  public boolean areEntitiesLoaded(long);
+  public void dumpSections(java.io.Writer) throws java.io.IOException;
+  public java.lang.String gatherStats();
+  public int count();
+  private void lambda$dumpSections$0(net.minecraft.util.CsvOutput, long);
+  private void lambda$dumpSections$1(net.minecraft.util.CsvOutput, net.minecraft.world.level.entity.PersistentEntitySectionManager$ChunkLoadStatus, long);
+  private boolean lambda$saveAll$0(long);
+  private static void lambda$saveAll$1(net.minecraft.world.level.entity.EntityAccess);
+  private void lambda$autoSave$0(long);
+  private static void lambda$autoSave$1(net.minecraft.world.level.entity.EntityAccess);
+  private void lambda$processPendingLoads$0(net.minecraft.world.level.entity.EntityAccess);
+  private boolean lambda$processUnloads$0(long);
+  private void lambda$processChunkUnload$0(net.minecraft.world.level.entity.EntityAccess);
+  private static java.lang.Void lambda$requestChunkLoad$0(net.minecraft.world.level.ChunkPos, java.lang.Throwable);
+  private static java.util.stream.Stream lambda$storeChunkSections$0(net.minecraft.world.level.entity.EntitySection);
+  private void lambda$updateChunkStatus$0(net.minecraft.world.level.entity.Visibility, net.minecraft.world.level.entity.EntitySection);
+  private static boolean lambda$updateChunkStatus$4(net.minecraft.world.level.entity.EntityAccess);
+  private static boolean lambda$updateChunkStatus$3(net.minecraft.world.level.entity.EntityAccess);
+  private static boolean lambda$updateChunkStatus$2(net.minecraft.world.level.entity.EntityAccess);
+  private static boolean lambda$updateChunkStatus$1(net.minecraft.world.level.entity.EntityAccess);
+  private void lambda$addWorldGenChunkEntities$0(net.minecraft.world.level.entity.EntityAccess);
+  private void lambda$addLegacyChunkEntities$0(net.minecraft.world.level.entity.EntityAccess);
+  static {};
+}
+Compiled from "TransientEntitySectionManager.java"
+class net.minecraft.world.level.entity.TransientEntitySectionManager$Callback implements net.minecraft.world.level.entity.EntityInLevelCallback {
+  private final T entity;
+  private long currentSectionKey;
+  private net.minecraft.world.level.entity.EntitySection<T> currentSection;
+  final net.minecraft.world.level.entity.TransientEntitySectionManager this$0;
+  private net.minecraft.world.level.entity.TransientEntitySectionManager$Callback(T, long, net.minecraft.world.level.entity.EntitySection<T>);
+  public void onMove();
+  public void onRemove(net.minecraft.world.entity.Entity$RemovalReason);
+}
+Compiled from "TransientEntitySectionManager.java"
+public class net.minecraft.world.level.entity.TransientEntitySectionManager<T extends net.minecraft.world.level.entity.EntityAccess> {
+  private static final org.slf4j.Logger LOGGER;
+  private final net.minecraft.world.level.entity.LevelCallback<T> callbacks;
+  private final net.minecraft.world.level.entity.EntityLookup<T> entityStorage;
+  private final net.minecraft.world.level.entity.EntitySectionStorage<T> sectionStorage;
+  private final it.unimi.dsi.fastutil.longs.LongSet tickingChunks;
+  private final net.minecraft.world.level.entity.LevelEntityGetter<T> entityGetter;
+  public net.minecraft.world.level.entity.TransientEntitySectionManager(java.lang.Class<T>, net.minecraft.world.level.entity.LevelCallback<T>);
+  public void startTicking(net.minecraft.world.level.ChunkPos);
+  public void stopTicking(net.minecraft.world.level.ChunkPos);
+  public net.minecraft.world.level.entity.LevelEntityGetter<T> getEntityGetter();
+  public void addEntity(T);
+  public int count();
+  private void removeSectionIfEmpty(long, net.minecraft.world.level.entity.EntitySection<T>);
+  public java.lang.String gatherStats();
+  private void lambda$stopTicking$0(net.minecraft.world.level.entity.EntitySection);
+  private static boolean lambda$stopTicking$1(net.minecraft.world.level.entity.EntityAccess);
+  private void lambda$startTicking$0(net.minecraft.world.level.entity.EntitySection);
+  private static boolean lambda$startTicking$1(net.minecraft.world.level.entity.EntityAccess);
+  private net.minecraft.world.level.entity.Visibility lambda$new$0(long);
+  static {};
+}
+Compiled from "UUIDLookup.java"
+public interface net.minecraft.world.level.entity.UUIDLookup<IdentifiedType extends net.minecraft.world.level.entity.UniquelyIdentifyable> {
+  public abstract IdentifiedType lookup(java.util.UUID);
+}
+Compiled from "UniquelyIdentifyable.java"
+public interface net.minecraft.world.level.entity.UniquelyIdentifyable {
+  public abstract java.util.UUID getUUID();
+  public abstract boolean isRemoved();
+}
+Compiled from "Visibility.java"
+public final class net.minecraft.world.level.entity.Visibility extends java.lang.Enum<net.minecraft.world.level.entity.Visibility> {
+  public static final net.minecraft.world.level.entity.Visibility HIDDEN;
+  public static final net.minecraft.world.level.entity.Visibility TRACKED;
+  public static final net.minecraft.world.level.entity.Visibility TICKING;
+  private final boolean accessible;
+  private final boolean ticking;
+  private static final net.minecraft.world.level.entity.Visibility[] $VALUES;
+  public static net.minecraft.world.level.entity.Visibility[] values();
+  public static net.minecraft.world.level.entity.Visibility valueOf(java.lang.String);
+  private net.minecraft.world.level.entity.Visibility(boolean, boolean);
+  public boolean isTicking();
+  public boolean isAccessible();
+  public static net.minecraft.world.level.entity.Visibility fromFullChunkStatus(net.minecraft.server.level.FullChunkStatus);
+  private static net.minecraft.world.level.entity.Visibility[] $values();
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.level.entity.package-info {
+}

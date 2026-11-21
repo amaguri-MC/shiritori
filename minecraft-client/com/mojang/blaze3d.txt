@@ -1,0 +1,250 @@
+Compiled from "Blaze3D.java"
+public class com.mojang.blaze3d.Blaze3D {
+  public static void youJustLostTheGame();
+  public static double getTime();
+  private com.mojang.blaze3d.Blaze3D();
+}
+Compiled from "GLFWErrorCapture.java"
+public final class com.mojang.blaze3d.GLFWErrorCapture$Error extends java.lang.Record {
+  private final int error;
+  private final java.lang.String description;
+  public com.mojang.blaze3d.GLFWErrorCapture$Error(int, java.lang.String);
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int error();
+  public java.lang.String description();
+}
+Compiled from "GLFWErrorCapture.java"
+public class com.mojang.blaze3d.GLFWErrorCapture implements org.lwjgl.glfw.GLFWErrorCallbackI, java.lang.Iterable<com.mojang.blaze3d.GLFWErrorCapture$Error> {
+  private java.util.List<com.mojang.blaze3d.GLFWErrorCapture$Error> errors;
+  public com.mojang.blaze3d.GLFWErrorCapture();
+  public void invoke(int, long);
+  public java.util.Iterator<com.mojang.blaze3d.GLFWErrorCapture$Error> iterator();
+  public com.mojang.blaze3d.GLFWErrorCapture$Error firstError();
+}
+Compiled from "GLFWErrorScope.java"
+public class com.mojang.blaze3d.GLFWErrorScope implements java.lang.AutoCloseable {
+  private final org.lwjgl.glfw.GLFWErrorCallback previousCallback;
+  private final org.lwjgl.glfw.GLFWErrorCallback expectedCallback;
+  public com.mojang.blaze3d.GLFWErrorScope(org.lwjgl.glfw.GLFWErrorCallbackI);
+  public void close();
+}
+Compiled from "GpuDeviceLossException.java"
+public class com.mojang.blaze3d.GpuDeviceLossException extends java.lang.RuntimeException {
+  public com.mojang.blaze3d.GpuDeviceLossException(java.lang.String);
+}
+Compiled from "GpuFormat.java"
+public final class com.mojang.blaze3d.GpuFormat$ComponentType extends java.lang.Enum<com.mojang.blaze3d.GpuFormat$ComponentType> {
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType UNORM_8;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType SNORM_8;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType UINT_8;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType SINT_8;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType UNORM_16;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType SNORM_16;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType UINT_16;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType SINT_16;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType FLOAT_16;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType UINT_32;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType SINT_32;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType FLOAT_32;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType OPAQUE_8;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType OPAQUE_16;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType OPAQUE_32;
+  public static final com.mojang.blaze3d.GpuFormat$ComponentType OPAQUE_64;
+  private final int byteSize;
+  private static final com.mojang.blaze3d.GpuFormat$ComponentType[] $VALUES;
+  public static com.mojang.blaze3d.GpuFormat$ComponentType[] values();
+  public static com.mojang.blaze3d.GpuFormat$ComponentType valueOf(java.lang.String);
+  private com.mojang.blaze3d.GpuFormat$ComponentType(int);
+  public int byteSize();
+  private static com.mojang.blaze3d.GpuFormat$ComponentType[] $values();
+  static {};
+}
+Compiled from "GpuFormat.java"
+public final class com.mojang.blaze3d.GpuFormat extends java.lang.Enum<com.mojang.blaze3d.GpuFormat> {
+  public static final com.mojang.blaze3d.GpuFormat R8_UNORM;
+  public static final com.mojang.blaze3d.GpuFormat R8_SNORM;
+  public static final com.mojang.blaze3d.GpuFormat RG8_UNORM;
+  public static final com.mojang.blaze3d.GpuFormat RG8_SNORM;
+  public static final com.mojang.blaze3d.GpuFormat RGB8_UNORM;
+  public static final com.mojang.blaze3d.GpuFormat RGB8_SNORM;
+  public static final com.mojang.blaze3d.GpuFormat RGBA8_UNORM;
+  public static final com.mojang.blaze3d.GpuFormat RGBA8_SNORM;
+  public static final com.mojang.blaze3d.GpuFormat R16_UNORM;
+  public static final com.mojang.blaze3d.GpuFormat R16_SNORM;
+  public static final com.mojang.blaze3d.GpuFormat RG16_UNORM;
+  public static final com.mojang.blaze3d.GpuFormat RG16_SNORM;
+  public static final com.mojang.blaze3d.GpuFormat RGB16_UNORM;
+  public static final com.mojang.blaze3d.GpuFormat RGB16_SNORM;
+  public static final com.mojang.blaze3d.GpuFormat RGBA16_UNORM;
+  public static final com.mojang.blaze3d.GpuFormat RGBA16_SNORM;
+  public static final com.mojang.blaze3d.GpuFormat R8_UINT;
+  public static final com.mojang.blaze3d.GpuFormat R8_SINT;
+  public static final com.mojang.blaze3d.GpuFormat RG8_UINT;
+  public static final com.mojang.blaze3d.GpuFormat RG8_SINT;
+  public static final com.mojang.blaze3d.GpuFormat RGB8_UINT;
+  public static final com.mojang.blaze3d.GpuFormat RGB8_SINT;
+  public static final com.mojang.blaze3d.GpuFormat RGBA8_UINT;
+  public static final com.mojang.blaze3d.GpuFormat RGBA8_SINT;
+  public static final com.mojang.blaze3d.GpuFormat R16_UINT;
+  public static final com.mojang.blaze3d.GpuFormat R16_SINT;
+  public static final com.mojang.blaze3d.GpuFormat RG16_UINT;
+  public static final com.mojang.blaze3d.GpuFormat RG16_SINT;
+  public static final com.mojang.blaze3d.GpuFormat RGB16_UINT;
+  public static final com.mojang.blaze3d.GpuFormat RGB16_SINT;
+  public static final com.mojang.blaze3d.GpuFormat RGBA16_UINT;
+  public static final com.mojang.blaze3d.GpuFormat RGBA16_SINT;
+  public static final com.mojang.blaze3d.GpuFormat R32_UINT;
+  public static final com.mojang.blaze3d.GpuFormat R32_SINT;
+  public static final com.mojang.blaze3d.GpuFormat RG32_UINT;
+  public static final com.mojang.blaze3d.GpuFormat RG32_SINT;
+  public static final com.mojang.blaze3d.GpuFormat RGB32_UINT;
+  public static final com.mojang.blaze3d.GpuFormat RGB32_SINT;
+  public static final com.mojang.blaze3d.GpuFormat RGBA32_UINT;
+  public static final com.mojang.blaze3d.GpuFormat RGBA32_SINT;
+  public static final com.mojang.blaze3d.GpuFormat R16_FLOAT;
+  public static final com.mojang.blaze3d.GpuFormat RG16_FLOAT;
+  public static final com.mojang.blaze3d.GpuFormat RGB16_FLOAT;
+  public static final com.mojang.blaze3d.GpuFormat RGBA16_FLOAT;
+  public static final com.mojang.blaze3d.GpuFormat R32_FLOAT;
+  public static final com.mojang.blaze3d.GpuFormat RG32_FLOAT;
+  public static final com.mojang.blaze3d.GpuFormat RGB32_FLOAT;
+  public static final com.mojang.blaze3d.GpuFormat RGBA32_FLOAT;
+  public static final com.mojang.blaze3d.GpuFormat RGB10A2_UNORM;
+  public static final com.mojang.blaze3d.GpuFormat RGB10A2_UINT;
+  public static final com.mojang.blaze3d.GpuFormat RG11B10_FLOAT;
+  public static final com.mojang.blaze3d.GpuFormat D32_FLOAT;
+  public static final com.mojang.blaze3d.GpuFormat D32_FLOAT_S8_UINT;
+  public static final com.mojang.blaze3d.GpuFormat D24_UNORM_S8_UINT;
+  public static final com.mojang.blaze3d.GpuFormat D16_UNORM;
+  public static final com.mojang.blaze3d.GpuFormat S8_UINT;
+  private final com.mojang.blaze3d.GpuFormat$ComponentType componentType;
+  private final int componentCount;
+  private static final com.mojang.blaze3d.GpuFormat[] $VALUES;
+  public static com.mojang.blaze3d.GpuFormat[] values();
+  public static com.mojang.blaze3d.GpuFormat valueOf(java.lang.String);
+  private com.mojang.blaze3d.GpuFormat(com.mojang.blaze3d.GpuFormat$ComponentType, int);
+  public int blockSize();
+  public int byteAlignment();
+  public com.mojang.blaze3d.GpuFormat$ComponentType componentType();
+  public int componentCount();
+  public boolean hasColorAspect();
+  public boolean hasDepthAspect();
+  public boolean hasStencilAspect();
+  private static com.mojang.blaze3d.GpuFormat[] $values();
+  static {};
+}
+Compiled from "GpuOutOfMemoryException.java"
+public class com.mojang.blaze3d.GpuOutOfMemoryException extends java.lang.RuntimeException {
+  public com.mojang.blaze3d.GpuOutOfMemoryException(java.lang.String);
+}
+Compiled from "IndexType.java"
+public final class com.mojang.blaze3d.IndexType extends java.lang.Enum<com.mojang.blaze3d.IndexType> {
+  public static final com.mojang.blaze3d.IndexType SHORT;
+  public static final com.mojang.blaze3d.IndexType INT;
+  public final int bytes;
+  private static final com.mojang.blaze3d.IndexType[] $VALUES;
+  public static com.mojang.blaze3d.IndexType[] values();
+  public static com.mojang.blaze3d.IndexType valueOf(java.lang.String);
+  private com.mojang.blaze3d.IndexType(int);
+  public static com.mojang.blaze3d.IndexType least(int);
+  private static com.mojang.blaze3d.IndexType[] $values();
+  static {};
+}
+Compiled from "PrimitiveTopology.java"
+public final class com.mojang.blaze3d.PrimitiveTopology extends java.lang.Enum<com.mojang.blaze3d.PrimitiveTopology> {
+  public static final com.mojang.blaze3d.PrimitiveTopology LINES;
+  public static final com.mojang.blaze3d.PrimitiveTopology DEBUG_LINES;
+  public static final com.mojang.blaze3d.PrimitiveTopology DEBUG_LINE_STRIP;
+  public static final com.mojang.blaze3d.PrimitiveTopology POINTS;
+  public static final com.mojang.blaze3d.PrimitiveTopology TRIANGLES;
+  public static final com.mojang.blaze3d.PrimitiveTopology TRIANGLE_STRIP;
+  public static final com.mojang.blaze3d.PrimitiveTopology TRIANGLE_FAN;
+  public static final com.mojang.blaze3d.PrimitiveTopology QUADS;
+  public final int primitiveLength;
+  public final int primitiveStride;
+  public final boolean connectedPrimitives;
+  private static final com.mojang.blaze3d.PrimitiveTopology[] $VALUES;
+  public static com.mojang.blaze3d.PrimitiveTopology[] values();
+  public static com.mojang.blaze3d.PrimitiveTopology valueOf(java.lang.String);
+  private com.mojang.blaze3d.PrimitiveTopology(int, int, boolean);
+  public int indexCount(int);
+  private static com.mojang.blaze3d.PrimitiveTopology[] $values();
+  static {};
+}
+Compiled from "ProjectionType.java"
+interface com.mojang.blaze3d.ProjectionType$LayeringTransform {
+  public abstract void apply(org.joml.Matrix4f, float);
+}
+Compiled from "ProjectionType.java"
+public final class com.mojang.blaze3d.ProjectionType extends java.lang.Enum<com.mojang.blaze3d.ProjectionType> {
+  public static final com.mojang.blaze3d.ProjectionType PERSPECTIVE;
+  public static final com.mojang.blaze3d.ProjectionType ORTHOGRAPHIC;
+  private final com.mojang.blaze3d.vertex.VertexSorting vertexSorting;
+  private final com.mojang.blaze3d.ProjectionType$LayeringTransform layeringTransform;
+  private static final com.mojang.blaze3d.ProjectionType[] $VALUES;
+  public static com.mojang.blaze3d.ProjectionType[] values();
+  public static com.mojang.blaze3d.ProjectionType valueOf(java.lang.String);
+  private com.mojang.blaze3d.ProjectionType(com.mojang.blaze3d.vertex.VertexSorting, com.mojang.blaze3d.ProjectionType$LayeringTransform);
+  public com.mojang.blaze3d.vertex.VertexSorting vertexSorting();
+  public void applyLayeringTransform(org.joml.Matrix4f, float);
+  private static com.mojang.blaze3d.ProjectionType[] $values();
+  private static void lambda$static$1(org.joml.Matrix4f, float);
+  private static void lambda$static$0(org.joml.Matrix4f, float);
+  static {};
+}
+Compiled from "TracyBootstrap.java"
+class com.mojang.blaze3d.TracyBootstrap$1 {
+  static final int[] $SwitchMap$org$slf4j$event$Level;
+  static {};
+}
+Compiled from "TracyBootstrap.java"
+public class com.mojang.blaze3d.TracyBootstrap {
+  private static boolean setup;
+  public com.mojang.blaze3d.TracyBootstrap();
+  public static void setup();
+  private static int messageColor(org.slf4j.event.Level);
+  private static void lambda$setup$0(java.lang.String, org.slf4j.event.Level);
+}
+Compiled from "TracyFrameCapture.java"
+final class com.mojang.blaze3d.TracyFrameCapture$Status extends java.lang.Enum<com.mojang.blaze3d.TracyFrameCapture$Status> {
+  public static final com.mojang.blaze3d.TracyFrameCapture$Status WAITING_FOR_CAPTURE;
+  public static final com.mojang.blaze3d.TracyFrameCapture$Status WAITING_FOR_COPY;
+  public static final com.mojang.blaze3d.TracyFrameCapture$Status WAITING_FOR_UPLOAD;
+  private static final com.mojang.blaze3d.TracyFrameCapture$Status[] $VALUES;
+  public static com.mojang.blaze3d.TracyFrameCapture$Status[] values();
+  public static com.mojang.blaze3d.TracyFrameCapture$Status valueOf(java.lang.String);
+  private com.mojang.blaze3d.TracyFrameCapture$Status();
+  private static com.mojang.blaze3d.TracyFrameCapture$Status[] $values();
+  static {};
+}
+Compiled from "TracyFrameCapture.java"
+public class com.mojang.blaze3d.TracyFrameCapture implements java.lang.AutoCloseable {
+  private static final int MAX_WIDTH;
+  private static final int MAX_HEIGHT;
+  private static final long BYTES_PER_PIXEL;
+  private int targetWidth;
+  private int targetHeight;
+  private int width;
+  private int height;
+  private com.mojang.blaze3d.textures.GpuTexture frameBuffer;
+  private com.mojang.blaze3d.textures.GpuTextureView frameBufferView;
+  private com.mojang.blaze3d.buffers.GpuBuffer pixelbuffer;
+  private int lastCaptureDelay;
+  private boolean capturedThisFrame;
+  private com.mojang.blaze3d.TracyFrameCapture$Status status;
+  public com.mojang.blaze3d.TracyFrameCapture();
+  private void resize(int, int);
+  public void capture(com.mojang.blaze3d.pipeline.RenderTarget);
+  public void upload();
+  public void endFrame();
+  public void close();
+  private void lambda$capture$1();
+  private static java.lang.String lambda$capture$0();
+  private static java.lang.String lambda$resize$0();
+  private static java.lang.String lambda$new$0();
+}
+Compiled from "package-info.java"
+interface com.mojang.blaze3d.package-info {
+}

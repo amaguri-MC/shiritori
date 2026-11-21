@@ -1,0 +1,370 @@
+Compiled from "StopAdmiringIfTiredOfTryingToReachItem.java"
+public class net.minecraft.world.entity.monster.piglin.StopAdmiringIfTiredOfTryingToReachItem {
+  public net.minecraft.world.entity.monster.piglin.StopAdmiringIfTiredOfTryingToReachItem();
+  public static net.minecraft.world.entity.ai.behavior.BehaviorControl<net.minecraft.world.entity.LivingEntity> create(int, int);
+  private static com.mojang.datafixers.kinds.App lambda$create$0(int, int, net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance);
+  private static net.minecraft.world.entity.ai.behavior.declarative.Trigger lambda$create$1(net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance, int, int, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor);
+  private static boolean lambda$create$2(net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, int, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, int, net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+}
+Compiled from "AbstractPiglin.java"
+public abstract class net.minecraft.world.entity.monster.piglin.AbstractPiglin extends net.minecraft.world.entity.monster.Monster {
+  protected static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Boolean> DATA_IMMUNE_TO_ZOMBIFICATION;
+  public static final int CONVERSION_TIME;
+  private static final boolean DEFAULT_IMMUNE_TO_ZOMBIFICATION;
+  private static final boolean DEFAULT_PICK_UP_LOOT;
+  private static final int DEFAULT_TIME_IN_OVERWORLD;
+  protected int timeInOverworld;
+  public net.minecraft.world.entity.monster.piglin.AbstractPiglin(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.monster.piglin.AbstractPiglin>, net.minecraft.world.level.Level);
+  private void applyOpenDoorsAbility();
+  protected abstract boolean canHunt();
+  public void setImmuneToZombification(boolean);
+  protected boolean isImmuneToZombification();
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput);
+  protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput);
+  protected void customServerAiStep(net.minecraft.server.level.ServerLevel);
+  public void setTimeInOverworld(int);
+  public boolean isConverting();
+  protected void finishConversion(net.minecraft.server.level.ServerLevel);
+  public boolean isAdult();
+  public abstract net.minecraft.world.entity.monster.piglin.PiglinArmPose getArmPose();
+  public net.minecraft.world.entity.LivingEntity getTarget();
+  protected boolean isHoldingMeleeWeapon();
+  public void playAmbientSound();
+  protected abstract void playConvertedSound();
+  private static void lambda$finishConversion$0(net.minecraft.world.entity.monster.zombie.ZombifiedPiglin);
+  static {};
+}
+Compiled from "PiglinArmPose.java"
+public final class net.minecraft.world.entity.monster.piglin.PiglinArmPose extends java.lang.Enum<net.minecraft.world.entity.monster.piglin.PiglinArmPose> {
+  public static final net.minecraft.world.entity.monster.piglin.PiglinArmPose ATTACKING_WITH_MELEE_WEAPON;
+  public static final net.minecraft.world.entity.monster.piglin.PiglinArmPose CROSSBOW_HOLD;
+  public static final net.minecraft.world.entity.monster.piglin.PiglinArmPose CROSSBOW_CHARGE;
+  public static final net.minecraft.world.entity.monster.piglin.PiglinArmPose ADMIRING_ITEM;
+  public static final net.minecraft.world.entity.monster.piglin.PiglinArmPose DANCING;
+  public static final net.minecraft.world.entity.monster.piglin.PiglinArmPose DEFAULT;
+  private static final net.minecraft.world.entity.monster.piglin.PiglinArmPose[] $VALUES;
+  public static net.minecraft.world.entity.monster.piglin.PiglinArmPose[] values();
+  public static net.minecraft.world.entity.monster.piglin.PiglinArmPose valueOf(java.lang.String);
+  private net.minecraft.world.entity.monster.piglin.PiglinArmPose();
+  private static net.minecraft.world.entity.monster.piglin.PiglinArmPose[] $values();
+  static {};
+}
+Compiled from "PiglinBrute.java"
+public class net.minecraft.world.entity.monster.piglin.PiglinBrute extends net.minecraft.world.entity.monster.piglin.AbstractPiglin {
+  private static final int MAX_HEALTH;
+  private static final float MOVEMENT_SPEED_WHEN_FIGHTING;
+  private static final int ATTACK_DAMAGE;
+  private static final double TARGETING_RANGE;
+  public static final net.minecraft.world.entity.ai.Brain$Provider<net.minecraft.world.entity.monster.piglin.PiglinBrute> BRAIN_PROVIDER;
+  public net.minecraft.world.entity.monster.piglin.PiglinBrute(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.monster.piglin.PiglinBrute>, net.minecraft.world.level.Level);
+  public static net.minecraft.world.entity.ai.attributes.AttributeSupplier$Builder createAttributes();
+  public net.minecraft.world.entity.SpawnGroupData finalizeSpawn(net.minecraft.world.level.ServerLevelAccessor, net.minecraft.world.DifficultyInstance, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.world.entity.SpawnGroupData);
+  protected void populateDefaultEquipmentSlots(net.minecraft.util.RandomSource, net.minecraft.world.DifficultyInstance);
+  protected net.minecraft.world.entity.ai.Brain<net.minecraft.world.entity.monster.piglin.PiglinBrute> makeBrain(net.minecraft.world.entity.ai.Brain$Packed);
+  public net.minecraft.world.entity.ai.Brain<net.minecraft.world.entity.monster.piglin.PiglinBrute> getBrain();
+  public boolean canHunt();
+  public boolean wantsToPickUp(net.minecraft.server.level.ServerLevel, net.minecraft.world.item.ItemStack);
+  protected void customServerAiStep(net.minecraft.server.level.ServerLevel);
+  public net.minecraft.world.entity.monster.piglin.PiglinArmPose getArmPose();
+  public boolean hurtServer(net.minecraft.server.level.ServerLevel, net.minecraft.world.damagesource.DamageSource, float);
+  protected net.minecraft.sounds.SoundEvent getAmbientSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  protected void playStepSound(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  protected void playAngrySound();
+  protected void playConvertedSound();
+  static {};
+}
+Compiled from "StartAdmiringItemIfSeen.java"
+public class net.minecraft.world.entity.monster.piglin.StartAdmiringItemIfSeen {
+  public net.minecraft.world.entity.monster.piglin.StartAdmiringItemIfSeen();
+  public static net.minecraft.world.entity.ai.behavior.BehaviorControl<net.minecraft.world.entity.LivingEntity> create(int);
+  private static com.mojang.datafixers.kinds.App lambda$create$0(int, net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance);
+  private static net.minecraft.world.entity.ai.behavior.declarative.Trigger lambda$create$1(net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance, int, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor);
+  private static boolean lambda$create$2(net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, int, net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+}
+Compiled from "StopAdmiringIfItemTooFarAway.java"
+public class net.minecraft.world.entity.monster.piglin.StopAdmiringIfItemTooFarAway<E extends net.minecraft.world.entity.monster.piglin.Piglin> {
+  public net.minecraft.world.entity.monster.piglin.StopAdmiringIfItemTooFarAway();
+  public static net.minecraft.world.entity.ai.behavior.BehaviorControl<net.minecraft.world.entity.LivingEntity> create(int);
+  private static com.mojang.datafixers.kinds.App lambda$create$0(int, net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance);
+  private static net.minecraft.world.entity.ai.behavior.declarative.Trigger lambda$create$1(net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance, int, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor);
+  private static boolean lambda$create$2(net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, int, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+}
+Compiled from "PiglinAi.java"
+public class net.minecraft.world.entity.monster.piglin.PiglinAi {
+  public static final int REPELLENT_DETECTION_RANGE_HORIZONTAL;
+  public static final int REPELLENT_DETECTION_RANGE_VERTICAL;
+  public static final net.minecraft.world.item.Item BARTERING_ITEM;
+  private static final int PLAYER_ANGER_RANGE;
+  private static final int ANGER_DURATION;
+  private static final int ADMIRE_DURATION;
+  private static final int MAX_DISTANCE_TO_WALK_TO_ITEM;
+  private static final int MAX_TIME_TO_WALK_TO_ITEM;
+  private static final int HOW_LONG_TIME_TO_DISABLE_ADMIRE_WALKING_IF_CANT_REACH_ITEM;
+  private static final int CELEBRATION_TIME;
+  public static final int MAX_TIME_BETWEEN_HUNTS;
+  protected static final net.minecraft.util.valueproviders.UniformInt TIME_BETWEEN_HUNTS;
+  private static final int BABY_FLEE_DURATION_AFTER_GETTING_HIT;
+  private static final int HIT_BY_PLAYER_MEMORY_TIMEOUT;
+  private static final int MAX_WALK_DISTANCE_TO_START_RIDING;
+  private static final net.minecraft.util.valueproviders.UniformInt RIDE_START_INTERVAL;
+  private static final net.minecraft.util.valueproviders.UniformInt RIDE_DURATION;
+  private static final net.minecraft.util.valueproviders.UniformInt RETREAT_DURATION;
+  private static final int MELEE_ATTACK_COOLDOWN;
+  private static final int EAT_COOLDOWN;
+  private static final int DESIRED_DISTANCE_FROM_ENTITY_WHEN_AVOIDING;
+  private static final int MAX_LOOK_DIST;
+  private static final int MAX_LOOK_DIST_FOR_PLAYER_HOLDING_LOVED_ITEM;
+  private static final int INTERACTION_RANGE;
+  private static final int MIN_DESIRED_DIST_FROM_TARGET_WHEN_HOLDING_CROSSBOW;
+  private static final float SPEED_WHEN_STRAFING_BACK_FROM_TARGET;
+  private static final int DESIRED_DISTANCE_FROM_ZOMBIFIED;
+  private static final net.minecraft.util.valueproviders.UniformInt AVOID_ZOMBIFIED_DURATION;
+  private static final net.minecraft.util.valueproviders.UniformInt BABY_AVOID_NEMESIS_DURATION;
+  private static final float PROBABILITY_OF_CELEBRATION_DANCE;
+  private static final float SPEED_MULTIPLIER_WHEN_AVOIDING;
+  private static final float SPEED_MULTIPLIER_WHEN_RETREATING;
+  private static final float SPEED_MULTIPLIER_WHEN_MOUNTING;
+  private static final float SPEED_MULTIPLIER_WHEN_GOING_TO_WANTED_ITEM;
+  private static final float SPEED_MULTIPLIER_WHEN_GOING_TO_CELEBRATE_LOCATION;
+  private static final float SPEED_MULTIPLIER_WHEN_DANCING;
+  private static final float SPEED_MULTIPLIER_WHEN_IDLING;
+  public net.minecraft.world.entity.monster.piglin.PiglinAi();
+  public static java.util.List<net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.piglin.Piglin>> getActivities(net.minecraft.world.entity.monster.piglin.Piglin);
+  protected static void initMemories(net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.util.RandomSource);
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.piglin.Piglin> initCoreActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.piglin.Piglin> initIdleActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.piglin.Piglin> initFightActivity(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.piglin.Piglin> initCelebrateActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.piglin.Piglin> initAdmireItemActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.piglin.Piglin> initRetreatActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.piglin.Piglin> initRideHoglinActivity();
+  private static com.google.common.collect.ImmutableList<com.mojang.datafixers.util.Pair<net.minecraft.world.entity.ai.behavior.OneShot<net.minecraft.world.entity.LivingEntity>, java.lang.Integer>> createLookBehaviors();
+  private static net.minecraft.world.entity.ai.behavior.RunOne<net.minecraft.world.entity.LivingEntity> createIdleLookBehaviors();
+  private static net.minecraft.world.entity.ai.behavior.RunOne<net.minecraft.world.entity.monster.piglin.Piglin> createIdleMovementBehaviors();
+  private static net.minecraft.world.entity.ai.behavior.BehaviorControl<net.minecraft.world.entity.PathfinderMob> avoidRepellent();
+  private static net.minecraft.world.entity.ai.behavior.BehaviorControl<net.minecraft.world.entity.monster.piglin.Piglin> babyAvoidNemesis();
+  private static net.minecraft.world.entity.ai.behavior.BehaviorControl<net.minecraft.world.entity.monster.piglin.Piglin> avoidZombified();
+  protected static void updateActivity(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static boolean isBabyRidingBaby(net.minecraft.world.entity.monster.piglin.Piglin);
+  protected static void pickUpItem(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.entity.item.ItemEntity);
+  private static void holdInOffhand(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.item.ItemStack);
+  private static net.minecraft.world.item.ItemStack removeOneItemFromItemEntity(net.minecraft.world.entity.item.ItemEntity);
+  protected static void stopHoldingOffHandItem(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.Piglin, boolean);
+  protected static void cancelAdmiring(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.Piglin);
+  private static void putInInventory(net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.item.ItemStack);
+  private static void throwItems(net.minecraft.world.entity.monster.piglin.Piglin, java.util.List<net.minecraft.world.item.ItemStack>);
+  private static void throwItemsTowardRandomPos(net.minecraft.world.entity.monster.piglin.Piglin, java.util.List<net.minecraft.world.item.ItemStack>);
+  private static void throwItemsTowardPlayer(net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.entity.player.Player, java.util.List<net.minecraft.world.item.ItemStack>);
+  private static void throwItemsTowardPos(net.minecraft.world.entity.monster.piglin.Piglin, java.util.List<net.minecraft.world.item.ItemStack>, net.minecraft.world.phys.Vec3);
+  private static java.util.List<net.minecraft.world.item.ItemStack> getBarterResponseItems(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static boolean wantsToDance(net.minecraft.world.entity.LivingEntity, net.minecraft.world.entity.LivingEntity);
+  protected static boolean wantsToPickup(net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.item.ItemStack);
+  protected static boolean isLovedItem(net.minecraft.world.item.ItemStack);
+  private static boolean wantsToStopRiding(net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.entity.Entity);
+  private static boolean isNearestValidAttackTarget(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.entity.LivingEntity);
+  private static boolean isNearZombified(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static java.util.Optional<? extends net.minecraft.world.entity.LivingEntity> findNearestValidAttackTarget(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.Piglin);
+  public static void angerNearbyPiglins(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.player.Player, boolean);
+  public static net.minecraft.world.InteractionResult mobInteract(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.entity.player.Player, net.minecraft.world.InteractionHand);
+  protected static boolean canAdmire(net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.item.ItemStack);
+  protected static void wasHurtBy(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.entity.LivingEntity);
+  protected static void maybeRetaliate(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.AbstractPiglin, net.minecraft.world.entity.LivingEntity);
+  public static java.util.Optional<net.minecraft.sounds.SoundEvent> getSoundForCurrentActivity(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static net.minecraft.sounds.SoundEvent getSoundForActivity(net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.entity.schedule.Activity);
+  private static boolean isNearAvoidTarget(net.minecraft.world.entity.monster.piglin.Piglin);
+  protected static java.util.List<net.minecraft.world.entity.monster.piglin.AbstractPiglin> getVisibleAdultPiglins(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static java.util.List<net.minecraft.world.entity.monster.piglin.AbstractPiglin> getAdultPiglins(net.minecraft.world.entity.monster.piglin.AbstractPiglin);
+  public static boolean isWearingSafeArmor(net.minecraft.world.entity.LivingEntity);
+  private static void stopWalking(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static net.minecraft.world.entity.ai.behavior.BehaviorControl<net.minecraft.world.entity.LivingEntity> babySometimesRideBabyHoglin();
+  protected static void broadcastAngerTarget(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.AbstractPiglin, net.minecraft.world.entity.LivingEntity);
+  protected static void broadcastUniversalAnger(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.AbstractPiglin);
+  protected static void setAngerTarget(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.AbstractPiglin, net.minecraft.world.entity.LivingEntity);
+  private static void setAngerTargetToNearestTargetablePlayerIfFound(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.AbstractPiglin, net.minecraft.world.entity.LivingEntity);
+  private static void setAngerTargetIfCloserThanCurrent(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.AbstractPiglin, net.minecraft.world.entity.LivingEntity);
+  private static java.util.Optional<net.minecraft.world.entity.LivingEntity> getAngerTarget(net.minecraft.world.entity.monster.piglin.AbstractPiglin);
+  public static java.util.Optional<net.minecraft.world.entity.LivingEntity> getAvoidTarget(net.minecraft.world.entity.monster.piglin.Piglin);
+  public static java.util.Optional<net.minecraft.world.entity.player.Player> getNearestVisibleTargetablePlayer(net.minecraft.world.entity.monster.piglin.AbstractPiglin);
+  private static void broadcastRetreat(net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.entity.LivingEntity);
+  private static void retreatFromNearestTarget(net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.entity.LivingEntity);
+  private static boolean wantsToStopFleeing(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static boolean piglinsEqualOrOutnumberHoglins(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static boolean hoglinsOutnumberPiglins(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static void setAvoidTargetAndDontHuntForAWhile(net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.entity.LivingEntity);
+  protected static void dontKillAnyMoreHoglinsForAWhile(net.minecraft.world.entity.monster.piglin.AbstractPiglin);
+  private static void eat(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static net.minecraft.world.phys.Vec3 getRandomNearbyPos(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static boolean hasEatenRecently(net.minecraft.world.entity.monster.piglin.Piglin);
+  protected static boolean isIdle(net.minecraft.world.entity.monster.piglin.AbstractPiglin);
+  private static boolean hasCrossbow(net.minecraft.world.entity.LivingEntity);
+  private static void admireGoldItem(net.minecraft.world.entity.LivingEntity);
+  private static boolean isAdmiringItem(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static boolean isBarterCurrency(net.minecraft.world.item.ItemStack);
+  private static boolean isFood(net.minecraft.world.item.ItemStack);
+  private static boolean isNearRepellent(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static boolean seesPlayerHoldingLovedItem(net.minecraft.world.entity.LivingEntity);
+  private static boolean doesntSeeAnyPlayerHoldingLovedItem(net.minecraft.world.entity.LivingEntity);
+  public static boolean isPlayerHoldingLovedItem(net.minecraft.world.entity.LivingEntity);
+  private static boolean isAdmiringDisabled(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static boolean wasHurtRecently(net.minecraft.world.entity.LivingEntity);
+  private static boolean isHoldingItemInOffHand(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static boolean isNotHoldingLovedItemInOffHand(net.minecraft.world.entity.monster.piglin.Piglin);
+  public static boolean isZombified(net.minecraft.world.entity.Entity);
+  public static java.util.List<net.minecraft.world.entity.monster.piglin.AbstractPiglin> findNearbyAdultPiglins(net.minecraft.world.entity.ai.Brain<?>);
+  private static void lambda$broadcastRetreat$0(net.minecraft.world.entity.LivingEntity, net.minecraft.world.entity.monster.piglin.AbstractPiglin);
+  private static void lambda$broadcastUniversalAnger$0(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.AbstractPiglin);
+  private static void lambda$broadcastUniversalAnger$1(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.AbstractPiglin, net.minecraft.world.entity.player.Player);
+  private static void lambda$broadcastAngerTarget$0(net.minecraft.world.entity.LivingEntity, net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.AbstractPiglin);
+  private static boolean lambda$babySometimesRideBabyHoglin$0(net.minecraft.world.entity.ai.behavior.SetEntityLookTargetSometimes$Ticker, net.minecraft.world.entity.LivingEntity);
+  private static net.minecraft.sounds.SoundEvent lambda$getSoundForCurrentActivity$0(net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.world.entity.schedule.Activity);
+  private static void lambda$wasHurtBy$0(net.minecraft.world.entity.LivingEntity, net.minecraft.world.entity.ai.Brain, net.minecraft.world.entity.LivingEntity);
+  private static void lambda$angerNearbyPiglins$1(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.player.Player, net.minecraft.world.entity.monster.piglin.Piglin);
+  private static boolean lambda$angerNearbyPiglins$0(boolean, net.minecraft.world.entity.player.Player, net.minecraft.world.entity.monster.piglin.Piglin);
+  private static boolean lambda$isNearestValidAttackTarget$0(net.minecraft.world.entity.LivingEntity, net.minecraft.world.entity.LivingEntity);
+  private static boolean lambda$initRideHoglinActivity$0(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static boolean lambda$initCelebrateActivity$1(net.minecraft.world.entity.monster.piglin.Piglin);
+  private static boolean lambda$initCelebrateActivity$0(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.Piglin);
+  private static boolean lambda$initFightActivity$0(net.minecraft.world.entity.monster.piglin.Piglin, net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity);
+  private static boolean lambda$initIdleActivity$0(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.Piglin);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.entity.monster.piglin.package-info {
+}
+Compiled from "PiglinBruteAi.java"
+public class net.minecraft.world.entity.monster.piglin.PiglinBruteAi {
+  private static final int ANGER_DURATION;
+  private static final int MELEE_ATTACK_COOLDOWN;
+  private static final double ACTIVITY_SOUND_LIKELIHOOD_PER_TICK;
+  private static final int MAX_LOOK_DIST;
+  private static final int INTERACTION_RANGE;
+  private static final float SPEED_MULTIPLIER_WHEN_IDLING;
+  private static final int HOME_CLOSE_ENOUGH_DISTANCE;
+  private static final int HOME_TOO_FAR_DISTANCE;
+  private static final int HOME_STROLL_AROUND_DISTANCE;
+  public net.minecraft.world.entity.monster.piglin.PiglinBruteAi();
+  public static java.util.List<net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.piglin.PiglinBrute>> getActivities(net.minecraft.world.entity.monster.piglin.PiglinBrute);
+  protected static void initMemories(net.minecraft.world.entity.monster.piglin.PiglinBrute);
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.piglin.PiglinBrute> initCoreActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.piglin.PiglinBrute> initIdleActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.piglin.PiglinBrute> initFightActivity(net.minecraft.world.entity.monster.piglin.PiglinBrute);
+  private static net.minecraft.world.entity.ai.behavior.RunOne<net.minecraft.world.entity.monster.piglin.PiglinBrute> createIdleLookBehaviors();
+  private static net.minecraft.world.entity.ai.behavior.RunOne<net.minecraft.world.entity.monster.piglin.PiglinBrute> createIdleMovementBehaviors();
+  protected static void updateActivity(net.minecraft.world.entity.monster.piglin.PiglinBrute);
+  private static boolean isNearestValidAttackTarget(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.AbstractPiglin, net.minecraft.world.entity.LivingEntity);
+  private static java.util.Optional<? extends net.minecraft.world.entity.LivingEntity> findNearestValidAttackTarget(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.AbstractPiglin);
+  protected static void wasHurtBy(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.PiglinBrute, net.minecraft.world.entity.LivingEntity);
+  protected static void setAngerTarget(net.minecraft.world.entity.monster.piglin.PiglinBrute, net.minecraft.world.entity.LivingEntity);
+  protected static void maybePlayActivitySound(net.minecraft.world.entity.monster.piglin.PiglinBrute);
+  private static void playActivitySound(net.minecraft.world.entity.monster.piglin.PiglinBrute);
+  private static void lambda$playActivitySound$0(net.minecraft.world.entity.monster.piglin.PiglinBrute, net.minecraft.world.entity.schedule.Activity);
+  private static boolean lambda$isNearestValidAttackTarget$0(net.minecraft.world.entity.LivingEntity, net.minecraft.world.entity.LivingEntity);
+  private static boolean lambda$initFightActivity$0(net.minecraft.world.entity.monster.piglin.PiglinBrute, net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity);
+}
+Compiled from "StopHoldingItemIfNoLongerAdmiring.java"
+public class net.minecraft.world.entity.monster.piglin.StopHoldingItemIfNoLongerAdmiring {
+  public net.minecraft.world.entity.monster.piglin.StopHoldingItemIfNoLongerAdmiring();
+  public static net.minecraft.world.entity.ai.behavior.BehaviorControl<net.minecraft.world.entity.monster.piglin.Piglin> create();
+  private static com.mojang.datafixers.kinds.App lambda$create$0(net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance);
+  private static net.minecraft.world.entity.ai.behavior.declarative.Trigger lambda$create$1(net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor);
+  private static boolean lambda$create$2(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.Piglin, long);
+}
+Compiled from "Piglin.java"
+public class net.minecraft.world.entity.monster.piglin.Piglin extends net.minecraft.world.entity.monster.piglin.AbstractPiglin implements net.minecraft.world.entity.monster.CrossbowAttackMob,net.minecraft.world.entity.npc.InventoryCarrier {
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Boolean> DATA_BABY_ID;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Boolean> DATA_IS_CHARGING_CROSSBOW;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Boolean> DATA_IS_DANCING;
+  private static final net.minecraft.resources.Identifier SPEED_MODIFIER_BABY_ID;
+  private static final net.minecraft.world.entity.ai.attributes.AttributeModifier SPEED_MODIFIER_BABY;
+  private static final int MAX_HEALTH;
+  private static final float MOVEMENT_SPEED_WHEN_FIGHTING;
+  private static final int ATTACK_DAMAGE;
+  private static final float CHANCE_OF_WEARING_EACH_ARMOUR_ITEM;
+  private static final int MAX_PASSENGERS_ON_ONE_HOGLIN;
+  private static final float PROBABILITY_OF_SPAWNING_AS_BABY;
+  private static final net.minecraft.world.entity.EntityDimensions BABY_DIMENSIONS;
+  private static final double PROBABILITY_OF_SPAWNING_WITH_CROSSBOW_INSTEAD_OF_SWORD;
+  private static final boolean DEFAULT_IS_BABY;
+  private static final boolean DEFAULT_CANNOT_HUNT;
+  private static final int INVENTORY_SLOT_OFFSET;
+  private static final int INVENTORY_SIZE;
+  private final net.minecraft.world.SimpleContainer inventory;
+  private boolean cannotHunt;
+  private static final net.minecraft.world.entity.ai.Brain$Provider<net.minecraft.world.entity.monster.piglin.Piglin> BRAIN_PROVIDER;
+  public net.minecraft.world.entity.monster.piglin.Piglin(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.monster.piglin.AbstractPiglin>, net.minecraft.world.level.Level);
+  protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput);
+  protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput);
+  public net.minecraft.world.SimpleContainer getInventory();
+  protected void dropCustomDeathLoot(net.minecraft.server.level.ServerLevel, net.minecraft.world.damagesource.DamageSource, boolean);
+  protected net.minecraft.world.item.ItemStack addToInventory(net.minecraft.world.item.ItemStack);
+  protected boolean canAddToInventory(net.minecraft.world.item.ItemStack);
+  public net.minecraft.world.entity.SlotAccess getSlot(int);
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  public void onSyncedDataUpdated(net.minecraft.network.syncher.EntityDataAccessor<?>);
+  public static net.minecraft.world.entity.ai.attributes.AttributeSupplier$Builder createAttributes();
+  public static boolean checkPiglinSpawnRules(net.minecraft.world.entity.EntityType<net.minecraft.world.entity.monster.piglin.Piglin>, net.minecraft.world.level.LevelAccessor, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  public net.minecraft.world.entity.SpawnGroupData finalizeSpawn(net.minecraft.world.level.ServerLevelAccessor, net.minecraft.world.DifficultyInstance, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.world.entity.SpawnGroupData);
+  public boolean removeWhenFarAway(double);
+  protected void populateDefaultEquipmentSlots(net.minecraft.util.RandomSource, net.minecraft.world.DifficultyInstance);
+  private void maybeWearArmor(net.minecraft.world.entity.EquipmentSlot, net.minecraft.world.item.ItemStack, net.minecraft.util.RandomSource);
+  protected net.minecraft.world.entity.ai.Brain<net.minecraft.world.entity.monster.piglin.Piglin> makeBrain(net.minecraft.world.entity.ai.Brain$Packed);
+  public net.minecraft.world.entity.ai.Brain<net.minecraft.world.entity.monster.piglin.Piglin> getBrain();
+  public net.minecraft.world.InteractionResult mobInteract(net.minecraft.world.entity.player.Player, net.minecraft.world.InteractionHand);
+  public net.minecraft.world.entity.EntityDimensions getDefaultDimensions(net.minecraft.world.entity.Pose);
+  public void setBaby(boolean);
+  public boolean isBaby();
+  private void setCannotHunt(boolean);
+  protected boolean canHunt();
+  protected void customServerAiStep(net.minecraft.server.level.ServerLevel);
+  protected int getBaseExperienceReward(net.minecraft.server.level.ServerLevel);
+  protected void finishConversion(net.minecraft.server.level.ServerLevel);
+  private net.minecraft.world.item.ItemStack createSpawnWeapon();
+  public net.minecraft.tags.TagKey<net.minecraft.world.item.Item> getPreferredWeaponType();
+  private boolean isChargingCrossbow();
+  public void setChargingCrossbow(boolean);
+  public void onCrossbowAttackPerformed();
+  public net.minecraft.world.entity.monster.piglin.PiglinArmPose getArmPose();
+  public boolean isDancing();
+  public void setDancing(boolean);
+  public boolean hurtServer(net.minecraft.server.level.ServerLevel, net.minecraft.world.damagesource.DamageSource, float);
+  public void performRangedAttack(net.minecraft.world.entity.LivingEntity, float);
+  public boolean canUseNonMeleeWeapon(net.minecraft.world.item.ItemStack);
+  protected void holdInMainHand(net.minecraft.world.item.ItemStack);
+  protected void holdInOffHand(net.minecraft.world.item.ItemStack);
+  public boolean wantsToPickUp(net.minecraft.server.level.ServerLevel, net.minecraft.world.item.ItemStack);
+  protected boolean canReplaceCurrentItem(net.minecraft.world.item.ItemStack);
+  protected boolean canReplaceCurrentItem(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack, net.minecraft.world.entity.EquipmentSlot);
+  protected void pickUpItem(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.item.ItemEntity);
+  public boolean startRiding(net.minecraft.world.entity.Entity, boolean, boolean);
+  private net.minecraft.world.entity.Entity getTopPassenger(net.minecraft.world.entity.Entity, int);
+  protected net.minecraft.sounds.SoundEvent getAmbientSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  protected void playStepSound(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  protected void playConvertedSound();
+  private void lambda$finishConversion$0(net.minecraft.server.level.ServerLevel, net.minecraft.world.item.ItemStack);
+  private void lambda$dropCustomDeathLoot$0(net.minecraft.server.level.ServerLevel, net.minecraft.world.item.ItemStack);
+  static {};
+}
+Compiled from "StartHuntingHoglin.java"
+public class net.minecraft.world.entity.monster.piglin.StartHuntingHoglin {
+  public net.minecraft.world.entity.monster.piglin.StartHuntingHoglin();
+  public static net.minecraft.world.entity.ai.behavior.OneShot<net.minecraft.world.entity.monster.piglin.Piglin> create();
+  private static boolean hasHuntedRecently(net.minecraft.world.entity.monster.piglin.AbstractPiglin);
+  private static com.mojang.datafixers.kinds.App lambda$create$0(net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance);
+  private static net.minecraft.world.entity.ai.behavior.declarative.Trigger lambda$create$1(net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor);
+  private static boolean lambda$create$2(net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.piglin.Piglin, long);
+  private static void lambda$create$4(java.util.List);
+  private static boolean lambda$create$3(java.util.List);
+}
+Compiled from "RememberIfHoglinWasKilled.java"
+public class net.minecraft.world.entity.monster.piglin.RememberIfHoglinWasKilled {
+  public net.minecraft.world.entity.monster.piglin.RememberIfHoglinWasKilled();
+  public static net.minecraft.world.entity.ai.behavior.BehaviorControl<net.minecraft.world.entity.LivingEntity> create();
+  private static com.mojang.datafixers.kinds.App lambda$create$0(net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance);
+  private static net.minecraft.world.entity.ai.behavior.declarative.Trigger lambda$create$1(net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor);
+  private static boolean lambda$create$2(net.minecraft.world.entity.ai.behavior.declarative.BehaviorBuilder$Instance, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.world.entity.ai.behavior.declarative.MemoryAccessor, net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+}

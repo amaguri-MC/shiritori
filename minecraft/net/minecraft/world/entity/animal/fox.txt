@@ -1,0 +1,325 @@
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$FaceplantGoal extends net.minecraft.world.entity.ai.goal.Goal {
+  private int countdown;
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$FaceplantGoal(net.minecraft.world.entity.animal.fox.Fox);
+  public boolean canUse();
+  public boolean canContinueToUse();
+  public void start();
+  public void stop();
+  public void tick();
+}
+Compiled from "Fox.java"
+public final class net.minecraft.world.entity.animal.fox.Fox$Variant extends java.lang.Enum<net.minecraft.world.entity.animal.fox.Fox$Variant> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.world.entity.animal.fox.Fox$Variant RED;
+  public static final net.minecraft.world.entity.animal.fox.Fox$Variant SNOW;
+  public static final net.minecraft.world.entity.animal.fox.Fox$Variant DEFAULT;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.entity.animal.fox.Fox$Variant> CODEC;
+  private static final java.util.function.IntFunction<net.minecraft.world.entity.animal.fox.Fox$Variant> BY_ID;
+  public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, net.minecraft.world.entity.animal.fox.Fox$Variant> STREAM_CODEC;
+  private final int id;
+  private final java.lang.String name;
+  private static final net.minecraft.world.entity.animal.fox.Fox$Variant[] $VALUES;
+  public static net.minecraft.world.entity.animal.fox.Fox$Variant[] values();
+  public static net.minecraft.world.entity.animal.fox.Fox$Variant valueOf(java.lang.String);
+  private net.minecraft.world.entity.animal.fox.Fox$Variant(int, java.lang.String);
+  public java.lang.String getSerializedName();
+  public int getId();
+  public static net.minecraft.world.entity.animal.fox.Fox$Variant byId(int);
+  public static net.minecraft.world.entity.animal.fox.Fox$Variant byBiome(net.minecraft.core.Holder<net.minecraft.world.level.biome.Biome>);
+  private static net.minecraft.world.entity.animal.fox.Fox$Variant[] $values();
+  static {};
+}
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$FoxBreedGoal extends net.minecraft.world.entity.ai.goal.BreedGoal {
+  public net.minecraft.world.entity.animal.fox.Fox$FoxBreedGoal(net.minecraft.world.entity.animal.fox.Fox, double);
+  public void start();
+  protected void breed();
+}
+Compiled from "Fox.java"
+public class net.minecraft.world.entity.animal.fox.Fox$FoxLookControl extends net.minecraft.world.entity.ai.control.LookControl {
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$FoxLookControl(net.minecraft.world.entity.animal.fox.Fox);
+  public void tick();
+  protected boolean resetXRotOnTick();
+}
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$FoxStrollThroughVillageGoal extends net.minecraft.world.entity.ai.goal.StrollThroughVillageGoal {
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$FoxStrollThroughVillageGoal(net.minecraft.world.entity.animal.fox.Fox, int, int);
+  public void start();
+  public boolean canUse();
+  public boolean canContinueToUse();
+  private boolean canFoxMove();
+}
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$FoxPanicGoal extends net.minecraft.world.entity.ai.goal.PanicGoal {
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$FoxPanicGoal(net.minecraft.world.entity.animal.fox.Fox, double);
+  public boolean shouldPanic();
+}
+Compiled from "Fox.java"
+public class net.minecraft.world.entity.animal.fox.Fox$FoxAlertableEntitiesSelector implements net.minecraft.world.entity.ai.targeting.TargetingConditions$Selector {
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$FoxAlertableEntitiesSelector(net.minecraft.world.entity.animal.fox.Fox);
+  public boolean test(net.minecraft.world.entity.LivingEntity, net.minecraft.server.level.ServerLevel);
+}
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$PerchAndSearchGoal extends net.minecraft.world.entity.animal.fox.Fox$FoxBehaviorGoal {
+  private double relX;
+  private double relZ;
+  private int lookTime;
+  private int looksRemaining;
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$PerchAndSearchGoal(net.minecraft.world.entity.animal.fox.Fox);
+  public boolean canUse();
+  public boolean canContinueToUse();
+  public void start();
+  public void stop();
+  public void tick();
+  private void resetLook();
+}
+Compiled from "Fox.java"
+public class net.minecraft.world.entity.animal.fox.Fox$FoxPounceGoal extends net.minecraft.world.entity.ai.goal.JumpGoal {
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$FoxPounceGoal(net.minecraft.world.entity.animal.fox.Fox);
+  public boolean canUse();
+  public boolean canContinueToUse();
+  public boolean isInterruptable();
+  public void start();
+  public void stop();
+  public void tick();
+}
+Compiled from "Fox.java"
+abstract class net.minecraft.world.entity.animal.fox.Fox$FoxBehaviorGoal extends net.minecraft.world.entity.ai.goal.Goal {
+  private final net.minecraft.world.entity.ai.targeting.TargetingConditions alertableTargeting;
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  private net.minecraft.world.entity.animal.fox.Fox$FoxBehaviorGoal(net.minecraft.world.entity.animal.fox.Fox);
+  protected boolean hasShelter();
+  protected boolean alertable();
+}
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$DefendTrustedTargetGoal extends net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal<net.minecraft.world.entity.LivingEntity> {
+  private net.minecraft.world.entity.LivingEntity trustedLastHurtBy;
+  private net.minecraft.world.entity.LivingEntity trustedLastHurt;
+  private int timestamp;
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$DefendTrustedTargetGoal(java.lang.Class<net.minecraft.world.entity.LivingEntity>, boolean, boolean, net.minecraft.world.entity.ai.targeting.TargetingConditions$Selector);
+  public boolean canUse();
+  public void start();
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.entity.animal.fox.package-info {
+}
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$SleepGoal extends net.minecraft.world.entity.animal.fox.Fox$FoxBehaviorGoal {
+  private static final int WAIT_TIME_BEFORE_SLEEP;
+  private int countdown;
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$SleepGoal(net.minecraft.world.entity.animal.fox.Fox);
+  public boolean canUse();
+  public boolean canContinueToUse();
+  private boolean canSleep();
+  public void stop();
+  public void start();
+  static {};
+}
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$FoxSearchForItemsGoal extends net.minecraft.world.entity.ai.goal.Goal {
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$FoxSearchForItemsGoal(net.minecraft.world.entity.animal.fox.Fox);
+  public boolean canUse();
+  public void tick();
+  public void start();
+}
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$SeekShelterGoal extends net.minecraft.world.entity.ai.goal.FleeSunGoal {
+  private int interval;
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$SeekShelterGoal(net.minecraft.world.entity.animal.fox.Fox, double);
+  public boolean canUse();
+  public void start();
+}
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$FoxMoveControl<T extends net.minecraft.world.entity.animal.fox.Fox> extends net.minecraft.world.entity.ai.control.MoveControl<T> {
+  public net.minecraft.world.entity.animal.fox.Fox$FoxMoveControl(T);
+  public void tick();
+}
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$FoxFollowParentGoal extends net.minecraft.world.entity.ai.goal.FollowParentGoal {
+  private final net.minecraft.world.entity.animal.fox.Fox fox;
+  public net.minecraft.world.entity.animal.fox.Fox$FoxFollowParentGoal(net.minecraft.world.entity.animal.fox.Fox, double);
+  public boolean canUse();
+  public boolean canContinueToUse();
+  public void start();
+}
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$FoxMeleeAttackGoal extends net.minecraft.world.entity.ai.goal.MeleeAttackGoal {
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$FoxMeleeAttackGoal(net.minecraft.world.entity.animal.fox.Fox, double, boolean);
+  protected void checkAndPerformAttack(net.minecraft.world.entity.LivingEntity);
+  public void start();
+  public boolean canUse();
+}
+Compiled from "Fox.java"
+public class net.minecraft.world.entity.animal.fox.Fox extends net.minecraft.world.entity.animal.Animal {
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Integer> DATA_TYPE_ID;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Byte> DATA_FLAGS_ID;
+  private static final float BABY_SCALE;
+  private static final int FLAG_SITTING;
+  public static final int FLAG_CROUCHING;
+  public static final int FLAG_INTERESTED;
+  public static final int FLAG_POUNCING;
+  private static final int FLAG_SLEEPING;
+  private static final int FLAG_FACEPLANTED;
+  private static final int FLAG_DEFENDING;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.util.Optional<net.minecraft.world.entity.EntityReference<net.minecraft.world.entity.LivingEntity>>> DATA_TRUSTED_ID_0;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.util.Optional<net.minecraft.world.entity.EntityReference<net.minecraft.world.entity.LivingEntity>>> DATA_TRUSTED_ID_1;
+  private static final java.util.function.Predicate<net.minecraft.world.entity.item.ItemEntity> ALLOWED_ITEMS;
+  private static final java.util.function.Predicate<net.minecraft.world.entity.Entity> TRUSTED_TARGET_SELECTOR;
+  private static final java.util.function.Predicate<net.minecraft.world.entity.Entity> STALKABLE_PREY;
+  private static final java.util.function.Predicate<net.minecraft.world.entity.Entity> AVOID_PLAYERS;
+  private static final int MIN_TICKS_BEFORE_EAT;
+  private static final net.minecraft.world.entity.EntityDimensions BABY_DIMENSIONS;
+  private static final com.mojang.serialization.Codec<java.util.List<net.minecraft.world.entity.EntityReference<net.minecraft.world.entity.LivingEntity>>> TRUSTED_LIST_CODEC;
+  private static final boolean DEFAULT_SLEEPING;
+  private static final boolean DEFAULT_SITTING;
+  private static final boolean DEFAULT_CROUCHING;
+  private net.minecraft.world.entity.ai.goal.Goal landTargetGoal;
+  private net.minecraft.world.entity.ai.goal.Goal turtleEggTargetGoal;
+  private net.minecraft.world.entity.ai.goal.Goal fishTargetGoal;
+  private float interestedAngle;
+  private float interestedAngleO;
+  private float crouchAmount;
+  private float crouchAmountO;
+  private static final float MAX_CROUCH_AMOUNT;
+  private int ticksSinceEaten;
+  public net.minecraft.world.entity.animal.fox.Fox(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.fox.Fox>, net.minecraft.world.level.Level);
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  protected void registerGoals();
+  public void aiStep();
+  protected boolean isImmobile();
+  private boolean canEat(net.minecraft.world.item.ItemStack);
+  private boolean isConsumableFood(net.minecraft.world.item.ItemStack);
+  protected void populateDefaultEquipmentSlots(net.minecraft.util.RandomSource, net.minecraft.world.DifficultyInstance);
+  public void handleEntityEvent(byte);
+  public static net.minecraft.world.entity.ai.attributes.AttributeSupplier$Builder createAttributes();
+  public net.minecraft.world.entity.animal.fox.Fox getBreedOffspring(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.AgeableMob);
+  public static boolean checkFoxSpawnRules(net.minecraft.world.entity.EntityType<net.minecraft.world.entity.animal.fox.Fox>, net.minecraft.world.level.LevelAccessor, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  public net.minecraft.world.entity.SpawnGroupData finalizeSpawn(net.minecraft.world.level.ServerLevelAccessor, net.minecraft.world.DifficultyInstance, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.world.entity.SpawnGroupData);
+  private void setTargetGoals();
+  protected void playEatingSound();
+  public net.minecraft.world.entity.EntityDimensions getDefaultDimensions(net.minecraft.world.entity.Pose);
+  public net.minecraft.world.entity.animal.fox.Fox$Variant getVariant();
+  private void setVariant(net.minecraft.world.entity.animal.fox.Fox$Variant);
+  public <T> T get(net.minecraft.core.component.DataComponentType<? extends T>);
+  protected void applyImplicitComponents(net.minecraft.core.component.DataComponentGetter);
+  protected <T> boolean applyImplicitComponent(net.minecraft.core.component.DataComponentType<T>, T);
+  private java.util.stream.Stream<net.minecraft.world.entity.EntityReference<net.minecraft.world.entity.LivingEntity>> getTrustedEntities();
+  private void addTrustedEntity(net.minecraft.world.entity.LivingEntity);
+  private void addTrustedEntity(net.minecraft.world.entity.EntityReference<net.minecraft.world.entity.LivingEntity>);
+  protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput);
+  protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput);
+  private void clearTrusted();
+  public boolean isSitting();
+  public void setSitting(boolean);
+  public boolean isFaceplanted();
+  private void setFaceplanted(boolean);
+  private boolean isDefending();
+  private void setDefending(boolean);
+  public boolean isSleeping();
+  private void setSleeping(boolean);
+  private void setFlag(int, boolean);
+  private boolean getFlag(int);
+  protected boolean canDispenserEquipIntoSlot(net.minecraft.world.entity.EquipmentSlot);
+  public boolean canHoldItem(net.minecraft.world.item.ItemStack);
+  private void spitOutItem(net.minecraft.world.item.ItemStack);
+  private void dropItemStack(net.minecraft.world.item.ItemStack);
+  protected void pickUpItem(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.item.ItemEntity);
+  public void tick();
+  public boolean isFood(net.minecraft.world.item.ItemStack);
+  protected void onOffspringSpawnedFromEgg(net.minecraft.world.entity.player.Player, net.minecraft.world.entity.Mob);
+  public boolean isPouncing();
+  public void setIsPouncing(boolean);
+  public boolean isFullyCrouched();
+  public void setIsCrouching(boolean);
+  public boolean isCrouching();
+  public void setIsInterested(boolean);
+  public boolean isInterested();
+  public float getHeadRollAngle(float);
+  public float getCrouchAmount(float);
+  public void setTarget(net.minecraft.world.entity.LivingEntity);
+  private void wakeUp();
+  private void clearStates();
+  public boolean canMove();
+  public void playAmbientSound();
+  protected net.minecraft.sounds.SoundEvent getAmbientSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  private boolean trusts(net.minecraft.world.entity.LivingEntity);
+  protected void dropAllDeathLoot(net.minecraft.server.level.ServerLevel, net.minecraft.world.damagesource.DamageSource);
+  public static boolean isPathClear(net.minecraft.world.entity.animal.fox.Fox, net.minecraft.world.entity.LivingEntity);
+  public net.minecraft.world.phys.Vec3 getLeashOffset();
+  public net.minecraft.world.entity.AgeableMob getBreedOffspring(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.AgeableMob);
+  static boolean access$000(net.minecraft.world.entity.animal.fox.Fox);
+  static net.minecraft.util.RandomSource access$100(net.minecraft.world.entity.animal.fox.Fox);
+  static net.minecraft.util.RandomSource access$200(net.minecraft.world.entity.animal.fox.Fox);
+  static net.minecraft.util.RandomSource access$300(net.minecraft.world.entity.animal.fox.Fox);
+  static boolean access$400(net.minecraft.world.entity.animal.fox.Fox);
+  private static boolean lambda$trusts$0(net.minecraft.world.entity.LivingEntity, net.minecraft.world.entity.EntityReference);
+  private boolean lambda$registerGoals$5(net.minecraft.world.entity.LivingEntity, net.minecraft.server.level.ServerLevel);
+  private boolean lambda$registerGoals$4(net.minecraft.world.entity.LivingEntity);
+  private boolean lambda$registerGoals$3(net.minecraft.world.entity.LivingEntity);
+  private boolean lambda$registerGoals$2(net.minecraft.world.entity.LivingEntity);
+  private static boolean lambda$registerGoals$1(net.minecraft.world.entity.LivingEntity, net.minecraft.server.level.ServerLevel);
+  private static boolean lambda$registerGoals$0(net.minecraft.world.entity.LivingEntity, net.minecraft.server.level.ServerLevel);
+  private static boolean lambda$static$3(net.minecraft.world.entity.Entity);
+  private static boolean lambda$static$2(net.minecraft.world.entity.Entity);
+  private static boolean lambda$static$1(net.minecraft.world.entity.Entity);
+  private static boolean lambda$static$0(net.minecraft.world.entity.item.ItemEntity);
+  static {};
+}
+Compiled from "Fox.java"
+public class net.minecraft.world.entity.animal.fox.Fox$FoxGroupData extends net.minecraft.world.entity.AgeableMob$AgeableMobGroupData {
+  public final net.minecraft.world.entity.animal.fox.Fox$Variant variant;
+  public net.minecraft.world.entity.animal.fox.Fox$FoxGroupData(net.minecraft.world.entity.animal.fox.Fox$Variant);
+}
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$FoxFloatGoal extends net.minecraft.world.entity.ai.goal.FloatGoal {
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$FoxFloatGoal(net.minecraft.world.entity.animal.fox.Fox);
+  public void start();
+  public boolean canUse();
+}
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$StalkPreyGoal extends net.minecraft.world.entity.ai.goal.Goal {
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$StalkPreyGoal(net.minecraft.world.entity.animal.fox.Fox);
+  public boolean canUse();
+  public void start();
+  public void stop();
+  public void tick();
+}
+Compiled from "Fox.java"
+class net.minecraft.world.entity.animal.fox.Fox$FoxLookAtPlayerGoal extends net.minecraft.world.entity.ai.goal.LookAtPlayerGoal {
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$FoxLookAtPlayerGoal(net.minecraft.world.entity.Mob, java.lang.Class<? extends net.minecraft.world.entity.LivingEntity>, float);
+  public boolean canUse();
+  public boolean canContinueToUse();
+}
+Compiled from "Fox.java"
+public class net.minecraft.world.entity.animal.fox.Fox$FoxEatBerriesGoal extends net.minecraft.world.entity.ai.goal.MoveToBlockGoal {
+  private static final int WAIT_TICKS;
+  protected int ticksWaited;
+  final net.minecraft.world.entity.animal.fox.Fox this$0;
+  public net.minecraft.world.entity.animal.fox.Fox$FoxEatBerriesGoal(net.minecraft.world.entity.animal.fox.Fox, double, int, int);
+  public double acceptedDistance();
+  public boolean shouldRecalculatePath();
+  protected boolean isValidTarget(net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos);
+  public void tick();
+  protected void onReachedTarget();
+  private void pickGlowBerry(net.minecraft.world.level.block.state.BlockState);
+  private void pickSweetBerries(net.minecraft.world.level.block.state.BlockState);
+  public boolean canUse();
+  public void start();
+}

@@ -1,0 +1,265 @@
+Compiled from "BundleFullness.java"
+public final class net.minecraft.client.renderer.item.properties.numeric.BundleFullness extends java.lang.Record implements net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.BundleFullness> MAP_CODEC;
+  public net.minecraft.client.renderer.item.properties.numeric.BundleFullness();
+  public float get(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.ItemOwner, int);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.BundleFullness> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  static {};
+}
+Compiled from "CompassAngle.java"
+public class net.minecraft.client.renderer.item.properties.numeric.CompassAngle implements net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.CompassAngle> MAP_CODEC;
+  private final net.minecraft.client.renderer.item.properties.numeric.CompassAngleState state;
+  public net.minecraft.client.renderer.item.properties.numeric.CompassAngle(boolean, net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget);
+  private net.minecraft.client.renderer.item.properties.numeric.CompassAngle(net.minecraft.client.renderer.item.properties.numeric.CompassAngleState);
+  public float get(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.ItemOwner, int);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.CompassAngle> type();
+  private static net.minecraft.client.renderer.item.properties.numeric.CompassAngleState lambda$static$0(net.minecraft.client.renderer.item.properties.numeric.CompassAngle);
+  static {};
+}
+Compiled from "CompassAngleState.java"
+final class net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget$1 extends net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget {
+  private net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget$1(java.lang.String, int, java.lang.String);
+  public net.minecraft.core.GlobalPos get(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.item.ItemStack, net.minecraft.world.entity.ItemOwner);
+}
+Compiled from "CompassAngleState.java"
+final class net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget$2 extends net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget {
+  private net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget$2(java.lang.String, int, java.lang.String);
+  public net.minecraft.core.GlobalPos get(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.item.ItemStack, net.minecraft.world.entity.ItemOwner);
+}
+Compiled from "CompassAngleState.java"
+final class net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget$3 extends net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget {
+  private net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget$3(java.lang.String, int, java.lang.String);
+  public net.minecraft.core.GlobalPos get(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.item.ItemStack, net.minecraft.world.entity.ItemOwner);
+}
+Compiled from "CompassAngleState.java"
+final class net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget$4 extends net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget {
+  private net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget$4(java.lang.String, int, java.lang.String);
+  public net.minecraft.core.GlobalPos get(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.item.ItemStack, net.minecraft.world.entity.ItemOwner);
+}
+Compiled from "CompassAngleState.java"
+public abstract class net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget extends java.lang.Enum<net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget NONE;
+  public static final net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget LODESTONE;
+  public static final net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget SPAWN;
+  public static final net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget RECOVERY;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget> CODEC;
+  private final java.lang.String name;
+  private static final net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget[] $VALUES;
+  public static net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget[] values();
+  public static net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget valueOf(java.lang.String);
+  private net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget(java.lang.String);
+  public java.lang.String getSerializedName();
+  public abstract net.minecraft.core.GlobalPos get(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.item.ItemStack, net.minecraft.world.entity.ItemOwner);
+  private static net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget[] $values();
+  static {};
+}
+Compiled from "CompassAngleState.java"
+public class net.minecraft.client.renderer.item.properties.numeric.CompassAngleState extends net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.CompassAngleState> MAP_CODEC;
+  private final net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper$Wobbler wobbler;
+  private final net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper$Wobbler noTargetWobbler;
+  private final net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget compassTarget;
+  private final net.minecraft.util.RandomSource random;
+  public net.minecraft.client.renderer.item.properties.numeric.CompassAngleState(boolean, net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget);
+  protected float calculate(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, int, net.minecraft.world.entity.ItemOwner);
+  private float getRandomlySpinningRotation(int, long);
+  private float getRotationTowardsCompassTarget(net.minecraft.world.entity.ItemOwner, long, net.minecraft.core.BlockPos);
+  private static boolean isValidCompassTargetPos(net.minecraft.world.entity.ItemOwner, net.minecraft.core.GlobalPos);
+  private static double getAngleFromEntityToPos(net.minecraft.world.entity.ItemOwner, net.minecraft.core.BlockPos);
+  private static float getWrappedVisualRotationY(net.minecraft.world.entity.ItemOwner);
+  private static int hash(int);
+  protected net.minecraft.client.renderer.item.properties.numeric.CompassAngleState$CompassTarget target();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "Cooldown.java"
+public final class net.minecraft.client.renderer.item.properties.numeric.Cooldown extends java.lang.Record implements net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.Cooldown> MAP_CODEC;
+  public net.minecraft.client.renderer.item.properties.numeric.Cooldown();
+  public float get(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.ItemOwner, int);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.Cooldown> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  static {};
+}
+Compiled from "Count.java"
+public final class net.minecraft.client.renderer.item.properties.numeric.Count extends java.lang.Record implements net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty {
+  private final boolean normalize;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.Count> MAP_CODEC;
+  public net.minecraft.client.renderer.item.properties.numeric.Count(boolean);
+  public float get(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.ItemOwner, int);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.Count> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public boolean normalize();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "CrossbowPull.java"
+public class net.minecraft.client.renderer.item.properties.numeric.CrossbowPull implements net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.CrossbowPull> MAP_CODEC;
+  public net.minecraft.client.renderer.item.properties.numeric.CrossbowPull();
+  public float get(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.ItemOwner, int);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.CrossbowPull> type();
+  static {};
+}
+Compiled from "CustomModelDataProperty.java"
+public final class net.minecraft.client.renderer.item.properties.numeric.CustomModelDataProperty extends java.lang.Record implements net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty {
+  private final int index;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.CustomModelDataProperty> MAP_CODEC;
+  public net.minecraft.client.renderer.item.properties.numeric.CustomModelDataProperty(int);
+  public float get(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.ItemOwner, int);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.CustomModelDataProperty> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int index();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "Damage.java"
+public final class net.minecraft.client.renderer.item.properties.numeric.Damage extends java.lang.Record implements net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty {
+  private final boolean normalize;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.Damage> MAP_CODEC;
+  public net.minecraft.client.renderer.item.properties.numeric.Damage(boolean);
+  public float get(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.ItemOwner, int);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.Damage> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public boolean normalize();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "NeedleDirectionHelper.java"
+class net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper$1 implements net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper$Wobbler {
+  private float rotation;
+  private float deltaRotation;
+  private long lastUpdateTick;
+  final float val$factor;
+  net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper$1();
+  public float rotation();
+  public boolean shouldUpdate(long);
+  public void update(long, float);
+}
+Compiled from "NeedleDirectionHelper.java"
+class net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper$2 implements net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper$Wobbler {
+  private float targetValue;
+  net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper$2();
+  public float rotation();
+  public boolean shouldUpdate(long);
+  public void update(long, float);
+}
+Compiled from "NeedleDirectionHelper.java"
+public interface net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper$Wobbler {
+  public abstract float rotation();
+  public abstract boolean shouldUpdate(long);
+  public abstract void update(long, float);
+}
+Compiled from "NeedleDirectionHelper.java"
+public abstract class net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper {
+  private final boolean wobble;
+  protected net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper(boolean);
+  public float get(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.ItemOwner, int);
+  protected abstract float calculate(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, int, net.minecraft.world.entity.ItemOwner);
+  protected boolean wobble();
+  protected net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper$Wobbler newWobbler(float);
+  public static net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper$Wobbler standardWobbler(float);
+  public static net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper$Wobbler nonWobbler();
+}
+Compiled from "RangeSelectItemModelProperties.java"
+public class net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties {
+  private static final net.minecraft.util.ExtraCodecs$LateBoundIdMapper<net.minecraft.resources.Identifier, com.mojang.serialization.MapCodec<? extends net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty>> ID_MAPPER;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty> MAP_CODEC;
+  public net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperties();
+  public static void bootstrap();
+  private static com.mojang.serialization.MapCodec lambda$static$0(com.mojang.serialization.MapCodec);
+  static {};
+}
+Compiled from "RangeSelectItemModelProperty.java"
+public interface net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty {
+  public abstract float get(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.ItemOwner, int);
+  public abstract com.mojang.serialization.MapCodec<? extends net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty> type();
+}
+Compiled from "Time.java"
+final class net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource$1 extends net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource {
+  private net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource$1(java.lang.String, int, java.lang.String);
+  public float get(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.item.ItemStack, net.minecraft.world.entity.ItemOwner, net.minecraft.util.RandomSource);
+}
+Compiled from "Time.java"
+final class net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource$2 extends net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource {
+  private net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource$2(java.lang.String, int, java.lang.String);
+  public float get(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.item.ItemStack, net.minecraft.world.entity.ItemOwner, net.minecraft.util.RandomSource);
+}
+Compiled from "Time.java"
+final class net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource$3 extends net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource {
+  private net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource$3(java.lang.String, int, java.lang.String);
+  public float get(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.item.ItemStack, net.minecraft.world.entity.ItemOwner, net.minecraft.util.RandomSource);
+}
+Compiled from "Time.java"
+public abstract class net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource extends java.lang.Enum<net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource RANDOM;
+  public static final net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource DAYTIME;
+  public static final net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource MOON_PHASE;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource> CODEC;
+  private final java.lang.String name;
+  private static final net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource[] $VALUES;
+  public static net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource[] values();
+  public static net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource valueOf(java.lang.String);
+  private net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource(java.lang.String);
+  public java.lang.String getSerializedName();
+  public abstract float get(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.item.ItemStack, net.minecraft.world.entity.ItemOwner, net.minecraft.util.RandomSource);
+  private static net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource[] $values();
+  static {};
+}
+Compiled from "Time.java"
+public class net.minecraft.client.renderer.item.properties.numeric.Time extends net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper implements net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.Time> MAP_CODEC;
+  private final net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource source;
+  private final net.minecraft.util.RandomSource randomSource;
+  private final net.minecraft.client.renderer.item.properties.numeric.NeedleDirectionHelper$Wobbler wobbler;
+  public net.minecraft.client.renderer.item.properties.numeric.Time(boolean, net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource);
+  protected float calculate(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, int, net.minecraft.world.entity.ItemOwner);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.Time> type();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.client.renderer.item.properties.numeric.Time$TimeSource lambda$static$1(net.minecraft.client.renderer.item.properties.numeric.Time);
+  static {};
+}
+Compiled from "UseCycle.java"
+public final class net.minecraft.client.renderer.item.properties.numeric.UseCycle extends java.lang.Record implements net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty {
+  private final float period;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.UseCycle> MAP_CODEC;
+  public net.minecraft.client.renderer.item.properties.numeric.UseCycle(float);
+  public float get(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.ItemOwner, int);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.UseCycle> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float period();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "UseDuration.java"
+public final class net.minecraft.client.renderer.item.properties.numeric.UseDuration extends java.lang.Record implements net.minecraft.client.renderer.item.properties.numeric.RangeSelectItemModelProperty {
+  private final boolean remaining;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.UseDuration> MAP_CODEC;
+  public net.minecraft.client.renderer.item.properties.numeric.UseDuration(boolean);
+  public float get(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.ItemOwner, int);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.renderer.item.properties.numeric.UseDuration> type();
+  public static int useDuration(net.minecraft.world.item.ItemStack, net.minecraft.world.entity.LivingEntity);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public boolean remaining();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.renderer.item.properties.numeric.package-info {
+}

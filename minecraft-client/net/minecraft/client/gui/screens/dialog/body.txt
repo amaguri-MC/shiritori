@@ -1,0 +1,33 @@
+Compiled from "DialogBodyHandler.java"
+public interface net.minecraft.client.gui.screens.dialog.body.DialogBodyHandler<T extends net.minecraft.server.dialog.body.DialogBody> {
+  public abstract net.minecraft.client.gui.layouts.LayoutElement createControls(net.minecraft.client.gui.screens.dialog.DialogScreen<?>, T);
+}
+Compiled from "DialogBodyHandlers.java"
+class net.minecraft.client.gui.screens.dialog.body.DialogBodyHandlers$ItemHandler implements net.minecraft.client.gui.screens.dialog.body.DialogBodyHandler<net.minecraft.server.dialog.body.ItemBody> {
+  private net.minecraft.client.gui.screens.dialog.body.DialogBodyHandlers$ItemHandler();
+  public net.minecraft.client.gui.layouts.LayoutElement createControls(net.minecraft.client.gui.screens.dialog.DialogScreen<?>, net.minecraft.server.dialog.body.ItemBody);
+  public net.minecraft.client.gui.layouts.LayoutElement createControls(net.minecraft.client.gui.screens.dialog.DialogScreen, net.minecraft.server.dialog.body.DialogBody);
+  private static void lambda$createControls$0(net.minecraft.client.gui.screens.dialog.DialogScreen, net.minecraft.network.chat.Style);
+}
+Compiled from "DialogBodyHandlers.java"
+class net.minecraft.client.gui.screens.dialog.body.DialogBodyHandlers$PlainMessageHandler implements net.minecraft.client.gui.screens.dialog.body.DialogBodyHandler<net.minecraft.server.dialog.body.PlainMessage> {
+  private net.minecraft.client.gui.screens.dialog.body.DialogBodyHandlers$PlainMessageHandler();
+  public net.minecraft.client.gui.layouts.LayoutElement createControls(net.minecraft.client.gui.screens.dialog.DialogScreen<?>, net.minecraft.server.dialog.body.PlainMessage);
+  public net.minecraft.client.gui.layouts.LayoutElement createControls(net.minecraft.client.gui.screens.dialog.DialogScreen, net.minecraft.server.dialog.body.DialogBody);
+  private static void lambda$createControls$0(net.minecraft.client.gui.screens.dialog.DialogScreen, net.minecraft.network.chat.Style);
+}
+Compiled from "DialogBodyHandlers.java"
+public class net.minecraft.client.gui.screens.dialog.body.DialogBodyHandlers {
+  private static final org.slf4j.Logger LOGGER;
+  private static final java.util.Map<com.mojang.serialization.MapCodec<? extends net.minecraft.server.dialog.body.DialogBody>, net.minecraft.client.gui.screens.dialog.body.DialogBodyHandler<?>> HANDLERS;
+  public net.minecraft.client.gui.screens.dialog.body.DialogBodyHandlers();
+  private static <B extends net.minecraft.server.dialog.body.DialogBody> void register(com.mojang.serialization.MapCodec<B>, net.minecraft.client.gui.screens.dialog.body.DialogBodyHandler<? super B>);
+  private static <B extends net.minecraft.server.dialog.body.DialogBody> net.minecraft.client.gui.screens.dialog.body.DialogBodyHandler<B> getHandler(B);
+  public static <B extends net.minecraft.server.dialog.body.DialogBody> net.minecraft.client.gui.layouts.LayoutElement createBodyElement(net.minecraft.client.gui.screens.dialog.DialogScreen<?>, B);
+  public static void bootstrap();
+  private static void runActionOnParent(net.minecraft.client.gui.screens.dialog.DialogScreen<?>, net.minecraft.network.chat.Style);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.gui.screens.dialog.body.package-info {
+}

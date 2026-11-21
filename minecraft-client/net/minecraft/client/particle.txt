@@ -1,0 +1,1888 @@
+Compiled from "AshParticle.java"
+public class net.minecraft.client.particle.AshParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.AshParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "AshParticle.java"
+public class net.minecraft.client.particle.AshParticle extends net.minecraft.client.particle.BaseAshSmokeParticle {
+  protected net.minecraft.client.particle.AshParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, float, net.minecraft.client.particle.SpriteSet);
+}
+Compiled from "AttackSweepParticle.java"
+public class net.minecraft.client.particle.AttackSweepParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.AttackSweepParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "AttackSweepParticle.java"
+public class net.minecraft.client.particle.AttackSweepParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  private net.minecraft.client.particle.AttackSweepParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public int getLightCoords(float);
+  public void tick();
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+}
+Compiled from "BaseAshSmokeParticle.java"
+public abstract class net.minecraft.client.particle.BaseAshSmokeParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  protected net.minecraft.client.particle.BaseAshSmokeParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, float, float, float, double, double, double, float, net.minecraft.client.particle.SpriteSet, float, int, float, boolean);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public float getQuadSize(float);
+  public void tick();
+}
+Compiled from "BlockMarker.java"
+public class net.minecraft.client.particle.BlockMarker$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.BlockParticleOption> {
+  public net.minecraft.client.particle.BlockMarker$Provider();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.BlockParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "BlockMarker.java"
+public class net.minecraft.client.particle.BlockMarker extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SingleQuadParticle$Layer layer;
+  private net.minecraft.client.particle.BlockMarker(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.world.level.block.state.BlockState);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public float getQuadSize(float);
+}
+Compiled from "BreakingItemParticle.java"
+public class net.minecraft.client.particle.BreakingItemParticle$CobwebProvider extends net.minecraft.client.particle.BreakingItemParticle$ItemParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  public net.minecraft.client.particle.BreakingItemParticle$CobwebProvider();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "BreakingItemParticle.java"
+public abstract class net.minecraft.client.particle.BreakingItemParticle$ItemParticleProvider<T extends net.minecraft.core.particles.ParticleOptions> implements net.minecraft.client.particle.ParticleProvider<T> {
+  private final net.minecraft.client.renderer.item.ItemStackRenderState scratchRenderState;
+  public net.minecraft.client.particle.BreakingItemParticle$ItemParticleProvider();
+  protected net.minecraft.client.renderer.texture.TextureAtlasSprite getSprite(net.minecraft.world.item.ItemStackTemplate, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.util.RandomSource);
+}
+Compiled from "BreakingItemParticle.java"
+public class net.minecraft.client.particle.BreakingItemParticle$Provider extends net.minecraft.client.particle.BreakingItemParticle$ItemParticleProvider<net.minecraft.core.particles.ItemParticleOption> {
+  public net.minecraft.client.particle.BreakingItemParticle$Provider();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ItemParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "BreakingItemParticle.java"
+public class net.minecraft.client.particle.BreakingItemParticle$SlimeProvider extends net.minecraft.client.particle.BreakingItemParticle$ItemParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  public net.minecraft.client.particle.BreakingItemParticle$SlimeProvider();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "BreakingItemParticle.java"
+public class net.minecraft.client.particle.BreakingItemParticle$SnowballProvider extends net.minecraft.client.particle.BreakingItemParticle$ItemParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  public net.minecraft.client.particle.BreakingItemParticle$SnowballProvider();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "BreakingItemParticle.java"
+public class net.minecraft.client.particle.BreakingItemParticle$SulfurCubeProvider extends net.minecraft.client.particle.BreakingItemParticle$ItemParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.BreakingItemParticle$SulfurCubeProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "BreakingItemParticle.java"
+public class net.minecraft.client.particle.BreakingItemParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final float uo;
+  private final float vo;
+  private final net.minecraft.client.particle.SingleQuadParticle$Layer layer;
+  private net.minecraft.client.particle.BreakingItemParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  protected net.minecraft.client.particle.BreakingItemParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  protected float getU0();
+  protected float getU1();
+  protected float getV0();
+  protected float getV1();
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+}
+Compiled from "BubbleColumnUpParticle.java"
+public class net.minecraft.client.particle.BubbleColumnUpParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.BubbleColumnUpParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "BubbleColumnUpParticle.java"
+public class net.minecraft.client.particle.BubbleColumnUpParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private net.minecraft.client.particle.BubbleColumnUpParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public void tick();
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+}
+Compiled from "BubbleParticle.java"
+public class net.minecraft.client.particle.BubbleParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.BubbleParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "BubbleParticle.java"
+public class net.minecraft.client.particle.BubbleParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private net.minecraft.client.particle.BubbleParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public void tick();
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+}
+Compiled from "BubblePopParticle.java"
+public class net.minecraft.client.particle.BubblePopParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.BubblePopParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "BubblePopParticle.java"
+public class net.minecraft.client.particle.BubblePopParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  private net.minecraft.client.particle.BubblePopParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public void tick();
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+}
+Compiled from "CampfireSmokeParticle.java"
+public class net.minecraft.client.particle.CampfireSmokeParticle$CosyProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.CampfireSmokeParticle$CosyProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "CampfireSmokeParticle.java"
+public class net.minecraft.client.particle.CampfireSmokeParticle$SignalProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.CampfireSmokeParticle$SignalProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "CampfireSmokeParticle.java"
+public class net.minecraft.client.particle.CampfireSmokeParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private net.minecraft.client.particle.CampfireSmokeParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, boolean, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public void tick();
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+}
+Compiled from "CritParticle.java"
+public class net.minecraft.client.particle.CritParticle$DamageIndicatorProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.CritParticle$DamageIndicatorProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "CritParticle.java"
+public class net.minecraft.client.particle.CritParticle$MagicProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.CritParticle$MagicProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "CritParticle.java"
+public class net.minecraft.client.particle.CritParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.CritParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "CritParticle.java"
+public class net.minecraft.client.particle.CritParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private net.minecraft.client.particle.CritParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public float getQuadSize(float);
+  public void tick();
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+}
+Compiled from "DragonBreathParticle.java"
+public class net.minecraft.client.particle.DragonBreathParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.PowerParticleOption> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.DragonBreathParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.PowerParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DragonBreathParticle.java"
+public class net.minecraft.client.particle.DragonBreathParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private static final int COLOR_MIN;
+  private static final int COLOR_MAX;
+  private static final float COLOR_MIN_RED;
+  private static final float COLOR_MIN_GREEN;
+  private static final float COLOR_MIN_BLUE;
+  private static final float COLOR_MAX_RED;
+  private static final float COLOR_MAX_GREEN;
+  private static final float COLOR_MAX_BLUE;
+  private boolean hasHitGround;
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  private net.minecraft.client.particle.DragonBreathParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public void tick();
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public float getQuadSize(float);
+}
+Compiled from "DripParticle.java"
+class net.minecraft.client.particle.DripParticle$CoolingDripHangParticle extends net.minecraft.client.particle.DripParticle$DripHangParticle {
+  private net.minecraft.client.particle.DripParticle$CoolingDripHangParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.world.level.material.Fluid, net.minecraft.core.particles.ParticleOptions, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  protected void preMoveUpdate();
+}
+Compiled from "DripParticle.java"
+class net.minecraft.client.particle.DripParticle$DripHangParticle extends net.minecraft.client.particle.DripParticle {
+  private final net.minecraft.core.particles.ParticleOptions fallingParticle;
+  private net.minecraft.client.particle.DripParticle$DripHangParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.world.level.material.Fluid, net.minecraft.core.particles.ParticleOptions, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  protected void preMoveUpdate();
+  protected void postMoveUpdate();
+}
+Compiled from "DripParticle.java"
+class net.minecraft.client.particle.DripParticle$DripLandParticle extends net.minecraft.client.particle.DripParticle {
+  private net.minecraft.client.particle.DripParticle$DripLandParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.world.level.material.Fluid, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+}
+Compiled from "DripParticle.java"
+class net.minecraft.client.particle.DripParticle$DripstoneFallAndLandParticle extends net.minecraft.client.particle.DripParticle$FallAndLandParticle {
+  private net.minecraft.client.particle.DripParticle$DripstoneFallAndLandParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.world.level.material.Fluid, net.minecraft.core.particles.ParticleOptions, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  protected void postMoveUpdate();
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$DripstoneLavaFallProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$DripstoneLavaFallProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$DripstoneLavaHangProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$DripstoneLavaHangProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$DripstoneWaterFallProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$DripstoneWaterFallProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$DripstoneWaterHangProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$DripstoneWaterHangProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+class net.minecraft.client.particle.DripParticle$FallAndLandParticle extends net.minecraft.client.particle.DripParticle$FallingParticle {
+  protected final net.minecraft.core.particles.ParticleOptions landParticle;
+  private net.minecraft.client.particle.DripParticle$FallAndLandParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.world.level.material.Fluid, net.minecraft.core.particles.ParticleOptions, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  protected void postMoveUpdate();
+}
+Compiled from "DripParticle.java"
+class net.minecraft.client.particle.DripParticle$FallingParticle extends net.minecraft.client.particle.DripParticle {
+  private net.minecraft.client.particle.DripParticle$FallingParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.world.level.material.Fluid, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  protected void postMoveUpdate();
+}
+Compiled from "DripParticle.java"
+class net.minecraft.client.particle.DripParticle$HoneyFallAndLandParticle extends net.minecraft.client.particle.DripParticle$FallAndLandParticle {
+  private net.minecraft.client.particle.DripParticle$HoneyFallAndLandParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.world.level.material.Fluid, net.minecraft.core.particles.ParticleOptions, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  protected void postMoveUpdate();
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$HoneyFallProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$HoneyFallProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$HoneyHangProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$HoneyHangProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$HoneyLandProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$HoneyLandProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$LavaFallProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$LavaFallProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$LavaHangProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$LavaHangProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$LavaLandProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$LavaLandProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$NectarFallProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$NectarFallProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$ObsidianTearFallProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$ObsidianTearFallProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$ObsidianTearHangProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$ObsidianTearHangProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$ObsidianTearLandProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$ObsidianTearLandProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$SporeBlossomFallProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$SporeBlossomFallProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$WaterFallProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$WaterFallProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle$WaterHangProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.DripParticle$WaterHangProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DripParticle.java"
+public class net.minecraft.client.particle.DripParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.world.level.material.Fluid type;
+  protected boolean isGlowing;
+  private net.minecraft.client.particle.DripParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.world.level.material.Fluid, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  protected net.minecraft.world.level.material.Fluid getType();
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public int getLightCoords(float);
+  public void tick();
+  protected void preMoveUpdate();
+  protected void postMoveUpdate();
+}
+Compiled from "DustColorTransitionParticle.java"
+public class net.minecraft.client.particle.DustColorTransitionParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.DustColorTransitionOptions> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.DustColorTransitionParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.DustColorTransitionOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DustColorTransitionParticle.java"
+public class net.minecraft.client.particle.DustColorTransitionParticle extends net.minecraft.client.particle.DustParticleBase<net.minecraft.core.particles.DustColorTransitionOptions> {
+  private final org.joml.Vector3f fromColor;
+  private final org.joml.Vector3f toColor;
+  protected net.minecraft.client.particle.DustColorTransitionParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.core.particles.DustColorTransitionOptions, net.minecraft.client.particle.SpriteSet);
+  private org.joml.Vector3f randomizeColor(org.joml.Vector3f, float);
+  private void lerpColors(float);
+  public void extract(net.minecraft.client.renderer.state.level.QuadParticleRenderState, net.minecraft.client.Camera, float);
+}
+Compiled from "DustParticle.java"
+public class net.minecraft.client.particle.DustParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.DustParticleOptions> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.DustParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.DustParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DustParticle.java"
+public class net.minecraft.client.particle.DustParticle extends net.minecraft.client.particle.DustParticleBase<net.minecraft.core.particles.DustParticleOptions> {
+  protected net.minecraft.client.particle.DustParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.core.particles.DustParticleOptions, net.minecraft.client.particle.SpriteSet);
+}
+Compiled from "DustParticleBase.java"
+public class net.minecraft.client.particle.DustParticleBase<T extends net.minecraft.core.particles.ScalableParticleOptionsBase> extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  protected net.minecraft.client.particle.DustParticleBase(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, T, net.minecraft.client.particle.SpriteSet);
+  protected float randomizeColor(float, float);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public float getQuadSize(float);
+  public void tick();
+}
+Compiled from "DustPlumeParticle.java"
+public class net.minecraft.client.particle.DustPlumeParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.DustPlumeParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "DustPlumeParticle.java"
+public class net.minecraft.client.particle.DustPlumeParticle extends net.minecraft.client.particle.BaseAshSmokeParticle {
+  private static final int COLOR_RGB24;
+  protected net.minecraft.client.particle.DustPlumeParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, float, net.minecraft.client.particle.SpriteSet);
+  public void tick();
+}
+Compiled from "ElderGuardianParticle.java"
+public class net.minecraft.client.particle.ElderGuardianParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  public net.minecraft.client.particle.ElderGuardianParticle$Provider();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "ElderGuardianParticle.java"
+public class net.minecraft.client.particle.ElderGuardianParticle extends net.minecraft.client.particle.Particle {
+  protected final net.minecraft.client.model.monster.guardian.GuardianParticleModel model;
+  protected final net.minecraft.client.renderer.rendertype.RenderType renderType;
+  private net.minecraft.client.particle.ElderGuardianParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double);
+  public net.minecraft.client.particle.ParticleRenderType getGroup();
+}
+Compiled from "ElderGuardianParticleGroup.java"
+final class net.minecraft.client.particle.ElderGuardianParticleGroup$ElderGuardianParticleRenderState extends java.lang.Record {
+  private final net.minecraft.client.model.Model<net.minecraft.util.Unit> model;
+  private final com.mojang.blaze3d.vertex.PoseStack poseStack;
+  private final net.minecraft.client.renderer.rendertype.RenderType renderType;
+  private final int color;
+  private net.minecraft.client.particle.ElderGuardianParticleGroup$ElderGuardianParticleRenderState(net.minecraft.client.model.Model<net.minecraft.util.Unit>, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.rendertype.RenderType, int);
+  public static net.minecraft.client.particle.ElderGuardianParticleGroup$ElderGuardianParticleRenderState fromParticle(net.minecraft.client.particle.ElderGuardianParticle, net.minecraft.client.Camera, float);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.model.Model<net.minecraft.util.Unit> model();
+  public com.mojang.blaze3d.vertex.PoseStack poseStack();
+  public net.minecraft.client.renderer.rendertype.RenderType renderType();
+  public int color();
+}
+Compiled from "ElderGuardianParticleGroup.java"
+final class net.minecraft.client.particle.ElderGuardianParticleGroup$State extends java.lang.Record implements net.minecraft.client.renderer.state.level.ParticleGroupRenderState {
+  private final java.util.List<net.minecraft.client.particle.ElderGuardianParticleGroup$ElderGuardianParticleRenderState> states;
+  private net.minecraft.client.particle.ElderGuardianParticleGroup$State(java.util.List<net.minecraft.client.particle.ElderGuardianParticleGroup$ElderGuardianParticleRenderState>);
+  public void submit(net.minecraft.client.renderer.SubmitNodeCollector, net.minecraft.client.renderer.state.level.CameraRenderState);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<net.minecraft.client.particle.ElderGuardianParticleGroup$ElderGuardianParticleRenderState> states();
+}
+Compiled from "ElderGuardianParticleGroup.java"
+public class net.minecraft.client.particle.ElderGuardianParticleGroup extends net.minecraft.client.particle.ParticleGroup<net.minecraft.client.particle.ElderGuardianParticle> {
+  public net.minecraft.client.particle.ElderGuardianParticleGroup(net.minecraft.client.particle.ParticleEngine);
+  public net.minecraft.client.renderer.state.level.ParticleGroupRenderState extractRenderState(net.minecraft.client.renderer.culling.Frustum, net.minecraft.client.Camera, float);
+  private static net.minecraft.client.particle.ElderGuardianParticleGroup$ElderGuardianParticleRenderState lambda$extractRenderState$0(net.minecraft.client.Camera, float, net.minecraft.client.particle.ElderGuardianParticle);
+}
+Compiled from "EndRodParticle.java"
+public class net.minecraft.client.particle.EndRodParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.EndRodParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "EndRodParticle.java"
+public class net.minecraft.client.particle.EndRodParticle extends net.minecraft.client.particle.SimpleAnimatedParticle {
+  private net.minecraft.client.particle.EndRodParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public void move(double, double, double);
+}
+Compiled from "ExplodeParticle.java"
+public class net.minecraft.client.particle.ExplodeParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.ExplodeParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "ExplodeParticle.java"
+public class net.minecraft.client.particle.ExplodeParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  protected net.minecraft.client.particle.ExplodeParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void tick();
+}
+Compiled from "FallingDustParticle.java"
+public class net.minecraft.client.particle.FallingDustParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.BlockParticleOption> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.FallingDustParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.BlockParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "FallingDustParticle.java"
+public class net.minecraft.client.particle.FallingDustParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final float rotSpeed;
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  private net.minecraft.client.particle.FallingDustParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, float, float, float, net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public float getQuadSize(float);
+  public void tick();
+}
+Compiled from "FallingLeavesParticle.java"
+public class net.minecraft.client.particle.FallingLeavesParticle$CherryProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.FallingLeavesParticle$CherryProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "FallingLeavesParticle.java"
+public class net.minecraft.client.particle.FallingLeavesParticle$PaleOakProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.FallingLeavesParticle$PaleOakProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "FallingLeavesParticle.java"
+public class net.minecraft.client.particle.FallingLeavesParticle$TintedLeavesProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.ColorParticleOption> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.FallingLeavesParticle$TintedLeavesProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ColorParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "FallingLeavesParticle.java"
+public class net.minecraft.client.particle.FallingLeavesParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private static final float ACCELERATION_SCALE;
+  private static final int INITIAL_LIFETIME;
+  private static final int CURVE_ENDPOINT_TIME;
+  private float rotSpeed;
+  private final float spinAcceleration;
+  private final float windBig;
+  private final boolean swirl;
+  private final boolean flowAway;
+  private final double xaFlowScale;
+  private final double zaFlowScale;
+  private final double swirlPeriod;
+  protected net.minecraft.client.particle.FallingLeavesParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite, float, float, boolean, boolean, float, float);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void tick();
+}
+Compiled from "FireflyParticle.java"
+public class net.minecraft.client.particle.FireflyParticle$FireflyProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.FireflyParticle$FireflyProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "FireflyParticle.java"
+public class net.minecraft.client.particle.FireflyParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private static final float PARTICLE_FADE_OUT_LIGHT_TIME;
+  private static final float PARTICLE_FADE_IN_LIGHT_TIME;
+  private static final float PARTICLE_FADE_OUT_ALPHA_TIME;
+  private static final float PARTICLE_FADE_IN_ALPHA_TIME;
+  private static final int PARTICLE_MIN_LIFETIME;
+  private static final int PARTICLE_MAX_LIFETIME;
+  private net.minecraft.client.particle.FireflyParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public int getLightCoords(float);
+  public void tick();
+  private float getLifetimeProgress(float);
+  private static float getFadeAmount(float, float, float);
+}
+Compiled from "FireworkParticles.java"
+class net.minecraft.client.particle.FireworkParticles$1 {
+  static final int[] $SwitchMap$net$minecraft$world$item$component$FireworkExplosion$Shape;
+  static {};
+}
+Compiled from "FireworkParticles.java"
+public class net.minecraft.client.particle.FireworkParticles$FlashProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.ColorParticleOption> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.FireworkParticles$FlashProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ColorParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "FireworkParticles.java"
+public class net.minecraft.client.particle.FireworkParticles$OverlayParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private net.minecraft.client.particle.FireworkParticles$OverlayParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void extract(net.minecraft.client.renderer.state.level.QuadParticleRenderState, net.minecraft.client.Camera, float);
+  public float getQuadSize(float);
+}
+Compiled from "FireworkParticles.java"
+class net.minecraft.client.particle.FireworkParticles$SparkParticle extends net.minecraft.client.particle.SimpleAnimatedParticle {
+  private boolean trail;
+  private boolean twinkle;
+  private final net.minecraft.client.particle.ParticleEngine engine;
+  private float fadeR;
+  private float fadeG;
+  private float fadeB;
+  private boolean hasFade;
+  private net.minecraft.client.particle.FireworkParticles$SparkParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.ParticleEngine, net.minecraft.client.particle.SpriteSet);
+  public void setTrail(boolean);
+  public void setTwinkle(boolean);
+  public void extract(net.minecraft.client.renderer.state.level.QuadParticleRenderState, net.minecraft.client.Camera, float);
+  public void tick();
+}
+Compiled from "FireworkParticles.java"
+public class net.minecraft.client.particle.FireworkParticles$SparkProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.FireworkParticles$SparkProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "FireworkParticles.java"
+public class net.minecraft.client.particle.FireworkParticles$Starter extends net.minecraft.client.particle.NoRenderParticle {
+  private static final double[][] CREEPER_PARTICLE_COORDS;
+  private static final double[][] STAR_PARTICLE_COORDS;
+  private int life;
+  private final net.minecraft.client.particle.ParticleEngine engine;
+  private final java.util.List<net.minecraft.world.item.component.FireworkExplosion> explosions;
+  private boolean twinkleDelay;
+  public net.minecraft.client.particle.FireworkParticles$Starter(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.ParticleEngine, java.util.List<net.minecraft.world.item.component.FireworkExplosion>);
+  public void tick();
+  private boolean isFarAwayFromCamera();
+  private void createParticle(double, double, double, double, double, double, it.unimi.dsi.fastutil.ints.IntList, it.unimi.dsi.fastutil.ints.IntList, boolean, boolean);
+  private void createParticleBall(double, int, it.unimi.dsi.fastutil.ints.IntList, it.unimi.dsi.fastutil.ints.IntList, boolean, boolean);
+  private void createParticleShape(double, double[][], it.unimi.dsi.fastutil.ints.IntList, it.unimi.dsi.fastutil.ints.IntList, boolean, boolean, boolean);
+  private void createParticleBurst(it.unimi.dsi.fastutil.ints.IntList, it.unimi.dsi.fastutil.ints.IntList, boolean, boolean);
+  static {};
+}
+Compiled from "FireworkParticles.java"
+public class net.minecraft.client.particle.FireworkParticles {
+  public net.minecraft.client.particle.FireworkParticles();
+}
+Compiled from "FlameParticle.java"
+public class net.minecraft.client.particle.FlameParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.FlameParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "FlameParticle.java"
+public class net.minecraft.client.particle.FlameParticle$SmallFlameProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.FlameParticle$SmallFlameProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "FlameParticle.java"
+public class net.minecraft.client.particle.FlameParticle extends net.minecraft.client.particle.RisingParticle {
+  private net.minecraft.client.particle.FlameParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void move(double, double, double);
+  public float getQuadSize(float);
+  public int getLightCoords(float);
+}
+Compiled from "FlyStraightTowardsParticle.java"
+public class net.minecraft.client.particle.FlyStraightTowardsParticle$OminousSpawnProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.FlyStraightTowardsParticle$OminousSpawnProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "FlyStraightTowardsParticle.java"
+public class net.minecraft.client.particle.FlyStraightTowardsParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final double xStart;
+  private final double yStart;
+  private final double zStart;
+  private final int startColor;
+  private final int endColor;
+  private net.minecraft.client.particle.FlyStraightTowardsParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, int, int, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void move(double, double, double);
+  public int getLightCoords(float);
+  public void tick();
+}
+Compiled from "FlyTowardsPositionParticle.java"
+public class net.minecraft.client.particle.FlyTowardsPositionParticle$EnchantProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.FlyTowardsPositionParticle$EnchantProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "FlyTowardsPositionParticle.java"
+public class net.minecraft.client.particle.FlyTowardsPositionParticle$NautilusProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.FlyTowardsPositionParticle$NautilusProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "FlyTowardsPositionParticle.java"
+public class net.minecraft.client.particle.FlyTowardsPositionParticle$VaultConnectionProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.FlyTowardsPositionParticle$VaultConnectionProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "FlyTowardsPositionParticle.java"
+public class net.minecraft.client.particle.FlyTowardsPositionParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final double xStart;
+  private final double yStart;
+  private final double zStart;
+  private final boolean isGlowing;
+  private final net.minecraft.client.particle.Particle$LifetimeAlpha lifetimeAlpha;
+  private net.minecraft.client.particle.FlyTowardsPositionParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  private net.minecraft.client.particle.FlyTowardsPositionParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, boolean, net.minecraft.client.particle.Particle$LifetimeAlpha, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void move(double, double, double);
+  public int getLightCoords(float);
+  public void tick();
+  public void extract(net.minecraft.client.renderer.state.level.QuadParticleRenderState, net.minecraft.client.Camera, float);
+}
+Compiled from "GeyserBaseParticle.java"
+public class net.minecraft.client.particle.GeyserBaseParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.GeyserBaseParticleOptions> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.GeyserBaseParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.GeyserBaseParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "GeyserBaseParticle.java"
+public class net.minecraft.client.particle.GeyserBaseParticle extends net.minecraft.client.particle.BaseAshSmokeParticle {
+  private static final float BURST_IMPULSE_FACTOR;
+  private static final float PARTICLE_SIZE_BASE;
+  private static final float PARTICLE_SIZE_FACTOR;
+  private static final float SPAWN_OFFSET_Y;
+  private static final float RANDOM_SPAWN_SPREAD;
+  private static final int MAX_LIFETIME;
+  private static final float FRICTION;
+  private net.minecraft.client.particle.GeyserBaseParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, int, float, net.minecraft.client.particle.SpriteSet);
+}
+Compiled from "GeyserEruptionParticle.java"
+public class net.minecraft.client.particle.GeyserEruptionParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.GeyserParticleOptions> {
+  public net.minecraft.client.particle.GeyserEruptionParticle$Provider();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.GeyserParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "GeyserEruptionParticle.java"
+public class net.minecraft.client.particle.GeyserEruptionParticle extends net.minecraft.client.particle.NoRenderParticle {
+  public static final int BASE_PARTICLE_FREQUENCY;
+  public static final int BASE_PARTICLE_AMOUNT;
+  public static final int POOF_PARTICLE_FREQUENCY;
+  public static final int POOF_PARTICLE_AMOUNT;
+  private static final float BASE_BURST_IMPULSE;
+  private static final float POOF_BURST_IMPULSE;
+  private final int waterBlocks;
+  private final double xa;
+  private final double ya;
+  private final double za;
+  private final net.minecraft.core.particles.GeyserParticleOptions plumeParticle;
+  private final net.minecraft.core.particles.GeyserBaseParticleOptions baseParticle;
+  private final net.minecraft.core.particles.GeyserBaseParticleOptions poofParticle;
+  protected net.minecraft.client.particle.GeyserEruptionParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.core.particles.GeyserParticleOptions);
+  public void tick();
+}
+Compiled from "GeyserPlumeParticle.java"
+public class net.minecraft.client.particle.GeyserPlumeParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.GeyserParticleOptions> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.GeyserPlumeParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.GeyserParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "GeyserPlumeParticle.java"
+public class net.minecraft.client.particle.GeyserPlumeParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private static final float NO_FRICTION;
+  private static final float MAX_FRICTION;
+  private static final float INITIAL_PROPULSION_FACTOR;
+  private static final float GRAVITY_EXPONENT;
+  private static final float GRADUAL_GRAVITY_FACTOR;
+  private static final float INITIAL_SPRAY_SPREAD;
+  private static final float LINEAR_SPRAY_SPREAD;
+  private static final int REMAINING_FRAMES_AFTER_REACHING_MAX_HEIGHT;
+  private static final float MIN_SCALE_FACTOR;
+  private static final float MAX_SCALE_FACTOR;
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  private final double startY;
+  private final double maxY;
+  private final float initialPropulsion;
+  private final float horizontalSprayX;
+  private final float horizontalSprayZ;
+  private final float minSize;
+  private final float maxSize;
+  private boolean done;
+  private net.minecraft.client.particle.GeyserPlumeParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.core.particles.GeyserParticleOptions, net.minecraft.client.particle.SpriteSet);
+  public void tick();
+  protected net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+}
+Compiled from "GlowParticle.java"
+public class net.minecraft.client.particle.GlowParticle$ElectricSparkProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private static final double SPEED_FACTOR;
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.GlowParticle$ElectricSparkProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "GlowParticle.java"
+public class net.minecraft.client.particle.GlowParticle$GlowSquidProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.GlowParticle$GlowSquidProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "GlowParticle.java"
+public class net.minecraft.client.particle.GlowParticle$ScrapeProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private static final double SPEED_FACTOR;
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.GlowParticle$ScrapeProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "GlowParticle.java"
+public class net.minecraft.client.particle.GlowParticle$WaxOffProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private static final double SPEED_FACTOR;
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.GlowParticle$WaxOffProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "GlowParticle.java"
+public class net.minecraft.client.particle.GlowParticle$WaxOnProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private static final double SPEED_FACTOR;
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.GlowParticle$WaxOnProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "GlowParticle.java"
+public class net.minecraft.client.particle.GlowParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  private net.minecraft.client.particle.GlowParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public int getLightCoords(float);
+  public void tick();
+}
+Compiled from "GustParticle.java"
+public class net.minecraft.client.particle.GustParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.GustParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "GustParticle.java"
+public class net.minecraft.client.particle.GustParticle$SmallProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.GustParticle$SmallProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "GustParticle.java"
+public class net.minecraft.client.particle.GustParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  protected net.minecraft.client.particle.GustParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public int getLightCoords(float);
+  public void tick();
+}
+Compiled from "GustSeedParticle.java"
+public class net.minecraft.client.particle.GustSeedParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final double scale;
+  private final int lifetime;
+  private final int tickDelayInBetween;
+  public net.minecraft.client.particle.GustSeedParticle$Provider(double, int, int);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "GustSeedParticle.java"
+public class net.minecraft.client.particle.GustSeedParticle extends net.minecraft.client.particle.NoRenderParticle {
+  private final double scale;
+  private final int tickDelayInBetween;
+  private net.minecraft.client.particle.GustSeedParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, int, int);
+  public void tick();
+}
+Compiled from "HeartParticle.java"
+public class net.minecraft.client.particle.HeartParticle$AngryVillagerProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.HeartParticle$AngryVillagerProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "HeartParticle.java"
+public class net.minecraft.client.particle.HeartParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.HeartParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "HeartParticle.java"
+public class net.minecraft.client.particle.HeartParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private net.minecraft.client.particle.HeartParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public float getQuadSize(float);
+}
+Compiled from "HugeExplosionParticle.java"
+public class net.minecraft.client.particle.HugeExplosionParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.HugeExplosionParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "HugeExplosionParticle.java"
+public class net.minecraft.client.particle.HugeExplosionParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  protected net.minecraft.client.particle.HugeExplosionParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public int getLightCoords(float);
+  public void tick();
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+}
+Compiled from "HugeExplosionSeedParticle.java"
+public class net.minecraft.client.particle.HugeExplosionSeedParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  public net.minecraft.client.particle.HugeExplosionSeedParticle$Provider();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "HugeExplosionSeedParticle.java"
+public class net.minecraft.client.particle.HugeExplosionSeedParticle extends net.minecraft.client.particle.NoRenderParticle {
+  private net.minecraft.client.particle.HugeExplosionSeedParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double);
+  public void tick();
+}
+Compiled from "ItemPickupParticle.java"
+public class net.minecraft.client.particle.ItemPickupParticle extends net.minecraft.client.particle.Particle {
+  protected static final int LIFE_TIME;
+  private final net.minecraft.world.entity.Entity target;
+  protected int life;
+  protected final net.minecraft.client.renderer.entity.state.EntityRenderState itemRenderState;
+  protected double targetX;
+  protected double targetY;
+  protected double targetZ;
+  protected double targetXOld;
+  protected double targetYOld;
+  protected double targetZOld;
+  public net.minecraft.client.particle.ItemPickupParticle(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.client.renderer.entity.state.EntityRenderState, net.minecraft.world.entity.Entity, net.minecraft.world.phys.Vec3);
+  public void tick();
+  public net.minecraft.client.particle.ParticleRenderType getGroup();
+  private void updatePosition();
+  private void saveOldPosition();
+}
+Compiled from "ItemPickupParticleGroup.java"
+final class net.minecraft.client.particle.ItemPickupParticleGroup$ParticleInstance extends java.lang.Record {
+  private final net.minecraft.client.renderer.entity.state.EntityRenderState itemRenderState;
+  private final double xOffset;
+  private final double yOffset;
+  private final double zOffset;
+  private net.minecraft.client.particle.ItemPickupParticleGroup$ParticleInstance(net.minecraft.client.renderer.entity.state.EntityRenderState, double, double, double);
+  public static net.minecraft.client.particle.ItemPickupParticleGroup$ParticleInstance fromParticle(net.minecraft.client.particle.ItemPickupParticle, net.minecraft.client.Camera, float);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.renderer.entity.state.EntityRenderState itemRenderState();
+  public double xOffset();
+  public double yOffset();
+  public double zOffset();
+}
+Compiled from "ItemPickupParticleGroup.java"
+final class net.minecraft.client.particle.ItemPickupParticleGroup$State extends java.lang.Record implements net.minecraft.client.renderer.state.level.ParticleGroupRenderState {
+  private final java.util.List<net.minecraft.client.particle.ItemPickupParticleGroup$ParticleInstance> instances;
+  private net.minecraft.client.particle.ItemPickupParticleGroup$State(java.util.List<net.minecraft.client.particle.ItemPickupParticleGroup$ParticleInstance>);
+  public void submit(net.minecraft.client.renderer.SubmitNodeCollector, net.minecraft.client.renderer.state.level.CameraRenderState);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<net.minecraft.client.particle.ItemPickupParticleGroup$ParticleInstance> instances();
+}
+Compiled from "ItemPickupParticleGroup.java"
+public class net.minecraft.client.particle.ItemPickupParticleGroup extends net.minecraft.client.particle.ParticleGroup<net.minecraft.client.particle.ItemPickupParticle> {
+  public net.minecraft.client.particle.ItemPickupParticleGroup(net.minecraft.client.particle.ParticleEngine);
+  public net.minecraft.client.renderer.state.level.ParticleGroupRenderState extractRenderState(net.minecraft.client.renderer.culling.Frustum, net.minecraft.client.Camera, float);
+  private static net.minecraft.client.particle.ItemPickupParticleGroup$ParticleInstance lambda$extractRenderState$0(net.minecraft.client.Camera, float, net.minecraft.client.particle.ItemPickupParticle);
+}
+Compiled from "LargeSmokeParticle.java"
+public class net.minecraft.client.particle.LargeSmokeParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.LargeSmokeParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "LargeSmokeParticle.java"
+public class net.minecraft.client.particle.LargeSmokeParticle extends net.minecraft.client.particle.SmokeParticle {
+  protected net.minecraft.client.particle.LargeSmokeParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+}
+Compiled from "LavaParticle.java"
+public class net.minecraft.client.particle.LavaParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.LavaParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "LavaParticle.java"
+public class net.minecraft.client.particle.LavaParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private net.minecraft.client.particle.LavaParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public int getLightCoords(float);
+  public float getQuadSize(float);
+  public void tick();
+}
+Compiled from "NoRenderParticle.java"
+public class net.minecraft.client.particle.NoRenderParticle extends net.minecraft.client.particle.Particle {
+  protected net.minecraft.client.particle.NoRenderParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double);
+  protected net.minecraft.client.particle.NoRenderParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double);
+  public net.minecraft.client.particle.ParticleRenderType getGroup();
+}
+Compiled from "NoRenderParticleGroup.java"
+public class net.minecraft.client.particle.NoRenderParticleGroup extends net.minecraft.client.particle.ParticleGroup<net.minecraft.client.particle.NoRenderParticle> {
+  private static final net.minecraft.client.renderer.state.level.ParticleGroupRenderState EMPTY_RENDER_STATE;
+  public net.minecraft.client.particle.NoRenderParticleGroup(net.minecraft.client.particle.ParticleEngine);
+  public net.minecraft.client.renderer.state.level.ParticleGroupRenderState extractRenderState(net.minecraft.client.renderer.culling.Frustum, net.minecraft.client.Camera, float);
+  private static void lambda$static$0(net.minecraft.client.renderer.SubmitNodeCollector, net.minecraft.client.renderer.state.level.CameraRenderState);
+  static {};
+}
+Compiled from "NoteParticle.java"
+public class net.minecraft.client.particle.NoteParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.NoteParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "NoteParticle.java"
+public class net.minecraft.client.particle.NoteParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private net.minecraft.client.particle.NoteParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public float getQuadSize(float);
+}
+Compiled from "NoxiousGasCloudParticle.java"
+public class net.minecraft.client.particle.NoxiousGasCloudParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  public net.minecraft.client.particle.NoxiousGasCloudParticle$Provider();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "NoxiousGasCloudParticle.java"
+public class net.minecraft.client.particle.NoxiousGasCloudParticle extends net.minecraft.client.particle.NoRenderParticle {
+  private static final int PARTICLE_TICKS;
+  protected net.minecraft.client.particle.NoxiousGasCloudParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double);
+  public void tick();
+  private static net.minecraft.world.phys.Vec3 pickRandomParticleSpawnPoint(net.minecraft.world.level.Level, net.minecraft.core.BlockPos);
+  private static void spawnNoxiousGasParticle(net.minecraft.world.level.Level, net.minecraft.world.phys.Vec3);
+}
+Compiled from "NoxiousGasParticle.java"
+public class net.minecraft.client.particle.NoxiousGasParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.NoxiousGasParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "NoxiousGasParticle.java"
+public class net.minecraft.client.particle.NoxiousGasParticle extends net.minecraft.client.particle.BaseAshSmokeParticle {
+  private final float fadeOutStartingPoint;
+  protected net.minecraft.client.particle.NoxiousGasParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, float, net.minecraft.client.particle.SpriteSet);
+  public void tick();
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+}
+Compiled from "Particle.java"
+public final class net.minecraft.client.particle.Particle$LifetimeAlpha extends java.lang.Record {
+  private final float startAlpha;
+  private final float endAlpha;
+  private final float startAtNormalizedAge;
+  private final float endAtNormalizedAge;
+  public static final net.minecraft.client.particle.Particle$LifetimeAlpha ALWAYS_OPAQUE;
+  public net.minecraft.client.particle.Particle$LifetimeAlpha(float, float, float, float);
+  public boolean isOpaque();
+  public float currentAlphaForAge(int, int, float);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float startAlpha();
+  public float endAlpha();
+  public float startAtNormalizedAge();
+  public float endAtNormalizedAge();
+  static {};
+}
+Compiled from "Particle.java"
+public abstract class net.minecraft.client.particle.Particle {
+  private static final net.minecraft.world.phys.AABB INITIAL_AABB;
+  private static final double MAXIMUM_COLLISION_VELOCITY_SQUARED;
+  protected final net.minecraft.client.multiplayer.ClientLevel level;
+  protected double xo;
+  protected double yo;
+  protected double zo;
+  protected double x;
+  protected double y;
+  protected double z;
+  protected double xd;
+  protected double yd;
+  protected double zd;
+  private net.minecraft.world.phys.AABB bb;
+  protected boolean onGround;
+  protected boolean hasPhysics;
+  private boolean stoppedByCollision;
+  protected boolean removed;
+  protected float bbWidth;
+  protected float bbHeight;
+  protected final net.minecraft.util.RandomSource random;
+  protected int age;
+  protected int lifetime;
+  protected float gravity;
+  protected float friction;
+  protected boolean speedUpWhenYMotionIsBlocked;
+  protected net.minecraft.client.particle.Particle(net.minecraft.client.multiplayer.ClientLevel, double, double, double);
+  public net.minecraft.client.particle.Particle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double);
+  public net.minecraft.client.particle.Particle setPower(float);
+  public void setParticleSpeed(double, double, double);
+  public net.minecraft.client.particle.Particle scale(float);
+  public void setLifetime(int);
+  public int getLifetime();
+  public void tick();
+  public abstract net.minecraft.client.particle.ParticleRenderType getGroup();
+  public java.lang.String toString();
+  public void remove();
+  protected void setSize(float, float);
+  public void setPos(double, double, double);
+  public void move(double, double, double);
+  protected void setLocationFromBoundingbox();
+  protected int getLightCoords(float);
+  public boolean isAlive();
+  public net.minecraft.world.phys.AABB getBoundingBox();
+  public void setBoundingBox(net.minecraft.world.phys.AABB);
+  public java.util.Optional<net.minecraft.core.particles.ParticleLimit> getParticleLimit();
+  static {};
+}
+Compiled from "ParticleDescription.java"
+public class net.minecraft.client.particle.ParticleDescription {
+  private final java.util.List<net.minecraft.resources.Identifier> textures;
+  private net.minecraft.client.particle.ParticleDescription(java.util.List<net.minecraft.resources.Identifier>);
+  public java.util.List<net.minecraft.resources.Identifier> getTextures();
+  public static net.minecraft.client.particle.ParticleDescription fromJson(com.google.gson.JsonObject);
+  private static java.lang.String lambda$fromJson$0(com.google.gson.JsonElement);
+}
+Compiled from "ParticleEngine.java"
+public class net.minecraft.client.particle.ParticleEngine {
+  private static final java.util.List<net.minecraft.client.particle.ParticleRenderType> RENDER_ORDER;
+  protected net.minecraft.client.multiplayer.ClientLevel level;
+  private final java.util.Map<net.minecraft.client.particle.ParticleRenderType, net.minecraft.client.particle.ParticleGroup<?>> particles;
+  private final java.util.Queue<net.minecraft.client.particle.TrackingEmitter> trackingEmitters;
+  private final java.util.Queue<net.minecraft.client.particle.Particle> particlesToAdd;
+  private final it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap<net.minecraft.core.particles.ParticleLimit> trackedParticleCounts;
+  private final net.minecraft.client.particle.ParticleResources resourceManager;
+  private final net.minecraft.util.RandomSource random;
+  public net.minecraft.client.particle.ParticleEngine(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.client.particle.ParticleResources);
+  public void createTrackingEmitter(net.minecraft.world.entity.Entity, net.minecraft.core.particles.ParticleOptions);
+  public void createTrackingEmitter(net.minecraft.world.entity.Entity, net.minecraft.core.particles.ParticleOptions, int);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, double, double, double, double, double, double);
+  private <T extends net.minecraft.core.particles.ParticleOptions> net.minecraft.client.particle.Particle makeParticle(T, double, double, double, double, double, double);
+  public void add(net.minecraft.client.particle.Particle);
+  public void tick();
+  private net.minecraft.client.particle.ParticleGroup<?> createParticleGroup(net.minecraft.client.particle.ParticleRenderType);
+  protected void updateCount(net.minecraft.core.particles.ParticleLimit, int);
+  public void extract(net.minecraft.client.renderer.state.level.ParticlesRenderState, net.minecraft.client.renderer.culling.Frustum, net.minecraft.client.Camera, float);
+  public void setLevel(net.minecraft.client.multiplayer.ClientLevel);
+  public java.lang.String countParticles();
+  private boolean hasSpaceInParticleLimit(net.minecraft.core.particles.ParticleLimit);
+  public void clearParticles();
+  public net.minecraft.util.RandomSource getRandom();
+  private void lambda$tick$1(net.minecraft.core.particles.ParticleLimit);
+  private static void lambda$tick$0(net.minecraft.client.particle.ParticleRenderType, net.minecraft.client.particle.ParticleGroup);
+  static {};
+}
+Compiled from "ParticleGroup.java"
+public abstract class net.minecraft.client.particle.ParticleGroup<P extends net.minecraft.client.particle.Particle> {
+  private static final int MAX_PARTICLES;
+  private static final int RESERVOIR_SIZE;
+  private static final int RESERVOIR_START;
+  protected final net.minecraft.client.particle.ParticleEngine engine;
+  protected final java.util.Queue<P> particles;
+  public net.minecraft.client.particle.ParticleGroup(net.minecraft.client.particle.ParticleEngine);
+  public boolean isEmpty();
+  public void tickParticles();
+  private void tickParticle(net.minecraft.client.particle.Particle);
+  public boolean add(net.minecraft.client.particle.Particle);
+  public int size();
+  public abstract net.minecraft.client.renderer.state.level.ParticleGroupRenderState extractRenderState(net.minecraft.client.renderer.culling.Frustum, net.minecraft.client.Camera, float);
+  private void lambda$tickParticles$0(net.minecraft.core.particles.ParticleLimit);
+}
+Compiled from "ParticleProvider.java"
+public interface net.minecraft.client.particle.ParticleProvider$Sprite<T extends net.minecraft.core.particles.ParticleOptions> {
+  public abstract net.minecraft.client.particle.SingleQuadParticle createParticle(T, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "ParticleProvider.java"
+public interface net.minecraft.client.particle.ParticleProvider<T extends net.minecraft.core.particles.ParticleOptions> {
+  public abstract net.minecraft.client.particle.Particle createParticle(T, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "ParticleRenderType.java"
+public final class net.minecraft.client.particle.ParticleRenderType extends java.lang.Record {
+  private final java.lang.String name;
+  private final java.lang.String shorthand;
+  public static final net.minecraft.client.particle.ParticleRenderType SINGLE_QUADS;
+  public static final net.minecraft.client.particle.ParticleRenderType ITEM_PICKUP;
+  public static final net.minecraft.client.particle.ParticleRenderType ELDER_GUARDIANS;
+  public static final net.minecraft.client.particle.ParticleRenderType NO_RENDER;
+  public net.minecraft.client.particle.ParticleRenderType(java.lang.String, java.lang.String);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String name();
+  public java.lang.String shorthand();
+  static {};
+}
+Compiled from "ParticleResources.java"
+final class net.minecraft.client.particle.ParticleResources$1ParticleDefinition extends java.lang.Record {
+  private final net.minecraft.resources.Identifier id;
+  private final java.util.Optional<java.util.List<net.minecraft.resources.Identifier>> sprites;
+  net.minecraft.client.particle.ParticleResources$1ParticleDefinition(net.minecraft.resources.Identifier, java.util.Optional<java.util.List<net.minecraft.resources.Identifier>>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier id();
+  public java.util.Optional<java.util.List<net.minecraft.resources.Identifier>> sprites();
+}
+Compiled from "ParticleResources.java"
+class net.minecraft.client.particle.ParticleResources$MutableSpriteSet implements net.minecraft.client.particle.SpriteSet {
+  private java.util.List<net.minecraft.client.renderer.texture.TextureAtlasSprite> sprites;
+  private net.minecraft.client.particle.ParticleResources$MutableSpriteSet();
+  public net.minecraft.client.renderer.texture.TextureAtlasSprite get(int, int);
+  public net.minecraft.client.renderer.texture.TextureAtlasSprite get(net.minecraft.util.RandomSource);
+  public net.minecraft.client.renderer.texture.TextureAtlasSprite first();
+  public void rebind(java.util.List<net.minecraft.client.renderer.texture.TextureAtlasSprite>);
+}
+Compiled from "ParticleResources.java"
+interface net.minecraft.client.particle.ParticleResources$SpriteParticleRegistration<T extends net.minecraft.core.particles.ParticleOptions> {
+  public abstract net.minecraft.client.particle.ParticleProvider<T> create(net.minecraft.client.particle.SpriteSet);
+}
+Compiled from "ParticleResources.java"
+public class net.minecraft.client.particle.ParticleResources implements net.minecraft.server.packs.resources.PreparableReloadListener {
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.resources.FileToIdConverter PARTICLE_LISTER;
+  private final java.util.Map<net.minecraft.resources.Identifier, net.minecraft.client.particle.ParticleResources$MutableSpriteSet> spriteSets;
+  private final it.unimi.dsi.fastutil.ints.Int2ObjectMap<net.minecraft.client.particle.ParticleProvider<?>> providers;
+  private java.lang.Runnable onReload;
+  public net.minecraft.client.particle.ParticleResources();
+  public void onReload(java.lang.Runnable);
+  private void registerProviders();
+  private <T extends net.minecraft.core.particles.ParticleOptions> void register(net.minecraft.core.particles.ParticleType<T>, net.minecraft.client.particle.ParticleProvider<T>);
+  private <T extends net.minecraft.core.particles.ParticleOptions> void register(net.minecraft.core.particles.ParticleType<T>, net.minecraft.client.particle.ParticleResources$SpriteParticleRegistration<T>);
+  public java.util.concurrent.CompletableFuture<java.lang.Void> reload(net.minecraft.server.packs.resources.PreparableReloadListener$SharedState, java.util.concurrent.Executor, net.minecraft.server.packs.resources.PreparableReloadListener$PreparationBarrier, java.util.concurrent.Executor);
+  private java.util.Optional<java.util.List<net.minecraft.resources.Identifier>> loadParticleDescription(net.minecraft.resources.Identifier, net.minecraft.server.packs.resources.Resource);
+  public it.unimi.dsi.fastutil.ints.Int2ObjectMap<net.minecraft.client.particle.ParticleProvider<?>> getProviders();
+  private void lambda$reload$4(java.util.concurrent.CompletableFuture, java.util.concurrent.CompletableFuture, java.lang.Void);
+  private void lambda$reload$5(net.minecraft.client.renderer.texture.SpriteLoader$Preparations, java.util.Set, net.minecraft.client.renderer.texture.TextureAtlasSprite, net.minecraft.client.particle.ParticleResources$1ParticleDefinition);
+  private java.util.concurrent.CompletionStage lambda$reload$1(java.util.concurrent.Executor, java.util.Map);
+  private void lambda$reload$2(java.util.List, java.util.concurrent.Executor, net.minecraft.resources.Identifier, net.minecraft.server.packs.resources.Resource);
+  private net.minecraft.client.particle.ParticleResources$1ParticleDefinition lambda$reload$3(net.minecraft.resources.Identifier, net.minecraft.server.packs.resources.Resource);
+  private static java.util.Map lambda$reload$0(net.minecraft.server.packs.resources.ResourceManager);
+  static {};
+}
+Compiled from "PlayerCloudParticle.java"
+public class net.minecraft.client.particle.PlayerCloudParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.PlayerCloudParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "PlayerCloudParticle.java"
+public class net.minecraft.client.particle.PlayerCloudParticle$SneezeProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.PlayerCloudParticle$SneezeProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "PlayerCloudParticle.java"
+public class net.minecraft.client.particle.PlayerCloudParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  private net.minecraft.client.particle.PlayerCloudParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public float getQuadSize(float);
+  public void tick();
+}
+Compiled from "PortalParticle.java"
+public class net.minecraft.client.particle.PortalParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.PortalParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "PortalParticle.java"
+public class net.minecraft.client.particle.PortalParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final double xStart;
+  private final double yStart;
+  private final double zStart;
+  protected net.minecraft.client.particle.PortalParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void move(double, double, double);
+  public float getQuadSize(float);
+  public int getLightCoords(float);
+  public void tick();
+}
+Compiled from "QuadParticleGroup.java"
+public class net.minecraft.client.particle.QuadParticleGroup extends net.minecraft.client.particle.ParticleGroup<net.minecraft.client.particle.SingleQuadParticle> {
+  private final net.minecraft.client.particle.ParticleRenderType particleType;
+  private final net.minecraft.client.renderer.state.level.QuadParticleRenderState particleTypeRenderState;
+  public net.minecraft.client.particle.QuadParticleGroup(net.minecraft.client.particle.ParticleEngine, net.minecraft.client.particle.ParticleRenderType);
+  public net.minecraft.client.renderer.state.level.ParticleGroupRenderState extractRenderState(net.minecraft.client.renderer.culling.Frustum, net.minecraft.client.Camera, float);
+}
+Compiled from "ReversePortalParticle.java"
+public class net.minecraft.client.particle.ReversePortalParticle$ReversePortalProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.ReversePortalParticle$ReversePortalProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "ReversePortalParticle.java"
+public class net.minecraft.client.particle.ReversePortalParticle extends net.minecraft.client.particle.PortalParticle {
+  private net.minecraft.client.particle.ReversePortalParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public float getQuadSize(float);
+  public void tick();
+}
+Compiled from "RisingParticle.java"
+public abstract class net.minecraft.client.particle.RisingParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  protected net.minecraft.client.particle.RisingParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+}
+Compiled from "SculkChargeParticle.java"
+public final class net.minecraft.client.particle.SculkChargeParticle$Provider extends java.lang.Record implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SculkChargeParticleOptions> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SculkChargeParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SculkChargeParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.particle.SpriteSet sprite();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SculkChargeParticle.java"
+public class net.minecraft.client.particle.SculkChargeParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  private net.minecraft.client.particle.SculkChargeParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public int getLightCoords(float);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void tick();
+}
+Compiled from "SculkChargePopParticle.java"
+public final class net.minecraft.client.particle.SculkChargePopParticle$Provider extends java.lang.Record implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SculkChargePopParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.particle.SpriteSet sprite();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SculkChargePopParticle.java"
+public class net.minecraft.client.particle.SculkChargePopParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  private net.minecraft.client.particle.SculkChargePopParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public int getLightCoords(float);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void tick();
+}
+Compiled from "ShriekParticle.java"
+public class net.minecraft.client.particle.ShriekParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.ShriekParticleOption> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.ShriekParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ShriekParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "ShriekParticle.java"
+public class net.minecraft.client.particle.ShriekParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private static final float MAGICAL_X_ROT;
+  private int delay;
+  private net.minecraft.client.particle.ShriekParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, int, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public float getQuadSize(float);
+  public void extract(net.minecraft.client.renderer.state.level.QuadParticleRenderState, net.minecraft.client.Camera, float);
+  public int getLightCoords(float);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void tick();
+}
+Compiled from "SimpleAnimatedParticle.java"
+public abstract class net.minecraft.client.particle.SimpleAnimatedParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  protected final net.minecraft.client.particle.SpriteSet sprites;
+  private float fadeR;
+  private float fadeG;
+  private float fadeB;
+  private boolean hasFade;
+  protected net.minecraft.client.particle.SimpleAnimatedParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.client.particle.SpriteSet, float);
+  public void setColor(int);
+  public void setFadeColor(int);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void tick();
+  public int getLightCoords(float);
+}
+Compiled from "SimpleVerticalParticle.java"
+public final class net.minecraft.client.particle.SimpleVerticalParticle$PauseMobGrowthProvider extends java.lang.Record implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SimpleVerticalParticle$PauseMobGrowthProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.particle.SpriteSet sprite();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SimpleVerticalParticle.java"
+public final class net.minecraft.client.particle.SimpleVerticalParticle$ResetMobGrowthProvider extends java.lang.Record implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SimpleVerticalParticle$ResetMobGrowthProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.particle.SpriteSet sprite();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SimpleVerticalParticle.java"
+public class net.minecraft.client.particle.SimpleVerticalParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private net.minecraft.client.particle.SimpleVerticalParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite, boolean);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+}
+Compiled from "SingleQuadParticle.java"
+public interface net.minecraft.client.particle.SingleQuadParticle$FacingCameraMode {
+  public static final net.minecraft.client.particle.SingleQuadParticle$FacingCameraMode LOOKAT_XYZ;
+  public static final net.minecraft.client.particle.SingleQuadParticle$FacingCameraMode LOOKAT_Y;
+  public abstract void setRotation(org.joml.Quaternionf, net.minecraft.client.Camera, float);
+  private static void lambda$static$1(org.joml.Quaternionf, net.minecraft.client.Camera, float);
+  private static void lambda$static$0(org.joml.Quaternionf, net.minecraft.client.Camera, float);
+  static {};
+}
+Compiled from "SingleQuadParticle.java"
+public final class net.minecraft.client.particle.SingleQuadParticle$Layer extends java.lang.Record {
+  private final boolean translucent;
+  private final net.minecraft.resources.Identifier textureAtlasLocation;
+  private final com.mojang.blaze3d.pipeline.RenderPipeline pipeline;
+  public static final net.minecraft.client.particle.SingleQuadParticle$Layer OPAQUE_TERRAIN;
+  public static final net.minecraft.client.particle.SingleQuadParticle$Layer TRANSLUCENT_TERRAIN;
+  public static final net.minecraft.client.particle.SingleQuadParticle$Layer OPAQUE_ITEMS;
+  public static final net.minecraft.client.particle.SingleQuadParticle$Layer TRANSLUCENT_ITEMS;
+  public static final net.minecraft.client.particle.SingleQuadParticle$Layer OPAQUE;
+  public static final net.minecraft.client.particle.SingleQuadParticle$Layer TRANSLUCENT;
+  public net.minecraft.client.particle.SingleQuadParticle$Layer(boolean, net.minecraft.resources.Identifier, com.mojang.blaze3d.pipeline.RenderPipeline);
+  public static net.minecraft.client.particle.SingleQuadParticle$Layer bySprite(net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public boolean translucent();
+  public net.minecraft.resources.Identifier textureAtlasLocation();
+  public com.mojang.blaze3d.pipeline.RenderPipeline pipeline();
+  static {};
+}
+Compiled from "SingleQuadParticle.java"
+public abstract class net.minecraft.client.particle.SingleQuadParticle extends net.minecraft.client.particle.Particle {
+  protected float quadSize;
+  protected float rCol;
+  protected float gCol;
+  protected float bCol;
+  protected float alpha;
+  protected float roll;
+  protected float oRoll;
+  protected net.minecraft.client.renderer.texture.TextureAtlasSprite sprite;
+  protected net.minecraft.client.particle.SingleQuadParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  protected net.minecraft.client.particle.SingleQuadParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$FacingCameraMode getFacingCameraMode();
+  public void extract(net.minecraft.client.renderer.state.level.QuadParticleRenderState, net.minecraft.client.Camera, float);
+  protected void extractRotatedQuad(net.minecraft.client.renderer.state.level.QuadParticleRenderState, net.minecraft.client.Camera, org.joml.Quaternionf, float);
+  protected void extractRotatedQuad(net.minecraft.client.renderer.state.level.QuadParticleRenderState, org.joml.Quaternionf, float, float, float, float);
+  public float getQuadSize(float);
+  public net.minecraft.client.particle.Particle scale(float);
+  public net.minecraft.client.particle.ParticleRenderType getGroup();
+  public void setSpriteFromAge(net.minecraft.client.particle.SpriteSet);
+  protected void setSprite(net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  protected float getU0();
+  protected float getU1();
+  protected float getV0();
+  protected float getV1();
+  protected abstract net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void setColor(float, float, float);
+  protected void setAlpha(float);
+  public java.lang.String toString();
+}
+Compiled from "SmokeParticle.java"
+public class net.minecraft.client.particle.SmokeParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.SmokeParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SmokeParticle.java"
+public class net.minecraft.client.particle.SmokeParticle extends net.minecraft.client.particle.BaseAshSmokeParticle {
+  protected net.minecraft.client.particle.SmokeParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, float, net.minecraft.client.particle.SpriteSet);
+}
+Compiled from "SnowflakeParticle.java"
+public class net.minecraft.client.particle.SnowflakeParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.SnowflakeParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SnowflakeParticle.java"
+public class net.minecraft.client.particle.SnowflakeParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  protected net.minecraft.client.particle.SnowflakeParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void tick();
+}
+Compiled from "SonicBoomParticle.java"
+public class net.minecraft.client.particle.SonicBoomParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.SonicBoomParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SonicBoomParticle.java"
+public class net.minecraft.client.particle.SonicBoomParticle extends net.minecraft.client.particle.HugeExplosionParticle {
+  protected net.minecraft.client.particle.SonicBoomParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+}
+Compiled from "SoulParticle.java"
+public class net.minecraft.client.particle.SoulParticle$EmissiveProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SoulParticle$EmissiveProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SoulParticle.java"
+public class net.minecraft.client.particle.SoulParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SoulParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SoulParticle.java"
+public class net.minecraft.client.particle.SoulParticle extends net.minecraft.client.particle.RisingParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  protected boolean isGlowing;
+  private net.minecraft.client.particle.SoulParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public int getLightCoords(float);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void tick();
+}
+Compiled from "SpellParticle.java"
+public class net.minecraft.client.particle.SpellParticle$InstantProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SpellParticleOption> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SpellParticle$InstantProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SpellParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SpellParticle.java"
+public class net.minecraft.client.particle.SpellParticle$MobEffectProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.ColorParticleOption> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SpellParticle$MobEffectProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ColorParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SpellParticle.java"
+public class net.minecraft.client.particle.SpellParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SpellParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SpellParticle.java"
+public class net.minecraft.client.particle.SpellParticle$WitchProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SpellParticle$WitchProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SpellParticle.java"
+public class net.minecraft.client.particle.SpellParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private static final net.minecraft.util.RandomSource RANDOM;
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  private float originalAlpha;
+  private net.minecraft.client.particle.SpellParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void tick();
+  protected void setAlpha(float);
+  private boolean isCloseToScopingPlayer();
+  static {};
+}
+Compiled from "SpitParticle.java"
+public class net.minecraft.client.particle.SpitParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.SpitParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SpitParticle.java"
+public class net.minecraft.client.particle.SpitParticle extends net.minecraft.client.particle.ExplodeParticle {
+  private net.minecraft.client.particle.SpitParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+}
+Compiled from "SplashParticle.java"
+public class net.minecraft.client.particle.SplashParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SplashParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SplashParticle.java"
+public class net.minecraft.client.particle.SplashParticle extends net.minecraft.client.particle.WaterDropParticle {
+  private net.minecraft.client.particle.SplashParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+}
+Compiled from "SpriteSet.java"
+public interface net.minecraft.client.particle.SpriteSet {
+  public abstract net.minecraft.client.renderer.texture.TextureAtlasSprite get(int, int);
+  public abstract net.minecraft.client.renderer.texture.TextureAtlasSprite get(net.minecraft.util.RandomSource);
+  public abstract net.minecraft.client.renderer.texture.TextureAtlasSprite first();
+}
+Compiled from "SquidInkParticle.java"
+public class net.minecraft.client.particle.SquidInkParticle$GlowInkProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.SquidInkParticle$GlowInkProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SquidInkParticle.java"
+public class net.minecraft.client.particle.SquidInkParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.SquidInkParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SquidInkParticle.java"
+public class net.minecraft.client.particle.SquidInkParticle extends net.minecraft.client.particle.SimpleAnimatedParticle {
+  private net.minecraft.client.particle.SquidInkParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, int, net.minecraft.client.particle.SpriteSet);
+  public void tick();
+}
+Compiled from "SulfurBubbleParticle.java"
+public class net.minecraft.client.particle.SulfurBubbleParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SulfurBubbleParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SulfurBubbleParticle.java"
+public class net.minecraft.client.particle.SulfurBubbleParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private static final float SIZE_START;
+  private static final float SIZE_END;
+  private static final float UPWARDS_SPEED;
+  private static final float HORIZONTAL_WIGGLING;
+  private final double yStart;
+  private final double yEnd;
+  private final float sizeStart;
+  private double yPrev;
+  private net.minecraft.client.particle.SulfurBubbleParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public void tick();
+  private double randomHorizontalWiggling();
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+}
+Compiled from "SuspendedParticle.java"
+public class net.minecraft.client.particle.SuspendedParticle$CrimsonSporeProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SuspendedParticle$CrimsonSporeProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SuspendedParticle.java"
+class net.minecraft.client.particle.SuspendedParticle$SporeBlossomAirProvider$1 extends net.minecraft.client.particle.SuspendedParticle {
+  net.minecraft.client.particle.SuspendedParticle$SporeBlossomAirProvider$1(net.minecraft.client.particle.SuspendedParticle$SporeBlossomAirProvider, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public java.util.Optional<net.minecraft.core.particles.ParticleLimit> getParticleLimit();
+}
+Compiled from "SuspendedParticle.java"
+public class net.minecraft.client.particle.SuspendedParticle$SporeBlossomAirProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SuspendedParticle$SporeBlossomAirProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SuspendedParticle.java"
+public class net.minecraft.client.particle.SuspendedParticle$UnderwaterProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SuspendedParticle$UnderwaterProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SuspendedParticle.java"
+public class net.minecraft.client.particle.SuspendedParticle$WarpedSporeProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SuspendedParticle$WarpedSporeProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SuspendedParticle.java"
+public class net.minecraft.client.particle.SuspendedParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private net.minecraft.client.particle.SuspendedParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  private net.minecraft.client.particle.SuspendedParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+}
+Compiled from "SuspendedTownParticle.java"
+public class net.minecraft.client.particle.SuspendedTownParticle$ComposterFillProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SuspendedTownParticle$ComposterFillProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SuspendedTownParticle.java"
+public class net.minecraft.client.particle.SuspendedTownParticle$DolphinSpeedProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SuspendedTownParticle$DolphinSpeedProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SuspendedTownParticle.java"
+public class net.minecraft.client.particle.SuspendedTownParticle$EggCrackProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SuspendedTownParticle$EggCrackProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SuspendedTownParticle.java"
+public class net.minecraft.client.particle.SuspendedTownParticle$HappyVillagerProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SuspendedTownParticle$HappyVillagerProvider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SuspendedTownParticle.java"
+public class net.minecraft.client.particle.SuspendedTownParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.SuspendedTownParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "SuspendedTownParticle.java"
+public class net.minecraft.client.particle.SuspendedTownParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private net.minecraft.client.particle.SuspendedTownParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void move(double, double, double);
+  public void tick();
+}
+Compiled from "TerrainParticle.java"
+public class net.minecraft.client.particle.TerrainParticle$CrumblingProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.BlockParticleOption> {
+  public net.minecraft.client.particle.TerrainParticle$CrumblingProvider();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.BlockParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "TerrainParticle.java"
+public class net.minecraft.client.particle.TerrainParticle$DustPillarProvider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.BlockParticleOption> {
+  public net.minecraft.client.particle.TerrainParticle$DustPillarProvider();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.BlockParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "TerrainParticle.java"
+public class net.minecraft.client.particle.TerrainParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.BlockParticleOption> {
+  public net.minecraft.client.particle.TerrainParticle$Provider();
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.BlockParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "TerrainParticle.java"
+public class net.minecraft.client.particle.TerrainParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SingleQuadParticle$Layer layer;
+  private final net.minecraft.core.BlockPos pos;
+  private final float uo;
+  private final float vo;
+  public net.minecraft.client.particle.TerrainParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.world.level.block.state.BlockState);
+  public net.minecraft.client.particle.TerrainParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  protected float getU0();
+  protected float getU1();
+  protected float getV0();
+  protected float getV1();
+  private static net.minecraft.client.particle.TerrainParticle createTerrainParticle(net.minecraft.core.particles.BlockParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double);
+}
+Compiled from "TotemParticle.java"
+public class net.minecraft.client.particle.TotemParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.TotemParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "TotemParticle.java"
+public class net.minecraft.client.particle.TotemParticle extends net.minecraft.client.particle.SimpleAnimatedParticle {
+  private net.minecraft.client.particle.TotemParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+}
+Compiled from "TrackingEmitter.java"
+public class net.minecraft.client.particle.TrackingEmitter extends net.minecraft.client.particle.NoRenderParticle {
+  private final net.minecraft.world.entity.Entity entity;
+  private int life;
+  private final int lifeTime;
+  private final net.minecraft.core.particles.ParticleOptions particleType;
+  public net.minecraft.client.particle.TrackingEmitter(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.Entity, net.minecraft.core.particles.ParticleOptions);
+  public net.minecraft.client.particle.TrackingEmitter(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.Entity, net.minecraft.core.particles.ParticleOptions, int);
+  private net.minecraft.client.particle.TrackingEmitter(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.Entity, net.minecraft.core.particles.ParticleOptions, int, net.minecraft.world.phys.Vec3);
+  public void tick();
+}
+Compiled from "TrailParticle.java"
+public class net.minecraft.client.particle.TrailParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.TrailParticleOption> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.TrailParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.TrailParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "TrailParticle.java"
+public class net.minecraft.client.particle.TrailParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.world.phys.Vec3 target;
+  private net.minecraft.client.particle.TrailParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.world.phys.Vec3, int, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void tick();
+  public int getLightCoords(float);
+}
+Compiled from "TrialSpawnerDetectionParticle.java"
+public class net.minecraft.client.particle.TrialSpawnerDetectionParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.TrialSpawnerDetectionParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "TrialSpawnerDetectionParticle.java"
+public class net.minecraft.client.particle.TrialSpawnerDetectionParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  private static final int BASE_LIFETIME;
+  protected net.minecraft.client.particle.TrialSpawnerDetectionParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, float, net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public int getLightCoords(float);
+  public net.minecraft.client.particle.SingleQuadParticle$FacingCameraMode getFacingCameraMode();
+  public void tick();
+  public float getQuadSize(float);
+}
+Compiled from "VibrationSignalParticle.java"
+public class net.minecraft.client.particle.VibrationSignalParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.VibrationParticleOption> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.VibrationSignalParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.VibrationParticleOption, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "VibrationSignalParticle.java"
+public class net.minecraft.client.particle.VibrationSignalParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.world.level.gameevent.PositionSource target;
+  private float rot;
+  private float rotO;
+  private float pitch;
+  private float pitchO;
+  private net.minecraft.client.particle.VibrationSignalParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.world.level.gameevent.PositionSource, int, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public void extract(net.minecraft.client.renderer.state.level.QuadParticleRenderState, net.minecraft.client.Camera, float);
+  public int getLightCoords(float);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void tick();
+}
+Compiled from "WakeParticle.java"
+public class net.minecraft.client.particle.WakeParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.WakeParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "WakeParticle.java"
+public class net.minecraft.client.particle.WakeParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  private net.minecraft.client.particle.WakeParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void tick();
+}
+Compiled from "WaterCurrentDownParticle.java"
+public class net.minecraft.client.particle.WaterCurrentDownParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.WaterCurrentDownParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "WaterCurrentDownParticle.java"
+public class net.minecraft.client.particle.WaterCurrentDownParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  private float angle;
+  private net.minecraft.client.particle.WaterCurrentDownParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void tick();
+}
+Compiled from "WaterDropParticle.java"
+public class net.minecraft.client.particle.WaterDropParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprite;
+  public net.minecraft.client.particle.WaterDropParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "WaterDropParticle.java"
+public class net.minecraft.client.particle.WaterDropParticle extends net.minecraft.client.particle.SingleQuadParticle {
+  protected net.minecraft.client.particle.WaterDropParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.particle.SingleQuadParticle$Layer getLayer();
+  public void tick();
+}
+Compiled from "WhiteAshParticle.java"
+public class net.minecraft.client.particle.WhiteAshParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.WhiteAshParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "WhiteAshParticle.java"
+public class net.minecraft.client.particle.WhiteAshParticle extends net.minecraft.client.particle.BaseAshSmokeParticle {
+  private static final int COLOR_RGB24;
+  protected net.minecraft.client.particle.WhiteAshParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, float, net.minecraft.client.particle.SpriteSet);
+}
+Compiled from "WhiteSmokeParticle.java"
+public class net.minecraft.client.particle.WhiteSmokeParticle$Provider implements net.minecraft.client.particle.ParticleProvider<net.minecraft.core.particles.SimpleParticleType> {
+  private final net.minecraft.client.particle.SpriteSet sprites;
+  public net.minecraft.client.particle.WhiteSmokeParticle$Provider(net.minecraft.client.particle.SpriteSet);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.SimpleParticleType, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+  public net.minecraft.client.particle.Particle createParticle(net.minecraft.core.particles.ParticleOptions, net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, net.minecraft.util.RandomSource);
+}
+Compiled from "WhiteSmokeParticle.java"
+public class net.minecraft.client.particle.WhiteSmokeParticle extends net.minecraft.client.particle.BaseAshSmokeParticle {
+  private static final int COLOR_RGB24;
+  protected net.minecraft.client.particle.WhiteSmokeParticle(net.minecraft.client.multiplayer.ClientLevel, double, double, double, double, double, double, float, net.minecraft.client.particle.SpriteSet);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.particle.package-info {
+}

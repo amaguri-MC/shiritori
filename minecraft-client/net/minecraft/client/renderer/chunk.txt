@@ -1,0 +1,399 @@
+Compiled from "ChunkSectionLayer.java"
+public final class net.minecraft.client.renderer.chunk.ChunkSectionLayer extends java.lang.Enum<net.minecraft.client.renderer.chunk.ChunkSectionLayer> {
+  public static final net.minecraft.client.renderer.chunk.ChunkSectionLayer SOLID;
+  public static final net.minecraft.client.renderer.chunk.ChunkSectionLayer CUTOUT;
+  public static final net.minecraft.client.renderer.chunk.ChunkSectionLayer TRANSLUCENT;
+  private final com.mojang.blaze3d.pipeline.RenderPipeline pipeline;
+  private final int bufferSize;
+  private final boolean translucent;
+  private final java.lang.String label;
+  private static final net.minecraft.client.renderer.chunk.ChunkSectionLayer[] $VALUES;
+  public static net.minecraft.client.renderer.chunk.ChunkSectionLayer[] values();
+  public static net.minecraft.client.renderer.chunk.ChunkSectionLayer valueOf(java.lang.String);
+  private net.minecraft.client.renderer.chunk.ChunkSectionLayer(com.mojang.blaze3d.pipeline.RenderPipeline, int, boolean);
+  public static net.minecraft.client.renderer.chunk.ChunkSectionLayer byTransparency(com.mojang.blaze3d.platform.Transparency);
+  public com.mojang.blaze3d.pipeline.RenderPipeline pipeline();
+  public int bufferSize();
+  public java.lang.String label();
+  public boolean translucent();
+  public com.mojang.blaze3d.vertex.VertexFormat vertexFormat();
+  private static net.minecraft.client.renderer.chunk.ChunkSectionLayer[] $values();
+  static {};
+}
+Compiled from "ChunkSectionLayerGroup.java"
+public final class net.minecraft.client.renderer.chunk.ChunkSectionLayerGroup extends java.lang.Enum<net.minecraft.client.renderer.chunk.ChunkSectionLayerGroup> {
+  public static final net.minecraft.client.renderer.chunk.ChunkSectionLayerGroup OPAQUE;
+  public static final net.minecraft.client.renderer.chunk.ChunkSectionLayerGroup TRANSLUCENT;
+  private final java.lang.String label;
+  private final net.minecraft.client.renderer.chunk.ChunkSectionLayer[] layers;
+  private static final net.minecraft.client.renderer.chunk.ChunkSectionLayerGroup[] $VALUES;
+  public static net.minecraft.client.renderer.chunk.ChunkSectionLayerGroup[] values();
+  public static net.minecraft.client.renderer.chunk.ChunkSectionLayerGroup valueOf(java.lang.String);
+  private net.minecraft.client.renderer.chunk.ChunkSectionLayerGroup(net.minecraft.client.renderer.chunk.ChunkSectionLayer...);
+  public java.lang.String label();
+  public net.minecraft.client.renderer.chunk.ChunkSectionLayer[] layers();
+  public com.mojang.blaze3d.pipeline.RenderTarget outputTarget();
+  private static net.minecraft.client.renderer.chunk.ChunkSectionLayerGroup[] $values();
+  static {};
+}
+Compiled from "ChunkSectionsToRender.java"
+public final class net.minecraft.client.renderer.chunk.ChunkSectionsToRender extends java.lang.Record {
+  private final com.mojang.blaze3d.textures.GpuTextureView textureView;
+  private final java.util.EnumMap<net.minecraft.client.renderer.chunk.ChunkSectionLayer, it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap<java.util.List<com.mojang.blaze3d.systems.RenderPass$Draw<com.mojang.blaze3d.buffers.GpuBufferSlice[]>>>> drawGroupsPerLayer;
+  private final int maxIndicesRequired;
+  private final com.mojang.blaze3d.buffers.GpuBufferSlice[] chunkSectionInfos;
+  public net.minecraft.client.renderer.chunk.ChunkSectionsToRender(com.mojang.blaze3d.textures.GpuTextureView, java.util.EnumMap<net.minecraft.client.renderer.chunk.ChunkSectionLayer, it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap<java.util.List<com.mojang.blaze3d.systems.RenderPass$Draw<com.mojang.blaze3d.buffers.GpuBufferSlice[]>>>>, int, com.mojang.blaze3d.buffers.GpuBufferSlice[]);
+  public void renderGroup(net.minecraft.client.renderer.chunk.ChunkSectionLayerGroup, com.mojang.blaze3d.textures.GpuSampler);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.textures.GpuTextureView textureView();
+  public java.util.EnumMap<net.minecraft.client.renderer.chunk.ChunkSectionLayer, it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap<java.util.List<com.mojang.blaze3d.systems.RenderPass$Draw<com.mojang.blaze3d.buffers.GpuBufferSlice[]>>>> drawGroupsPerLayer();
+  public int maxIndicesRequired();
+  public com.mojang.blaze3d.buffers.GpuBufferSlice[] chunkSectionInfos();
+  private static java.lang.String lambda$renderGroup$0(net.minecraft.client.renderer.chunk.ChunkSectionLayerGroup);
+}
+Compiled from "CompiledSectionMesh.java"
+class net.minecraft.client.renderer.chunk.CompiledSectionMesh$1 implements net.minecraft.client.renderer.chunk.SectionMesh {
+  net.minecraft.client.renderer.chunk.CompiledSectionMesh$1();
+  public boolean facesCanSeeEachother(net.minecraft.core.Direction, net.minecraft.core.Direction);
+}
+Compiled from "CompiledSectionMesh.java"
+class net.minecraft.client.renderer.chunk.CompiledSectionMesh$2 implements net.minecraft.client.renderer.chunk.SectionMesh {
+  net.minecraft.client.renderer.chunk.CompiledSectionMesh$2();
+  public boolean facesCanSeeEachother(net.minecraft.core.Direction, net.minecraft.core.Direction);
+}
+Compiled from "CompiledSectionMesh.java"
+public class net.minecraft.client.renderer.chunk.CompiledSectionMesh implements net.minecraft.client.renderer.chunk.SectionMesh {
+  public static final net.minecraft.client.renderer.chunk.SectionMesh UNCOMPILED;
+  public static final net.minecraft.client.renderer.chunk.SectionMesh EMPTY;
+  private final java.util.List<net.minecraft.world.level.block.entity.BlockEntity> renderableBlockEntities;
+  private final net.minecraft.client.renderer.chunk.VisibilitySet visibilitySet;
+  private final com.mojang.blaze3d.vertex.MeshData$SortState transparencyState;
+  private net.minecraft.client.renderer.chunk.TranslucencyPointOfView translucencyPointOfView;
+  private final java.util.Map<net.minecraft.client.renderer.chunk.ChunkSectionLayer, net.minecraft.client.renderer.chunk.SectionMesh$SectionDraw> draws;
+  private final java.util.Map<net.minecraft.client.renderer.chunk.ChunkSectionLayer, java.util.concurrent.atomic.AtomicBoolean> vertexBufferUploaded;
+  private final java.util.Map<net.minecraft.client.renderer.chunk.ChunkSectionLayer, java.util.concurrent.atomic.AtomicBoolean> indexBufferUploaded;
+  public net.minecraft.client.renderer.chunk.CompiledSectionMesh(net.minecraft.client.renderer.chunk.TranslucencyPointOfView, net.minecraft.client.renderer.chunk.SectionCompiler$Results);
+  public void setTranslucencyPointOfView(net.minecraft.client.renderer.chunk.TranslucencyPointOfView);
+  public boolean isDifferentPointOfView(net.minecraft.client.renderer.chunk.TranslucencyPointOfView);
+  public boolean hasRenderableLayers();
+  public boolean isEmpty(net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+  public java.util.List<net.minecraft.world.level.block.entity.BlockEntity> getRenderableBlockEntities();
+  public boolean facesCanSeeEachother(net.minecraft.core.Direction, net.minecraft.core.Direction);
+  public net.minecraft.client.renderer.chunk.SectionMesh$SectionDraw getSectionDraw(net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+  public boolean isVertexBufferUploaded(net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+  public boolean isIndexBufferUploaded(net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+  public void setVertexBufferUploaded(net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+  public void setIndexBufferUploaded(net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+  public boolean hasTranslucentGeometry();
+  public com.mojang.blaze3d.vertex.MeshData$SortState getTransparencyState();
+  public void close();
+  private void lambda$new$2(net.minecraft.client.renderer.chunk.ChunkSectionLayer, com.mojang.blaze3d.vertex.MeshData);
+  private static java.util.concurrent.atomic.AtomicBoolean lambda$new$1(net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+  private static java.util.concurrent.atomic.AtomicBoolean lambda$new$0(net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+  static {};
+}
+Compiled from "RenderRegionCache.java"
+public class net.minecraft.client.renderer.chunk.RenderRegionCache {
+  private final it.unimi.dsi.fastutil.longs.Long2ObjectMap<net.minecraft.client.renderer.chunk.SectionCopy> sectionCopyCache;
+  public net.minecraft.client.renderer.chunk.RenderRegionCache();
+  public net.minecraft.client.renderer.chunk.RenderSectionRegion createRegion(net.minecraft.client.multiplayer.ClientLevel, long);
+  private net.minecraft.client.renderer.chunk.SectionCopy getSectionDataCopy(net.minecraft.world.level.Level, int, int, int);
+  private static net.minecraft.client.renderer.chunk.SectionCopy lambda$getSectionDataCopy$0(net.minecraft.world.level.Level, int, int, int, long);
+}
+Compiled from "RenderSectionRegion.java"
+public class net.minecraft.client.renderer.chunk.RenderSectionRegion implements net.minecraft.client.renderer.block.BlockAndTintGetter {
+  public static final int RADIUS;
+  public static final int SIZE;
+  private final int minSectionX;
+  private final int minSectionY;
+  private final int minSectionZ;
+  private final net.minecraft.client.renderer.chunk.SectionCopy[] sections;
+  private final net.minecraft.client.multiplayer.ClientLevel level;
+  private final net.minecraft.world.level.CardinalLighting cardinalLighting;
+  private final net.minecraft.world.level.lighting.LevelLightEngine lightEngine;
+  public net.minecraft.client.renderer.chunk.RenderSectionRegion(net.minecraft.client.multiplayer.ClientLevel, int, int, int, net.minecraft.client.renderer.chunk.SectionCopy[]);
+  public net.minecraft.world.level.block.state.BlockState getBlockState(net.minecraft.core.BlockPos);
+  public net.minecraft.world.level.material.FluidState getFluidState(net.minecraft.core.BlockPos);
+  public net.minecraft.world.level.CardinalLighting cardinalLighting();
+  public net.minecraft.world.level.lighting.LevelLightEngine getLightEngine();
+  public net.minecraft.world.level.block.entity.BlockEntity getBlockEntity(net.minecraft.core.BlockPos);
+  private net.minecraft.client.renderer.chunk.SectionCopy getSection(int, int, int);
+  public int getBlockTint(net.minecraft.core.BlockPos, net.minecraft.world.level.ColorResolver);
+  public int getMinY();
+  public int getHeight();
+  public static int index(int, int, int, int, int, int);
+}
+Compiled from "SectionCompiler.java"
+public final class net.minecraft.client.renderer.chunk.SectionCompiler$Results {
+  public final java.util.List<net.minecraft.world.level.block.entity.BlockEntity> blockEntities;
+  public final java.util.Map<net.minecraft.client.renderer.chunk.ChunkSectionLayer, com.mojang.blaze3d.vertex.MeshData> renderedLayers;
+  public net.minecraft.client.renderer.chunk.VisibilitySet visibilitySet;
+  public com.mojang.blaze3d.vertex.MeshData$SortState transparencyState;
+  public net.minecraft.client.renderer.chunk.SectionCompiler$Results();
+  public void release();
+}
+Compiled from "SectionCompiler.java"
+public class net.minecraft.client.renderer.chunk.SectionCompiler {
+  private final boolean ambientOcclusion;
+  private final boolean cutoutLeaves;
+  private final net.minecraft.client.renderer.block.BlockStateModelSet blockModelSet;
+  private final net.minecraft.client.renderer.block.FluidStateModelSet fluidModelSet;
+  private final net.minecraft.client.color.block.BlockColors blockColors;
+  public net.minecraft.client.renderer.chunk.SectionCompiler(boolean, boolean, net.minecraft.client.renderer.block.BlockStateModelSet, net.minecraft.client.renderer.block.FluidStateModelSet, net.minecraft.client.color.block.BlockColors);
+  public net.minecraft.client.renderer.chunk.SectionCompiler$Results compile(net.minecraft.core.SectionPos, net.minecraft.client.renderer.chunk.RenderSectionRegion, com.mojang.blaze3d.vertex.VertexSorting, net.minecraft.client.renderer.SectionBufferBuilderPack);
+  private com.mojang.blaze3d.vertex.BufferBuilder getOrBeginLayer(java.util.Map<net.minecraft.client.renderer.chunk.ChunkSectionLayer, com.mojang.blaze3d.vertex.BufferBuilder>, net.minecraft.client.renderer.SectionBufferBuilderPack, net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+  private <E extends net.minecraft.world.level.block.entity.BlockEntity> void handleBlockEntity(net.minecraft.client.renderer.chunk.SectionCompiler$Results, E);
+  private com.mojang.blaze3d.vertex.VertexConsumer lambda$compile$2(java.util.Map, net.minecraft.client.renderer.SectionBufferBuilderPack, net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+  private void lambda$compile$1(java.util.Map, net.minecraft.client.renderer.SectionBufferBuilderPack, float, float, float, net.minecraft.client.resources.model.geometry.BakedQuad, com.mojang.blaze3d.vertex.QuadInstance);
+  private void lambda$compile$0(java.util.Map, net.minecraft.client.renderer.SectionBufferBuilderPack, float, float, float, net.minecraft.client.resources.model.geometry.BakedQuad, com.mojang.blaze3d.vertex.QuadInstance);
+}
+Compiled from "SectionCopy.java"
+public class net.minecraft.client.renderer.chunk.SectionCopy {
+  private final java.util.Map<net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.BlockEntity> blockEntities;
+  private final net.minecraft.world.level.chunk.PalettedContainer<net.minecraft.world.level.block.state.BlockState> section;
+  private final boolean debug;
+  private final net.minecraft.world.level.LevelHeightAccessor levelHeightAccessor;
+  public net.minecraft.client.renderer.chunk.SectionCopy(net.minecraft.world.level.chunk.LevelChunk, int);
+  public net.minecraft.world.level.block.entity.BlockEntity getBlockEntity(net.minecraft.core.BlockPos);
+  public net.minecraft.world.level.block.state.BlockState getBlockState(net.minecraft.core.BlockPos);
+  private java.lang.String lambda$getBlockState$0(int, int, int) throws java.lang.Exception;
+}
+Compiled from "SectionMesh.java"
+public final class net.minecraft.client.renderer.chunk.SectionMesh$SectionDraw extends java.lang.Record {
+  private final int indexCount;
+  private final com.mojang.blaze3d.IndexType indexType;
+  private final boolean hasCustomIndexBuffer;
+  public net.minecraft.client.renderer.chunk.SectionMesh$SectionDraw(int, com.mojang.blaze3d.IndexType, boolean);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int indexCount();
+  public com.mojang.blaze3d.IndexType indexType();
+  public boolean hasCustomIndexBuffer();
+}
+Compiled from "SectionMesh.java"
+public interface net.minecraft.client.renderer.chunk.SectionMesh extends java.lang.AutoCloseable {
+  public default boolean isDifferentPointOfView(net.minecraft.client.renderer.chunk.TranslucencyPointOfView);
+  public default boolean hasRenderableLayers();
+  public default boolean hasTranslucentGeometry();
+  public default boolean isEmpty(net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+  public default java.util.List<net.minecraft.world.level.block.entity.BlockEntity> getRenderableBlockEntities();
+  public abstract boolean facesCanSeeEachother(net.minecraft.core.Direction, net.minecraft.core.Direction);
+  public default net.minecraft.client.renderer.chunk.SectionMesh$SectionDraw getSectionDraw(net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+  public default void close();
+}
+Compiled from "SectionRenderDispatcher.java"
+class net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$CompileTask extends net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask {
+  private final net.minecraft.client.renderer.chunk.RenderSectionRegion region;
+  final net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection this$1;
+  public net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$CompileTask(net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection, net.minecraft.client.renderer.chunk.RenderSectionRegion, boolean);
+  public net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask$SectionTaskResult doTask(net.minecraft.client.renderer.SectionBufferBuilderPack);
+  public void cancel();
+}
+Compiled from "SectionRenderDispatcher.java"
+class net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$ResortTransparencyTask extends net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask {
+  private final net.minecraft.client.renderer.chunk.CompiledSectionMesh compiledSectionMesh;
+  final net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection this$1;
+  public net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$ResortTransparencyTask(net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection, net.minecraft.client.renderer.chunk.CompiledSectionMesh);
+  public net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask$SectionTaskResult doTask(net.minecraft.client.renderer.SectionBufferBuilderPack);
+  public void cancel();
+}
+Compiled from "SectionRenderDispatcher.java"
+public final class net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask$SectionTaskResult extends java.lang.Enum<net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask$SectionTaskResult> {
+  public static final net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask$SectionTaskResult SUCCESSFUL;
+  public static final net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask$SectionTaskResult CANCELLED;
+  private static final net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask$SectionTaskResult[] $VALUES;
+  public static net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask$SectionTaskResult[] values();
+  public static net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask$SectionTaskResult valueOf(java.lang.String);
+  private net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask$SectionTaskResult();
+  private static net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask$SectionTaskResult[] $values();
+  static {};
+}
+Compiled from "SectionRenderDispatcher.java"
+public abstract class net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask {
+  protected final java.util.concurrent.atomic.AtomicBoolean isCancelled;
+  protected final java.util.concurrent.atomic.AtomicBoolean isCompleted;
+  private final boolean isRecompile;
+  final net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection this$1;
+  public net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask(net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection, boolean);
+  public abstract net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask$SectionTaskResult doTask(net.minecraft.client.renderer.SectionBufferBuilderPack);
+  public abstract void cancel();
+  public boolean isRecompile();
+  public net.minecraft.core.BlockPos getRenderOrigin();
+}
+Compiled from "SectionRenderDispatcher.java"
+public class net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection implements net.minecraft.client.RotatingSectionStorage$Value {
+  public final int index;
+  public final java.util.concurrent.atomic.AtomicReference<net.minecraft.client.renderer.chunk.SectionMesh> sectionMesh;
+  private net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$CompileTask lastCompileTask;
+  private net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$ResortTransparencyTask lastResortTransparencyTask;
+  private net.minecraft.world.phys.AABB bb;
+  private volatile long sectionNode;
+  private final net.minecraft.core.BlockPos$MutableBlockPos renderOrigin;
+  private long uploadedTime;
+  private long fadeDuration;
+  private boolean wasPreviouslyEmpty;
+  static final boolean $assertionsDisabled;
+  final net.minecraft.client.renderer.chunk.SectionRenderDispatcher this$0;
+  public net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection(net.minecraft.client.renderer.chunk.SectionRenderDispatcher, int, long);
+  public float getVisibility(long);
+  public void setFadeDuration(long);
+  public void setWasPreviouslyEmpty(boolean);
+  public boolean wasPreviouslyEmpty();
+  public net.minecraft.world.phys.AABB getBoundingBox();
+  public void setSectionNode(long);
+  public net.minecraft.client.renderer.chunk.SectionMesh getSectionMesh();
+  public void reset();
+  public net.minecraft.core.BlockPos getRenderOrigin();
+  public long getSectionNode();
+  public long getNeighborSectionNode(net.minecraft.core.Direction);
+  public void resortTransparency();
+  public boolean hasTranslucentGeometry();
+  public boolean transparencyResortingScheduled();
+  private void cancelTasks();
+  private net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask createCompileTask(net.minecraft.client.renderer.chunk.RenderSectionRegion);
+  public void compileAsync(net.minecraft.client.renderer.chunk.RenderSectionRegion);
+  public void compileSync(net.minecraft.client.renderer.chunk.RenderSectionRegion);
+  private net.minecraft.client.renderer.chunk.SectionMesh setSectionMesh(net.minecraft.client.renderer.chunk.SectionMesh);
+  private void releaseSectionMesh(net.minecraft.client.renderer.chunk.SectionMesh);
+  private com.mojang.blaze3d.vertex.VertexSorting createVertexSorting(net.minecraft.core.SectionPos, net.minecraft.world.phys.Vec3);
+  private void checkSectionMesh(net.minecraft.client.renderer.chunk.CompiledSectionMesh);
+  private void vertexBufferUploadCallback(net.minecraft.client.renderer.chunk.CompiledSectionMesh, net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+  private void indexBufferUploadCallback(net.minecraft.client.renderer.chunk.CompiledSectionMesh, net.minecraft.client.renderer.chunk.ChunkSectionLayer, boolean);
+  private boolean addSectionBuffersToUberBuffer(net.minecraft.client.renderer.chunk.ChunkSectionLayer, net.minecraft.client.renderer.chunk.CompiledSectionMesh, java.nio.ByteBuffer, java.nio.ByteBuffer);
+  private void lambda$addSectionBuffersToUberBuffer$1(net.minecraft.client.renderer.chunk.ChunkSectionLayer, boolean, net.minecraft.client.renderer.chunk.CompiledSectionMesh);
+  private void lambda$addSectionBuffersToUberBuffer$0(net.minecraft.client.renderer.chunk.ChunkSectionLayer, net.minecraft.client.renderer.chunk.CompiledSectionMesh);
+  static {};
+}
+Compiled from "SectionRenderDispatcher.java"
+public final class net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSectionBufferSlice extends java.lang.Record {
+  private final com.mojang.blaze3d.buffers.GpuBuffer vertexBuffer;
+  private final long vertexBufferOffset;
+  private final com.mojang.blaze3d.buffers.GpuBuffer indexBuffer;
+  private final long indexBufferOffset;
+  public net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSectionBufferSlice(com.mojang.blaze3d.buffers.GpuBuffer, long, com.mojang.blaze3d.buffers.GpuBuffer, long);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.buffers.GpuBuffer vertexBuffer();
+  public long vertexBufferOffset();
+  public com.mojang.blaze3d.buffers.GpuBuffer indexBuffer();
+  public long indexBufferOffset();
+}
+Compiled from "SectionRenderDispatcher.java"
+final class net.minecraft.client.renderer.chunk.SectionRenderDispatcher$SectionUberBuffers extends java.lang.Record {
+  private final com.mojang.blaze3d.vertex.UberGpuBuffer<net.minecraft.client.renderer.chunk.SectionMesh> vertexBuffer;
+  private final com.mojang.blaze3d.vertex.UberGpuBuffer<net.minecraft.client.renderer.chunk.SectionMesh> indexBuffer;
+  private net.minecraft.client.renderer.chunk.SectionRenderDispatcher$SectionUberBuffers(com.mojang.blaze3d.vertex.UberGpuBuffer<net.minecraft.client.renderer.chunk.SectionMesh>, com.mojang.blaze3d.vertex.UberGpuBuffer<net.minecraft.client.renderer.chunk.SectionMesh>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.vertex.UberGpuBuffer<net.minecraft.client.renderer.chunk.SectionMesh> vertexBuffer();
+  public com.mojang.blaze3d.vertex.UberGpuBuffer<net.minecraft.client.renderer.chunk.SectionMesh> indexBuffer();
+}
+Compiled from "SectionRenderDispatcher.java"
+public class net.minecraft.client.renderer.chunk.SectionRenderDispatcher {
+  public static final int NEARBY_SECTION_DISTANCE_IN_BLOCKS;
+  private final net.minecraft.client.renderer.chunk.SectionTaskDynamicQueue queue;
+  private final net.minecraft.client.renderer.SectionBufferBuilderPack fixedBuffers;
+  private final net.minecraft.client.renderer.SectionBufferBuilderPool bufferPool;
+  private volatile boolean closed;
+  private final net.minecraft.TracingExecutor executor;
+  private final java.util.function.Consumer<net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection> onSectionMeshUpdate;
+  private final java.util.concurrent.atomic.AtomicReference<net.minecraft.world.phys.Vec3> cameraPosition;
+  private volatile net.minecraft.client.renderer.chunk.SectionCompiler sectionCompiler;
+  private final com.mojang.blaze3d.vertex.StagingBuffer stagingBuffer;
+  private final java.util.Map<net.minecraft.client.renderer.chunk.ChunkSectionLayer, net.minecraft.client.renderer.chunk.SectionRenderDispatcher$SectionUberBuffers> chunkUberBuffers;
+  private final java.util.concurrent.locks.ReentrantLock copyLock;
+  public net.minecraft.client.renderer.chunk.SectionRenderDispatcher(net.minecraft.TracingExecutor, net.minecraft.client.renderer.RenderBuffers, net.minecraft.client.renderer.chunk.SectionCompiler, java.util.function.Consumer<net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection>);
+  public void setCompiler(net.minecraft.client.renderer.chunk.SectionCompiler);
+  private void runTask();
+  public void setCameraPosition(net.minecraft.world.phys.Vec3);
+  public net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSectionBufferSlice getRenderSectionSlice(net.minecraft.client.renderer.chunk.SectionMesh, net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+  public void lock();
+  public void unlock();
+  public void uploadTerrainBuffersToGpu();
+  private void schedule(net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask);
+  public void clearCompileQueue();
+  public boolean isQueueEmpty();
+  public void dispose();
+  public java.lang.String getStats();
+  public int getCompileQueueSize();
+  public int getFreeBufferCount();
+  private net.minecraft.client.renderer.chunk.SectionRenderDispatcher$SectionUberBuffers lambda$new$0(net.minecraft.client.renderer.chunk.ChunkSectionLayer);
+}
+Compiled from "SectionTaskDynamicQueue.java"
+public class net.minecraft.client.renderer.chunk.SectionTaskDynamicQueue {
+  private static final int MAX_RECOMPILE_QUOTA;
+  private int recompileQuota;
+  private final java.util.List<net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask> tasks;
+  public net.minecraft.client.renderer.chunk.SectionTaskDynamicQueue();
+  public synchronized void add(net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask);
+  public synchronized net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask poll(net.minecraft.world.phys.Vec3);
+  public int size();
+  private net.minecraft.client.renderer.chunk.SectionRenderDispatcher$RenderSection$SectionTask removeTaskByIndex(int);
+  public synchronized void clear();
+}
+Compiled from "TranslucencyPointOfView.java"
+public final class net.minecraft.client.renderer.chunk.TranslucencyPointOfView {
+  private int x;
+  private int y;
+  private int z;
+  public net.minecraft.client.renderer.chunk.TranslucencyPointOfView();
+  public static net.minecraft.client.renderer.chunk.TranslucencyPointOfView of(net.minecraft.world.phys.Vec3, long);
+  public net.minecraft.client.renderer.chunk.TranslucencyPointOfView set(net.minecraft.world.phys.Vec3, long);
+  private static int getCoordinate(double, int);
+  public boolean isAxisAligned();
+  public boolean equals(java.lang.Object);
+  public int hashCode();
+}
+Compiled from "VisGraph.java"
+class net.minecraft.client.renderer.chunk.VisGraph$1 {
+  static final int[] $SwitchMap$net$minecraft$core$Direction;
+  static {};
+}
+Compiled from "VisGraph.java"
+public class net.minecraft.client.renderer.chunk.VisGraph {
+  private static final int SIZE_IN_BITS;
+  private static final int LEN;
+  private static final int MASK;
+  private static final int SIZE;
+  private static final int X_SHIFT;
+  private static final int Z_SHIFT;
+  private static final int Y_SHIFT;
+  private static final int DX;
+  private static final int DZ;
+  private static final int DY;
+  private static final int INVALID_INDEX;
+  private static final net.minecraft.core.Direction[] DIRECTIONS;
+  private final java.util.BitSet bitSet;
+  private static final int[] INDEX_OF_EDGES;
+  private int empty;
+  public net.minecraft.client.renderer.chunk.VisGraph();
+  public void setOpaque(net.minecraft.core.BlockPos);
+  private static int getIndex(net.minecraft.core.BlockPos);
+  private static int getIndex(int, int, int);
+  public net.minecraft.client.renderer.chunk.VisibilitySet resolve();
+  private java.util.Set<net.minecraft.core.Direction> floodFill(int);
+  private void addEdges(int, java.util.Set<net.minecraft.core.Direction>);
+  private int getNeighborIndexAtFace(int, net.minecraft.core.Direction);
+  private static void lambda$static$0(int[]);
+  static {};
+}
+Compiled from "VisibilitySet.java"
+public class net.minecraft.client.renderer.chunk.VisibilitySet {
+  private static final int FACINGS;
+  private final java.util.BitSet data;
+  public net.minecraft.client.renderer.chunk.VisibilitySet();
+  public void add(java.util.Set<net.minecraft.core.Direction>);
+  public void set(net.minecraft.core.Direction, net.minecraft.core.Direction, boolean);
+  public void setAll(boolean);
+  public boolean visibilityBetween(net.minecraft.core.Direction, net.minecraft.core.Direction);
+  public java.lang.String toString();
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.renderer.chunk.package-info {
+}

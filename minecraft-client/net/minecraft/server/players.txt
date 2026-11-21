@@ -1,0 +1,453 @@
+Compiled from "BanListEntry.java"
+public abstract class net.minecraft.server.players.BanListEntry<T> extends net.minecraft.server.players.StoredUserEntry<T> {
+  public static final java.text.SimpleDateFormat DATE_FORMAT;
+  public static final java.lang.String EXPIRES_NEVER;
+  protected final java.util.Date created;
+  protected final java.lang.String source;
+  protected final java.util.Date expires;
+  protected final java.lang.String reason;
+  public net.minecraft.server.players.BanListEntry(T, java.util.Date, java.lang.String, java.util.Date, java.lang.String);
+  protected net.minecraft.server.players.BanListEntry(T, com.google.gson.JsonObject);
+  public java.util.Date getCreated();
+  public java.lang.String getSource();
+  public java.util.Date getExpires();
+  public java.lang.String getReason();
+  public net.minecraft.network.chat.Component getReasonMessage();
+  public abstract net.minecraft.network.chat.Component getDisplayName();
+  public boolean hasExpired();
+  protected void serialize(com.google.gson.JsonObject);
+  public boolean equals(java.lang.Object);
+  public int hashCode();
+  static {};
+}
+Compiled from "CachedUserNameToIdResolver.java"
+class net.minecraft.server.players.CachedUserNameToIdResolver$GameProfileInfo {
+  private final net.minecraft.server.players.NameAndId nameAndId;
+  private final java.util.Date expirationDate;
+  private volatile long lastAccess;
+  private net.minecraft.server.players.CachedUserNameToIdResolver$GameProfileInfo(net.minecraft.server.players.NameAndId, java.util.Date);
+  public net.minecraft.server.players.NameAndId nameAndId();
+  public java.util.Date expirationDate();
+  public void setLastAccess(long);
+  public long lastAccess();
+}
+Compiled from "CachedUserNameToIdResolver.java"
+public class net.minecraft.server.players.CachedUserNameToIdResolver implements net.minecraft.server.players.UserNameToIdResolver {
+  private static final org.slf4j.Logger LOGGER;
+  private static final int GAMEPROFILES_MRU_LIMIT;
+  private static final int GAMEPROFILES_EXPIRATION_MONTHS;
+  private boolean resolveOfflineUsers;
+  private final java.util.Map<java.lang.String, net.minecraft.server.players.CachedUserNameToIdResolver$GameProfileInfo> profilesByName;
+  private final java.util.Map<java.util.UUID, net.minecraft.server.players.CachedUserNameToIdResolver$GameProfileInfo> profilesByUUID;
+  private final com.mojang.authlib.GameProfileRepository profileRepository;
+  private final com.google.gson.Gson gson;
+  private final java.io.File file;
+  private final java.util.concurrent.atomic.AtomicLong operationCount;
+  public net.minecraft.server.players.CachedUserNameToIdResolver(com.mojang.authlib.GameProfileRepository, java.io.File);
+  private void safeAdd(net.minecraft.server.players.CachedUserNameToIdResolver$GameProfileInfo);
+  private java.util.Optional<net.minecraft.server.players.NameAndId> lookupGameProfile(com.mojang.authlib.GameProfileRepository, java.lang.String);
+  private java.util.Optional<net.minecraft.server.players.NameAndId> createUnknownProfile(java.lang.String);
+  public void resolveOfflineUsers(boolean);
+  public void add(net.minecraft.server.players.NameAndId);
+  private net.minecraft.server.players.CachedUserNameToIdResolver$GameProfileInfo addInternal(net.minecraft.server.players.NameAndId);
+  private long getNextOperation();
+  public java.util.Optional<net.minecraft.server.players.NameAndId> get(java.lang.String);
+  public java.util.Optional<net.minecraft.server.players.NameAndId> get(java.util.UUID);
+  private static java.text.DateFormat createDateFormat();
+  private java.util.List<net.minecraft.server.players.CachedUserNameToIdResolver$GameProfileInfo> load();
+  public void save();
+  private java.util.stream.Stream<net.minecraft.server.players.CachedUserNameToIdResolver$GameProfileInfo> getTopMRUProfiles(int);
+  private static com.google.gson.JsonElement writeGameProfile(net.minecraft.server.players.CachedUserNameToIdResolver$GameProfileInfo, java.text.DateFormat);
+  private static java.util.Optional<net.minecraft.server.players.CachedUserNameToIdResolver$GameProfileInfo> readGameProfile(com.google.gson.JsonElement, java.text.DateFormat);
+  private static void lambda$save$0(com.google.gson.JsonArray, java.text.DateFormat, net.minecraft.server.players.CachedUserNameToIdResolver$GameProfileInfo);
+  private static void lambda$load$0(java.text.DateFormat, java.util.List, com.google.gson.JsonElement);
+  static {};
+}
+Compiled from "IpBanList.java"
+public class net.minecraft.server.players.IpBanList extends net.minecraft.server.players.StoredUserList<java.lang.String, net.minecraft.server.players.IpBanListEntry> {
+  public net.minecraft.server.players.IpBanList(java.io.File, net.minecraft.server.notifications.NotificationService);
+  protected net.minecraft.server.players.StoredUserEntry<java.lang.String> createEntry(com.google.gson.JsonObject);
+  public boolean isBanned(java.net.SocketAddress);
+  public boolean isBanned(java.lang.String);
+  public net.minecraft.server.players.IpBanListEntry get(java.net.SocketAddress);
+  private java.lang.String getIpFromAddress(java.net.SocketAddress);
+  public boolean add(net.minecraft.server.players.IpBanListEntry);
+  public boolean remove(java.lang.String);
+  public void clear();
+  public boolean remove(java.lang.Object);
+  public boolean add(net.minecraft.server.players.StoredUserEntry);
+}
+Compiled from "IpBanListEntry.java"
+public class net.minecraft.server.players.IpBanListEntry extends net.minecraft.server.players.BanListEntry<java.lang.String> {
+  public net.minecraft.server.players.IpBanListEntry(java.lang.String);
+  public net.minecraft.server.players.IpBanListEntry(java.lang.String, java.util.Date, java.lang.String, java.util.Date, java.lang.String);
+  public net.minecraft.network.chat.Component getDisplayName();
+  public net.minecraft.server.players.IpBanListEntry(com.google.gson.JsonObject);
+  private static java.lang.String createIpInfo(com.google.gson.JsonObject);
+  protected void serialize(com.google.gson.JsonObject);
+}
+Compiled from "NameAndId.java"
+public final class net.minecraft.server.players.NameAndId extends java.lang.Record {
+  private final java.util.UUID id;
+  private final java.lang.String name;
+  public static final com.mojang.serialization.Codec<net.minecraft.server.players.NameAndId> CODEC;
+  public net.minecraft.server.players.NameAndId(com.mojang.authlib.GameProfile);
+  public net.minecraft.server.players.NameAndId(com.mojang.authlib.yggdrasil.response.NameAndId);
+  public net.minecraft.server.players.NameAndId(java.util.UUID, java.lang.String);
+  public static net.minecraft.server.players.NameAndId fromJson(com.google.gson.JsonObject);
+  public void appendTo(com.google.gson.JsonObject);
+  public static net.minecraft.server.players.NameAndId createOffline(java.lang.String);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.UUID id();
+  public java.lang.String name();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "OldUsersConverter.java"
+class net.minecraft.server.players.OldUsersConverter$1 implements com.mojang.authlib.ProfileLookupCallback {
+  final net.minecraft.server.MinecraftServer val$server;
+  final java.util.Map val$userMap;
+  final net.minecraft.server.players.UserBanList val$bans;
+  net.minecraft.server.players.OldUsersConverter$1();
+  public void onProfileLookupSucceeded(java.lang.String, java.util.UUID);
+  public void onProfileLookupFailed(java.lang.String, java.lang.Exception);
+}
+Compiled from "OldUsersConverter.java"
+class net.minecraft.server.players.OldUsersConverter$2 implements com.mojang.authlib.ProfileLookupCallback {
+  final net.minecraft.server.MinecraftServer val$server;
+  final net.minecraft.server.players.ServerOpList val$opsList;
+  net.minecraft.server.players.OldUsersConverter$2();
+  public void onProfileLookupSucceeded(java.lang.String, java.util.UUID);
+  public void onProfileLookupFailed(java.lang.String, java.lang.Exception);
+}
+Compiled from "OldUsersConverter.java"
+class net.minecraft.server.players.OldUsersConverter$3 implements com.mojang.authlib.ProfileLookupCallback {
+  final net.minecraft.server.MinecraftServer val$server;
+  final net.minecraft.server.players.UserWhiteList val$whitelist;
+  net.minecraft.server.players.OldUsersConverter$3();
+  public void onProfileLookupSucceeded(java.lang.String, java.util.UUID);
+  public void onProfileLookupFailed(java.lang.String, java.lang.Exception);
+}
+Compiled from "OldUsersConverter.java"
+class net.minecraft.server.players.OldUsersConverter$4 implements com.mojang.authlib.ProfileLookupCallback {
+  final net.minecraft.server.MinecraftServer val$server;
+  final java.util.List val$profiles;
+  net.minecraft.server.players.OldUsersConverter$4();
+  public void onProfileLookupSucceeded(java.lang.String, java.util.UUID);
+  public void onProfileLookupFailed(java.lang.String, java.lang.Exception);
+}
+Compiled from "OldUsersConverter.java"
+class net.minecraft.server.players.OldUsersConverter$5 implements com.mojang.authlib.ProfileLookupCallback {
+  final net.minecraft.server.dedicated.DedicatedServer val$server;
+  final java.io.File val$worldNewPlayerDirectory;
+  final java.io.File val$unknownPlayerDirectory;
+  final java.io.File val$worldPlayerDirectory;
+  final java.lang.String[] val$names;
+  net.minecraft.server.players.OldUsersConverter$5();
+  public void onProfileLookupSucceeded(java.lang.String, java.util.UUID);
+  public void onProfileLookupFailed(java.lang.String, java.lang.Exception);
+  private void movePlayerFile(java.io.File, java.lang.String, java.lang.String);
+  private java.lang.String getFileNameForProfile(java.lang.String);
+}
+Compiled from "OldUsersConverter.java"
+class net.minecraft.server.players.OldUsersConverter$ConversionError extends java.lang.RuntimeException {
+  private net.minecraft.server.players.OldUsersConverter$ConversionError(java.lang.String, java.lang.Throwable);
+  private net.minecraft.server.players.OldUsersConverter$ConversionError(java.lang.String);
+}
+Compiled from "OldUsersConverter.java"
+public class net.minecraft.server.players.OldUsersConverter {
+  private static final org.slf4j.Logger LOGGER;
+  public static final java.io.File OLD_IPBANLIST;
+  public static final java.io.File OLD_USERBANLIST;
+  public static final java.io.File OLD_OPLIST;
+  public static final java.io.File OLD_WHITELIST;
+  public net.minecraft.server.players.OldUsersConverter();
+  private static java.util.List<java.lang.String> readOldListFormat(java.io.File, java.util.Map<java.lang.String, java.lang.String[]>) throws java.io.IOException;
+  private static void lookupPlayers(net.minecraft.server.MinecraftServer, java.util.Collection<java.lang.String>, com.mojang.authlib.ProfileLookupCallback);
+  public static boolean convertUserBanlist(net.minecraft.server.MinecraftServer);
+  public static boolean convertIpBanlist(net.minecraft.server.MinecraftServer);
+  public static boolean convertOpsList(net.minecraft.server.MinecraftServer);
+  public static boolean convertWhiteList(net.minecraft.server.MinecraftServer);
+  public static java.util.UUID convertMobOwnerIfNecessary(net.minecraft.server.MinecraftServer, java.lang.String);
+  public static boolean convertPlayers(net.minecraft.server.dedicated.DedicatedServer);
+  private static void ensureDirectoryExists(java.io.File);
+  public static boolean areOldUserlistsRemoved();
+  private static void renameOldFile(java.io.File);
+  private static java.util.Date parseDate(java.lang.String, java.util.Date);
+  private static java.lang.String[] lambda$lookupPlayers$1(int);
+  private static boolean lambda$lookupPlayers$0(java.lang.String);
+  static {};
+}
+Compiled from "PlayerList.java"
+class net.minecraft.server.players.PlayerList$1 implements net.minecraft.world.level.border.BorderChangeListener {
+  final net.minecraft.server.level.ServerLevel val$level;
+  final net.minecraft.server.players.PlayerList this$0;
+  net.minecraft.server.players.PlayerList$1();
+  public void onSetSize(net.minecraft.world.level.border.WorldBorder, double);
+  public void onLerpSize(net.minecraft.world.level.border.WorldBorder, double, double, long, long);
+  public void onSetCenter(net.minecraft.world.level.border.WorldBorder, double, double);
+  public void onSetWarningTime(net.minecraft.world.level.border.WorldBorder, int);
+  public void onSetWarningBlocks(net.minecraft.world.level.border.WorldBorder, int);
+  public void onSetDamagePerBlock(net.minecraft.world.level.border.WorldBorder, double);
+  public void onSetSafeZone(net.minecraft.world.level.border.WorldBorder, double);
+}
+Compiled from "PlayerList.java"
+class net.minecraft.server.players.PlayerList$2 {
+  static final int[] $SwitchMap$net$minecraft$server$permissions$PermissionLevel;
+  static {};
+}
+Compiled from "PlayerList.java"
+public abstract class net.minecraft.server.players.PlayerList {
+  public static final java.io.File USERBANLIST_FILE;
+  public static final java.io.File IPBANLIST_FILE;
+  public static final java.io.File OPLIST_FILE;
+  public static final java.io.File WHITELIST_FILE;
+  public static final net.minecraft.network.chat.Component CHAT_FILTERED_FULL;
+  public static final net.minecraft.network.chat.Component DUPLICATE_LOGIN_DISCONNECT_MESSAGE;
+  private static final org.slf4j.Logger LOGGER;
+  private static final int SEND_PLAYER_INFO_INTERVAL;
+  private static final java.text.SimpleDateFormat BAN_DATE_FORMAT;
+  private final net.minecraft.server.MinecraftServer server;
+  private final java.util.List<net.minecraft.server.level.ServerPlayer> players;
+  private final java.util.Map<java.util.UUID, net.minecraft.server.level.ServerPlayer> playersByUUID;
+  private final net.minecraft.server.players.UserBanList bans;
+  private final net.minecraft.server.players.IpBanList ipBans;
+  private final net.minecraft.server.players.ServerOpList ops;
+  private final net.minecraft.server.players.UserWhiteList whitelist;
+  private final java.util.Map<java.util.UUID, net.minecraft.stats.ServerStatsCounter> stats;
+  private final java.util.Map<java.util.UUID, net.minecraft.server.PlayerAdvancements> advancements;
+  private final net.minecraft.world.level.storage.PlayerDataStorage playerIo;
+  private final net.minecraft.core.LayeredRegistryAccess<net.minecraft.server.RegistryLayer> registries;
+  private int viewDistance;
+  private int simulationDistance;
+  private boolean allowCommandsForAllPlayers;
+  private int sendAllPlayerInfoIn;
+  public net.minecraft.server.players.PlayerList(net.minecraft.server.MinecraftServer, net.minecraft.core.LayeredRegistryAccess<net.minecraft.server.RegistryLayer>, net.minecraft.world.level.storage.PlayerDataStorage, net.minecraft.server.notifications.NotificationService);
+  public void placeNewPlayer(net.minecraft.network.Connection, net.minecraft.server.level.ServerPlayer, net.minecraft.server.network.CommonListenerCookie);
+  protected void updateEntireScoreboard(net.minecraft.server.ServerScoreboard, net.minecraft.server.level.ServerPlayer);
+  public void addWorldborderListener(net.minecraft.server.level.ServerLevel);
+  public java.util.Optional<net.minecraft.nbt.CompoundTag> loadPlayerData(net.minecraft.server.players.NameAndId);
+  protected void save(net.minecraft.server.level.ServerPlayer);
+  public void remove(net.minecraft.server.level.ServerPlayer);
+  public net.minecraft.network.chat.Component canPlayerLogin(java.net.SocketAddress, net.minecraft.server.players.NameAndId);
+  public boolean disconnectAllPlayersWithProfile(java.util.UUID);
+  public net.minecraft.server.level.ServerPlayer respawn(net.minecraft.server.level.ServerPlayer, boolean, net.minecraft.world.entity.Entity$RemovalReason);
+  public void sendActivePlayerEffects(net.minecraft.server.level.ServerPlayer);
+  public void sendActiveEffects(net.minecraft.world.entity.LivingEntity, net.minecraft.server.network.ServerGamePacketListenerImpl);
+  public void sendPlayerPermissionLevel(net.minecraft.server.level.ServerPlayer);
+  public void tick();
+  public void broadcastAll(net.minecraft.network.protocol.Packet<?>);
+  public void broadcastAll(net.minecraft.network.protocol.Packet<?>, net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level>);
+  public void broadcastSystemToTeam(net.minecraft.world.entity.player.Player, net.minecraft.network.chat.Component);
+  public void broadcastSystemToAllExceptTeam(net.minecraft.world.entity.player.Player, net.minecraft.network.chat.Component);
+  public java.lang.String[] getPlayerNamesArray();
+  public net.minecraft.server.players.UserBanList getBans();
+  public net.minecraft.server.players.IpBanList getIpBans();
+  public void op(net.minecraft.server.players.NameAndId);
+  public void op(net.minecraft.server.players.NameAndId, java.util.Optional<net.minecraft.server.permissions.LevelBasedPermissionSet>, java.util.Optional<java.lang.Boolean>);
+  public void deop(net.minecraft.server.players.NameAndId);
+  private void sendPlayerPermissionLevel(net.minecraft.server.level.ServerPlayer, net.minecraft.server.permissions.LevelBasedPermissionSet);
+  public boolean isWhiteListed(net.minecraft.server.players.NameAndId);
+  public boolean isOp(net.minecraft.server.players.NameAndId);
+  public net.minecraft.server.level.ServerPlayer getPlayerByName(java.lang.String);
+  public void broadcast(net.minecraft.world.entity.player.Player, double, double, double, double, net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level>, net.minecraft.network.protocol.Packet<?>);
+  public void saveAll();
+  public net.minecraft.server.players.UserWhiteList getWhiteList();
+  public java.lang.String[] getWhiteListNames();
+  public net.minecraft.server.players.ServerOpList getOps();
+  public java.lang.String[] getOpNames();
+  public void reloadWhiteList();
+  public void sendLevelInfo(net.minecraft.server.level.ServerPlayer, net.minecraft.server.level.ServerLevel);
+  public void sendAllPlayerInfo(net.minecraft.server.level.ServerPlayer);
+  public int getPlayerCount();
+  public int getMaxPlayers();
+  public boolean isUsingWhitelist();
+  public java.util.List<net.minecraft.server.level.ServerPlayer> getPlayersWithAddress(java.lang.String);
+  public int getViewDistance();
+  public int getSimulationDistance();
+  public net.minecraft.server.MinecraftServer getServer();
+  public void setAllowCommandsForAllPlayers(boolean);
+  public void removeAll();
+  public void broadcastSystemMessage(net.minecraft.network.chat.Component, boolean);
+  public void broadcastSystemMessage(net.minecraft.network.chat.Component, java.util.function.Function<net.minecraft.server.level.ServerPlayer, net.minecraft.network.chat.Component>, boolean);
+  public void broadcastChatMessage(net.minecraft.network.chat.PlayerChatMessage, net.minecraft.commands.CommandSourceStack, net.minecraft.network.chat.ChatType$Bound);
+  public void broadcastChatMessage(net.minecraft.network.chat.PlayerChatMessage, net.minecraft.server.level.ServerPlayer, net.minecraft.network.chat.ChatType$Bound);
+  private void broadcastChatMessage(net.minecraft.network.chat.PlayerChatMessage, java.util.function.Predicate<net.minecraft.server.level.ServerPlayer>, net.minecraft.server.level.ServerPlayer, net.minecraft.network.chat.ChatType$Bound);
+  private boolean verifyChatTrusted(net.minecraft.network.chat.PlayerChatMessage);
+  public net.minecraft.stats.ServerStatsCounter getPlayerStats(net.minecraft.world.entity.player.Player);
+  private java.nio.file.Path locateStatsFile(com.mojang.authlib.GameProfile);
+  public net.minecraft.server.PlayerAdvancements getPlayerAdvancements(net.minecraft.server.level.ServerPlayer);
+  public void setViewDistance(int);
+  public void setSimulationDistance(int);
+  public java.util.List<net.minecraft.server.level.ServerPlayer> getPlayers();
+  public java.util.Map<java.util.UUID, net.minecraft.server.level.ServerPlayer> getPlayersByUUID();
+  public net.minecraft.server.level.ServerPlayer getPlayer(java.util.UUID);
+  public net.minecraft.server.level.ServerPlayer getPlayer(java.lang.String);
+  public boolean canBypassPlayerLimit(net.minecraft.server.players.NameAndId);
+  public void reloadResources();
+  public boolean isAllowCommandsForAllPlayers();
+  private net.minecraft.stats.ServerStatsCounter lambda$getPlayerStats$0(com.mojang.authlib.GameProfile, java.util.UUID);
+  private static net.minecraft.network.chat.Component lambda$broadcastSystemMessage$0(net.minecraft.network.chat.Component, net.minecraft.server.level.ServerPlayer);
+  private static void lambda$remove$0(net.minecraft.world.entity.Entity);
+  static {};
+}
+Compiled from "ProfileResolver.java"
+class net.minecraft.server.players.ProfileResolver$Cached$1 extends com.google.common.cache.CacheLoader<java.util.UUID, java.util.Optional<com.mojang.authlib.GameProfile>> {
+  final com.mojang.authlib.minecraft.MinecraftSessionService val$sessionService;
+  net.minecraft.server.players.ProfileResolver$Cached$1(net.minecraft.server.players.ProfileResolver$Cached, com.mojang.authlib.minecraft.MinecraftSessionService);
+  public java.util.Optional<com.mojang.authlib.GameProfile> load(java.util.UUID);
+  public java.lang.Object load(java.lang.Object) throws java.lang.Exception;
+}
+Compiled from "ProfileResolver.java"
+class net.minecraft.server.players.ProfileResolver$Cached$2 extends com.google.common.cache.CacheLoader<java.lang.String, java.util.Optional<com.mojang.authlib.GameProfile>> {
+  final net.minecraft.server.players.UserNameToIdResolver val$nameToIdCache;
+  final net.minecraft.server.players.ProfileResolver$Cached this$0;
+  net.minecraft.server.players.ProfileResolver$Cached$2(net.minecraft.server.players.ProfileResolver$Cached, net.minecraft.server.players.UserNameToIdResolver);
+  public java.util.Optional<com.mojang.authlib.GameProfile> load(java.lang.String);
+  public java.lang.Object load(java.lang.Object) throws java.lang.Exception;
+  private java.util.Optional lambda$load$0(net.minecraft.server.players.NameAndId);
+}
+Compiled from "ProfileResolver.java"
+public class net.minecraft.server.players.ProfileResolver$Cached implements net.minecraft.server.players.ProfileResolver {
+  private final com.google.common.cache.LoadingCache<java.lang.String, java.util.Optional<com.mojang.authlib.GameProfile>> profileCacheByName;
+  private final com.google.common.cache.LoadingCache<java.util.UUID, java.util.Optional<com.mojang.authlib.GameProfile>> profileCacheById;
+  public net.minecraft.server.players.ProfileResolver$Cached(com.mojang.authlib.minecraft.MinecraftSessionService, net.minecraft.server.players.UserNameToIdResolver);
+  public java.util.Optional<com.mojang.authlib.GameProfile> fetchByName(java.lang.String);
+  public java.util.Optional<com.mojang.authlib.GameProfile> fetchById(java.util.UUID);
+}
+Compiled from "ProfileResolver.java"
+public interface net.minecraft.server.players.ProfileResolver {
+  public abstract java.util.Optional<com.mojang.authlib.GameProfile> fetchByName(java.lang.String);
+  public abstract java.util.Optional<com.mojang.authlib.GameProfile> fetchById(java.util.UUID);
+  public default java.util.Optional<com.mojang.authlib.GameProfile> fetchByNameOrId(com.mojang.datafixers.util.Either<java.lang.String, java.util.UUID>);
+}
+Compiled from "ServerOpList.java"
+public class net.minecraft.server.players.ServerOpList extends net.minecraft.server.players.StoredUserList<net.minecraft.server.players.NameAndId, net.minecraft.server.players.ServerOpListEntry> {
+  public net.minecraft.server.players.ServerOpList(java.io.File, net.minecraft.server.notifications.NotificationService);
+  protected net.minecraft.server.players.StoredUserEntry<net.minecraft.server.players.NameAndId> createEntry(com.google.gson.JsonObject);
+  public java.lang.String[] getUserList();
+  public boolean add(net.minecraft.server.players.ServerOpListEntry);
+  public boolean remove(net.minecraft.server.players.NameAndId);
+  public void clear();
+  public boolean canBypassPlayerLimit(net.minecraft.server.players.NameAndId);
+  protected java.lang.String getKeyForUser(net.minecraft.server.players.NameAndId);
+  protected java.lang.String getKeyForUser(java.lang.Object);
+  public boolean remove(java.lang.Object);
+  public boolean add(net.minecraft.server.players.StoredUserEntry);
+  private static java.lang.String[] lambda$getUserList$0(int);
+}
+Compiled from "ServerOpListEntry.java"
+public class net.minecraft.server.players.ServerOpListEntry extends net.minecraft.server.players.StoredUserEntry<net.minecraft.server.players.NameAndId> {
+  private final net.minecraft.server.permissions.LevelBasedPermissionSet permissions;
+  private final boolean bypassesPlayerLimit;
+  public net.minecraft.server.players.ServerOpListEntry(net.minecraft.server.players.NameAndId, net.minecraft.server.permissions.LevelBasedPermissionSet, boolean);
+  public net.minecraft.server.players.ServerOpListEntry(com.google.gson.JsonObject);
+  public net.minecraft.server.permissions.LevelBasedPermissionSet permissions();
+  public boolean getBypassesPlayerLimit();
+  protected void serialize(com.google.gson.JsonObject);
+}
+Compiled from "SleepStatus.java"
+public class net.minecraft.server.players.SleepStatus {
+  private int activePlayers;
+  private int sleepingPlayers;
+  public net.minecraft.server.players.SleepStatus();
+  public boolean areEnoughSleeping(int);
+  public boolean areEnoughDeepSleeping(int, java.util.List<net.minecraft.server.level.ServerPlayer>);
+  public int sleepersNeeded(int);
+  public void removeAllSleepers();
+  public int amountSleeping();
+  public boolean update(java.util.List<net.minecraft.server.level.ServerPlayer>);
+}
+Compiled from "StoredUserEntry.java"
+public abstract class net.minecraft.server.players.StoredUserEntry<T> {
+  private final T user;
+  public net.minecraft.server.players.StoredUserEntry(T);
+  public T getUser();
+  public boolean hasExpired();
+  protected abstract void serialize(com.google.gson.JsonObject);
+}
+Compiled from "StoredUserList.java"
+public abstract class net.minecraft.server.players.StoredUserList<K, V extends net.minecraft.server.players.StoredUserEntry<K>> {
+  private static final org.slf4j.Logger LOGGER;
+  private static final com.google.gson.Gson GSON;
+  private final java.io.File file;
+  private final java.util.Map<java.lang.String, V> map;
+  protected final net.minecraft.server.notifications.NotificationService notificationService;
+  public net.minecraft.server.players.StoredUserList(java.io.File, net.minecraft.server.notifications.NotificationService);
+  public java.io.File getFile();
+  public boolean add(V);
+  public V get(K);
+  public boolean remove(K);
+  public boolean remove(net.minecraft.server.players.StoredUserEntry<K>);
+  public void clear();
+  public java.lang.String[] getUserList();
+  public boolean isEmpty();
+  protected java.lang.String getKeyForUser(K);
+  protected boolean contains(K);
+  private void removeExpired();
+  protected abstract net.minecraft.server.players.StoredUserEntry<K> createEntry(com.google.gson.JsonObject);
+  public java.util.Collection<V> getEntries();
+  public void save() throws java.io.IOException;
+  public void load() throws java.io.IOException;
+  private static com.google.gson.JsonObject lambda$save$0(net.minecraft.server.players.StoredUserEntry);
+  static {};
+}
+Compiled from "UserBanList.java"
+public class net.minecraft.server.players.UserBanList extends net.minecraft.server.players.StoredUserList<net.minecraft.server.players.NameAndId, net.minecraft.server.players.UserBanListEntry> {
+  public net.minecraft.server.players.UserBanList(java.io.File, net.minecraft.server.notifications.NotificationService);
+  protected net.minecraft.server.players.StoredUserEntry<net.minecraft.server.players.NameAndId> createEntry(com.google.gson.JsonObject);
+  public boolean isBanned(net.minecraft.server.players.NameAndId);
+  public java.lang.String[] getUserList();
+  protected java.lang.String getKeyForUser(net.minecraft.server.players.NameAndId);
+  public boolean add(net.minecraft.server.players.UserBanListEntry);
+  public boolean remove(net.minecraft.server.players.NameAndId);
+  public void clear();
+  protected java.lang.String getKeyForUser(java.lang.Object);
+  public boolean remove(java.lang.Object);
+  public boolean add(net.minecraft.server.players.StoredUserEntry);
+  private static java.lang.String[] lambda$getUserList$0(int);
+}
+Compiled from "UserBanListEntry.java"
+public class net.minecraft.server.players.UserBanListEntry extends net.minecraft.server.players.BanListEntry<net.minecraft.server.players.NameAndId> {
+  private static final net.minecraft.network.chat.Component MESSAGE_UNKNOWN_USER;
+  public net.minecraft.server.players.UserBanListEntry(net.minecraft.server.players.NameAndId);
+  public net.minecraft.server.players.UserBanListEntry(net.minecraft.server.players.NameAndId, java.util.Date, java.lang.String, java.util.Date, java.lang.String);
+  public net.minecraft.server.players.UserBanListEntry(com.google.gson.JsonObject);
+  protected void serialize(com.google.gson.JsonObject);
+  public net.minecraft.network.chat.Component getDisplayName();
+  static {};
+}
+Compiled from "UserNameToIdResolver.java"
+public interface net.minecraft.server.players.UserNameToIdResolver {
+  public abstract void add(net.minecraft.server.players.NameAndId);
+  public abstract java.util.Optional<net.minecraft.server.players.NameAndId> get(java.lang.String);
+  public abstract java.util.Optional<net.minecraft.server.players.NameAndId> get(java.util.UUID);
+  public abstract void resolveOfflineUsers(boolean);
+  public abstract void save();
+}
+Compiled from "UserWhiteList.java"
+public class net.minecraft.server.players.UserWhiteList extends net.minecraft.server.players.StoredUserList<net.minecraft.server.players.NameAndId, net.minecraft.server.players.UserWhiteListEntry> {
+  public net.minecraft.server.players.UserWhiteList(java.io.File, net.minecraft.server.notifications.NotificationService);
+  protected net.minecraft.server.players.StoredUserEntry<net.minecraft.server.players.NameAndId> createEntry(com.google.gson.JsonObject);
+  public boolean isWhiteListed(net.minecraft.server.players.NameAndId);
+  public boolean add(net.minecraft.server.players.UserWhiteListEntry);
+  public boolean remove(net.minecraft.server.players.NameAndId);
+  public void clear();
+  public java.lang.String[] getUserList();
+  protected java.lang.String getKeyForUser(net.minecraft.server.players.NameAndId);
+  protected java.lang.String getKeyForUser(java.lang.Object);
+  public boolean remove(java.lang.Object);
+  public boolean add(net.minecraft.server.players.StoredUserEntry);
+  private static java.lang.String[] lambda$getUserList$0(int);
+}
+Compiled from "UserWhiteListEntry.java"
+public class net.minecraft.server.players.UserWhiteListEntry extends net.minecraft.server.players.StoredUserEntry<net.minecraft.server.players.NameAndId> {
+  public net.minecraft.server.players.UserWhiteListEntry(net.minecraft.server.players.NameAndId);
+  public net.minecraft.server.players.UserWhiteListEntry(com.google.gson.JsonObject);
+  protected void serialize(com.google.gson.JsonObject);
+}
+Compiled from "package-info.java"
+interface net.minecraft.server.players.package-info {
+}

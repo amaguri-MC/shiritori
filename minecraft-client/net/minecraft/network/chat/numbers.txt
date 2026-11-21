@@ -1,0 +1,88 @@
+Compiled from "BlankFormat.java"
+class net.minecraft.network.chat.numbers.BlankFormat$1 implements net.minecraft.network.chat.numbers.NumberFormatType<net.minecraft.network.chat.numbers.BlankFormat> {
+  private static final com.mojang.serialization.MapCodec<net.minecraft.network.chat.numbers.BlankFormat> CODEC;
+  private static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.network.chat.numbers.BlankFormat> STREAM_CODEC;
+  net.minecraft.network.chat.numbers.BlankFormat$1();
+  public com.mojang.serialization.MapCodec<net.minecraft.network.chat.numbers.BlankFormat> mapCodec();
+  public net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.network.chat.numbers.BlankFormat> streamCodec();
+  static {};
+}
+Compiled from "BlankFormat.java"
+public class net.minecraft.network.chat.numbers.BlankFormat implements net.minecraft.network.chat.numbers.NumberFormat {
+  public static final net.minecraft.network.chat.numbers.BlankFormat INSTANCE;
+  public static final net.minecraft.network.chat.numbers.NumberFormatType<net.minecraft.network.chat.numbers.BlankFormat> TYPE;
+  private net.minecraft.network.chat.numbers.BlankFormat();
+  public net.minecraft.network.chat.MutableComponent format(int);
+  public net.minecraft.network.chat.numbers.NumberFormatType<net.minecraft.network.chat.numbers.BlankFormat> type();
+  static {};
+}
+Compiled from "FixedFormat.java"
+class net.minecraft.network.chat.numbers.FixedFormat$1 implements net.minecraft.network.chat.numbers.NumberFormatType<net.minecraft.network.chat.numbers.FixedFormat> {
+  private static final com.mojang.serialization.MapCodec<net.minecraft.network.chat.numbers.FixedFormat> CODEC;
+  private static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.network.chat.numbers.FixedFormat> STREAM_CODEC;
+  net.minecraft.network.chat.numbers.FixedFormat$1();
+  public com.mojang.serialization.MapCodec<net.minecraft.network.chat.numbers.FixedFormat> mapCodec();
+  public net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.network.chat.numbers.FixedFormat> streamCodec();
+  static {};
+}
+Compiled from "FixedFormat.java"
+public final class net.minecraft.network.chat.numbers.FixedFormat extends java.lang.Record implements net.minecraft.network.chat.numbers.NumberFormat {
+  private final net.minecraft.network.chat.Component value;
+  public static final net.minecraft.network.chat.numbers.NumberFormatType<net.minecraft.network.chat.numbers.FixedFormat> TYPE;
+  public net.minecraft.network.chat.numbers.FixedFormat(net.minecraft.network.chat.Component);
+  public net.minecraft.network.chat.MutableComponent format(int);
+  public net.minecraft.network.chat.numbers.NumberFormatType<net.minecraft.network.chat.numbers.FixedFormat> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.network.chat.Component value();
+  static {};
+}
+Compiled from "NumberFormat.java"
+public interface net.minecraft.network.chat.numbers.NumberFormat {
+  public abstract net.minecraft.network.chat.MutableComponent format(int);
+  public abstract net.minecraft.network.chat.numbers.NumberFormatType<? extends net.minecraft.network.chat.numbers.NumberFormat> type();
+}
+Compiled from "NumberFormatType.java"
+public interface net.minecraft.network.chat.numbers.NumberFormatType<T extends net.minecraft.network.chat.numbers.NumberFormat> {
+  public abstract com.mojang.serialization.MapCodec<T> mapCodec();
+  public abstract net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, T> streamCodec();
+}
+Compiled from "NumberFormatTypes.java"
+public class net.minecraft.network.chat.numbers.NumberFormatTypes {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.network.chat.numbers.NumberFormat> MAP_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.network.chat.numbers.NumberFormat> CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.network.chat.numbers.NumberFormat> STREAM_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, java.util.Optional<net.minecraft.network.chat.numbers.NumberFormat>> OPTIONAL_STREAM_CODEC;
+  public net.minecraft.network.chat.numbers.NumberFormatTypes();
+  public static net.minecraft.network.chat.numbers.NumberFormatType<?> bootstrap(net.minecraft.core.Registry<net.minecraft.network.chat.numbers.NumberFormatType<?>>);
+  static {};
+}
+Compiled from "StyledFormat.java"
+class net.minecraft.network.chat.numbers.StyledFormat$1 implements net.minecraft.network.chat.numbers.NumberFormatType<net.minecraft.network.chat.numbers.StyledFormat> {
+  private static final com.mojang.serialization.MapCodec<net.minecraft.network.chat.numbers.StyledFormat> CODEC;
+  private static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.network.chat.numbers.StyledFormat> STREAM_CODEC;
+  net.minecraft.network.chat.numbers.StyledFormat$1();
+  public com.mojang.serialization.MapCodec<net.minecraft.network.chat.numbers.StyledFormat> mapCodec();
+  public net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.network.chat.numbers.StyledFormat> streamCodec();
+  static {};
+}
+Compiled from "StyledFormat.java"
+public final class net.minecraft.network.chat.numbers.StyledFormat extends java.lang.Record implements net.minecraft.network.chat.numbers.NumberFormat {
+  private final net.minecraft.network.chat.Style style;
+  public static final net.minecraft.network.chat.numbers.NumberFormatType<net.minecraft.network.chat.numbers.StyledFormat> TYPE;
+  public static final net.minecraft.network.chat.numbers.StyledFormat NO_STYLE;
+  public static final net.minecraft.network.chat.numbers.StyledFormat SIDEBAR_DEFAULT;
+  public static final net.minecraft.network.chat.numbers.StyledFormat PLAYER_LIST_DEFAULT;
+  public net.minecraft.network.chat.numbers.StyledFormat(net.minecraft.network.chat.Style);
+  public net.minecraft.network.chat.MutableComponent format(int);
+  public net.minecraft.network.chat.numbers.NumberFormatType<net.minecraft.network.chat.numbers.StyledFormat> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.network.chat.Style style();
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.network.chat.numbers.package-info {
+}

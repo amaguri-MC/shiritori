@@ -1,0 +1,92 @@
+Compiled from "PrepareSpawnTask.java"
+interface net.minecraft.server.network.config.PrepareSpawnTask$State {
+}
+Compiled from "SynchronizeRegistriesTask.java"
+public class net.minecraft.server.network.config.SynchronizeRegistriesTask implements net.minecraft.server.network.ConfigurationTask {
+  public static final net.minecraft.server.network.ConfigurationTask$Type TYPE;
+  private final java.util.List<net.minecraft.server.packs.repository.KnownPack> requestedPacks;
+  private final net.minecraft.core.LayeredRegistryAccess<net.minecraft.server.RegistryLayer> registries;
+  public net.minecraft.server.network.config.SynchronizeRegistriesTask(java.util.List<net.minecraft.server.packs.repository.KnownPack>, net.minecraft.core.LayeredRegistryAccess<net.minecraft.server.RegistryLayer>);
+  public void start(java.util.function.Consumer<net.minecraft.network.protocol.Packet<?>>);
+  private void sendRegistries(java.util.function.Consumer<net.minecraft.network.protocol.Packet<?>>, java.util.Set<net.minecraft.server.packs.repository.KnownPack>);
+  public void handleResponse(java.util.List<net.minecraft.server.packs.repository.KnownPack>, java.util.function.Consumer<net.minecraft.network.protocol.Packet<?>>);
+  public net.minecraft.server.network.ConfigurationTask$Type type();
+  private static void lambda$sendRegistries$0(java.util.function.Consumer, net.minecraft.resources.ResourceKey, java.util.List);
+  static {};
+}
+Compiled from "JoinWorldTask.java"
+public class net.minecraft.server.network.config.JoinWorldTask implements net.minecraft.server.network.ConfigurationTask {
+  public static final net.minecraft.server.network.ConfigurationTask$Type TYPE;
+  public net.minecraft.server.network.config.JoinWorldTask();
+  public void start(java.util.function.Consumer<net.minecraft.network.protocol.Packet<?>>);
+  public net.minecraft.server.network.ConfigurationTask$Type type();
+  static {};
+}
+Compiled from "PrepareSpawnTask.java"
+final class net.minecraft.server.network.config.PrepareSpawnTask$Ready implements net.minecraft.server.network.config.PrepareSpawnTask$State {
+  private final net.minecraft.server.level.ServerLevel spawnLevel;
+  private final net.minecraft.world.phys.Vec3 spawnPosition;
+  private final net.minecraft.world.phys.Vec2 spawnAngle;
+  final net.minecraft.server.network.config.PrepareSpawnTask this$0;
+  private net.minecraft.server.network.config.PrepareSpawnTask$Ready(net.minecraft.server.network.config.PrepareSpawnTask, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3, net.minecraft.world.phys.Vec2);
+  public void keepAlive();
+  public net.minecraft.server.level.ServerPlayer spawn(net.minecraft.network.Connection, net.minecraft.server.network.CommonListenerCookie);
+  private static void lambda$spawn$1(net.minecraft.server.level.ServerPlayer, net.minecraft.world.level.storage.ValueInput);
+  private net.minecraft.world.level.storage.ValueInput lambda$spawn$0(net.minecraft.util.ProblemReporter$ScopedCollector, net.minecraft.nbt.CompoundTag);
+}
+Compiled from "PrepareSpawnTask.java"
+final class net.minecraft.server.network.config.PrepareSpawnTask$Preparing implements net.minecraft.server.network.config.PrepareSpawnTask$State {
+  private final net.minecraft.server.level.ServerLevel spawnLevel;
+  private final java.util.concurrent.CompletableFuture<net.minecraft.world.phys.Vec3> spawnPosition;
+  private final net.minecraft.world.phys.Vec2 spawnAngle;
+  private java.util.concurrent.CompletableFuture<?> chunkLoadFuture;
+  private final net.minecraft.server.level.ChunkLoadCounter chunkLoadCounter;
+  final net.minecraft.server.network.config.PrepareSpawnTask this$0;
+  private net.minecraft.server.network.config.PrepareSpawnTask$Preparing(net.minecraft.server.level.ServerLevel, java.util.concurrent.CompletableFuture<net.minecraft.world.phys.Vec3>, net.minecraft.world.phys.Vec2);
+  public void cancel();
+  public net.minecraft.server.network.config.PrepareSpawnTask$Ready tick();
+  private void lambda$tick$0(net.minecraft.world.level.ChunkPos);
+}
+Compiled from "ServerResourcePackConfigurationTask.java"
+public class net.minecraft.server.network.config.ServerResourcePackConfigurationTask implements net.minecraft.server.network.ConfigurationTask {
+  public static final net.minecraft.server.network.ConfigurationTask$Type TYPE;
+  private final net.minecraft.server.MinecraftServer$ServerResourcePackInfo info;
+  public net.minecraft.server.network.config.ServerResourcePackConfigurationTask(net.minecraft.server.MinecraftServer$ServerResourcePackInfo);
+  public void start(java.util.function.Consumer<net.minecraft.network.protocol.Packet<?>>);
+  public net.minecraft.server.network.ConfigurationTask$Type type();
+  static {};
+}
+Compiled from "PrepareSpawnTask.java"
+public class net.minecraft.server.network.config.PrepareSpawnTask implements net.minecraft.server.network.ConfigurationTask {
+  private static final org.slf4j.Logger LOGGER;
+  public static final net.minecraft.server.network.ConfigurationTask$Type TYPE;
+  public static final int PREPARE_CHUNK_RADIUS;
+  private final net.minecraft.server.MinecraftServer server;
+  private final net.minecraft.server.players.NameAndId nameAndId;
+  private final net.minecraft.server.level.progress.LevelLoadListener loadListener;
+  private net.minecraft.server.network.config.PrepareSpawnTask$State state;
+  public net.minecraft.server.network.config.PrepareSpawnTask(net.minecraft.server.MinecraftServer, net.minecraft.server.players.NameAndId);
+  public void start(java.util.function.Consumer<net.minecraft.network.protocol.Packet<?>>);
+  public boolean tick();
+  public net.minecraft.server.level.ServerPlayer spawnPlayer(net.minecraft.network.Connection, net.minecraft.server.network.CommonListenerCookie);
+  public void keepAlive();
+  public void close();
+  public net.minecraft.server.network.ConfigurationTask$Type type();
+  private static java.util.concurrent.CompletableFuture lambda$start$3(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.storage.LevelData$RespawnData);
+  private net.minecraft.server.level.ServerLevel lambda$start$2(net.minecraft.world.level.storage.LevelData$RespawnData);
+  private static java.util.Optional lambda$start$1(net.minecraft.world.level.storage.ValueInput);
+  private net.minecraft.world.level.storage.ValueInput lambda$start$0(net.minecraft.util.ProblemReporter$ScopedCollector, net.minecraft.nbt.CompoundTag);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.server.network.config.package-info {
+}
+Compiled from "ServerCodeOfConductConfigurationTask.java"
+public class net.minecraft.server.network.config.ServerCodeOfConductConfigurationTask implements net.minecraft.server.network.ConfigurationTask {
+  public static final net.minecraft.server.network.ConfigurationTask$Type TYPE;
+  private final java.util.function.Supplier<java.lang.String> codeOfConduct;
+  public net.minecraft.server.network.config.ServerCodeOfConductConfigurationTask(java.util.function.Supplier<java.lang.String>);
+  public void start(java.util.function.Consumer<net.minecraft.network.protocol.Packet<?>>);
+  public net.minecraft.server.network.ConfigurationTask$Type type();
+  static {};
+}

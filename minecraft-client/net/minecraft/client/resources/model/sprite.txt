@@ -1,0 +1,215 @@
+Compiled from "AtlasManager.java"
+public final class net.minecraft.client.resources.model.sprite.AtlasManager$AtlasConfig extends java.lang.Record {
+  private final net.minecraft.resources.Identifier textureId;
+  private final net.minecraft.resources.Identifier definitionLocation;
+  private final boolean createMipmaps;
+  private final java.util.Set<net.minecraft.server.packs.metadata.MetadataSectionType<?>> additionalMetadata;
+  public net.minecraft.client.resources.model.sprite.AtlasManager$AtlasConfig(net.minecraft.resources.Identifier, net.minecraft.resources.Identifier, boolean);
+  public net.minecraft.client.resources.model.sprite.AtlasManager$AtlasConfig(net.minecraft.resources.Identifier, net.minecraft.resources.Identifier, boolean, java.util.Set<net.minecraft.server.packs.metadata.MetadataSectionType<?>>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier textureId();
+  public net.minecraft.resources.Identifier definitionLocation();
+  public boolean createMipmaps();
+  public java.util.Set<net.minecraft.server.packs.metadata.MetadataSectionType<?>> additionalMetadata();
+}
+Compiled from "AtlasManager.java"
+final class net.minecraft.client.resources.model.sprite.AtlasManager$AtlasEntry extends java.lang.Record implements java.lang.AutoCloseable {
+  private final net.minecraft.client.renderer.texture.TextureAtlas atlas;
+  private final net.minecraft.client.resources.model.sprite.AtlasManager$AtlasConfig config;
+  private net.minecraft.client.resources.model.sprite.AtlasManager$AtlasEntry(net.minecraft.client.renderer.texture.TextureAtlas, net.minecraft.client.resources.model.sprite.AtlasManager$AtlasConfig);
+  public void close();
+  private java.util.concurrent.CompletableFuture<net.minecraft.client.renderer.texture.SpriteLoader$Preparations> scheduleLoad(net.minecraft.server.packs.resources.ResourceManager, java.util.concurrent.Executor, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.renderer.texture.TextureAtlas atlas();
+  public net.minecraft.client.resources.model.sprite.AtlasManager$AtlasConfig config();
+}
+Compiled from "AtlasManager.java"
+final class net.minecraft.client.resources.model.sprite.AtlasManager$PendingStitch extends java.lang.Record {
+  private final net.minecraft.client.resources.model.sprite.AtlasManager$AtlasEntry entry;
+  private final java.util.concurrent.CompletableFuture<net.minecraft.client.renderer.texture.SpriteLoader$Preparations> preparations;
+  private net.minecraft.client.resources.model.sprite.AtlasManager$PendingStitch(net.minecraft.client.resources.model.sprite.AtlasManager$AtlasEntry, java.util.concurrent.CompletableFuture<net.minecraft.client.renderer.texture.SpriteLoader$Preparations>);
+  public void joinAndUpload(java.util.Map<net.minecraft.client.resources.model.sprite.SpriteId, net.minecraft.client.renderer.texture.TextureAtlasSprite>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.resources.model.sprite.AtlasManager$AtlasEntry entry();
+  public java.util.concurrent.CompletableFuture<net.minecraft.client.renderer.texture.SpriteLoader$Preparations> preparations();
+  private void lambda$joinAndUpload$0(java.util.Map, net.minecraft.resources.Identifier, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+}
+Compiled from "AtlasManager.java"
+public class net.minecraft.client.resources.model.sprite.AtlasManager$PendingStitchResults {
+  private final java.util.List<net.minecraft.client.resources.model.sprite.AtlasManager$PendingStitch> pendingStitches;
+  private final java.util.Map<net.minecraft.resources.Identifier, java.util.concurrent.CompletableFuture<net.minecraft.client.renderer.texture.SpriteLoader$Preparations>> stitchFuturesById;
+  private final java.util.concurrent.CompletableFuture<?> allReadyToUpload;
+  private net.minecraft.client.resources.model.sprite.AtlasManager$PendingStitchResults(java.util.List<net.minecraft.client.resources.model.sprite.AtlasManager$PendingStitch>, java.util.Map<net.minecraft.resources.Identifier, java.util.concurrent.CompletableFuture<net.minecraft.client.renderer.texture.SpriteLoader$Preparations>>, java.util.concurrent.CompletableFuture<?>);
+  public java.util.Map<net.minecraft.client.resources.model.sprite.SpriteId, net.minecraft.client.renderer.texture.TextureAtlasSprite> joinAndUpload();
+  public java.util.concurrent.CompletableFuture<net.minecraft.client.renderer.texture.SpriteLoader$Preparations> get(net.minecraft.resources.Identifier);
+  private static void lambda$joinAndUpload$0(java.util.Map, net.minecraft.client.resources.model.sprite.AtlasManager$PendingStitch);
+}
+Compiled from "AtlasManager.java"
+public class net.minecraft.client.resources.model.sprite.AtlasManager implements java.lang.AutoCloseable,net.minecraft.server.packs.resources.PreparableReloadListener,net.minecraft.client.resources.model.sprite.SpriteGetter {
+  private static final org.slf4j.Logger LOGGER;
+  private static final java.util.List<net.minecraft.client.resources.model.sprite.AtlasManager$AtlasConfig> KNOWN_ATLASES;
+  public static final net.minecraft.server.packs.resources.PreparableReloadListener$StateKey<net.minecraft.client.resources.model.sprite.AtlasManager$PendingStitchResults> PENDING_STITCH;
+  private final java.util.Map<net.minecraft.resources.Identifier, net.minecraft.client.resources.model.sprite.AtlasManager$AtlasEntry> atlasByTexture;
+  private final java.util.Map<net.minecraft.resources.Identifier, net.minecraft.client.resources.model.sprite.AtlasManager$AtlasEntry> atlasById;
+  private java.util.Map<net.minecraft.client.resources.model.sprite.SpriteId, net.minecraft.client.renderer.texture.TextureAtlasSprite> spriteLookup;
+  private int maxMipmapLevels;
+  public net.minecraft.client.resources.model.sprite.AtlasManager(net.minecraft.client.renderer.texture.TextureManager, int);
+  public net.minecraft.client.renderer.texture.TextureAtlas getAtlasOrThrow(net.minecraft.resources.Identifier);
+  public void forEach(java.util.function.BiConsumer<net.minecraft.resources.Identifier, net.minecraft.client.renderer.texture.TextureAtlas>);
+  public void updateMaxMipLevel(int);
+  public void close();
+  public net.minecraft.client.renderer.texture.TextureAtlasSprite get(net.minecraft.client.resources.model.sprite.SpriteId);
+  public void prepareSharedState(net.minecraft.server.packs.resources.PreparableReloadListener$SharedState);
+  public java.util.concurrent.CompletableFuture<java.lang.Void> reload(net.minecraft.server.packs.resources.PreparableReloadListener$SharedState, java.util.concurrent.Executor, net.minecraft.server.packs.resources.PreparableReloadListener$PreparationBarrier, java.util.concurrent.Executor);
+  private void updateSpriteMaps(net.minecraft.client.resources.model.sprite.AtlasManager$PendingStitchResults);
+  private static void lambda$updateSpriteMaps$0(java.util.Map, net.minecraft.client.resources.model.sprite.SpriteId, net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  private void lambda$reload$2(net.minecraft.client.resources.model.sprite.AtlasManager$PendingStitchResults, java.lang.Object);
+  private void lambda$reload$0(net.minecraft.server.packs.resources.ResourceManager, java.util.concurrent.Executor, net.minecraft.client.resources.model.sprite.AtlasManager$PendingStitch);
+  private static void lambda$reload$1(net.minecraft.client.resources.model.sprite.AtlasManager$PendingStitch, net.minecraft.client.renderer.texture.SpriteLoader$Preparations, java.lang.Throwable);
+  private static java.util.concurrent.CompletableFuture[] lambda$prepareSharedState$1(int);
+  private static void lambda$prepareSharedState$0(java.util.Map, java.util.List, java.util.List, net.minecraft.resources.Identifier, net.minecraft.client.resources.model.sprite.AtlasManager$AtlasEntry);
+  private static void lambda$forEach$0(java.util.function.BiConsumer, net.minecraft.resources.Identifier, net.minecraft.client.resources.model.sprite.AtlasManager$AtlasEntry);
+  static {};
+}
+Compiled from "Material.java"
+public final class net.minecraft.client.resources.model.sprite.Material$Baked extends java.lang.Record {
+  private final net.minecraft.client.renderer.texture.TextureAtlasSprite sprite;
+  private final boolean forceTranslucent;
+  public net.minecraft.client.resources.model.sprite.Material$Baked(net.minecraft.client.renderer.texture.TextureAtlasSprite, boolean);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.renderer.texture.TextureAtlasSprite sprite();
+  public boolean forceTranslucent();
+}
+Compiled from "Material.java"
+public final class net.minecraft.client.resources.model.sprite.Material extends java.lang.Record {
+  private final net.minecraft.resources.Identifier sprite;
+  private final boolean forceTranslucent;
+  private static final com.mojang.serialization.Codec<net.minecraft.client.resources.model.sprite.Material> SIMPLE_CODEC;
+  private static final com.mojang.serialization.Codec<net.minecraft.client.resources.model.sprite.Material> FULL_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.resources.model.sprite.Material> CODEC;
+  public net.minecraft.client.resources.model.sprite.Material(net.minecraft.resources.Identifier);
+  public net.minecraft.client.resources.model.sprite.Material(net.minecraft.resources.Identifier, boolean);
+  public net.minecraft.client.resources.model.sprite.Material withForceTranslucent(boolean);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier sprite();
+  public boolean forceTranslucent();
+  private static com.mojang.datafixers.util.Either lambda$static$1(net.minecraft.client.resources.model.sprite.Material);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "MaterialBaker.java"
+public abstract class net.minecraft.client.resources.model.sprite.MaterialBaker {
+  private static final org.slf4j.Logger LOGGER;
+  private final net.minecraft.client.resources.model.sprite.Material$Baked missingSprite;
+  private final net.minecraft.client.resources.model.sprite.Material$Baked missingSpriteForceTranslucent;
+  private final com.google.common.collect.Multimap<java.lang.String, net.minecraft.resources.Identifier> missingSprites;
+  private final com.google.common.collect.Multimap<java.lang.String, java.lang.String> missingReferences;
+  private final java.util.Map<net.minecraft.client.resources.model.sprite.Material, net.minecraft.client.resources.model.sprite.Material$Baked> bakedMaterials;
+  private final java.util.function.Function<net.minecraft.client.resources.model.sprite.Material, net.minecraft.client.resources.model.sprite.Material$Baked> bakerFunction;
+  public net.minecraft.client.resources.model.sprite.MaterialBaker(net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  public net.minecraft.client.resources.model.sprite.Material$Baked replacementForMissingMaterial(net.minecraft.client.resources.model.sprite.Material);
+  public net.minecraft.client.resources.model.sprite.Material$Baked get(net.minecraft.client.resources.model.sprite.Material, net.minecraft.client.resources.model.ModelDebugName);
+  protected abstract net.minecraft.client.resources.model.sprite.Material$Baked bake(net.minecraft.client.resources.model.sprite.Material);
+  protected static net.minecraft.client.resources.model.sprite.Material$Baked bakeForAtlas(net.minecraft.client.resources.model.sprite.Material, net.minecraft.client.renderer.texture.SpriteLoader$Preparations);
+  public net.minecraft.client.resources.model.sprite.Material$Baked resolveSlot(net.minecraft.client.resources.model.sprite.TextureSlots, java.lang.String, net.minecraft.client.resources.model.ModelDebugName);
+  public net.minecraft.client.resources.model.sprite.Material$Baked reportMissingReference(java.lang.String, net.minecraft.client.resources.model.ModelDebugName);
+  public void logMissingTextures();
+  private static void lambda$logMissingTextures$2(java.lang.String, java.util.Collection);
+  private static java.lang.String lambda$logMissingTextures$3(java.lang.String);
+  private static void lambda$logMissingTextures$0(java.lang.String, java.util.Collection);
+  private static java.lang.String lambda$logMissingTextures$1(net.minecraft.resources.Identifier);
+  static {};
+}
+Compiled from "SpriteGetter.java"
+public interface net.minecraft.client.resources.model.sprite.SpriteGetter {
+  public abstract net.minecraft.client.renderer.texture.TextureAtlasSprite get(net.minecraft.client.resources.model.sprite.SpriteId);
+}
+Compiled from "SpriteId.java"
+public final class net.minecraft.client.resources.model.sprite.SpriteId extends java.lang.Record {
+  private final net.minecraft.resources.Identifier atlasLocation;
+  private final net.minecraft.resources.Identifier texture;
+  public net.minecraft.client.resources.model.sprite.SpriteId(net.minecraft.resources.Identifier, net.minecraft.resources.Identifier);
+  public net.minecraft.client.renderer.rendertype.RenderType renderType(java.util.function.Function<net.minecraft.resources.Identifier, net.minecraft.client.renderer.rendertype.RenderType>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier atlasLocation();
+  public net.minecraft.resources.Identifier texture();
+}
+Compiled from "TextureSlots.java"
+public class net.minecraft.client.resources.model.sprite.TextureSlots$Data$Builder {
+  private final java.util.Map<java.lang.String, net.minecraft.client.resources.model.sprite.TextureSlots$SlotContents> textureMap;
+  public net.minecraft.client.resources.model.sprite.TextureSlots$Data$Builder();
+  public net.minecraft.client.resources.model.sprite.TextureSlots$Data$Builder addReference(java.lang.String, java.lang.String);
+  public net.minecraft.client.resources.model.sprite.TextureSlots$Data$Builder addTexture(java.lang.String, net.minecraft.client.resources.model.sprite.Material);
+  public net.minecraft.client.resources.model.sprite.TextureSlots$Data build();
+}
+Compiled from "TextureSlots.java"
+public final class net.minecraft.client.resources.model.sprite.TextureSlots$Data extends java.lang.Record {
+  private final java.util.Map<java.lang.String, net.minecraft.client.resources.model.sprite.TextureSlots$SlotContents> values;
+  public static final net.minecraft.client.resources.model.sprite.TextureSlots$Data EMPTY;
+  public net.minecraft.client.resources.model.sprite.TextureSlots$Data(java.util.Map<java.lang.String, net.minecraft.client.resources.model.sprite.TextureSlots$SlotContents>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Map<java.lang.String, net.minecraft.client.resources.model.sprite.TextureSlots$SlotContents> values();
+  static {};
+}
+Compiled from "TextureSlots.java"
+final class net.minecraft.client.resources.model.sprite.TextureSlots$Reference extends java.lang.Record implements net.minecraft.client.resources.model.sprite.TextureSlots$SlotContents {
+  private final java.lang.String target;
+  private net.minecraft.client.resources.model.sprite.TextureSlots$Reference(java.lang.String);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String target();
+}
+Compiled from "TextureSlots.java"
+public class net.minecraft.client.resources.model.sprite.TextureSlots$Resolver {
+  private static final org.slf4j.Logger LOGGER;
+  private final java.util.List<net.minecraft.client.resources.model.sprite.TextureSlots$Data> entries;
+  public net.minecraft.client.resources.model.sprite.TextureSlots$Resolver();
+  public net.minecraft.client.resources.model.sprite.TextureSlots$Resolver addLast(net.minecraft.client.resources.model.sprite.TextureSlots$Data);
+  public net.minecraft.client.resources.model.sprite.TextureSlots$Resolver addFirst(net.minecraft.client.resources.model.sprite.TextureSlots$Data);
+  public net.minecraft.client.resources.model.sprite.TextureSlots resolve(net.minecraft.client.resources.model.ModelDebugName);
+  private static java.lang.String lambda$resolve$1(java.util.Map$Entry);
+  private static void lambda$resolve$0(it.unimi.dsi.fastutil.objects.Object2ObjectMap, it.unimi.dsi.fastutil.objects.Object2ObjectMap, java.lang.String, net.minecraft.client.resources.model.sprite.TextureSlots$SlotContents);
+  static {};
+}
+Compiled from "TextureSlots.java"
+public interface net.minecraft.client.resources.model.sprite.TextureSlots$SlotContents {
+}
+Compiled from "TextureSlots.java"
+final class net.minecraft.client.resources.model.sprite.TextureSlots$Value extends java.lang.Record implements net.minecraft.client.resources.model.sprite.TextureSlots$SlotContents {
+  private final net.minecraft.client.resources.model.sprite.Material material;
+  private net.minecraft.client.resources.model.sprite.TextureSlots$Value(net.minecraft.client.resources.model.sprite.Material);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.resources.model.sprite.Material material();
+}
+Compiled from "TextureSlots.java"
+public class net.minecraft.client.resources.model.sprite.TextureSlots {
+  public static final net.minecraft.client.resources.model.sprite.TextureSlots EMPTY;
+  private static final char REFERENCE_CHAR;
+  private final java.util.Map<java.lang.String, net.minecraft.client.resources.model.sprite.Material> resolvedValues;
+  private net.minecraft.client.resources.model.sprite.TextureSlots(java.util.Map<java.lang.String, net.minecraft.client.resources.model.sprite.Material>);
+  public net.minecraft.client.resources.model.sprite.Material getMaterial(java.lang.String);
+  private static boolean isTextureReference(java.lang.String);
+  public static net.minecraft.client.resources.model.sprite.TextureSlots$Data parseTextureMap(com.google.gson.JsonObject);
+  private static void parseEntry(java.lang.String, com.google.gson.JsonElement, net.minecraft.client.resources.model.sprite.TextureSlots$Data$Builder);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.resources.model.sprite.package-info {
+}

@@ -1,0 +1,64 @@
+Compiled from "HandshakePacketTypes.java"
+public class net.minecraft.network.protocol.handshake.HandshakePacketTypes {
+  public static final net.minecraft.network.protocol.PacketType<net.minecraft.network.protocol.handshake.ClientIntentionPacket> CLIENT_INTENTION;
+  public net.minecraft.network.protocol.handshake.HandshakePacketTypes();
+  private static <T extends net.minecraft.network.protocol.Packet<net.minecraft.network.protocol.handshake.ServerHandshakePacketListener>> net.minecraft.network.protocol.PacketType<T> createServerbound(java.lang.String);
+  static {};
+}
+Compiled from "HandshakeProtocols.java"
+public class net.minecraft.network.protocol.handshake.HandshakeProtocols {
+  public static final net.minecraft.network.protocol.SimpleUnboundProtocol<net.minecraft.network.protocol.handshake.ServerHandshakePacketListener, net.minecraft.network.FriendlyByteBuf> SERVERBOUND_TEMPLATE;
+  public static final net.minecraft.network.ProtocolInfo<net.minecraft.network.protocol.handshake.ServerHandshakePacketListener> SERVERBOUND;
+  public net.minecraft.network.protocol.handshake.HandshakeProtocols();
+  private static void lambda$static$0(net.minecraft.network.protocol.ProtocolInfoBuilder);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.network.protocol.handshake.package-info {
+}
+Compiled from "ClientIntentionPacket.java"
+public final class net.minecraft.network.protocol.handshake.ClientIntentionPacket extends java.lang.Record implements net.minecraft.network.protocol.Packet<net.minecraft.network.protocol.handshake.ServerHandshakePacketListener> {
+  private final int protocolVersion;
+  private final java.lang.String hostName;
+  private final int port;
+  private final net.minecraft.network.protocol.handshake.ClientIntent intention;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.FriendlyByteBuf, net.minecraft.network.protocol.handshake.ClientIntentionPacket> STREAM_CODEC;
+  private static final int MAX_HOST_LENGTH;
+  public net.minecraft.network.protocol.handshake.ClientIntentionPacket(int, java.lang.String, int, net.minecraft.network.protocol.handshake.ClientIntent);
+  private net.minecraft.network.protocol.handshake.ClientIntentionPacket(net.minecraft.network.FriendlyByteBuf);
+  private void write(net.minecraft.network.FriendlyByteBuf);
+  public net.minecraft.network.protocol.PacketType<net.minecraft.network.protocol.handshake.ClientIntentionPacket> type();
+  public void handle(net.minecraft.network.protocol.handshake.ServerHandshakePacketListener);
+  public boolean isTerminal();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int protocolVersion();
+  public java.lang.String hostName();
+  public int port();
+  public net.minecraft.network.protocol.handshake.ClientIntent intention();
+  public void handle(net.minecraft.network.PacketListener);
+  static {};
+}
+Compiled from "ClientIntent.java"
+public final class net.minecraft.network.protocol.handshake.ClientIntent extends java.lang.Enum<net.minecraft.network.protocol.handshake.ClientIntent> {
+  public static final net.minecraft.network.protocol.handshake.ClientIntent STATUS;
+  public static final net.minecraft.network.protocol.handshake.ClientIntent LOGIN;
+  public static final net.minecraft.network.protocol.handshake.ClientIntent TRANSFER;
+  private static final int STATUS_ID;
+  private static final int LOGIN_ID;
+  private static final int TRANSFER_ID;
+  private static final net.minecraft.network.protocol.handshake.ClientIntent[] $VALUES;
+  public static net.minecraft.network.protocol.handshake.ClientIntent[] values();
+  public static net.minecraft.network.protocol.handshake.ClientIntent valueOf(java.lang.String);
+  private net.minecraft.network.protocol.handshake.ClientIntent();
+  public static net.minecraft.network.protocol.handshake.ClientIntent byId(int);
+  public int id();
+  private static net.minecraft.network.protocol.handshake.ClientIntent[] $values();
+  static {};
+}
+Compiled from "ServerHandshakePacketListener.java"
+public interface net.minecraft.network.protocol.handshake.ServerHandshakePacketListener extends net.minecraft.network.protocol.game.ServerPacketListener {
+  public default net.minecraft.network.ConnectionProtocol protocol();
+  public abstract void handleIntention(net.minecraft.network.protocol.handshake.ClientIntentionPacket);
+}

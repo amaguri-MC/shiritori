@@ -1,0 +1,342 @@
+Compiled from "AdvancementTree.java"
+public class net.minecraft.advancements.AdvancementTree {
+  private static final org.slf4j.Logger LOGGER;
+  private final java.util.Map<net.minecraft.resources.Identifier, net.minecraft.advancements.AdvancementNode> nodes;
+  private final java.util.Set<net.minecraft.advancements.AdvancementNode> roots;
+  private final java.util.Set<net.minecraft.advancements.AdvancementNode> tasks;
+  private net.minecraft.advancements.AdvancementTree$Listener listener;
+  public net.minecraft.advancements.AdvancementTree();
+  private void remove(net.minecraft.advancements.AdvancementNode);
+  public void remove(java.util.Set<net.minecraft.resources.Identifier>);
+  public void addAll(java.util.Collection<net.minecraft.advancements.AdvancementHolder>);
+  private boolean tryInsert(net.minecraft.advancements.AdvancementHolder);
+  public void clear();
+  public java.lang.Iterable<net.minecraft.advancements.AdvancementNode> roots();
+  public java.util.Collection<net.minecraft.advancements.AdvancementNode> nodes();
+  public net.minecraft.advancements.AdvancementNode get(net.minecraft.resources.Identifier);
+  public net.minecraft.advancements.AdvancementNode get(net.minecraft.advancements.AdvancementHolder);
+  public void setListener(net.minecraft.advancements.AdvancementTree$Listener);
+  static {};
+}
+Compiled from "CriterionTriggerInstance.java"
+public interface net.minecraft.advancements.CriterionTriggerInstance {
+  public abstract void validate(net.minecraft.world.level.storage.loot.ValidationContextSource);
+}
+Compiled from "TreeNodePosition.java"
+public class net.minecraft.advancements.TreeNodePosition {
+  private final net.minecraft.advancements.AdvancementNode node;
+  private final net.minecraft.advancements.TreeNodePosition parent;
+  private final net.minecraft.advancements.TreeNodePosition previousSibling;
+  private final int childIndex;
+  private final java.util.List<net.minecraft.advancements.TreeNodePosition> children;
+  private net.minecraft.advancements.TreeNodePosition ancestor;
+  private net.minecraft.advancements.TreeNodePosition thread;
+  private int x;
+  private float y;
+  private float mod;
+  private float change;
+  private float shift;
+  public net.minecraft.advancements.TreeNodePosition(net.minecraft.advancements.AdvancementNode, net.minecraft.advancements.TreeNodePosition, net.minecraft.advancements.TreeNodePosition, int, int);
+  private net.minecraft.advancements.TreeNodePosition addChild(net.minecraft.advancements.AdvancementNode, net.minecraft.advancements.TreeNodePosition);
+  private void firstWalk();
+  private float secondWalk(float, int, float);
+  private void thirdWalk(float);
+  private void executeShifts();
+  private net.minecraft.advancements.TreeNodePosition previousOrThread();
+  private net.minecraft.advancements.TreeNodePosition nextOrThread();
+  private net.minecraft.advancements.TreeNodePosition apportion(net.minecraft.advancements.TreeNodePosition);
+  private void moveSubtree(net.minecraft.advancements.TreeNodePosition, float);
+  private net.minecraft.advancements.TreeNodePosition getAncestor(net.minecraft.advancements.TreeNodePosition, net.minecraft.advancements.TreeNodePosition);
+  private void finalizePosition();
+  public static void run(net.minecraft.advancements.AdvancementNode);
+  private void lambda$finalizePosition$0(net.minecraft.advancements.DisplayInfo);
+}
+Compiled from "AdvancementRequirements.java"
+public final class net.minecraft.advancements.AdvancementRequirements extends java.lang.Record {
+  private final java.util.List<java.util.List<java.lang.String>> requirements;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.AdvancementRequirements> CODEC;
+  public static final net.minecraft.advancements.AdvancementRequirements EMPTY;
+  public net.minecraft.advancements.AdvancementRequirements(net.minecraft.network.FriendlyByteBuf);
+  public net.minecraft.advancements.AdvancementRequirements(java.util.List<java.util.List<java.lang.String>>);
+  public void write(net.minecraft.network.FriendlyByteBuf);
+  public static net.minecraft.advancements.AdvancementRequirements allOf(java.util.Collection<java.lang.String>);
+  public static net.minecraft.advancements.AdvancementRequirements anyOf(java.util.Collection<java.lang.String>);
+  public int size();
+  public boolean test(java.util.function.Predicate<java.lang.String>);
+  public int count(java.util.function.Predicate<java.lang.String>);
+  private static boolean anyMatch(java.util.List<java.lang.String>, java.util.function.Predicate<java.lang.String>);
+  public com.mojang.serialization.DataResult<net.minecraft.advancements.AdvancementRequirements> validate(java.util.Set<java.lang.String>);
+  public boolean isEmpty();
+  public java.lang.String toString();
+  public java.util.Set<java.lang.String> names();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<java.util.List<java.lang.String>> requirements();
+  private static java.lang.String lambda$validate$1(java.util.Set, java.util.Set);
+  private static java.lang.String lambda$validate$0();
+  private static void lambda$write$0(net.minecraft.network.FriendlyByteBuf, java.util.List);
+  private static java.util.List lambda$new$0(net.minecraft.network.FriendlyByteBuf);
+  static {};
+}
+Compiled from "AdvancementHolder.java"
+public final class net.minecraft.advancements.AdvancementHolder extends java.lang.Record {
+  private final net.minecraft.resources.Identifier id;
+  private final net.minecraft.advancements.Advancement value;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.advancements.AdvancementHolder> STREAM_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, java.util.List<net.minecraft.advancements.AdvancementHolder>> LIST_STREAM_CODEC;
+  public net.minecraft.advancements.AdvancementHolder(net.minecraft.resources.Identifier, net.minecraft.advancements.Advancement);
+  public boolean equals(java.lang.Object);
+  public int hashCode();
+  public java.lang.String toString();
+  public net.minecraft.resources.Identifier id();
+  public net.minecraft.advancements.Advancement value();
+  static {};
+}
+Compiled from "AdvancementTree.java"
+public interface net.minecraft.advancements.AdvancementTree$Listener {
+  public abstract void onAddAdvancementRoot(net.minecraft.advancements.AdvancementNode);
+  public abstract void onRemoveAdvancementRoot(net.minecraft.advancements.AdvancementNode);
+  public abstract void onAddAdvancementTask(net.minecraft.advancements.AdvancementNode);
+  public abstract void onRemoveAdvancementTask(net.minecraft.advancements.AdvancementNode);
+  public abstract void onAdvancementsCleared();
+}
+Compiled from "AdvancementProgress.java"
+public class net.minecraft.advancements.AdvancementProgress implements java.lang.Comparable<net.minecraft.advancements.AdvancementProgress> {
+  private static final java.time.format.DateTimeFormatter OBTAINED_TIME_FORMAT;
+  private static final com.mojang.serialization.Codec<java.time.Instant> OBTAINED_TIME_CODEC;
+  private static final com.mojang.serialization.Codec<java.util.Map<java.lang.String, net.minecraft.advancements.CriterionProgress>> CRITERIA_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.AdvancementProgress> CODEC;
+  private final java.util.Map<java.lang.String, net.minecraft.advancements.CriterionProgress> criteria;
+  private net.minecraft.advancements.AdvancementRequirements requirements;
+  private net.minecraft.advancements.AdvancementProgress(java.util.Map<java.lang.String, net.minecraft.advancements.CriterionProgress>);
+  public net.minecraft.advancements.AdvancementProgress();
+  public void update(net.minecraft.advancements.AdvancementRequirements);
+  public boolean isDone();
+  public boolean hasProgress();
+  public boolean grantProgress(java.lang.String);
+  public boolean revokeProgress(java.lang.String);
+  public java.lang.String toString();
+  public void serializeToNetwork(net.minecraft.network.FriendlyByteBuf);
+  public static net.minecraft.advancements.AdvancementProgress fromNetwork(net.minecraft.network.FriendlyByteBuf);
+  public net.minecraft.advancements.CriterionProgress getCriterion(java.lang.String);
+  private boolean isCriterionDone(java.lang.String);
+  public float getPercent();
+  public net.minecraft.network.chat.Component getProgressText();
+  private int countCompletedRequirements();
+  public java.lang.Iterable<java.lang.String> getRemainingCriteria();
+  public java.lang.Iterable<java.lang.String> getCompletedCriteria();
+  public java.time.Instant getFirstProgressDate();
+  public int compareTo(net.minecraft.advancements.AdvancementProgress);
+  public int compareTo(java.lang.Object);
+  private static void lambda$serializeToNetwork$0(net.minecraft.network.FriendlyByteBuf, net.minecraft.advancements.CriterionProgress);
+  private static boolean lambda$update$0(java.util.Set, java.util.Map$Entry);
+  private static com.mojang.datafixers.kinds.App lambda$static$5(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.advancements.AdvancementProgress lambda$static$7(java.util.Map, java.lang.Boolean);
+  private static java.util.Map lambda$static$6(net.minecraft.advancements.AdvancementProgress);
+  private static java.util.Map lambda$static$2(java.util.Map);
+  private static java.time.Instant lambda$static$4(java.util.Map$Entry);
+  private static boolean lambda$static$3(java.util.Map$Entry);
+  private static java.util.Map lambda$static$1(java.util.Map);
+  private static java.time.temporal.TemporalAccessor lambda$static$0(java.time.Instant);
+  static {};
+}
+Compiled from "Advancement.java"
+public class net.minecraft.advancements.Advancement$Builder {
+  private java.util.Optional<net.minecraft.resources.Identifier> parent;
+  private java.util.Optional<net.minecraft.advancements.DisplayInfo> display;
+  private net.minecraft.advancements.AdvancementRewards rewards;
+  private final com.google.common.collect.ImmutableMap$Builder<java.lang.String, net.minecraft.advancements.triggers.Criterion<?>> criteria;
+  private java.util.Optional<net.minecraft.advancements.AdvancementRequirements> requirements;
+  private net.minecraft.advancements.AdvancementRequirements$Strategy requirementsStrategy;
+  private boolean sendsTelemetryEvent;
+  public net.minecraft.advancements.Advancement$Builder();
+  public static net.minecraft.advancements.Advancement$Builder advancement();
+  public static net.minecraft.advancements.Advancement$Builder recipeAdvancement();
+  public net.minecraft.advancements.Advancement$Builder parent(net.minecraft.advancements.AdvancementHolder);
+  public net.minecraft.advancements.Advancement$Builder parent(net.minecraft.resources.Identifier);
+  public net.minecraft.advancements.Advancement$Builder display(net.minecraft.world.item.ItemStackTemplate, net.minecraft.network.chat.Component, net.minecraft.network.chat.Component, net.minecraft.resources.Identifier, net.minecraft.advancements.AdvancementType, boolean, boolean, boolean);
+  public net.minecraft.advancements.Advancement$Builder display(net.minecraft.world.level.ItemLike, net.minecraft.network.chat.Component, net.minecraft.network.chat.Component, net.minecraft.resources.Identifier, net.minecraft.advancements.AdvancementType, boolean, boolean, boolean);
+  public net.minecraft.advancements.Advancement$Builder display(net.minecraft.advancements.DisplayInfo);
+  public net.minecraft.advancements.Advancement$Builder rewards(net.minecraft.advancements.AdvancementRewards$Builder);
+  public net.minecraft.advancements.Advancement$Builder rewards(net.minecraft.advancements.AdvancementRewards);
+  public net.minecraft.advancements.Advancement$Builder addCriterion(java.lang.String, net.minecraft.advancements.triggers.Criterion<?>);
+  public net.minecraft.advancements.Advancement$Builder requirements(net.minecraft.advancements.AdvancementRequirements$Strategy);
+  public net.minecraft.advancements.Advancement$Builder requirements(net.minecraft.advancements.AdvancementRequirements);
+  public net.minecraft.advancements.Advancement$Builder sendsTelemetryEvent();
+  public net.minecraft.advancements.AdvancementHolder build(net.minecraft.resources.Identifier);
+  public net.minecraft.advancements.AdvancementHolder save(java.util.function.Consumer<net.minecraft.advancements.AdvancementHolder>, java.lang.String);
+  private net.minecraft.advancements.AdvancementRequirements lambda$build$0(java.util.Map);
+}
+Compiled from "DisplayInfo.java"
+public class net.minecraft.advancements.DisplayInfo {
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.DisplayInfo> CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.advancements.DisplayInfo> STREAM_CODEC;
+  private final net.minecraft.network.chat.Component title;
+  private final net.minecraft.network.chat.Component description;
+  private final net.minecraft.world.item.ItemStackTemplate icon;
+  private final java.util.Optional<net.minecraft.core.ClientAsset$ResourceTexture> background;
+  private final net.minecraft.advancements.AdvancementType type;
+  private final boolean showToast;
+  private final boolean announceChat;
+  private final boolean hidden;
+  private float x;
+  private float y;
+  public net.minecraft.advancements.DisplayInfo(net.minecraft.world.item.ItemStackTemplate, net.minecraft.network.chat.Component, net.minecraft.network.chat.Component, java.util.Optional<net.minecraft.core.ClientAsset$ResourceTexture>, net.minecraft.advancements.AdvancementType, boolean, boolean, boolean);
+  public void setLocation(float, float);
+  public net.minecraft.network.chat.Component getTitle();
+  public net.minecraft.network.chat.Component getDescription();
+  public net.minecraft.world.item.ItemStackTemplate getIcon();
+  public java.util.Optional<net.minecraft.core.ClientAsset$ResourceTexture> getBackground();
+  public net.minecraft.advancements.AdvancementType getType();
+  public float getX();
+  public float getY();
+  public boolean shouldShowToast();
+  public boolean shouldAnnounceChat();
+  public boolean isHidden();
+  private void serializeToNetwork(net.minecraft.network.RegistryFriendlyByteBuf);
+  private static net.minecraft.advancements.DisplayInfo fromNetwork(net.minecraft.network.RegistryFriendlyByteBuf);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "AdvancementNode.java"
+public class net.minecraft.advancements.AdvancementNode {
+  private final net.minecraft.advancements.AdvancementHolder holder;
+  private final net.minecraft.advancements.AdvancementNode parent;
+  private final java.util.Set<net.minecraft.advancements.AdvancementNode> children;
+  public net.minecraft.advancements.AdvancementNode(net.minecraft.advancements.AdvancementHolder, net.minecraft.advancements.AdvancementNode);
+  public net.minecraft.advancements.Advancement advancement();
+  public net.minecraft.advancements.AdvancementHolder holder();
+  public net.minecraft.advancements.AdvancementNode parent();
+  public net.minecraft.advancements.AdvancementNode root();
+  public static net.minecraft.advancements.AdvancementNode getRoot(net.minecraft.advancements.AdvancementNode);
+  public java.lang.Iterable<net.minecraft.advancements.AdvancementNode> children();
+  public void addChild(net.minecraft.advancements.AdvancementNode);
+  public boolean equals(java.lang.Object);
+  public int hashCode();
+  public java.lang.String toString();
+}
+Compiled from "AdvancementRequirements.java"
+public interface net.minecraft.advancements.AdvancementRequirements$Strategy {
+  public static final net.minecraft.advancements.AdvancementRequirements$Strategy AND;
+  public static final net.minecraft.advancements.AdvancementRequirements$Strategy OR;
+  public abstract net.minecraft.advancements.AdvancementRequirements create(java.util.Collection<java.lang.String>);
+  static {};
+}
+Compiled from "AdvancementRewards.java"
+public final class net.minecraft.advancements.AdvancementRewards extends java.lang.Record {
+  private final int experience;
+  private final java.util.List<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>> loot;
+  private final java.util.List<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>> recipes;
+  private final java.util.Optional<net.minecraft.commands.CacheableFunction> function;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.AdvancementRewards> CODEC;
+  public static final net.minecraft.advancements.AdvancementRewards EMPTY;
+  public net.minecraft.advancements.AdvancementRewards(int, java.util.List<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>>, java.util.List<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>>, java.util.Optional<net.minecraft.commands.CacheableFunction>);
+  public void grant(net.minecraft.server.level.ServerPlayer);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int experience();
+  public java.util.List<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>> loot();
+  public java.util.List<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>> recipes();
+  public java.util.Optional<net.minecraft.commands.CacheableFunction> function();
+  private static void lambda$grant$1(net.minecraft.server.MinecraftServer, net.minecraft.server.level.ServerPlayer, net.minecraft.commands.functions.CommandFunction);
+  private static java.util.Optional lambda$grant$0(net.minecraft.server.MinecraftServer, net.minecraft.commands.CacheableFunction);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "Advancement.java"
+public final class net.minecraft.advancements.Advancement extends java.lang.Record {
+  private final java.util.Optional<net.minecraft.resources.Identifier> parent;
+  private final java.util.Optional<net.minecraft.advancements.DisplayInfo> display;
+  private final net.minecraft.advancements.AdvancementRewards rewards;
+  private final java.util.Map<java.lang.String, net.minecraft.advancements.triggers.Criterion<?>> criteria;
+  private final net.minecraft.advancements.AdvancementRequirements requirements;
+  private final boolean sendsTelemetryEvent;
+  private final java.util.Optional<net.minecraft.network.chat.Component> name;
+  private static final com.mojang.serialization.Codec<java.util.Map<java.lang.String, net.minecraft.advancements.triggers.Criterion<?>>> CRITERIA_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.Advancement> CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.advancements.Advancement> STREAM_CODEC;
+  public net.minecraft.advancements.Advancement(java.util.Optional<net.minecraft.resources.Identifier>, java.util.Optional<net.minecraft.advancements.DisplayInfo>, net.minecraft.advancements.AdvancementRewards, java.util.Map<java.lang.String, net.minecraft.advancements.triggers.Criterion<?>>, net.minecraft.advancements.AdvancementRequirements, boolean);
+  public net.minecraft.advancements.Advancement(java.util.Optional<net.minecraft.resources.Identifier>, java.util.Optional<net.minecraft.advancements.DisplayInfo>, net.minecraft.advancements.AdvancementRewards, java.util.Map<java.lang.String, net.minecraft.advancements.triggers.Criterion<?>>, net.minecraft.advancements.AdvancementRequirements, boolean, java.util.Optional<net.minecraft.network.chat.Component>);
+  private static com.mojang.serialization.DataResult<net.minecraft.advancements.Advancement> validate(net.minecraft.advancements.Advancement);
+  private static net.minecraft.network.chat.Component decorateName(net.minecraft.advancements.DisplayInfo);
+  public static net.minecraft.network.chat.Component name(net.minecraft.advancements.AdvancementHolder);
+  private void write(net.minecraft.network.RegistryFriendlyByteBuf);
+  private static net.minecraft.advancements.Advancement read(net.minecraft.network.RegistryFriendlyByteBuf);
+  public boolean isRoot();
+  public void validate(net.minecraft.util.ProblemReporter, net.minecraft.core.HolderGetter$Provider);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Optional<net.minecraft.resources.Identifier> parent();
+  public java.util.Optional<net.minecraft.advancements.DisplayInfo> display();
+  public net.minecraft.advancements.AdvancementRewards rewards();
+  public java.util.Map<java.lang.String, net.minecraft.advancements.triggers.Criterion<?>> criteria();
+  public net.minecraft.advancements.AdvancementRequirements requirements();
+  public boolean sendsTelemetryEvent();
+  public java.util.Optional<net.minecraft.network.chat.Component> name();
+  private static void lambda$validate$1(net.minecraft.util.ProblemReporter, net.minecraft.core.HolderGetter$Provider, java.lang.String, net.minecraft.advancements.triggers.Criterion);
+  private static net.minecraft.network.chat.Component lambda$name$0(net.minecraft.advancements.AdvancementHolder);
+  private static net.minecraft.network.chat.Style lambda$decorateName$0(net.minecraft.network.chat.Component, net.minecraft.network.chat.Style);
+  private static net.minecraft.advancements.Advancement lambda$validate$0(net.minecraft.advancements.Advancement, net.minecraft.advancements.AdvancementRequirements);
+  private static com.mojang.datafixers.kinds.App lambda$static$2(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.advancements.Advancement lambda$static$4(java.util.Optional, java.util.Optional, net.minecraft.advancements.AdvancementRewards, java.util.Map, java.util.Optional, java.lang.Boolean);
+  private static net.minecraft.advancements.AdvancementRequirements lambda$static$5(java.util.Map);
+  private static java.util.Optional lambda$static$3(net.minecraft.advancements.Advancement);
+  private static com.mojang.serialization.DataResult lambda$static$0(java.util.Map);
+  private static java.lang.String lambda$static$1();
+  static {};
+}
+Compiled from "AdvancementType.java"
+public final class net.minecraft.advancements.AdvancementType extends java.lang.Enum<net.minecraft.advancements.AdvancementType> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.advancements.AdvancementType TASK;
+  public static final net.minecraft.advancements.AdvancementType CHALLENGE;
+  public static final net.minecraft.advancements.AdvancementType GOAL;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.AdvancementType> CODEC;
+  private final java.lang.String name;
+  private final net.minecraft.ChatFormatting chatColor;
+  private final net.minecraft.network.chat.Component displayName;
+  private static final net.minecraft.advancements.AdvancementType[] $VALUES;
+  public static net.minecraft.advancements.AdvancementType[] values();
+  public static net.minecraft.advancements.AdvancementType valueOf(java.lang.String);
+  private net.minecraft.advancements.AdvancementType(java.lang.String, net.minecraft.ChatFormatting);
+  public net.minecraft.ChatFormatting getChatColor();
+  public net.minecraft.network.chat.Component getDisplayName();
+  public java.lang.String getSerializedName();
+  public net.minecraft.network.chat.MutableComponent createAnnouncement(net.minecraft.advancements.AdvancementHolder, net.minecraft.server.level.ServerPlayer);
+  private static net.minecraft.advancements.AdvancementType[] $values();
+  static {};
+}
+Compiled from "CriterionProgress.java"
+public class net.minecraft.advancements.CriterionProgress {
+  private java.time.Instant obtained;
+  public net.minecraft.advancements.CriterionProgress();
+  public net.minecraft.advancements.CriterionProgress(java.time.Instant);
+  public boolean isDone();
+  public void grant();
+  public void revoke();
+  public java.time.Instant getObtained();
+  public java.lang.String toString();
+  public void serializeToNetwork(net.minecraft.network.FriendlyByteBuf);
+  public static net.minecraft.advancements.CriterionProgress fromNetwork(net.minecraft.network.FriendlyByteBuf);
+}
+Compiled from "AdvancementRewards.java"
+public class net.minecraft.advancements.AdvancementRewards$Builder {
+  private int experience;
+  private final com.google.common.collect.ImmutableList$Builder<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>> loot;
+  private final com.google.common.collect.ImmutableList$Builder<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>> recipes;
+  private java.util.Optional<net.minecraft.resources.Identifier> function;
+  public net.minecraft.advancements.AdvancementRewards$Builder();
+  public static net.minecraft.advancements.AdvancementRewards$Builder experience(int);
+  public net.minecraft.advancements.AdvancementRewards$Builder addExperience(int);
+  public static net.minecraft.advancements.AdvancementRewards$Builder loot(net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>);
+  public net.minecraft.advancements.AdvancementRewards$Builder addLootTable(net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>);
+  public static net.minecraft.advancements.AdvancementRewards$Builder recipe(net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>);
+  public net.minecraft.advancements.AdvancementRewards$Builder addRecipe(net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>);
+  public static net.minecraft.advancements.AdvancementRewards$Builder function(net.minecraft.resources.Identifier);
+  public net.minecraft.advancements.AdvancementRewards$Builder runs(net.minecraft.resources.Identifier);
+  public net.minecraft.advancements.AdvancementRewards build();
+}
+Compiled from "package-info.java"
+interface net.minecraft.advancements.package-info {
+}

@@ -1,0 +1,37 @@
+Compiled from "GuardianModel.java"
+public class net.minecraft.client.model.monster.guardian.GuardianModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.GuardianRenderState> {
+  public static final net.minecraft.client.model.geom.builders.MeshTransformer ELDER_GUARDIAN_SCALE;
+  private static final float[] SPIKE_X_ROT;
+  private static final float[] SPIKE_Y_ROT;
+  private static final float[] SPIKE_Z_ROT;
+  private static final float[] SPIKE_X;
+  private static final float[] SPIKE_Y;
+  private static final float[] SPIKE_Z;
+  private static final java.lang.String EYE;
+  private static final java.lang.String TAIL_0;
+  private static final java.lang.String TAIL_1;
+  private static final java.lang.String TAIL_2;
+  private final net.minecraft.client.model.geom.ModelPart head;
+  private final net.minecraft.client.model.geom.ModelPart eye;
+  private final net.minecraft.client.model.geom.ModelPart[] spikeParts;
+  private final net.minecraft.client.model.geom.ModelPart[] tailParts;
+  public net.minecraft.client.model.monster.guardian.GuardianModel(net.minecraft.client.model.geom.ModelPart);
+  private static java.lang.String createSpikeName(int);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createElderGuardianLayer();
+  public void setupAnim(net.minecraft.client.renderer.entity.state.GuardianRenderState);
+  private void setupSpikes(float, float);
+  private static float getSpikeOffset(int, float, float);
+  private static float getSpikeX(int, float, float);
+  private static float getSpikeY(int, float, float);
+  private static float getSpikeZ(int, float, float);
+  public void setupAnim(java.lang.Object);
+  static {};
+}
+Compiled from "GuardianParticleModel.java"
+public class net.minecraft.client.model.monster.guardian.GuardianParticleModel extends net.minecraft.client.model.Model<net.minecraft.util.Unit> {
+  public net.minecraft.client.model.monster.guardian.GuardianParticleModel(net.minecraft.client.model.geom.ModelPart);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.model.monster.guardian.package-info {
+}

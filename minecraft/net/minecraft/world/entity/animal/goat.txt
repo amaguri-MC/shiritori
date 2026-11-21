@@ -1,0 +1,104 @@
+Compiled from "GoatAi.java"
+public class net.minecraft.world.entity.animal.goat.GoatAi {
+  public static final int RAM_PREPARE_TIME;
+  public static final int RAM_MAX_DISTANCE;
+  private static final net.minecraft.util.valueproviders.UniformInt ADULT_FOLLOW_RANGE;
+  private static final float SPEED_MULTIPLIER_WHEN_IDLING;
+  private static final float SPEED_MULTIPLIER_WHEN_FOLLOWING_ADULT;
+  private static final float SPEED_MULTIPLIER_WHEN_TEMPTED;
+  private static final float SPEED_MULTIPLIER_WHEN_PANICKING;
+  private static final float SPEED_MULTIPLIER_WHEN_PREPARING_TO_RAM;
+  private static final net.minecraft.util.valueproviders.UniformInt TIME_BETWEEN_LONG_JUMPS;
+  public static final int MAX_LONG_JUMP_HEIGHT;
+  public static final int MAX_LONG_JUMP_WIDTH;
+  public static final float MAX_JUMP_VELOCITY_MULTIPLIER;
+  private static final net.minecraft.util.valueproviders.UniformInt TIME_BETWEEN_RAMS;
+  private static final net.minecraft.util.valueproviders.UniformInt TIME_BETWEEN_RAMS_SCREAMER;
+  private static final net.minecraft.world.entity.ai.targeting.TargetingConditions RAM_TARGET_CONDITIONS;
+  private static final float SPEED_MULTIPLIER_WHEN_RAMMING;
+  public static final int RAM_MIN_DISTANCE;
+  public static final float ADULT_RAM_KNOCKBACK_FORCE;
+  public static final float BABY_RAM_KNOCKBACK_FORCE;
+  public net.minecraft.world.entity.animal.goat.GoatAi();
+  protected static void initMemories(net.minecraft.world.entity.animal.goat.Goat, net.minecraft.util.RandomSource);
+  protected static java.util.List<net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.animal.goat.Goat>> getActivities();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.animal.goat.Goat> initCoreActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.animal.goat.Goat> initIdleActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.animal.goat.Goat> initLongJumpActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.animal.goat.Goat> initRamActivity();
+  public static void updateActivity(net.minecraft.world.entity.animal.goat.Goat);
+  private static net.minecraft.sounds.SoundEvent lambda$initRamActivity$5(net.minecraft.world.entity.animal.goat.Goat);
+  private static int lambda$initRamActivity$4(net.minecraft.world.entity.animal.goat.Goat);
+  private static net.minecraft.sounds.SoundEvent lambda$initRamActivity$3(net.minecraft.world.entity.animal.goat.Goat);
+  private static net.minecraft.sounds.SoundEvent lambda$initRamActivity$2(net.minecraft.world.entity.animal.goat.Goat);
+  private static double lambda$initRamActivity$1(net.minecraft.world.entity.animal.goat.Goat);
+  private static net.minecraft.util.valueproviders.UniformInt lambda$initRamActivity$0(net.minecraft.world.entity.animal.goat.Goat);
+  private static net.minecraft.sounds.SoundEvent lambda$initLongJumpActivity$0(net.minecraft.world.entity.animal.goat.Goat);
+  private static java.lang.Float lambda$initIdleActivity$0(net.minecraft.world.entity.LivingEntity);
+  private static boolean lambda$static$0(net.minecraft.world.entity.LivingEntity, net.minecraft.server.level.ServerLevel);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.entity.animal.goat.package-info {
+}
+Compiled from "Goat.java"
+public class net.minecraft.world.entity.animal.goat.Goat extends net.minecraft.world.entity.animal.Animal {
+  public static final float LONG_JUMPING_DIMENSION_SCALE_FACTOR;
+  private static final net.minecraft.world.entity.EntityDimensions BABY_DIMENSIONS;
+  public static final float BABY_DEFAULT_X_HEAD_ROT;
+  public static final float MAX_ADDED_RAMMING_X_HEAD_ROT;
+  private static final float BABY_SCALE;
+  private static final int ADULT_ATTACK_DAMAGE;
+  private static final int BABY_ATTACK_DAMAGE;
+  private static final net.minecraft.world.entity.ai.Brain$Provider<net.minecraft.world.entity.animal.goat.Goat> BRAIN_PROVIDER;
+  public static final int GOAT_FALL_DAMAGE_REDUCTION;
+  public static final double GOAT_SCREAMING_CHANCE;
+  public static final double UNIHORN_CHANCE;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Boolean> DATA_IS_SCREAMING_GOAT;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Boolean> DATA_HAS_LEFT_HORN;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Boolean> DATA_HAS_RIGHT_HORN;
+  private static final boolean DEFAULT_IS_SCREAMING;
+  private static final boolean DEFAULT_HAS_LEFT_HORN;
+  private static final boolean DEFAULT_HAS_RIGHT_HORN;
+  private boolean isLoweringHead;
+  private int lowerHeadTick;
+  public net.minecraft.world.entity.animal.goat.Goat(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.goat.Goat>, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack createHorn();
+  protected net.minecraft.world.entity.ai.Brain<net.minecraft.world.entity.animal.goat.Goat> makeBrain(net.minecraft.world.entity.ai.Brain$Packed);
+  public static net.minecraft.world.entity.ai.attributes.AttributeSupplier$Builder createAttributes();
+  protected void ageBoundaryReached();
+  protected int calculateFallDamage(double, float);
+  protected net.minecraft.sounds.SoundEvent getAmbientSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  protected void playStepSound(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  protected net.minecraft.sounds.SoundEvent getMilkingSound();
+  public net.minecraft.world.entity.animal.goat.Goat getBreedOffspring(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.AgeableMob);
+  public float getAgeScale();
+  public net.minecraft.world.entity.ai.Brain<net.minecraft.world.entity.animal.goat.Goat> getBrain();
+  protected void customServerAiStep(net.minecraft.server.level.ServerLevel);
+  public int getMaxHeadYRot();
+  public void setYHeadRot(float);
+  protected void playEatingSound();
+  public boolean isFood(net.minecraft.world.item.ItemStack);
+  public net.minecraft.world.InteractionResult mobInteract(net.minecraft.world.entity.player.Player, net.minecraft.world.InteractionHand);
+  public net.minecraft.world.entity.SpawnGroupData finalizeSpawn(net.minecraft.world.level.ServerLevelAccessor, net.minecraft.world.DifficultyInstance, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.world.entity.SpawnGroupData);
+  public net.minecraft.world.entity.EntityDimensions getDefaultDimensions(net.minecraft.world.entity.Pose);
+  protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput);
+  protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput);
+  public void handleEntityEvent(byte);
+  public void aiStep();
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  public boolean hasLeftHorn();
+  public boolean hasRightHorn();
+  public boolean dropHorn();
+  public boolean isScreamingGoat();
+  public void setScreamingGoat(boolean);
+  public float getRammingXHeadRot();
+  public static boolean checkGoatSpawnRules(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.Animal>, net.minecraft.world.level.LevelAccessor, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  public net.minecraft.world.entity.AgeableMob getBreedOffspring(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.AgeableMob);
+  private static net.minecraft.world.item.ItemStack lambda$createHorn$1();
+  private static net.minecraft.world.item.ItemStack lambda$createHorn$0(net.minecraft.core.Holder);
+  private static java.util.List lambda$static$0(net.minecraft.world.entity.animal.goat.Goat);
+  static {};
+}

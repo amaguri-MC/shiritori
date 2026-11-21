@@ -1,0 +1,22 @@
+Compiled from "WitherBossModel.java"
+public class net.minecraft.client.model.monster.wither.WitherBossModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.WitherRenderState> {
+  private static final java.lang.String RIBCAGE;
+  private static final java.lang.String CENTER_HEAD;
+  private static final java.lang.String RIGHT_HEAD;
+  private static final java.lang.String LEFT_HEAD;
+  private static final float RIBCAGE_X_ROT_OFFSET;
+  private static final float TAIL_X_ROT_OFFSET;
+  private final net.minecraft.client.model.geom.ModelPart centerHead;
+  private final net.minecraft.client.model.geom.ModelPart rightHead;
+  private final net.minecraft.client.model.geom.ModelPart leftHead;
+  private final net.minecraft.client.model.geom.ModelPart ribcage;
+  private final net.minecraft.client.model.geom.ModelPart tail;
+  public net.minecraft.client.model.monster.wither.WitherBossModel(net.minecraft.client.model.geom.ModelPart);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer(net.minecraft.client.model.geom.builders.CubeDeformation);
+  public void setupAnim(net.minecraft.client.renderer.entity.state.WitherRenderState);
+  private static void setupHeadRotation(net.minecraft.client.renderer.entity.state.WitherRenderState, net.minecraft.client.model.geom.ModelPart, int);
+  public void setupAnim(java.lang.Object);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.model.monster.wither.package-info {
+}

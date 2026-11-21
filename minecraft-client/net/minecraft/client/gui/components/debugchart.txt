@@ -1,0 +1,98 @@
+Compiled from "AbstractDebugChart.java"
+public abstract class net.minecraft.client.gui.components.debugchart.AbstractDebugChart {
+  protected static final int CHART_HEIGHT;
+  protected static final int LINE_WIDTH;
+  protected final net.minecraft.client.gui.Font font;
+  protected final net.minecraft.util.debugchart.SampleStorage sampleStorage;
+  protected net.minecraft.client.gui.components.debugchart.AbstractDebugChart(net.minecraft.client.gui.Font, net.minecraft.util.debugchart.SampleStorage);
+  public int getWidth(int);
+  public int getFullHeight();
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, int, int);
+  protected void extractSampleBars(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int);
+  protected void extractMainSampleBar(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int);
+  protected void extractAdditionalSampleBars(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int);
+  protected long getValueForAggregation(int);
+  protected void extractAdditionalLinesAndLabels(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int);
+  protected void extractStringWithShade(net.minecraft.client.gui.GuiGraphicsExtractor, java.lang.String, int, int);
+  protected abstract java.lang.String toDisplayString(double);
+  protected abstract int getSampleHeight(double);
+  protected abstract int getSampleColor(long);
+  protected int getSampleColor(double, double, int, double, int, double, int);
+}
+Compiled from "BandwidthDebugChart.java"
+public class net.minecraft.client.gui.components.debugchart.BandwidthDebugChart extends net.minecraft.client.gui.components.debugchart.AbstractDebugChart {
+  private static final int MIN_COLOR;
+  private static final int MID_COLOR;
+  private static final int MAX_COLOR;
+  private static final int KILOBYTE;
+  private static final int MEGABYTE;
+  private static final int CHART_TOP_VALUE;
+  public net.minecraft.client.gui.components.debugchart.BandwidthDebugChart(net.minecraft.client.gui.Font, net.minecraft.util.debugchart.SampleStorage);
+  protected void extractAdditionalLinesAndLabels(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int);
+  private void extractLabeledLineAtValue(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int, int);
+  private void extractLineWithLabel(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int, java.lang.String);
+  protected java.lang.String toDisplayString(double);
+  private static java.lang.String toDisplayStringInternal(double);
+  protected int getSampleHeight(double);
+  private static int getSampleHeightInternal(double);
+  protected int getSampleColor(long);
+  private static double toBytesPerSecond(double);
+}
+Compiled from "FpsDebugChart.java"
+public class net.minecraft.client.gui.components.debugchart.FpsDebugChart extends net.minecraft.client.gui.components.debugchart.AbstractDebugChart {
+  private static final int CHART_TOP_FPS;
+  private static final double CHART_TOP_VALUE;
+  public net.minecraft.client.gui.components.debugchart.FpsDebugChart(net.minecraft.client.gui.Font, net.minecraft.util.debugchart.SampleStorage);
+  protected void extractAdditionalLinesAndLabels(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int);
+  protected java.lang.String toDisplayString(double);
+  protected int getSampleHeight(double);
+  protected int getSampleColor(long);
+  private static double toMilliseconds(double);
+}
+Compiled from "PingDebugChart.java"
+public class net.minecraft.client.gui.components.debugchart.PingDebugChart extends net.minecraft.client.gui.components.debugchart.AbstractDebugChart {
+  private static final int CHART_TOP_VALUE;
+  public net.minecraft.client.gui.components.debugchart.PingDebugChart(net.minecraft.client.gui.Font, net.minecraft.util.debugchart.SampleStorage);
+  protected void extractAdditionalLinesAndLabels(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int);
+  protected java.lang.String toDisplayString(double);
+  protected int getSampleHeight(double);
+  protected int getSampleColor(long);
+}
+Compiled from "ProfilerPieChart.java"
+public class net.minecraft.client.gui.components.debugchart.ProfilerPieChart {
+  public static final int RADIUS;
+  public static final int PIE_CHART_THICKNESS;
+  private static final java.text.DecimalFormat PERCENTAGE_FORMAT;
+  private static final int MARGIN;
+  private static final int WIDTH;
+  private static final int SUBSEQUENT_LINES_INDENT;
+  private final net.minecraft.client.gui.Font font;
+  private net.minecraft.util.profiling.ProfileResults profilerPieChartResults;
+  private java.lang.String profilerTreePath;
+  private int bottomOffset;
+  public net.minecraft.client.gui.components.debugchart.ProfilerPieChart(net.minecraft.client.gui.Font);
+  public void setPieChartResults(net.minecraft.util.profiling.ProfileResults);
+  public void setBottomOffset(int);
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor);
+  private java.util.List<java.lang.String> splitNodeName(java.lang.String, int, int);
+  public void profilerPieChartKeyPress(int);
+  static {};
+}
+Compiled from "TpsDebugChart.java"
+public class net.minecraft.client.gui.components.debugchart.TpsDebugChart extends net.minecraft.client.gui.components.debugchart.AbstractDebugChart {
+  private static final int TICK_METHOD_COLOR;
+  private static final int TASK_COLOR;
+  private static final int OTHER_COLOR;
+  private final java.util.function.Supplier<java.lang.Float> msptSupplier;
+  public net.minecraft.client.gui.components.debugchart.TpsDebugChart(net.minecraft.client.gui.Font, net.minecraft.util.debugchart.SampleStorage, java.util.function.Supplier<java.lang.Float>);
+  protected void extractAdditionalLinesAndLabels(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int);
+  protected void extractAdditionalSampleBars(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int);
+  protected long getValueForAggregation(int);
+  protected java.lang.String toDisplayString(double);
+  protected int getSampleHeight(double);
+  protected int getSampleColor(long);
+  private static double toMilliseconds(double);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.gui.components.debugchart.package-info {
+}

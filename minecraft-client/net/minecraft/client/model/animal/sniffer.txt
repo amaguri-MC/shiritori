@@ -1,0 +1,29 @@
+Compiled from "SnifferModel.java"
+public class net.minecraft.client.model.animal.sniffer.SnifferModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.SnifferRenderState> {
+  private static final float WALK_ANIMATION_SPEED_MAX;
+  private static final float WALK_ANIMATION_SCALE_FACTOR;
+  private final net.minecraft.client.model.geom.ModelPart head;
+  private final net.minecraft.client.animation.KeyframeAnimation sniffSearchAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation walkAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation digAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation longSniffAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation standUpAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation happyAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation sniffSniffAnimation;
+  public net.minecraft.client.model.animal.sniffer.SnifferModel(net.minecraft.client.model.geom.ModelPart);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+  public void setupAnim(net.minecraft.client.renderer.entity.state.SnifferRenderState);
+  public void setupAnim(java.lang.Object);
+}
+Compiled from "SniffletModel.java"
+public class net.minecraft.client.model.animal.sniffer.SniffletModel extends net.minecraft.client.model.animal.sniffer.SnifferModel {
+  private static final java.lang.String LOWER_BEAK;
+  private final net.minecraft.client.animation.KeyframeAnimation babyTransform;
+  public net.minecraft.client.model.animal.sniffer.SniffletModel(net.minecraft.client.model.geom.ModelPart);
+  public void setupAnim(net.minecraft.client.renderer.entity.state.SnifferRenderState);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+  public void setupAnim(java.lang.Object);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.model.animal.sniffer.package-info {
+}

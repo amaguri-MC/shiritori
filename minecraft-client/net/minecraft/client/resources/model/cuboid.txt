@@ -1,0 +1,371 @@
+Compiled from "CuboidFace.java"
+public class net.minecraft.client.resources.model.cuboid.CuboidFace$Deserializer implements com.google.gson.JsonDeserializer<net.minecraft.client.resources.model.cuboid.CuboidFace> {
+  private static final int DEFAULT_TINT_INDEX;
+  private static final int DEFAULT_ROTATION;
+  protected net.minecraft.client.resources.model.cuboid.CuboidFace$Deserializer();
+  public net.minecraft.client.resources.model.cuboid.CuboidFace deserialize(com.google.gson.JsonElement, java.lang.reflect.Type, com.google.gson.JsonDeserializationContext) throws com.google.gson.JsonParseException;
+  private static int getTintIndex(com.google.gson.JsonObject);
+  private static java.lang.String getTexture(com.google.gson.JsonObject);
+  private static net.minecraft.core.Direction getCullFacing(com.google.gson.JsonObject);
+  private static com.mojang.math.Quadrant getRotation(com.google.gson.JsonObject);
+  private static net.minecraft.client.resources.model.cuboid.CuboidFace$UVs getUVs(com.google.gson.JsonObject);
+  public java.lang.Object deserialize(com.google.gson.JsonElement, java.lang.reflect.Type, com.google.gson.JsonDeserializationContext) throws com.google.gson.JsonParseException;
+}
+Compiled from "CuboidFace.java"
+public final class net.minecraft.client.resources.model.cuboid.CuboidFace$UVs extends java.lang.Record {
+  private final float minU;
+  private final float minV;
+  private final float maxU;
+  private final float maxV;
+  public net.minecraft.client.resources.model.cuboid.CuboidFace$UVs(float, float, float, float);
+  public float getVertexU(int);
+  public float getVertexV(int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float minU();
+  public float minV();
+  public float maxU();
+  public float maxV();
+}
+Compiled from "CuboidFace.java"
+public final class net.minecraft.client.resources.model.cuboid.CuboidFace extends java.lang.Record {
+  private final net.minecraft.core.Direction cullForDirection;
+  private final int tintIndex;
+  private final java.lang.String texture;
+  private final net.minecraft.client.resources.model.cuboid.CuboidFace$UVs uvs;
+  private final com.mojang.math.Quadrant rotation;
+  public static final int NO_TINT;
+  public net.minecraft.client.resources.model.cuboid.CuboidFace(net.minecraft.core.Direction, int, java.lang.String, net.minecraft.client.resources.model.cuboid.CuboidFace$UVs, com.mojang.math.Quadrant);
+  public static float getU(net.minecraft.client.resources.model.cuboid.CuboidFace$UVs, com.mojang.math.Quadrant, int);
+  public static float getV(net.minecraft.client.resources.model.cuboid.CuboidFace$UVs, com.mojang.math.Quadrant, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.Direction cullForDirection();
+  public int tintIndex();
+  public java.lang.String texture();
+  public net.minecraft.client.resources.model.cuboid.CuboidFace$UVs uvs();
+  public com.mojang.math.Quadrant rotation();
+}
+Compiled from "CuboidModel.java"
+public class net.minecraft.client.resources.model.cuboid.CuboidModel$Deserializer implements com.google.gson.JsonDeserializer<net.minecraft.client.resources.model.cuboid.CuboidModel> {
+  public net.minecraft.client.resources.model.cuboid.CuboidModel$Deserializer();
+  public net.minecraft.client.resources.model.cuboid.CuboidModel deserialize(com.google.gson.JsonElement, java.lang.reflect.Type, com.google.gson.JsonDeserializationContext) throws com.google.gson.JsonParseException;
+  private net.minecraft.client.resources.model.sprite.TextureSlots$Data getTextureMap(com.google.gson.JsonObject);
+  private java.lang.String getParentName(com.google.gson.JsonObject);
+  protected java.lang.Boolean getAmbientOcclusion(com.google.gson.JsonObject);
+  protected net.minecraft.client.resources.model.geometry.UnbakedGeometry getElements(com.google.gson.JsonDeserializationContext, com.google.gson.JsonObject);
+  public java.lang.Object deserialize(com.google.gson.JsonElement, java.lang.reflect.Type, com.google.gson.JsonDeserializationContext) throws com.google.gson.JsonParseException;
+}
+Compiled from "CuboidModel.java"
+public final class net.minecraft.client.resources.model.cuboid.CuboidModel extends java.lang.Record implements net.minecraft.client.resources.model.UnbakedModel {
+  private final net.minecraft.client.resources.model.geometry.UnbakedGeometry geometry;
+  private final net.minecraft.client.resources.model.UnbakedModel$GuiLight guiLight;
+  private final java.lang.Boolean ambientOcclusion;
+  private final net.minecraft.client.resources.model.cuboid.ItemTransforms transforms;
+  private final net.minecraft.client.resources.model.sprite.TextureSlots$Data textureSlots;
+  private final net.minecraft.resources.Identifier parent;
+  static final com.google.gson.Gson GSON;
+  public net.minecraft.client.resources.model.cuboid.CuboidModel(net.minecraft.client.resources.model.geometry.UnbakedGeometry, net.minecraft.client.resources.model.UnbakedModel$GuiLight, java.lang.Boolean, net.minecraft.client.resources.model.cuboid.ItemTransforms, net.minecraft.client.resources.model.sprite.TextureSlots$Data, net.minecraft.resources.Identifier);
+  public static net.minecraft.client.resources.model.cuboid.CuboidModel fromStream(java.io.Reader);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.resources.model.geometry.UnbakedGeometry geometry();
+  public net.minecraft.client.resources.model.UnbakedModel$GuiLight guiLight();
+  public java.lang.Boolean ambientOcclusion();
+  public net.minecraft.client.resources.model.cuboid.ItemTransforms transforms();
+  public net.minecraft.client.resources.model.sprite.TextureSlots$Data textureSlots();
+  public net.minecraft.resources.Identifier parent();
+  static {};
+}
+Compiled from "CuboidModelElement.java"
+public class net.minecraft.client.resources.model.cuboid.CuboidModelElement$Deserializer implements com.google.gson.JsonDeserializer<net.minecraft.client.resources.model.cuboid.CuboidModelElement> {
+  private static final boolean DEFAULT_SHADE;
+  private static final int DEFAULT_LIGHT_EMISSION;
+  private static final java.lang.String FIELD_SHADE;
+  private static final java.lang.String FIELD_LIGHT_EMISSION;
+  private static final java.lang.String FIELD_ROTATION;
+  private static final java.lang.String FIELD_ORIGIN;
+  private static final java.lang.String FIELD_ANGLE;
+  private static final java.lang.String FIELD_X;
+  private static final java.lang.String FIELD_Y;
+  private static final java.lang.String FIELD_Z;
+  private static final java.lang.String FIELD_AXIS;
+  private static final java.lang.String FIELD_RESCALE;
+  private static final java.lang.String FIELD_FACES;
+  private static final java.lang.String FIELD_TO;
+  private static final java.lang.String FIELD_FROM;
+  protected net.minecraft.client.resources.model.cuboid.CuboidModelElement$Deserializer();
+  public net.minecraft.client.resources.model.cuboid.CuboidModelElement deserialize(com.google.gson.JsonElement, java.lang.reflect.Type, com.google.gson.JsonDeserializationContext) throws com.google.gson.JsonParseException;
+  private net.minecraft.client.resources.model.cuboid.CuboidRotation getRotation(com.google.gson.JsonObject);
+  private net.minecraft.core.Direction$Axis getAxis(com.google.gson.JsonObject);
+  private java.util.Map<net.minecraft.core.Direction, net.minecraft.client.resources.model.cuboid.CuboidFace> getFaces(com.google.gson.JsonDeserializationContext, com.google.gson.JsonObject);
+  private java.util.Map<net.minecraft.core.Direction, net.minecraft.client.resources.model.cuboid.CuboidFace> filterNullFromFaces(com.google.gson.JsonDeserializationContext, com.google.gson.JsonObject);
+  private net.minecraft.core.Direction getFacing(java.lang.String);
+  private static org.joml.Vector3f getPosition(com.google.gson.JsonObject, java.lang.String);
+  private static org.joml.Vector3f getVector3f(com.google.gson.JsonObject, java.lang.String);
+  public java.lang.Object deserialize(com.google.gson.JsonElement, java.lang.reflect.Type, com.google.gson.JsonDeserializationContext) throws com.google.gson.JsonParseException;
+}
+Compiled from "CuboidModelElement.java"
+public final class net.minecraft.client.resources.model.cuboid.CuboidModelElement extends java.lang.Record {
+  private final org.joml.Vector3fc from;
+  private final org.joml.Vector3fc to;
+  private final java.util.Map<net.minecraft.core.Direction, net.minecraft.client.resources.model.cuboid.CuboidFace> faces;
+  private final net.minecraft.client.resources.model.cuboid.CuboidRotation rotation;
+  private final boolean shade;
+  private final int lightEmission;
+  private static final boolean DEFAULT_RESCALE;
+  private static final float MIN_EXTENT;
+  private static final float MAX_EXTENT;
+  public net.minecraft.client.resources.model.cuboid.CuboidModelElement(org.joml.Vector3fc, org.joml.Vector3fc, java.util.Map<net.minecraft.core.Direction, net.minecraft.client.resources.model.cuboid.CuboidFace>);
+  public net.minecraft.client.resources.model.cuboid.CuboidModelElement(org.joml.Vector3fc, org.joml.Vector3fc, java.util.Map<net.minecraft.core.Direction, net.minecraft.client.resources.model.cuboid.CuboidFace>, net.minecraft.client.resources.model.cuboid.CuboidRotation, boolean, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public org.joml.Vector3fc from();
+  public org.joml.Vector3fc to();
+  public java.util.Map<net.minecraft.core.Direction, net.minecraft.client.resources.model.cuboid.CuboidFace> faces();
+  public net.minecraft.client.resources.model.cuboid.CuboidRotation rotation();
+  public boolean shade();
+  public int lightEmission();
+}
+Compiled from "CuboidRotation.java"
+public final class net.minecraft.client.resources.model.cuboid.CuboidRotation$EulerXYZRotation extends java.lang.Record implements net.minecraft.client.resources.model.cuboid.CuboidRotation$RotationValue {
+  private final float x;
+  private final float y;
+  private final float z;
+  public net.minecraft.client.resources.model.cuboid.CuboidRotation$EulerXYZRotation(float, float, float);
+  public org.joml.Matrix4f transformation();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float x();
+  public float y();
+  public float z();
+}
+Compiled from "CuboidRotation.java"
+public interface net.minecraft.client.resources.model.cuboid.CuboidRotation$RotationValue {
+  public abstract org.joml.Matrix4f transformation();
+}
+Compiled from "CuboidRotation.java"
+public final class net.minecraft.client.resources.model.cuboid.CuboidRotation$SingleAxisRotation extends java.lang.Record implements net.minecraft.client.resources.model.cuboid.CuboidRotation$RotationValue {
+  private final net.minecraft.core.Direction$Axis axis;
+  private final float angle;
+  public net.minecraft.client.resources.model.cuboid.CuboidRotation$SingleAxisRotation(net.minecraft.core.Direction$Axis, float);
+  public org.joml.Matrix4f transformation();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.Direction$Axis axis();
+  public float angle();
+}
+Compiled from "CuboidRotation.java"
+public final class net.minecraft.client.resources.model.cuboid.CuboidRotation extends java.lang.Record {
+  private final org.joml.Vector3fc origin;
+  private final net.minecraft.client.resources.model.cuboid.CuboidRotation$RotationValue value;
+  private final boolean rescale;
+  private final org.joml.Matrix4fc transform;
+  public net.minecraft.client.resources.model.cuboid.CuboidRotation(org.joml.Vector3fc, net.minecraft.client.resources.model.cuboid.CuboidRotation$RotationValue, boolean);
+  public net.minecraft.client.resources.model.cuboid.CuboidRotation(org.joml.Vector3fc, net.minecraft.client.resources.model.cuboid.CuboidRotation$RotationValue, boolean, org.joml.Matrix4fc);
+  private static org.joml.Matrix4f computeTransform(net.minecraft.client.resources.model.cuboid.CuboidRotation$RotationValue, boolean);
+  private static org.joml.Vector3fc computeRescale(org.joml.Matrix4fc);
+  private static float scaleFactorForAxis(org.joml.Matrix4fc, net.minecraft.core.Direction$Axis, org.joml.Vector3f);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public org.joml.Vector3fc origin();
+  public net.minecraft.client.resources.model.cuboid.CuboidRotation$RotationValue value();
+  public boolean rescale();
+  public org.joml.Matrix4fc transform();
+}
+Compiled from "FaceBakery.java"
+class net.minecraft.client.resources.model.cuboid.FaceBakery$1 {
+  static final int[] $SwitchMap$net$minecraft$core$Direction;
+  static {};
+}
+Compiled from "FaceBakery.java"
+public class net.minecraft.client.resources.model.cuboid.FaceBakery {
+  private static final org.joml.Vector3fc BLOCK_MIDDLE;
+  public net.minecraft.client.resources.model.cuboid.FaceBakery();
+  static net.minecraft.client.resources.model.cuboid.CuboidFace$UVs defaultFaceUV(org.joml.Vector3fc, org.joml.Vector3fc, net.minecraft.core.Direction);
+  private static com.mojang.blaze3d.platform.Transparency computeMaterialTransparency(net.minecraft.client.resources.model.sprite.Material$Baked, net.minecraft.client.resources.model.cuboid.CuboidFace$UVs);
+  public static net.minecraft.client.resources.model.geometry.BakedQuad bakeQuad(net.minecraft.client.resources.model.ModelBaker, org.joml.Vector3fc, org.joml.Vector3fc, net.minecraft.client.resources.model.cuboid.CuboidFace, net.minecraft.client.resources.model.sprite.Material$Baked, net.minecraft.core.Direction, net.minecraft.client.renderer.block.dispatch.ModelState, net.minecraft.client.resources.model.cuboid.CuboidRotation, boolean, int);
+  public static net.minecraft.client.resources.model.geometry.BakedQuad bakeQuad(net.minecraft.client.resources.model.ModelBaker$Interner, org.joml.Vector3fc, org.joml.Vector3fc, net.minecraft.client.resources.model.cuboid.CuboidFace$UVs, com.mojang.math.Quadrant, net.minecraft.client.resources.model.geometry.BakedQuad$MaterialInfo, net.minecraft.core.Direction, net.minecraft.client.renderer.block.dispatch.ModelState, net.minecraft.client.resources.model.cuboid.CuboidRotation);
+  private static void bakeVertex(int, net.minecraft.client.renderer.FaceInfo, net.minecraft.client.resources.model.cuboid.CuboidFace$UVs, com.mojang.math.Quadrant, org.joml.Matrix4fc, org.joml.Vector3fc, org.joml.Vector3fc, net.minecraft.client.resources.model.geometry.BakedQuad$MaterialInfo, com.mojang.math.Transformation, net.minecraft.client.resources.model.cuboid.CuboidRotation, org.joml.Vector3fc[], long[], net.minecraft.client.resources.model.ModelBaker$Interner);
+  private static float cornerToCenter(float);
+  private static float centerToCorner(float);
+  private static void rotateVertexBy(org.joml.Vector3f, org.joml.Vector3fc, org.joml.Matrix4fc);
+  private static net.minecraft.core.Direction calculateFacing(org.joml.Vector3fc[]);
+  private static net.minecraft.core.Direction findClosestDirection(org.joml.Vector3f);
+  private static void recalculateWinding(org.joml.Vector3fc[], long[], net.minecraft.core.Direction);
+  private static int findVertex(org.joml.Vector3fc[], int, float, float, float);
+  private static void swap(org.joml.Vector3fc[], int, int);
+  private static void swap(long[], int, int);
+  static {};
+}
+Compiled from "ItemModelGenerator.java"
+final class net.minecraft.client.resources.model.cuboid.ItemModelGenerator$ItemLayerKey extends java.lang.Record implements net.minecraft.client.resources.model.ModelBaker$SharedOperationKey<net.minecraft.client.resources.model.geometry.QuadCollection> {
+  private final net.minecraft.client.resources.model.sprite.Material$Baked material;
+  private final net.minecraft.client.renderer.block.dispatch.ModelState modelState;
+  private final int layerIndex;
+  private net.minecraft.client.resources.model.cuboid.ItemModelGenerator$ItemLayerKey(net.minecraft.client.resources.model.sprite.Material$Baked, net.minecraft.client.renderer.block.dispatch.ModelState, int);
+  public net.minecraft.client.resources.model.geometry.QuadCollection compute(net.minecraft.client.resources.model.ModelBaker);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.resources.model.sprite.Material$Baked material();
+  public net.minecraft.client.renderer.block.dispatch.ModelState modelState();
+  public int layerIndex();
+  public java.lang.Object compute(net.minecraft.client.resources.model.ModelBaker);
+}
+Compiled from "ItemModelGenerator.java"
+final class net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection extends java.lang.Enum<net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection> {
+  public static final net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection UP;
+  public static final net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection DOWN;
+  public static final net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection LEFT;
+  public static final net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection RIGHT;
+  private final net.minecraft.core.Direction direction;
+  private static final net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection[] $VALUES;
+  public static net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection[] values();
+  public static net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection valueOf(java.lang.String);
+  private net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection(net.minecraft.core.Direction);
+  public net.minecraft.core.Direction getDirection();
+  private boolean isHorizontal();
+  private static net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection[] $values();
+  static {};
+}
+Compiled from "ItemModelGenerator.java"
+final class net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideFace extends java.lang.Record {
+  private final net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection facing;
+  private final int x;
+  private final int y;
+  private net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideFace(net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection, int, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection facing();
+  public int x();
+  public int y();
+}
+Compiled from "ItemModelGenerator.java"
+public class net.minecraft.client.resources.model.cuboid.ItemModelGenerator implements net.minecraft.client.resources.model.UnbakedModel {
+  public static final net.minecraft.resources.Identifier GENERATED_ITEM_MODEL_ID;
+  public static final java.util.List<java.lang.String> LAYERS;
+  private static final float MIN_Z;
+  private static final float MAX_Z;
+  private static final net.minecraft.client.resources.model.sprite.TextureSlots$Data TEXTURE_SLOTS;
+  private static final net.minecraft.client.resources.model.cuboid.CuboidFace$UVs SOUTH_FACE_UVS;
+  private static final net.minecraft.client.resources.model.cuboid.CuboidFace$UVs NORTH_FACE_UVS;
+  private static final float UV_SHRINK;
+  public net.minecraft.client.resources.model.cuboid.ItemModelGenerator();
+  public net.minecraft.client.resources.model.sprite.TextureSlots$Data textureSlots();
+  public net.minecraft.client.resources.model.geometry.UnbakedGeometry geometry();
+  public net.minecraft.client.resources.model.UnbakedModel$GuiLight guiLight();
+  private static net.minecraft.client.resources.model.geometry.QuadCollection bake(net.minecraft.client.resources.model.sprite.TextureSlots, net.minecraft.client.resources.model.ModelBaker, net.minecraft.client.renderer.block.dispatch.ModelState, net.minecraft.client.resources.model.ModelDebugName);
+  private static void bakeExtrudedSprite(net.minecraft.client.resources.model.geometry.QuadCollection$Builder, net.minecraft.client.resources.model.ModelBaker$Interner, net.minecraft.client.renderer.block.dispatch.ModelState, net.minecraft.client.resources.model.geometry.BakedQuad$MaterialInfo);
+  private static void bakeSideFaces(net.minecraft.client.resources.model.geometry.QuadCollection$Builder, net.minecraft.client.resources.model.ModelBaker$Interner, net.minecraft.client.renderer.block.dispatch.ModelState, net.minecraft.client.resources.model.geometry.BakedQuad$MaterialInfo);
+  private static java.util.Collection<net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideFace> getSideFaces(net.minecraft.client.renderer.texture.SpriteContents);
+  private static void checkTransition(net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideDirection, java.util.Set<net.minecraft.client.resources.model.cuboid.ItemModelGenerator$SideFace>, net.minecraft.client.renderer.texture.SpriteContents, int, int, int, int, int);
+  private static boolean isTransparent(net.minecraft.client.renderer.texture.SpriteContents, int, int, int, int, int);
+  private static void lambda$getSideFaces$0(int, int, net.minecraft.client.renderer.texture.SpriteContents, java.util.Set, int);
+  static {};
+}
+Compiled from "ItemTransform.java"
+public class net.minecraft.client.resources.model.cuboid.ItemTransform$Deserializer implements com.google.gson.JsonDeserializer<net.minecraft.client.resources.model.cuboid.ItemTransform> {
+  private static final org.joml.Vector3fc DEFAULT_ROTATION;
+  private static final org.joml.Vector3fc DEFAULT_TRANSLATION;
+  private static final org.joml.Vector3fc DEFAULT_SCALE;
+  public static final float MAX_TRANSLATION;
+  public static final float MAX_SCALE;
+  protected net.minecraft.client.resources.model.cuboid.ItemTransform$Deserializer();
+  public net.minecraft.client.resources.model.cuboid.ItemTransform deserialize(com.google.gson.JsonElement, java.lang.reflect.Type, com.google.gson.JsonDeserializationContext) throws com.google.gson.JsonParseException;
+  private static org.joml.Vector3f getVector3f(com.google.gson.JsonObject, java.lang.String, org.joml.Vector3fc);
+  public java.lang.Object deserialize(com.google.gson.JsonElement, java.lang.reflect.Type, com.google.gson.JsonDeserializationContext) throws com.google.gson.JsonParseException;
+  static {};
+}
+Compiled from "ItemTransform.java"
+public final class net.minecraft.client.resources.model.cuboid.ItemTransform extends java.lang.Record {
+  private final org.joml.Vector3fc rotation;
+  private final org.joml.Vector3fc translation;
+  private final org.joml.Vector3fc scale;
+  public static final net.minecraft.client.resources.model.cuboid.ItemTransform NO_TRANSFORM;
+  public net.minecraft.client.resources.model.cuboid.ItemTransform(org.joml.Vector3fc, org.joml.Vector3fc, org.joml.Vector3fc);
+  public void apply(boolean, com.mojang.blaze3d.vertex.PoseStack$Pose);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public org.joml.Vector3fc rotation();
+  public org.joml.Vector3fc translation();
+  public org.joml.Vector3fc scale();
+  static {};
+}
+Compiled from "ItemTransforms.java"
+class net.minecraft.client.resources.model.cuboid.ItemTransforms$1 {
+  static final int[] $SwitchMap$net$minecraft$world$item$ItemDisplayContext;
+  static {};
+}
+Compiled from "ItemTransforms.java"
+public class net.minecraft.client.resources.model.cuboid.ItemTransforms$Deserializer implements com.google.gson.JsonDeserializer<net.minecraft.client.resources.model.cuboid.ItemTransforms> {
+  protected net.minecraft.client.resources.model.cuboid.ItemTransforms$Deserializer();
+  public net.minecraft.client.resources.model.cuboid.ItemTransforms deserialize(com.google.gson.JsonElement, java.lang.reflect.Type, com.google.gson.JsonDeserializationContext) throws com.google.gson.JsonParseException;
+  private net.minecraft.client.resources.model.cuboid.ItemTransform getTransform(com.google.gson.JsonDeserializationContext, com.google.gson.JsonObject, net.minecraft.world.item.ItemDisplayContext);
+  public java.lang.Object deserialize(com.google.gson.JsonElement, java.lang.reflect.Type, com.google.gson.JsonDeserializationContext) throws com.google.gson.JsonParseException;
+}
+Compiled from "ItemTransforms.java"
+public final class net.minecraft.client.resources.model.cuboid.ItemTransforms extends java.lang.Record {
+  private final net.minecraft.client.resources.model.cuboid.ItemTransform thirdPersonLeftHand;
+  private final net.minecraft.client.resources.model.cuboid.ItemTransform thirdPersonRightHand;
+  private final net.minecraft.client.resources.model.cuboid.ItemTransform firstPersonLeftHand;
+  private final net.minecraft.client.resources.model.cuboid.ItemTransform firstPersonRightHand;
+  private final net.minecraft.client.resources.model.cuboid.ItemTransform head;
+  private final net.minecraft.client.resources.model.cuboid.ItemTransform gui;
+  private final net.minecraft.client.resources.model.cuboid.ItemTransform ground;
+  private final net.minecraft.client.resources.model.cuboid.ItemTransform fixed;
+  private final net.minecraft.client.resources.model.cuboid.ItemTransform fixedFromBottom;
+  public static final net.minecraft.client.resources.model.cuboid.ItemTransforms NO_TRANSFORMS;
+  public net.minecraft.client.resources.model.cuboid.ItemTransforms(net.minecraft.client.resources.model.cuboid.ItemTransform, net.minecraft.client.resources.model.cuboid.ItemTransform, net.minecraft.client.resources.model.cuboid.ItemTransform, net.minecraft.client.resources.model.cuboid.ItemTransform, net.minecraft.client.resources.model.cuboid.ItemTransform, net.minecraft.client.resources.model.cuboid.ItemTransform, net.minecraft.client.resources.model.cuboid.ItemTransform, net.minecraft.client.resources.model.cuboid.ItemTransform, net.minecraft.client.resources.model.cuboid.ItemTransform);
+  public net.minecraft.client.resources.model.cuboid.ItemTransform getTransform(net.minecraft.world.item.ItemDisplayContext);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.resources.model.cuboid.ItemTransform thirdPersonLeftHand();
+  public net.minecraft.client.resources.model.cuboid.ItemTransform thirdPersonRightHand();
+  public net.minecraft.client.resources.model.cuboid.ItemTransform firstPersonLeftHand();
+  public net.minecraft.client.resources.model.cuboid.ItemTransform firstPersonRightHand();
+  public net.minecraft.client.resources.model.cuboid.ItemTransform head();
+  public net.minecraft.client.resources.model.cuboid.ItemTransform gui();
+  public net.minecraft.client.resources.model.cuboid.ItemTransform ground();
+  public net.minecraft.client.resources.model.cuboid.ItemTransform fixed();
+  public net.minecraft.client.resources.model.cuboid.ItemTransform fixedFromBottom();
+  static {};
+}
+Compiled from "MissingCuboidModel.java"
+public class net.minecraft.client.resources.model.cuboid.MissingCuboidModel {
+  private static final java.lang.String TEXTURE_SLOT;
+  public static final net.minecraft.resources.Identifier LOCATION;
+  public net.minecraft.client.resources.model.cuboid.MissingCuboidModel();
+  public static net.minecraft.client.resources.model.UnbakedModel missingModel();
+  private static net.minecraft.client.resources.model.cuboid.CuboidFace lambda$missingModel$0(net.minecraft.client.resources.model.cuboid.CuboidFace$UVs, net.minecraft.core.Direction);
+  static {};
+}
+Compiled from "UnbakedCuboidGeometry.java"
+class net.minecraft.client.resources.model.cuboid.UnbakedCuboidGeometry$1 {
+  static final int[] $SwitchMap$net$minecraft$core$Direction$Axis;
+  static {};
+}
+Compiled from "UnbakedCuboidGeometry.java"
+public final class net.minecraft.client.resources.model.cuboid.UnbakedCuboidGeometry extends java.lang.Record implements net.minecraft.client.resources.model.geometry.UnbakedGeometry {
+  private final java.util.List<net.minecraft.client.resources.model.cuboid.CuboidModelElement> elements;
+  public net.minecraft.client.resources.model.cuboid.UnbakedCuboidGeometry(java.util.List<net.minecraft.client.resources.model.cuboid.CuboidModelElement>);
+  public net.minecraft.client.resources.model.geometry.QuadCollection bake(net.minecraft.client.resources.model.sprite.TextureSlots, net.minecraft.client.resources.model.ModelBaker, net.minecraft.client.renderer.block.dispatch.ModelState, net.minecraft.client.resources.model.ModelDebugName);
+  public static net.minecraft.client.resources.model.geometry.QuadCollection bake(java.util.List<net.minecraft.client.resources.model.cuboid.CuboidModelElement>, net.minecraft.client.resources.model.sprite.TextureSlots, net.minecraft.client.resources.model.ModelBaker, net.minecraft.client.renderer.block.dispatch.ModelState, net.minecraft.client.resources.model.ModelDebugName);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<net.minecraft.client.resources.model.cuboid.CuboidModelElement> elements();
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.resources.model.cuboid.package-info {
+}

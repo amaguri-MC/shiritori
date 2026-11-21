@@ -1,0 +1,163 @@
+Compiled from "DebugOptionsScreen.java"
+public abstract class net.minecraft.client.gui.screens.debug.DebugOptionsScreen$AbstractOptionEntry extends net.minecraft.client.gui.components.ContainerObjectSelectionList$Entry<net.minecraft.client.gui.screens.debug.DebugOptionsScreen$AbstractOptionEntry> {
+  public net.minecraft.client.gui.screens.debug.DebugOptionsScreen$AbstractOptionEntry();
+  public abstract void refreshEntry();
+}
+Compiled from "DebugOptionsScreen.java"
+class net.minecraft.client.gui.screens.debug.DebugOptionsScreen$CategoryEntry$1 implements net.minecraft.client.gui.narration.NarratableEntry {
+  final net.minecraft.client.gui.screens.debug.DebugOptionsScreen$CategoryEntry this$1;
+  net.minecraft.client.gui.screens.debug.DebugOptionsScreen$CategoryEntry$1(net.minecraft.client.gui.screens.debug.DebugOptionsScreen$CategoryEntry);
+  public net.minecraft.client.gui.narration.NarratableEntry$NarrationPriority narrationPriority();
+  public void updateNarration(net.minecraft.client.gui.narration.NarrationElementOutput);
+}
+Compiled from "DebugOptionsScreen.java"
+class net.minecraft.client.gui.screens.debug.DebugOptionsScreen$CategoryEntry extends net.minecraft.client.gui.screens.debug.DebugOptionsScreen$AbstractOptionEntry {
+  private final net.minecraft.network.chat.Component category;
+  final net.minecraft.client.gui.screens.debug.DebugOptionsScreen this$0;
+  public net.minecraft.client.gui.screens.debug.DebugOptionsScreen$CategoryEntry(net.minecraft.client.gui.screens.debug.DebugOptionsScreen, net.minecraft.network.chat.Component);
+  public void extractContent(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, boolean, float);
+  public java.util.List<? extends net.minecraft.client.gui.components.events.GuiEventListener> children();
+  public java.util.List<? extends net.minecraft.client.gui.narration.NarratableEntry> narratables();
+  public void refreshEntry();
+}
+Compiled from "DebugOptionsScreen.java"
+class net.minecraft.client.gui.screens.debug.DebugOptionsScreen$OptionEntry extends net.minecraft.client.gui.screens.debug.DebugOptionsScreen$AbstractOptionEntry {
+  private static final int BUTTON_WIDTH;
+  private final net.minecraft.resources.Identifier location;
+  protected final java.util.List<net.minecraft.client.gui.components.AbstractWidget> children;
+  private final net.minecraft.client.gui.components.CycleButton<java.lang.Boolean> always;
+  private final net.minecraft.client.gui.components.CycleButton<java.lang.Boolean> overlay;
+  private final net.minecraft.client.gui.components.CycleButton<java.lang.Boolean> never;
+  private final java.lang.String name;
+  private final boolean isAllowed;
+  final net.minecraft.client.gui.screens.debug.DebugOptionsScreen this$0;
+  public net.minecraft.client.gui.screens.debug.DebugOptionsScreen$OptionEntry(net.minecraft.client.gui.screens.debug.DebugOptionsScreen, net.minecraft.resources.Identifier);
+  private net.minecraft.network.chat.MutableComponent narrateButton(net.minecraft.client.gui.components.CycleButton<java.lang.Boolean>);
+  private void setValue(net.minecraft.resources.Identifier, net.minecraft.client.gui.components.debug.DebugScreenEntryStatus);
+  public java.util.List<? extends net.minecraft.client.gui.components.events.GuiEventListener> children();
+  public java.util.List<? extends net.minecraft.client.gui.narration.NarratableEntry> narratables();
+  public void extractContent(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, boolean, float);
+  public void refreshEntry();
+  private void lambda$new$2(net.minecraft.resources.Identifier, net.minecraft.client.gui.components.CycleButton, java.lang.Boolean);
+  private void lambda$new$1(net.minecraft.resources.Identifier, net.minecraft.client.gui.components.CycleButton, java.lang.Boolean);
+  private void lambda$new$0(net.minecraft.resources.Identifier, net.minecraft.client.gui.components.CycleButton, java.lang.Boolean);
+}
+Compiled from "DebugOptionsScreen.java"
+public class net.minecraft.client.gui.screens.debug.DebugOptionsScreen$OptionList extends net.minecraft.client.gui.components.ContainerObjectSelectionList<net.minecraft.client.gui.screens.debug.DebugOptionsScreen$AbstractOptionEntry> {
+  private static final java.util.Comparator<java.util.Map$Entry<net.minecraft.resources.Identifier, net.minecraft.client.gui.components.debug.DebugScreenEntry>> COMPARATOR;
+  private static final int ITEM_HEIGHT;
+  final net.minecraft.client.gui.screens.debug.DebugOptionsScreen this$0;
+  public net.minecraft.client.gui.screens.debug.DebugOptionsScreen$OptionList(net.minecraft.client.gui.screens.debug.DebugOptionsScreen);
+  public void extractWidgetRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, float);
+  public int getRowWidth();
+  public void refreshEntries();
+  public void updateSearch(java.lang.String);
+  private void notifyListUpdated();
+  private static int lambda$static$0(java.util.Map$Entry, java.util.Map$Entry);
+  static {};
+}
+Compiled from "DebugOptionsScreen.java"
+public class net.minecraft.client.gui.screens.debug.DebugOptionsScreen extends net.minecraft.client.gui.screens.Screen {
+  private static final net.minecraft.network.chat.Component TITLE;
+  private static final net.minecraft.network.chat.Component SUBTITLE;
+  private static final net.minecraft.network.chat.Component ENABLED_TEXT;
+  private static final net.minecraft.network.chat.Component IN_OVERLAY_TEXT;
+  private static final net.minecraft.network.chat.Component DISABLED_TEXT;
+  private static final net.minecraft.network.chat.Component NOT_ALLOWED_TOOLTIP;
+  private static final net.minecraft.network.chat.Component SEARCH;
+  private final net.minecraft.client.gui.layouts.HeaderAndFooterLayout layout;
+  private net.minecraft.client.gui.screens.debug.DebugOptionsScreen$OptionList optionList;
+  private net.minecraft.client.gui.components.EditBox searchBox;
+  private final java.util.List<net.minecraft.client.gui.components.Button> profileButtons;
+  public net.minecraft.client.gui.screens.debug.DebugOptionsScreen();
+  protected void init();
+  public void extractBlurredBackground(net.minecraft.client.gui.GuiGraphicsExtractor);
+  protected void setInitialFocus();
+  private void addProfileButton(net.minecraft.client.gui.components.debug.DebugScreenProfile, net.minecraft.client.gui.layouts.LinearLayout);
+  protected void repositionElements();
+  public net.minecraft.client.gui.screens.debug.DebugOptionsScreen$OptionList getOptionList();
+  static net.minecraft.client.Minecraft access$000(net.minecraft.client.gui.screens.debug.DebugOptionsScreen);
+  static net.minecraft.client.Minecraft access$100(net.minecraft.client.gui.screens.debug.DebugOptionsScreen);
+  static net.minecraft.client.Minecraft access$200(net.minecraft.client.gui.screens.debug.DebugOptionsScreen);
+  static net.minecraft.client.Minecraft access$300(net.minecraft.client.gui.screens.debug.DebugOptionsScreen);
+  static net.minecraft.client.Minecraft access$400(net.minecraft.client.gui.screens.debug.DebugOptionsScreen);
+  static net.minecraft.client.Minecraft access$500(net.minecraft.client.gui.screens.debug.DebugOptionsScreen);
+  private void lambda$addProfileButton$0(net.minecraft.client.gui.components.debug.DebugScreenProfile, net.minecraft.client.gui.components.Button);
+  private static void lambda$init$2(net.minecraft.client.gui.screens.debug.DebugOptionsScreen, net.minecraft.client.gui.components.AbstractWidget);
+  private void lambda$init$1(net.minecraft.client.gui.components.Button);
+  private void lambda$init$0(java.lang.String);
+  static {};
+}
+Compiled from "GameModeSwitcherScreen.java"
+class net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$1 {
+  static final int[] $SwitchMap$net$minecraft$world$level$GameType;
+  static {};
+}
+Compiled from "GameModeSwitcherScreen.java"
+final class net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon extends java.lang.Enum<net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon> {
+  public static final net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon CREATIVE;
+  public static final net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon SURVIVAL;
+  public static final net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon ADVENTURE;
+  public static final net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon SPECTATOR;
+  private static final net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon[] VALUES;
+  private static final int ICON_AREA;
+  private static final int ICON_TOP_LEFT;
+  private final net.minecraft.network.chat.Component name;
+  private final net.minecraft.world.level.GameType mode;
+  private final net.minecraft.world.item.ItemStack renderStack;
+  private static final net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon[] $VALUES;
+  public static net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon[] values();
+  public static net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon valueOf(java.lang.String);
+  private net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon(net.minecraft.network.chat.Component, net.minecraft.world.level.GameType, net.minecraft.world.item.ItemStack);
+  private void extractIcon(net.minecraft.client.gui.GuiGraphicsExtractor, int, int);
+  private net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon getNext();
+  private static net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon getFromGameType(net.minecraft.world.level.GameType);
+  private static net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon[] $values();
+  static {};
+}
+Compiled from "GameModeSwitcherScreen.java"
+public class net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeSlot extends net.minecraft.client.gui.components.AbstractWidget {
+  private final net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon icon;
+  private boolean isSelected;
+  public net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeSlot(net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon, int, int);
+  public void extractWidgetRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, float);
+  public void updateWidgetNarration(net.minecraft.client.gui.narration.NarrationElementOutput);
+  public boolean isHoveredOrFocused();
+  public void setSelected(boolean);
+  private void extractSlot(net.minecraft.client.gui.GuiGraphicsExtractor);
+  private void extractSelection(net.minecraft.client.gui.GuiGraphicsExtractor);
+}
+Compiled from "GameModeSwitcherScreen.java"
+public class net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen extends net.minecraft.client.gui.screens.Screen {
+  private static final net.minecraft.resources.Identifier SLOT_SPRITE;
+  private static final net.minecraft.resources.Identifier SELECTION_SPRITE;
+  private static final net.minecraft.resources.Identifier GAMEMODE_SWITCHER_LOCATION;
+  private static final int SPRITE_SHEET_WIDTH;
+  private static final int SPRITE_SHEET_HEIGHT;
+  private static final int SLOT_AREA;
+  private static final int SLOT_PADDING;
+  private static final int SLOT_AREA_PADDED;
+  private static final int HELP_TIPS_OFFSET_Y;
+  private static final int ALL_SLOTS_WIDTH;
+  private final net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon previousHovered;
+  private net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon currentlyHovered;
+  private int firstMouseX;
+  private int firstMouseY;
+  private boolean setFirstMousePos;
+  private final java.util.List<net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeSlot> slots;
+  public net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen();
+  private net.minecraft.world.level.GameType getDefaultSelected();
+  protected void init();
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, float);
+  public void extractBackground(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, float);
+  private void switchToHoveredGameMode();
+  private static void switchToHoveredGameMode(net.minecraft.client.Minecraft, net.minecraft.client.gui.screens.debug.GameModeSwitcherScreen$GameModeIcon);
+  public boolean keyPressed(net.minecraft.client.input.KeyEvent);
+  public boolean keyReleased(net.minecraft.client.input.KeyEvent);
+  public boolean mouseReleased(net.minecraft.client.input.MouseButtonEvent);
+  public boolean isPauseScreen();
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.gui.screens.debug.package-info {
+}

@@ -1,0 +1,144 @@
+Compiled from "InvertableSetOptionState.java"
+final class net.minecraft.commands.arguments.selector.options.InvertableSetOptionState$Limitation extends java.lang.Enum<net.minecraft.commands.arguments.selector.options.InvertableSetOptionState$Limitation> {
+  public static final net.minecraft.commands.arguments.selector.options.InvertableSetOptionState$Limitation NONE;
+  public static final net.minecraft.commands.arguments.selector.options.InvertableSetOptionState$Limitation SINGLE;
+  public static final net.minecraft.commands.arguments.selector.options.InvertableSetOptionState$Limitation MULTIPLE;
+  private static final net.minecraft.commands.arguments.selector.options.InvertableSetOptionState$Limitation[] $VALUES;
+  public static net.minecraft.commands.arguments.selector.options.InvertableSetOptionState$Limitation[] values();
+  public static net.minecraft.commands.arguments.selector.options.InvertableSetOptionState$Limitation valueOf(java.lang.String);
+  private net.minecraft.commands.arguments.selector.options.InvertableSetOptionState$Limitation();
+  private static net.minecraft.commands.arguments.selector.options.InvertableSetOptionState$Limitation[] $values();
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.commands.arguments.selector.options.package-info {
+}
+Compiled from "EntitySelectorOptions.java"
+final class net.minecraft.commands.arguments.selector.options.EntitySelectorOptions$Option extends java.lang.Record {
+  private final net.minecraft.commands.arguments.selector.options.EntitySelectorOptions$Modifier modifier;
+  private final java.util.function.Predicate<net.minecraft.commands.arguments.selector.EntitySelectorParser> canUse;
+  private final net.minecraft.network.chat.Component description;
+  private net.minecraft.commands.arguments.selector.options.EntitySelectorOptions$Option(net.minecraft.commands.arguments.selector.options.EntitySelectorOptions$Modifier, java.util.function.Predicate<net.minecraft.commands.arguments.selector.EntitySelectorParser>, net.minecraft.network.chat.Component);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.commands.arguments.selector.options.EntitySelectorOptions$Modifier modifier();
+  public java.util.function.Predicate<net.minecraft.commands.arguments.selector.EntitySelectorParser> canUse();
+  public net.minecraft.network.chat.Component description();
+}
+Compiled from "EntitySelectorOptions.java"
+public class net.minecraft.commands.arguments.selector.options.EntitySelectorOptions {
+  private static final org.slf4j.Logger LOGGER;
+  private static final java.util.Map<java.lang.String, net.minecraft.commands.arguments.selector.options.EntitySelectorOptions$Option> OPTIONS;
+  private static final java.util.function.Predicate<net.minecraft.commands.arguments.selector.EntitySelectorParser> ALWAYS_AVAILABLE;
+  public static final com.mojang.brigadier.exceptions.DynamicCommandExceptionType ERROR_UNKNOWN_OPTION;
+  public static final com.mojang.brigadier.exceptions.DynamicCommandExceptionType ERROR_INAPPLICABLE_OPTION;
+  public static final com.mojang.brigadier.exceptions.SimpleCommandExceptionType ERROR_RANGE_NEGATIVE;
+  public static final com.mojang.brigadier.exceptions.SimpleCommandExceptionType ERROR_LEVEL_NEGATIVE;
+  public static final com.mojang.brigadier.exceptions.SimpleCommandExceptionType ERROR_LIMIT_TOO_SMALL;
+  public static final com.mojang.brigadier.exceptions.DynamicCommandExceptionType ERROR_SORT_UNKNOWN;
+  public static final com.mojang.brigadier.exceptions.DynamicCommandExceptionType ERROR_GAME_MODE_INVALID;
+  public static final com.mojang.brigadier.exceptions.DynamicCommandExceptionType ERROR_ENTITY_TYPE_INVALID;
+  public net.minecraft.commands.arguments.selector.options.EntitySelectorOptions();
+  private static void register(java.lang.String, net.minecraft.commands.arguments.selector.options.EntitySelectorOptions$Modifier, java.util.function.Predicate<net.minecraft.commands.arguments.selector.EntitySelectorParser>, net.minecraft.network.chat.Component);
+  public static void bootStrap();
+  private static com.mojang.brigadier.exceptions.CommandSyntaxException rollbackAndThrow(net.minecraft.commands.arguments.selector.EntitySelectorParser, int, com.mojang.brigadier.exceptions.SimpleCommandExceptionType);
+  private static com.mojang.brigadier.exceptions.CommandSyntaxException rollbackAndThrow(net.minecraft.commands.arguments.selector.EntitySelectorParser, int, com.mojang.brigadier.exceptions.DynamicCommandExceptionType, java.lang.String);
+  public static net.minecraft.commands.arguments.selector.options.EntitySelectorOptions$Modifier get(net.minecraft.commands.arguments.selector.EntitySelectorParser, java.lang.String, int) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  public static void suggestNames(net.minecraft.commands.arguments.selector.EntitySelectorParser, com.mojang.brigadier.suggestion.SuggestionsBuilder);
+  private static void lambda$bootStrap$55(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$56(net.minecraft.resources.ResourceKey, boolean, net.minecraft.world.entity.Entity);
+  private static boolean lambda$bootStrap$54(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$49(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$53(java.util.Map, net.minecraft.world.entity.Entity);
+  private static boolean lambda$bootStrap$52(boolean, net.minecraft.advancements.AdvancementProgress);
+  private static boolean lambda$bootStrap$51(java.util.Map, net.minecraft.advancements.AdvancementProgress);
+  private static boolean lambda$bootStrap$50(boolean, net.minecraft.advancements.CriterionProgress);
+  private static boolean lambda$bootStrap$48(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$46(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$47(java.util.Map, net.minecraft.world.entity.Entity);
+  private static void lambda$bootStrap$44(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$45(net.minecraft.nbt.CompoundTag, boolean, net.minecraft.world.entity.Entity);
+  private static void lambda$bootStrap$42(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$43(java.lang.String, boolean, net.minecraft.world.entity.Entity);
+  private static boolean lambda$bootStrap$41(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$35(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$40(net.minecraft.world.entity.EntityType, boolean, net.minecraft.world.entity.Entity);
+  private static com.mojang.brigadier.exceptions.CommandSyntaxException lambda$bootStrap$39(net.minecraft.commands.arguments.selector.EntitySelectorParser, int, net.minecraft.resources.Identifier);
+  private static boolean lambda$bootStrap$38(net.minecraft.tags.TagKey, boolean, net.minecraft.world.entity.Entity);
+  private static java.util.concurrent.CompletableFuture lambda$bootStrap$36(net.minecraft.commands.arguments.selector.options.InvertableSetOptionState, com.mojang.brigadier.suggestion.SuggestionsBuilder, java.util.function.Consumer);
+  private static net.minecraft.resources.Identifier lambda$bootStrap$37(net.minecraft.core.HolderSet$Named);
+  private static boolean lambda$bootStrap$34(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$32(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$33(java.lang.String, boolean, net.minecraft.world.entity.Entity);
+  private static boolean lambda$bootStrap$31(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$28(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$30(net.minecraft.world.level.GameType, boolean, net.minecraft.world.entity.Entity);
+  private static java.util.concurrent.CompletableFuture lambda$bootStrap$29(net.minecraft.commands.arguments.selector.options.InvertableSetOptionState, com.mojang.brigadier.suggestion.SuggestionsBuilder, java.util.function.Consumer);
+  private static boolean lambda$bootStrap$27(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$25(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static java.util.concurrent.CompletableFuture lambda$bootStrap$26(com.mojang.brigadier.suggestion.SuggestionsBuilder, java.util.function.Consumer);
+  private static boolean lambda$bootStrap$24(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$23(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$22(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$21(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$20(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$19(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$18(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$17(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$16(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$15(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$14(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$13(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$12(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$11(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$10(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$9(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$8(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$7(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$6(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$5(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$4(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$3(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$2(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  private static void lambda$bootStrap$0(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$bootStrap$1(java.lang.String, boolean, net.minecraft.world.entity.Entity);
+  private static com.mojang.brigadier.Message lambda$static$5(java.lang.Object);
+  private static com.mojang.brigadier.Message lambda$static$4(java.lang.Object);
+  private static com.mojang.brigadier.Message lambda$static$3(java.lang.Object);
+  private static com.mojang.brigadier.Message lambda$static$2(java.lang.Object);
+  private static com.mojang.brigadier.Message lambda$static$1(java.lang.Object);
+  private static boolean lambda$static$0(net.minecraft.commands.arguments.selector.EntitySelectorParser);
+  static {};
+}
+Compiled from "SetOnceOptionState.java"
+public class net.minecraft.commands.arguments.selector.options.SetOnceOptionState {
+  private boolean hasValue;
+  public net.minecraft.commands.arguments.selector.options.SetOnceOptionState();
+  public boolean canParse();
+  public void markParsed();
+}
+Compiled from "InvertableSetOptionState.java"
+public class net.minecraft.commands.arguments.selector.options.InvertableSetOptionState {
+  private net.minecraft.commands.arguments.selector.options.InvertableSetOptionState$Limitation state;
+  private final java.util.Set<net.minecraft.resources.Identifier> tags;
+  public net.minecraft.commands.arguments.selector.options.InvertableSetOptionState();
+  private boolean canLimitToSingle();
+  private boolean canLimitToMultiple();
+  public boolean canParsePositiveElement();
+  public boolean canParseNegativeElement();
+  public boolean canParseAnyTag();
+  public boolean canParseTag(net.minecraft.resources.Identifier);
+  public boolean canParseAny();
+  public boolean canParseElement(boolean);
+  private void markParsedSingle();
+  private void markParsedMultiple();
+  public void markParsedPositiveElement();
+  public void markParsedNegativeElement();
+  public void markParsedTag(net.minecraft.resources.Identifier);
+  public void markParsedElement(boolean);
+}
+Compiled from "EntitySelectorOptions.java"
+public interface net.minecraft.commands.arguments.selector.options.EntitySelectorOptions$Modifier {
+  public abstract void handle(net.minecraft.commands.arguments.selector.EntitySelectorParser) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+}

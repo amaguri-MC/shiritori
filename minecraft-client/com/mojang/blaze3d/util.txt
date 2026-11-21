@@ -1,0 +1,56 @@
+Compiled from "TransientBlockAllocator.java"
+public final class com.mojang.blaze3d.util.TransientBlockAllocator$Allocation<T> extends java.lang.Record {
+  private final T block;
+  private final long offset;
+  private final long size;
+  public com.mojang.blaze3d.util.TransientBlockAllocator$Allocation(T, long, long);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public T block();
+  public long offset();
+  public long size();
+}
+Compiled from "TransientBlockAllocator.java"
+class com.mojang.blaze3d.util.TransientBlockAllocator$Allocator$1 implements com.mojang.blaze3d.util.TransientBlockAllocator$Allocator<T> {
+  final java.util.function.LongFunction val$alloc;
+  final java.util.function.Consumer val$free;
+  com.mojang.blaze3d.util.TransientBlockAllocator$Allocator$1();
+  public T alloc(long);
+  public void free(T);
+}
+Compiled from "TransientBlockAllocator.java"
+public interface com.mojang.blaze3d.util.TransientBlockAllocator$Allocator<T> {
+  public abstract T alloc(long);
+  public abstract void free(T);
+  public static <T> com.mojang.blaze3d.util.TransientBlockAllocator$Allocator<T> create(java.util.function.LongFunction<T>, java.util.function.Consumer<T>);
+}
+Compiled from "TransientBlockAllocator.java"
+public class com.mojang.blaze3d.util.TransientBlockAllocator<T> implements java.lang.AutoCloseable {
+  private final long blockSize;
+  private final long maxAlignment;
+  private final com.mojang.blaze3d.util.TransientBlockAllocator$Allocator<T> allocator;
+  private final java.util.function.Consumer<T> onBlockUse;
+  private final it.unimi.dsi.fastutil.objects.ReferenceArrayList<T> specialBlocks;
+  private final it.unimi.dsi.fastutil.objects.ReferenceArrayList<T> freeBlocks;
+  private final it.unimi.dsi.fastutil.objects.ReferenceArrayList<T> usedBlocks;
+  private T currentBlock;
+  private long currentOffset;
+  static final boolean $assertionsDisabled;
+  public com.mojang.blaze3d.util.TransientBlockAllocator(long, long, com.mojang.blaze3d.util.TransientBlockAllocator$Allocator<T>);
+  public com.mojang.blaze3d.util.TransientBlockAllocator(long, long, com.mojang.blaze3d.util.TransientBlockAllocator$Allocator<T>, java.util.function.Consumer<T>);
+  public void close();
+  public long blockSize();
+  public java.lang.Runnable rotate();
+  public boolean canAllocateInBlock(long, long);
+  public boolean canAllocateInCurrentBlock(long, long);
+  private T allocateBlock();
+  public com.mojang.blaze3d.util.TransientBlockAllocator$Allocation<T> allocate(long, long, long, long);
+  private void lambda$rotate$1(it.unimi.dsi.fastutil.objects.ReferenceArrayList, it.unimi.dsi.fastutil.objects.ReferenceArrayList);
+  private static void lambda$rotate$0();
+  private static void lambda$new$0(java.lang.Object);
+  static {};
+}
+Compiled from "package-info.java"
+interface com.mojang.blaze3d.util.package-info {
+}

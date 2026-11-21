@@ -1,0 +1,78 @@
+Compiled from "AddressMode.java"
+public final class com.mojang.blaze3d.textures.AddressMode extends java.lang.Enum<com.mojang.blaze3d.textures.AddressMode> {
+  public static final com.mojang.blaze3d.textures.AddressMode REPEAT;
+  public static final com.mojang.blaze3d.textures.AddressMode CLAMP_TO_EDGE;
+  private static final com.mojang.blaze3d.textures.AddressMode[] $VALUES;
+  public static com.mojang.blaze3d.textures.AddressMode[] values();
+  public static com.mojang.blaze3d.textures.AddressMode valueOf(java.lang.String);
+  private com.mojang.blaze3d.textures.AddressMode();
+  private static com.mojang.blaze3d.textures.AddressMode[] $values();
+  static {};
+}
+Compiled from "FilterMode.java"
+public final class com.mojang.blaze3d.textures.FilterMode extends java.lang.Enum<com.mojang.blaze3d.textures.FilterMode> {
+  public static final com.mojang.blaze3d.textures.FilterMode NEAREST;
+  public static final com.mojang.blaze3d.textures.FilterMode LINEAR;
+  private static final com.mojang.blaze3d.textures.FilterMode[] $VALUES;
+  public static com.mojang.blaze3d.textures.FilterMode[] values();
+  public static com.mojang.blaze3d.textures.FilterMode valueOf(java.lang.String);
+  private com.mojang.blaze3d.textures.FilterMode();
+  private static com.mojang.blaze3d.textures.FilterMode[] $values();
+  static {};
+}
+Compiled from "GpuSampler.java"
+public abstract class com.mojang.blaze3d.textures.GpuSampler implements java.lang.AutoCloseable {
+  public com.mojang.blaze3d.textures.GpuSampler();
+  public abstract com.mojang.blaze3d.textures.AddressMode getAddressModeU();
+  public abstract com.mojang.blaze3d.textures.AddressMode getAddressModeV();
+  public abstract com.mojang.blaze3d.textures.FilterMode getMinFilter();
+  public abstract com.mojang.blaze3d.textures.FilterMode getMagFilter();
+  public abstract int getMaxAnisotropy();
+  public abstract java.util.OptionalDouble getMaxLod();
+  public abstract void close();
+}
+Compiled from "GpuTexture.java"
+public interface com.mojang.blaze3d.textures.GpuTexture$Usage extends java.lang.annotation.Annotation {
+}
+Compiled from "GpuTexture.java"
+public abstract class com.mojang.blaze3d.textures.GpuTexture implements java.lang.AutoCloseable {
+  public static final int USAGE_COPY_DST;
+  public static final int USAGE_COPY_SRC;
+  public static final int USAGE_TEXTURE_BINDING;
+  public static final int USAGE_RENDER_ATTACHMENT;
+  public static final int USAGE_CUBEMAP_COMPATIBLE;
+  private final com.mojang.blaze3d.GpuFormat format;
+  private final int width;
+  private final int height;
+  private final int depthOrLayers;
+  private final int mipLevels;
+  private final int usage;
+  private final java.lang.String label;
+  public com.mojang.blaze3d.textures.GpuTexture(int, java.lang.String, com.mojang.blaze3d.GpuFormat, int, int, int, int);
+  public int getWidth(int);
+  public int getHeight(int);
+  public int getDepthOrLayers();
+  public int getMipLevels();
+  public com.mojang.blaze3d.GpuFormat getFormat();
+  public int usage();
+  public java.lang.String getLabel();
+  public abstract void close();
+  public abstract boolean isClosed();
+}
+Compiled from "GpuTextureView.java"
+public abstract class com.mojang.blaze3d.textures.GpuTextureView implements java.lang.AutoCloseable {
+  private final com.mojang.blaze3d.textures.GpuTexture texture;
+  private final int baseMipLevel;
+  private final int mipLevels;
+  protected com.mojang.blaze3d.textures.GpuTextureView(com.mojang.blaze3d.textures.GpuTexture, int, int);
+  public abstract void close();
+  public com.mojang.blaze3d.textures.GpuTexture texture();
+  public int baseMipLevel();
+  public int mipLevels();
+  public int getWidth(int);
+  public int getHeight(int);
+  public abstract boolean isClosed();
+}
+Compiled from "package-info.java"
+interface com.mojang.blaze3d.textures.package-info {
+}

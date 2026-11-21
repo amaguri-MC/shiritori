@@ -1,0 +1,50 @@
+Compiled from "GpuDebugOptions.java"
+public final class com.mojang.blaze3d.shaders.GpuDebugOptions extends java.lang.Record {
+  private final int logLevel;
+  private final boolean synchronousLogs;
+  private final boolean useLabels;
+  private final boolean useValidationLayers;
+  public com.mojang.blaze3d.shaders.GpuDebugOptions(int, boolean, boolean, boolean);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int logLevel();
+  public boolean synchronousLogs();
+  public boolean useLabels();
+  public boolean useValidationLayers();
+}
+Compiled from "ShaderSource.java"
+public interface com.mojang.blaze3d.shaders.ShaderSource {
+  public abstract java.lang.String get(net.minecraft.resources.Identifier, com.mojang.blaze3d.shaders.ShaderType);
+}
+Compiled from "ShaderType.java"
+public final class com.mojang.blaze3d.shaders.ShaderType extends java.lang.Enum<com.mojang.blaze3d.shaders.ShaderType> {
+  public static final com.mojang.blaze3d.shaders.ShaderType VERTEX;
+  public static final com.mojang.blaze3d.shaders.ShaderType FRAGMENT;
+  private static final com.mojang.blaze3d.shaders.ShaderType[] TYPES;
+  private final java.lang.String name;
+  private final java.lang.String extension;
+  private static final com.mojang.blaze3d.shaders.ShaderType[] $VALUES;
+  public static com.mojang.blaze3d.shaders.ShaderType[] values();
+  public static com.mojang.blaze3d.shaders.ShaderType valueOf(java.lang.String);
+  private com.mojang.blaze3d.shaders.ShaderType(java.lang.String, java.lang.String);
+  public static com.mojang.blaze3d.shaders.ShaderType byLocation(net.minecraft.resources.Identifier);
+  public java.lang.String getName();
+  public net.minecraft.resources.FileToIdConverter idConverter();
+  private static com.mojang.blaze3d.shaders.ShaderType[] $values();
+  static {};
+}
+Compiled from "UniformType.java"
+public final class com.mojang.blaze3d.shaders.UniformType extends java.lang.Enum<com.mojang.blaze3d.shaders.UniformType> {
+  public static final com.mojang.blaze3d.shaders.UniformType UNIFORM_BUFFER;
+  public static final com.mojang.blaze3d.shaders.UniformType TEXEL_BUFFER;
+  private static final com.mojang.blaze3d.shaders.UniformType[] $VALUES;
+  public static com.mojang.blaze3d.shaders.UniformType[] values();
+  public static com.mojang.blaze3d.shaders.UniformType valueOf(java.lang.String);
+  private com.mojang.blaze3d.shaders.UniformType();
+  private static com.mojang.blaze3d.shaders.UniformType[] $values();
+  static {};
+}
+Compiled from "package-info.java"
+interface com.mojang.blaze3d.shaders.package-info {
+}

@@ -1,0 +1,69 @@
+Compiled from "VanillaRecipeProvider.java"
+public class net.minecraft.data.recipes.packs.VanillaRecipeProvider extends net.minecraft.data.recipes.RecipeProvider {
+  private static final com.google.common.collect.ImmutableList<net.minecraft.world.level.ItemLike> COAL_SMELTABLES;
+  private static final com.google.common.collect.ImmutableList<net.minecraft.world.level.ItemLike> IRON_SMELTABLES;
+  private static final com.google.common.collect.ImmutableList<net.minecraft.world.level.ItemLike> COPPER_SMELTABLES;
+  private static final com.google.common.collect.ImmutableList<net.minecraft.world.level.ItemLike> GOLD_SMELTABLES;
+  private static final com.google.common.collect.ImmutableList<net.minecraft.world.level.ItemLike> DIAMOND_SMELTABLES;
+  private static final com.google.common.collect.ImmutableList<net.minecraft.world.level.ItemLike> LAPIS_SMELTABLES;
+  private static final com.google.common.collect.ImmutableList<net.minecraft.world.level.ItemLike> REDSTONE_SMELTABLES;
+  private static final com.google.common.collect.ImmutableList<net.minecraft.world.level.ItemLike> EMERALD_SMELTABLES;
+  private net.minecraft.data.recipes.packs.VanillaRecipeProvider(net.minecraft.core.HolderLookup$Provider, net.minecraft.data.recipes.RecipeOutput);
+  protected void buildRecipes();
+  public static java.util.stream.Stream<net.minecraft.data.recipes.packs.VanillaRecipeProvider$TrimTemplate> smithingTrims();
+  private static net.minecraft.data.recipes.packs.VanillaRecipeProvider$TrimTemplate lambda$smithingTrims$0(com.mojang.datafixers.util.Pair);
+  private static void lambda$buildRecipes$30(net.minecraft.data.recipes.packs.VanillaRecipeProvider, net.minecraft.world.item.Item, net.minecraft.world.item.Item);
+  private void lambda$buildRecipes$29(net.minecraft.world.level.block.Block, net.minecraft.world.level.block.Block);
+  private void lambda$buildRecipes$28(net.minecraft.world.level.block.WeatheringCopper$WeatherState);
+  private static void lambda$buildRecipes$27(net.minecraft.data.recipes.packs.VanillaRecipeProvider, net.minecraft.world.level.block.Block, net.minecraft.world.level.block.Block);
+  private static void lambda$buildRecipes$26(net.minecraft.data.recipes.packs.VanillaRecipeProvider, net.minecraft.world.level.block.Block, net.minecraft.world.level.block.Block);
+  private void lambda$buildRecipes$25(net.minecraft.world.level.block.WeatheringCopper$WeatherState);
+  private net.minecraft.world.item.crafting.Recipe lambda$buildRecipes$24();
+  private void lambda$buildRecipes$23(net.minecraft.data.recipes.packs.VanillaRecipeProvider$TrimTemplate);
+  private void lambda$buildRecipes$22(net.minecraft.world.level.block.Block, net.minecraft.world.level.block.Block);
+  private void lambda$buildRecipes$21(net.minecraft.world.level.block.Block, net.minecraft.world.level.block.Block);
+  private void lambda$buildRecipes$20(net.minecraft.world.level.block.Block, net.minecraft.world.level.block.Block);
+  private void lambda$buildRecipes$19(net.minecraft.world.item.DyeColor);
+  private net.minecraft.world.item.crafting.Recipe lambda$buildRecipes$18();
+  private static net.minecraft.world.item.crafting.Recipe lambda$buildRecipes$17();
+  private net.minecraft.world.item.crafting.Recipe lambda$buildRecipes$16();
+  private net.minecraft.world.item.crafting.Recipe lambda$buildRecipes$15();
+  private static net.minecraft.world.item.crafting.Recipe lambda$buildRecipes$14();
+  private net.minecraft.world.item.crafting.Recipe lambda$buildRecipes$13();
+  private static net.minecraft.world.item.crafting.Recipe lambda$buildRecipes$12(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo);
+  private static void lambda$buildRecipes$11(net.minecraft.data.recipes.packs.VanillaRecipeProvider, net.minecraft.world.item.Item, net.minecraft.world.item.Item);
+  private void lambda$buildRecipes$10(net.minecraft.world.item.Item);
+  private static void lambda$buildRecipes$9(net.minecraft.data.recipes.packs.VanillaRecipeProvider, net.minecraft.world.level.block.Block, net.minecraft.world.item.Item);
+  private static void lambda$buildRecipes$8(net.minecraft.data.recipes.packs.VanillaRecipeProvider, net.minecraft.world.level.block.Block, net.minecraft.world.item.Item);
+  private static void lambda$buildRecipes$7(net.minecraft.data.recipes.packs.VanillaRecipeProvider, net.minecraft.world.level.block.Block, net.minecraft.world.item.Item);
+  private static void lambda$buildRecipes$6(net.minecraft.data.recipes.packs.VanillaRecipeProvider, net.minecraft.world.level.block.Block, net.minecraft.world.item.Item);
+  private static void lambda$buildRecipes$5(net.minecraft.data.recipes.packs.VanillaRecipeProvider, net.minecraft.world.level.block.Block, net.minecraft.world.level.block.Block);
+  private static void lambda$buildRecipes$4(net.minecraft.data.recipes.packs.VanillaRecipeProvider, net.minecraft.world.level.block.Block, net.minecraft.world.item.Item);
+  private static void lambda$buildRecipes$3(net.minecraft.data.recipes.packs.VanillaRecipeProvider, net.minecraft.world.item.Item, net.minecraft.world.level.block.Block);
+  private static void lambda$buildRecipes$2(net.minecraft.data.recipes.packs.VanillaRecipeProvider, net.minecraft.world.item.Item, net.minecraft.world.level.block.Block);
+  private static void lambda$buildRecipes$1(net.minecraft.data.recipes.packs.VanillaRecipeProvider, net.minecraft.world.item.Item, net.minecraft.world.level.block.Block);
+  private static void lambda$buildRecipes$0(net.minecraft.data.recipes.packs.VanillaRecipeProvider, net.minecraft.world.level.block.Block, net.minecraft.world.level.block.Block);
+  static {};
+}
+Compiled from "VanillaRecipeProvider.java"
+public class net.minecraft.data.recipes.packs.VanillaRecipeProvider$Runner extends net.minecraft.data.recipes.RecipeProvider$Runner {
+  public net.minecraft.data.recipes.packs.VanillaRecipeProvider$Runner(net.minecraft.data.PackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+  protected net.minecraft.data.recipes.RecipeProvider createRecipeProvider(net.minecraft.core.HolderLookup$Provider, net.minecraft.data.recipes.RecipeOutput);
+  public java.lang.String getName();
+}
+Compiled from "package-info.java"
+interface net.minecraft.data.recipes.packs.package-info {
+}
+Compiled from "VanillaRecipeProvider.java"
+public final class net.minecraft.data.recipes.packs.VanillaRecipeProvider$TrimTemplate extends java.lang.Record {
+  private final net.minecraft.world.item.Item template;
+  private final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> patternId;
+  private final net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>> recipeId;
+  public net.minecraft.data.recipes.packs.VanillaRecipeProvider$TrimTemplate(net.minecraft.world.item.Item, net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern>, net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.item.Item template();
+  public net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> patternId();
+  public net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>> recipeId();
+}

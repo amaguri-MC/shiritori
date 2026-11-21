@@ -1,0 +1,149 @@
+Compiled from "CompletedTutorialStepInstance.java"
+public class net.minecraft.client.tutorial.CompletedTutorialStepInstance implements net.minecraft.client.tutorial.TutorialStepInstance {
+  public net.minecraft.client.tutorial.CompletedTutorialStepInstance(net.minecraft.client.tutorial.Tutorial);
+}
+Compiled from "CraftPlanksTutorialStep.java"
+public class net.minecraft.client.tutorial.CraftPlanksTutorialStep implements net.minecraft.client.tutorial.TutorialStepInstance {
+  private static final int HINT_DELAY;
+  private static final net.minecraft.network.chat.Component CRAFT_TITLE;
+  private static final net.minecraft.network.chat.Component CRAFT_DESCRIPTION;
+  private final net.minecraft.client.tutorial.Tutorial tutorial;
+  private net.minecraft.client.gui.components.toasts.TutorialToast toast;
+  private int timeWaiting;
+  public net.minecraft.client.tutorial.CraftPlanksTutorialStep(net.minecraft.client.tutorial.Tutorial);
+  public void tick();
+  public void clear();
+  public void onGetItem(net.minecraft.world.item.ItemStack);
+  public static boolean hasCraftedPlanksPreviously(net.minecraft.client.player.LocalPlayer, net.minecraft.tags.TagKey<net.minecraft.world.item.Item>);
+  static {};
+}
+Compiled from "FindTreeTutorialStepInstance.java"
+public class net.minecraft.client.tutorial.FindTreeTutorialStepInstance implements net.minecraft.client.tutorial.TutorialStepInstance {
+  private static final int HINT_DELAY;
+  private static final net.minecraft.network.chat.Component TITLE;
+  private static final net.minecraft.network.chat.Component DESCRIPTION;
+  private final net.minecraft.client.tutorial.Tutorial tutorial;
+  private net.minecraft.client.gui.components.toasts.TutorialToast toast;
+  private int timeWaiting;
+  public net.minecraft.client.tutorial.FindTreeTutorialStepInstance(net.minecraft.client.tutorial.Tutorial);
+  public void tick();
+  public void clear();
+  public void onLookAt(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.phys.HitResult);
+  public void onGetItem(net.minecraft.world.item.ItemStack);
+  private static boolean hasCollectedTreeItems(net.minecraft.client.player.LocalPlayer);
+  public static boolean hasPunchedTreesPreviously(net.minecraft.client.player.LocalPlayer);
+  private static boolean lambda$hasCollectedTreeItems$0(net.minecraft.world.item.ItemStack);
+  static {};
+}
+Compiled from "MovementTutorialStepInstance.java"
+public class net.minecraft.client.tutorial.MovementTutorialStepInstance implements net.minecraft.client.tutorial.TutorialStepInstance {
+  private static final int MINIMUM_TIME_MOVED;
+  private static final int MINIMUM_TIME_LOOKED;
+  private static final int MOVE_HINT_DELAY;
+  private static final int LOOK_HINT_DELAY;
+  private static final int INCOMPLETE;
+  private static final net.minecraft.network.chat.Component MOVE_TITLE;
+  private static final net.minecraft.network.chat.Component MOVE_DESCRIPTION;
+  private static final net.minecraft.network.chat.Component LOOK_TITLE;
+  private static final net.minecraft.network.chat.Component LOOK_DESCRIPTION;
+  private final net.minecraft.client.tutorial.Tutorial tutorial;
+  private net.minecraft.client.gui.components.toasts.TutorialToast moveToast;
+  private net.minecraft.client.gui.components.toasts.TutorialToast lookToast;
+  private int timeWaiting;
+  private int timeMoved;
+  private int timeLooked;
+  private boolean moved;
+  private boolean turned;
+  private int moveCompleted;
+  private int lookCompleted;
+  public net.minecraft.client.tutorial.MovementTutorialStepInstance(net.minecraft.client.tutorial.Tutorial);
+  public void tick();
+  public void clear();
+  public void onInput(net.minecraft.client.player.ClientInput);
+  public void onMouse(double, double);
+  static {};
+}
+Compiled from "OpenInventoryTutorialStep.java"
+public class net.minecraft.client.tutorial.OpenInventoryTutorialStep implements net.minecraft.client.tutorial.TutorialStepInstance {
+  private static final int HINT_DELAY;
+  private static final net.minecraft.network.chat.Component TITLE;
+  private static final net.minecraft.network.chat.Component DESCRIPTION;
+  private final net.minecraft.client.tutorial.Tutorial tutorial;
+  private net.minecraft.client.gui.components.toasts.TutorialToast toast;
+  private int timeWaiting;
+  public net.minecraft.client.tutorial.OpenInventoryTutorialStep(net.minecraft.client.tutorial.Tutorial);
+  public void tick();
+  public void clear();
+  public void onOpenInventory();
+  static {};
+}
+Compiled from "PunchTreeTutorialStepInstance.java"
+public class net.minecraft.client.tutorial.PunchTreeTutorialStepInstance implements net.minecraft.client.tutorial.TutorialStepInstance {
+  private static final int HINT_DELAY;
+  private static final net.minecraft.network.chat.Component TITLE;
+  private static final net.minecraft.network.chat.Component DESCRIPTION;
+  private final net.minecraft.client.tutorial.Tutorial tutorial;
+  private net.minecraft.client.gui.components.toasts.TutorialToast toast;
+  private int timeWaiting;
+  private int resetCount;
+  public net.minecraft.client.tutorial.PunchTreeTutorialStepInstance(net.minecraft.client.tutorial.Tutorial);
+  public void tick();
+  public void clear();
+  public void onDestroyBlock(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, float);
+  public void onGetItem(net.minecraft.world.item.ItemStack);
+  static {};
+}
+Compiled from "Tutorial.java"
+public class net.minecraft.client.tutorial.Tutorial {
+  private final net.minecraft.client.Minecraft minecraft;
+  private net.minecraft.client.tutorial.TutorialStepInstance instance;
+  public net.minecraft.client.tutorial.Tutorial(net.minecraft.client.Minecraft, net.minecraft.client.Options);
+  public void onInput(net.minecraft.client.player.ClientInput);
+  public void onMouse(double, double);
+  public void onLookAt(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.phys.HitResult);
+  public void onDestroyBlock(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, float);
+  public void onOpenInventory();
+  public void onGetItem(net.minecraft.world.item.ItemStack);
+  public void stop();
+  public void start();
+  public void tick();
+  public void setStep(net.minecraft.client.tutorial.TutorialSteps);
+  public net.minecraft.client.Minecraft getMinecraft();
+  public boolean isSurvival();
+  public static net.minecraft.network.chat.Component key(java.lang.String);
+  public void onInventoryAction(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack, net.minecraft.world.inventory.ClickAction);
+}
+Compiled from "TutorialStepInstance.java"
+public interface net.minecraft.client.tutorial.TutorialStepInstance {
+  public default void clear();
+  public default void tick();
+  public default void onInput(net.minecraft.client.player.ClientInput);
+  public default void onMouse(double, double);
+  public default void onLookAt(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.phys.HitResult);
+  public default void onDestroyBlock(net.minecraft.client.multiplayer.ClientLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, float);
+  public default void onOpenInventory();
+  public default void onGetItem(net.minecraft.world.item.ItemStack);
+}
+Compiled from "TutorialSteps.java"
+public final class net.minecraft.client.tutorial.TutorialSteps extends java.lang.Enum<net.minecraft.client.tutorial.TutorialSteps> {
+  public static final net.minecraft.client.tutorial.TutorialSteps MOVEMENT;
+  public static final net.minecraft.client.tutorial.TutorialSteps FIND_TREE;
+  public static final net.minecraft.client.tutorial.TutorialSteps PUNCH_TREE;
+  public static final net.minecraft.client.tutorial.TutorialSteps OPEN_INVENTORY;
+  public static final net.minecraft.client.tutorial.TutorialSteps CRAFT_PLANKS;
+  public static final net.minecraft.client.tutorial.TutorialSteps NONE;
+  private final java.lang.String name;
+  private final java.util.function.Function<net.minecraft.client.tutorial.Tutorial, ? extends net.minecraft.client.tutorial.TutorialStepInstance> constructor;
+  private static final net.minecraft.client.tutorial.TutorialSteps[] $VALUES;
+  public static net.minecraft.client.tutorial.TutorialSteps[] values();
+  public static net.minecraft.client.tutorial.TutorialSteps valueOf(java.lang.String);
+  private <T extends net.minecraft.client.tutorial.TutorialStepInstance> net.minecraft.client.tutorial.TutorialSteps(java.lang.String, java.util.function.Function<net.minecraft.client.tutorial.Tutorial, T>);
+  public net.minecraft.client.tutorial.TutorialStepInstance create(net.minecraft.client.tutorial.Tutorial);
+  public java.lang.String getName();
+  public static net.minecraft.client.tutorial.TutorialSteps getByName(java.lang.String);
+  private static net.minecraft.client.tutorial.TutorialSteps[] $values();
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.tutorial.package-info {
+}

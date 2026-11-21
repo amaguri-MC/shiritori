@@ -1,0 +1,141 @@
+Compiled from "package-info.java"
+interface net.minecraft.world.entity.animal.allay.package-info {
+}
+Compiled from "Allay.java"
+class net.minecraft.world.entity.animal.allay.Allay$VibrationUser implements net.minecraft.world.level.gameevent.vibrations.VibrationSystem$User {
+  private static final int VIBRATION_EVENT_LISTENER_RANGE;
+  private final net.minecraft.world.level.gameevent.PositionSource positionSource;
+  final net.minecraft.world.entity.animal.allay.Allay this$0;
+  private net.minecraft.world.entity.animal.allay.Allay$VibrationUser(net.minecraft.world.entity.animal.allay.Allay);
+  public int getListenerRadius();
+  public net.minecraft.world.level.gameevent.PositionSource getPositionSource();
+  public boolean canReceiveVibration(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.core.Holder<net.minecraft.world.level.gameevent.GameEvent>, net.minecraft.world.level.gameevent.GameEvent$Context);
+  public void onReceiveVibration(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.core.Holder<net.minecraft.world.level.gameevent.GameEvent>, net.minecraft.world.entity.Entity, net.minecraft.world.entity.Entity, float);
+  public net.minecraft.tags.TagKey<net.minecraft.world.level.gameevent.GameEvent> getListenableEvents();
+}
+Compiled from "Allay.java"
+class net.minecraft.world.entity.animal.allay.Allay$JukeboxListener implements net.minecraft.world.level.gameevent.GameEventListener {
+  private final net.minecraft.world.level.gameevent.PositionSource listenerSource;
+  private final int listenerRadius;
+  final net.minecraft.world.entity.animal.allay.Allay this$0;
+  public net.minecraft.world.entity.animal.allay.Allay$JukeboxListener(net.minecraft.world.entity.animal.allay.Allay, net.minecraft.world.level.gameevent.PositionSource, int);
+  public net.minecraft.world.level.gameevent.PositionSource getListenerSource();
+  public int getListenerRadius();
+  public boolean handleGameEvent(net.minecraft.server.level.ServerLevel, net.minecraft.core.Holder<net.minecraft.world.level.gameevent.GameEvent>, net.minecraft.world.level.gameevent.GameEvent$Context, net.minecraft.world.phys.Vec3);
+}
+Compiled from "Allay.java"
+public class net.minecraft.world.entity.animal.allay.Allay extends net.minecraft.world.entity.PathfinderMob implements net.minecraft.world.entity.npc.InventoryCarrier,net.minecraft.world.level.gameevent.vibrations.VibrationSystem {
+  private static final net.minecraft.core.Vec3i ITEM_PICKUP_REACH;
+  private static final int LIFTING_ITEM_ANIMATION_DURATION;
+  private static final float DANCING_LOOP_DURATION;
+  private static final float SPINNING_ANIMATION_DURATION;
+  private static final int DEFAULT_DUPLICATION_COOLDOWN;
+  private static final int DUPLICATION_COOLDOWN_TICKS;
+  private static final int NUM_OF_DUPLICATION_HEARTS;
+  public static final int MAX_NOTEBLOCK_DISTANCE;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Boolean> DATA_DANCING;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Boolean> DATA_CAN_DUPLICATE;
+  private static final net.minecraft.world.entity.ai.Brain$Provider<net.minecraft.world.entity.animal.allay.Allay> BRAIN_PROVIDER;
+  public static final com.google.common.collect.ImmutableList<java.lang.Float> THROW_SOUND_PITCHES;
+  private final net.minecraft.world.level.gameevent.DynamicGameEventListener<net.minecraft.world.level.gameevent.vibrations.VibrationSystem$Listener> dynamicVibrationListener;
+  private net.minecraft.world.level.gameevent.vibrations.VibrationSystem$Data vibrationData;
+  private final net.minecraft.world.level.gameevent.vibrations.VibrationSystem$User vibrationUser;
+  private final net.minecraft.world.level.gameevent.DynamicGameEventListener<net.minecraft.world.entity.animal.allay.Allay$JukeboxListener> dynamicJukeboxListener;
+  private final net.minecraft.world.SimpleContainer inventory;
+  private net.minecraft.core.BlockPos jukeboxPos;
+  private long duplicationCooldown;
+  private float holdingItemAnimationTicks;
+  private float holdingItemAnimationTicks0;
+  private float dancingAnimationTicks;
+  private float spinningAnimationTicks;
+  private float spinningAnimationTicks0;
+  public net.minecraft.world.entity.animal.allay.Allay(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.allay.Allay>, net.minecraft.world.level.Level);
+  protected net.minecraft.world.entity.ai.Brain<net.minecraft.world.entity.animal.allay.Allay> makeBrain(net.minecraft.world.entity.ai.Brain$Packed);
+  public net.minecraft.world.entity.ai.Brain<net.minecraft.world.entity.animal.allay.Allay> getBrain();
+  public static net.minecraft.world.entity.ai.attributes.AttributeSupplier$Builder createAttributes();
+  protected net.minecraft.world.entity.ai.navigation.PathNavigation createNavigation(net.minecraft.world.level.Level);
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  public void travel(net.minecraft.world.phys.Vec3);
+  public boolean hurtServer(net.minecraft.server.level.ServerLevel, net.minecraft.world.damagesource.DamageSource, float);
+  protected boolean considersEntityAsAlly(net.minecraft.world.entity.Entity);
+  private boolean isLikedPlayer(net.minecraft.world.entity.Entity);
+  protected void playStepSound(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  protected void checkFallDamage(double, boolean, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos);
+  protected net.minecraft.sounds.SoundEvent getAmbientSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  protected float getSoundVolume();
+  protected void customServerAiStep(net.minecraft.server.level.ServerLevel);
+  public void aiStep();
+  public void tick();
+  public boolean canPickUpLoot();
+  public boolean hasItemInHand();
+  protected boolean canDispenserEquipIntoSlot(net.minecraft.world.entity.EquipmentSlot);
+  private boolean isOnPickupCooldown();
+  protected net.minecraft.world.InteractionResult mobInteract(net.minecraft.world.entity.player.Player, net.minecraft.world.InteractionHand);
+  public void setJukeboxPlaying(net.minecraft.core.BlockPos, boolean);
+  public net.minecraft.world.SimpleContainer getInventory();
+  protected net.minecraft.core.Vec3i getPickupReach();
+  public boolean wantsToPickUp(net.minecraft.server.level.ServerLevel, net.minecraft.world.item.ItemStack);
+  private boolean allayConsidersItemEqual(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+  private boolean hasNonMatchingPotion(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+  protected void pickUpItem(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.item.ItemEntity);
+  public boolean isFlapping();
+  public void updateDynamicGameEventListener(java.util.function.BiConsumer<net.minecraft.world.level.gameevent.DynamicGameEventListener<?>, net.minecraft.server.level.ServerLevel>);
+  public boolean isDancing();
+  public void setDancing(boolean);
+  private boolean shouldStopDancing();
+  public float getHoldingItemAnimationProgress(float);
+  public boolean isSpinning();
+  public float getSpinningProgress(float);
+  public boolean equipmentHasChanged(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+  protected void dropEquipment(net.minecraft.server.level.ServerLevel);
+  public boolean removeWhenFarAway(double);
+  protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput);
+  protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput);
+  protected boolean shouldStayCloseToLeashHolder();
+  private void updateDuplicationCooldown();
+  private void setDuplicationCooldown(long);
+  private void duplicateAllay();
+  private void resetDuplicationCooldown();
+  private boolean canDuplicate();
+  private void removeInteractionItem(net.minecraft.world.entity.player.Player, net.minecraft.world.item.ItemStack);
+  public net.minecraft.world.phys.Vec3 getLeashOffset();
+  public void handleEntityEvent(byte);
+  private void spawnHeartParticle();
+  public net.minecraft.world.level.gameevent.vibrations.VibrationSystem$Data getVibrationData();
+  public net.minecraft.world.level.gameevent.vibrations.VibrationSystem$User getVibrationUser();
+  private void lambda$dropEquipment$0(net.minecraft.server.level.ServerLevel, net.minecraft.world.item.ItemStack);
+  private static java.util.List lambda$static$0(net.minecraft.world.entity.animal.allay.Allay);
+  static {};
+}
+Compiled from "AllayAi.java"
+public class net.minecraft.world.entity.animal.allay.AllayAi {
+  private static final float SPEED_MULTIPLIER_WHEN_IDLING;
+  private static final float SPEED_MULTIPLIER_WHEN_FOLLOWING_DEPOSIT_TARGET;
+  private static final float SPEED_MULTIPLIER_WHEN_RETRIEVING_ITEM;
+  private static final float SPEED_MULTIPLIER_WHEN_PANICKING;
+  private static final int CLOSE_ENOUGH_TO_TARGET;
+  private static final int TOO_FAR_FROM_TARGET;
+  private static final int MAX_LOOK_DISTANCE;
+  private static final int MIN_WAIT_DURATION;
+  private static final int MAX_WAIT_DURATION;
+  private static final int TIME_TO_FORGET_NOTEBLOCK;
+  private static final int DISTANCE_TO_WANTED_ITEM;
+  private static final int GIVE_ITEM_TIMEOUT_DURATION;
+  public net.minecraft.world.entity.animal.allay.AllayAi();
+  protected static java.util.List<net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.animal.allay.Allay>> getActivities();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.animal.allay.Allay> initCoreActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.animal.allay.Allay> initIdleActivity();
+  public static void updateActivity(net.minecraft.world.entity.animal.allay.Allay);
+  public static void hearNoteblock(net.minecraft.world.entity.LivingEntity, net.minecraft.core.BlockPos);
+  private static java.util.Optional<net.minecraft.world.entity.ai.behavior.PositionTracker> getItemDepositPosition(net.minecraft.world.entity.LivingEntity);
+  private static boolean hasWantedItem(net.minecraft.world.entity.LivingEntity);
+  private static boolean shouldDepositItemsAtLikedNoteblock(net.minecraft.world.entity.LivingEntity, net.minecraft.world.entity.ai.Brain<?>, net.minecraft.core.GlobalPos);
+  private static java.util.Optional<net.minecraft.world.entity.ai.behavior.PositionTracker> getLikedPlayerPositionTracker(net.minecraft.world.entity.LivingEntity);
+  public static java.util.Optional<net.minecraft.server.level.ServerPlayer> getLikedPlayer(net.minecraft.world.entity.LivingEntity);
+  private static void onItemThrown(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.allay.Allay, net.minecraft.world.item.ItemStack, net.minecraft.core.BlockPos);
+  private static void lambda$onItemThrown$0(net.minecraft.core.BlockPos, net.minecraft.world.item.ItemStack, net.minecraft.server.level.ServerPlayer);
+  private static net.minecraft.world.entity.ai.behavior.PositionTracker lambda$getLikedPlayerPositionTracker$0(net.minecraft.server.level.ServerPlayer);
+  private static boolean lambda$initIdleActivity$0(net.minecraft.world.entity.animal.allay.Allay);
+}

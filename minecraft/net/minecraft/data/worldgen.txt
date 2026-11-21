@@ -1,0 +1,403 @@
+Compiled from "package-info.java"
+interface net.minecraft.data.worldgen.package-info {
+}
+Compiled from "VillagePools.java"
+public class net.minecraft.data.worldgen.VillagePools {
+  public net.minecraft.data.worldgen.VillagePools();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+}
+Compiled from "PillagerOutpostPools.java"
+public class net.minecraft.data.worldgen.PillagerOutpostPools {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> START;
+  public net.minecraft.data.worldgen.PillagerOutpostPools();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+  static {};
+}
+Compiled from "AncientCityStructurePieces.java"
+public class net.minecraft.data.worldgen.AncientCityStructurePieces {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> START;
+  public net.minecraft.data.worldgen.AncientCityStructurePieces();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+  static {};
+}
+Compiled from "PlainVillagePools.java"
+public class net.minecraft.data.worldgen.PlainVillagePools {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> START;
+  private static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> TERMINATORS_KEY;
+  public net.minecraft.data.worldgen.PlainVillagePools();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+  static {};
+}
+Compiled from "DesertVillagePools.java"
+public class net.minecraft.data.worldgen.DesertVillagePools {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> START;
+  private static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> TERMINATORS_KEY;
+  private static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> ZOMBIE_TERMINATORS_KEY;
+  public net.minecraft.data.worldgen.DesertVillagePools();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+  static {};
+}
+Compiled from "TaigaVillagePools.java"
+public class net.minecraft.data.worldgen.TaigaVillagePools {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> START;
+  private static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> TERMINATORS_KEY;
+  public net.minecraft.data.worldgen.TaigaVillagePools();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+  static {};
+}
+Compiled from "SurfaceRuleData.java"
+public class net.minecraft.data.worldgen.SurfaceRuleData {
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource AIR;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource BEDROCK;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource WHITE_TERRACOTTA;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource ORANGE_TERRACOTTA;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource TERRACOTTA;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource RED_SAND;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource RED_SANDSTONE;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource STONE;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource DEEPSLATE;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource DIRT;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource PODZOL;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource COARSE_DIRT;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource MYCELIUM;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource GRASS_BLOCK;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource CALCITE;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource GRAVEL;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource SAND;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource SANDSTONE;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource PACKED_ICE;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource SNOW_BLOCK;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource MUD;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource POWDER_SNOW;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource ICE;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource WATER;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource LAVA;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource NETHERRACK;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource SOUL_SAND;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource SOUL_SOIL;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource BASALT;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource BLACKSTONE;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource WARPED_WART_BLOCK;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource WARPED_NYLIUM;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource NETHER_WART_BLOCK;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource CRIMSON_NYLIUM;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource ENDSTONE;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource CINNABAR;
+  private static final net.minecraft.world.level.levelgen.SurfaceRules$RuleSource SULFUR;
+  public net.minecraft.data.worldgen.SurfaceRuleData();
+  private static net.minecraft.world.level.levelgen.SurfaceRules$RuleSource makeStateRule(net.minecraft.world.level.block.Block);
+  public static net.minecraft.world.level.levelgen.SurfaceRules$RuleSource overworld(net.minecraft.core.HolderGetter<net.minecraft.world.level.biome.Biome>);
+  public static net.minecraft.world.level.levelgen.SurfaceRules$RuleSource overworldLike(net.minecraft.core.HolderGetter<net.minecraft.world.level.biome.Biome>, boolean, boolean, boolean);
+  public static net.minecraft.world.level.levelgen.SurfaceRules$RuleSource nether(net.minecraft.core.HolderGetter<net.minecraft.world.level.biome.Biome>);
+  public static net.minecraft.world.level.levelgen.SurfaceRules$RuleSource end();
+  public static net.minecraft.world.level.levelgen.SurfaceRules$RuleSource air();
+  private static net.minecraft.world.level.levelgen.SurfaceRules$ConditionSource surfaceNoiseAbove(double);
+  private static net.minecraft.world.level.levelgen.SurfaceRules$RuleSource[] lambda$overworldLike$0(int);
+  static {};
+}
+Compiled from "NoiseData.java"
+public class net.minecraft.data.worldgen.NoiseData {
+  public static final net.minecraft.world.level.levelgen.synth.NormalNoise$NoiseParameters DEFAULT_SHIFT;
+  public net.minecraft.data.worldgen.NoiseData();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.synth.NormalNoise$NoiseParameters>);
+  private static void registerBiomeNoises(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.synth.NormalNoise$NoiseParameters>, int, net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.synth.NormalNoise$NoiseParameters>, net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.synth.NormalNoise$NoiseParameters>, net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.synth.NormalNoise$NoiseParameters>, net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.synth.NormalNoise$NoiseParameters>);
+  private static void register(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.synth.NormalNoise$NoiseParameters>, net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.synth.NormalNoise$NoiseParameters>, int, double, double...);
+  static {};
+}
+Compiled from "Structures.java"
+public class net.minecraft.data.worldgen.Structures {
+  public net.minecraft.data.worldgen.Structures();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.Structure>);
+  private static net.minecraft.world.level.levelgen.structure.StructureSpawnOverride lambda$bootstrap$3(net.minecraft.world.entity.MobCategory);
+  private static net.minecraft.world.entity.MobCategory lambda$bootstrap$2(net.minecraft.world.entity.MobCategory);
+  private static net.minecraft.world.level.levelgen.structure.StructureSpawnOverride lambda$bootstrap$1(net.minecraft.world.entity.MobCategory);
+  private static net.minecraft.world.entity.MobCategory lambda$bootstrap$0(net.minecraft.world.entity.MobCategory);
+}
+Compiled from "Carvers.java"
+public class net.minecraft.data.worldgen.Carvers {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver<?>> CAVE;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver<?>> CAVE_EXTRA_UNDERGROUND;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver<?>> CANYON;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver<?>> NETHER_CAVE;
+  public net.minecraft.data.worldgen.Carvers();
+  private static net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver<?>> createKey(java.lang.String);
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.carver.ConfiguredWorldCarver<?>>);
+  static {};
+}
+Compiled from "BiomeDefaultFeatures.java"
+public class net.minecraft.data.worldgen.BiomeDefaultFeatures {
+  public net.minecraft.data.worldgen.BiomeDefaultFeatures();
+  public static void addDefaultCarversAndLakes(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDefaultMonsterRoom(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDefaultUndergroundVariety(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDripstone(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addSculk(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDefaultOres(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDefaultOres(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder, boolean);
+  public static void addExtraGold(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addExtraEmeralds(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addInfestedStone(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDefaultSoftDisks(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addSwampClayDisk(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addMangroveSwampDisks(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addMossyStoneBlock(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addFerns(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addBushes(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addRareBerryBushes(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addCommonBerryBushes(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addLightBambooVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addBambooVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addTaigaTrees(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addGroveTrees(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addWaterTrees(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addBirchTrees(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addOtherBirchTrees(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addTallBirchTrees(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addBirchForestFlowers(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addSavannaTrees(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addShatteredSavannaTrees(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addLushCavesVegetationFeatures(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addSulfurCavesFeatures(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addLushCavesSpecialOres(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addMountainTrees(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addMountainForestTrees(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addJungleTrees(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addSparseJungleTrees(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addBadlandsTrees(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addSnowyTrees(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addJungleGrass(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addSavannaGrass(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addShatteredSavannaGrass(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addSavannaExtraGrass(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addBadlandGrass(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addForestFlowers(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addForestGrass(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addSwampVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addMangroveSwampVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addMushroomFieldVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addPlainVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDesertVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addGiantTaigaVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDefaultFlowers(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addCherryGroveVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addMeadowVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addWarmFlowers(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDefaultGrass(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addTaigaGrass(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addPlainGrass(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDefaultMushrooms(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDefaultExtraVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder, boolean);
+  public static void addNearWaterVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addLeafLitterPatch(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addBadlandExtraVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addJungleMelons(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addSparseJungleMelons(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addJungleVines(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDesertExtraVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addSwampExtraVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addMangroveSwampExtraVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDesertExtraDecoration(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addFossilDecoration(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addColdOceanExtraVegetation(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addLukeWarmKelp(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDefaultSprings(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addFrozenSprings(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addIcebergs(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addBlueIce(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addSurfaceFreezing(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addNetherDefaultOres(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addAncientDebris(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void addDefaultCrystalFormations(net.minecraft.world.level.biome.BiomeGenerationSettings$Builder);
+  public static void farmAnimals(net.minecraft.world.level.biome.MobSpawnSettings$Builder);
+  public static void caveSpawns(net.minecraft.world.level.biome.MobSpawnSettings$Builder);
+  public static void commonSpawns(net.minecraft.world.level.biome.MobSpawnSettings$Builder);
+  public static void commonSpawns(net.minecraft.world.level.biome.MobSpawnSettings$Builder, int);
+  public static void commonSpawnWithZombieHorse(net.minecraft.world.level.biome.MobSpawnSettings$Builder);
+  public static void swampSpawns(net.minecraft.world.level.biome.MobSpawnSettings$Builder, int);
+  public static void oceanSpawns(net.minecraft.world.level.biome.MobSpawnSettings$Builder, int, int, int);
+  public static void warmOceanSpawns(net.minecraft.world.level.biome.MobSpawnSettings$Builder, int, int);
+  public static void plainsSpawns(net.minecraft.world.level.biome.MobSpawnSettings$Builder);
+  public static void snowySpawns(net.minecraft.world.level.biome.MobSpawnSettings$Builder, boolean);
+  public static void desertSpawns(net.minecraft.world.level.biome.MobSpawnSettings$Builder);
+  public static void dripstoneCavesSpawns(net.minecraft.world.level.biome.MobSpawnSettings$Builder);
+  public static void monsters(net.minecraft.world.level.biome.MobSpawnSettings$Builder, int, int, int, int, boolean);
+  public static void mooshroomSpawns(net.minecraft.world.level.biome.MobSpawnSettings$Builder);
+  public static void baseJungleSpawns(net.minecraft.world.level.biome.MobSpawnSettings$Builder);
+  public static void endSpawns(net.minecraft.world.level.biome.MobSpawnSettings$Builder);
+}
+Compiled from "DimensionTypes.java"
+public class net.minecraft.data.worldgen.DimensionTypes {
+  public net.minecraft.data.worldgen.DimensionTypes();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.dimension.DimensionType>);
+}
+Compiled from "AncientCityStructurePools.java"
+public class net.minecraft.data.worldgen.AncientCityStructurePools {
+  public net.minecraft.data.worldgen.AncientCityStructurePools();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+}
+Compiled from "BootstrapContext.java"
+public interface net.minecraft.data.worldgen.BootstrapContext<T> {
+  public abstract net.minecraft.core.Holder$Reference<T> register(net.minecraft.resources.ResourceKey<T>, T, com.mojang.serialization.Lifecycle);
+  public default net.minecraft.core.Holder$Reference<T> register(net.minecraft.resources.ResourceKey<T>, T);
+  public abstract <S> net.minecraft.core.HolderGetter<S> lookup(net.minecraft.resources.ResourceKey<? extends net.minecraft.core.Registry<? extends S>>);
+}
+Compiled from "BastionHousingUnitsPools.java"
+public class net.minecraft.data.worldgen.BastionHousingUnitsPools {
+  public net.minecraft.data.worldgen.BastionHousingUnitsPools();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+}
+Compiled from "BastionBridgePools.java"
+public class net.minecraft.data.worldgen.BastionBridgePools {
+  public net.minecraft.data.worldgen.BastionBridgePools();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+}
+Compiled from "TrailRuinsStructurePools.java"
+public class net.minecraft.data.worldgen.TrailRuinsStructurePools {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> START;
+  public net.minecraft.data.worldgen.TrailRuinsStructurePools();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+  static {};
+}
+Compiled from "ProcessorLists.java"
+public class net.minecraft.data.worldgen.ProcessorLists {
+  private static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> EMPTY;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> ZOMBIE_PLAINS;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> ZOMBIE_SAVANNA;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> ZOMBIE_SNOWY;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> ZOMBIE_TAIGA;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> ZOMBIE_DESERT;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> MOSSIFY_10_PERCENT;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> MOSSIFY_20_PERCENT;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> MOSSIFY_70_PERCENT;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> STREET_PLAINS;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> STREET_SAVANNA;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> STREET_SNOWY_OR_TAIGA;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> FARM_PLAINS;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> FARM_SAVANNA;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> FARM_SNOWY;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> FARM_TAIGA;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> FARM_DESERT;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> OUTPOST_ROT;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> BOTTOM_RAMPART;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> TREASURE_ROOMS;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> HOUSING;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> SIDE_WALL_DEGRADATION;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> STABLE_DEGRADATION;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> BASTION_GENERIC_DEGRADATION;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> RAMPART_DEGRADATION;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> ENTRANCE_REPLACEMENT;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> BRIDGE;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> ROOF;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> HIGH_WALL;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> HIGH_RAMPART;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> FOSSIL_ROT;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> FOSSIL_COAL;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> FOSSIL_DIAMONDS;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> ANCIENT_CITY_START_DEGRADATION;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> ANCIENT_CITY_GENERIC_DEGRADATION;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> ANCIENT_CITY_WALLS_DEGRADATION;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> TRAIL_RUINS_HOUSES_ARCHAEOLOGY;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> TRAIL_RUINS_ROADS_ARCHAEOLOGY;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> TRAIL_RUINS_TOWER_TOP_ARCHAEOLOGY;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> TRIAL_CHAMBERS_COPPER_BULB_DEGRADATION;
+  public net.minecraft.data.worldgen.ProcessorLists();
+  private static net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> createKey(java.lang.String);
+  private static void register(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList>, net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList>, java.util.List<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessor>);
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList>);
+  private static net.minecraft.world.level.levelgen.structure.templatesystem.CappedProcessor trailsArchyLootProcessor(net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, int);
+  static {};
+}
+Compiled from "BastionSharedPools.java"
+public class net.minecraft.data.worldgen.BastionSharedPools {
+  public net.minecraft.data.worldgen.BastionSharedPools();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+}
+Compiled from "TrialChambersStructurePools.java"
+public class net.minecraft.data.worldgen.TrialChambersStructurePools {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> START;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> HALLWAY_FALLBACK;
+  public static final java.util.List<net.minecraft.world.level.levelgen.structure.pools.alias.PoolAliasBinding> ALIAS_BINDINGS;
+  public net.minecraft.data.worldgen.TrialChambersStructurePools();
+  public static java.lang.String spawner(java.lang.String);
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+  static {};
+}
+Compiled from "BastionTreasureRoomPools.java"
+public class net.minecraft.data.worldgen.BastionTreasureRoomPools {
+  public net.minecraft.data.worldgen.BastionTreasureRoomPools();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+}
+Compiled from "BastionHoglinStablePools.java"
+public class net.minecraft.data.worldgen.BastionHoglinStablePools {
+  public net.minecraft.data.worldgen.BastionHoglinStablePools();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+}
+Compiled from "SavannaVillagePools.java"
+public class net.minecraft.data.worldgen.SavannaVillagePools {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> START;
+  private static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> TERMINATORS_KEY;
+  private static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> ZOMBIE_TERMINATORS_KEY;
+  public net.minecraft.data.worldgen.SavannaVillagePools();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+  static {};
+}
+Compiled from "TerrainProvider.java"
+public class net.minecraft.data.worldgen.TerrainProvider {
+  private static final float DEEP_OCEAN_CONTINENTALNESS;
+  private static final float OCEAN_CONTINENTALNESS;
+  private static final float PLAINS_CONTINENTALNESS;
+  private static final float BEACH_CONTINENTALNESS;
+  private static final it.unimi.dsi.fastutil.floats.Float2FloatFunction NO_TRANSFORM;
+  private static final it.unimi.dsi.fastutil.floats.Float2FloatFunction AMPLIFIED_OFFSET;
+  private static final it.unimi.dsi.fastutil.floats.Float2FloatFunction AMPLIFIED_FACTOR;
+  private static final it.unimi.dsi.fastutil.floats.Float2FloatFunction AMPLIFIED_JAGGEDNESS;
+  public net.minecraft.data.worldgen.TerrainProvider();
+  public static <I extends net.minecraft.util.BoundedFloatFunction<?>> net.minecraft.util.CubicSpline<I> overworldOffset(I, I, I, boolean);
+  public static <I extends net.minecraft.util.BoundedFloatFunction<?>> net.minecraft.util.CubicSpline<I> overworldFactor(I, I, I, I, boolean);
+  public static <I extends net.minecraft.util.BoundedFloatFunction<?>> net.minecraft.util.CubicSpline<I> overworldJaggedness(I, I, I, I, boolean);
+  private static <I extends net.minecraft.util.BoundedFloatFunction<?>> net.minecraft.util.CubicSpline<I> buildErosionJaggednessSpline(I, I, I, float, float, float, float, it.unimi.dsi.fastutil.floats.Float2FloatFunction);
+  public static float peaksAndValleys(float);
+  private static <I extends net.minecraft.util.BoundedFloatFunction<?>> net.minecraft.util.CubicSpline<I> buildRidgeJaggednessSpline(I, I, float, float, it.unimi.dsi.fastutil.floats.Float2FloatFunction);
+  private static <I extends net.minecraft.util.BoundedFloatFunction<?>> net.minecraft.util.CubicSpline<I> buildWeirdnessJaggednessSpline(I, float, it.unimi.dsi.fastutil.floats.Float2FloatFunction);
+  private static <I extends net.minecraft.util.BoundedFloatFunction<?>> net.minecraft.util.CubicSpline<I> getErosionFactor(I, I, I, float, boolean, it.unimi.dsi.fastutil.floats.Float2FloatFunction);
+  private static float calculateSlope(float, float, float, float);
+  private static <I extends net.minecraft.util.BoundedFloatFunction<?>> net.minecraft.util.CubicSpline<I> buildMountainRidgeSplineWithPoints(I, float, boolean, it.unimi.dsi.fastutil.floats.Float2FloatFunction);
+  private static float mountainContinentalness(float, float, float);
+  private static float calculateMountainRidgeZeroContinentalnessPoint(float);
+  public static <I extends net.minecraft.util.BoundedFloatFunction<?>> net.minecraft.util.CubicSpline<I> buildErosionOffsetSpline(I, I, float, float, float, float, float, float, boolean, boolean, it.unimi.dsi.fastutil.floats.Float2FloatFunction);
+  private static <I extends net.minecraft.util.BoundedFloatFunction<?>> net.minecraft.util.CubicSpline<I> ridgeSpline(I, float, float, float, float, float, float, it.unimi.dsi.fastutil.floats.Float2FloatFunction);
+  private static float lambda$static$2(float);
+  private static float lambda$static$1(float);
+  private static float lambda$static$0(float);
+  static {};
+}
+Compiled from "BastionPieces.java"
+public class net.minecraft.data.worldgen.BastionPieces {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> START;
+  public net.minecraft.data.worldgen.BastionPieces();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+  static {};
+}
+Compiled from "StructureSets.java"
+public interface net.minecraft.data.worldgen.StructureSets {
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.StructureSet>);
+}
+Compiled from "SnowyVillagePools.java"
+public class net.minecraft.data.worldgen.SnowyVillagePools {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> START;
+  private static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> TERMINATORS_KEY;
+  public net.minecraft.data.worldgen.SnowyVillagePools();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+  static {};
+}
+Compiled from "Pools.java"
+public class net.minecraft.data.worldgen.Pools {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> EMPTY;
+  public net.minecraft.data.worldgen.Pools();
+  public static net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> createKey(net.minecraft.resources.Identifier);
+  public static net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> createKey(java.lang.String);
+  public static net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool> parseKey(java.lang.String);
+  public static void register(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>, java.lang.String, net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool);
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.structure.pools.StructureTemplatePool>);
+  static {};
+}

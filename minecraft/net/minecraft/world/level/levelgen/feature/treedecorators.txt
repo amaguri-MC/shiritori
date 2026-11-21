@@ -1,0 +1,203 @@
+Compiled from "TreeDecorator.java"
+public final class net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context {
+  private final net.minecraft.world.level.WorldGenLevel level;
+  private final java.util.function.BiConsumer<net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState> decorationSetter;
+  private final net.minecraft.util.RandomSource random;
+  private final it.unimi.dsi.fastutil.objects.ObjectArrayList<net.minecraft.core.BlockPos> logs;
+  private final it.unimi.dsi.fastutil.objects.ObjectArrayList<net.minecraft.core.BlockPos> leaves;
+  private final it.unimi.dsi.fastutil.objects.ObjectArrayList<net.minecraft.core.BlockPos> roots;
+  public net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context(net.minecraft.world.level.WorldGenLevel, java.util.function.BiConsumer<net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState>, net.minecraft.util.RandomSource, java.util.Set<net.minecraft.core.BlockPos>, java.util.Set<net.minecraft.core.BlockPos>, java.util.Set<net.minecraft.core.BlockPos>);
+  public void placeVine(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.properties.BooleanProperty);
+  public void setBlock(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  public boolean isAir(net.minecraft.core.BlockPos);
+  public boolean checkBlock(net.minecraft.core.BlockPos, java.util.function.Predicate<net.minecraft.world.level.block.state.BlockState>);
+  public net.minecraft.world.level.WorldGenLevel level();
+  public net.minecraft.util.RandomSource random();
+  public it.unimi.dsi.fastutil.objects.ObjectArrayList<net.minecraft.core.BlockPos> logs();
+  public it.unimi.dsi.fastutil.objects.ObjectArrayList<net.minecraft.core.BlockPos> leaves();
+  public it.unimi.dsi.fastutil.objects.ObjectArrayList<net.minecraft.core.BlockPos> roots();
+}
+Compiled from "CocoaDecorator.java"
+public class net.minecraft.world.level.levelgen.feature.treedecorators.CocoaDecorator extends net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.levelgen.feature.treedecorators.CocoaDecorator> CODEC;
+  private final float probability;
+  public net.minecraft.world.level.levelgen.feature.treedecorators.CocoaDecorator(float);
+  protected net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<?> type();
+  public void place(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context);
+  private static void lambda$place$1(net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context, net.minecraft.core.BlockPos);
+  private static boolean lambda$place$0(int, net.minecraft.core.BlockPos);
+  private static java.lang.Float lambda$static$0(net.minecraft.world.level.levelgen.feature.treedecorators.CocoaDecorator);
+  static {};
+}
+Compiled from "AttachedToLeavesDecorator.java"
+public class net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLeavesDecorator extends net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLeavesDecorator> CODEC;
+  protected final float probability;
+  protected final int exclusionRadiusXZ;
+  protected final int exclusionRadiusY;
+  protected final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider blockProvider;
+  protected final int requiredEmptyBlocks;
+  protected final java.util.List<net.minecraft.core.Direction> directions;
+  public net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLeavesDecorator(float, int, int, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, int, java.util.List<net.minecraft.core.Direction>);
+  public void place(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context);
+  private boolean hasRequiredEmptyBlocks(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context, net.minecraft.core.BlockPos, net.minecraft.core.Direction);
+  protected net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<?> type();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.util.List lambda$static$6(net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLeavesDecorator);
+  private static java.lang.Integer lambda$static$5(net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLeavesDecorator);
+  private static net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider lambda$static$4(net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLeavesDecorator);
+  private static java.lang.Integer lambda$static$3(net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLeavesDecorator);
+  private static java.lang.Integer lambda$static$2(net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLeavesDecorator);
+  private static java.lang.Float lambda$static$1(net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLeavesDecorator);
+  static {};
+}
+Compiled from "BeehiveDecorator.java"
+public class net.minecraft.world.level.levelgen.feature.treedecorators.BeehiveDecorator extends net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.levelgen.feature.treedecorators.BeehiveDecorator> CODEC;
+  private static final net.minecraft.core.Direction WORLDGEN_FACING;
+  private static final net.minecraft.core.Direction[] SPAWN_DIRECTIONS;
+  private final float probability;
+  public net.minecraft.world.level.levelgen.feature.treedecorators.BeehiveDecorator(float);
+  protected net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<?> type();
+  public void place(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context);
+  private static void lambda$place$3(net.minecraft.util.RandomSource, net.minecraft.world.level.block.entity.BeehiveBlockEntity);
+  private static boolean lambda$place$2(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context, net.minecraft.core.BlockPos);
+  private static java.util.stream.Stream lambda$place$1(net.minecraft.core.BlockPos);
+  private static boolean lambda$place$0(int, net.minecraft.core.BlockPos);
+  private static net.minecraft.core.Direction[] lambda$SPAWN_DIRECTIONS$0(int);
+  private static boolean lambda$static$1(net.minecraft.core.Direction);
+  private static java.lang.Float lambda$static$0(net.minecraft.world.level.levelgen.feature.treedecorators.BeehiveDecorator);
+  static {};
+}
+Compiled from "TreeDecoratorType.java"
+public class net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<P extends net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator> {
+  public static final net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator> TRUNK_VINE;
+  public static final net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<net.minecraft.world.level.levelgen.feature.treedecorators.LeaveVineDecorator> LEAVE_VINE;
+  public static final net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<net.minecraft.world.level.levelgen.feature.treedecorators.PaleMossDecorator> PALE_MOSS;
+  public static final net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<net.minecraft.world.level.levelgen.feature.treedecorators.CreakingHeartDecorator> CREAKING_HEART;
+  public static final net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<net.minecraft.world.level.levelgen.feature.treedecorators.CocoaDecorator> COCOA;
+  public static final net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<net.minecraft.world.level.levelgen.feature.treedecorators.BeehiveDecorator> BEEHIVE;
+  public static final net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<net.minecraft.world.level.levelgen.feature.treedecorators.AlterGroundDecorator> ALTER_GROUND;
+  public static final net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLeavesDecorator> ATTACHED_TO_LEAVES;
+  public static final net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<net.minecraft.world.level.levelgen.feature.treedecorators.PlaceOnGroundDecorator> PLACE_ON_GROUND;
+  public static final net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLogsDecorator> ATTACHED_TO_LOGS;
+  private final com.mojang.serialization.MapCodec<P> codec;
+  private static <P extends net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator> net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<P> register(java.lang.String, com.mojang.serialization.MapCodec<P>);
+  private net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType(com.mojang.serialization.MapCodec<P>);
+  public com.mojang.serialization.MapCodec<P> codec();
+  static {};
+}
+Compiled from "LeaveVineDecorator.java"
+public class net.minecraft.world.level.levelgen.feature.treedecorators.LeaveVineDecorator extends net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.levelgen.feature.treedecorators.LeaveVineDecorator> CODEC;
+  private final float probability;
+  protected net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<?> type();
+  public net.minecraft.world.level.levelgen.feature.treedecorators.LeaveVineDecorator(float);
+  public void place(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context);
+  private static void addHangingVine(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.properties.BooleanProperty, net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context);
+  private void lambda$place$0(net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context, net.minecraft.core.BlockPos);
+  private static java.lang.Float lambda$static$0(net.minecraft.world.level.levelgen.feature.treedecorators.LeaveVineDecorator);
+  static {};
+}
+Compiled from "PlaceOnGroundDecorator.java"
+public class net.minecraft.world.level.levelgen.feature.treedecorators.PlaceOnGroundDecorator extends net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.levelgen.feature.treedecorators.PlaceOnGroundDecorator> CODEC;
+  private final int tries;
+  private final int radius;
+  private final int height;
+  private final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider blockStateProvider;
+  public net.minecraft.world.level.levelgen.feature.treedecorators.PlaceOnGroundDecorator(int, int, int, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider);
+  protected net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<?> type();
+  public void place(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context);
+  private void attemptToPlaceBlockAbove(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context, net.minecraft.core.BlockPos);
+  private static boolean lambda$attemptToPlaceBlockAbove$0(net.minecraft.world.level.block.state.BlockState);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider lambda$static$4(net.minecraft.world.level.levelgen.feature.treedecorators.PlaceOnGroundDecorator);
+  private static java.lang.Integer lambda$static$3(net.minecraft.world.level.levelgen.feature.treedecorators.PlaceOnGroundDecorator);
+  private static java.lang.Integer lambda$static$2(net.minecraft.world.level.levelgen.feature.treedecorators.PlaceOnGroundDecorator);
+  private static java.lang.Integer lambda$static$1(net.minecraft.world.level.levelgen.feature.treedecorators.PlaceOnGroundDecorator);
+  static {};
+}
+Compiled from "PaleMossDecorator.java"
+public class net.minecraft.world.level.levelgen.feature.treedecorators.PaleMossDecorator extends net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.levelgen.feature.treedecorators.PaleMossDecorator> CODEC;
+  private final float leavesProbability;
+  private final float trunkProbability;
+  private final float groundProbability;
+  protected net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<?> type();
+  public net.minecraft.world.level.levelgen.feature.treedecorators.PaleMossDecorator(float, float, float);
+  public void place(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context);
+  private static void addMossHanger(net.minecraft.core.BlockPos, net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context);
+  private void lambda$place$3(net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context, net.minecraft.core.BlockPos);
+  private void lambda$place$2(net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context, net.minecraft.core.BlockPos);
+  private static void lambda$place$1(net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, net.minecraft.core.Holder$Reference);
+  private static java.util.Optional lambda$place$0(net.minecraft.core.Registry);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Float lambda$static$3(net.minecraft.world.level.levelgen.feature.treedecorators.PaleMossDecorator);
+  private static java.lang.Float lambda$static$2(net.minecraft.world.level.levelgen.feature.treedecorators.PaleMossDecorator);
+  private static java.lang.Float lambda$static$1(net.minecraft.world.level.levelgen.feature.treedecorators.PaleMossDecorator);
+  static {};
+}
+Compiled from "TrunkVineDecorator.java"
+public class net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator extends net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator> CODEC;
+  public static final net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator INSTANCE;
+  public net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator();
+  protected net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<?> type();
+  public void place(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context);
+  private static void lambda$place$0(net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context, net.minecraft.core.BlockPos);
+  private static net.minecraft.world.level.levelgen.feature.treedecorators.TrunkVineDecorator lambda$static$0();
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.level.levelgen.feature.treedecorators.package-info {
+}
+Compiled from "AlterGroundDecorator.java"
+public class net.minecraft.world.level.levelgen.feature.treedecorators.AlterGroundDecorator extends net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.levelgen.feature.treedecorators.AlterGroundDecorator> CODEC;
+  private final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider provider;
+  public net.minecraft.world.level.levelgen.feature.treedecorators.AlterGroundDecorator(net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider);
+  protected net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<?> type();
+  public void place(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context);
+  private void placeCircle(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context, net.minecraft.core.BlockPos);
+  private void placeBlockAt(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context, net.minecraft.core.BlockPos);
+  private void lambda$place$1(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context, net.minecraft.core.BlockPos);
+  private static boolean lambda$place$0(int, net.minecraft.core.BlockPos);
+  private static net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider lambda$static$0(net.minecraft.world.level.levelgen.feature.treedecorators.AlterGroundDecorator);
+  static {};
+}
+Compiled from "CreakingHeartDecorator.java"
+public class net.minecraft.world.level.levelgen.feature.treedecorators.CreakingHeartDecorator extends net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.levelgen.feature.treedecorators.CreakingHeartDecorator> CODEC;
+  private final float probability;
+  public net.minecraft.world.level.levelgen.feature.treedecorators.CreakingHeartDecorator(float);
+  protected net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<?> type();
+  public void place(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context);
+  private static boolean lambda$place$0(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context, net.minecraft.core.BlockPos);
+  private static boolean lambda$place$1(net.minecraft.world.level.block.state.BlockState);
+  private static java.lang.Float lambda$static$0(net.minecraft.world.level.levelgen.feature.treedecorators.CreakingHeartDecorator);
+  static {};
+}
+Compiled from "TreeDecorator.java"
+public abstract class net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator> CODEC;
+  public net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator();
+  protected abstract net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<?> type();
+  public abstract void place(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context);
+  static {};
+}
+Compiled from "AttachedToLogsDecorator.java"
+public class net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLogsDecorator extends net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLogsDecorator> CODEC;
+  private final float probability;
+  private final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider blockProvider;
+  private final java.util.List<net.minecraft.core.Direction> directions;
+  public net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLogsDecorator(float, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, java.util.List<net.minecraft.core.Direction>);
+  public void place(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context);
+  protected net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecoratorType<?> type();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.util.List lambda$static$3(net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLogsDecorator);
+  private static net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider lambda$static$2(net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLogsDecorator);
+  private static java.lang.Float lambda$static$1(net.minecraft.world.level.levelgen.feature.treedecorators.AttachedToLogsDecorator);
+  static {};
+}

@@ -1,0 +1,338 @@
+Compiled from "Bee.java"
+class net.minecraft.world.entity.animal.bee.Bee$1 extends net.minecraft.world.entity.ai.navigation.FlyingPathNavigation {
+  final net.minecraft.world.entity.animal.bee.Bee this$0;
+  net.minecraft.world.entity.animal.bee.Bee$1(net.minecraft.world.entity.animal.bee.Bee, net.minecraft.world.entity.Mob, net.minecraft.world.level.Level);
+  public boolean isStableDestination(net.minecraft.core.BlockPos);
+  public void tick();
+}
+Compiled from "Bee.java"
+abstract class net.minecraft.world.entity.animal.bee.Bee$BaseBeeGoal extends net.minecraft.world.entity.ai.goal.Goal {
+  final net.minecraft.world.entity.animal.bee.Bee this$0;
+  private net.minecraft.world.entity.animal.bee.Bee$BaseBeeGoal(net.minecraft.world.entity.animal.bee.Bee);
+  public abstract boolean canBeeUse();
+  public abstract boolean canBeeContinueToUse();
+  public boolean canUse();
+  public boolean canContinueToUse();
+}
+Compiled from "Bee.java"
+class net.minecraft.world.entity.animal.bee.Bee$BeeAttackGoal extends net.minecraft.world.entity.ai.goal.MeleeAttackGoal {
+  final net.minecraft.world.entity.animal.bee.Bee this$0;
+  public net.minecraft.world.entity.animal.bee.Bee$BeeAttackGoal(net.minecraft.world.entity.animal.bee.Bee, net.minecraft.world.entity.PathfinderMob, double, boolean);
+  public boolean canUse();
+  public boolean canContinueToUse();
+}
+Compiled from "Bee.java"
+class net.minecraft.world.entity.animal.bee.Bee$BeeBecomeAngryTargetGoal extends net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal<net.minecraft.world.entity.player.Player> {
+  public net.minecraft.world.entity.animal.bee.Bee$BeeBecomeAngryTargetGoal(net.minecraft.world.entity.animal.bee.Bee);
+  public boolean canUse();
+  public boolean canContinueToUse();
+  private boolean beeCanTarget();
+}
+Compiled from "Bee.java"
+class net.minecraft.world.entity.animal.bee.Bee$BeeEnterHiveGoal extends net.minecraft.world.entity.animal.bee.Bee$BaseBeeGoal {
+  final net.minecraft.world.entity.animal.bee.Bee this$0;
+  private net.minecraft.world.entity.animal.bee.Bee$BeeEnterHiveGoal(net.minecraft.world.entity.animal.bee.Bee);
+  public boolean canBeeUse();
+  public boolean canBeeContinueToUse();
+  public void start();
+}
+Compiled from "Bee.java"
+public class net.minecraft.world.entity.animal.bee.Bee$BeeGoToHiveGoal extends net.minecraft.world.entity.animal.bee.Bee$BaseBeeGoal {
+  public static final int MAX_TRAVELLING_TICKS;
+  private int travellingTicks;
+  private static final int MAX_BLACKLISTED_TARGETS;
+  private final java.util.List<net.minecraft.core.BlockPos> blacklistedTargets;
+  private net.minecraft.world.level.pathfinder.Path lastPath;
+  private static final int TICKS_BEFORE_HIVE_DROP;
+  private int ticksStuck;
+  final net.minecraft.world.entity.animal.bee.Bee this$0;
+  public net.minecraft.world.entity.animal.bee.Bee$BeeGoToHiveGoal(net.minecraft.world.entity.animal.bee.Bee);
+  public boolean canBeeUse();
+  public boolean canBeeContinueToUse();
+  public void start();
+  public void stop();
+  public void tick();
+  private boolean pathfindDirectlyTowards(net.minecraft.core.BlockPos);
+  private boolean isTargetBlacklisted(net.minecraft.core.BlockPos);
+  private void blacklistTarget(net.minecraft.core.BlockPos);
+  private void clearBlacklist();
+  private void dropAndBlacklistHive();
+  private boolean hasReachedTarget(net.minecraft.core.BlockPos);
+  public boolean canContinueToUse();
+  public boolean canUse();
+}
+Compiled from "Bee.java"
+public class net.minecraft.world.entity.animal.bee.Bee$BeeGoToKnownFlowerGoal extends net.minecraft.world.entity.animal.bee.Bee$BaseBeeGoal {
+  private static final int MAX_TRAVELLING_TICKS;
+  private int travellingTicks;
+  final net.minecraft.world.entity.animal.bee.Bee this$0;
+  public net.minecraft.world.entity.animal.bee.Bee$BeeGoToKnownFlowerGoal(net.minecraft.world.entity.animal.bee.Bee);
+  public boolean canBeeUse();
+  public boolean canBeeContinueToUse();
+  public void start();
+  public void stop();
+  public void tick();
+  private boolean wantsToGoToKnownFlower();
+  public boolean canContinueToUse();
+  public boolean canUse();
+}
+Compiled from "Bee.java"
+class net.minecraft.world.entity.animal.bee.Bee$BeeGrowCropGoal extends net.minecraft.world.entity.animal.bee.Bee$BaseBeeGoal {
+  private static final int GROW_CHANCE;
+  final net.minecraft.world.entity.animal.bee.Bee this$0;
+  private net.minecraft.world.entity.animal.bee.Bee$BeeGrowCropGoal(net.minecraft.world.entity.animal.bee.Bee);
+  public boolean canBeeUse();
+  public boolean canBeeContinueToUse();
+  public void tick();
+}
+Compiled from "Bee.java"
+class net.minecraft.world.entity.animal.bee.Bee$BeeHurtByOtherGoal extends net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal {
+  final net.minecraft.world.entity.animal.bee.Bee this$0;
+  public net.minecraft.world.entity.animal.bee.Bee$BeeHurtByOtherGoal(net.minecraft.world.entity.animal.bee.Bee, net.minecraft.world.entity.animal.bee.Bee);
+  public boolean canContinueToUse();
+  protected void alertOther(net.minecraft.world.entity.Mob, net.minecraft.world.entity.LivingEntity);
+}
+Compiled from "Bee.java"
+class net.minecraft.world.entity.animal.bee.Bee$BeeLocateHiveGoal extends net.minecraft.world.entity.animal.bee.Bee$BaseBeeGoal {
+  final net.minecraft.world.entity.animal.bee.Bee this$0;
+  private net.minecraft.world.entity.animal.bee.Bee$BeeLocateHiveGoal(net.minecraft.world.entity.animal.bee.Bee);
+  public boolean canBeeUse();
+  public boolean canBeeContinueToUse();
+  public void start();
+  private java.util.List<net.minecraft.core.BlockPos> findNearbyHivesWithSpace();
+  private static double lambda$findNearbyHivesWithSpace$1(net.minecraft.core.BlockPos, net.minecraft.core.BlockPos);
+  private static boolean lambda$findNearbyHivesWithSpace$0(net.minecraft.core.Holder);
+}
+Compiled from "Bee.java"
+class net.minecraft.world.entity.animal.bee.Bee$BeeLookControl extends net.minecraft.world.entity.ai.control.LookControl {
+  final net.minecraft.world.entity.animal.bee.Bee this$0;
+  public net.minecraft.world.entity.animal.bee.Bee$BeeLookControl(net.minecraft.world.entity.animal.bee.Bee, net.minecraft.world.entity.Mob);
+  public void tick();
+  protected boolean resetXRotOnTick();
+}
+Compiled from "Bee.java"
+class net.minecraft.world.entity.animal.bee.Bee$BeePollinateGoal extends net.minecraft.world.entity.animal.bee.Bee$BaseBeeGoal {
+  private static final int MIN_POLLINATION_TICKS;
+  private static final double ARRIVAL_THRESHOLD;
+  private static final int POSITION_CHANGE_CHANCE;
+  private static final float SPEED_MODIFIER;
+  private static final float HOVER_HEIGHT_WITHIN_FLOWER;
+  private static final float HOVER_POS_OFFSET;
+  private static final int FLOWER_SEARCH_RADIUS;
+  private int successfulPollinatingTicks;
+  private int lastSoundPlayedTick;
+  private boolean pollinating;
+  private net.minecraft.world.phys.Vec3 hoverPos;
+  private int pollinatingTicks;
+  private static final int MAX_POLLINATING_TICKS;
+  private it.unimi.dsi.fastutil.longs.Long2LongOpenHashMap unreachableFlowerCache;
+  final net.minecraft.world.entity.animal.bee.Bee this$0;
+  public net.minecraft.world.entity.animal.bee.Bee$BeePollinateGoal(net.minecraft.world.entity.animal.bee.Bee);
+  public boolean canBeeUse();
+  public boolean canBeeContinueToUse();
+  private boolean hasPollinatedLongEnough();
+  private boolean isPollinating();
+  private void stopPollinating();
+  public void start();
+  public void stop();
+  public boolean requiresUpdateEveryTick();
+  public void tick();
+  private void setWantedPos();
+  private float getOffset();
+  private java.util.Optional<net.minecraft.core.BlockPos> findNearbyFlower();
+}
+Compiled from "Bee.java"
+class net.minecraft.world.entity.animal.bee.Bee$BeeWanderGoal extends net.minecraft.world.entity.ai.goal.Goal {
+  final net.minecraft.world.entity.animal.bee.Bee this$0;
+  public net.minecraft.world.entity.animal.bee.Bee$BeeWanderGoal(net.minecraft.world.entity.animal.bee.Bee);
+  public boolean canUse();
+  public boolean canContinueToUse();
+  public void start();
+  private net.minecraft.world.phys.Vec3 findPos();
+  private int getWanderThreshold();
+}
+Compiled from "Bee.java"
+class net.minecraft.world.entity.animal.bee.Bee$ValidateFlowerGoal extends net.minecraft.world.entity.animal.bee.Bee$BaseBeeGoal {
+  private final int validateFlowerCooldown;
+  private long lastValidateTick;
+  final net.minecraft.world.entity.animal.bee.Bee this$0;
+  private net.minecraft.world.entity.animal.bee.Bee$ValidateFlowerGoal(net.minecraft.world.entity.animal.bee.Bee);
+  public void start();
+  public boolean canBeeUse();
+  public boolean canBeeContinueToUse();
+  private boolean isFlower(net.minecraft.core.BlockPos);
+}
+Compiled from "Bee.java"
+class net.minecraft.world.entity.animal.bee.Bee$ValidateHiveGoal extends net.minecraft.world.entity.animal.bee.Bee$BaseBeeGoal {
+  private final int VALIDATE_HIVE_COOLDOWN;
+  private long lastValidateTick;
+  final net.minecraft.world.entity.animal.bee.Bee this$0;
+  private net.minecraft.world.entity.animal.bee.Bee$ValidateHiveGoal(net.minecraft.world.entity.animal.bee.Bee);
+  public void start();
+  public boolean canBeeUse();
+  public boolean canBeeContinueToUse();
+}
+Compiled from "Bee.java"
+public class net.minecraft.world.entity.animal.bee.Bee extends net.minecraft.world.entity.animal.Animal implements net.minecraft.world.entity.NeutralMob {
+  public static final float FLAP_DEGREES_PER_TICK;
+  public static final int TICKS_PER_FLAP;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Byte> DATA_FLAGS_ID;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Long> DATA_ANGER_END_TIME;
+  private static final int FLAG_ROLL;
+  private static final int FLAG_HAS_STUNG;
+  private static final int FLAG_HAS_NECTAR;
+  private static final int STING_DEATH_COUNTDOWN;
+  private static final int TICKS_BEFORE_GOING_TO_KNOWN_FLOWER;
+  private static final int TICKS_WITHOUT_NECTAR_BEFORE_GOING_HOME;
+  private static final int MIN_ATTACK_DIST;
+  private static final int MAX_CROPS_GROWABLE;
+  private static final int POISON_SECONDS_NORMAL;
+  private static final int POISON_SECONDS_HARD;
+  private static final int TOO_FAR_DISTANCE;
+  private static final int HIVE_CLOSE_ENOUGH_DISTANCE;
+  private static final int RESTRICTED_WANDER_DISTANCE_REDUCTION;
+  private static final int DEFAULT_WANDER_DISTANCE_REDUCTION;
+  private static final int PATHFIND_TO_HIVE_WHEN_CLOSER_THAN;
+  private static final int HIVE_SEARCH_DISTANCE;
+  public static final java.lang.String TAG_CROPS_GROWN_SINCE_POLLINATION;
+  public static final java.lang.String TAG_CANNOT_ENTER_HIVE_TICKS;
+  public static final java.lang.String TAG_TICKS_SINCE_POLLINATION;
+  public static final java.lang.String TAG_HAS_STUNG;
+  public static final java.lang.String TAG_HAS_NECTAR;
+  public static final java.lang.String TAG_FLOWER_POS;
+  public static final java.lang.String TAG_HIVE_POS;
+  public static final boolean DEFAULT_HAS_NECTAR;
+  private static final boolean DEFAULT_HAS_STUNG;
+  private static final int DEFAULT_TICKS_SINCE_POLLINATION;
+  private static final int DEFAULT_CANNOT_ENTER_HIVE_TICKS;
+  private static final int DEFAULT_CROPS_GROWN_SINCE_POLLINATION;
+  private static final net.minecraft.util.valueproviders.UniformInt PERSISTENT_ANGER_TIME;
+  private net.minecraft.world.entity.EntityReference<net.minecraft.world.entity.LivingEntity> persistentAngerTarget;
+  private float rollAmount;
+  private float rollAmountO;
+  private int timeSinceSting;
+  private int ticksWithoutNectarSinceExitingHive;
+  private int stayOutOfHiveCountdown;
+  private int numCropsGrownSincePollination;
+  private static final int COOLDOWN_BEFORE_LOCATING_NEW_HIVE;
+  private int remainingCooldownBeforeLocatingNewHive;
+  private static final int COOLDOWN_BEFORE_LOCATING_NEW_FLOWER;
+  private static final int MIN_FIND_FLOWER_RETRY_COOLDOWN;
+  private static final int MAX_FIND_FLOWER_RETRY_COOLDOWN;
+  private int remainingCooldownBeforeLocatingNewFlower;
+  private net.minecraft.core.BlockPos savedFlowerPos;
+  private net.minecraft.core.BlockPos hivePos;
+  private net.minecraft.world.entity.animal.bee.Bee$BeePollinateGoal beePollinateGoal;
+  private net.minecraft.world.entity.animal.bee.Bee$BeeGoToHiveGoal goToHiveGoal;
+  private net.minecraft.world.entity.animal.bee.Bee$BeeGoToKnownFlowerGoal goToKnownFlowerGoal;
+  private int underWaterTicks;
+  public net.minecraft.world.entity.animal.bee.Bee(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.bee.Bee>, net.minecraft.world.level.Level);
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  public float getWalkTargetValue(net.minecraft.core.BlockPos, net.minecraft.world.level.LevelReader);
+  protected void registerGoals();
+  protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput);
+  protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput);
+  public boolean doHurtTarget(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.Entity);
+  public void tick();
+  private void spawnFluidParticle(net.minecraft.world.level.Level, double, double, double, double, double, net.minecraft.core.particles.ParticleOptions);
+  private void pathfindRandomlyTowards(net.minecraft.core.BlockPos);
+  public net.minecraft.core.BlockPos getSavedFlowerPos();
+  public boolean hasSavedFlowerPos();
+  public void setSavedFlowerPos(net.minecraft.core.BlockPos);
+  public int getTravellingTicks();
+  public java.util.List<net.minecraft.core.BlockPos> getBlacklistedHives();
+  private boolean isTiredOfLookingForNectar();
+  private void dropHive();
+  private void dropFlower();
+  private boolean wantsToEnterHive();
+  public void setStayOutOfHiveCountdown(int);
+  public float getRollAmount(float);
+  private void updateRollAmount();
+  protected void customServerAiStep(net.minecraft.server.level.ServerLevel);
+  public void resetTicksWithoutNectarSinceExitingHive();
+  private boolean isHiveNearFire();
+  public long getPersistentAngerEndTime();
+  public void setPersistentAngerEndTime(long);
+  public net.minecraft.world.entity.EntityReference<net.minecraft.world.entity.LivingEntity> getPersistentAngerTarget();
+  public void setPersistentAngerTarget(net.minecraft.world.entity.EntityReference<net.minecraft.world.entity.LivingEntity>);
+  public void startPersistentAngerTimer();
+  private boolean doesHiveHaveSpace(net.minecraft.core.BlockPos);
+  public boolean hasHive();
+  public net.minecraft.core.BlockPos getHivePos();
+  private int getCropsGrownSincePollination();
+  private void resetNumCropsGrownSincePollination();
+  private void incrementNumCropsGrownSincePollination();
+  public void aiStep();
+  private net.minecraft.world.level.block.entity.BeehiveBlockEntity getBeehiveBlockEntity();
+  private boolean isHiveValid();
+  public boolean hasNectar();
+  private void setHasNectar(boolean);
+  public boolean hasStung();
+  private void setHasStung(boolean);
+  private boolean isRolling();
+  private void setRolling(boolean);
+  private boolean isTooFarAway(net.minecraft.core.BlockPos);
+  private void setFlag(int, boolean);
+  private boolean getFlag(int);
+  public static net.minecraft.world.entity.ai.attributes.AttributeSupplier$Builder createAttributes();
+  protected net.minecraft.world.entity.ai.navigation.PathNavigation createNavigation(net.minecraft.world.level.Level);
+  public net.minecraft.world.InteractionResult mobInteract(net.minecraft.world.entity.player.Player, net.minecraft.world.InteractionHand);
+  public boolean isFood(net.minecraft.world.item.ItemStack);
+  protected void playStepSound(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  protected net.minecraft.sounds.SoundEvent getAmbientSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  protected float getSoundVolume();
+  public net.minecraft.world.entity.animal.bee.Bee getBreedOffspring(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.AgeableMob);
+  protected void checkFallDamage(double, boolean, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos);
+  public boolean isFlapping();
+  public boolean isFlying();
+  protected boolean omnidirectionalAirMover();
+  public void dropOffNectar();
+  public boolean hurtServer(net.minecraft.server.level.ServerLevel, net.minecraft.world.damagesource.DamageSource, float);
+  protected void jumpInLiquid(net.minecraft.tags.TagKey<net.minecraft.world.level.material.Fluid>);
+  public net.minecraft.world.phys.Vec3 getLeashOffset();
+  private boolean closerThan(net.minecraft.core.BlockPos, int);
+  public void setHivePos(net.minecraft.core.BlockPos);
+  public static boolean attractsBees(net.minecraft.world.level.block.state.BlockState);
+  public void registerDebugValues(net.minecraft.server.level.ServerLevel, net.minecraft.util.debug.DebugValueSource$Registration);
+  public net.minecraft.world.entity.AgeableMob getBreedOffspring(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.AgeableMob);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$000(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.util.RandomSource access$100(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$200(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$300(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$400(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$500(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$600(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$700(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$800(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$900(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$1000(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$1100(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$1200(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$1300(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$1400(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$1500(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$1600(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$1700(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$1800(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.util.RandomSource access$1900(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.util.RandomSource access$2000(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$2100(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.util.RandomSource access$2200(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$2300(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.util.RandomSource access$2400(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.util.RandomSource access$2500(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.world.entity.ai.navigation.PathNavigation access$2600(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.util.RandomSource access$2700(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.util.RandomSource access$2800(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.util.RandomSource access$2900(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.util.RandomSource access$3000(net.minecraft.world.entity.animal.bee.Bee);
+  static net.minecraft.util.RandomSource access$3100(net.minecraft.world.entity.animal.bee.Bee);
+  private net.minecraft.util.debug.DebugBeeInfo lambda$registerDebugValues$0();
+  private static boolean lambda$registerGoals$0(net.minecraft.world.item.ItemStack);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.entity.animal.bee.package-info {
+}

@@ -1,0 +1,99 @@
+Compiled from "JfrStatsParser.java"
+class net.minecraft.util.profiling.jfr.parse.JfrStatsParser$1 implements java.util.Iterator<jdk.jfr.consumer.RecordedEvent> {
+  final jdk.jfr.consumer.RecordingFile val$recordingFile;
+  net.minecraft.util.profiling.jfr.parse.JfrStatsParser$1(jdk.jfr.consumer.RecordingFile);
+  public boolean hasNext();
+  public jdk.jfr.consumer.RecordedEvent next();
+  public java.lang.Object next();
+}
+Compiled from "JfrStatsParser.java"
+public final class net.minecraft.util.profiling.jfr.parse.JfrStatsParser$MutableCountAndSize {
+  private long count;
+  private long totalSize;
+  public net.minecraft.util.profiling.jfr.parse.JfrStatsParser$MutableCountAndSize();
+  public void increment(int);
+  public net.minecraft.util.profiling.jfr.stats.IoSummary$CountAndSize toCountAndSize();
+}
+Compiled from "JfrStatsParser.java"
+public class net.minecraft.util.profiling.jfr.parse.JfrStatsParser {
+  private java.time.Instant recordingStarted;
+  private java.time.Instant recordingEnded;
+  private final java.util.List<net.minecraft.util.profiling.jfr.stats.ChunkGenStat> chunkGenStats;
+  private final java.util.List<net.minecraft.util.profiling.jfr.stats.StructureGenStat> structureGenStats;
+  private final java.util.List<net.minecraft.util.profiling.jfr.stats.CpuLoadStat> cpuLoadStat;
+  private final java.util.Map<net.minecraft.util.profiling.jfr.stats.PacketIdentification, net.minecraft.util.profiling.jfr.parse.JfrStatsParser$MutableCountAndSize> receivedPackets;
+  private final java.util.Map<net.minecraft.util.profiling.jfr.stats.PacketIdentification, net.minecraft.util.profiling.jfr.parse.JfrStatsParser$MutableCountAndSize> sentPackets;
+  private final java.util.Map<net.minecraft.util.profiling.jfr.stats.ChunkIdentification, net.minecraft.util.profiling.jfr.parse.JfrStatsParser$MutableCountAndSize> readChunks;
+  private final java.util.Map<net.minecraft.util.profiling.jfr.stats.ChunkIdentification, net.minecraft.util.profiling.jfr.parse.JfrStatsParser$MutableCountAndSize> writtenChunks;
+  private final java.util.List<net.minecraft.util.profiling.jfr.stats.FileIOStat> fileWrites;
+  private final java.util.List<net.minecraft.util.profiling.jfr.stats.FileIOStat> fileReads;
+  private int garbageCollections;
+  private java.time.Duration gcTotalDuration;
+  private final java.util.List<net.minecraft.util.profiling.jfr.stats.GcHeapStat> gcHeapStats;
+  private final java.util.List<net.minecraft.util.profiling.jfr.stats.ThreadAllocationStat> threadAllocationStats;
+  private final java.util.List<net.minecraft.util.profiling.jfr.stats.FpsStat> fps;
+  private final java.util.List<net.minecraft.util.profiling.jfr.stats.TickTimeStat> serverTickTimes;
+  private java.time.Duration worldCreationDuration;
+  private net.minecraft.util.profiling.jfr.parse.JfrStatsParser(java.util.stream.Stream<jdk.jfr.consumer.RecordedEvent>);
+  public static net.minecraft.util.profiling.jfr.parse.JfrStatsResult parse(java.nio.file.Path);
+  private net.minecraft.util.profiling.jfr.parse.JfrStatsResult results();
+  private void capture(java.util.stream.Stream<jdk.jfr.consumer.RecordedEvent>);
+  private void incrementPacket(jdk.jfr.consumer.RecordedEvent, int, java.util.Map<net.minecraft.util.profiling.jfr.stats.PacketIdentification, net.minecraft.util.profiling.jfr.parse.JfrStatsParser$MutableCountAndSize>);
+  private void incrementChunk(jdk.jfr.consumer.RecordedEvent, int, java.util.Map<net.minecraft.util.profiling.jfr.stats.ChunkIdentification, net.minecraft.util.profiling.jfr.parse.JfrStatsParser$MutableCountAndSize>);
+  private void appendFileIO(jdk.jfr.consumer.RecordedEvent, java.util.List<net.minecraft.util.profiling.jfr.stats.FileIOStat>, java.lang.String);
+  private static <T> net.minecraft.util.profiling.jfr.stats.IoSummary<T> collectIoStats(java.time.Duration, java.util.Map<T, net.minecraft.util.profiling.jfr.parse.JfrStatsParser$MutableCountAndSize>);
+  private static com.mojang.datafixers.util.Pair lambda$collectIoStats$0(java.util.Map$Entry);
+  private static net.minecraft.util.profiling.jfr.parse.JfrStatsParser$MutableCountAndSize lambda$incrementChunk$0(net.minecraft.util.profiling.jfr.stats.ChunkIdentification);
+  private static net.minecraft.util.profiling.jfr.parse.JfrStatsParser$MutableCountAndSize lambda$incrementPacket$0(net.minecraft.util.profiling.jfr.stats.PacketIdentification);
+  private void lambda$capture$0(jdk.jfr.consumer.RecordedEvent);
+}
+Compiled from "JfrStatsResult.java"
+public final class net.minecraft.util.profiling.jfr.parse.JfrStatsResult extends java.lang.Record {
+  private final java.time.Instant recordingStarted;
+  private final java.time.Instant recordingEnded;
+  private final java.time.Duration recordingDuration;
+  private final java.time.Duration worldCreationDuration;
+  private final java.util.List<net.minecraft.util.profiling.jfr.stats.FpsStat> fps;
+  private final java.util.List<net.minecraft.util.profiling.jfr.stats.TickTimeStat> serverTickTimes;
+  private final java.util.List<net.minecraft.util.profiling.jfr.stats.CpuLoadStat> cpuLoadStats;
+  private final net.minecraft.util.profiling.jfr.stats.GcHeapStat$Summary heapSummary;
+  private final net.minecraft.util.profiling.jfr.stats.ThreadAllocationStat$Summary threadAllocationSummary;
+  private final net.minecraft.util.profiling.jfr.stats.IoSummary<net.minecraft.util.profiling.jfr.stats.PacketIdentification> receivedPacketsSummary;
+  private final net.minecraft.util.profiling.jfr.stats.IoSummary<net.minecraft.util.profiling.jfr.stats.PacketIdentification> sentPacketsSummary;
+  private final net.minecraft.util.profiling.jfr.stats.IoSummary<net.minecraft.util.profiling.jfr.stats.ChunkIdentification> writtenChunks;
+  private final net.minecraft.util.profiling.jfr.stats.IoSummary<net.minecraft.util.profiling.jfr.stats.ChunkIdentification> readChunks;
+  private final net.minecraft.util.profiling.jfr.stats.FileIOStat$Summary fileWrites;
+  private final net.minecraft.util.profiling.jfr.stats.FileIOStat$Summary fileReads;
+  private final java.util.List<net.minecraft.util.profiling.jfr.stats.ChunkGenStat> chunkGenStats;
+  private final java.util.List<net.minecraft.util.profiling.jfr.stats.StructureGenStat> structureGenStats;
+  public net.minecraft.util.profiling.jfr.parse.JfrStatsResult(java.time.Instant, java.time.Instant, java.time.Duration, java.time.Duration, java.util.List<net.minecraft.util.profiling.jfr.stats.FpsStat>, java.util.List<net.minecraft.util.profiling.jfr.stats.TickTimeStat>, java.util.List<net.minecraft.util.profiling.jfr.stats.CpuLoadStat>, net.minecraft.util.profiling.jfr.stats.GcHeapStat$Summary, net.minecraft.util.profiling.jfr.stats.ThreadAllocationStat$Summary, net.minecraft.util.profiling.jfr.stats.IoSummary<net.minecraft.util.profiling.jfr.stats.PacketIdentification>, net.minecraft.util.profiling.jfr.stats.IoSummary<net.minecraft.util.profiling.jfr.stats.PacketIdentification>, net.minecraft.util.profiling.jfr.stats.IoSummary<net.minecraft.util.profiling.jfr.stats.ChunkIdentification>, net.minecraft.util.profiling.jfr.stats.IoSummary<net.minecraft.util.profiling.jfr.stats.ChunkIdentification>, net.minecraft.util.profiling.jfr.stats.FileIOStat$Summary, net.minecraft.util.profiling.jfr.stats.FileIOStat$Summary, java.util.List<net.minecraft.util.profiling.jfr.stats.ChunkGenStat>, java.util.List<net.minecraft.util.profiling.jfr.stats.StructureGenStat>);
+  public java.util.List<com.mojang.datafixers.util.Pair<net.minecraft.world.level.chunk.status.ChunkStatus, net.minecraft.util.profiling.jfr.stats.TimedStatSummary<net.minecraft.util.profiling.jfr.stats.ChunkGenStat>>> chunkGenSummary();
+  public java.lang.String asJson();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.time.Instant recordingStarted();
+  public java.time.Instant recordingEnded();
+  public java.time.Duration recordingDuration();
+  public java.time.Duration worldCreationDuration();
+  public java.util.List<net.minecraft.util.profiling.jfr.stats.FpsStat> fps();
+  public java.util.List<net.minecraft.util.profiling.jfr.stats.TickTimeStat> serverTickTimes();
+  public java.util.List<net.minecraft.util.profiling.jfr.stats.CpuLoadStat> cpuLoadStats();
+  public net.minecraft.util.profiling.jfr.stats.GcHeapStat$Summary heapSummary();
+  public net.minecraft.util.profiling.jfr.stats.ThreadAllocationStat$Summary threadAllocationSummary();
+  public net.minecraft.util.profiling.jfr.stats.IoSummary<net.minecraft.util.profiling.jfr.stats.PacketIdentification> receivedPacketsSummary();
+  public net.minecraft.util.profiling.jfr.stats.IoSummary<net.minecraft.util.profiling.jfr.stats.PacketIdentification> sentPacketsSummary();
+  public net.minecraft.util.profiling.jfr.stats.IoSummary<net.minecraft.util.profiling.jfr.stats.ChunkIdentification> writtenChunks();
+  public net.minecraft.util.profiling.jfr.stats.IoSummary<net.minecraft.util.profiling.jfr.stats.ChunkIdentification> readChunks();
+  public net.minecraft.util.profiling.jfr.stats.FileIOStat$Summary fileWrites();
+  public net.minecraft.util.profiling.jfr.stats.FileIOStat$Summary fileReads();
+  public java.util.List<net.minecraft.util.profiling.jfr.stats.ChunkGenStat> chunkGenStats();
+  public java.util.List<net.minecraft.util.profiling.jfr.stats.StructureGenStat> structureGenStats();
+  private static java.time.Duration lambda$chunkGenSummary$3(com.mojang.datafixers.util.Pair);
+  private static com.mojang.datafixers.util.Pair lambda$chunkGenSummary$2(com.mojang.datafixers.util.Pair);
+  private static boolean lambda$chunkGenSummary$1(com.mojang.datafixers.util.Pair);
+  private static com.mojang.datafixers.util.Pair lambda$chunkGenSummary$0(java.util.Map$Entry);
+}
+Compiled from "package-info.java"
+interface net.minecraft.util.profiling.jfr.parse.package-info {
+}

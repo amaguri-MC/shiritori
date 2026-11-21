@@ -1,0 +1,137 @@
+Compiled from "Constant.java"
+public final class net.minecraft.client.color.item.Constant extends java.lang.Record implements net.minecraft.client.color.item.ItemTintSource {
+  private final int value;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.color.item.Constant> MAP_CODEC;
+  public net.minecraft.client.color.item.Constant(int);
+  public int calculate(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.LivingEntity);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.color.item.Constant> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int value();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "CustomModelDataSource.java"
+public final class net.minecraft.client.color.item.CustomModelDataSource extends java.lang.Record implements net.minecraft.client.color.item.ItemTintSource {
+  private final int index;
+  private final int defaultColor;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.color.item.CustomModelDataSource> MAP_CODEC;
+  public net.minecraft.client.color.item.CustomModelDataSource(int, int);
+  public int calculate(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.LivingEntity);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.color.item.CustomModelDataSource> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int index();
+  public int defaultColor();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "Dye.java"
+public final class net.minecraft.client.color.item.Dye extends java.lang.Record implements net.minecraft.client.color.item.ItemTintSource {
+  private final int defaultColor;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.color.item.Dye> MAP_CODEC;
+  public net.minecraft.client.color.item.Dye(int);
+  public int calculate(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.LivingEntity);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.color.item.Dye> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int defaultColor();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "Firework.java"
+public final class net.minecraft.client.color.item.Firework extends java.lang.Record implements net.minecraft.client.color.item.ItemTintSource {
+  private final int defaultColor;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.color.item.Firework> MAP_CODEC;
+  public net.minecraft.client.color.item.Firework();
+  public net.minecraft.client.color.item.Firework(int);
+  public int calculate(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.LivingEntity);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.color.item.Firework> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int defaultColor();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "GrassColorSource.java"
+public final class net.minecraft.client.color.item.GrassColorSource extends java.lang.Record implements net.minecraft.client.color.item.ItemTintSource {
+  private final float temperature;
+  private final float downfall;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.color.item.GrassColorSource> MAP_CODEC;
+  public net.minecraft.client.color.item.GrassColorSource();
+  public net.minecraft.client.color.item.GrassColorSource(float, float);
+  public int calculate(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.LivingEntity);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.color.item.GrassColorSource> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float temperature();
+  public float downfall();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "ItemTintSource.java"
+public interface net.minecraft.client.color.item.ItemTintSource {
+  public abstract int calculate(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.LivingEntity);
+  public abstract com.mojang.serialization.MapCodec<? extends net.minecraft.client.color.item.ItemTintSource> type();
+}
+Compiled from "ItemTintSources.java"
+public class net.minecraft.client.color.item.ItemTintSources {
+  private static final net.minecraft.util.ExtraCodecs$LateBoundIdMapper<net.minecraft.resources.Identifier, com.mojang.serialization.MapCodec<? extends net.minecraft.client.color.item.ItemTintSource>> ID_MAPPER;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.color.item.ItemTintSource> CODEC;
+  public net.minecraft.client.color.item.ItemTintSources();
+  public static void bootstrap();
+  private static com.mojang.serialization.MapCodec lambda$static$0(com.mojang.serialization.MapCodec);
+  static {};
+}
+Compiled from "MapColor.java"
+public final class net.minecraft.client.color.item.MapColor extends java.lang.Record implements net.minecraft.client.color.item.ItemTintSource {
+  private final int defaultColor;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.color.item.MapColor> MAP_CODEC;
+  public net.minecraft.client.color.item.MapColor();
+  public net.minecraft.client.color.item.MapColor(int);
+  public int calculate(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.LivingEntity);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.color.item.MapColor> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int defaultColor();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "Potion.java"
+public final class net.minecraft.client.color.item.Potion extends java.lang.Record implements net.minecraft.client.color.item.ItemTintSource {
+  private final int defaultColor;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.color.item.Potion> MAP_CODEC;
+  public net.minecraft.client.color.item.Potion();
+  public net.minecraft.client.color.item.Potion(int);
+  public int calculate(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.LivingEntity);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.color.item.Potion> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int defaultColor();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "TeamColor.java"
+public final class net.minecraft.client.color.item.TeamColor extends java.lang.Record implements net.minecraft.client.color.item.ItemTintSource {
+  private final int defaultColor;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.color.item.TeamColor> MAP_CODEC;
+  public net.minecraft.client.color.item.TeamColor(int);
+  public int calculate(net.minecraft.world.item.ItemStack, net.minecraft.client.multiplayer.ClientLevel, net.minecraft.world.entity.LivingEntity);
+  public com.mojang.serialization.MapCodec<net.minecraft.client.color.item.TeamColor> type();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int defaultColor();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.color.item.package-info {
+}

@@ -1,0 +1,290 @@
+Compiled from "BindGroupLayout.java"
+public class com.mojang.blaze3d.pipeline.BindGroupLayout$Builder {
+  private final java.util.List<java.lang.String> samplers;
+  private final java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout$UniformDescription> uniforms;
+  private com.mojang.blaze3d.pipeline.BindGroupLayout$Builder();
+  public com.mojang.blaze3d.pipeline.BindGroupLayout$Builder withSampler(java.lang.String);
+  public com.mojang.blaze3d.pipeline.BindGroupLayout$Builder withUniform(java.lang.String, com.mojang.blaze3d.shaders.UniformType);
+  public com.mojang.blaze3d.pipeline.BindGroupLayout$Builder withUniform(java.lang.String, com.mojang.blaze3d.shaders.UniformType, com.mojang.blaze3d.GpuFormat);
+  public com.mojang.blaze3d.pipeline.BindGroupLayout build();
+}
+Compiled from "BindGroupLayout.java"
+public final class com.mojang.blaze3d.pipeline.BindGroupLayout$UniformDescription extends java.lang.Record {
+  private final java.lang.String name;
+  private final com.mojang.blaze3d.shaders.UniformType type;
+  private final com.mojang.blaze3d.GpuFormat gpuFormat;
+  public com.mojang.blaze3d.pipeline.BindGroupLayout$UniformDescription(java.lang.String, com.mojang.blaze3d.shaders.UniformType);
+  public com.mojang.blaze3d.pipeline.BindGroupLayout$UniformDescription(java.lang.String, com.mojang.blaze3d.GpuFormat);
+  public com.mojang.blaze3d.pipeline.BindGroupLayout$UniformDescription(java.lang.String, com.mojang.blaze3d.shaders.UniformType, com.mojang.blaze3d.GpuFormat);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String name();
+  public com.mojang.blaze3d.shaders.UniformType type();
+  public com.mojang.blaze3d.GpuFormat gpuFormat();
+}
+Compiled from "BindGroupLayout.java"
+public class com.mojang.blaze3d.pipeline.BindGroupLayout {
+  private final java.util.List<java.lang.String> samplers;
+  private final java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout$UniformDescription> uniforms;
+  private com.mojang.blaze3d.pipeline.BindGroupLayout(java.util.List<java.lang.String>, java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout$UniformDescription>);
+  public static com.mojang.blaze3d.pipeline.BindGroupLayout$Builder builder();
+  public java.util.List<java.lang.String> getSamplers();
+  public java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout$UniformDescription> getUniforms();
+  public static java.util.List<java.lang.String> flattenSamplers(java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout>);
+  public static java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout$UniformDescription> flattenUniforms(java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout>);
+  public static void ensureCompatible(java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout>);
+}
+Compiled from "BlendEquation.java"
+public final class com.mojang.blaze3d.pipeline.BlendEquation extends java.lang.Record {
+  private final com.mojang.blaze3d.platform.BlendFactor sourceFactor;
+  private final com.mojang.blaze3d.platform.BlendFactor destFactor;
+  private final com.mojang.blaze3d.platform.BlendOp op;
+  public com.mojang.blaze3d.pipeline.BlendEquation(com.mojang.blaze3d.platform.BlendFactor, com.mojang.blaze3d.platform.BlendFactor, com.mojang.blaze3d.platform.BlendOp);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.platform.BlendFactor sourceFactor();
+  public com.mojang.blaze3d.platform.BlendFactor destFactor();
+  public com.mojang.blaze3d.platform.BlendOp op();
+}
+Compiled from "BlendFunction.java"
+public final class com.mojang.blaze3d.pipeline.BlendFunction extends java.lang.Record {
+  private final com.mojang.blaze3d.pipeline.BlendEquation color;
+  private final com.mojang.blaze3d.pipeline.BlendEquation alpha;
+  public static final com.mojang.blaze3d.pipeline.BlendFunction LIGHTNING;
+  public static final com.mojang.blaze3d.pipeline.BlendFunction GLINT;
+  public static final com.mojang.blaze3d.pipeline.BlendFunction OVERLAY;
+  public static final com.mojang.blaze3d.pipeline.BlendFunction TRANSLUCENT;
+  public static final com.mojang.blaze3d.pipeline.BlendFunction TRANSLUCENT_PREMULTIPLIED_ALPHA;
+  public static final com.mojang.blaze3d.pipeline.BlendFunction ADDITIVE;
+  public static final com.mojang.blaze3d.pipeline.BlendFunction ENTITY_OUTLINE_BLIT;
+  public static final com.mojang.blaze3d.pipeline.BlendFunction INVERT;
+  public com.mojang.blaze3d.pipeline.BlendFunction(com.mojang.blaze3d.platform.BlendFactor, com.mojang.blaze3d.platform.BlendFactor, com.mojang.blaze3d.platform.BlendOp, com.mojang.blaze3d.platform.BlendFactor, com.mojang.blaze3d.platform.BlendFactor, com.mojang.blaze3d.platform.BlendOp);
+  public com.mojang.blaze3d.pipeline.BlendFunction(com.mojang.blaze3d.platform.BlendFactor, com.mojang.blaze3d.platform.BlendFactor, com.mojang.blaze3d.platform.BlendFactor, com.mojang.blaze3d.platform.BlendFactor);
+  public com.mojang.blaze3d.pipeline.BlendFunction(com.mojang.blaze3d.pipeline.BlendEquation);
+  public com.mojang.blaze3d.pipeline.BlendFunction(com.mojang.blaze3d.platform.BlendFactor, com.mojang.blaze3d.platform.BlendFactor, com.mojang.blaze3d.platform.BlendOp);
+  public com.mojang.blaze3d.pipeline.BlendFunction(com.mojang.blaze3d.platform.BlendFactor, com.mojang.blaze3d.platform.BlendFactor);
+  public com.mojang.blaze3d.pipeline.BlendFunction(com.mojang.blaze3d.pipeline.BlendEquation, com.mojang.blaze3d.pipeline.BlendEquation);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.pipeline.BlendEquation color();
+  public com.mojang.blaze3d.pipeline.BlendEquation alpha();
+  static {};
+}
+Compiled from "ColorTargetState.java"
+public interface com.mojang.blaze3d.pipeline.ColorTargetState$WriteMask extends java.lang.annotation.Annotation {
+}
+Compiled from "ColorTargetState.java"
+public final class com.mojang.blaze3d.pipeline.ColorTargetState extends java.lang.Record {
+  private final java.util.Optional<com.mojang.blaze3d.pipeline.BlendFunction> blendFunction;
+  private final com.mojang.blaze3d.GpuFormat format;
+  private final int writeMask;
+  public static final int WRITE_RED;
+  public static final int WRITE_GREEN;
+  public static final int WRITE_BLUE;
+  public static final int WRITE_ALPHA;
+  public static final int WRITE_COLOR;
+  public static final int WRITE_ALL;
+  public static final int WRITE_NONE;
+  public static final com.mojang.blaze3d.pipeline.ColorTargetState DEFAULT;
+  public static final int MAX_COLOR_TARGETS;
+  public com.mojang.blaze3d.pipeline.ColorTargetState(com.mojang.blaze3d.pipeline.BlendFunction);
+  public com.mojang.blaze3d.pipeline.ColorTargetState(java.util.Optional<com.mojang.blaze3d.pipeline.BlendFunction>, com.mojang.blaze3d.GpuFormat, int);
+  public boolean writeRed();
+  public boolean writeGreen();
+  public boolean writeBlue();
+  public boolean writeAlpha();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Optional<com.mojang.blaze3d.pipeline.BlendFunction> blendFunction();
+  public com.mojang.blaze3d.GpuFormat format();
+  public int writeMask();
+  static {};
+}
+Compiled from "CompiledRenderPipeline.java"
+public interface com.mojang.blaze3d.pipeline.CompiledRenderPipeline {
+  public abstract boolean isValid();
+}
+Compiled from "DepthStencilState.java"
+public final class com.mojang.blaze3d.pipeline.DepthStencilState extends java.lang.Record {
+  private final com.mojang.blaze3d.platform.CompareOp depthTest;
+  private final boolean writeDepth;
+  private final float depthBiasScaleFactor;
+  private final float depthBiasConstant;
+  public static final com.mojang.blaze3d.pipeline.DepthStencilState DEFAULT;
+  public com.mojang.blaze3d.pipeline.DepthStencilState(com.mojang.blaze3d.platform.CompareOp, boolean);
+  public com.mojang.blaze3d.pipeline.DepthStencilState(com.mojang.blaze3d.platform.CompareOp, boolean, float, float);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.platform.CompareOp depthTest();
+  public boolean writeDepth();
+  public float depthBiasScaleFactor();
+  public float depthBiasConstant();
+  static {};
+}
+Compiled from "MainTarget.java"
+class com.mojang.blaze3d.pipeline.MainTarget$Dimension {
+  public final int width;
+  public final int height;
+  private com.mojang.blaze3d.pipeline.MainTarget$Dimension(int, int);
+  private static java.util.List<com.mojang.blaze3d.pipeline.MainTarget$Dimension> listWithFallback(int, int);
+  public boolean equals(java.lang.Object);
+  public int hashCode();
+  public java.lang.String toString();
+}
+Compiled from "MainTarget.java"
+public class com.mojang.blaze3d.pipeline.MainTarget extends com.mojang.blaze3d.pipeline.RenderTarget {
+  public static final int DEFAULT_WIDTH;
+  public static final int DEFAULT_HEIGHT;
+  private static final com.mojang.blaze3d.pipeline.MainTarget$Dimension DEFAULT_DIMENSIONS;
+  public com.mojang.blaze3d.pipeline.MainTarget(int, int);
+  private void createFrameBuffer(int, int);
+  private com.mojang.blaze3d.pipeline.MainTarget$Dimension allocateAttachments(int, int);
+  private com.mojang.blaze3d.textures.GpuTexture allocateColorAttachment(com.mojang.blaze3d.pipeline.MainTarget$Dimension);
+  private com.mojang.blaze3d.textures.GpuTexture allocateDepthAttachment(com.mojang.blaze3d.pipeline.MainTarget$Dimension);
+  private java.lang.String lambda$allocateDepthAttachment$0();
+  private java.lang.String lambda$allocateColorAttachment$0();
+  static {};
+}
+Compiled from "RenderPipeline.java"
+public class com.mojang.blaze3d.pipeline.RenderPipeline$Builder {
+  private static int nextPipelineSortKey;
+  private java.util.Optional<net.minecraft.resources.Identifier> location;
+  private java.util.Optional<net.minecraft.resources.Identifier> fragmentShader;
+  private java.util.Optional<net.minecraft.resources.Identifier> vertexShader;
+  private java.util.Optional<net.minecraft.client.renderer.ShaderDefines$Builder> definesBuilder;
+  private java.util.Optional<java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout>> bindGroupLayouts;
+  private java.util.Optional<com.mojang.blaze3d.pipeline.DepthStencilState> depthStencilState;
+  private java.util.Optional<com.mojang.blaze3d.platform.PolygonMode> polygonMode;
+  private java.util.Optional<java.lang.Boolean> cull;
+  private final com.mojang.blaze3d.pipeline.ColorTargetState[] colorTargetStates;
+  private int activeColorTargetStateCount;
+  private final com.mojang.blaze3d.vertex.VertexFormat[] vertexFormatPerBuffer;
+  private java.util.Optional<com.mojang.blaze3d.PrimitiveTopology> primitiveTopology;
+  private com.mojang.blaze3d.pipeline.RenderPipeline$Builder();
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withLocation(java.lang.String);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withLocation(net.minecraft.resources.Identifier);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withFragmentShader(java.lang.String);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withFragmentShader(net.minecraft.resources.Identifier);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withVertexShader(java.lang.String);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withVertexShader(net.minecraft.resources.Identifier);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withShaderDefine(java.lang.String);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withShaderDefine(java.lang.String, int);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withShaderDefine(java.lang.String, float);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withBindGroupLayout(com.mojang.blaze3d.pipeline.BindGroupLayout);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withPolygonMode(com.mojang.blaze3d.platform.PolygonMode);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withCull(boolean);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withColorTargetState(int, com.mojang.blaze3d.pipeline.ColorTargetState);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withUnusedColorTargetState(int);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withColorTargetState(com.mojang.blaze3d.pipeline.ColorTargetState);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withDepthStencilState(com.mojang.blaze3d.pipeline.DepthStencilState);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withDepthStencilState(java.util.Optional<com.mojang.blaze3d.pipeline.DepthStencilState>);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withVertexBinding(int, com.mojang.blaze3d.vertex.VertexFormat);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Builder withPrimitiveTopology(com.mojang.blaze3d.PrimitiveTopology);
+  private void withSnippet(com.mojang.blaze3d.pipeline.RenderPipeline$Snippet);
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Snippet buildSnippet();
+  public com.mojang.blaze3d.pipeline.RenderPipeline build();
+  private void lambda$withSnippet$0(java.util.List);
+}
+Compiled from "RenderPipeline.java"
+public final class com.mojang.blaze3d.pipeline.RenderPipeline$Snippet extends java.lang.Record {
+  private final java.util.Optional<net.minecraft.resources.Identifier> vertexShader;
+  private final java.util.Optional<net.minecraft.resources.Identifier> fragmentShader;
+  private final java.util.Optional<net.minecraft.client.renderer.ShaderDefines> shaderDefines;
+  private final java.util.Optional<java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout>> bindGroupLayouts;
+  private final com.mojang.blaze3d.pipeline.ColorTargetState[] colorTargetStates;
+  private final int activeColorTargetStateCount;
+  private final java.util.Optional<com.mojang.blaze3d.pipeline.DepthStencilState> depthStencilState;
+  private final java.util.Optional<com.mojang.blaze3d.platform.PolygonMode> polygonMode;
+  private final java.util.Optional<java.lang.Boolean> cull;
+  private final com.mojang.blaze3d.vertex.VertexFormat[] vertexFormatPerBuffer;
+  private final java.util.Optional<com.mojang.blaze3d.PrimitiveTopology> vertexFormatMode;
+  public com.mojang.blaze3d.pipeline.RenderPipeline$Snippet(java.util.Optional<net.minecraft.resources.Identifier>, java.util.Optional<net.minecraft.resources.Identifier>, java.util.Optional<net.minecraft.client.renderer.ShaderDefines>, java.util.Optional<java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout>>, com.mojang.blaze3d.pipeline.ColorTargetState[], int, java.util.Optional<com.mojang.blaze3d.pipeline.DepthStencilState>, java.util.Optional<com.mojang.blaze3d.platform.PolygonMode>, java.util.Optional<java.lang.Boolean>, com.mojang.blaze3d.vertex.VertexFormat[], java.util.Optional<com.mojang.blaze3d.PrimitiveTopology>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Optional<net.minecraft.resources.Identifier> vertexShader();
+  public java.util.Optional<net.minecraft.resources.Identifier> fragmentShader();
+  public java.util.Optional<net.minecraft.client.renderer.ShaderDefines> shaderDefines();
+  public java.util.Optional<java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout>> bindGroupLayouts();
+  public com.mojang.blaze3d.pipeline.ColorTargetState[] colorTargetStates();
+  public int activeColorTargetStateCount();
+  public java.util.Optional<com.mojang.blaze3d.pipeline.DepthStencilState> depthStencilState();
+  public java.util.Optional<com.mojang.blaze3d.platform.PolygonMode> polygonMode();
+  public java.util.Optional<java.lang.Boolean> cull();
+  public com.mojang.blaze3d.vertex.VertexFormat[] vertexFormatPerBuffer();
+  public java.util.Optional<com.mojang.blaze3d.PrimitiveTopology> vertexFormatMode();
+}
+Compiled from "RenderPipeline.java"
+public class com.mojang.blaze3d.pipeline.RenderPipeline {
+  private final net.minecraft.resources.Identifier location;
+  private final net.minecraft.resources.Identifier vertexShader;
+  private final net.minecraft.resources.Identifier fragmentShader;
+  private final net.minecraft.client.renderer.ShaderDefines shaderDefines;
+  private final java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout> bindGroupLayouts;
+  private final com.mojang.blaze3d.pipeline.DepthStencilState depthStencilState;
+  private final com.mojang.blaze3d.platform.PolygonMode polygonMode;
+  private final boolean cull;
+  private final com.mojang.blaze3d.pipeline.ColorTargetState[] colorTargetStates;
+  private final com.mojang.blaze3d.vertex.VertexFormat[] vertexFormatPerBuffer;
+  private final com.mojang.blaze3d.PrimitiveTopology primitiveTopology;
+  private final int sortKey;
+  private static int sortKeySeed;
+  protected com.mojang.blaze3d.pipeline.RenderPipeline(net.minecraft.resources.Identifier, net.minecraft.resources.Identifier, net.minecraft.resources.Identifier, net.minecraft.client.renderer.ShaderDefines, java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout>, com.mojang.blaze3d.pipeline.ColorTargetState[], com.mojang.blaze3d.pipeline.DepthStencilState, com.mojang.blaze3d.platform.PolygonMode, boolean, com.mojang.blaze3d.vertex.VertexFormat[], com.mojang.blaze3d.PrimitiveTopology, int);
+  public int getSortKey();
+  public static void updateSortKeySeed();
+  public java.lang.String toString();
+  public com.mojang.blaze3d.platform.PolygonMode getPolygonMode();
+  public boolean isCull();
+  public com.mojang.blaze3d.pipeline.ColorTargetState[] getColorTargetStates();
+  public com.mojang.blaze3d.pipeline.ColorTargetState getColorTargetState();
+  public com.mojang.blaze3d.pipeline.DepthStencilState getDepthStencilState();
+  public net.minecraft.resources.Identifier getLocation();
+  public com.mojang.blaze3d.vertex.VertexFormat[] getVertexFormatBindings();
+  public com.mojang.blaze3d.vertex.VertexFormat getVertexFormatBinding(int);
+  public com.mojang.blaze3d.PrimitiveTopology getPrimitiveTopology();
+  public net.minecraft.resources.Identifier getVertexShader();
+  public net.minecraft.resources.Identifier getFragmentShader();
+  public net.minecraft.client.renderer.ShaderDefines getShaderDefines();
+  public java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout> getBindGroupLayouts();
+  public boolean wantsDepthTexture();
+  public static com.mojang.blaze3d.pipeline.RenderPipeline$Builder builder(com.mojang.blaze3d.pipeline.RenderPipeline$Snippet...);
+}
+Compiled from "RenderTarget.java"
+public abstract class com.mojang.blaze3d.pipeline.RenderTarget {
+  private static int UNNAMED_RENDER_TARGETS;
+  public int width;
+  public int height;
+  protected final java.lang.String label;
+  public final boolean useDepth;
+  protected final com.mojang.blaze3d.GpuFormat format;
+  protected com.mojang.blaze3d.textures.GpuTexture colorTexture;
+  protected com.mojang.blaze3d.textures.GpuTextureView colorTextureView;
+  protected com.mojang.blaze3d.textures.GpuTexture depthTexture;
+  protected com.mojang.blaze3d.textures.GpuTextureView depthTextureView;
+  public com.mojang.blaze3d.pipeline.RenderTarget(java.lang.String, boolean, com.mojang.blaze3d.GpuFormat);
+  public void resize(int, int);
+  public void destroyBuffers();
+  public void copyDepthFrom(com.mojang.blaze3d.pipeline.RenderTarget);
+  public void createBuffers(int, int);
+  public void blitAndBlendToTexture(com.mojang.blaze3d.textures.GpuTextureView, com.mojang.blaze3d.textures.GpuTextureView);
+  public com.mojang.blaze3d.textures.GpuTexture getColorTexture();
+  public com.mojang.blaze3d.textures.GpuTextureView getColorTextureView();
+  public com.mojang.blaze3d.textures.GpuTexture getDepthTexture();
+  public com.mojang.blaze3d.textures.GpuTextureView getDepthTextureView();
+  private static java.lang.String lambda$blitAndBlendToTexture$0();
+  private java.lang.String lambda$createBuffers$1();
+  private java.lang.String lambda$createBuffers$0();
+  static {};
+}
+Compiled from "TextureTarget.java"
+public class com.mojang.blaze3d.pipeline.TextureTarget extends com.mojang.blaze3d.pipeline.RenderTarget {
+  public com.mojang.blaze3d.pipeline.TextureTarget(java.lang.String, int, int, boolean, com.mojang.blaze3d.GpuFormat);
+}
+Compiled from "package-info.java"
+interface com.mojang.blaze3d.pipeline.package-info {
+}

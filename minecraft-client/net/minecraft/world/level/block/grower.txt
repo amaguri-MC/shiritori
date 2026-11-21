@@ -1,0 +1,36 @@
+Compiled from "TreeGrower.java"
+public final class net.minecraft.world.level.block.grower.TreeGrower {
+  private static final java.util.Map<java.lang.String, net.minecraft.world.level.block.grower.TreeGrower> GROWERS;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.block.grower.TreeGrower> CODEC;
+  public static final net.minecraft.world.level.block.grower.TreeGrower OAK;
+  public static final net.minecraft.world.level.block.grower.TreeGrower SPRUCE;
+  public static final net.minecraft.world.level.block.grower.TreeGrower MANGROVE;
+  public static final net.minecraft.world.level.block.grower.TreeGrower AZALEA;
+  public static final net.minecraft.world.level.block.grower.TreeGrower BIRCH;
+  public static final net.minecraft.world.level.block.grower.TreeGrower JUNGLE;
+  public static final net.minecraft.world.level.block.grower.TreeGrower ACACIA;
+  public static final net.minecraft.world.level.block.grower.TreeGrower CHERRY;
+  public static final net.minecraft.world.level.block.grower.TreeGrower DARK_OAK;
+  public static final net.minecraft.world.level.block.grower.TreeGrower PALE_OAK;
+  private final java.lang.String name;
+  private final float secondaryChance;
+  private final java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>> megaTree;
+  private final java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>> secondaryMegaTree;
+  private final java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>> tree;
+  private final java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>> secondaryTree;
+  private final java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>> flowers;
+  private final java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>> secondaryFlowers;
+  public net.minecraft.world.level.block.grower.TreeGrower(java.lang.String, java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>>, java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>>, java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>>);
+  public net.minecraft.world.level.block.grower.TreeGrower(java.lang.String, float, java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>>, java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>>, java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>>, java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>>, java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>>, java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>>);
+  private net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>> getConfiguredFeature(net.minecraft.util.RandomSource, boolean);
+  private net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>> getConfiguredMegaFeature(net.minecraft.util.RandomSource);
+  public boolean growTree(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.chunk.ChunkGenerator, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.util.RandomSource);
+  private static boolean isTwoByTwoSapling(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, int, int);
+  private boolean hasFlowers(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos);
+  public java.util.OptionalInt getMinimumHeight(net.minecraft.server.level.ServerLevel);
+  private static java.lang.String lambda$static$0(net.minecraft.world.level.block.grower.TreeGrower);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.level.block.grower.package-info {
+}

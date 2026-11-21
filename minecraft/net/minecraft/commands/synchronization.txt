@@ -1,0 +1,99 @@
+Compiled from "SuggestionProviders.java"
+final class net.minecraft.commands.synchronization.SuggestionProviders$RegisteredSuggestion extends java.lang.Record implements com.mojang.brigadier.suggestion.SuggestionProvider<net.minecraft.commands.SharedSuggestionProvider> {
+  private final net.minecraft.resources.Identifier name;
+  private final com.mojang.brigadier.suggestion.SuggestionProvider<net.minecraft.commands.SharedSuggestionProvider> delegate;
+  private net.minecraft.commands.synchronization.SuggestionProviders$RegisteredSuggestion(net.minecraft.resources.Identifier, com.mojang.brigadier.suggestion.SuggestionProvider<net.minecraft.commands.SharedSuggestionProvider>);
+  public java.util.concurrent.CompletableFuture<com.mojang.brigadier.suggestion.Suggestions> getSuggestions(com.mojang.brigadier.context.CommandContext<net.minecraft.commands.SharedSuggestionProvider>, com.mojang.brigadier.suggestion.SuggestionsBuilder) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier name();
+  public com.mojang.brigadier.suggestion.SuggestionProvider<net.minecraft.commands.SharedSuggestionProvider> delegate();
+}
+Compiled from "ArgumentTypeInfo.java"
+public interface net.minecraft.commands.synchronization.ArgumentTypeInfo$Template<A extends com.mojang.brigadier.arguments.ArgumentType<?>> {
+  public abstract A instantiate(net.minecraft.commands.CommandBuildContext);
+  public abstract net.minecraft.commands.synchronization.ArgumentTypeInfo<A, ?> type();
+}
+Compiled from "SingletonArgumentInfo.java"
+public class net.minecraft.commands.synchronization.SingletonArgumentInfo<A extends com.mojang.brigadier.arguments.ArgumentType<?>> implements net.minecraft.commands.synchronization.ArgumentTypeInfo<A, net.minecraft.commands.synchronization.SingletonArgumentInfo<A>.Template> {
+  private final net.minecraft.commands.synchronization.SingletonArgumentInfo<A>.Template template;
+  private net.minecraft.commands.synchronization.SingletonArgumentInfo(java.util.function.Function<net.minecraft.commands.CommandBuildContext, A>);
+  public static <T extends com.mojang.brigadier.arguments.ArgumentType<?>> net.minecraft.commands.synchronization.SingletonArgumentInfo<T> contextFree(java.util.function.Supplier<T>);
+  public static <T extends com.mojang.brigadier.arguments.ArgumentType<?>> net.minecraft.commands.synchronization.SingletonArgumentInfo<T> contextAware(java.util.function.Function<net.minecraft.commands.CommandBuildContext, T>);
+  public void serializeToNetwork(net.minecraft.commands.synchronization.SingletonArgumentInfo<A>.Template, net.minecraft.network.FriendlyByteBuf);
+  public void serializeToJson(net.minecraft.commands.synchronization.SingletonArgumentInfo<A>.Template, com.google.gson.JsonObject);
+  public net.minecraft.commands.synchronization.SingletonArgumentInfo<A>.Template deserializeFromNetwork(net.minecraft.network.FriendlyByteBuf);
+  public net.minecraft.commands.synchronization.SingletonArgumentInfo<A>.Template unpack(A);
+  public net.minecraft.commands.synchronization.ArgumentTypeInfo$Template unpack(com.mojang.brigadier.arguments.ArgumentType);
+  public void serializeToJson(net.minecraft.commands.synchronization.ArgumentTypeInfo$Template, com.google.gson.JsonObject);
+  public net.minecraft.commands.synchronization.ArgumentTypeInfo$Template deserializeFromNetwork(net.minecraft.network.FriendlyByteBuf);
+  public void serializeToNetwork(net.minecraft.commands.synchronization.ArgumentTypeInfo$Template, net.minecraft.network.FriendlyByteBuf);
+  private static com.mojang.brigadier.arguments.ArgumentType lambda$contextFree$0(java.util.function.Supplier, net.minecraft.commands.CommandBuildContext);
+}
+Compiled from "SuggestionProviders.java"
+public class net.minecraft.commands.synchronization.SuggestionProviders {
+  private static final java.util.Map<net.minecraft.resources.Identifier, com.mojang.brigadier.suggestion.SuggestionProvider<net.minecraft.commands.SharedSuggestionProvider>> PROVIDERS_BY_NAME;
+  private static final net.minecraft.resources.Identifier ID_ASK_SERVER;
+  public static final com.mojang.brigadier.suggestion.SuggestionProvider<net.minecraft.commands.SharedSuggestionProvider> ASK_SERVER;
+  public static final com.mojang.brigadier.suggestion.SuggestionProvider<net.minecraft.commands.SharedSuggestionProvider> AVAILABLE_SOUNDS;
+  public static final com.mojang.brigadier.suggestion.SuggestionProvider<net.minecraft.commands.SharedSuggestionProvider> SUMMONABLE_ENTITIES;
+  public net.minecraft.commands.synchronization.SuggestionProviders();
+  public static <S extends net.minecraft.commands.SharedSuggestionProvider> com.mojang.brigadier.suggestion.SuggestionProvider<S> register(net.minecraft.resources.Identifier, com.mojang.brigadier.suggestion.SuggestionProvider<net.minecraft.commands.SharedSuggestionProvider>);
+  public static <S extends net.minecraft.commands.SharedSuggestionProvider> com.mojang.brigadier.suggestion.SuggestionProvider<S> cast(com.mojang.brigadier.suggestion.SuggestionProvider<net.minecraft.commands.SharedSuggestionProvider>);
+  public static <S extends net.minecraft.commands.SharedSuggestionProvider> com.mojang.brigadier.suggestion.SuggestionProvider<S> getProvider(net.minecraft.resources.Identifier);
+  public static net.minecraft.resources.Identifier getName(com.mojang.brigadier.suggestion.SuggestionProvider<?>);
+  private static java.util.concurrent.CompletableFuture lambda$static$2(com.mojang.brigadier.context.CommandContext, com.mojang.brigadier.suggestion.SuggestionsBuilder) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static boolean lambda$static$3(com.mojang.brigadier.context.CommandContext, net.minecraft.world.entity.EntityType);
+  private static java.util.concurrent.CompletableFuture lambda$static$1(com.mojang.brigadier.context.CommandContext, com.mojang.brigadier.suggestion.SuggestionsBuilder) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  private static java.util.concurrent.CompletableFuture lambda$static$0(com.mojang.brigadier.context.CommandContext, com.mojang.brigadier.suggestion.SuggestionsBuilder) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  static {};
+}
+Compiled from "ArgumentTypeInfos.java"
+public class net.minecraft.commands.synchronization.ArgumentTypeInfos {
+  private static final java.util.Map<java.lang.Class<?>, net.minecraft.commands.synchronization.ArgumentTypeInfo<?, ?>> BY_CLASS;
+  public net.minecraft.commands.synchronization.ArgumentTypeInfos();
+  private static <A extends com.mojang.brigadier.arguments.ArgumentType<?>, T extends net.minecraft.commands.synchronization.ArgumentTypeInfo$Template<A>> net.minecraft.commands.synchronization.ArgumentTypeInfo<A, T> register(net.minecraft.core.Registry<net.minecraft.commands.synchronization.ArgumentTypeInfo<?, ?>>, java.lang.String, java.lang.Class<? extends A>, net.minecraft.commands.synchronization.ArgumentTypeInfo<A, T>);
+  public static net.minecraft.commands.synchronization.ArgumentTypeInfo<?, ?> bootstrap(net.minecraft.core.Registry<net.minecraft.commands.synchronization.ArgumentTypeInfo<?, ?>>);
+  private static <T extends com.mojang.brigadier.arguments.ArgumentType<?>> java.lang.Class<T> fixClassType(java.lang.Class<? super T>);
+  public static boolean isClassRecognized(java.lang.Class<?>);
+  public static <A extends com.mojang.brigadier.arguments.ArgumentType<?>> net.minecraft.commands.synchronization.ArgumentTypeInfo<A, ?> byClass(A);
+  public static <A extends com.mojang.brigadier.arguments.ArgumentType<?>> net.minecraft.commands.synchronization.ArgumentTypeInfo$Template<A> unpack(A);
+  static {};
+}
+Compiled from "ArgumentUtils.java"
+public class net.minecraft.commands.synchronization.ArgumentUtils {
+  private static final org.slf4j.Logger LOGGER;
+  private static final byte NUMBER_FLAG_MIN;
+  private static final byte NUMBER_FLAG_MAX;
+  public net.minecraft.commands.synchronization.ArgumentUtils();
+  public static int createNumberFlags(boolean, boolean);
+  public static boolean numberHasMin(byte);
+  public static boolean numberHasMax(byte);
+  private static <A extends com.mojang.brigadier.arguments.ArgumentType<?>, T extends net.minecraft.commands.synchronization.ArgumentTypeInfo$Template<A>> void serializeArgumentCap(com.google.gson.JsonObject, net.minecraft.commands.synchronization.ArgumentTypeInfo<A, T>, net.minecraft.commands.synchronization.ArgumentTypeInfo$Template<A>);
+  private static <T extends com.mojang.brigadier.arguments.ArgumentType<?>> void serializeArgumentToJson(com.google.gson.JsonObject, T);
+  public static <S> com.google.gson.JsonObject serializeNodeToJson(com.mojang.brigadier.CommandDispatcher<S>, com.mojang.brigadier.tree.CommandNode<S>);
+  public static <T> java.util.Set<com.mojang.brigadier.arguments.ArgumentType<?>> findUsedArgumentTypes(com.mojang.brigadier.tree.CommandNode<T>);
+  private static <T> void findUsedArgumentTypes(com.mojang.brigadier.tree.CommandNode<T>, java.util.Set<com.mojang.brigadier.arguments.ArgumentType<?>>, java.util.Set<com.mojang.brigadier.tree.CommandNode<T>>);
+  private static void lambda$findUsedArgumentTypes$0(java.util.Set, java.util.Set, com.mojang.brigadier.tree.CommandNode);
+  private static java.lang.IllegalStateException lambda$serializeNodeToJson$0(java.lang.String);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.commands.synchronization.package-info {
+}
+Compiled from "SingletonArgumentInfo.java"
+public final class net.minecraft.commands.synchronization.SingletonArgumentInfo$Template implements net.minecraft.commands.synchronization.ArgumentTypeInfo$Template<A> {
+  private final java.util.function.Function<net.minecraft.commands.CommandBuildContext, A> constructor;
+  final net.minecraft.commands.synchronization.SingletonArgumentInfo this$0;
+  public net.minecraft.commands.synchronization.SingletonArgumentInfo$Template(java.util.function.Function<net.minecraft.commands.CommandBuildContext, A>);
+  public A instantiate(net.minecraft.commands.CommandBuildContext);
+  public net.minecraft.commands.synchronization.ArgumentTypeInfo<A, ?> type();
+}
+Compiled from "ArgumentTypeInfo.java"
+public interface net.minecraft.commands.synchronization.ArgumentTypeInfo<A extends com.mojang.brigadier.arguments.ArgumentType<?>, T extends net.minecraft.commands.synchronization.ArgumentTypeInfo$Template<A>> {
+  public abstract void serializeToNetwork(T, net.minecraft.network.FriendlyByteBuf);
+  public abstract T deserializeFromNetwork(net.minecraft.network.FriendlyByteBuf);
+  public abstract void serializeToJson(T, com.google.gson.JsonObject);
+  public abstract T unpack(A);
+}

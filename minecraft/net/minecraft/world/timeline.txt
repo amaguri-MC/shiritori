@@ -1,0 +1,139 @@
+Compiled from "Timeline.java"
+public class net.minecraft.world.timeline.Timeline {
+  public static final com.mojang.serialization.Codec<net.minecraft.core.Holder<net.minecraft.world.timeline.Timeline>> CODEC;
+  private static final com.mojang.serialization.Codec<java.util.Map<net.minecraft.world.attribute.EnvironmentAttribute<?>, net.minecraft.world.timeline.AttributeTrack<?, ?>>> TRACKS_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.timeline.Timeline> DIRECT_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.timeline.Timeline> NETWORK_CODEC;
+  private final net.minecraft.core.Holder<net.minecraft.world.clock.WorldClock> clock;
+  private final java.util.Optional<java.lang.Integer> periodTicks;
+  private final java.util.Map<net.minecraft.world.attribute.EnvironmentAttribute<?>, net.minecraft.world.timeline.AttributeTrack<?, ?>> tracks;
+  private final java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.clock.ClockTimeMarker>, net.minecraft.world.timeline.Timeline$TimeMarkerInfo> timeMarkers;
+  private static net.minecraft.world.timeline.Timeline filterSyncableTracks(net.minecraft.world.timeline.Timeline);
+  private net.minecraft.world.timeline.Timeline(net.minecraft.core.Holder<net.minecraft.world.clock.WorldClock>, java.util.Optional<java.lang.Integer>, java.util.Map<net.minecraft.world.attribute.EnvironmentAttribute<?>, net.minecraft.world.timeline.AttributeTrack<?, ?>>, java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.clock.ClockTimeMarker>, net.minecraft.world.timeline.Timeline$TimeMarkerInfo>);
+  public static void validateRegistry(net.minecraft.core.Registry<net.minecraft.world.timeline.Timeline>, java.util.Map<net.minecraft.resources.ResourceKey<?>, java.lang.Exception>);
+  private static com.mojang.serialization.DataResult<net.minecraft.world.timeline.Timeline> validateInternal(net.minecraft.world.timeline.Timeline);
+  public static net.minecraft.world.timeline.Timeline$Builder builder(net.minecraft.core.Holder<net.minecraft.world.clock.WorldClock>);
+  public int getPeriodCount(net.minecraft.world.clock.ClockManager);
+  public long getCurrentTicks(net.minecraft.world.clock.ClockManager);
+  public long getTotalTicks(net.minecraft.world.clock.ClockManager);
+  public net.minecraft.core.Holder<net.minecraft.world.clock.WorldClock> clock();
+  public java.util.Optional<java.lang.Integer> periodTicks();
+  public void registerTimeMarkers(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.clock.ClockTimeMarker>, net.minecraft.world.clock.ClockTimeMarker>);
+  public java.util.Set<net.minecraft.world.attribute.EnvironmentAttribute<?>> attributes();
+  public <Value> net.minecraft.world.timeline.AttributeTrackSampler<Value, ?> createTrackSampler(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.clock.ClockManager);
+  private static net.minecraft.world.timeline.Timeline lambda$validateInternal$1(net.minecraft.world.timeline.Timeline, net.minecraft.world.timeline.AttributeTrack);
+  private static java.lang.String lambda$validateInternal$0(java.util.Map$Entry, int);
+  private static void lambda$validateRegistry$0(com.google.common.collect.Multimap, java.util.Map, net.minecraft.core.Holder$Reference);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.util.Map lambda$static$4(net.minecraft.world.timeline.Timeline);
+  private static java.util.Map lambda$static$3(net.minecraft.world.timeline.Timeline);
+  private static java.util.Optional lambda$static$2(net.minecraft.world.timeline.Timeline);
+  private static net.minecraft.core.Holder lambda$static$1(net.minecraft.world.timeline.Timeline);
+  static {};
+}
+Compiled from "Timeline.java"
+public class net.minecraft.world.timeline.Timeline$Builder {
+  private final net.minecraft.core.Holder<net.minecraft.world.clock.WorldClock> clock;
+  private java.util.Optional<java.lang.Integer> periodTicks;
+  private final com.google.common.collect.ImmutableMap$Builder<net.minecraft.world.attribute.EnvironmentAttribute<?>, net.minecraft.world.timeline.AttributeTrack<?, ?>> tracks;
+  private final com.google.common.collect.ImmutableMap$Builder<net.minecraft.resources.ResourceKey<net.minecraft.world.clock.ClockTimeMarker>, net.minecraft.world.timeline.Timeline$TimeMarkerInfo> timeMarkers;
+  private net.minecraft.world.timeline.Timeline$Builder(net.minecraft.core.Holder<net.minecraft.world.clock.WorldClock>);
+  public net.minecraft.world.timeline.Timeline$Builder setPeriodTicks(int);
+  public <Value, Argument> net.minecraft.world.timeline.Timeline$Builder addModifierTrack(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.attribute.modifier.AttributeModifier<Value, Argument>, java.util.function.Consumer<net.minecraft.util.KeyframeTrack$Builder<Argument>>);
+  public <Value> net.minecraft.world.timeline.Timeline$Builder addTrack(net.minecraft.world.attribute.EnvironmentAttribute<Value>, java.util.function.Consumer<net.minecraft.util.KeyframeTrack$Builder<Value>>);
+  public net.minecraft.world.timeline.Timeline$Builder addTimeMarker(net.minecraft.resources.ResourceKey<net.minecraft.world.clock.ClockTimeMarker>, int);
+  public net.minecraft.world.timeline.Timeline$Builder addTimeMarker(net.minecraft.resources.ResourceKey<net.minecraft.world.clock.ClockTimeMarker>, int, boolean);
+  public net.minecraft.world.timeline.Timeline build();
+}
+Compiled from "Timelines.java"
+public interface net.minecraft.world.timeline.Timelines {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.timeline.Timeline> OVERWORLD_DAY;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.timeline.Timeline> MOON;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.timeline.Timeline> VILLAGER_SCHEDULE;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.timeline.Timeline> EARLY_GAME;
+  public static final float DAY_SKY_LIGHT_LEVEL;
+  public static final float NIGHT_SKY_LIGHT_LEVEL;
+  public static final int NIGHT_SKY_LIGHT_COLOR;
+  public static final float NIGHT_SKY_LIGHT_FACTOR;
+  public static final int NIGHT_SKY_COLOR_MULTIPLIER;
+  public static final int NIGHT_FOG_COLOR_MULTIPLIER_START;
+  public static final int NIGHT_FOG_COLOR_MULTIPLIER_END;
+  public static final int NIGHT_CLOUD_COLOR_MULTIPLIER;
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.timeline.Timeline>);
+  private static net.minecraft.resources.ResourceKey<net.minecraft.world.timeline.Timeline> key(java.lang.String);
+  private static void lambda$bootstrap$22(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$21(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$20(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$19(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$18(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$17(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$16(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$15(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$14(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$13(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$12(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$11(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$10(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$9(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$8(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$7(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$6(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$5(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$4(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$3(net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$2(net.minecraft.util.EasingType, net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$1(net.minecraft.util.EasingType, net.minecraft.util.KeyframeTrack$Builder);
+  private static void lambda$bootstrap$0(net.minecraft.util.EasingType, net.minecraft.util.KeyframeTrack$Builder);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.timeline.package-info {
+}
+Compiled from "Timeline.java"
+final class net.minecraft.world.timeline.Timeline$TimeMarkerInfo extends java.lang.Record {
+  private final int ticks;
+  private final boolean showInCommands;
+  private static final com.mojang.serialization.Codec<net.minecraft.world.timeline.Timeline$TimeMarkerInfo> FULL_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.timeline.Timeline$TimeMarkerInfo> CODEC;
+  private net.minecraft.world.timeline.Timeline$TimeMarkerInfo(int, boolean);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int ticks();
+  public boolean showInCommands();
+  private static com.mojang.datafixers.util.Either lambda$static$4(net.minecraft.world.timeline.Timeline$TimeMarkerInfo);
+  private static net.minecraft.world.timeline.Timeline$TimeMarkerInfo lambda$static$1(com.mojang.datafixers.util.Either);
+  private static net.minecraft.world.timeline.Timeline$TimeMarkerInfo lambda$static$3(net.minecraft.world.timeline.Timeline$TimeMarkerInfo);
+  private static net.minecraft.world.timeline.Timeline$TimeMarkerInfo lambda$static$2(java.lang.Integer);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "AttributeTrack.java"
+public final class net.minecraft.world.timeline.AttributeTrack<Value, Argument> extends java.lang.Record {
+  private final net.minecraft.world.attribute.modifier.AttributeModifier<Value, Argument> modifier;
+  private final net.minecraft.util.KeyframeTrack<Argument> argumentTrack;
+  public net.minecraft.world.timeline.AttributeTrack(net.minecraft.world.attribute.modifier.AttributeModifier<Value, Argument>, net.minecraft.util.KeyframeTrack<Argument>);
+  public static <Value> com.mojang.serialization.Codec<net.minecraft.world.timeline.AttributeTrack<Value, ?>> createCodec(net.minecraft.world.attribute.EnvironmentAttribute<Value>);
+  private static <Value, Argument> com.mojang.serialization.MapCodec<net.minecraft.world.timeline.AttributeTrack<Value, Argument>> createCodecWithModifier(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.attribute.modifier.AttributeModifier<Value, Argument>);
+  public net.minecraft.world.timeline.AttributeTrackSampler<Value, Argument> bakeSampler(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.core.Holder<net.minecraft.world.clock.WorldClock>, java.util.Optional<java.lang.Integer>, net.minecraft.world.clock.ClockManager);
+  public static com.mojang.serialization.DataResult<net.minecraft.world.timeline.AttributeTrack<?, ?>> validatePeriod(net.minecraft.world.timeline.AttributeTrack<?, ?>, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.attribute.modifier.AttributeModifier<Value, Argument> modifier();
+  public net.minecraft.util.KeyframeTrack<Argument> argumentTrack();
+  private static net.minecraft.world.timeline.AttributeTrack lambda$validatePeriod$0(net.minecraft.world.timeline.AttributeTrack, net.minecraft.util.KeyframeTrack);
+  private static net.minecraft.world.timeline.AttributeTrack lambda$createCodecWithModifier$0(net.minecraft.world.attribute.modifier.AttributeModifier, net.minecraft.util.KeyframeTrack);
+  private static com.mojang.serialization.MapCodec lambda$createCodec$0(net.minecraft.world.attribute.EnvironmentAttribute, net.minecraft.world.attribute.modifier.AttributeModifier);
+}
+Compiled from "AttributeTrackSampler.java"
+public class net.minecraft.world.timeline.AttributeTrackSampler<Value, Argument> implements net.minecraft.world.attribute.EnvironmentAttributeLayer$TimeBased<Value> {
+  private final net.minecraft.core.Holder<net.minecraft.world.clock.WorldClock> clock;
+  private final net.minecraft.world.attribute.modifier.AttributeModifier<Value, Argument> modifier;
+  private final net.minecraft.util.KeyframeTrackSampler<Argument> argumentSampler;
+  private final net.minecraft.world.clock.ClockManager clockManager;
+  private int cachedTickId;
+  private Argument cachedArgument;
+  public net.minecraft.world.timeline.AttributeTrackSampler(net.minecraft.core.Holder<net.minecraft.world.clock.WorldClock>, java.util.Optional<java.lang.Integer>, net.minecraft.world.attribute.modifier.AttributeModifier<Value, Argument>, net.minecraft.util.KeyframeTrack<Argument>, net.minecraft.world.attribute.LerpFunction<Argument>, net.minecraft.world.clock.ClockManager);
+  public Value applyTimeBased(Value, int);
+}

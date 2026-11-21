@@ -1,0 +1,549 @@
+Compiled from "ArrowLayer.java"
+public class net.minecraft.client.renderer.entity.layers.ArrowLayer<M extends net.minecraft.client.model.player.PlayerModel> extends net.minecraft.client.renderer.entity.layers.StuckInBodyLayer<M, net.minecraft.client.renderer.entity.state.ArrowRenderState> {
+  public net.minecraft.client.renderer.entity.layers.ArrowLayer(net.minecraft.client.renderer.entity.LivingEntityRenderer<?, net.minecraft.client.renderer.entity.state.AvatarRenderState, M>, net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+  protected int numStuck(net.minecraft.client.renderer.entity.state.AvatarRenderState);
+}
+Compiled from "BeeStingerLayer.java"
+public class net.minecraft.client.renderer.entity.layers.BeeStingerLayer<M extends net.minecraft.client.model.player.PlayerModel> extends net.minecraft.client.renderer.entity.layers.StuckInBodyLayer<M, net.minecraft.util.Unit> {
+  private static final net.minecraft.resources.Identifier BEE_STINGER_LOCATION;
+  public net.minecraft.client.renderer.entity.layers.BeeStingerLayer(net.minecraft.client.renderer.entity.LivingEntityRenderer<?, net.minecraft.client.renderer.entity.state.AvatarRenderState, M>, net.minecraft.client.renderer.entity.EntityRendererProvider$Context);
+  protected int numStuck(net.minecraft.client.renderer.entity.state.AvatarRenderState);
+  static {};
+}
+Compiled from "BlockDecorationLayer.java"
+public class net.minecraft.client.renderer.entity.layers.BlockDecorationLayer<S extends net.minecraft.client.renderer.entity.state.EntityRenderState, M extends net.minecraft.client.model.EntityModel<S>> extends net.minecraft.client.renderer.entity.layers.RenderLayer<S, M> {
+  private static final org.joml.Matrix4fc UNIT_CUBE_BOTTOM_CENTER_TO_ANTENNA_CENTER;
+  private final java.util.function.Function<S, net.minecraft.client.renderer.block.BlockModelRenderState> blockModel;
+  private final java.util.function.Consumer<com.mojang.blaze3d.vertex.PoseStack> transform;
+  public net.minecraft.client.renderer.entity.layers.BlockDecorationLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>, java.util.function.Function<S, net.minecraft.client.renderer.block.BlockModelRenderState>, java.util.function.Consumer<com.mojang.blaze3d.vertex.PoseStack>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, float, float);
+  static {};
+}
+Compiled from "BreezeEyesLayer.java"
+public class net.minecraft.client.renderer.entity.layers.BreezeEyesLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.BreezeRenderState, net.minecraft.client.model.monster.breeze.BreezeModel> {
+  private static final net.minecraft.client.renderer.rendertype.RenderType BREEZE_EYES;
+  private final net.minecraft.client.model.monster.breeze.BreezeModel model;
+  public net.minecraft.client.renderer.entity.layers.BreezeEyesLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.BreezeRenderState, net.minecraft.client.model.monster.breeze.BreezeModel>, net.minecraft.client.model.geom.EntityModelSet);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.BreezeRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  static {};
+}
+Compiled from "BreezeWindLayer.java"
+public class net.minecraft.client.renderer.entity.layers.BreezeWindLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.BreezeRenderState, net.minecraft.client.model.monster.breeze.BreezeModel> {
+  private static final net.minecraft.resources.Identifier TEXTURE_LOCATION;
+  private final net.minecraft.client.model.monster.breeze.BreezeModel model;
+  public net.minecraft.client.renderer.entity.layers.BreezeWindLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.BreezeRenderState, net.minecraft.client.model.monster.breeze.BreezeModel>, net.minecraft.client.model.geom.EntityModelSet);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.BreezeRenderState, float, float);
+  private float xOffset(float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  static {};
+}
+Compiled from "CapeLayer.java"
+public class net.minecraft.client.renderer.entity.layers.CapeLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.AvatarRenderState, net.minecraft.client.model.player.PlayerModel> {
+  private final net.minecraft.client.model.HumanoidModel<net.minecraft.client.renderer.entity.state.AvatarRenderState> model;
+  private final net.minecraft.client.resources.model.EquipmentAssetManager equipmentAssets;
+  public net.minecraft.client.renderer.entity.layers.CapeLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.AvatarRenderState, net.minecraft.client.model.player.PlayerModel>, net.minecraft.client.model.geom.EntityModelSet, net.minecraft.client.resources.model.EquipmentAssetManager);
+  private boolean hasLayer(net.minecraft.world.item.ItemStack, net.minecraft.client.resources.model.EquipmentClientInfo$LayerType);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.AvatarRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "CarriedBlockLayer.java"
+public class net.minecraft.client.renderer.entity.layers.CarriedBlockLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.EndermanRenderState, net.minecraft.client.model.monster.enderman.EndermanModel<net.minecraft.client.renderer.entity.state.EndermanRenderState>> {
+  public net.minecraft.client.renderer.entity.layers.CarriedBlockLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.EndermanRenderState, net.minecraft.client.model.monster.enderman.EndermanModel<net.minecraft.client.renderer.entity.state.EndermanRenderState>>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EndermanRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "CatCollarLayer.java"
+public class net.minecraft.client.renderer.entity.layers.CatCollarLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.CatRenderState, net.minecraft.client.model.animal.feline.AbstractFelineModel<net.minecraft.client.renderer.entity.state.CatRenderState>> {
+  private static final net.minecraft.resources.Identifier CAT_COLLAR_LOCATION;
+  private static final net.minecraft.resources.Identifier CAT_BABY_COLLAR_LOCATION;
+  private final net.minecraft.client.model.animal.feline.AdultCatModel adultModel;
+  private final net.minecraft.client.model.animal.feline.BabyCatModel babyModel;
+  public net.minecraft.client.renderer.entity.layers.CatCollarLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.CatRenderState, net.minecraft.client.model.animal.feline.AbstractFelineModel<net.minecraft.client.renderer.entity.state.CatRenderState>>, net.minecraft.client.model.geom.EntityModelSet);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.CatRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  static {};
+}
+Compiled from "CreeperPowerLayer.java"
+public class net.minecraft.client.renderer.entity.layers.CreeperPowerLayer extends net.minecraft.client.renderer.entity.layers.EnergySwirlLayer<net.minecraft.client.renderer.entity.state.CreeperRenderState, net.minecraft.client.model.monster.creeper.CreeperModel> {
+  private static final net.minecraft.resources.Identifier POWER_LOCATION;
+  private final net.minecraft.client.model.monster.creeper.CreeperModel model;
+  public net.minecraft.client.renderer.entity.layers.CreeperPowerLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.CreeperRenderState, net.minecraft.client.model.monster.creeper.CreeperModel>, net.minecraft.client.model.geom.EntityModelSet);
+  protected boolean isPowered(net.minecraft.client.renderer.entity.state.CreeperRenderState);
+  protected float xOffset(float);
+  protected net.minecraft.resources.Identifier getTextureLocation();
+  protected net.minecraft.client.model.monster.creeper.CreeperModel model();
+  protected net.minecraft.client.model.EntityModel model();
+  protected boolean isPowered(net.minecraft.client.renderer.entity.state.EntityRenderState);
+  static {};
+}
+Compiled from "CrossedArmsItemLayer.java"
+public class net.minecraft.client.renderer.entity.layers.CrossedArmsItemLayer<S extends net.minecraft.client.renderer.entity.state.HoldingEntityRenderState, M extends net.minecraft.client.model.EntityModel<S> & net.minecraft.client.model.VillagerLikeModel<S>> extends net.minecraft.client.renderer.entity.layers.RenderLayer<S, M> {
+  public net.minecraft.client.renderer.entity.layers.CrossedArmsItemLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, float, float);
+  protected void applyTranslation(S, com.mojang.blaze3d.vertex.PoseStack);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "CustomHeadLayer.java"
+public final class net.minecraft.client.renderer.entity.layers.CustomHeadLayer$Transforms extends java.lang.Record {
+  private final float yOffset;
+  private final float skullYOffset;
+  private final float horizontalScale;
+  public static final net.minecraft.client.renderer.entity.layers.CustomHeadLayer$Transforms DEFAULT;
+  public net.minecraft.client.renderer.entity.layers.CustomHeadLayer$Transforms(float, float, float);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float yOffset();
+  public float skullYOffset();
+  public float horizontalScale();
+  static {};
+}
+Compiled from "CustomHeadLayer.java"
+public class net.minecraft.client.renderer.entity.layers.CustomHeadLayer<S extends net.minecraft.client.renderer.entity.state.LivingEntityRenderState, M extends net.minecraft.client.model.EntityModel<S> & net.minecraft.client.model.HeadedModel> extends net.minecraft.client.renderer.entity.layers.RenderLayer<S, M> {
+  private static final float ITEM_SCALE;
+  private static final float SKULL_SCALE;
+  private final net.minecraft.client.renderer.entity.layers.CustomHeadLayer$Transforms transforms;
+  private final java.util.function.Function<net.minecraft.world.level.block.SkullBlock$Type, net.minecraft.client.model.object.skull.SkullModelBase> skullModels;
+  private final net.minecraft.client.renderer.PlayerSkinRenderCache playerSkinRenderCache;
+  public net.minecraft.client.renderer.entity.layers.CustomHeadLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>, net.minecraft.client.model.geom.EntityModelSet, net.minecraft.client.renderer.PlayerSkinRenderCache);
+  public net.minecraft.client.renderer.entity.layers.CustomHeadLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>, net.minecraft.client.model.geom.EntityModelSet, net.minecraft.client.renderer.PlayerSkinRenderCache, net.minecraft.client.renderer.entity.layers.CustomHeadLayer$Transforms);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, float, float);
+  private net.minecraft.client.renderer.rendertype.RenderType resolveSkullRenderType(net.minecraft.client.renderer.entity.state.LivingEntityRenderState, net.minecraft.world.level.block.SkullBlock$Type);
+  public static void translateToHead(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.entity.layers.CustomHeadLayer$Transforms);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  private static net.minecraft.client.model.object.skull.SkullModelBase lambda$new$0(net.minecraft.client.model.geom.EntityModelSet, net.minecraft.world.level.block.SkullBlock$Type);
+}
+Compiled from "Deadmau5EarsLayer.java"
+public class net.minecraft.client.renderer.entity.layers.Deadmau5EarsLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.AvatarRenderState, net.minecraft.client.model.player.PlayerModel> {
+  private final net.minecraft.client.model.HumanoidModel<net.minecraft.client.renderer.entity.state.AvatarRenderState> model;
+  public net.minecraft.client.renderer.entity.layers.Deadmau5EarsLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.AvatarRenderState, net.minecraft.client.model.player.PlayerModel>, net.minecraft.client.model.geom.EntityModelSet);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.AvatarRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "DolphinCarryingItemLayer.java"
+public class net.minecraft.client.renderer.entity.layers.DolphinCarryingItemLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.DolphinRenderState, net.minecraft.client.model.animal.dolphin.DolphinModel> {
+  public net.minecraft.client.renderer.entity.layers.DolphinCarryingItemLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.DolphinRenderState, net.minecraft.client.model.animal.dolphin.DolphinModel>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.DolphinRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "DrownedOuterLayer.java"
+public class net.minecraft.client.renderer.entity.layers.DrownedOuterLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.ZombieRenderState, net.minecraft.client.model.monster.zombie.DrownedModel> {
+  private static final net.minecraft.resources.Identifier DROWNED_OUTER_LAYER_LOCATION;
+  private static final net.minecraft.resources.Identifier BABY_DROWNED_OUTER_LAYER_LOCATION;
+  private final net.minecraft.client.model.monster.zombie.DrownedModel model;
+  private final net.minecraft.client.model.monster.zombie.DrownedModel babyModel;
+  public net.minecraft.client.renderer.entity.layers.DrownedOuterLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.ZombieRenderState, net.minecraft.client.model.monster.zombie.DrownedModel>, net.minecraft.client.model.geom.EntityModelSet);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.ZombieRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  static {};
+}
+Compiled from "EnderEyesLayer.java"
+public class net.minecraft.client.renderer.entity.layers.EnderEyesLayer extends net.minecraft.client.renderer.entity.layers.EyesLayer<net.minecraft.client.renderer.entity.state.EndermanRenderState, net.minecraft.client.model.monster.enderman.EndermanModel<net.minecraft.client.renderer.entity.state.EndermanRenderState>> {
+  private static final net.minecraft.client.renderer.rendertype.RenderType ENDERMAN_EYES;
+  public net.minecraft.client.renderer.entity.layers.EnderEyesLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.EndermanRenderState, net.minecraft.client.model.monster.enderman.EndermanModel<net.minecraft.client.renderer.entity.state.EndermanRenderState>>);
+  public net.minecraft.client.renderer.rendertype.RenderType renderType();
+  static {};
+}
+Compiled from "EnergySwirlLayer.java"
+public abstract class net.minecraft.client.renderer.entity.layers.EnergySwirlLayer<S extends net.minecraft.client.renderer.entity.state.EntityRenderState, M extends net.minecraft.client.model.EntityModel<S>> extends net.minecraft.client.renderer.entity.layers.RenderLayer<S, M> {
+  public net.minecraft.client.renderer.entity.layers.EnergySwirlLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, float, float);
+  protected abstract boolean isPowered(S);
+  protected abstract float xOffset(float);
+  protected abstract net.minecraft.resources.Identifier getTextureLocation();
+  protected abstract M model();
+}
+Compiled from "EquipmentLayerRenderer.java"
+final class net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer$LayerTextureKey extends java.lang.Record {
+  private final net.minecraft.client.resources.model.EquipmentClientInfo$LayerType layerType;
+  private final net.minecraft.client.resources.model.EquipmentClientInfo$Layer layer;
+  private net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer$LayerTextureKey(net.minecraft.client.resources.model.EquipmentClientInfo$LayerType, net.minecraft.client.resources.model.EquipmentClientInfo$Layer);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.resources.model.EquipmentClientInfo$LayerType layerType();
+  public net.minecraft.client.resources.model.EquipmentClientInfo$Layer layer();
+}
+Compiled from "EquipmentLayerRenderer.java"
+final class net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer$TrimSpriteKey extends java.lang.Record {
+  private final net.minecraft.world.item.equipment.trim.ArmorTrim trim;
+  private final net.minecraft.client.resources.model.EquipmentClientInfo$LayerType layerType;
+  private final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.EquipmentAsset> equipmentAssetId;
+  private net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer$TrimSpriteKey(net.minecraft.world.item.equipment.trim.ArmorTrim, net.minecraft.client.resources.model.EquipmentClientInfo$LayerType, net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.EquipmentAsset>);
+  public net.minecraft.resources.Identifier spriteId();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.item.equipment.trim.ArmorTrim trim();
+  public net.minecraft.client.resources.model.EquipmentClientInfo$LayerType layerType();
+  public net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.EquipmentAsset> equipmentAssetId();
+}
+Compiled from "EquipmentLayerRenderer.java"
+public class net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer {
+  private static final int NO_LAYER_COLOR;
+  private final net.minecraft.client.resources.model.EquipmentAssetManager equipmentAssets;
+  private final java.util.function.Function<net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer$LayerTextureKey, net.minecraft.resources.Identifier> layerTextureLookup;
+  private final java.util.function.Function<net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer$TrimSpriteKey, net.minecraft.client.renderer.texture.TextureAtlasSprite> trimSpriteLookup;
+  public net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer(net.minecraft.client.resources.model.EquipmentAssetManager, net.minecraft.client.renderer.texture.TextureAtlas);
+  public <S> void renderLayers(net.minecraft.client.resources.model.EquipmentClientInfo$LayerType, net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.EquipmentAsset>, net.minecraft.client.model.Model<? super S>, S, net.minecraft.world.item.ItemStack, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, int);
+  public <S> void renderLayers(net.minecraft.client.resources.model.EquipmentClientInfo$LayerType, net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.EquipmentAsset>, net.minecraft.client.model.Model<? super S>, S, net.minecraft.world.item.ItemStack, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.resources.Identifier, int, int);
+  private static int getColorForLayer(net.minecraft.client.resources.model.EquipmentClientInfo$Layer, int);
+  private static net.minecraft.client.renderer.texture.TextureAtlasSprite lambda$new$1(net.minecraft.client.renderer.texture.TextureAtlas, net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer$TrimSpriteKey);
+  private static net.minecraft.resources.Identifier lambda$new$0(net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer$LayerTextureKey);
+}
+Compiled from "EyesLayer.java"
+public abstract class net.minecraft.client.renderer.entity.layers.EyesLayer<S extends net.minecraft.client.renderer.entity.state.EntityRenderState, M extends net.minecraft.client.model.EntityModel<S>> extends net.minecraft.client.renderer.entity.layers.RenderLayer<S, M> {
+  public net.minecraft.client.renderer.entity.layers.EyesLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, float, float);
+  public abstract net.minecraft.client.renderer.rendertype.RenderType renderType();
+}
+Compiled from "FoxHeldItemLayer.java"
+public class net.minecraft.client.renderer.entity.layers.FoxHeldItemLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.FoxRenderState, net.minecraft.client.model.animal.fox.FoxModel> {
+  public net.minecraft.client.renderer.entity.layers.FoxHeldItemLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.FoxRenderState, net.minecraft.client.model.animal.fox.FoxModel>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.FoxRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "HorseMarkingLayer.java"
+final class net.minecraft.client.renderer.entity.layers.HorseMarkingLayer$HorseMarkingTextures extends java.lang.Record {
+  private final net.minecraft.resources.Identifier adult;
+  private final net.minecraft.resources.Identifier baby;
+  private net.minecraft.client.renderer.entity.layers.HorseMarkingLayer$HorseMarkingTextures(net.minecraft.resources.Identifier, net.minecraft.resources.Identifier);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier adult();
+  public net.minecraft.resources.Identifier baby();
+}
+Compiled from "HorseMarkingLayer.java"
+public class net.minecraft.client.renderer.entity.layers.HorseMarkingLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.HorseRenderState, net.minecraft.client.model.animal.equine.HorseModel> {
+  private static final net.minecraft.resources.Identifier INVISIBLE_TEXTURE;
+  private static final java.util.Map<net.minecraft.world.entity.animal.equine.Markings, net.minecraft.client.renderer.entity.layers.HorseMarkingLayer$HorseMarkingTextures> LOCATION_BY_MARKINGS;
+  public net.minecraft.client.renderer.entity.layers.HorseMarkingLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.HorseRenderState, net.minecraft.client.model.animal.equine.HorseModel>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.HorseRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  static {};
+}
+Compiled from "HumanoidArmorLayer.java"
+public class net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer<S extends net.minecraft.client.renderer.entity.state.HumanoidRenderState, M extends net.minecraft.client.model.HumanoidModel<S>, A extends net.minecraft.client.model.HumanoidModel<S>> extends net.minecraft.client.renderer.entity.layers.RenderLayer<S, M> {
+  private final net.minecraft.client.renderer.entity.ArmorModelSet<A> modelSet;
+  private final net.minecraft.client.renderer.entity.ArmorModelSet<A> babyModelSet;
+  private final net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer equipmentRenderer;
+  public net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>, net.minecraft.client.renderer.entity.ArmorModelSet<A>, net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer);
+  public net.minecraft.client.renderer.entity.layers.HumanoidArmorLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>, net.minecraft.client.renderer.entity.ArmorModelSet<A>, net.minecraft.client.renderer.entity.ArmorModelSet<A>, net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer);
+  public static boolean shouldRender(net.minecraft.world.item.ItemStack, net.minecraft.world.entity.EquipmentSlot);
+  private static boolean shouldRender(net.minecraft.world.item.equipment.Equippable, net.minecraft.world.entity.EquipmentSlot);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, float, float);
+  private void renderArmorPiece(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, net.minecraft.world.item.ItemStack, net.minecraft.world.entity.EquipmentSlot, int, S);
+  private A getArmorModel(S, net.minecraft.world.entity.EquipmentSlot);
+  private boolean usesInnerModel(net.minecraft.world.entity.EquipmentSlot);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "IronGolemCrackinessLayer.java"
+public class net.minecraft.client.renderer.entity.layers.IronGolemCrackinessLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.IronGolemRenderState, net.minecraft.client.model.animal.golem.IronGolemModel> {
+  private static final java.util.Map<net.minecraft.world.entity.Crackiness$Level, net.minecraft.resources.Identifier> identifiers;
+  public net.minecraft.client.renderer.entity.layers.IronGolemCrackinessLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.IronGolemRenderState, net.minecraft.client.model.animal.golem.IronGolemModel>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.IronGolemRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  static {};
+}
+Compiled from "IronGolemFlowerLayer.java"
+public class net.minecraft.client.renderer.entity.layers.IronGolemFlowerLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.IronGolemRenderState, net.minecraft.client.model.animal.golem.IronGolemModel> {
+  public net.minecraft.client.renderer.entity.layers.IronGolemFlowerLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.IronGolemRenderState, net.minecraft.client.model.animal.golem.IronGolemModel>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.IronGolemRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "ItemInHandLayer.java"
+public class net.minecraft.client.renderer.entity.layers.ItemInHandLayer<S extends net.minecraft.client.renderer.entity.state.ArmedEntityRenderState, M extends net.minecraft.client.model.EntityModel<S> & net.minecraft.client.model.ArmedModel<S>> extends net.minecraft.client.renderer.entity.layers.RenderLayer<S, M> {
+  public net.minecraft.client.renderer.entity.layers.ItemInHandLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, float, float);
+  protected void submitArmWithItem(S, net.minecraft.client.renderer.item.ItemStackRenderState, net.minecraft.world.item.ItemStack, net.minecraft.world.entity.HumanoidArm, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int);
+  private boolean useBabyOffset(S);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "LivingEntityEmissiveLayer.java"
+public interface net.minecraft.client.renderer.entity.layers.LivingEntityEmissiveLayer$AlphaFunction<S extends net.minecraft.client.renderer.entity.state.LivingEntityRenderState> {
+  public abstract float apply(S, float);
+}
+Compiled from "LivingEntityEmissiveLayer.java"
+public class net.minecraft.client.renderer.entity.layers.LivingEntityEmissiveLayer<S extends net.minecraft.client.renderer.entity.state.LivingEntityRenderState, M extends net.minecraft.client.model.EntityModel<S>> extends net.minecraft.client.renderer.entity.layers.RenderLayer<S, M> {
+  private final java.util.function.Function<S, net.minecraft.resources.Identifier> textureProvider;
+  private final net.minecraft.client.renderer.entity.layers.LivingEntityEmissiveLayer$AlphaFunction<S> alphaFunction;
+  private final M model;
+  private final java.util.function.Function<net.minecraft.resources.Identifier, net.minecraft.client.renderer.rendertype.RenderType> bufferProvider;
+  private final boolean alwaysVisible;
+  public net.minecraft.client.renderer.entity.layers.LivingEntityEmissiveLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>, java.util.function.Function<S, net.minecraft.resources.Identifier>, net.minecraft.client.renderer.entity.layers.LivingEntityEmissiveLayer$AlphaFunction<S>, M, java.util.function.Function<net.minecraft.resources.Identifier, net.minecraft.client.renderer.rendertype.RenderType>, boolean);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "LlamaDecorLayer.java"
+public class net.minecraft.client.renderer.entity.layers.LlamaDecorLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.LlamaRenderState, net.minecraft.client.model.animal.llama.LlamaModel> {
+  private final net.minecraft.client.model.animal.llama.LlamaModel adultModel;
+  private final net.minecraft.client.model.animal.llama.LlamaModel babyModel;
+  private final net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer equipmentRenderer;
+  public net.minecraft.client.renderer.entity.layers.LlamaDecorLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.LlamaRenderState, net.minecraft.client.model.animal.llama.LlamaModel>, net.minecraft.client.model.geom.EntityModelSet, net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.LlamaRenderState, float, float);
+  private void renderEquipment(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, net.minecraft.client.renderer.entity.state.LlamaRenderState, net.minecraft.world.item.ItemStack, net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.EquipmentAsset>, int);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "MushroomCowMushroomLayer.java"
+public class net.minecraft.client.renderer.entity.layers.MushroomCowMushroomLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.MushroomCowRenderState, net.minecraft.client.model.animal.cow.CowModel> {
+  public net.minecraft.client.renderer.entity.layers.MushroomCowMushroomLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.MushroomCowRenderState, net.minecraft.client.model.animal.cow.CowModel>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.MushroomCowRenderState, float, float);
+  private void submitMushroomBlock(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, boolean, int, net.minecraft.client.renderer.block.BlockModelRenderState, int);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "PandaHoldsItemLayer.java"
+public class net.minecraft.client.renderer.entity.layers.PandaHoldsItemLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.PandaRenderState, net.minecraft.client.model.animal.panda.PandaModel> {
+  public net.minecraft.client.renderer.entity.layers.PandaHoldsItemLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.PandaRenderState, net.minecraft.client.model.animal.panda.PandaModel>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.PandaRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "ParrotOnShoulderLayer.java"
+public class net.minecraft.client.renderer.entity.layers.ParrotOnShoulderLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.AvatarRenderState, net.minecraft.client.model.player.PlayerModel> {
+  private final net.minecraft.client.model.animal.parrot.ParrotModel model;
+  public net.minecraft.client.renderer.entity.layers.ParrotOnShoulderLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.AvatarRenderState, net.minecraft.client.model.player.PlayerModel>, net.minecraft.client.model.geom.EntityModelSet);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.AvatarRenderState, float, float);
+  private void submitOnShoulder(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.AvatarRenderState, net.minecraft.world.entity.animal.parrot.Parrot$Variant, float, float, boolean);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "PhantomEyesLayer.java"
+public class net.minecraft.client.renderer.entity.layers.PhantomEyesLayer extends net.minecraft.client.renderer.entity.layers.EyesLayer<net.minecraft.client.renderer.entity.state.PhantomRenderState, net.minecraft.client.model.monster.phantom.PhantomModel> {
+  private static final net.minecraft.client.renderer.rendertype.RenderType PHANTOM_EYES;
+  public net.minecraft.client.renderer.entity.layers.PhantomEyesLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.PhantomRenderState, net.minecraft.client.model.monster.phantom.PhantomModel>);
+  public net.minecraft.client.renderer.rendertype.RenderType renderType();
+  static {};
+}
+Compiled from "PlayerItemInHandLayer.java"
+public class net.minecraft.client.renderer.entity.layers.PlayerItemInHandLayer<S extends net.minecraft.client.renderer.entity.state.AvatarRenderState, M extends net.minecraft.client.model.EntityModel<S> & net.minecraft.client.model.ArmedModel<S> & net.minecraft.client.model.HeadedModel> extends net.minecraft.client.renderer.entity.layers.ItemInHandLayer<S, M> {
+  private static final float X_ROT_MIN;
+  private static final float X_ROT_MAX;
+  public net.minecraft.client.renderer.entity.layers.PlayerItemInHandLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>);
+  protected void submitArmWithItem(S, net.minecraft.client.renderer.item.ItemStackRenderState, net.minecraft.world.item.ItemStack, net.minecraft.world.entity.HumanoidArm, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int);
+  private void renderItemHeldToEye(S, net.minecraft.world.entity.HumanoidArm, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int);
+  protected void submitArmWithItem(net.minecraft.client.renderer.entity.state.ArmedEntityRenderState, net.minecraft.client.renderer.item.ItemStackRenderState, net.minecraft.world.item.ItemStack, net.minecraft.world.entity.HumanoidArm, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int);
+}
+Compiled from "RenderLayer.java"
+public abstract class net.minecraft.client.renderer.entity.layers.RenderLayer<S extends net.minecraft.client.renderer.entity.state.EntityRenderState, M extends net.minecraft.client.model.EntityModel<? super S>> {
+  private final net.minecraft.client.renderer.entity.RenderLayerParent<S, M> renderer;
+  public net.minecraft.client.renderer.entity.layers.RenderLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>);
+  protected static <S extends net.minecraft.client.renderer.entity.state.LivingEntityRenderState> void coloredCutoutModelCopyLayerRender(net.minecraft.client.model.Model<? super S>, net.minecraft.resources.Identifier, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, int, int);
+  protected static <S extends net.minecraft.client.renderer.entity.state.LivingEntityRenderState> void renderColoredCutoutModel(net.minecraft.client.model.Model<? super S>, net.minecraft.resources.Identifier, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, int, int);
+  public M getParentModel();
+  public abstract void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, float, float);
+}
+Compiled from "RopesLayer.java"
+public class net.minecraft.client.renderer.entity.layers.RopesLayer<M extends net.minecraft.client.model.animal.ghast.HappyGhastModel> extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.HappyGhastRenderState, M> {
+  private final net.minecraft.resources.Identifier ropesTexture;
+  private final net.minecraft.client.model.animal.ghast.HappyGhastModel adultModel;
+  private final net.minecraft.client.model.animal.ghast.HappyGhastModel babyModel;
+  public net.minecraft.client.renderer.entity.layers.RopesLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.HappyGhastRenderState, M>, net.minecraft.client.model.geom.EntityModelSet, net.minecraft.resources.Identifier);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.HappyGhastRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "SheepWoolLayer.java"
+public class net.minecraft.client.renderer.entity.layers.SheepWoolLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.SheepRenderState, net.minecraft.client.model.animal.sheep.SheepModel> {
+  private static final net.minecraft.resources.Identifier SHEEP_WOOL_LOCATION;
+  private static final net.minecraft.resources.Identifier BABY_SHEEP_WOOL_LOCATION;
+  private final net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.SheepRenderState> adultModel;
+  private final net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.SheepRenderState> babyModel;
+  public net.minecraft.client.renderer.entity.layers.SheepWoolLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.SheepRenderState, net.minecraft.client.model.animal.sheep.SheepModel>, net.minecraft.client.model.geom.EntityModelSet);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.SheepRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  static {};
+}
+Compiled from "SheepWoolUndercoatLayer.java"
+public class net.minecraft.client.renderer.entity.layers.SheepWoolUndercoatLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.SheepRenderState, net.minecraft.client.model.animal.sheep.SheepModel> {
+  private static final net.minecraft.resources.Identifier SHEEP_WOOL_UNDERCOAT_LOCATION;
+  private final net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.SheepRenderState> model;
+  public net.minecraft.client.renderer.entity.layers.SheepWoolUndercoatLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.SheepRenderState, net.minecraft.client.model.animal.sheep.SheepModel>, net.minecraft.client.model.geom.EntityModelSet);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.SheepRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  static {};
+}
+Compiled from "SimpleEquipmentLayer.java"
+public class net.minecraft.client.renderer.entity.layers.SimpleEquipmentLayer<S extends net.minecraft.client.renderer.entity.state.LivingEntityRenderState, RM extends net.minecraft.client.model.EntityModel<? super S>, EM extends net.minecraft.client.model.EntityModel<? super S>> extends net.minecraft.client.renderer.entity.layers.RenderLayer<S, RM> {
+  private final net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer equipmentRenderer;
+  private final net.minecraft.client.resources.model.EquipmentClientInfo$LayerType layer;
+  private final java.util.function.Function<S, net.minecraft.world.item.ItemStack> itemGetter;
+  private final EM adultModel;
+  private final EM babyModel;
+  private final int order;
+  public net.minecraft.client.renderer.entity.layers.SimpleEquipmentLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, RM>, net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer, net.minecraft.client.resources.model.EquipmentClientInfo$LayerType, java.util.function.Function<S, net.minecraft.world.item.ItemStack>, EM, EM, int);
+  public net.minecraft.client.renderer.entity.layers.SimpleEquipmentLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, RM>, net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer, net.minecraft.client.resources.model.EquipmentClientInfo$LayerType, java.util.function.Function<S, net.minecraft.world.item.ItemStack>, EM, EM);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "SkeletonClothingLayer.java"
+public class net.minecraft.client.renderer.entity.layers.SkeletonClothingLayer<S extends net.minecraft.client.renderer.entity.state.SkeletonRenderState, M extends net.minecraft.client.model.EntityModel<S>> extends net.minecraft.client.renderer.entity.layers.RenderLayer<S, M> {
+  private final net.minecraft.client.model.monster.skeleton.SkeletonModel<S> layerModel;
+  private final net.minecraft.resources.Identifier clothesLocation;
+  public net.minecraft.client.renderer.entity.layers.SkeletonClothingLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>, net.minecraft.client.model.geom.EntityModelSet, net.minecraft.client.model.geom.ModelLayerLocation, net.minecraft.resources.Identifier);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "SlimeOuterLayer.java"
+public class net.minecraft.client.renderer.entity.layers.SlimeOuterLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.SlimeRenderState, net.minecraft.client.model.monster.slime.SlimeModel> {
+  private final net.minecraft.client.model.monster.slime.SlimeModel model;
+  public net.minecraft.client.renderer.entity.layers.SlimeOuterLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.SlimeRenderState, net.minecraft.client.model.monster.slime.SlimeModel>, net.minecraft.client.model.geom.EntityModelSet);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.SlimeRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "SnowGolemHeadLayer.java"
+public class net.minecraft.client.renderer.entity.layers.SnowGolemHeadLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.SnowGolemRenderState, net.minecraft.client.model.animal.golem.SnowGolemModel> {
+  public net.minecraft.client.renderer.entity.layers.SnowGolemHeadLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.SnowGolemRenderState, net.minecraft.client.model.animal.golem.SnowGolemModel>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.SnowGolemRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "SpiderEyesLayer.java"
+public class net.minecraft.client.renderer.entity.layers.SpiderEyesLayer<M extends net.minecraft.client.model.monster.spider.SpiderModel> extends net.minecraft.client.renderer.entity.layers.EyesLayer<net.minecraft.client.renderer.entity.state.LivingEntityRenderState, M> {
+  private static final net.minecraft.client.renderer.rendertype.RenderType SPIDER_EYES;
+  public net.minecraft.client.renderer.entity.layers.SpiderEyesLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.LivingEntityRenderState, M>);
+  public net.minecraft.client.renderer.rendertype.RenderType renderType();
+  static {};
+}
+Compiled from "SpinAttackEffectLayer.java"
+public class net.minecraft.client.renderer.entity.layers.SpinAttackEffectLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.AvatarRenderState, net.minecraft.client.model.player.PlayerModel> {
+  public static final net.minecraft.resources.Identifier TEXTURE;
+  private final net.minecraft.client.model.effects.SpinAttackEffectModel model;
+  public net.minecraft.client.renderer.entity.layers.SpinAttackEffectLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.AvatarRenderState, net.minecraft.client.model.player.PlayerModel>, net.minecraft.client.model.geom.EntityModelSet);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.AvatarRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  static {};
+}
+Compiled from "StuckInBodyLayer.java"
+public final class net.minecraft.client.renderer.entity.layers.StuckInBodyLayer$PlacementStyle extends java.lang.Enum<net.minecraft.client.renderer.entity.layers.StuckInBodyLayer$PlacementStyle> {
+  public static final net.minecraft.client.renderer.entity.layers.StuckInBodyLayer$PlacementStyle IN_CUBE;
+  public static final net.minecraft.client.renderer.entity.layers.StuckInBodyLayer$PlacementStyle ON_SURFACE;
+  private static final net.minecraft.client.renderer.entity.layers.StuckInBodyLayer$PlacementStyle[] $VALUES;
+  public static net.minecraft.client.renderer.entity.layers.StuckInBodyLayer$PlacementStyle[] values();
+  public static net.minecraft.client.renderer.entity.layers.StuckInBodyLayer$PlacementStyle valueOf(java.lang.String);
+  private net.minecraft.client.renderer.entity.layers.StuckInBodyLayer$PlacementStyle();
+  private static net.minecraft.client.renderer.entity.layers.StuckInBodyLayer$PlacementStyle[] $values();
+  static {};
+}
+Compiled from "StuckInBodyLayer.java"
+public abstract class net.minecraft.client.renderer.entity.layers.StuckInBodyLayer<M extends net.minecraft.client.model.player.PlayerModel, S> extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.AvatarRenderState, M> {
+  private final net.minecraft.client.model.Model<S> model;
+  private final S modelState;
+  private final net.minecraft.resources.Identifier texture;
+  private final net.minecraft.client.renderer.entity.layers.StuckInBodyLayer$PlacementStyle placementStyle;
+  public net.minecraft.client.renderer.entity.layers.StuckInBodyLayer(net.minecraft.client.renderer.entity.LivingEntityRenderer<?, net.minecraft.client.renderer.entity.state.AvatarRenderState, M>, net.minecraft.client.model.Model<S>, S, net.minecraft.resources.Identifier, net.minecraft.client.renderer.entity.layers.StuckInBodyLayer$PlacementStyle);
+  protected abstract int numStuck(net.minecraft.client.renderer.entity.state.AvatarRenderState);
+  private void submitStuckItem(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, float, float, float, int);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.AvatarRenderState, float, float);
+  private static float snapToFace(float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "SulfurCubeInnerLayer.java"
+public class net.minecraft.client.renderer.entity.layers.SulfurCubeInnerLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.SulfurCubeRenderState, net.minecraft.client.model.monster.slime.SulfurCubeModel> {
+  private static final net.minecraft.resources.Identifier SULFUR_CUBE_INNER_LOCATION;
+  private static final net.minecraft.resources.Identifier SULFUR_CUBE_SMALL_INNER_LOCATION;
+  private final net.minecraft.client.model.monster.slime.SulfurCubeModel normalModel;
+  private final net.minecraft.client.model.monster.slime.SulfurCubeModel smallModel;
+  public net.minecraft.client.renderer.entity.layers.SulfurCubeInnerLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.SulfurCubeRenderState, net.minecraft.client.model.monster.slime.SulfurCubeModel>, net.minecraft.client.model.geom.EntityModelSet);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.SulfurCubeRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  static {};
+}
+Compiled from "TropicalFishPatternLayer.java"
+class net.minecraft.client.renderer.entity.layers.TropicalFishPatternLayer$1 {
+  static final int[] $SwitchMap$net$minecraft$world$entity$animal$fish$TropicalFish$Base;
+  static final int[] $SwitchMap$net$minecraft$world$entity$animal$fish$TropicalFish$Pattern;
+  static {};
+}
+Compiled from "TropicalFishPatternLayer.java"
+public class net.minecraft.client.renderer.entity.layers.TropicalFishPatternLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.TropicalFishRenderState, net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.TropicalFishRenderState>> {
+  private static final net.minecraft.resources.Identifier KOB_TEXTURE;
+  private static final net.minecraft.resources.Identifier SUNSTREAK_TEXTURE;
+  private static final net.minecraft.resources.Identifier SNOOPER_TEXTURE;
+  private static final net.minecraft.resources.Identifier DASHER_TEXTURE;
+  private static final net.minecraft.resources.Identifier BRINELY_TEXTURE;
+  private static final net.minecraft.resources.Identifier SPOTTY_TEXTURE;
+  private static final net.minecraft.resources.Identifier FLOPPER_TEXTURE;
+  private static final net.minecraft.resources.Identifier STRIPEY_TEXTURE;
+  private static final net.minecraft.resources.Identifier GLITTER_TEXTURE;
+  private static final net.minecraft.resources.Identifier BLOCKFISH_TEXTURE;
+  private static final net.minecraft.resources.Identifier BETTY_TEXTURE;
+  private static final net.minecraft.resources.Identifier CLAYFISH_TEXTURE;
+  private final net.minecraft.client.model.animal.fish.TropicalFishSmallModel modelSmall;
+  private final net.minecraft.client.model.animal.fish.TropicalFishLargeModel modelLarge;
+  public net.minecraft.client.renderer.entity.layers.TropicalFishPatternLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.TropicalFishRenderState, net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.TropicalFishRenderState>>, net.minecraft.client.model.geom.EntityModelSet);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.TropicalFishRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  static {};
+}
+Compiled from "VillagerProfessionLayer.java"
+public class net.minecraft.client.renderer.entity.layers.VillagerProfessionLayer<S extends net.minecraft.client.renderer.entity.state.LivingEntityRenderState & net.minecraft.client.renderer.entity.state.VillagerDataHolderRenderState, M extends net.minecraft.client.model.EntityModel<S> & net.minecraft.client.model.VillagerLikeModel<S>> extends net.minecraft.client.renderer.entity.layers.RenderLayer<S, M> {
+  private static final it.unimi.dsi.fastutil.ints.Int2ObjectMap<net.minecraft.resources.Identifier> LEVEL_LOCATIONS;
+  private final it.unimi.dsi.fastutil.objects.Object2ObjectMap<net.minecraft.resources.ResourceKey<net.minecraft.world.entity.npc.villager.VillagerType>, net.minecraft.client.resources.metadata.animation.VillagerMetadataSection$Hat> typeHatCache;
+  private final it.unimi.dsi.fastutil.objects.Object2ObjectMap<net.minecraft.resources.ResourceKey<net.minecraft.world.entity.npc.villager.VillagerProfession>, net.minecraft.client.resources.metadata.animation.VillagerMetadataSection$Hat> professionHatCache;
+  private final net.minecraft.server.packs.resources.ResourceManager resourceManager;
+  private final java.lang.String path;
+  private final M noHatModel;
+  private final M noHatBabyModel;
+  public net.minecraft.client.renderer.entity.layers.VillagerProfessionLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>, net.minecraft.server.packs.resources.ResourceManager, java.lang.String, M, M);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, float, float);
+  private net.minecraft.resources.Identifier getIdentifier(java.lang.String, net.minecraft.resources.Identifier);
+  private net.minecraft.resources.Identifier getIdentifier(java.lang.String, net.minecraft.core.Holder<?>);
+  public <K> net.minecraft.client.resources.metadata.animation.VillagerMetadataSection$Hat getHatData(it.unimi.dsi.fastutil.objects.Object2ObjectMap<net.minecraft.resources.ResourceKey<K>, net.minecraft.client.resources.metadata.animation.VillagerMetadataSection$Hat>, java.lang.String, net.minecraft.core.Holder<K>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  private net.minecraft.client.resources.metadata.animation.VillagerMetadataSection$Hat lambda$getHatData$0(java.lang.String, net.minecraft.resources.ResourceKey, java.lang.Object);
+  private static java.util.Optional lambda$getHatData$1(net.minecraft.server.packs.resources.Resource);
+  private net.minecraft.resources.Identifier lambda$getIdentifier$1(java.lang.String, net.minecraft.resources.ResourceKey);
+  private java.lang.String lambda$getIdentifier$0(java.lang.String, java.lang.String);
+  private static void lambda$static$0(it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap);
+  static {};
+}
+Compiled from "WingsLayer.java"
+public class net.minecraft.client.renderer.entity.layers.WingsLayer<S extends net.minecraft.client.renderer.entity.state.HumanoidRenderState, M extends net.minecraft.client.model.EntityModel<S>> extends net.minecraft.client.renderer.entity.layers.RenderLayer<S, M> {
+  private final net.minecraft.client.model.object.equipment.ElytraModel elytraModel;
+  private final net.minecraft.client.model.object.equipment.ElytraModel elytraBabyModel;
+  private final net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer equipmentRenderer;
+  public net.minecraft.client.renderer.entity.layers.WingsLayer(net.minecraft.client.renderer.entity.RenderLayerParent<S, M>, net.minecraft.client.model.geom.EntityModelSet, net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, S, float, float);
+  private static net.minecraft.resources.Identifier getPlayerElytraTexture(net.minecraft.client.renderer.entity.state.HumanoidRenderState);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+}
+Compiled from "WitchItemLayer.java"
+public class net.minecraft.client.renderer.entity.layers.WitchItemLayer extends net.minecraft.client.renderer.entity.layers.CrossedArmsItemLayer<net.minecraft.client.renderer.entity.state.WitchRenderState, net.minecraft.client.model.monster.witch.WitchModel> {
+  public net.minecraft.client.renderer.entity.layers.WitchItemLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.WitchRenderState, net.minecraft.client.model.monster.witch.WitchModel>);
+  protected void applyTranslation(net.minecraft.client.renderer.entity.state.WitchRenderState, com.mojang.blaze3d.vertex.PoseStack);
+  protected void applyTranslation(net.minecraft.client.renderer.entity.state.HoldingEntityRenderState, com.mojang.blaze3d.vertex.PoseStack);
+}
+Compiled from "WitherArmorLayer.java"
+public class net.minecraft.client.renderer.entity.layers.WitherArmorLayer extends net.minecraft.client.renderer.entity.layers.EnergySwirlLayer<net.minecraft.client.renderer.entity.state.WitherRenderState, net.minecraft.client.model.monster.wither.WitherBossModel> {
+  private static final net.minecraft.resources.Identifier WITHER_ARMOR_LOCATION;
+  private final net.minecraft.client.model.monster.wither.WitherBossModel model;
+  public net.minecraft.client.renderer.entity.layers.WitherArmorLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.WitherRenderState, net.minecraft.client.model.monster.wither.WitherBossModel>, net.minecraft.client.model.geom.EntityModelSet);
+  protected boolean isPowered(net.minecraft.client.renderer.entity.state.WitherRenderState);
+  protected float xOffset(float);
+  protected net.minecraft.resources.Identifier getTextureLocation();
+  protected net.minecraft.client.model.monster.wither.WitherBossModel model();
+  protected net.minecraft.client.model.EntityModel model();
+  protected boolean isPowered(net.minecraft.client.renderer.entity.state.EntityRenderState);
+  static {};
+}
+Compiled from "WolfArmorLayer.java"
+public class net.minecraft.client.renderer.entity.layers.WolfArmorLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.WolfRenderState, net.minecraft.client.model.animal.wolf.WolfModel> {
+  private final net.minecraft.client.model.animal.wolf.WolfModel adultModel;
+  private final net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer equipmentRenderer;
+  private static final java.util.Map<net.minecraft.world.entity.Crackiness$Level, net.minecraft.resources.Identifier> ARMOR_CRACK_LOCATIONS;
+  public net.minecraft.client.renderer.entity.layers.WolfArmorLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.WolfRenderState, net.minecraft.client.model.animal.wolf.WolfModel>, net.minecraft.client.model.geom.EntityModelSet, net.minecraft.client.renderer.entity.layers.EquipmentLayerRenderer);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.WolfRenderState, float, float);
+  private void maybeRenderCracks(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.world.item.ItemStack, net.minecraft.client.model.Model<net.minecraft.client.renderer.entity.state.WolfRenderState>, net.minecraft.client.renderer.entity.state.WolfRenderState);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  static {};
+}
+Compiled from "WolfCollarLayer.java"
+public class net.minecraft.client.renderer.entity.layers.WolfCollarLayer extends net.minecraft.client.renderer.entity.layers.RenderLayer<net.minecraft.client.renderer.entity.state.WolfRenderState, net.minecraft.client.model.animal.wolf.WolfModel> {
+  private static final net.minecraft.resources.Identifier WOLF_COLLAR_LOCATION;
+  private static final net.minecraft.resources.Identifier WOLF_BABY_COLLAR_LOCATION;
+  public net.minecraft.client.renderer.entity.layers.WolfCollarLayer(net.minecraft.client.renderer.entity.RenderLayerParent<net.minecraft.client.renderer.entity.state.WolfRenderState, net.minecraft.client.model.animal.wolf.WolfModel>);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.WolfRenderState, float, float);
+  public void submit(com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector, int, net.minecraft.client.renderer.entity.state.EntityRenderState, float, float);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.renderer.entity.layers.package-info {
+}

@@ -1,0 +1,21 @@
+Compiled from "ModPackResources.java"
+public interface net.fabricmc.fabric.api.resource.v1.pack.ModPackResources extends net.minecraft.server.packs.PackResources {
+  public abstract net.fabricmc.loader.api.metadata.ModMetadata getFabricModMetadata();
+  public abstract net.fabricmc.fabric.api.resource.v1.pack.ModPackResources createOverlay(java.lang.String);
+}
+Compiled from "PackActivationType.java"
+public final class net.fabricmc.fabric.api.resource.v1.pack.PackActivationType extends java.lang.Enum<net.fabricmc.fabric.api.resource.v1.pack.PackActivationType> {
+  public static final net.fabricmc.fabric.api.resource.v1.pack.PackActivationType NORMAL;
+  public static final net.fabricmc.fabric.api.resource.v1.pack.PackActivationType DEFAULT_ENABLED;
+  public static final net.fabricmc.fabric.api.resource.v1.pack.PackActivationType ALWAYS_ENABLED;
+  private static final net.fabricmc.fabric.api.resource.v1.pack.PackActivationType[] $VALUES;
+  public static net.fabricmc.fabric.api.resource.v1.pack.PackActivationType[] values();
+  public static net.fabricmc.fabric.api.resource.v1.pack.PackActivationType valueOf(java.lang.String);
+  private net.fabricmc.fabric.api.resource.v1.pack.PackActivationType();
+  public boolean isEnabledByDefault();
+  private static net.fabricmc.fabric.api.resource.v1.pack.PackActivationType[] $values();
+  static {};
+}
+Compiled from "package-info.java"
+interface net.fabricmc.fabric.api.resource.v1.pack.package-info {
+}

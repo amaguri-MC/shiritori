@@ -1,0 +1,49 @@
+Compiled from "ResourceReloaderKeys.java"
+public final class net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys$Client {
+  public static final net.minecraft.resources.Identifier BLOCK_ENTITY_RENDER_DISPATCHER;
+  public static final net.minecraft.resources.Identifier CLOUD_RENDERER;
+  public static final net.minecraft.resources.Identifier EQUIPMENT_ASSETS;
+  public static final net.minecraft.resources.Identifier ENTITY_RENDER_DISPATCHER;
+  public static final net.minecraft.resources.Identifier DRY_FOLIAGE_COLOR;
+  public static final net.minecraft.resources.Identifier FOLIAGE_COLOR;
+  public static final net.minecraft.resources.Identifier FONTS;
+  public static final net.minecraft.resources.Identifier GRASS_COLOR;
+  public static final net.minecraft.resources.Identifier ATLAS;
+  public static final net.minecraft.resources.Identifier LANGUAGES;
+  public static final net.minecraft.resources.Identifier MODELS;
+  public static final net.minecraft.resources.Identifier PARTICLES;
+  public static final net.minecraft.resources.Identifier SHADERS;
+  public static final net.minecraft.resources.Identifier SOUNDS;
+  public static final net.minecraft.resources.Identifier SPLASH_TEXTS;
+  public static final net.minecraft.resources.Identifier TEXTURES;
+  public static final net.minecraft.resources.Identifier WAYPOINT_STYLE;
+  private net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys$Client();
+  static {};
+}
+Compiled from "ResourceReloaderKeys.java"
+public final class net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys$Server {
+  public static final net.minecraft.resources.Identifier ADVANCEMENTS;
+  public static final net.minecraft.resources.Identifier FUNCTIONS;
+  public static final net.minecraft.resources.Identifier RECIPES;
+  private net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys$Server();
+  static {};
+}
+Compiled from "ResourceReloaderKeys.java"
+public final class net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys {
+  public static final net.minecraft.resources.Identifier BEFORE_VANILLA;
+  public static final net.minecraft.resources.Identifier AFTER_VANILLA;
+  private net.fabricmc.fabric.api.resource.v1.reloader.ResourceReloaderKeys();
+  static {};
+}
+Compiled from "SimpleReloadListener.java"
+public abstract class net.fabricmc.fabric.api.resource.v1.reloader.SimpleReloadListener<T> implements net.minecraft.server.packs.resources.PreparableReloadListener {
+  public net.fabricmc.fabric.api.resource.v1.reloader.SimpleReloadListener();
+  public final java.util.concurrent.CompletableFuture<java.lang.Void> reload(net.minecraft.server.packs.resources.PreparableReloadListener$SharedState, java.util.concurrent.Executor, net.minecraft.server.packs.resources.PreparableReloadListener$PreparationBarrier, java.util.concurrent.Executor);
+  protected abstract T prepare(net.minecraft.server.packs.resources.PreparableReloadListener$SharedState);
+  protected abstract void apply(T, net.minecraft.server.packs.resources.PreparableReloadListener$SharedState);
+  private void lambda$reload$1(net.minecraft.server.packs.resources.PreparableReloadListener$SharedState, java.lang.Object);
+  private java.lang.Object lambda$reload$0(net.minecraft.server.packs.resources.PreparableReloadListener$SharedState);
+}
+Compiled from "package-info.java"
+interface net.fabricmc.fabric.api.resource.v1.reloader.package-info {
+}

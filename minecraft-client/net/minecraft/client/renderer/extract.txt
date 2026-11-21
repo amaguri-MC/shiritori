@@ -1,0 +1,52 @@
+Compiled from "LevelExtractor.java"
+public class net.minecraft.client.renderer.extract.LevelExtractor implements net.minecraft.server.packs.resources.ResourceManagerReloadListener {
+  private static final float CHUNK_VISIBILITY_THRESHOLD;
+  private final net.minecraft.client.Minecraft minecraft;
+  private final net.minecraft.client.renderer.LevelRenderer levelRenderer;
+  private net.minecraft.client.multiplayer.ClientLevel level;
+  private net.minecraft.client.SectionUpdateTracker sectionUpdateTracker;
+  private final net.minecraft.client.renderer.state.level.LevelRenderState levelRenderState;
+  public final net.minecraft.client.renderer.debug.DebugRenderer debugRenderer;
+  public final net.minecraft.client.renderer.debug.GameTestBlockHighlightRenderer gameTestBlockHighlightRenderer;
+  private final net.minecraft.gizmos.SimpleGizmoCollector mainThreadGizmos;
+  private double prevCamRotX;
+  private double prevCamRotY;
+  private int lastViewDistance;
+  private boolean shouldInvalidateCompiledGeometry;
+  private boolean shouldResetLevelRenderData;
+  private boolean shouldResetChunkLayerSampler;
+  private boolean shouldResetSkyRenderer;
+  public net.minecraft.client.renderer.extract.LevelExtractor(net.minecraft.client.Minecraft, net.minecraft.client.renderer.state.level.LevelRenderState, net.minecraft.client.renderer.LevelRenderer);
+  public void extract(net.minecraft.client.DeltaTracker, net.minecraft.client.Camera, float);
+  private void extractVisibleEntities(net.minecraft.client.Camera, net.minecraft.client.renderer.culling.Frustum, net.minecraft.client.DeltaTracker, net.minecraft.client.renderer.state.level.LevelRenderState);
+  public boolean isEntityVisible(net.minecraft.world.entity.Entity, net.minecraft.client.renderer.culling.Frustum, double, double, double);
+  private net.minecraft.client.renderer.entity.state.EntityRenderState extractEntity(net.minecraft.world.entity.Entity, float);
+  private void extractVisibleBlockEntities(net.minecraft.client.Camera, float, net.minecraft.client.renderer.state.level.LevelRenderState);
+  private void extractBlockDestroyAnimation(net.minecraft.client.Camera, net.minecraft.client.renderer.state.level.LevelRenderState);
+  private void extractBlockOutline(net.minecraft.client.Camera, net.minecraft.client.renderer.state.level.LevelRenderState);
+  private void extractGizmos();
+  private void applyFrustum(net.minecraft.client.renderer.culling.Frustum);
+  private boolean shouldShowEntityOutlines(net.minecraft.client.Camera);
+  public void onResourceManagerReload(net.minecraft.server.packs.resources.ResourceManager);
+  public void setLevel(net.minecraft.client.multiplayer.ClientLevel);
+  public void allChanged();
+  public void resetSampler();
+  public void blockChanged(net.minecraft.core.BlockPos, int);
+  private void setBlockDirty(net.minecraft.core.BlockPos, boolean);
+  public void setBlocksDirty(int, int, int, int, int, int);
+  public void setBlockDirty(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.BlockState);
+  public void setSectionDirtyWithNeighbors(int, int, int);
+  public void setSectionRangeDirty(int, int, int, int, int, int);
+  public void setSectionDirty(int, int, int);
+  private void setSectionDirty(int, int, int, boolean);
+  public net.minecraft.gizmos.Gizmos$TemporaryCollection collectPerFrameMainThreadGizmos();
+  public int countRenderedSections();
+  public java.lang.String sectionStatistics();
+  public java.lang.String entityStatistics();
+  public double totalSections();
+  public double lastViewDistance();
+  private void lambda$extract$0(net.minecraft.client.multiplayer.ClientChunkCache, long);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.renderer.extract.package-info {
+}

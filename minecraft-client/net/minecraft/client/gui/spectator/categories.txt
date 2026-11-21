@@ -1,0 +1,60 @@
+Compiled from "SpectatorPage.java"
+public class net.minecraft.client.gui.spectator.categories.SpectatorPage {
+  public static final int NO_SELECTION;
+  private final java.util.List<net.minecraft.client.gui.spectator.SpectatorMenuItem> items;
+  private final int selection;
+  public net.minecraft.client.gui.spectator.categories.SpectatorPage(java.util.List<net.minecraft.client.gui.spectator.SpectatorMenuItem>, int);
+  public net.minecraft.client.gui.spectator.SpectatorMenuItem getItem(int);
+  public int getSelectedSlot();
+}
+Compiled from "TeleportToPlayerMenuCategory.java"
+public class net.minecraft.client.gui.spectator.categories.TeleportToPlayerMenuCategory implements net.minecraft.client.gui.spectator.SpectatorMenuCategory,net.minecraft.client.gui.spectator.SpectatorMenuItem {
+  private static final net.minecraft.resources.Identifier TELEPORT_TO_PLAYER_SPRITE;
+  private static final java.util.Comparator<net.minecraft.client.multiplayer.PlayerInfo> PROFILE_ORDER;
+  private static final net.minecraft.network.chat.Component TELEPORT_TEXT;
+  private static final net.minecraft.network.chat.Component TELEPORT_PROMPT;
+  private final java.util.List<net.minecraft.client.gui.spectator.SpectatorMenuItem> items;
+  public net.minecraft.client.gui.spectator.categories.TeleportToPlayerMenuCategory();
+  public net.minecraft.client.gui.spectator.categories.TeleportToPlayerMenuCategory(java.util.Collection<net.minecraft.client.multiplayer.PlayerInfo>);
+  public java.util.List<net.minecraft.client.gui.spectator.SpectatorMenuItem> getItems();
+  public net.minecraft.network.chat.Component getPrompt();
+  public void selectItem(net.minecraft.client.gui.spectator.SpectatorMenu);
+  public net.minecraft.network.chat.Component getName();
+  public void extractIcon(net.minecraft.client.gui.GuiGraphicsExtractor, float, float);
+  public boolean isEnabled();
+  private static boolean lambda$new$0(net.minecraft.client.multiplayer.PlayerInfo);
+  private static java.util.UUID lambda$static$0(net.minecraft.client.multiplayer.PlayerInfo);
+  static {};
+}
+Compiled from "TeleportToTeamMenuCategory.java"
+class net.minecraft.client.gui.spectator.categories.TeleportToTeamMenuCategory$TeamSelectionItem implements net.minecraft.client.gui.spectator.SpectatorMenuItem {
+  private final net.minecraft.world.scores.PlayerTeam team;
+  private final java.util.function.Supplier<net.minecraft.world.entity.player.PlayerSkin> iconSkin;
+  private final java.util.List<net.minecraft.client.multiplayer.PlayerInfo> players;
+  private net.minecraft.client.gui.spectator.categories.TeleportToTeamMenuCategory$TeamSelectionItem(net.minecraft.world.scores.PlayerTeam, java.util.List<net.minecraft.client.multiplayer.PlayerInfo>, java.util.function.Supplier<net.minecraft.world.entity.player.PlayerSkin>);
+  public static java.util.Optional<net.minecraft.client.gui.spectator.SpectatorMenuItem> create(net.minecraft.client.Minecraft, net.minecraft.world.scores.PlayerTeam);
+  public void selectItem(net.minecraft.client.gui.spectator.SpectatorMenu);
+  public net.minecraft.network.chat.Component getName();
+  public void extractIcon(net.minecraft.client.gui.GuiGraphicsExtractor, float, float);
+  public boolean isEnabled();
+}
+Compiled from "TeleportToTeamMenuCategory.java"
+public class net.minecraft.client.gui.spectator.categories.TeleportToTeamMenuCategory implements net.minecraft.client.gui.spectator.SpectatorMenuCategory,net.minecraft.client.gui.spectator.SpectatorMenuItem {
+  private static final net.minecraft.resources.Identifier TELEPORT_TO_TEAM_SPRITE;
+  private static final net.minecraft.network.chat.Component TELEPORT_TEXT;
+  private static final net.minecraft.network.chat.Component TELEPORT_PROMPT;
+  private final java.util.List<net.minecraft.client.gui.spectator.SpectatorMenuItem> items;
+  public net.minecraft.client.gui.spectator.categories.TeleportToTeamMenuCategory();
+  private static java.util.List<net.minecraft.client.gui.spectator.SpectatorMenuItem> createTeamEntries(net.minecraft.client.Minecraft, net.minecraft.world.scores.Scoreboard);
+  public java.util.List<net.minecraft.client.gui.spectator.SpectatorMenuItem> getItems();
+  public net.minecraft.network.chat.Component getPrompt();
+  public void selectItem(net.minecraft.client.gui.spectator.SpectatorMenu);
+  public net.minecraft.network.chat.Component getName();
+  public void extractIcon(net.minecraft.client.gui.GuiGraphicsExtractor, float, float);
+  public boolean isEnabled();
+  private static java.util.stream.Stream lambda$createTeamEntries$0(net.minecraft.client.Minecraft, net.minecraft.world.scores.PlayerTeam);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.gui.spectator.categories.package-info {
+}

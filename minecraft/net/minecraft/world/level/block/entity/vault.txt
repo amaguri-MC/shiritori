@@ -1,0 +1,222 @@
+Compiled from "VaultBlockEntity.java"
+public final class net.minecraft.world.level.block.entity.vault.VaultBlockEntity$Server {
+  private static final int UNLOCKING_DELAY_TICKS;
+  private static final int DISPLAY_CYCLE_TICK_RATE;
+  private static final int INSERT_FAIL_SOUND_BUFFER_TICKS;
+  public net.minecraft.world.level.block.entity.vault.VaultBlockEntity$Server();
+  public static void tick(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultServerData, net.minecraft.world.level.block.entity.vault.VaultSharedData);
+  public static void tryInsertKey(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultServerData, net.minecraft.world.level.block.entity.vault.VaultSharedData, net.minecraft.world.entity.player.Player, net.minecraft.world.item.ItemStack);
+  private static void setVaultState(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultSharedData);
+  static void cycleDisplayItemFromLootTable(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.block.entity.vault.VaultState, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultSharedData, net.minecraft.core.BlockPos);
+  private static net.minecraft.world.item.ItemStack getRandomDisplayItemFromLootTable(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>);
+  private static void unlock(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultServerData, net.minecraft.world.level.block.entity.vault.VaultSharedData, java.util.List<net.minecraft.world.item.ItemStack>);
+  private static java.util.List<net.minecraft.world.item.ItemStack> resolveItemsToEject(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.core.BlockPos, net.minecraft.world.entity.player.Player, net.minecraft.world.item.ItemInstance);
+  private static boolean canEjectReward(net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultState);
+  private static boolean isValidToInsert(net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.item.ItemStack);
+  private static boolean shouldCycleDisplayItem(long, net.minecraft.world.level.block.entity.vault.VaultState);
+  private static void playInsertFailSound(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.block.entity.vault.VaultServerData, net.minecraft.core.BlockPos, net.minecraft.sounds.SoundEvent);
+}
+Compiled from "VaultBlockEntity.java"
+public final class net.minecraft.world.level.block.entity.vault.VaultBlockEntity$Client {
+  private static final int PARTICLE_TICK_RATE;
+  private static final float IDLE_PARTICLE_CHANCE;
+  private static final float AMBIENT_SOUND_CHANCE;
+  private static final int ACTIVATION_PARTICLE_COUNT;
+  private static final int DEACTIVATION_PARTICLE_COUNT;
+  public net.minecraft.world.level.block.entity.vault.VaultBlockEntity$Client();
+  public static void tick(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.entity.vault.VaultClientData, net.minecraft.world.level.block.entity.vault.VaultSharedData);
+  public static void emitActivationParticles(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.entity.vault.VaultSharedData, net.minecraft.core.particles.ParticleOptions);
+  public static void emitDeactivationParticles(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.core.particles.ParticleOptions);
+  private static void emitIdleParticles(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultSharedData, net.minecraft.core.particles.ParticleOptions);
+  private static void emitConnectionParticlesForPlayer(net.minecraft.world.level.Level, net.minecraft.world.phys.Vec3, net.minecraft.world.entity.player.Player);
+  private static void emitConnectionParticlesForNearbyPlayers(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.entity.vault.VaultSharedData);
+  private static boolean isWithinConnectionRange(net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultSharedData, net.minecraft.world.entity.player.Player);
+  private static void playIdleSounds(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultSharedData);
+  public static boolean shouldDisplayActiveEffects(net.minecraft.world.level.block.entity.vault.VaultSharedData);
+  private static net.minecraft.world.phys.Vec3 randomPosCenterOfCage(net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  private static net.minecraft.world.phys.Vec3 randomPosInsideCage(net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  private static net.minecraft.world.phys.Vec3 keyholePos(net.minecraft.core.BlockPos, net.minecraft.core.Direction);
+}
+Compiled from "VaultClientData.java"
+public class net.minecraft.world.level.block.entity.vault.VaultClientData {
+  public static final float ROTATION_SPEED;
+  private float currentSpin;
+  private float previousSpin;
+  public net.minecraft.world.level.block.entity.vault.VaultClientData();
+  public float currentSpin();
+  public float previousSpin();
+  public void updateDisplayItemSpin();
+}
+Compiled from "VaultState.java"
+final class net.minecraft.world.level.block.entity.vault.VaultState$LightLevel extends java.lang.Enum<net.minecraft.world.level.block.entity.vault.VaultState$LightLevel> {
+  public static final net.minecraft.world.level.block.entity.vault.VaultState$LightLevel HALF_LIT;
+  public static final net.minecraft.world.level.block.entity.vault.VaultState$LightLevel LIT;
+  private final int value;
+  private static final net.minecraft.world.level.block.entity.vault.VaultState$LightLevel[] $VALUES;
+  public static net.minecraft.world.level.block.entity.vault.VaultState$LightLevel[] values();
+  public static net.minecraft.world.level.block.entity.vault.VaultState$LightLevel valueOf(java.lang.String);
+  private net.minecraft.world.level.block.entity.vault.VaultState$LightLevel(int);
+  private static net.minecraft.world.level.block.entity.vault.VaultState$LightLevel[] $values();
+  static {};
+}
+Compiled from "VaultState.java"
+final class net.minecraft.world.level.block.entity.vault.VaultState$2 extends net.minecraft.world.level.block.entity.vault.VaultState {
+  private net.minecraft.world.level.block.entity.vault.VaultState$2(java.lang.String, int, java.lang.String, net.minecraft.world.level.block.entity.vault.VaultState$LightLevel);
+  protected void onEnter(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultSharedData, boolean);
+}
+Compiled from "VaultState.java"
+final class net.minecraft.world.level.block.entity.vault.VaultState$4 extends net.minecraft.world.level.block.entity.vault.VaultState {
+  private net.minecraft.world.level.block.entity.vault.VaultState$4(java.lang.String, int, java.lang.String, net.minecraft.world.level.block.entity.vault.VaultState$LightLevel);
+  protected void onEnter(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultSharedData, boolean);
+  protected void onExit(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultSharedData);
+}
+Compiled from "VaultServerData.java"
+public class net.minecraft.world.level.block.entity.vault.VaultServerData {
+  public static final java.lang.String TAG_NAME;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.block.entity.vault.VaultServerData> CODEC;
+  private static final int MAX_REWARD_PLAYERS;
+  private final java.util.Set<java.util.UUID> rewardedPlayers;
+  private long stateUpdatingResumesAt;
+  private final java.util.List<net.minecraft.world.item.ItemStack> itemsToEject;
+  private long lastInsertFailTimestamp;
+  private int totalEjectionsNeeded;
+  boolean isDirty;
+  public net.minecraft.world.level.block.entity.vault.VaultServerData(java.util.Set<java.util.UUID>, long, java.util.List<net.minecraft.world.item.ItemStack>, int);
+  public net.minecraft.world.level.block.entity.vault.VaultServerData();
+  void setLastInsertFailTimestamp(long);
+  long getLastInsertFailTimestamp();
+  java.util.Set<java.util.UUID> getRewardedPlayers();
+  boolean hasRewardedPlayer(net.minecraft.world.entity.player.Player);
+  public void addToRewardedPlayers(net.minecraft.world.entity.player.Player);
+  long stateUpdatingResumesAt();
+  void pauseStateUpdatingUntil(long);
+  java.util.List<net.minecraft.world.item.ItemStack> getItemsToEject();
+  void markEjectionFinished();
+  void setItemsToEject(java.util.List<net.minecraft.world.item.ItemStack>);
+  net.minecraft.world.item.ItemStack getNextItemToEject();
+  net.minecraft.world.item.ItemStack popNextItemToEject();
+  void set(net.minecraft.world.level.block.entity.vault.VaultServerData);
+  private void markChanged();
+  public float ejectionProgress();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Integer lambda$static$4(net.minecraft.world.level.block.entity.vault.VaultServerData);
+  private static java.util.List lambda$static$3(net.minecraft.world.level.block.entity.vault.VaultServerData);
+  private static java.lang.Long lambda$static$2(net.minecraft.world.level.block.entity.vault.VaultServerData);
+  private static java.util.Set lambda$static$1(net.minecraft.world.level.block.entity.vault.VaultServerData);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.level.block.entity.vault.package-info {
+}
+Compiled from "VaultBlockEntity.java"
+public class net.minecraft.world.level.block.entity.vault.VaultBlockEntity extends net.minecraft.world.level.block.entity.BlockEntity {
+  private final net.minecraft.world.level.block.entity.vault.VaultServerData serverData;
+  private final net.minecraft.world.level.block.entity.vault.VaultSharedData sharedData;
+  private final net.minecraft.world.level.block.entity.vault.VaultClientData clientData;
+  private net.minecraft.world.level.block.entity.vault.VaultConfig config;
+  public net.minecraft.world.level.block.entity.vault.VaultBlockEntity(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  public net.minecraft.network.protocol.Packet<net.minecraft.network.protocol.game.ClientGamePacketListener> getUpdatePacket();
+  public net.minecraft.nbt.CompoundTag getUpdateTag(net.minecraft.core.HolderLookup$Provider);
+  protected void saveAdditional(net.minecraft.world.level.storage.ValueOutput);
+  protected void loadAdditional(net.minecraft.world.level.storage.ValueInput);
+  public net.minecraft.world.level.block.entity.vault.VaultServerData getServerData();
+  public net.minecraft.world.level.block.entity.vault.VaultSharedData getSharedData();
+  public net.minecraft.world.level.block.entity.vault.VaultClientData getClientData();
+  public net.minecraft.world.level.block.entity.vault.VaultConfig getConfig();
+  public void setConfig(net.minecraft.world.level.block.entity.vault.VaultConfig);
+  static void access$000(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  private void lambda$getUpdateTag$0(net.minecraft.core.HolderLookup$Provider, net.minecraft.nbt.CompoundTag);
+}
+Compiled from "VaultState.java"
+final class net.minecraft.world.level.block.entity.vault.VaultState$3 extends net.minecraft.world.level.block.entity.vault.VaultState {
+  private net.minecraft.world.level.block.entity.vault.VaultState$3(java.lang.String, int, java.lang.String, net.minecraft.world.level.block.entity.vault.VaultState$LightLevel);
+  protected void onEnter(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultSharedData, boolean);
+}
+Compiled from "VaultState.java"
+final class net.minecraft.world.level.block.entity.vault.VaultState$1 extends net.minecraft.world.level.block.entity.vault.VaultState {
+  private net.minecraft.world.level.block.entity.vault.VaultState$1(java.lang.String, int, java.lang.String, net.minecraft.world.level.block.entity.vault.VaultState$LightLevel);
+  protected void onEnter(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultSharedData, boolean);
+}
+Compiled from "VaultState.java"
+public class net.minecraft.world.level.block.entity.vault.VaultState extends java.lang.Enum<net.minecraft.world.level.block.entity.vault.VaultState> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.world.level.block.entity.vault.VaultState INACTIVE;
+  public static final net.minecraft.world.level.block.entity.vault.VaultState ACTIVE;
+  public static final net.minecraft.world.level.block.entity.vault.VaultState UNLOCKING;
+  public static final net.minecraft.world.level.block.entity.vault.VaultState EJECTING;
+  private static final int UPDATE_CONNECTED_PLAYERS_TICK_RATE;
+  private static final int DELAY_BETWEEN_EJECTIONS_TICKS;
+  private static final int DELAY_AFTER_LAST_EJECTION_TICKS;
+  private static final int DELAY_BEFORE_FIRST_EJECTION_TICKS;
+  private final java.lang.String stateName;
+  private final net.minecraft.world.level.block.entity.vault.VaultState$LightLevel lightLevel;
+  private static final net.minecraft.world.level.block.entity.vault.VaultState[] $VALUES;
+  public static net.minecraft.world.level.block.entity.vault.VaultState[] values();
+  public static net.minecraft.world.level.block.entity.vault.VaultState valueOf(java.lang.String);
+  private net.minecraft.world.level.block.entity.vault.VaultState(java.lang.String, net.minecraft.world.level.block.entity.vault.VaultState$LightLevel);
+  public java.lang.String getSerializedName();
+  public int lightLevel();
+  public net.minecraft.world.level.block.entity.vault.VaultState tickAndGetNext(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultServerData, net.minecraft.world.level.block.entity.vault.VaultSharedData);
+  private static net.minecraft.world.level.block.entity.vault.VaultState updateStateForConnectedPlayers(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultServerData, net.minecraft.world.level.block.entity.vault.VaultSharedData, double);
+  public void onTransition(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultState, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultSharedData, boolean);
+  protected void onEnter(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultSharedData, boolean);
+  protected void onExit(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultConfig, net.minecraft.world.level.block.entity.vault.VaultSharedData);
+  private static void ejectResultItem(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.item.ItemStack, float);
+  private static net.minecraft.world.level.block.entity.vault.VaultState[] $values();
+  static {};
+}
+Compiled from "VaultConfig.java"
+public final class net.minecraft.world.level.block.entity.vault.VaultConfig extends java.lang.Record {
+  private final net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable> lootTable;
+  private final double activationRange;
+  private final double deactivationRange;
+  private final net.minecraft.world.item.ItemStack keyItem;
+  private final java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>> overrideLootTableToDisplay;
+  private final net.minecraft.world.level.block.entity.trialspawner.PlayerDetector playerDetector;
+  private final net.minecraft.world.level.block.entity.trialspawner.PlayerDetector$EntitySelector entitySelector;
+  public static final java.lang.String TAG_NAME;
+  public static final net.minecraft.world.level.block.entity.vault.VaultConfig DEFAULT;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.block.entity.vault.VaultConfig> CODEC;
+  private net.minecraft.world.level.block.entity.vault.VaultConfig();
+  public net.minecraft.world.level.block.entity.vault.VaultConfig(net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, double, double, net.minecraft.world.item.ItemStack, java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>>);
+  public net.minecraft.world.level.block.entity.vault.VaultConfig(net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, double, double, net.minecraft.world.item.ItemStack, java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>>, net.minecraft.world.level.block.entity.trialspawner.PlayerDetector, net.minecraft.world.level.block.entity.trialspawner.PlayerDetector$EntitySelector);
+  public net.minecraft.world.level.block.entity.trialspawner.PlayerDetector playerDetector();
+  private com.mojang.serialization.DataResult<net.minecraft.world.level.block.entity.vault.VaultConfig> validate();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable> lootTable();
+  public double activationRange();
+  public double deactivationRange();
+  public net.minecraft.world.item.ItemStack keyItem();
+  public java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>> overrideLootTableToDisplay();
+  public net.minecraft.world.level.block.entity.trialspawner.PlayerDetector$EntitySelector entitySelector();
+  private java.lang.String lambda$validate$0();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "VaultSharedData.java"
+public class net.minecraft.world.level.block.entity.vault.VaultSharedData {
+  public static final java.lang.String TAG_NAME;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.block.entity.vault.VaultSharedData> CODEC;
+  private net.minecraft.world.item.ItemStack displayItem;
+  private java.util.Set<java.util.UUID> connectedPlayers;
+  private double connectedParticlesRange;
+  boolean isDirty;
+  public net.minecraft.world.level.block.entity.vault.VaultSharedData(net.minecraft.world.item.ItemStack, java.util.Set<java.util.UUID>, double);
+  public net.minecraft.world.level.block.entity.vault.VaultSharedData();
+  public net.minecraft.world.item.ItemStack getDisplayItem();
+  public boolean hasDisplayItem();
+  public void setDisplayItem(net.minecraft.world.item.ItemStack);
+  boolean hasConnectedPlayers();
+  java.util.Set<java.util.UUID> getConnectedPlayers();
+  double connectedParticlesRange();
+  void updateConnectedPlayersWithinRange(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.vault.VaultServerData, net.minecraft.world.level.block.entity.vault.VaultConfig, double);
+  private void markDirty();
+  void set(net.minecraft.world.level.block.entity.vault.VaultSharedData);
+  private static boolean lambda$updateConnectedPlayersWithinRange$0(net.minecraft.world.level.block.entity.vault.VaultServerData, java.util.UUID);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Double lambda$static$3(net.minecraft.world.level.block.entity.vault.VaultSharedData);
+  private static java.util.Set lambda$static$2(net.minecraft.world.level.block.entity.vault.VaultSharedData);
+  private static net.minecraft.world.item.ItemStack lambda$static$1(net.minecraft.world.level.block.entity.vault.VaultSharedData);
+  static {};
+}

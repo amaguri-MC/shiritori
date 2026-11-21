@@ -1,0 +1,63 @@
+Compiled from "WorldPresets.java"
+class net.minecraft.world.level.levelgen.presets.WorldPresets$Bootstrap {
+  private final net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.presets.WorldPreset> context;
+  private final net.minecraft.core.HolderGetter<net.minecraft.world.level.levelgen.NoiseGeneratorSettings> noiseSettings;
+  private final net.minecraft.core.HolderGetter<net.minecraft.world.level.biome.Biome> biomes;
+  private final net.minecraft.core.HolderGetter<net.minecraft.world.level.levelgen.placement.PlacedFeature> placedFeatures;
+  private final net.minecraft.core.HolderGetter<net.minecraft.world.level.levelgen.structure.StructureSet> structureSets;
+  private final net.minecraft.core.HolderGetter<net.minecraft.world.level.biome.MultiNoiseBiomeSourceParameterList> multiNoiseBiomeSourceParameterLists;
+  private final net.minecraft.core.Holder<net.minecraft.world.level.dimension.DimensionType> overworldDimensionType;
+  private final net.minecraft.core.Holder<net.minecraft.world.level.dimension.DimensionType> netherDimensionType;
+  private final net.minecraft.core.Holder<net.minecraft.world.level.dimension.DimensionType> endDimensionType;
+  private final net.minecraft.world.level.dimension.LevelStem netherStem;
+  private final net.minecraft.world.level.dimension.LevelStem endStem;
+  private net.minecraft.world.level.levelgen.presets.WorldPresets$Bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.presets.WorldPreset>);
+  private net.minecraft.world.level.dimension.LevelStem makeOverworld(net.minecraft.world.level.chunk.ChunkGenerator);
+  private net.minecraft.world.level.dimension.LevelStem makeNether(net.minecraft.world.level.chunk.ChunkGenerator);
+  private net.minecraft.world.level.dimension.LevelStem makeEnd(net.minecraft.world.level.chunk.ChunkGenerator);
+  private net.minecraft.world.level.dimension.LevelStem makeNoiseBasedOverworld(net.minecraft.world.level.biome.BiomeSource, net.minecraft.core.Holder<net.minecraft.world.level.levelgen.NoiseGeneratorSettings>);
+  private net.minecraft.world.level.levelgen.presets.WorldPreset createPresetWithCustomOverworld(net.minecraft.world.level.dimension.LevelStem);
+  private void registerCustomOverworldPreset(net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.presets.WorldPreset>, net.minecraft.world.level.dimension.LevelStem);
+  private void registerOverworlds(net.minecraft.world.level.biome.BiomeSource);
+  public void bootstrap();
+  private net.minecraft.world.level.levelgen.flat.FlatLevelGeneratorSettings flatSettingsForBiomeAndLayers(net.minecraft.resources.ResourceKey<net.minecraft.world.level.biome.Biome>, java.util.List<net.minecraft.world.level.levelgen.flat.FlatLayerInfo>);
+  private net.minecraft.world.level.levelgen.presets.WorldPreset createFlatAllDimensionsPreset();
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.level.levelgen.presets.package-info {
+}
+Compiled from "WorldPresets.java"
+public class net.minecraft.world.level.levelgen.presets.WorldPresets {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.presets.WorldPreset> NORMAL;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.presets.WorldPreset> FLAT;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.presets.WorldPreset> FLAT_ALL_DIMENSIONS;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.presets.WorldPreset> LARGE_BIOMES;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.presets.WorldPreset> AMPLIFIED;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.presets.WorldPreset> SINGLE_BIOME_SURFACE;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.presets.WorldPreset> DEBUG;
+  public net.minecraft.world.level.levelgen.presets.WorldPresets();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.level.levelgen.presets.WorldPreset>);
+  private static net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.presets.WorldPreset> register(java.lang.String);
+  public static java.util.Optional<net.minecraft.resources.ResourceKey<net.minecraft.world.level.levelgen.presets.WorldPreset>> fromSettings(net.minecraft.world.level.levelgen.WorldDimensions);
+  public static net.minecraft.world.level.levelgen.WorldDimensions createNormalWorldDimensions(net.minecraft.core.HolderLookup$Provider);
+  public static net.minecraft.world.level.dimension.LevelStem getNormalOverworld(net.minecraft.core.HolderLookup$Provider);
+  public static net.minecraft.world.level.levelgen.WorldDimensions createTestWorldDimensions(net.minecraft.core.HolderLookup$Provider);
+  private static java.util.Optional lambda$fromSettings$0(net.minecraft.world.level.dimension.LevelStem);
+  static {};
+}
+Compiled from "WorldPreset.java"
+public class net.minecraft.world.level.levelgen.presets.WorldPreset {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.presets.WorldPreset> DIRECT_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.core.Holder<net.minecraft.world.level.levelgen.presets.WorldPreset>> CODEC;
+  private final java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.level.dimension.LevelStem>, net.minecraft.world.level.dimension.LevelStem> dimensions;
+  public net.minecraft.world.level.levelgen.presets.WorldPreset(java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.level.dimension.LevelStem>, net.minecraft.world.level.dimension.LevelStem>);
+  private com.google.common.collect.ImmutableMap<net.minecraft.resources.ResourceKey<net.minecraft.world.level.dimension.LevelStem>, net.minecraft.world.level.dimension.LevelStem> dimensionsInOrder();
+  public net.minecraft.world.level.levelgen.WorldDimensions createWorldDimensions();
+  public java.util.Optional<net.minecraft.world.level.dimension.LevelStem> overworld();
+  private static com.mojang.serialization.DataResult<net.minecraft.world.level.levelgen.presets.WorldPreset> requireOverworld(net.minecraft.world.level.levelgen.presets.WorldPreset);
+  private static java.lang.String lambda$requireOverworld$0();
+  private void lambda$dimensionsInOrder$0(com.google.common.collect.ImmutableMap$Builder, net.minecraft.resources.ResourceKey);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.util.Map lambda$static$1(net.minecraft.world.level.levelgen.presets.WorldPreset);
+  static {};
+}

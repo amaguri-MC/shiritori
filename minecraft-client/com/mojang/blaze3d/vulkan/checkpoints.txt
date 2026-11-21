@@ -1,0 +1,135 @@
+Compiled from "AbstractCheckpointStorage.java"
+public final class com.mojang.blaze3d.vulkan.checkpoints.AbstractCheckpointStorage$Checkpoint extends java.lang.Record {
+  private final int id;
+  private final java.lang.String label;
+  private final com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType type;
+  protected com.mojang.blaze3d.vulkan.checkpoints.AbstractCheckpointStorage$Checkpoint(int, java.lang.String, com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int id();
+  public java.lang.String label();
+  public com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType type();
+}
+Compiled from "AbstractCheckpointStorage.java"
+final class com.mojang.blaze3d.vulkan.checkpoints.AbstractCheckpointStorage$Frame extends java.lang.Record {
+  private final java.util.List<com.mojang.blaze3d.vulkan.checkpoints.AbstractCheckpointStorage$Checkpoint> checkpoints;
+  private com.mojang.blaze3d.vulkan.checkpoints.AbstractCheckpointStorage$Frame(java.util.List<com.mojang.blaze3d.vulkan.checkpoints.AbstractCheckpointStorage$Checkpoint>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<com.mojang.blaze3d.vulkan.checkpoints.AbstractCheckpointStorage$Checkpoint> checkpoints();
+}
+Compiled from "AbstractCheckpointStorage.java"
+abstract class com.mojang.blaze3d.vulkan.checkpoints.AbstractCheckpointStorage implements com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointStorage {
+  protected final org.lwjgl.vulkan.VkQueue queue;
+  private final int maxFramesInFlight;
+  private int frame;
+  private final com.mojang.blaze3d.vulkan.checkpoints.AbstractCheckpointStorage$Frame[] checkpointsByFrame;
+  private int nextCheckpointId;
+  protected com.mojang.blaze3d.vulkan.checkpoints.AbstractCheckpointStorage(com.mojang.blaze3d.vulkan.VulkanQueue, int);
+  public void rotate();
+  public void recordCheckpoint(org.lwjgl.vulkan.VkCommandBuffer, com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType, java.util.function.Supplier<java.lang.String>);
+  protected abstract void recordCheckpoint(org.lwjgl.vulkan.VkCommandBuffer, int);
+  protected com.mojang.blaze3d.vulkan.checkpoints.AbstractCheckpointStorage$Checkpoint findCheckpoint(int);
+}
+Compiled from "AmdCheckpointExtension.java"
+class com.mojang.blaze3d.vulkan.checkpoints.AmdCheckpointExtension$AmdCheckpointStorage extends com.mojang.blaze3d.vulkan.checkpoints.AbstractCheckpointStorage implements java.lang.AutoCloseable {
+  private final com.mojang.blaze3d.vulkan.VulkanGpuBuffer buffer;
+  private final com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView mappedView;
+  protected com.mojang.blaze3d.vulkan.checkpoints.AmdCheckpointExtension$AmdCheckpointStorage(com.mojang.blaze3d.vulkan.VulkanDevice, com.mojang.blaze3d.vulkan.VulkanQueue, int);
+  protected void recordCheckpoint(org.lwjgl.vulkan.VkCommandBuffer, int);
+  public com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$QueueCheckpoints retrieveCheckpoints();
+  public void close();
+  private static java.lang.String lambda$new$0();
+}
+Compiled from "AmdCheckpointExtension.java"
+public class com.mojang.blaze3d.vulkan.checkpoints.AmdCheckpointExtension implements com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension {
+  private static final long[] STAGES;
+  private final java.util.List<com.mojang.blaze3d.vulkan.checkpoints.AmdCheckpointExtension$AmdCheckpointStorage> storages;
+  public com.mojang.blaze3d.vulkan.checkpoints.AmdCheckpointExtension();
+  public com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointStorage createStorage(com.mojang.blaze3d.vulkan.VulkanDevice, com.mojang.blaze3d.vulkan.VulkanQueue, int);
+  public java.util.List<com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$QueueCheckpoints> retrieveCheckpoints(boolean);
+  public void close();
+  static {};
+}
+Compiled from "CheckpointExtension.java"
+public interface com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointStorage {
+  public abstract void rotate();
+  public abstract void recordCheckpoint(org.lwjgl.vulkan.VkCommandBuffer, com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType, java.util.function.Supplier<java.lang.String>);
+}
+Compiled from "CheckpointExtension.java"
+public final class com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType extends java.lang.Enum<com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType> {
+  public static final com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType BEGIN_RENDER_PASS;
+  public static final com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType END_RENDER_PASS;
+  private static final com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType[] $VALUES;
+  public static com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType[] values();
+  public static com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType valueOf(java.lang.String);
+  private com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType();
+  private static com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType[] $values();
+  static {};
+}
+Compiled from "CheckpointExtension.java"
+public final class com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$QueueCheckpoints extends java.lang.Record {
+  private final long queue;
+  private final java.util.List<com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$StageCheckpoint> checkpoints;
+  public com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$QueueCheckpoints(long, java.util.List<com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$StageCheckpoint>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public long queue();
+  public java.util.List<com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$StageCheckpoint> checkpoints();
+}
+Compiled from "CheckpointExtension.java"
+public final class com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$StageCheckpoint extends java.lang.Record {
+  private final long stage;
+  private final com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType type;
+  private final java.lang.String label;
+  public com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$StageCheckpoint(long, com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType, java.lang.String);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public long stage();
+  public com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType type();
+  public java.lang.String label();
+}
+Compiled from "CheckpointExtension.java"
+public interface com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension extends java.lang.AutoCloseable {
+  public abstract com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointStorage createStorage(com.mojang.blaze3d.vulkan.VulkanDevice, com.mojang.blaze3d.vulkan.VulkanQueue, int);
+  public abstract java.util.List<com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$QueueCheckpoints> retrieveCheckpoints(boolean);
+  public abstract void close();
+}
+Compiled from "NoopCheckpointExtension.java"
+class com.mojang.blaze3d.vulkan.checkpoints.NoopCheckpointExtension$NoopCheckpointStorage implements com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointStorage {
+  private static final com.mojang.blaze3d.vulkan.checkpoints.NoopCheckpointExtension$NoopCheckpointStorage INSTANCE;
+  private com.mojang.blaze3d.vulkan.checkpoints.NoopCheckpointExtension$NoopCheckpointStorage();
+  public void rotate();
+  public void recordCheckpoint(org.lwjgl.vulkan.VkCommandBuffer, com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointType, java.util.function.Supplier<java.lang.String>);
+  static {};
+}
+Compiled from "NoopCheckpointExtension.java"
+public class com.mojang.blaze3d.vulkan.checkpoints.NoopCheckpointExtension implements com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension {
+  public static final com.mojang.blaze3d.vulkan.checkpoints.NoopCheckpointExtension INSTANCE;
+  public com.mojang.blaze3d.vulkan.checkpoints.NoopCheckpointExtension();
+  public com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointStorage createStorage(com.mojang.blaze3d.vulkan.VulkanDevice, com.mojang.blaze3d.vulkan.VulkanQueue, int);
+  public java.util.List<com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$QueueCheckpoints> retrieveCheckpoints(boolean);
+  public void close();
+  static {};
+}
+Compiled from "NvidiaCheckpointExtension.java"
+class com.mojang.blaze3d.vulkan.checkpoints.NvidiaCheckpointExtension$NvidiaCheckpointStorage extends com.mojang.blaze3d.vulkan.checkpoints.AbstractCheckpointStorage {
+  protected com.mojang.blaze3d.vulkan.checkpoints.NvidiaCheckpointExtension$NvidiaCheckpointStorage(com.mojang.blaze3d.vulkan.VulkanQueue, int);
+  protected void recordCheckpoint(org.lwjgl.vulkan.VkCommandBuffer, int);
+  public com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$QueueCheckpoints retrieveCheckpoints();
+}
+Compiled from "NvidiaCheckpointExtension.java"
+public class com.mojang.blaze3d.vulkan.checkpoints.NvidiaCheckpointExtension implements com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension {
+  private final java.util.List<com.mojang.blaze3d.vulkan.checkpoints.NvidiaCheckpointExtension$NvidiaCheckpointStorage> storages;
+  public com.mojang.blaze3d.vulkan.checkpoints.NvidiaCheckpointExtension();
+  public com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointStorage createStorage(com.mojang.blaze3d.vulkan.VulkanDevice, com.mojang.blaze3d.vulkan.VulkanQueue, int);
+  public java.util.List<com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$QueueCheckpoints> retrieveCheckpoints(boolean);
+  public void close();
+}
+Compiled from "package-info.java"
+interface com.mojang.blaze3d.vulkan.checkpoints.package-info {
+}

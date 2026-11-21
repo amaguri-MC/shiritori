@@ -1,0 +1,25 @@
+Compiled from "SpectatorGui.java"
+public class net.minecraft.client.gui.components.spectator.SpectatorGui implements net.minecraft.client.gui.spectator.SpectatorMenuListener {
+  private static final net.minecraft.resources.Identifier HOTBAR_SPRITE;
+  private static final net.minecraft.resources.Identifier HOTBAR_SELECTION_SPRITE;
+  private static final long FADE_OUT_DELAY;
+  private static final long FADE_OUT_TIME;
+  private final net.minecraft.client.Minecraft minecraft;
+  private long lastSelectionTime;
+  private net.minecraft.client.gui.spectator.SpectatorMenu menu;
+  public net.minecraft.client.gui.components.spectator.SpectatorGui(net.minecraft.client.Minecraft);
+  public void onHotbarSelected(int);
+  private float getHotbarAlpha();
+  public void extractHotbar(net.minecraft.client.gui.GuiGraphicsExtractor);
+  protected void extractPage(net.minecraft.client.gui.GuiGraphicsExtractor, float, int, int, net.minecraft.client.gui.spectator.categories.SpectatorPage);
+  private void extractSlot(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, float, float, net.minecraft.client.gui.spectator.SpectatorMenuItem);
+  public void extractAction(net.minecraft.client.gui.GuiGraphicsExtractor);
+  public void onSpectatorMenuClosed(net.minecraft.client.gui.spectator.SpectatorMenu);
+  public boolean isMenuActive();
+  public void onMouseScrolled(int);
+  public void onHotbarActionKeyPressed();
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.gui.components.spectator.package-info {
+}

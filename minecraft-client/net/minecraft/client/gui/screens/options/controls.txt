@@ -1,0 +1,84 @@
+Compiled from "ControlsScreen.java"
+public class net.minecraft.client.gui.screens.options.controls.ControlsScreen extends net.minecraft.client.gui.screens.options.OptionsSubScreen {
+  private static final net.minecraft.network.chat.Component TITLE;
+  private static net.minecraft.client.OptionInstance<?>[] options(net.minecraft.client.Options);
+  public net.minecraft.client.gui.screens.options.controls.ControlsScreen(net.minecraft.client.gui.screens.Screen, net.minecraft.client.Options);
+  protected void addOptions();
+  private void lambda$addOptions$1(net.minecraft.client.gui.components.Button);
+  private void lambda$addOptions$0(net.minecraft.client.gui.components.Button);
+  static {};
+}
+Compiled from "KeyBindsList.java"
+public class net.minecraft.client.gui.screens.options.controls.KeyBindsList$CategoryEntry extends net.minecraft.client.gui.screens.options.controls.KeyBindsList$Entry {
+  private final net.minecraft.client.gui.components.FocusableTextWidget categoryName;
+  final net.minecraft.client.gui.screens.options.controls.KeyBindsList this$0;
+  public net.minecraft.client.gui.screens.options.controls.KeyBindsList$CategoryEntry(net.minecraft.client.gui.screens.options.controls.KeyBindsList, net.minecraft.client.KeyMapping$Category);
+  public void extractContent(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, boolean, float);
+  public java.util.List<? extends net.minecraft.client.gui.components.events.GuiEventListener> children();
+  public java.util.List<? extends net.minecraft.client.gui.narration.NarratableEntry> narratables();
+  public void refreshEntry();
+}
+Compiled from "KeyBindsList.java"
+public abstract class net.minecraft.client.gui.screens.options.controls.KeyBindsList$Entry extends net.minecraft.client.gui.components.ContainerObjectSelectionList$Entry<net.minecraft.client.gui.screens.options.controls.KeyBindsList$Entry> {
+  public net.minecraft.client.gui.screens.options.controls.KeyBindsList$Entry();
+  public abstract void refreshEntry();
+}
+Compiled from "KeyBindsList.java"
+public class net.minecraft.client.gui.screens.options.controls.KeyBindsList$KeyEntry extends net.minecraft.client.gui.screens.options.controls.KeyBindsList$Entry {
+  private static final net.minecraft.network.chat.Component RESET_BUTTON_TITLE;
+  private static final int PADDING;
+  private final net.minecraft.client.KeyMapping key;
+  private final net.minecraft.network.chat.Component name;
+  private final net.minecraft.client.gui.components.Button changeButton;
+  private final net.minecraft.client.gui.components.Button resetButton;
+  private boolean hasCollision;
+  final net.minecraft.client.gui.screens.options.controls.KeyBindsList this$0;
+  private net.minecraft.client.gui.screens.options.controls.KeyBindsList$KeyEntry(net.minecraft.client.gui.screens.options.controls.KeyBindsList, net.minecraft.client.KeyMapping, net.minecraft.network.chat.Component);
+  public void extractContent(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, boolean, float);
+  public java.util.List<? extends net.minecraft.client.gui.components.events.GuiEventListener> children();
+  public java.util.List<? extends net.minecraft.client.gui.narration.NarratableEntry> narratables();
+  public void refreshEntry();
+  private static net.minecraft.network.chat.MutableComponent lambda$new$3(net.minecraft.network.chat.Component, java.util.function.Supplier);
+  private static void lambda$new$2(net.minecraft.client.KeyMapping, net.minecraft.client.gui.screens.options.controls.KeyBindsList, net.minecraft.client.gui.components.Button);
+  private static net.minecraft.network.chat.MutableComponent lambda$new$1(net.minecraft.client.KeyMapping, net.minecraft.network.chat.Component, java.util.function.Supplier);
+  private static void lambda$new$0(net.minecraft.client.gui.screens.options.controls.KeyBindsList, net.minecraft.client.KeyMapping, net.minecraft.client.gui.components.Button);
+  static {};
+}
+Compiled from "KeyBindsList.java"
+public class net.minecraft.client.gui.screens.options.controls.KeyBindsList extends net.minecraft.client.gui.components.ContainerObjectSelectionList<net.minecraft.client.gui.screens.options.controls.KeyBindsList$Entry> {
+  private static final int ITEM_HEIGHT;
+  private final net.minecraft.client.gui.screens.options.controls.KeyBindsScreen keyBindsScreen;
+  private int maxNameWidth;
+  public net.minecraft.client.gui.screens.options.controls.KeyBindsList(net.minecraft.client.gui.screens.options.controls.KeyBindsScreen, net.minecraft.client.Minecraft);
+  public void resetMappingAndUpdateButtons();
+  public void refreshEntries();
+  public int getRowWidth();
+  static net.minecraft.client.Minecraft access$000(net.minecraft.client.gui.screens.options.controls.KeyBindsList);
+  static int access$100(net.minecraft.client.gui.screens.options.controls.KeyBindsList);
+  static int access$200(net.minecraft.client.gui.screens.options.controls.KeyBindsList);
+  static net.minecraft.client.Minecraft access$300(net.minecraft.client.gui.screens.options.controls.KeyBindsList);
+  static net.minecraft.client.Minecraft access$400(net.minecraft.client.gui.screens.options.controls.KeyBindsList);
+  static net.minecraft.client.Minecraft access$500(net.minecraft.client.gui.screens.options.controls.KeyBindsList);
+}
+Compiled from "KeyBindsScreen.java"
+public class net.minecraft.client.gui.screens.options.controls.KeyBindsScreen extends net.minecraft.client.gui.screens.options.OptionsSubScreen {
+  private static final net.minecraft.network.chat.Component TITLE;
+  public net.minecraft.client.KeyMapping selectedKey;
+  public long lastKeySelection;
+  private net.minecraft.client.gui.screens.options.controls.KeyBindsList keyBindsList;
+  private net.minecraft.client.gui.components.Button resetButton;
+  public net.minecraft.client.gui.screens.options.controls.KeyBindsScreen(net.minecraft.client.gui.screens.Screen, net.minecraft.client.Options);
+  protected void addContents();
+  protected void addOptions();
+  protected void addFooter();
+  protected void repositionElements();
+  public boolean mouseClicked(net.minecraft.client.input.MouseButtonEvent, boolean);
+  public boolean keyPressed(net.minecraft.client.input.KeyEvent);
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, float);
+  private void lambda$addFooter$1(net.minecraft.client.gui.components.Button);
+  private void lambda$addFooter$0(net.minecraft.client.gui.components.Button);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.gui.screens.options.controls.package-info {
+}

@@ -1,0 +1,13 @@
+Compiled from "MaterialRuleList.java"
+public final class net.minecraft.world.level.levelgen.material.MaterialRuleList extends java.lang.Record implements net.minecraft.world.level.levelgen.NoiseChunk$BlockStateFiller {
+  private final net.minecraft.world.level.levelgen.NoiseChunk$BlockStateFiller[] materialRuleList;
+  public net.minecraft.world.level.levelgen.material.MaterialRuleList(net.minecraft.world.level.levelgen.NoiseChunk$BlockStateFiller[]);
+  public net.minecraft.world.level.block.state.BlockState calculate(net.minecraft.world.level.levelgen.DensityFunction$FunctionContext);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.levelgen.NoiseChunk$BlockStateFiller[] materialRuleList();
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.level.levelgen.material.package-info {
+}

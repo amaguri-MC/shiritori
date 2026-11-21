@@ -1,0 +1,597 @@
+Compiled from "LightningBoltPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.LightningBoltPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.advancements.predicates.MinMaxBounds$Ints blocksSetOnFire;
+  private final java.util.Optional<net.minecraft.advancements.predicates.entity.EntityPredicate> entityStruck;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.LightningBoltPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.LightningBoltPredicate(net.minecraft.advancements.predicates.MinMaxBounds$Ints, java.util.Optional<net.minecraft.advancements.predicates.entity.EntityPredicate>);
+  public static net.minecraft.advancements.predicates.entity.LightningBoltPredicate blockSetOnFire(net.minecraft.advancements.predicates.MinMaxBounds$Ints);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.advancements.predicates.MinMaxBounds$Ints blocksSetOnFire();
+  public java.util.Optional<net.minecraft.advancements.predicates.entity.EntityPredicate> entityStruck();
+  private boolean lambda$matches$0(net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3, net.minecraft.world.entity.Entity);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "EntityFlagsPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.EntityFlagsPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final java.util.Optional<java.lang.Boolean> isOnGround;
+  private final java.util.Optional<java.lang.Boolean> isOnFire;
+  private final java.util.Optional<java.lang.Boolean> isCrouching;
+  private final java.util.Optional<java.lang.Boolean> isSprinting;
+  private final java.util.Optional<java.lang.Boolean> isSwimming;
+  private final java.util.Optional<java.lang.Boolean> isFlying;
+  private final java.util.Optional<java.lang.Boolean> isBaby;
+  private final java.util.Optional<java.lang.Boolean> isInWater;
+  private final java.util.Optional<java.lang.Boolean> isFallFlying;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.EntityFlagsPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.EntityFlagsPredicate(java.util.Optional<java.lang.Boolean>, java.util.Optional<java.lang.Boolean>, java.util.Optional<java.lang.Boolean>, java.util.Optional<java.lang.Boolean>, java.util.Optional<java.lang.Boolean>, java.util.Optional<java.lang.Boolean>, java.util.Optional<java.lang.Boolean>, java.util.Optional<java.lang.Boolean>, java.util.Optional<java.lang.Boolean>);
+  public boolean matches(net.minecraft.world.entity.Entity);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Optional<java.lang.Boolean> isOnGround();
+  public java.util.Optional<java.lang.Boolean> isOnFire();
+  public java.util.Optional<java.lang.Boolean> isCrouching();
+  public java.util.Optional<java.lang.Boolean> isSprinting();
+  public java.util.Optional<java.lang.Boolean> isSwimming();
+  public java.util.Optional<java.lang.Boolean> isFlying();
+  public java.util.Optional<java.lang.Boolean> isBaby();
+  public java.util.Optional<java.lang.Boolean> isInWater();
+  public java.util.Optional<java.lang.Boolean> isFallFlying();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "EntitySubPredicate.java"
+public interface net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  public static final net.minecraft.advancements.predicates.entity.EntitySubPredicate ALWAYS_TRUE;
+  public abstract boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public default net.minecraft.advancements.predicates.entity.EntitySubPredicate and(net.minecraft.advancements.predicates.entity.EntitySubPredicate);
+  private boolean lambda$and$0(net.minecraft.advancements.predicates.entity.EntitySubPredicate, net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  private static boolean lambda$static$0(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  static {};
+}
+Compiled from "EntityTagPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.EntityTagPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final java.util.Optional<java.util.List<java.lang.String>> anyOf;
+  private final java.util.Optional<java.util.List<java.lang.String>> allOf;
+  private final java.util.Optional<java.util.List<java.lang.String>> noneOf;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.EntityTagPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.EntityTagPredicate(java.util.Optional<java.util.List<java.lang.String>>, java.util.Optional<java.util.List<java.lang.String>>, java.util.Optional<java.util.List<java.lang.String>>);
+  public boolean matches(java.util.Set<java.lang.String>);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  private static boolean containsAtLeastOne(java.util.Set<java.lang.String>, java.util.List<java.lang.String>);
+  private static boolean containsAllOf(java.util.Set<java.lang.String>, java.util.List<java.lang.String>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Optional<java.util.List<java.lang.String>> anyOf();
+  public java.util.Optional<java.util.List<java.lang.String>> allOf();
+  public java.util.Optional<java.util.List<java.lang.String>> noneOf();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "EntitySlotsPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.EntitySlotsPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.advancements.predicates.SlotsPredicate slots;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.EntitySlotsPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.EntitySlotsPredicate(net.minecraft.advancements.predicates.SlotsPredicate);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.advancements.predicates.SlotsPredicate slots();
+  static {};
+}
+Compiled from "EntityPartialComponentsPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.EntityPartialComponentsPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final java.util.Map<net.minecraft.core.component.predicates.DataComponentPredicate$Type<?>, net.minecraft.core.component.predicates.DataComponentPredicate> predicates;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.EntityPartialComponentsPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.EntityPartialComponentsPredicate(java.util.Map<net.minecraft.core.component.predicates.DataComponentPredicate$Type<?>, net.minecraft.core.component.predicates.DataComponentPredicate>);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Map<net.minecraft.core.component.predicates.DataComponentPredicate$Type<?>, net.minecraft.core.component.predicates.DataComponentPredicate> predicates();
+  static {};
+}
+Compiled from "PlayerPredicate.java"
+final class net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementDonePredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementPredicate {
+  private final boolean state;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementDonePredicate> CODEC;
+  private net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementDonePredicate(boolean);
+  public boolean test(net.minecraft.advancements.AdvancementProgress);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public boolean state();
+  public boolean test(java.lang.Object);
+  static {};
+}
+Compiled from "RaiderPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.RaiderPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final boolean hasRaid;
+  private final boolean isCaptain;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.RaiderPredicate> CODEC;
+  public static final net.minecraft.advancements.predicates.entity.RaiderPredicate CAPTAIN_WITHOUT_RAID;
+  public net.minecraft.advancements.predicates.entity.RaiderPredicate(boolean, boolean);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public boolean hasRaid();
+  public boolean isCaptain();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "SheepPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.SheepPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final java.util.Optional<java.lang.Boolean> sheared;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.SheepPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.SheepPredicate(java.util.Optional<java.lang.Boolean>);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public static net.minecraft.advancements.predicates.entity.SheepPredicate hasWool();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Optional<java.lang.Boolean> sheared();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "EntityExactDataComponentsPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.EntityExactDataComponentsPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.core.component.DataComponentExactPredicate predicate;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.EntityExactDataComponentsPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.EntityExactDataComponentsPredicate(net.minecraft.core.component.DataComponentExactPredicate);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.component.DataComponentExactPredicate predicate();
+  static {};
+}
+Compiled from "PassengerPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.PassengerPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.advancements.predicates.entity.EntityPredicate passenger;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.PassengerPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.PassengerPredicate(net.minecraft.advancements.predicates.entity.EntityPredicate);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate passenger();
+  static {};
+}
+Compiled from "EntityTypePredicate.java"
+public final class net.minecraft.advancements.predicates.entity.EntityTypePredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.core.HolderSet<net.minecraft.world.entity.EntityType<?>> types;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.EntityTypePredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.EntityTypePredicate(net.minecraft.core.HolderSet<net.minecraft.world.entity.EntityType<?>>);
+  public static net.minecraft.advancements.predicates.entity.EntityTypePredicate of(net.minecraft.core.HolderGetter<net.minecraft.world.entity.EntityType<?>>, net.minecraft.world.entity.EntityType<?>);
+  public static net.minecraft.advancements.predicates.entity.EntityTypePredicate of(net.minecraft.core.HolderGetter<net.minecraft.world.entity.EntityType<?>>, net.minecraft.tags.TagKey<net.minecraft.world.entity.EntityType<?>>);
+  public boolean matches(net.minecraft.core.Holder<net.minecraft.world.entity.EntityType<?>>);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.HolderSet<net.minecraft.world.entity.EntityType<?>> types();
+  static {};
+}
+Compiled from "EntitySubPredicates.java"
+public class net.minecraft.advancements.predicates.entity.EntitySubPredicates {
+  public net.minecraft.advancements.predicates.entity.EntitySubPredicates();
+  public static com.mojang.serialization.Codec<? extends net.minecraft.advancements.predicates.entity.EntitySubPredicate> bootstrap(net.minecraft.core.Registry<com.mojang.serialization.Codec<? extends net.minecraft.advancements.predicates.entity.EntitySubPredicate>>);
+}
+Compiled from "PeriodicEntityTickPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.PeriodicEntityTickPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final int periodicTick;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.PeriodicEntityTickPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.PeriodicEntityTickPredicate(int);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int periodicTick();
+  static {};
+}
+Compiled from "EntityFlagsPredicate.java"
+public class net.minecraft.advancements.predicates.entity.EntityFlagsPredicate$Builder {
+  private java.util.Optional<java.lang.Boolean> isOnGround;
+  private java.util.Optional<java.lang.Boolean> isOnFire;
+  private java.util.Optional<java.lang.Boolean> isCrouching;
+  private java.util.Optional<java.lang.Boolean> isSprinting;
+  private java.util.Optional<java.lang.Boolean> isSwimming;
+  private java.util.Optional<java.lang.Boolean> isFlying;
+  private java.util.Optional<java.lang.Boolean> isBaby;
+  private java.util.Optional<java.lang.Boolean> isInWater;
+  private java.util.Optional<java.lang.Boolean> isFallFlying;
+  public net.minecraft.advancements.predicates.entity.EntityFlagsPredicate$Builder();
+  public static net.minecraft.advancements.predicates.entity.EntityFlagsPredicate$Builder flags();
+  public net.minecraft.advancements.predicates.entity.EntityFlagsPredicate$Builder setOnGround(java.lang.Boolean);
+  public net.minecraft.advancements.predicates.entity.EntityFlagsPredicate$Builder setOnFire(java.lang.Boolean);
+  public net.minecraft.advancements.predicates.entity.EntityFlagsPredicate$Builder setCrouching(java.lang.Boolean);
+  public net.minecraft.advancements.predicates.entity.EntityFlagsPredicate$Builder setSprinting(java.lang.Boolean);
+  public net.minecraft.advancements.predicates.entity.EntityFlagsPredicate$Builder setSwimming(java.lang.Boolean);
+  public net.minecraft.advancements.predicates.entity.EntityFlagsPredicate$Builder setIsFlying(java.lang.Boolean);
+  public net.minecraft.advancements.predicates.entity.EntityFlagsPredicate$Builder setIsBaby(java.lang.Boolean);
+  public net.minecraft.advancements.predicates.entity.EntityFlagsPredicate$Builder setIsInWater(java.lang.Boolean);
+  public net.minecraft.advancements.predicates.entity.EntityFlagsPredicate$Builder setIsFallFlying(java.lang.Boolean);
+  public net.minecraft.advancements.predicates.entity.EntityFlagsPredicate build();
+}
+Compiled from "package-info.java"
+interface net.minecraft.advancements.predicates.entity.package-info {
+}
+Compiled from "PlayerPredicate.java"
+public class net.minecraft.advancements.predicates.entity.PlayerPredicate$Builder {
+  private net.minecraft.advancements.predicates.MinMaxBounds$Ints level;
+  private net.minecraft.advancements.predicates.FoodPredicate food;
+  private net.minecraft.advancements.predicates.GameTypePredicate gameType;
+  private final com.google.common.collect.ImmutableList$Builder<net.minecraft.advancements.predicates.entity.PlayerPredicate$StatMatcher<?>> stats;
+  private final it.unimi.dsi.fastutil.objects.Object2BooleanMap<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>> recipes;
+  private final java.util.Map<net.minecraft.resources.Identifier, net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementPredicate> advancements;
+  private java.util.Optional<net.minecraft.advancements.predicates.entity.EntityPredicate> lookingAt;
+  private java.util.Optional<net.minecraft.advancements.predicates.InputPredicate> input;
+  public net.minecraft.advancements.predicates.entity.PlayerPredicate$Builder();
+  public static net.minecraft.advancements.predicates.entity.PlayerPredicate$Builder player();
+  public net.minecraft.advancements.predicates.entity.PlayerPredicate$Builder setLevel(net.minecraft.advancements.predicates.MinMaxBounds$Ints);
+  public net.minecraft.advancements.predicates.entity.PlayerPredicate$Builder setFood(net.minecraft.advancements.predicates.FoodPredicate);
+  public <T> net.minecraft.advancements.predicates.entity.PlayerPredicate$Builder addStat(net.minecraft.stats.StatType<T>, net.minecraft.core.Holder$Reference<T>, net.minecraft.advancements.predicates.MinMaxBounds$Ints);
+  public net.minecraft.advancements.predicates.entity.PlayerPredicate$Builder addRecipe(net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>, boolean);
+  public net.minecraft.advancements.predicates.entity.PlayerPredicate$Builder setGameType(net.minecraft.advancements.predicates.GameTypePredicate);
+  public net.minecraft.advancements.predicates.entity.PlayerPredicate$Builder setLookingAt(net.minecraft.advancements.predicates.entity.EntityPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.PlayerPredicate$Builder checkAdvancementDone(net.minecraft.resources.Identifier, boolean);
+  public net.minecraft.advancements.predicates.entity.PlayerPredicate$Builder checkAdvancementCriterions(net.minecraft.resources.Identifier, java.util.Map<java.lang.String, java.lang.Boolean>);
+  public net.minecraft.advancements.predicates.entity.PlayerPredicate$Builder hasInput(net.minecraft.advancements.predicates.InputPredicate);
+  public net.minecraft.advancements.predicates.entity.PlayerPredicate build();
+}
+Compiled from "FishingHookPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.FishingHookPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final java.util.Optional<java.lang.Boolean> inOpenWater;
+  public static final net.minecraft.advancements.predicates.entity.FishingHookPredicate ANY;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.FishingHookPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.FishingHookPredicate(java.util.Optional<java.lang.Boolean>);
+  public static net.minecraft.advancements.predicates.entity.FishingHookPredicate inOpenWater(boolean);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Optional<java.lang.Boolean> inOpenWater();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "PlayerPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.PlayerPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.advancements.predicates.MinMaxBounds$Ints level;
+  private final net.minecraft.advancements.predicates.FoodPredicate food;
+  private final net.minecraft.advancements.predicates.GameTypePredicate gameType;
+  private final java.util.List<net.minecraft.advancements.predicates.entity.PlayerPredicate$StatMatcher<?>> stats;
+  private final it.unimi.dsi.fastutil.objects.Object2BooleanMap<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>> recipes;
+  private final java.util.Map<net.minecraft.resources.Identifier, net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementPredicate> advancements;
+  private final java.util.Optional<net.minecraft.advancements.predicates.entity.EntityPredicate> lookingAt;
+  private final java.util.Optional<net.minecraft.advancements.predicates.InputPredicate> input;
+  public static final int LOOKING_AT_RANGE;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.PlayerPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.PlayerPredicate(net.minecraft.advancements.predicates.MinMaxBounds$Ints, net.minecraft.advancements.predicates.FoodPredicate, net.minecraft.advancements.predicates.GameTypePredicate, java.util.List<net.minecraft.advancements.predicates.entity.PlayerPredicate$StatMatcher<?>>, it.unimi.dsi.fastutil.objects.Object2BooleanMap<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>>, java.util.Map<net.minecraft.resources.Identifier, net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementPredicate>, java.util.Optional<net.minecraft.advancements.predicates.entity.EntityPredicate>, java.util.Optional<net.minecraft.advancements.predicates.InputPredicate>);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.advancements.predicates.MinMaxBounds$Ints level();
+  public net.minecraft.advancements.predicates.FoodPredicate food();
+  public net.minecraft.advancements.predicates.GameTypePredicate gameType();
+  public java.util.List<net.minecraft.advancements.predicates.entity.PlayerPredicate$StatMatcher<?>> stats();
+  public it.unimi.dsi.fastutil.objects.Object2BooleanMap<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>> recipes();
+  public java.util.Map<net.minecraft.resources.Identifier, net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementPredicate> advancements();
+  public java.util.Optional<net.minecraft.advancements.predicates.entity.EntityPredicate> lookingAt();
+  public java.util.Optional<net.minecraft.advancements.predicates.InputPredicate> input();
+  private static boolean lambda$matches$0(net.minecraft.world.entity.Entity);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "EntityEquipmentPredicate.java"
+public class net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate$Builder {
+  private java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> head;
+  private java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> chest;
+  private java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> legs;
+  private java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> feet;
+  private java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> body;
+  private java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> mainhand;
+  private java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> offhand;
+  public net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate$Builder();
+  public static net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate$Builder equipment();
+  public net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate$Builder head(net.minecraft.advancements.predicates.ItemPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate$Builder chest(net.minecraft.advancements.predicates.ItemPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate$Builder legs(net.minecraft.advancements.predicates.ItemPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate$Builder feet(net.minecraft.advancements.predicates.ItemPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate$Builder body(net.minecraft.advancements.predicates.ItemPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate$Builder mainhand(net.minecraft.advancements.predicates.ItemPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate$Builder offhand(net.minecraft.advancements.predicates.ItemPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate build();
+}
+Compiled from "EntityPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.EntityPredicate {
+  private static final com.mojang.serialization.Codec<java.util.Map<com.mojang.serialization.Codec<? extends net.minecraft.advancements.predicates.entity.EntitySubPredicate>, net.minecraft.advancements.predicates.entity.EntitySubPredicate>> MAP_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.EntityPredicate> CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.ContextAwarePredicate> ADVANCEMENT_CODEC;
+  private static final java.util.Comparator<java.util.Map$Entry<com.mojang.serialization.Codec<? extends net.minecraft.advancements.predicates.entity.EntitySubPredicate>, net.minecraft.advancements.predicates.entity.EntitySubPredicate>> PREDICATE_TYPE_ORDER;
+  private final java.util.Map<com.mojang.serialization.Codec<? extends net.minecraft.advancements.predicates.entity.EntitySubPredicate>, net.minecraft.advancements.predicates.entity.EntitySubPredicate> parts;
+  private final net.minecraft.advancements.predicates.entity.EntitySubPredicate combinedPart;
+  public net.minecraft.advancements.predicates.entity.EntityPredicate(java.util.Map<com.mojang.serialization.Codec<? extends net.minecraft.advancements.predicates.entity.EntitySubPredicate>, net.minecraft.advancements.predicates.entity.EntitySubPredicate>);
+  public static net.minecraft.advancements.predicates.ContextAwarePredicate wrap(net.minecraft.advancements.predicates.entity.EntityPredicate$Builder);
+  public static java.util.Optional<net.minecraft.advancements.predicates.ContextAwarePredicate> wrap(java.util.Optional<net.minecraft.advancements.predicates.entity.EntityPredicate>);
+  public static java.util.List<net.minecraft.advancements.predicates.ContextAwarePredicate> wrap(net.minecraft.advancements.predicates.entity.EntityPredicate$Builder...);
+  public static net.minecraft.advancements.predicates.ContextAwarePredicate wrap(net.minecraft.advancements.predicates.entity.EntityPredicate);
+  public boolean matches(net.minecraft.server.level.ServerPlayer, net.minecraft.world.entity.Entity);
+  public boolean matches(net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3, net.minecraft.world.entity.Entity);
+  public static net.minecraft.world.level.storage.loot.LootContext createContext(net.minecraft.server.level.ServerPlayer, net.minecraft.world.entity.Entity);
+  public boolean equals(java.lang.Object);
+  public int hashCode();
+  public java.lang.String toString();
+  private static net.minecraft.advancements.predicates.entity.EntitySubPredicate combine(java.util.Map<com.mojang.serialization.Codec<? extends net.minecraft.advancements.predicates.entity.EntitySubPredicate>, net.minecraft.advancements.predicates.entity.EntitySubPredicate>);
+  private static boolean lambda$combine$1(net.minecraft.advancements.predicates.entity.EntitySubPredicate[], net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  private static net.minecraft.advancements.predicates.entity.EntitySubPredicate[] lambda$combine$0(int);
+  private static java.lang.Integer lambda$static$2(com.mojang.serialization.Codec);
+  private static java.util.Map lambda$static$1(net.minecraft.advancements.predicates.entity.EntityPredicate);
+  private static com.mojang.serialization.Codec lambda$static$0(com.mojang.serialization.Codec);
+  static {};
+}
+Compiled from "VehiclePredicate.java"
+public final class net.minecraft.advancements.predicates.entity.VehiclePredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.advancements.predicates.entity.EntityPredicate vehicle;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.VehiclePredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.VehiclePredicate(net.minecraft.advancements.predicates.entity.EntityPredicate);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate vehicle();
+  static {};
+}
+Compiled from "EntityNbtPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.EntityNbtPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.advancements.predicates.NbtPredicate nbt;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.EntityNbtPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.EntityNbtPredicate(net.minecraft.advancements.predicates.NbtPredicate);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.advancements.predicates.NbtPredicate nbt();
+  static {};
+}
+Compiled from "EntityEquipmentPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> head;
+  private final java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> chest;
+  private final java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> legs;
+  private final java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> feet;
+  private final java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> body;
+  private final java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> mainhand;
+  private final java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> offhand;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate(java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate>, java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate>, java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate>, java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate>, java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate>, java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate>, java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate>);
+  public static net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate captainPredicate(net.minecraft.core.HolderGetter<net.minecraft.world.item.Item>, net.minecraft.core.HolderGetter<net.minecraft.world.level.block.entity.BannerPattern>);
+  public boolean matches(net.minecraft.world.entity.Entity);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> head();
+  public java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> chest();
+  public java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> legs();
+  public java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> feet();
+  public java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> body();
+  public java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> mainhand();
+  public java.util.Optional<net.minecraft.advancements.predicates.ItemPredicate> offhand();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "PlayerPredicate.java"
+final class net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementCriterionsPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementPredicate {
+  private final it.unimi.dsi.fastutil.objects.Object2BooleanMap<java.lang.String> criterions;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementCriterionsPredicate> CODEC;
+  private net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementCriterionsPredicate(it.unimi.dsi.fastutil.objects.Object2BooleanMap<java.lang.String>);
+  public boolean test(net.minecraft.advancements.AdvancementProgress);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public it.unimi.dsi.fastutil.objects.Object2BooleanMap<java.lang.String> criterions();
+  public boolean test(java.lang.Object);
+  static {};
+}
+Compiled from "SteppingOnPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.SteppingOnPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.advancements.predicates.LocationPredicate predicate;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.SteppingOnPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.SteppingOnPredicate(net.minecraft.advancements.predicates.LocationPredicate);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.advancements.predicates.LocationPredicate predicate();
+  static {};
+}
+Compiled from "EntityEffectsPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.EntityEffectsPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.advancements.predicates.MobEffectsPredicate effects;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.EntityEffectsPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.EntityEffectsPredicate(net.minecraft.advancements.predicates.MobEffectsPredicate);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.advancements.predicates.MobEffectsPredicate effects();
+  static {};
+}
+Compiled from "PlayerPredicate.java"
+final class net.minecraft.advancements.predicates.entity.PlayerPredicate$StatMatcher<T> extends java.lang.Record {
+  private final net.minecraft.stats.StatType<T> type;
+  private final net.minecraft.core.Holder<T> value;
+  private final net.minecraft.advancements.predicates.MinMaxBounds$Ints range;
+  private final java.util.function.Supplier<net.minecraft.stats.Stat<T>> stat;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.PlayerPredicate$StatMatcher<?>> CODEC;
+  public net.minecraft.advancements.predicates.entity.PlayerPredicate$StatMatcher(net.minecraft.stats.StatType<T>, net.minecraft.core.Holder<T>, net.minecraft.advancements.predicates.MinMaxBounds$Ints);
+  private net.minecraft.advancements.predicates.entity.PlayerPredicate$StatMatcher(net.minecraft.stats.StatType<T>, net.minecraft.core.Holder<T>, net.minecraft.advancements.predicates.MinMaxBounds$Ints, java.util.function.Supplier<net.minecraft.stats.Stat<T>>);
+  private static <T> com.mojang.serialization.MapCodec<net.minecraft.advancements.predicates.entity.PlayerPredicate$StatMatcher<T>> createTypedCodec(net.minecraft.stats.StatType<T>);
+  public boolean matches(net.minecraft.stats.StatsCounter);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.stats.StatType<T> type();
+  public net.minecraft.core.Holder<T> value();
+  public net.minecraft.advancements.predicates.MinMaxBounds$Ints range();
+  public java.util.function.Supplier<net.minecraft.stats.Stat<T>> stat();
+  private static net.minecraft.stats.Stat lambda$new$0(net.minecraft.stats.StatType, net.minecraft.core.Holder);
+  private static com.mojang.datafixers.kinds.App lambda$createTypedCodec$0(net.minecraft.stats.StatType, com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.advancements.predicates.entity.PlayerPredicate$StatMatcher lambda$createTypedCodec$1(net.minecraft.stats.StatType, net.minecraft.core.Holder, net.minecraft.advancements.predicates.MinMaxBounds$Ints);
+  static {};
+}
+Compiled from "TargetedEntityPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.TargetedEntityPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.advancements.predicates.entity.EntityPredicate targetedEntity;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.TargetedEntityPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.TargetedEntityPredicate(net.minecraft.advancements.predicates.entity.EntityPredicate);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate targetedEntity();
+  static {};
+}
+Compiled from "TeamPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.TeamPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final java.lang.String team;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.TeamPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.TeamPredicate(java.lang.String);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String team();
+  static {};
+}
+Compiled from "EntityPredicate.java"
+public class net.minecraft.advancements.predicates.entity.EntityPredicate$Builder {
+  private final com.google.common.collect.ImmutableMap$Builder<com.mojang.serialization.Codec<? extends net.minecraft.advancements.predicates.entity.EntitySubPredicate>, net.minecraft.advancements.predicates.entity.EntitySubPredicate> parts;
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder();
+  public static net.minecraft.advancements.predicates.entity.EntityPredicate$Builder entity();
+  public <T extends net.minecraft.advancements.predicates.entity.EntitySubPredicate> net.minecraft.advancements.predicates.entity.EntityPredicate$Builder put(com.mojang.serialization.Codec<T>, T);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder of(net.minecraft.core.HolderGetter<net.minecraft.world.entity.EntityType<?>>, net.minecraft.world.entity.EntityType<?>);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder of(net.minecraft.core.HolderGetter<net.minecraft.world.entity.EntityType<?>>, net.minecraft.tags.TagKey<net.minecraft.world.entity.EntityType<?>>);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder entityType(net.minecraft.advancements.predicates.entity.EntityTypePredicate);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder distance(net.minecraft.advancements.predicates.DistancePredicate);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder moving(net.minecraft.advancements.predicates.entity.MovementPredicate);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder located(net.minecraft.advancements.predicates.LocationPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder steppingOn(net.minecraft.advancements.predicates.LocationPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder movementAffectedBy(net.minecraft.advancements.predicates.LocationPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder effects(net.minecraft.advancements.predicates.MobEffectsPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder nbt(net.minecraft.advancements.predicates.NbtPredicate);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder flags(net.minecraft.advancements.predicates.entity.EntityFlagsPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder equipment(net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder equipment(net.minecraft.advancements.predicates.entity.EntityEquipmentPredicate);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder periodicTick(int);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder vehicle(net.minecraft.advancements.predicates.entity.EntityPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder passenger(net.minecraft.advancements.predicates.entity.EntityPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder targetedEntity(net.minecraft.advancements.predicates.entity.EntityPredicate$Builder);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder team(java.lang.String);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder slots(net.minecraft.advancements.predicates.SlotsPredicate);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder components(net.minecraft.advancements.predicates.DataComponentMatchers);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder components(net.minecraft.core.component.DataComponentExactPredicate);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder components(java.util.Map<net.minecraft.core.component.predicates.DataComponentPredicate$Type<?>, net.minecraft.core.component.predicates.DataComponentPredicate>);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder lightingBolt(net.minecraft.advancements.predicates.entity.LightningBoltPredicate);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder player(net.minecraft.advancements.predicates.entity.PlayerPredicate);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder sheep(net.minecraft.advancements.predicates.entity.SheepPredicate);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder cubeMob(net.minecraft.advancements.predicates.entity.CubeMobPredicate);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder raider(net.minecraft.advancements.predicates.entity.RaiderPredicate);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate$Builder fishingHook(net.minecraft.advancements.predicates.entity.FishingHookPredicate);
+  public net.minecraft.advancements.predicates.entity.EntityPredicate build();
+}
+Compiled from "MovementAffectedByPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.MovementAffectedByPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.advancements.predicates.LocationPredicate predicate;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.MovementAffectedByPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.MovementAffectedByPredicate(net.minecraft.advancements.predicates.LocationPredicate);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.advancements.predicates.LocationPredicate predicate();
+  static {};
+}
+Compiled from "MovementPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.MovementPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.advancements.predicates.MinMaxBounds$Doubles x;
+  private final net.minecraft.advancements.predicates.MinMaxBounds$Doubles y;
+  private final net.minecraft.advancements.predicates.MinMaxBounds$Doubles z;
+  private final net.minecraft.advancements.predicates.MinMaxBounds$Doubles speed;
+  private final net.minecraft.advancements.predicates.MinMaxBounds$Doubles horizontalSpeed;
+  private final net.minecraft.advancements.predicates.MinMaxBounds$Doubles verticalSpeed;
+  private final net.minecraft.advancements.predicates.MinMaxBounds$Doubles fallDistance;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.MovementPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.MovementPredicate(net.minecraft.advancements.predicates.MinMaxBounds$Doubles, net.minecraft.advancements.predicates.MinMaxBounds$Doubles, net.minecraft.advancements.predicates.MinMaxBounds$Doubles, net.minecraft.advancements.predicates.MinMaxBounds$Doubles, net.minecraft.advancements.predicates.MinMaxBounds$Doubles, net.minecraft.advancements.predicates.MinMaxBounds$Doubles, net.minecraft.advancements.predicates.MinMaxBounds$Doubles);
+  public static net.minecraft.advancements.predicates.entity.MovementPredicate speed(net.minecraft.advancements.predicates.MinMaxBounds$Doubles);
+  public static net.minecraft.advancements.predicates.entity.MovementPredicate horizontalSpeed(net.minecraft.advancements.predicates.MinMaxBounds$Doubles);
+  public static net.minecraft.advancements.predicates.entity.MovementPredicate verticalSpeed(net.minecraft.advancements.predicates.MinMaxBounds$Doubles);
+  public static net.minecraft.advancements.predicates.entity.MovementPredicate fallDistance(net.minecraft.advancements.predicates.MinMaxBounds$Doubles);
+  public boolean matches(double, double, double, double);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.advancements.predicates.MinMaxBounds$Doubles x();
+  public net.minecraft.advancements.predicates.MinMaxBounds$Doubles y();
+  public net.minecraft.advancements.predicates.MinMaxBounds$Doubles z();
+  public net.minecraft.advancements.predicates.MinMaxBounds$Doubles speed();
+  public net.minecraft.advancements.predicates.MinMaxBounds$Doubles horizontalSpeed();
+  public net.minecraft.advancements.predicates.MinMaxBounds$Doubles verticalSpeed();
+  public net.minecraft.advancements.predicates.MinMaxBounds$Doubles fallDistance();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "EntityLocationPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.EntityLocationPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.advancements.predicates.LocationPredicate predicate;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.EntityLocationPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.EntityLocationPredicate(net.minecraft.advancements.predicates.LocationPredicate);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.advancements.predicates.LocationPredicate predicate();
+  static {};
+}
+Compiled from "PlayerPredicate.java"
+interface net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementPredicate extends java.util.function.Predicate<net.minecraft.advancements.AdvancementProgress> {
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementPredicate> CODEC;
+  private static com.mojang.datafixers.util.Either lambda$static$0(net.minecraft.advancements.predicates.entity.PlayerPredicate$AdvancementPredicate);
+  static {};
+}
+Compiled from "CubeMobPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.CubeMobPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.advancements.predicates.MinMaxBounds$Ints size;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.CubeMobPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.CubeMobPredicate(net.minecraft.advancements.predicates.MinMaxBounds$Ints);
+  public static net.minecraft.advancements.predicates.entity.CubeMobPredicate sized(net.minecraft.advancements.predicates.MinMaxBounds$Ints);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.advancements.predicates.MinMaxBounds$Ints size();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "DistanceToPlayerPredicate.java"
+public final class net.minecraft.advancements.predicates.entity.DistanceToPlayerPredicate extends java.lang.Record implements net.minecraft.advancements.predicates.entity.EntitySubPredicate {
+  private final net.minecraft.advancements.predicates.DistancePredicate distance;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.entity.DistanceToPlayerPredicate> CODEC;
+  public net.minecraft.advancements.predicates.entity.DistanceToPlayerPredicate(net.minecraft.advancements.predicates.DistancePredicate);
+  public boolean matches(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.advancements.predicates.DistancePredicate distance();
+  static {};
+}

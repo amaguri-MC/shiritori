@@ -1,0 +1,737 @@
+Compiled from "Destroyable.java"
+public interface com.mojang.blaze3d.vulkan.Destroyable {
+  public abstract void destroy();
+}
+Compiled from "DestructionQueue.java"
+public interface com.mojang.blaze3d.vulkan.DestructionQueue$Destroyer<T> {
+  public default void begin(int);
+  public abstract void destroy(T);
+  public default void end();
+}
+Compiled from "DestructionQueue.java"
+public class com.mojang.blaze3d.vulkan.DestructionQueue<T> implements java.lang.AutoCloseable {
+  private final com.mojang.blaze3d.vulkan.DestructionQueue$Destroyer<T> destroyCallback;
+  private final it.unimi.dsi.fastutil.objects.ReferenceList<it.unimi.dsi.fastutil.objects.ReferenceArrayList<T>> destructionQueues;
+  private int currentDestructionQueueIndex;
+  public com.mojang.blaze3d.vulkan.DestructionQueue(int, com.mojang.blaze3d.vulkan.DestructionQueue$Destroyer<T>);
+  public void close();
+  public boolean rotate();
+  public void add(T);
+}
+Compiled from "VulkanBackend.java"
+public class com.mojang.blaze3d.vulkan.VulkanBackend implements com.mojang.blaze3d.systems.GpuBackend {
+  private static final org.slf4j.Logger LOGGER;
+  public static final java.util.Set<java.lang.String> REQUIRED_DEVICE_EXTENSIONS;
+  public static final com.mojang.blaze3d.vulkan.init.VulkanPNextStruct VK10_FEATURES_STRUCT;
+  public static final com.mojang.blaze3d.vulkan.init.VulkanPNextStruct VK11_FEATURES_STRUCT;
+  public static final com.mojang.blaze3d.vulkan.init.VulkanPNextStruct VK12_FEATURES_STRUCT;
+  public static final com.mojang.blaze3d.vulkan.init.VulkanPNextStruct SYNC2_FEATURES_STRUCT;
+  public static final com.mojang.blaze3d.vulkan.init.VulkanPNextStruct DYNAMIC_RENDERING_FEATURES_STRUCT;
+  public static final com.mojang.blaze3d.vulkan.init.VulkanPNextStruct VERTEX_ATTRIB_DIVISOR_FEATURES_STRUCT;
+  public static final com.mojang.blaze3d.vulkan.init.VulkanPNextStruct MULTI_DRAW_FEATURES_STRUCT;
+  public static final java.util.Set<com.mojang.blaze3d.vulkan.init.VulkanFeature> REQUIRED_DEVICE_FEATURES;
+  private static final com.mojang.blaze3d.vulkan.init.VulkanFeature MULTI_DRAW_FEATURE;
+  static final boolean $assertionsDisabled;
+  public com.mojang.blaze3d.vulkan.VulkanBackend();
+  public java.lang.String getName();
+  public void setWindowHints();
+  public static com.mojang.blaze3d.systems.BackendCreationException checkBackendAvailable();
+  public void handleWindowCreationErrors(com.mojang.blaze3d.GLFWErrorCapture$Error) throws com.mojang.blaze3d.systems.BackendCreationException;
+  public com.mojang.blaze3d.systems.GpuDevice createDevice(long, com.mojang.blaze3d.shaders.ShaderSource, com.mojang.blaze3d.shaders.GpuDebugOptions, java.lang.Runnable) throws com.mojang.blaze3d.systems.BackendCreationException;
+  private static long createVma(org.lwjgl.vulkan.VkDevice) throws com.mojang.blaze3d.systems.BackendCreationException;
+  private static com.mojang.blaze3d.vulkan.VulkanPhysicalDevice findPhysicalDevice(com.mojang.blaze3d.vulkan.VulkanInstance) throws com.mojang.blaze3d.systems.BackendCreationException;
+  private static boolean deviceMeetsFeatureQueryRequirements(org.lwjgl.vulkan.VkPhysicalDevice);
+  private static boolean isDeviceSuitable(org.lwjgl.vulkan.VkPhysicalDevice) throws com.mojang.blaze3d.systems.BackendCreationException;
+  private static boolean isDeviceDiscrete(org.lwjgl.vulkan.VkPhysicalDevice);
+  private static java.lang.String getDeviceName(org.lwjgl.vulkan.VkPhysicalDevice);
+  private static boolean isFeatureSupported(org.lwjgl.vulkan.VkPhysicalDevice, com.mojang.blaze3d.vulkan.init.VulkanFeature);
+  private static void throwForMissingRequrements(org.lwjgl.vulkan.VkPhysicalDevice) throws com.mojang.blaze3d.systems.BackendCreationException;
+  private static org.lwjgl.vulkan.VkDevice createDevice(java.util.Collection<java.lang.String>, com.mojang.blaze3d.vulkan.VulkanPhysicalDevice, java.util.Set<com.mojang.blaze3d.vulkan.init.VulkanFeature>) throws com.mojang.blaze3d.systems.BackendCreationException;
+  static {};
+}
+Compiled from "VulkanBindGroupLayout.java"
+public final class com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$Entry extends java.lang.Record {
+  private final com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$VulkanBindGroupEntryType type;
+  private final java.lang.String name;
+  private final com.mojang.blaze3d.GpuFormat texelBufferFormat;
+  public com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$Entry(com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$VulkanBindGroupEntryType, java.lang.String, com.mojang.blaze3d.GpuFormat);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$VulkanBindGroupEntryType type();
+  public java.lang.String name();
+  public com.mojang.blaze3d.GpuFormat texelBufferFormat();
+}
+Compiled from "VulkanBindGroupLayout.java"
+public final class com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$VulkanBindGroupEntryType extends java.lang.Enum<com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$VulkanBindGroupEntryType> {
+  public static final com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$VulkanBindGroupEntryType UNIFORM_BUFFER;
+  public static final com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$VulkanBindGroupEntryType SAMPLED_IMAGE;
+  public static final com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$VulkanBindGroupEntryType TEXEL_BUFFER;
+  private static final com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$VulkanBindGroupEntryType[] $VALUES;
+  public static com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$VulkanBindGroupEntryType[] values();
+  public static com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$VulkanBindGroupEntryType valueOf(java.lang.String);
+  private com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$VulkanBindGroupEntryType();
+  private static com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$VulkanBindGroupEntryType[] $values();
+  static {};
+}
+Compiled from "VulkanBindGroupLayout.java"
+public final class com.mojang.blaze3d.vulkan.VulkanBindGroupLayout extends java.lang.Record {
+  private final long handle;
+  private final java.util.List<com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$Entry> entries;
+  public static final com.mojang.blaze3d.vulkan.VulkanBindGroupLayout INVALID_LAYOUT;
+  public com.mojang.blaze3d.vulkan.VulkanBindGroupLayout(long, java.util.List<com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$Entry>);
+  public static com.mojang.blaze3d.vulkan.VulkanBindGroupLayout create(com.mojang.blaze3d.vulkan.VulkanDevice, java.util.List<com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$Entry>, java.lang.String);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public long handle();
+  public java.util.List<com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$Entry> entries();
+  static {};
+}
+Compiled from "VulkanCommandEncoder.java"
+class com.mojang.blaze3d.vulkan.VulkanCommandEncoder$1 implements com.mojang.blaze3d.buffers.GpuFence {
+  private final long submitIndex;
+  private boolean completed;
+  final com.mojang.blaze3d.vulkan.VulkanCommandEncoder this$0;
+  com.mojang.blaze3d.vulkan.VulkanCommandEncoder$1(com.mojang.blaze3d.vulkan.VulkanCommandEncoder);
+  public boolean awaitCompletion(long);
+  public void close();
+}
+Compiled from "VulkanCommandEncoder.java"
+public class com.mojang.blaze3d.vulkan.VulkanCommandEncoder implements com.mojang.blaze3d.systems.CommandEncoderBackend,com.mojang.blaze3d.vulkan.Destroyable {
+  public static final int MAX_SUBMITS_IN_FLIGHT;
+  private final com.mojang.blaze3d.vulkan.VulkanDevice device;
+  private final com.mojang.blaze3d.vulkan.VulkanTransientMemory transientMemory;
+  private final long submitSemaphore;
+  private long currentSubmitIndex;
+  private long completedSubmitIndex;
+  private final com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointStorage checkpointStorage;
+  private com.mojang.blaze3d.vulkan.VulkanQueue$Submission submissionBuilder;
+  private final com.mojang.blaze3d.vulkan.DestructionQueue<com.mojang.blaze3d.vulkan.Destroyable> destroyQueue;
+  private final com.mojang.blaze3d.vulkan.VulkanCommandPool[] commandPools;
+  private org.lwjgl.vulkan.VkCommandBuffer currentCommandBuffer;
+  private com.mojang.blaze3d.vulkan.VulkanRenderPass currentRenderPass;
+  static final boolean $assertionsDisabled;
+  public com.mojang.blaze3d.vulkan.VulkanCommandEncoder(com.mojang.blaze3d.vulkan.VulkanDevice);
+  public void destroy();
+  public void queueForDestroy(com.mojang.blaze3d.vulkan.Destroyable);
+  private com.mojang.blaze3d.vulkan.VulkanCommandPool currentCommandPool();
+  public org.lwjgl.vulkan.VkCommandBuffer allocateAndBeginTransientCommandBuffer();
+  private org.lwjgl.vulkan.VkCommandBuffer commandBuffer();
+  org.lwjgl.vulkan.VkCommandBuffer textureInitCommandBuffer();
+  private void endCommandBuffer();
+  public void waitSemaphore(long, long, long);
+  public void execute(org.lwjgl.vulkan.VkCommandBuffer);
+  public void signalSemaphore(long, long, long);
+  private void memoryBarrier(org.lwjgl.system.MemoryStack);
+  public static void memoryBarrier(org.lwjgl.vulkan.VkCommandBuffer, org.lwjgl.system.MemoryStack);
+  public void submit();
+  public com.mojang.blaze3d.systems.TransientMemory transientMemory();
+  public com.mojang.blaze3d.systems.RenderPassBackend createRenderPass(com.mojang.blaze3d.systems.RenderPassDescriptor);
+  public void submitRenderPass();
+  private void clearColorTextureUnsynced(org.lwjgl.system.MemoryStack, com.mojang.blaze3d.textures.GpuTexture, org.joml.Vector4fc);
+  public void clearDepthTextureUnsynced(org.lwjgl.system.MemoryStack, com.mojang.blaze3d.textures.GpuTexture, double);
+  public void clearColorTexture(com.mojang.blaze3d.textures.GpuTexture, org.joml.Vector4fc);
+  public void clearColorAndDepthTextures(com.mojang.blaze3d.textures.GpuTexture, org.joml.Vector4fc, com.mojang.blaze3d.textures.GpuTexture, double);
+  public void clearColorAndDepthTextures(com.mojang.blaze3d.textures.GpuTexture, org.joml.Vector4fc, com.mojang.blaze3d.textures.GpuTexture, double, int, int, int, int);
+  public void clearDepthTexture(com.mojang.blaze3d.textures.GpuTexture, double);
+  public void writeToBuffer(com.mojang.blaze3d.buffers.GpuBufferSlice, java.nio.ByteBuffer);
+  public void copyToBuffer(com.mojang.blaze3d.buffers.GpuBufferSlice, com.mojang.blaze3d.buffers.GpuBufferSlice);
+  public void writeToTexture(com.mojang.blaze3d.textures.GpuTexture, java.nio.ByteBuffer, int, int, int, int, int, int);
+  public void copyBufferToTexture(com.mojang.blaze3d.buffers.GpuBufferSlice, int, int, int, int, com.mojang.blaze3d.textures.GpuTexture, int, int, int, int, int, int);
+  public void copyTextureToBuffer(com.mojang.blaze3d.textures.GpuTexture, com.mojang.blaze3d.buffers.GpuBuffer, long, java.lang.Runnable, int);
+  public void copyTextureToBuffer(com.mojang.blaze3d.textures.GpuTexture, com.mojang.blaze3d.buffers.GpuBuffer, long, java.lang.Runnable, int, int, int, int, int);
+  public void copyTextureToTexture(com.mojang.blaze3d.textures.GpuTexture, com.mojang.blaze3d.textures.GpuTexture, int, int, int, int, int, int, int);
+  private boolean awaitSubmitCompletion(long, long);
+  public com.mojang.blaze3d.buffers.GpuFence createFence();
+  public void writeTimestamp(com.mojang.blaze3d.systems.GpuQueryPool, int);
+  public long getTimestampNow();
+  private static java.lang.String lambda$clearColorAndDepthTextures$0();
+  static {};
+}
+Compiled from "VulkanCommandPool.java"
+public class com.mojang.blaze3d.vulkan.VulkanCommandPool implements com.mojang.blaze3d.vulkan.Destroyable {
+  private static final int BUFFER_ALLOC_COUNT;
+  private static final int HANDLE_BUFFER_BLOCK_SIZE;
+  private final com.mojang.blaze3d.vulkan.VulkanDevice device;
+  private final long commandPool;
+  private org.lwjgl.PointerBuffer allocatedBuffers;
+  public com.mojang.blaze3d.vulkan.VulkanCommandPool(com.mojang.blaze3d.vulkan.VulkanDevice, com.mojang.blaze3d.vulkan.VulkanQueue);
+  public void destroy();
+  public void release();
+  public void reset();
+  private void allocateMoreBuffers();
+  public org.lwjgl.vulkan.VkCommandBuffer allocateBuffer();
+}
+Compiled from "VulkanConst.java"
+class com.mojang.blaze3d.vulkan.VulkanConst$1 {
+  static final int[] $SwitchMap$com$mojang$blaze3d$textures$AddressMode;
+  static final int[] $SwitchMap$com$mojang$blaze3d$textures$FilterMode;
+  static final int[] $SwitchMap$com$mojang$blaze3d$GpuFormat;
+  static final int[] $SwitchMap$com$mojang$blaze3d$platform$BlendFactor;
+  static final int[] $SwitchMap$com$mojang$blaze3d$platform$BlendOp;
+  static final int[] $SwitchMap$com$mojang$blaze3d$platform$CompareOp;
+  static final int[] $SwitchMap$com$mojang$blaze3d$platform$PolygonMode;
+  static final int[] $SwitchMap$com$mojang$blaze3d$PrimitiveTopology;
+  static final int[] $SwitchMap$com$mojang$blaze3d$systems$GpuSurface$PresentMode;
+  static {};
+}
+Compiled from "VulkanConst.java"
+public final class com.mojang.blaze3d.vulkan.VulkanConst {
+  public com.mojang.blaze3d.vulkan.VulkanConst();
+  public static int textureUsageToVk(int, com.mojang.blaze3d.GpuFormat);
+  public static int bufferUsageToVk(int);
+  public static int formatAspectMask(com.mojang.blaze3d.GpuFormat);
+  public static int toVk(com.mojang.blaze3d.textures.AddressMode);
+  public static int toVk(com.mojang.blaze3d.textures.FilterMode);
+  public static int toVk(com.mojang.blaze3d.GpuFormat);
+  public static int toVk(com.mojang.blaze3d.platform.BlendFactor);
+  public static int toVk(com.mojang.blaze3d.platform.BlendOp);
+  public static int toVk(com.mojang.blaze3d.platform.CompareOp);
+  public static int toVk(com.mojang.blaze3d.platform.PolygonMode);
+  public static int toVk(com.mojang.blaze3d.PrimitiveTopology);
+  public static int toVk(com.mojang.blaze3d.pipeline.ColorTargetState);
+  public static int toVk(com.mojang.blaze3d.systems.GpuSurface$PresentMode);
+}
+Compiled from "VulkanDebug.java"
+public class com.mojang.blaze3d.vulkan.VulkanDebug$Disabled implements com.mojang.blaze3d.vulkan.VulkanDebug {
+  public com.mojang.blaze3d.vulkan.VulkanDebug$Disabled();
+  public void chainCreateInfo(org.lwjgl.vulkan.VkInstanceCreateInfo, org.lwjgl.system.MemoryStack);
+  public void setup(org.lwjgl.vulkan.VkInstance);
+  public void setObjectName(org.lwjgl.vulkan.VkDevice, int, long, java.lang.String);
+  public void setObjectName(org.lwjgl.vulkan.VkDevice, int, long, java.util.function.Supplier<java.lang.String>);
+  public void beginDebugGroup(org.lwjgl.vulkan.VkCommandBuffer, java.util.function.Supplier<java.lang.String>);
+  public void endDebugGroup(org.lwjgl.vulkan.VkCommandBuffer);
+  public void destroy(org.lwjgl.vulkan.VkInstance);
+  public boolean enabled();
+}
+Compiled from "VulkanDebug.java"
+public class com.mojang.blaze3d.vulkan.VulkanDebug$Enabled implements com.mojang.blaze3d.vulkan.VulkanDebug {
+  private static final java.lang.StackWalker STACK_WALKER;
+  private static final org.slf4j.Logger LOGGER;
+  public static final int MESSAGE_TYPE_BITMASK;
+  private static final int[] DEBUG_LEVELS;
+  private final boolean wantsDebugLabels;
+  private long messenger;
+  private final int severityBitmask;
+  public com.mojang.blaze3d.vulkan.VulkanDebug$Enabled(int, boolean);
+  public void chainCreateInfo(org.lwjgl.vulkan.VkInstanceCreateInfo, org.lwjgl.system.MemoryStack);
+  public void setup(org.lwjgl.vulkan.VkInstance);
+  public void setObjectName(org.lwjgl.vulkan.VkDevice, int, long, java.lang.String);
+  public void setObjectName(org.lwjgl.vulkan.VkDevice, int, long, java.util.function.Supplier<java.lang.String>);
+  private int onDebugMessage(int, int, long, long);
+  public void beginDebugGroup(org.lwjgl.vulkan.VkCommandBuffer, java.util.function.Supplier<java.lang.String>);
+  public void endDebugGroup(org.lwjgl.vulkan.VkCommandBuffer);
+  public void destroy(org.lwjgl.vulkan.VkInstance);
+  public boolean enabled();
+  private static java.lang.String lambda$onDebugMessage$0(java.util.stream.Stream);
+  private static java.lang.String lambda$onDebugMessage$2(java.lang.StackWalker$StackFrame);
+  private static boolean lambda$onDebugMessage$1(java.lang.StackWalker$StackFrame);
+  static {};
+}
+Compiled from "VulkanDebug.java"
+public interface com.mojang.blaze3d.vulkan.VulkanDebug {
+  public static com.mojang.blaze3d.vulkan.VulkanDebug create(int, boolean, java.util.Set<java.lang.String>, java.util.Set<java.lang.String>);
+  public abstract void chainCreateInfo(org.lwjgl.vulkan.VkInstanceCreateInfo, org.lwjgl.system.MemoryStack);
+  public abstract void setup(org.lwjgl.vulkan.VkInstance);
+  public abstract void setObjectName(org.lwjgl.vulkan.VkDevice, int, long, java.lang.String);
+  public abstract void setObjectName(org.lwjgl.vulkan.VkDevice, int, long, java.util.function.Supplier<java.lang.String>);
+  public abstract void beginDebugGroup(org.lwjgl.vulkan.VkCommandBuffer, java.util.function.Supplier<java.lang.String>);
+  public abstract void endDebugGroup(org.lwjgl.vulkan.VkCommandBuffer);
+  public abstract void destroy(org.lwjgl.vulkan.VkInstance);
+  public abstract boolean enabled();
+}
+Compiled from "VulkanDevice.java"
+final class com.mojang.blaze3d.vulkan.VulkanDevice$ShaderCompilationKey extends java.lang.Record {
+  private final net.minecraft.resources.Identifier id;
+  private final com.mojang.blaze3d.shaders.ShaderType type;
+  private final net.minecraft.client.renderer.ShaderDefines defines;
+  private com.mojang.blaze3d.vulkan.VulkanDevice$ShaderCompilationKey(net.minecraft.resources.Identifier, com.mojang.blaze3d.shaders.ShaderType, net.minecraft.client.renderer.ShaderDefines);
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier id();
+  public com.mojang.blaze3d.shaders.ShaderType type();
+  public net.minecraft.client.renderer.ShaderDefines defines();
+}
+Compiled from "VulkanDevice.java"
+public class com.mojang.blaze3d.vulkan.VulkanDevice implements com.mojang.blaze3d.systems.GpuDeviceBackend {
+  private static final org.slf4j.Logger LOGGER;
+  private final com.mojang.blaze3d.shaders.ShaderSource defaultShaderSource;
+  private final java.util.Map<com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.vulkan.VulkanRenderPipeline> pipelineCache;
+  private final java.util.Map<com.mojang.blaze3d.vulkan.VulkanDevice$ShaderCompilationKey, com.mojang.blaze3d.vulkan.glsl.IntermediaryShaderModule> shaderCache;
+  private final com.mojang.blaze3d.vulkan.VulkanInstance instance;
+  private final org.lwjgl.vulkan.VkDevice vkDevice;
+  private final long vma;
+  private final com.mojang.blaze3d.vulkan.glsl.GlslCompiler glslCompiler;
+  private final com.mojang.blaze3d.systems.DeviceInfo deviceInfo;
+  private final com.mojang.blaze3d.vulkan.VulkanQueue graphicsQueue;
+  private final com.mojang.blaze3d.vulkan.VulkanQueue computeQueue;
+  private final com.mojang.blaze3d.vulkan.VulkanQueue transferQueue;
+  private final boolean isIntegratedIntelMoltenVK;
+  private final com.mojang.blaze3d.vulkan.VulkanCommandEncoder commandEncoder;
+  private final com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension checkpointExtension;
+  static final boolean $assertionsDisabled;
+  public com.mojang.blaze3d.vulkan.VulkanDevice(com.mojang.blaze3d.shaders.ShaderSource, com.mojang.blaze3d.vulkan.VulkanInstance, com.mojang.blaze3d.vulkan.VulkanPhysicalDevice, java.util.Set<java.lang.String>, org.lwjgl.vulkan.VkDevice, long, com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension);
+  public void close();
+  public com.mojang.blaze3d.systems.DeviceInfo getDeviceInfo();
+  public com.mojang.blaze3d.vulkan.VulkanInstance instance();
+  public org.lwjgl.vulkan.VkDevice vkDevice();
+  public com.mojang.blaze3d.vulkan.VulkanQueue graphicsQueue();
+  public com.mojang.blaze3d.vulkan.VulkanQueue computeQueue();
+  public com.mojang.blaze3d.vulkan.VulkanQueue transferQueue();
+  public long vma();
+  public com.mojang.blaze3d.systems.GpuSurfaceBackend createSurface(long);
+  public com.mojang.blaze3d.vulkan.VulkanCommandEncoder createCommandEncoder();
+  public com.mojang.blaze3d.textures.GpuSampler createSampler(com.mojang.blaze3d.textures.AddressMode, com.mojang.blaze3d.textures.AddressMode, com.mojang.blaze3d.textures.FilterMode, com.mojang.blaze3d.textures.FilterMode, int, java.util.OptionalDouble);
+  public com.mojang.blaze3d.textures.GpuTexture createTexture(java.util.function.Supplier<java.lang.String>, int, com.mojang.blaze3d.GpuFormat, int, int, int, int);
+  public com.mojang.blaze3d.textures.GpuTexture createTexture(java.lang.String, int, com.mojang.blaze3d.GpuFormat, int, int, int, int);
+  public com.mojang.blaze3d.textures.GpuTextureView createTextureView(com.mojang.blaze3d.textures.GpuTexture);
+  public com.mojang.blaze3d.textures.GpuTextureView createTextureView(com.mojang.blaze3d.textures.GpuTexture, int, int);
+  public com.mojang.blaze3d.vulkan.VulkanGpuBuffer createBuffer(java.util.function.Supplier<java.lang.String>, int, long);
+  public com.mojang.blaze3d.buffers.GpuBuffer createBuffer(java.util.function.Supplier<java.lang.String>, int, java.nio.ByteBuffer);
+  public java.util.List<java.lang.String> getLastDebugMessages();
+  public boolean isDebuggingEnabled();
+  public com.mojang.blaze3d.pipeline.CompiledRenderPipeline precompilePipeline(com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.shaders.ShaderSource);
+  protected com.mojang.blaze3d.vulkan.VulkanRenderPipeline getOrCompilePipeline(com.mojang.blaze3d.pipeline.RenderPipeline);
+  protected com.mojang.blaze3d.vulkan.glsl.IntermediaryShaderModule getOrCompileShader(net.minecraft.resources.Identifier, com.mojang.blaze3d.shaders.ShaderType, net.minecraft.client.renderer.ShaderDefines, com.mojang.blaze3d.shaders.ShaderSource);
+  private com.mojang.blaze3d.vulkan.glsl.IntermediaryShaderModule compileShader(com.mojang.blaze3d.vulkan.VulkanDevice$ShaderCompilationKey, com.mojang.blaze3d.shaders.ShaderSource);
+  private com.mojang.blaze3d.vulkan.VulkanRenderPipeline compilePipeline(com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.shaders.ShaderSource);
+  public void clearPipelineCache();
+  public com.mojang.blaze3d.systems.GpuQueryPool createTimestampQueryPool(int);
+  public long getTimestampNow();
+  public com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension checkpointExtension();
+  public com.mojang.blaze3d.buffers.GpuBuffer createBuffer(java.util.function.Supplier, int, long);
+  public com.mojang.blaze3d.systems.CommandEncoderBackend createCommandEncoder();
+  private com.mojang.blaze3d.vulkan.glsl.IntermediaryShaderModule lambda$getOrCompileShader$0(com.mojang.blaze3d.vulkan.VulkanDevice$ShaderCompilationKey, com.mojang.blaze3d.shaders.ShaderSource, com.mojang.blaze3d.vulkan.VulkanDevice$ShaderCompilationKey);
+  private com.mojang.blaze3d.vulkan.VulkanRenderPipeline lambda$getOrCompilePipeline$0(com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.pipeline.RenderPipeline);
+  private com.mojang.blaze3d.vulkan.VulkanRenderPipeline lambda$precompilePipeline$0(com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.shaders.ShaderSource, com.mojang.blaze3d.pipeline.RenderPipeline);
+  static {};
+}
+Compiled from "VulkanGpuBuffer.java"
+class com.mojang.blaze3d.vulkan.VulkanGpuBuffer$Direct$1 implements java.lang.Runnable {
+  private boolean closed;
+  final com.mojang.blaze3d.vulkan.VulkanGpuBuffer$Direct this$0;
+  com.mojang.blaze3d.vulkan.VulkanGpuBuffer$Direct$1(com.mojang.blaze3d.vulkan.VulkanGpuBuffer$Direct);
+  public void run();
+}
+Compiled from "VulkanGpuBuffer.java"
+public class com.mojang.blaze3d.vulkan.VulkanGpuBuffer$Direct extends com.mojang.blaze3d.vulkan.VulkanGpuBuffer {
+  private boolean closed;
+  protected final com.mojang.blaze3d.vulkan.VulkanDevice device;
+  private final long vmaAllocation;
+  private int mappingRefCount;
+  public com.mojang.blaze3d.vulkan.VulkanGpuBuffer$Direct(com.mojang.blaze3d.vulkan.VulkanDevice, java.util.function.Supplier<java.lang.String>, int, long, boolean);
+  public void destroy();
+  public boolean isClosed();
+  public void close();
+  public com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView map(long, long, boolean, boolean);
+}
+Compiled from "VulkanGpuBuffer.java"
+public abstract class com.mojang.blaze3d.vulkan.VulkanGpuBuffer extends com.mojang.blaze3d.buffers.GpuBuffer implements com.mojang.blaze3d.vulkan.Destroyable {
+  private final long vkBuffer;
+  public com.mojang.blaze3d.vulkan.VulkanGpuBuffer(long, int, long);
+  public long vkBuffer();
+}
+Compiled from "VulkanGpuSampler.java"
+public class com.mojang.blaze3d.vulkan.VulkanGpuSampler extends com.mojang.blaze3d.textures.GpuSampler implements com.mojang.blaze3d.vulkan.Destroyable {
+  private final long vkSampler;
+  private final com.mojang.blaze3d.vulkan.VulkanDevice device;
+  private final com.mojang.blaze3d.textures.AddressMode addressModeU;
+  private final com.mojang.blaze3d.textures.AddressMode addressModeV;
+  private final com.mojang.blaze3d.textures.FilterMode minFilter;
+  private final com.mojang.blaze3d.textures.FilterMode magFilter;
+  private final int maxAnisotropy;
+  private final java.util.OptionalDouble maxLod;
+  private boolean closed;
+  public com.mojang.blaze3d.vulkan.VulkanGpuSampler(com.mojang.blaze3d.vulkan.VulkanDevice, com.mojang.blaze3d.textures.AddressMode, com.mojang.blaze3d.textures.AddressMode, com.mojang.blaze3d.textures.FilterMode, com.mojang.blaze3d.textures.FilterMode, int, java.util.OptionalDouble);
+  public void destroy();
+  public void close();
+  public com.mojang.blaze3d.textures.AddressMode getAddressModeU();
+  public com.mojang.blaze3d.textures.AddressMode getAddressModeV();
+  public com.mojang.blaze3d.textures.FilterMode getMinFilter();
+  public com.mojang.blaze3d.textures.FilterMode getMagFilter();
+  public int getMaxAnisotropy();
+  public java.util.OptionalDouble getMaxLod();
+  public long vkSampler();
+}
+Compiled from "VulkanGpuSurface.java"
+public class com.mojang.blaze3d.vulkan.VulkanGpuSurface implements com.mojang.blaze3d.systems.GpuSurfaceBackend {
+  private static final int NO_CURRENT_IMAGE;
+  private final com.mojang.blaze3d.vulkan.VulkanDevice device;
+  private final org.lwjgl.vulkan.VkQueue presentQueue;
+  private final long surface;
+  private final int swapchainImageFormat;
+  private long swapchain;
+  private int swapchainWidth;
+  private int swapchainHeight;
+  private final it.unimi.dsi.fastutil.longs.LongList swapchainImages;
+  private final long[] acquireSemaphores;
+  private int currentAcquireSemaphore;
+  private long[] presentSemaphores;
+  private int currentImageIndex;
+  private com.mojang.blaze3d.systems.SurfaceException eatenException;
+  private boolean swapchainSuboptimal;
+  private boolean swapchainOutOfDate;
+  private final java.util.Set<com.mojang.blaze3d.systems.GpuSurface$PresentMode> supportedPresentModes;
+  static final boolean $assertionsDisabled;
+  public com.mojang.blaze3d.vulkan.VulkanGpuSurface(com.mojang.blaze3d.vulkan.VulkanDevice, long);
+  private java.util.Set<com.mojang.blaze3d.systems.GpuSurface$PresentMode> convertPresentModes(java.nio.IntBuffer);
+  public java.util.Collection<com.mojang.blaze3d.systems.GpuSurface$PresentMode> supportedPresentModes();
+  public org.lwjgl.vulkan.VkSurfaceFormatKHR pickSwapchainSurfaceFormat(org.lwjgl.vulkan.VkSurfaceFormatKHR$Buffer);
+  public static void throwIfFailure(int, java.lang.String) throws com.mojang.blaze3d.systems.SurfaceException;
+  public void close();
+  private void destroySwapchain();
+  public void configure(com.mojang.blaze3d.systems.GpuSurface$Configuration) throws com.mojang.blaze3d.systems.SurfaceException;
+  public boolean isSuboptimal();
+  public void acquireNextTexture() throws com.mojang.blaze3d.systems.SurfaceException;
+  public void blitFromTexture(com.mojang.blaze3d.systems.CommandEncoderBackend, com.mojang.blaze3d.textures.GpuTextureView);
+  public void present();
+  static {};
+}
+Compiled from "VulkanGpuTexture.java"
+public class com.mojang.blaze3d.vulkan.VulkanGpuTexture extends com.mojang.blaze3d.textures.GpuTexture implements com.mojang.blaze3d.vulkan.Destroyable {
+  private final com.mojang.blaze3d.vulkan.VulkanDevice device;
+  private final long vkImage;
+  private final long vmaAllocation;
+  private boolean closed;
+  private int views;
+  public com.mojang.blaze3d.vulkan.VulkanGpuTexture(com.mojang.blaze3d.vulkan.VulkanDevice, int, java.lang.String, com.mojang.blaze3d.GpuFormat, int, int, int, int);
+  public void destroy();
+  public void close();
+  public boolean isClosed();
+  public void addViews();
+  public void removeViews();
+  public long vkImage();
+}
+Compiled from "VulkanGpuTextureView.java"
+public class com.mojang.blaze3d.vulkan.VulkanGpuTextureView extends com.mojang.blaze3d.textures.GpuTextureView implements com.mojang.blaze3d.vulkan.Destroyable {
+  private final com.mojang.blaze3d.vulkan.VulkanDevice device;
+  private final long vkImageView;
+  private boolean closed;
+  protected com.mojang.blaze3d.vulkan.VulkanGpuTextureView(com.mojang.blaze3d.vulkan.VulkanDevice, com.mojang.blaze3d.vulkan.VulkanGpuTexture, int, int);
+  public void destroy();
+  public void close();
+  public boolean isClosed();
+  public com.mojang.blaze3d.vulkan.VulkanGpuTexture texture();
+  public long vkImageView();
+  public com.mojang.blaze3d.textures.GpuTexture texture();
+}
+Compiled from "VulkanInstance.java"
+public class com.mojang.blaze3d.vulkan.VulkanInstance implements java.lang.AutoCloseable {
+  private static final org.slf4j.Logger LOGGER;
+  private static final java.lang.String APPLICATION_NAME;
+  private static final int APPLICATION_VERSION;
+  private static final java.lang.String ENGINE_NAME;
+  private static final int ENGINE_VERSION;
+  private final java.util.Set<java.lang.String> enabledExtensions;
+  private final org.lwjgl.vulkan.VkInstance vkInstance;
+  private final com.mojang.blaze3d.vulkan.VulkanDebug debug;
+  protected com.mojang.blaze3d.vulkan.VulkanInstance(int, boolean, boolean) throws com.mojang.blaze3d.systems.BackendCreationException;
+  public org.lwjgl.vulkan.VkInstance vkInstance();
+  private java.util.Set<java.lang.String> getSupportedInstanceExtensions() throws com.mojang.blaze3d.systems.BackendCreationException;
+  private java.util.List<java.lang.String> getSupportedValidationLayers() throws com.mojang.blaze3d.systems.BackendCreationException;
+  public void close();
+  public java.util.Set<java.lang.String> getEnabledExtensions();
+  public com.mojang.blaze3d.vulkan.VulkanDebug debug();
+  static {};
+}
+Compiled from "VulkanPhysicalDevice.java"
+public class com.mojang.blaze3d.vulkan.VulkanPhysicalDevice implements java.lang.AutoCloseable {
+  private final org.lwjgl.vulkan.VkPhysicalDevice vkPhysicalDevice;
+  private final org.lwjgl.vulkan.VkExtensionProperties$Buffer vkDeviceExtensions;
+  private final org.lwjgl.vulkan.VkPhysicalDeviceFeatures2 vkPhysicalDeviceFeatures;
+  private final org.lwjgl.vulkan.VkPhysicalDeviceProperties2 vkPhysicalDeviceProperties;
+  private final org.lwjgl.vulkan.VkPhysicalDeviceVulkan11Properties vkPhysicalDeviceVulkan11Properties;
+  private final org.lwjgl.vulkan.VkPhysicalDeviceDriverProperties vkPhysicalDeviceDriverProperties;
+  private final org.lwjgl.vulkan.VkPhysicalDeviceMultiDrawPropertiesEXT vkPhysicalDeviceMultiDrawPropertiesEXT;
+  private final it.unimi.dsi.fastutil.ints.Int2IntMap queueFamilyCreateInfoMap;
+  private final it.unimi.dsi.fastutil.ints.IntIntPair graphicsQueueFamilyAndIndex;
+  private final it.unimi.dsi.fastutil.ints.IntIntPair computeQueueFamilyAndIndex;
+  private final it.unimi.dsi.fastutil.ints.IntIntPair transferQueueFamilyAndIndex;
+  public com.mojang.blaze3d.vulkan.VulkanPhysicalDevice(org.lwjgl.vulkan.VkPhysicalDevice) throws com.mojang.blaze3d.systems.BackendCreationException;
+  public void close();
+  public java.lang.String deviceName();
+  public java.lang.String vendorName();
+  public org.lwjgl.vulkan.VkPhysicalDevice vkPhysicalDevice();
+  public org.lwjgl.vulkan.VkPhysicalDeviceProperties vkPhysicalDeviceProperties();
+  public org.lwjgl.vulkan.VkPhysicalDeviceVulkan11Properties vkPhysicalDeviceVulkan11Properties();
+  public org.lwjgl.vulkan.VkPhysicalDeviceDriverProperties vkPhysicalDeviceDriverProperties();
+  public org.lwjgl.vulkan.VkPhysicalDeviceMultiDrawPropertiesEXT vkPhysicalDeviceMultiDrawPropertiesEXT();
+  public boolean hasDeviceExtension(java.lang.String);
+  public java.util.Set<java.lang.String> getMissingExtensions(java.util.Collection<java.lang.String>);
+  public it.unimi.dsi.fastutil.ints.Int2IntMap queueFamilyCreateInfoMap();
+  public it.unimi.dsi.fastutil.ints.IntIntPair graphicsQueueFamilyAndIndex();
+  public it.unimi.dsi.fastutil.ints.IntIntPair computeQueueFamilyAndIndex();
+  public it.unimi.dsi.fastutil.ints.IntIntPair transferQueueFamilyAndIndex();
+  private static java.lang.String getStandardEncodingVersion(int);
+  public java.lang.String driverInfo();
+  public com.mojang.blaze3d.systems.DeviceType deviceType();
+  private static boolean lambda$hasDeviceExtension$0(java.lang.String, org.lwjgl.vulkan.VkExtensionProperties);
+}
+Compiled from "VulkanQueryPool.java"
+public class com.mojang.blaze3d.vulkan.VulkanQueryPool implements com.mojang.blaze3d.systems.GpuQueryPool,com.mojang.blaze3d.vulkan.Destroyable {
+  private final com.mojang.blaze3d.vulkan.VulkanDevice device;
+  private final int size;
+  private final long vkQueryPool;
+  public com.mojang.blaze3d.vulkan.VulkanQueryPool(com.mojang.blaze3d.vulkan.VulkanDevice, int);
+  public int size();
+  public java.util.OptionalLong getValue(int);
+  public java.util.OptionalLong[] getValues(int, int);
+  protected long vkQueryPool();
+  public void close();
+  public void destroy();
+}
+Compiled from "VulkanQueue.java"
+final class com.mojang.blaze3d.vulkan.VulkanQueue$Submission$SemaphoreOp extends java.lang.Record {
+  private final long vkSemaphore;
+  private final long value;
+  private final long stageMask;
+  private com.mojang.blaze3d.vulkan.VulkanQueue$Submission$SemaphoreOp(long, long, long);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public long vkSemaphore();
+  public long value();
+  public long stageMask();
+}
+Compiled from "VulkanQueue.java"
+final class com.mojang.blaze3d.vulkan.VulkanQueue$Submission$SubmitStage extends java.lang.Record {
+  private final java.util.List<com.mojang.blaze3d.vulkan.VulkanQueue$Submission$SemaphoreOp> waits;
+  private final java.util.List<org.lwjgl.vulkan.VkCommandBuffer> commandBuffers;
+  private final java.util.List<com.mojang.blaze3d.vulkan.VulkanQueue$Submission$SemaphoreOp> signals;
+  public com.mojang.blaze3d.vulkan.VulkanQueue$Submission$SubmitStage();
+  private com.mojang.blaze3d.vulkan.VulkanQueue$Submission$SubmitStage(java.util.List<com.mojang.blaze3d.vulkan.VulkanQueue$Submission$SemaphoreOp>, java.util.List<org.lwjgl.vulkan.VkCommandBuffer>, java.util.List<com.mojang.blaze3d.vulkan.VulkanQueue$Submission$SemaphoreOp>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<com.mojang.blaze3d.vulkan.VulkanQueue$Submission$SemaphoreOp> waits();
+  public java.util.List<org.lwjgl.vulkan.VkCommandBuffer> commandBuffers();
+  public java.util.List<com.mojang.blaze3d.vulkan.VulkanQueue$Submission$SemaphoreOp> signals();
+}
+Compiled from "VulkanQueue.java"
+public class com.mojang.blaze3d.vulkan.VulkanQueue$Submission implements java.lang.AutoCloseable {
+  private boolean closed;
+  private final it.unimi.dsi.fastutil.objects.ReferenceArrayList<com.mojang.blaze3d.vulkan.VulkanQueue$Submission$SubmitStage> stages;
+  final com.mojang.blaze3d.vulkan.VulkanQueue this$0;
+  private com.mojang.blaze3d.vulkan.VulkanQueue$Submission(com.mojang.blaze3d.vulkan.VulkanQueue);
+  public void waitSemaphore(long, long, long);
+  public void executeCommands(org.lwjgl.vulkan.VkCommandBuffer);
+  public void signalSemaphore(long, long, long);
+  public void close();
+}
+Compiled from "VulkanQueue.java"
+public final class com.mojang.blaze3d.vulkan.VulkanQueue extends java.lang.Record {
+  private final org.lwjgl.vulkan.VkQueue vkQueue;
+  private final int queueFamilyIndex;
+  public com.mojang.blaze3d.vulkan.VulkanQueue(com.mojang.blaze3d.vulkan.VulkanDevice, int, int);
+  public com.mojang.blaze3d.vulkan.VulkanQueue(org.lwjgl.vulkan.VkQueue, int);
+  private static long fetchVkQueue(com.mojang.blaze3d.vulkan.VulkanDevice, int, int);
+  public com.mojang.blaze3d.vulkan.VulkanQueue$Submission beginSubmit();
+  public void waitIdle();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public org.lwjgl.vulkan.VkQueue vkQueue();
+  public int queueFamilyIndex();
+}
+Compiled from "VulkanRenderPass.java"
+class com.mojang.blaze3d.vulkan.VulkanRenderPass$1 {
+  static final int[] $SwitchMap$com$mojang$blaze3d$IndexType;
+  static {};
+}
+Compiled from "VulkanRenderPass.java"
+public final class com.mojang.blaze3d.vulkan.VulkanRenderPass$TextureViewAndSampler extends java.lang.Record {
+  private final com.mojang.blaze3d.vulkan.VulkanGpuTextureView view;
+  private final com.mojang.blaze3d.vulkan.VulkanGpuSampler sampler;
+  protected com.mojang.blaze3d.vulkan.VulkanRenderPass$TextureViewAndSampler(com.mojang.blaze3d.vulkan.VulkanGpuTextureView, com.mojang.blaze3d.vulkan.VulkanGpuSampler);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.vulkan.VulkanGpuTextureView view();
+  public com.mojang.blaze3d.vulkan.VulkanGpuSampler sampler();
+}
+Compiled from "VulkanRenderPass.java"
+public class com.mojang.blaze3d.vulkan.VulkanRenderPass implements com.mojang.blaze3d.systems.RenderPassBackend {
+  public static final boolean VALIDATION;
+  private final com.mojang.blaze3d.vulkan.VulkanDevice device;
+  private final com.mojang.blaze3d.vulkan.VulkanCommandEncoder encoder;
+  private final com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointStorage checkpointStorage;
+  private final com.mojang.blaze3d.systems.RenderPass$RenderArea renderArea;
+  private final int outputWidth;
+  private final int outputHeight;
+  private final boolean hasDepth;
+  private final java.util.function.Supplier<java.lang.String> label;
+  protected int pushedDebugGroups;
+  private final org.lwjgl.vulkan.VkCommandBuffer commandBuffer;
+  protected com.mojang.blaze3d.vulkan.VulkanRenderPipeline pipeline;
+  private boolean anyDescriptorDirty;
+  protected final java.util.HashMap<java.lang.String, com.mojang.blaze3d.buffers.GpuBufferSlice> uniforms;
+  protected final java.util.HashMap<java.lang.String, com.mojang.blaze3d.vulkan.VulkanRenderPass$TextureViewAndSampler> textures;
+  static final boolean $assertionsDisabled;
+  public com.mojang.blaze3d.vulkan.VulkanRenderPass(com.mojang.blaze3d.vulkan.VulkanDevice, com.mojang.blaze3d.vulkan.VulkanCommandEncoder, org.lwjgl.vulkan.VkCommandBuffer, com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$CheckpointStorage, com.mojang.blaze3d.systems.RenderPass$RenderArea, int, int, boolean, java.util.function.Supplier<java.lang.String>);
+  private org.lwjgl.vulkan.VkCommandBuffer commandBuffer();
+  public void pushDebugGroup(java.util.function.Supplier<java.lang.String>);
+  public void popDebugGroup();
+  public void setPipeline(com.mojang.blaze3d.pipeline.RenderPipeline);
+  public void bindTexture(java.lang.String, com.mojang.blaze3d.textures.GpuTextureView, com.mojang.blaze3d.textures.GpuSampler);
+  public void setUniform(java.lang.String, com.mojang.blaze3d.buffers.GpuBuffer);
+  public void setUniform(java.lang.String, com.mojang.blaze3d.buffers.GpuBufferSlice);
+  public void enableScissor(int, int, int, int);
+  private static void setScissor(org.lwjgl.system.MemoryStack, org.lwjgl.vulkan.VkCommandBuffer, int, int, int, int);
+  public void disableScissor();
+  public void setVertexBuffer(int, com.mojang.blaze3d.buffers.GpuBufferSlice);
+  public void setIndexBuffer(com.mojang.blaze3d.buffers.GpuBuffer, com.mojang.blaze3d.IndexType);
+  public void drawIndexed(int, int, int, int, int);
+  public void multiDrawIndexed(java.nio.IntBuffer, int, int, int);
+  public void multiDrawIndexed(org.lwjgl.PointerBuffer, java.nio.IntBuffer, java.nio.IntBuffer, int);
+  public void drawIndexedIndirect(com.mojang.blaze3d.buffers.GpuBufferSlice, int);
+  public <T> void drawMultipleIndexed(java.util.Collection<com.mojang.blaze3d.systems.RenderPass$Draw<T>>, com.mojang.blaze3d.buffers.GpuBuffer, com.mojang.blaze3d.IndexType, java.util.Collection<java.lang.String>, T);
+  public void draw(int, int, int, int);
+  public void multiDraw(java.nio.IntBuffer, int, int, int);
+  public void multiDraw(java.nio.IntBuffer, java.nio.IntBuffer, int);
+  public void drawIndirect(com.mojang.blaze3d.buffers.GpuBufferSlice, int);
+  private void pushDescriptors();
+  public void writeTimestamp(com.mojang.blaze3d.systems.GpuQueryPool, int);
+  public java.util.function.Supplier<java.lang.String> getLabel();
+  private void lambda$pushDescriptors$0(long);
+  static {};
+}
+Compiled from "VulkanRenderPipeline.java"
+public final class com.mojang.blaze3d.vulkan.VulkanRenderPipeline extends java.lang.Record implements com.mojang.blaze3d.pipeline.CompiledRenderPipeline,com.mojang.blaze3d.vulkan.Destroyable {
+  private final com.mojang.blaze3d.pipeline.RenderPipeline info;
+  private final com.mojang.blaze3d.vulkan.VulkanDevice device;
+  private final long withDepthPipeline;
+  private final long withoutDepthPipeline;
+  private final long pipelineLayout;
+  private final com.mojang.blaze3d.vulkan.VulkanBindGroupLayout layout;
+  private final long vertexModule;
+  private final long fragmentModule;
+  public static final long INVALID_PIPELINE;
+  public com.mojang.blaze3d.vulkan.VulkanRenderPipeline(com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.vulkan.VulkanDevice, long, long, long, com.mojang.blaze3d.vulkan.VulkanBindGroupLayout, long, long);
+  public boolean isValid();
+  public static com.mojang.blaze3d.vulkan.VulkanRenderPipeline compile(com.mojang.blaze3d.vulkan.VulkanDevice, com.mojang.blaze3d.vulkan.VulkanBindGroupLayout, com.mojang.blaze3d.pipeline.RenderPipeline, long, long);
+  public void destroy();
+  private static void applyBlendInformation(org.lwjgl.vulkan.VkPipelineColorBlendAttachmentState$Buffer, com.mojang.blaze3d.pipeline.BlendFunction);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.pipeline.RenderPipeline info();
+  public com.mojang.blaze3d.vulkan.VulkanDevice device();
+  public long withDepthPipeline();
+  public long withoutDepthPipeline();
+  public long pipelineLayout();
+  public com.mojang.blaze3d.vulkan.VulkanBindGroupLayout layout();
+  public long vertexModule();
+  public long fragmentModule();
+  private static java.lang.String lambda$compile$2(com.mojang.blaze3d.pipeline.RenderPipeline);
+  private static java.lang.String lambda$compile$1(com.mojang.blaze3d.pipeline.RenderPipeline);
+  private static java.lang.String lambda$compile$0(com.mojang.blaze3d.pipeline.RenderPipeline);
+}
+Compiled from "VulkanTransientMemory.java"
+class com.mojang.blaze3d.vulkan.VulkanTransientMemory$TransientGpuBuffer extends com.mojang.blaze3d.vulkan.VulkanGpuBuffer {
+  private boolean closed;
+  private final long bufferSubmitIndex;
+  final com.mojang.blaze3d.vulkan.VulkanTransientMemory this$0;
+  public com.mojang.blaze3d.vulkan.VulkanTransientMemory$TransientGpuBuffer(com.mojang.blaze3d.vulkan.VulkanTransientMemory, long, int, int, long);
+  public void destroy();
+  public com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView map(long, long, boolean, boolean);
+  public boolean isClosed();
+  public void close();
+  public com.mojang.blaze3d.buffers.GpuBufferSlice slice(long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice slice();
+}
+Compiled from "VulkanTransientMemory.java"
+final class com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation extends java.lang.Record {
+  private final long vkBuffer;
+  private final long vmaAllocation;
+  private final long hostPtr;
+  private final long size;
+  private com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation(long, long, long, long);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public long vkBuffer();
+  public long vmaAllocation();
+  public long hostPtr();
+  public long size();
+}
+Compiled from "VulkanTransientMemory.java"
+public class com.mojang.blaze3d.vulkan.VulkanTransientMemory implements com.mojang.blaze3d.systems.TransientMemory,com.mojang.blaze3d.vulkan.Destroyable {
+  private static final long BLOCK_SIZE;
+  private static final long MAX_CPU_ALIGNMENT;
+  private static final long MAX_GPU_ALIGNMENT;
+  private static final int BUFFER_USAGE_BITS;
+  private final com.mojang.blaze3d.vulkan.VulkanDevice device;
+  private final com.mojang.blaze3d.vulkan.VulkanCommandEncoder encoder;
+  private final boolean useDeviceMemoryForMappedGpuStaging;
+  private final com.mojang.blaze3d.util.TransientBlockAllocator<java.lang.Long> cpuBlockAllocator;
+  private final com.mojang.blaze3d.util.TransientBlockAllocator<com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation> stagingBlockAllocator;
+  private final com.mojang.blaze3d.util.TransientBlockAllocator<com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation> gpuBlockAllocator;
+  private final com.mojang.blaze3d.util.TransientBlockAllocator<it.unimi.dsi.fastutil.Pair<com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation, com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation>> gpuMappedBlockAllocator;
+  private long submitIndex;
+  private boolean anyCommandRecorded;
+  private org.lwjgl.vulkan.VkCommandBuffer commandBuffer;
+  static final boolean $assertionsDisabled;
+  com.mojang.blaze3d.vulkan.VulkanTransientMemory(com.mojang.blaze3d.vulkan.VulkanDevice, com.mojang.blaze3d.vulkan.VulkanCommandEncoder);
+  public void destroy();
+  public void beginSubmit();
+  public void endSubmit();
+  private void recordGpuMappedCopy(it.unimi.dsi.fastutil.Pair<com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation, com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation>);
+  private com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation allocateVulkanBlock(long, boolean);
+  private void queueFreeVulkanBlock(com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation);
+  private void freeVulkanBlock(com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation);
+  private it.unimi.dsi.fastutil.Pair<com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation, com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation> allocateGpuMappedVulkanBlock(long);
+  private void freeGpuMappedVulkanBlock(it.unimi.dsi.fastutil.Pair<com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation, com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation>);
+  public java.nio.ByteBuffer allocateCpu(long, long, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView allocateStaging(long, long, int, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice allocateGpu(long, long, int, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView allocateGpuMapped(long, long, int, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice uploadStaging(java.util.List<java.nio.ByteBuffer>, long, int, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice uploadGpu(java.util.List<java.nio.ByteBuffer>, long, int, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice upload(java.util.List<java.nio.ByteBuffer>, long, int, long, long, boolean);
+  public java.util.List<com.mojang.blaze3d.buffers.GpuBufferSlice> multiUploadStaging(java.util.List<java.nio.ByteBuffer>, long, int);
+  public java.util.List<com.mojang.blaze3d.buffers.GpuBufferSlice> multiUploadGpu(java.util.List<java.nio.ByteBuffer>, long, int);
+  public java.util.List<com.mojang.blaze3d.buffers.GpuBufferSlice> multiUpload(java.util.List<java.nio.ByteBuffer>, long, int, boolean);
+  private static java.lang.Integer lambda$multiUpload$0(java.util.List, int);
+  private static void lambda$allocateGpuMapped$0();
+  private static void lambda$allocateStaging$0();
+  private void lambda$queueFreeVulkanBlock$0(com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation);
+  private com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation lambda$new$1(long);
+  private com.mojang.blaze3d.vulkan.VulkanTransientMemory$VulkanAllocation lambda$new$0(long);
+  static {};
+}
+Compiled from "VulkanUtils.java"
+public final class com.mojang.blaze3d.vulkan.VulkanUtils$DeviceUUID extends java.lang.Record {
+  private final int driverID;
+  private final int vendorID;
+  private final int deviceID;
+  public com.mojang.blaze3d.vulkan.VulkanUtils$DeviceUUID(int, int, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int driverID();
+  public int vendorID();
+  public int deviceID();
+}
+Compiled from "VulkanUtils.java"
+public class com.mojang.blaze3d.vulkan.VulkanUtils {
+  public static final java.util.Set<com.mojang.blaze3d.vulkan.VulkanUtils$DeviceUUID> KNOWN_PROBLEMATIC_DEVICES;
+  public com.mojang.blaze3d.vulkan.VulkanUtils();
+  public static void throwIfFailure(int, java.lang.String, com.mojang.blaze3d.systems.BackendCreationException$Reason) throws com.mojang.blaze3d.systems.BackendCreationException;
+  public static void crashIfFailure(com.mojang.blaze3d.vulkan.VulkanDevice, int, java.lang.String);
+  public static java.lang.String formatCheckpoints(java.util.List<com.mojang.blaze3d.vulkan.checkpoints.CheckpointExtension$QueueCheckpoints>);
+  public static java.lang.String pipelineStageToString(long);
+  public static java.lang.String resultToString(int);
+  public static boolean hasAllBits(int, int);
+  public static boolean hasAllBits(long, long);
+  public static boolean hasAnyBit(int, int);
+  public static boolean hasAnyBit(long, long);
+  public static boolean hasNoBit(int, int);
+  public static boolean hasNoBit(long, long);
+  public static org.lwjgl.vulkan.VkClearColorValue putArgb(org.lwjgl.vulkan.VkClearColorValue, org.joml.Vector4fc);
+  static {};
+}
+Compiled from "package-info.java"
+interface com.mojang.blaze3d.vulkan.package-info {
+}

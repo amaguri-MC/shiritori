@@ -1,0 +1,43 @@
+Compiled from "AdultAxolotlModel.java"
+public class net.minecraft.client.model.animal.axolotl.AdultAxolotlModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.AxolotlRenderState> {
+  private static final float SWIMMING_LEG_XROT;
+  private final net.minecraft.client.model.geom.ModelPart tail;
+  private final net.minecraft.client.model.geom.ModelPart leftHindLeg;
+  private final net.minecraft.client.model.geom.ModelPart rightHindLeg;
+  private final net.minecraft.client.model.geom.ModelPart leftFrontLeg;
+  private final net.minecraft.client.model.geom.ModelPart rightFrontLeg;
+  private final net.minecraft.client.model.geom.ModelPart body;
+  private final net.minecraft.client.model.geom.ModelPart head;
+  private final net.minecraft.client.model.geom.ModelPart topGills;
+  private final net.minecraft.client.model.geom.ModelPart leftGills;
+  private final net.minecraft.client.model.geom.ModelPart rightGills;
+  public net.minecraft.client.model.animal.axolotl.AdultAxolotlModel(net.minecraft.client.model.geom.ModelPart);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+  public void setupAnim(net.minecraft.client.renderer.entity.state.AxolotlRenderState);
+  private void setupLayStillOnGroundAnimation(float, float);
+  private void setupGroundCrawlingAnimation(float, float);
+  private void setupWaterHoveringAnimation(float, float);
+  private void setupSwimmingAnimation(float, float, float);
+  private void setupPlayDeadAnimation(float);
+  private void applyMirrorLegRotations(float);
+  public void setupAnim(java.lang.Object);
+}
+Compiled from "BabyAxolotlModel.java"
+public class net.minecraft.client.model.animal.axolotl.BabyAxolotlModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.AxolotlRenderState> {
+  private static final float MAX_WALK_ANIMATION_SPEED;
+  private static final float WALK_ANIMATION_SCALE_FACTOR;
+  private final net.minecraft.client.animation.KeyframeAnimation walkAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation walkUnderwaterAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation swimAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation idleOnGroundAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation idleOnGroundUnderWaterAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation idleUnderWaterAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation playDeadAnimation;
+  public net.minecraft.client.model.animal.axolotl.BabyAxolotlModel(net.minecraft.client.model.geom.ModelPart);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+  public void setupAnim(net.minecraft.client.renderer.entity.state.AxolotlRenderState);
+  public void setupAnim(java.lang.Object);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.model.animal.axolotl.package-info {
+}

@@ -1,0 +1,131 @@
+Compiled from "LegacyStructureFileFix.java"
+public final class net.minecraft.util.filefix.fixes.LegacyStructureFileFix$LegacyStructureData extends java.lang.Record {
+  private final java.util.Map<java.lang.String, com.mojang.serialization.Dynamic<?>> starts;
+  private final java.util.Map<java.lang.String, it.unimi.dsi.fastutil.longs.LongList> indexes;
+  public net.minecraft.util.filefix.fixes.LegacyStructureFileFix$LegacyStructureData();
+  public net.minecraft.util.filefix.fixes.LegacyStructureFileFix$LegacyStructureData(java.util.Map<java.lang.String, com.mojang.serialization.Dynamic<?>>, java.util.Map<java.lang.String, it.unimi.dsi.fastutil.longs.LongList>);
+  public void addStart(java.lang.String, com.mojang.serialization.Dynamic<net.minecraft.nbt.Tag>);
+  public void addIndex(java.lang.String, long);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Map<java.lang.String, com.mojang.serialization.Dynamic<?>> starts();
+  public java.util.Map<java.lang.String, it.unimi.dsi.fastutil.longs.LongList> indexes();
+  private static it.unimi.dsi.fastutil.longs.LongList lambda$addIndex$0(java.lang.String);
+}
+Compiled from "DimensionStorageFileFix.java"
+public class net.minecraft.util.filefix.fixes.DimensionStorageFileFix extends net.minecraft.util.filefix.FileFix {
+  public net.minecraft.util.filefix.fixes.DimensionStorageFileFix(com.mojang.datafixers.schemas.Schema);
+  public void makeFixer();
+}
+Compiled from "LegacyStructureFileFix.java"
+final class net.minecraft.util.filefix.fixes.LegacyStructureFileFix$DimensionFixEntry extends java.lang.Record {
+  private final net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> dimensionKey;
+  private final java.util.List<net.minecraft.util.filefix.access.FileAccess<net.minecraft.util.filefix.access.SavedDataNbt>> structureFileAccess;
+  private final net.minecraft.util.filefix.access.FileAccess<net.minecraft.util.filefix.access.ChunkNbt> chunkFileAccess;
+  private final it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap<net.minecraft.util.filefix.fixes.LegacyStructureFileFix$LegacyStructureData> structures;
+  private net.minecraft.util.filefix.fixes.LegacyStructureFileFix$DimensionFixEntry(net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level>, java.util.List<net.minecraft.util.filefix.access.FileAccess<net.minecraft.util.filefix.access.SavedDataNbt>>, net.minecraft.util.filefix.access.FileAccess<net.minecraft.util.filefix.access.ChunkNbt>, it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap<net.minecraft.util.filefix.fixes.LegacyStructureFileFix$LegacyStructureData>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> dimensionKey();
+  public java.util.List<net.minecraft.util.filefix.access.FileAccess<net.minecraft.util.filefix.access.SavedDataNbt>> structureFileAccess();
+  public net.minecraft.util.filefix.access.FileAccess<net.minecraft.util.filefix.access.ChunkNbt> chunkFileAccess();
+  public it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap<net.minecraft.util.filefix.fixes.LegacyStructureFileFix$LegacyStructureData> structures();
+}
+Compiled from "GeneratedStructuresRenameFileFix.java"
+public class net.minecraft.util.filefix.fixes.GeneratedStructuresRenameFileFix extends net.minecraft.util.filefix.FileFix {
+  public net.minecraft.util.filefix.fixes.GeneratedStructuresRenameFileFix(com.mojang.datafixers.schemas.Schema);
+  public void makeFixer();
+}
+Compiled from "PlayerStorageFileFix.java"
+public class net.minecraft.util.filefix.fixes.PlayerStorageFileFix extends net.minecraft.util.filefix.FileFix {
+  public net.minecraft.util.filefix.fixes.PlayerStorageFileFix(com.mojang.datafixers.schemas.Schema);
+  public void makeFixer();
+}
+Compiled from "ReenableSpectatorsGenerateChunksInHardcoreWorldsFileFix.java"
+public class net.minecraft.util.filefix.fixes.ReenableSpectatorsGenerateChunksInHardcoreWorldsFileFix extends net.minecraft.util.filefix.FileFix {
+  public net.minecraft.util.filefix.fixes.ReenableSpectatorsGenerateChunksInHardcoreWorldsFileFix(com.mojang.datafixers.schemas.Schema);
+  public void makeFixer();
+  private static net.minecraft.util.filefix.operations.ModifyContent$FixFunction lambda$makeFixer$0(net.minecraft.util.filefix.access.FileAccessProvider);
+  private static void lambda$makeFixer$1(net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.worldupdate.UpgradeProgress) throws java.io.IOException;
+  private static void lambda$makeFixer$2(net.minecraft.util.filefix.access.SavedDataNbt, com.mojang.serialization.Dynamic);
+  private static com.mojang.serialization.Dynamic lambda$makeFixer$3(com.mojang.serialization.Dynamic);
+}
+Compiled from "RemoveObsoleteFilesFileFix.java"
+public class net.minecraft.util.filefix.fixes.RemoveObsoleteFilesFileFix extends net.minecraft.util.filefix.FileFix {
+  public net.minecraft.util.filefix.fixes.RemoveObsoleteFilesFileFix(com.mojang.datafixers.schemas.Schema);
+  public void makeFixer();
+  private void lambda$makeFixer$0(java.lang.String);
+}
+Compiled from "LevelDatToSavedDataFileFix.java"
+public class net.minecraft.util.filefix.fixes.LevelDatToSavedDataFileFix extends net.minecraft.util.filefix.FileFix {
+  private static final java.util.UUID FALLBACK_SINGLE_PLAYER_UUID;
+  private static final java.lang.String OVERWORLD;
+  private static final java.lang.String THE_NETHER;
+  private static final java.lang.String THE_END;
+  private static final java.lang.String WORLD_BORDER_KEY;
+  private static final java.lang.String WORLD_BORDER_FILE_NAME;
+  public net.minecraft.util.filefix.fixes.LevelDatToSavedDataFileFix(com.mojang.datafixers.schemas.Schema);
+  public void makeFixer();
+  private static com.mojang.serialization.Dynamic<?> extractToFile(net.minecraft.util.filefix.access.FileAccess<? extends net.minecraft.util.filefix.access.CompressedNbt>, com.mojang.serialization.Dynamic<?>, java.lang.String);
+  private com.mojang.serialization.Dynamic<?> extractPlayerDataToFile(net.minecraft.util.filefix.access.FileAccess<net.minecraft.util.filefix.access.PlayerData>, com.mojang.serialization.Dynamic<?>);
+  private static com.mojang.serialization.Dynamic<?> extractWorldBorderToFiles(net.minecraft.util.filefix.access.FileAccess<? extends net.minecraft.util.filefix.access.CompressedNbt>, net.minecraft.util.filefix.access.FileAccess<? extends net.minecraft.util.filefix.access.CompressedNbt>, net.minecraft.util.filefix.access.FileAccess<? extends net.minecraft.util.filefix.access.CompressedNbt>, com.mojang.serialization.Dynamic<?>);
+  private static void extractWorldBorderToFile(net.minecraft.util.filefix.access.FileAccess<? extends net.minecraft.util.filefix.access.CompressedNbt>, com.mojang.serialization.Dynamic<?>, double);
+  private com.mojang.serialization.Dynamic<?> extractWorldGenSettingsToFile(net.minecraft.util.filefix.access.FileAccess<? extends net.minecraft.util.filefix.access.CompressedNbt>, com.mojang.serialization.Dynamic<?>);
+  private static com.mojang.serialization.Dynamic lambda$extractWorldBorderToFile$1(double, com.mojang.serialization.Dynamic);
+  private static com.mojang.serialization.Dynamic lambda$extractWorldBorderToFile$0(double, com.mojang.serialization.Dynamic);
+  private net.minecraft.util.filefix.operations.ModifyContent$FixFunction lambda$makeFixer$0(net.minecraft.util.filefix.access.FileAccessProvider);
+  private void lambda$makeFixer$1(net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.worldupdate.UpgradeProgress) throws java.io.IOException;
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.util.filefix.fixes.package-info {
+}
+Compiled from "ResourcePackLocationFileFix.java"
+public class net.minecraft.util.filefix.fixes.ResourcePackLocationFileFix extends net.minecraft.util.filefix.FileFix {
+  public net.minecraft.util.filefix.fixes.ResourcePackLocationFileFix(com.mojang.datafixers.schemas.Schema);
+  public void makeFixer();
+}
+Compiled from "LegacyStructureFileFix.java"
+class net.minecraft.util.filefix.fixes.LegacyStructureFileFix$IncrementalFutureSequence {
+  private final int maxConcurrency;
+  private final java.util.List<java.util.concurrent.CompletableFuture<?>> futures;
+  public net.minecraft.util.filefix.fixes.LegacyStructureFileFix$IncrementalFutureSequence(int);
+  public int push(java.util.concurrent.CompletableFuture<?>);
+  private int waitOnAny();
+  public int waitForAll();
+  private static java.util.concurrent.CompletableFuture[] lambda$waitForAll$0(int);
+  private static java.util.concurrent.CompletableFuture[] lambda$waitOnAny$0(int);
+}
+Compiled from "LegacyStructureFileFix.java"
+public class net.minecraft.util.filefix.fixes.LegacyStructureFileFix extends net.minecraft.util.filefix.FileFix {
+  public static final int STRUCTURE_RANGE;
+  public static final java.util.List<java.lang.String> OVERWORLD_LEGACY_STRUCTURES;
+  public static final java.util.Map<java.lang.String, java.lang.String> LEGACY_TO_CURRENT_MAP;
+  public static final java.util.List<java.lang.String> NETHER_LEGACY_STRUCTURES;
+  public static final java.util.List<java.lang.String> END_LEGACY_STRUCTURES;
+  private static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> OVERWORLD_KEY;
+  private static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> NETHER_KEY;
+  private static final net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> END_KEY;
+  public net.minecraft.util.filefix.fixes.LegacyStructureFileFix(com.mojang.datafixers.schemas.Schema);
+  public void makeFixer();
+  private static void extractAndStoreLegacyStructureData(com.mojang.serialization.Dynamic<net.minecraft.nbt.Tag>, java.util.List<net.minecraft.util.filefix.fixes.LegacyStructureFileFix$DimensionFixEntry>, net.minecraft.util.worldupdate.UpgradeProgress) throws java.io.IOException;
+  private static net.minecraft.util.filefix.access.FileAccess<net.minecraft.util.filefix.access.SavedDataNbt> getLegacyStructureData(net.minecraft.util.filefix.access.FileAccessProvider, java.lang.String);
+  private static void extractLegacyStructureData(com.mojang.serialization.Dynamic<net.minecraft.nbt.Tag>, it.unimi.dsi.fastutil.longs.Long2ObjectMap<net.minecraft.util.filefix.fixes.LegacyStructureFileFix$LegacyStructureData>);
+  private static void storeLegacyStructureDataToChunks(it.unimi.dsi.fastutil.longs.Long2ObjectMap<net.minecraft.util.filefix.fixes.LegacyStructureFileFix$LegacyStructureData>, net.minecraft.util.filefix.access.ChunkNbt, net.minecraft.nbt.CompoundTag, net.minecraft.util.worldupdate.UpgradeProgress);
+  private static net.minecraft.nbt.CompoundTag lambda$storeLegacyStructureDataToChunks$1(net.minecraft.util.filefix.fixes.LegacyStructureFileFix$LegacyStructureData, net.minecraft.nbt.CompoundTag);
+  private static void lambda$storeLegacyStructureDataToChunks$3(net.minecraft.nbt.CompoundTag, java.lang.String, it.unimi.dsi.fastutil.longs.LongList);
+  private static void lambda$storeLegacyStructureDataToChunks$2(net.minecraft.nbt.CompoundTag, java.lang.String, com.mojang.serialization.Dynamic);
+  private static long lambda$storeLegacyStructureDataToChunks$0(it.unimi.dsi.fastutil.longs.Long2ObjectMap$Entry);
+  private static void lambda$extractLegacyStructureData$0(it.unimi.dsi.fastutil.longs.Long2ObjectMap, long, com.mojang.serialization.Dynamic, java.lang.String);
+  private static net.minecraft.util.filefix.fixes.LegacyStructureFileFix$LegacyStructureData lambda$extractLegacyStructureData$2(long);
+  private static net.minecraft.util.filefix.fixes.LegacyStructureFileFix$LegacyStructureData lambda$extractLegacyStructureData$1(long);
+  private static net.minecraft.util.filefix.operations.ModifyContent$FixFunction lambda$makeFixer$0(net.minecraft.util.filefix.access.FileAccessProvider);
+  private static void lambda$makeFixer$4(net.minecraft.util.filefix.access.FileAccess, java.util.List, net.minecraft.util.filefix.access.FileAccess, java.util.List, net.minecraft.util.filefix.access.FileAccess, java.util.List, net.minecraft.util.filefix.access.FileAccess, net.minecraft.util.worldupdate.UpgradeProgress) throws java.io.IOException;
+  private static net.minecraft.util.filefix.access.FileAccess lambda$makeFixer$3(net.minecraft.util.filefix.access.FileAccessProvider, java.lang.String);
+  private static net.minecraft.util.filefix.access.FileAccess lambda$makeFixer$2(net.minecraft.util.filefix.access.FileAccessProvider, java.lang.String);
+  private static net.minecraft.util.filefix.access.FileAccess lambda$makeFixer$1(net.minecraft.util.filefix.access.FileAccessProvider, java.lang.String);
+  private static void lambda$static$0(java.util.HashMap);
+  static {};
+}

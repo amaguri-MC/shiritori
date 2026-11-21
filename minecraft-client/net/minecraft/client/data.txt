@@ -1,0 +1,37 @@
+Compiled from "AtlasProvider.java"
+public class net.minecraft.client.data.AtlasProvider implements net.minecraft.data.DataProvider {
+  private static final net.minecraft.resources.Identifier TRIM_PALETTE_KEY;
+  private static final java.util.Map<java.lang.String, net.minecraft.resources.Identifier> TRIM_PALETTE_VALUES;
+  private static final java.util.List<net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern>> VANILLA_PATTERNS;
+  private static final java.util.List<net.minecraft.client.resources.model.EquipmentClientInfo$LayerType> HUMANOID_LAYERS;
+  private final net.minecraft.data.PackOutput$PathProvider pathProvider;
+  public net.minecraft.client.data.AtlasProvider(net.minecraft.data.PackOutput);
+  private static java.util.List<net.minecraft.resources.Identifier> patternTextures();
+  private static net.minecraft.client.renderer.texture.atlas.SpriteSource forMaterial(net.minecraft.client.resources.model.sprite.SpriteId);
+  private static net.minecraft.client.renderer.texture.atlas.SpriteSource forMapper(net.minecraft.client.renderer.SpriteMapper);
+  private static java.util.List<net.minecraft.client.renderer.texture.atlas.SpriteSource> simpleMapper(net.minecraft.client.renderer.SpriteMapper);
+  private static java.util.List<net.minecraft.client.renderer.texture.atlas.SpriteSource> noPrefixMapper(java.lang.String);
+  private static java.util.stream.Stream<net.minecraft.world.item.equipment.trim.MaterialAssetGroup$AssetInfo> extractAllMaterialAssets();
+  private static java.util.List<net.minecraft.client.renderer.texture.atlas.SpriteSource> armorTrims();
+  private static java.util.List<net.minecraft.client.renderer.texture.atlas.SpriteSource> blocksList();
+  private static java.util.List<net.minecraft.client.renderer.texture.atlas.SpriteSource> itemsList();
+  private static java.util.List<net.minecraft.client.renderer.texture.atlas.SpriteSource> bannerPatterns();
+  private static java.util.List<net.minecraft.client.renderer.texture.atlas.SpriteSource> shieldPatterns();
+  private static java.util.List<net.minecraft.client.renderer.texture.atlas.SpriteSource> guiSprites();
+  public java.util.concurrent.CompletableFuture<?> run(net.minecraft.data.CachedOutput);
+  private java.util.concurrent.CompletableFuture<?> storeAtlas(net.minecraft.data.CachedOutput, net.minecraft.resources.Identifier, java.util.List<net.minecraft.client.renderer.texture.atlas.SpriteSource>);
+  public java.lang.String getName();
+  private static java.util.stream.Stream lambda$extractAllMaterialAssets$0(net.minecraft.world.item.equipment.trim.MaterialAssetGroup);
+  private static java.lang.String lambda$patternTextures$0(net.minecraft.client.resources.model.EquipmentClientInfo$LayerType, java.lang.String);
+  private static net.minecraft.resources.Identifier lambda$static$0(net.minecraft.world.item.equipment.trim.MaterialAssetGroup$AssetInfo);
+  static {};
+}
+Compiled from "Main.java"
+public class net.minecraft.client.data.Main {
+  public net.minecraft.client.data.Main();
+  public static void main(java.lang.String[]) throws java.io.IOException;
+  public static void addClientProviders(net.minecraft.data.DataGenerator, boolean);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.data.package-info {
+}

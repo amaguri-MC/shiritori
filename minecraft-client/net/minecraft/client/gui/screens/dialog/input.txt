@@ -1,0 +1,83 @@
+Compiled from "InputControlHandler.java"
+public interface net.minecraft.client.gui.screens.dialog.input.InputControlHandler$Output {
+  public abstract void accept(net.minecraft.client.gui.layouts.LayoutElement, net.minecraft.server.dialog.action.Action$ValueGetter);
+}
+Compiled from "InputControlHandler.java"
+public interface net.minecraft.client.gui.screens.dialog.input.InputControlHandler<T extends net.minecraft.server.dialog.input.InputControl> {
+  public abstract void addControl(T, net.minecraft.client.gui.screens.Screen, net.minecraft.client.gui.screens.dialog.input.InputControlHandler$Output);
+}
+Compiled from "InputControlHandlers.java"
+class net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$BooleanHandler$1 implements net.minecraft.server.dialog.action.Action$ValueGetter {
+  final net.minecraft.client.gui.components.Checkbox val$control;
+  final net.minecraft.server.dialog.input.BooleanInput val$input;
+  net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$BooleanHandler$1();
+  public java.lang.String asTemplateSubstitution();
+  public net.minecraft.nbt.Tag asTag();
+}
+Compiled from "InputControlHandlers.java"
+class net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$BooleanHandler implements net.minecraft.client.gui.screens.dialog.input.InputControlHandler<net.minecraft.server.dialog.input.BooleanInput> {
+  private net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$BooleanHandler();
+  public void addControl(net.minecraft.server.dialog.input.BooleanInput, net.minecraft.client.gui.screens.Screen, net.minecraft.client.gui.screens.dialog.input.InputControlHandler$Output);
+  public void addControl(net.minecraft.server.dialog.input.InputControl, net.minecraft.client.gui.screens.Screen, net.minecraft.client.gui.screens.dialog.input.InputControlHandler$Output);
+}
+Compiled from "InputControlHandlers.java"
+class net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$NumberRangeHandler$1 implements net.minecraft.server.dialog.action.Action$ValueGetter {
+  final net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$NumberRangeHandler$SliderImpl val$control;
+  net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$NumberRangeHandler$1();
+  public java.lang.String asTemplateSubstitution();
+  public net.minecraft.nbt.Tag asTag();
+}
+Compiled from "InputControlHandlers.java"
+class net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$NumberRangeHandler$SliderImpl extends net.minecraft.client.gui.components.AbstractSliderButton {
+  private final net.minecraft.server.dialog.input.NumberRangeInput input;
+  private net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$NumberRangeHandler$SliderImpl(net.minecraft.server.dialog.input.NumberRangeInput, double);
+  protected void updateMessage();
+  protected void applyValue();
+  public java.lang.String stringValueToSend();
+  public float floatValueToSend();
+  private static float scaledValue(net.minecraft.server.dialog.input.NumberRangeInput, double);
+  private static java.lang.String sliderValueToString(net.minecraft.server.dialog.input.NumberRangeInput, double);
+  private static net.minecraft.network.chat.Component computeMessage(net.minecraft.server.dialog.input.NumberRangeInput, double);
+  private static java.lang.String valueToString(float);
+}
+Compiled from "InputControlHandlers.java"
+class net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$NumberRangeHandler implements net.minecraft.client.gui.screens.dialog.input.InputControlHandler<net.minecraft.server.dialog.input.NumberRangeInput> {
+  private net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$NumberRangeHandler();
+  public void addControl(net.minecraft.server.dialog.input.NumberRangeInput, net.minecraft.client.gui.screens.Screen, net.minecraft.client.gui.screens.dialog.input.InputControlHandler$Output);
+  public void addControl(net.minecraft.server.dialog.input.InputControl, net.minecraft.client.gui.screens.Screen, net.minecraft.client.gui.screens.dialog.input.InputControlHandler$Output);
+}
+Compiled from "InputControlHandlers.java"
+class net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$SingleOptionHandler implements net.minecraft.client.gui.screens.dialog.input.InputControlHandler<net.minecraft.server.dialog.input.SingleOptionInput> {
+  private net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$SingleOptionHandler();
+  public void addControl(net.minecraft.server.dialog.input.SingleOptionInput, net.minecraft.client.gui.screens.Screen, net.minecraft.client.gui.screens.dialog.input.InputControlHandler$Output);
+  public void addControl(net.minecraft.server.dialog.input.InputControl, net.minecraft.client.gui.screens.Screen, net.minecraft.client.gui.screens.dialog.input.InputControlHandler$Output);
+  private static java.lang.String lambda$addControl$0(net.minecraft.client.gui.components.CycleButton);
+}
+Compiled from "InputControlHandlers.java"
+class net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$TextInputHandler$1 implements net.minecraft.server.dialog.action.Action$ValueGetter {
+  final java.util.function.Supplier val$getter;
+  net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$TextInputHandler$1();
+  public java.lang.String asTemplateSubstitution();
+  public net.minecraft.nbt.Tag asTag();
+}
+Compiled from "InputControlHandlers.java"
+class net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$TextInputHandler implements net.minecraft.client.gui.screens.dialog.input.InputControlHandler<net.minecraft.server.dialog.input.TextInput> {
+  private net.minecraft.client.gui.screens.dialog.input.InputControlHandlers$TextInputHandler();
+  public void addControl(net.minecraft.server.dialog.input.TextInput, net.minecraft.client.gui.screens.Screen, net.minecraft.client.gui.screens.dialog.input.InputControlHandler$Output);
+  public void addControl(net.minecraft.server.dialog.input.InputControl, net.minecraft.client.gui.screens.Screen, net.minecraft.client.gui.screens.dialog.input.InputControlHandler$Output);
+  private static java.lang.Integer lambda$addControl$0(net.minecraft.server.dialog.input.TextInput$MultilineOptions, net.minecraft.client.gui.Font);
+}
+Compiled from "InputControlHandlers.java"
+public class net.minecraft.client.gui.screens.dialog.input.InputControlHandlers {
+  private static final org.slf4j.Logger LOGGER;
+  private static final java.util.Map<com.mojang.serialization.MapCodec<? extends net.minecraft.server.dialog.input.InputControl>, net.minecraft.client.gui.screens.dialog.input.InputControlHandler<?>> HANDLERS;
+  public net.minecraft.client.gui.screens.dialog.input.InputControlHandlers();
+  private static <T extends net.minecraft.server.dialog.input.InputControl> void register(com.mojang.serialization.MapCodec<T>, net.minecraft.client.gui.screens.dialog.input.InputControlHandler<? super T>);
+  private static <T extends net.minecraft.server.dialog.input.InputControl> net.minecraft.client.gui.screens.dialog.input.InputControlHandler<T> get(T);
+  public static <T extends net.minecraft.server.dialog.input.InputControl> void createHandler(T, net.minecraft.client.gui.screens.Screen, net.minecraft.client.gui.screens.dialog.input.InputControlHandler$Output);
+  public static void bootstrap();
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.gui.screens.dialog.input.package-info {
+}

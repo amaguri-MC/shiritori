@@ -1,0 +1,168 @@
+Compiled from "PigSoundVariant.java"
+public final class net.minecraft.world.entity.animal.pig.PigSoundVariant$PigSoundSet extends java.lang.Record {
+  private final net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> ambientSound;
+  private final net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> hurtSound;
+  private final net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> deathSound;
+  private final net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> stepSound;
+  private final net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> eatSound;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.entity.animal.pig.PigSoundVariant$PigSoundSet> CODEC;
+  public net.minecraft.world.entity.animal.pig.PigSoundVariant$PigSoundSet(net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent>, net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent>, net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent>, net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent>, net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> ambientSound();
+  public net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> hurtSound();
+  public net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> deathSound();
+  public net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> stepSound();
+  public net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> eatSound();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.entity.animal.pig.package-info {
+}
+Compiled from "Pig.java"
+public class net.minecraft.world.entity.animal.pig.Pig extends net.minecraft.world.entity.animal.Animal implements net.minecraft.world.entity.ItemSteerable {
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Integer> DATA_BOOST_TIME;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<net.minecraft.core.Holder<net.minecraft.world.entity.animal.pig.PigVariant>> DATA_VARIANT_ID;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<net.minecraft.core.Holder<net.minecraft.world.entity.animal.pig.PigSoundVariant>> DATA_SOUND_VARIANT_ID;
+  private static final net.minecraft.world.entity.EntityDimensions BABY_DIMENSIONS;
+  private final net.minecraft.world.entity.ItemBasedSteering steering;
+  public net.minecraft.world.entity.animal.pig.Pig(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.pig.Pig>, net.minecraft.world.level.Level);
+  protected void registerGoals();
+  public static net.minecraft.world.entity.ai.attributes.AttributeSupplier$Builder createAttributes();
+  public net.minecraft.world.entity.LivingEntity getControllingPassenger();
+  public void onSyncedDataUpdated(net.minecraft.network.syncher.EntityDataAccessor<?>);
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput);
+  protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput);
+  protected net.minecraft.sounds.SoundEvent getAmbientSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  protected void playEatingSound();
+  protected void playStepSound(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  public net.minecraft.world.InteractionResult mobInteract(net.minecraft.world.entity.player.Player, net.minecraft.world.InteractionHand);
+  public boolean canUseSlot(net.minecraft.world.entity.EquipmentSlot);
+  protected boolean canDispenserEquipIntoSlot(net.minecraft.world.entity.EquipmentSlot);
+  protected net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> getEquipSound(net.minecraft.world.entity.EquipmentSlot, net.minecraft.world.item.ItemStack, net.minecraft.world.item.equipment.Equippable);
+  public void thunderHit(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LightningBolt);
+  protected void tickRidden(net.minecraft.world.entity.player.Player, net.minecraft.world.phys.Vec3);
+  protected net.minecraft.world.phys.Vec3 getRiddenInput(net.minecraft.world.entity.player.Player, net.minecraft.world.phys.Vec3);
+  protected float getRiddenSpeed(net.minecraft.world.entity.player.Player);
+  public boolean boost();
+  public net.minecraft.world.entity.EntityDimensions getDefaultDimensions(net.minecraft.world.entity.Pose);
+  public net.minecraft.world.entity.animal.pig.Pig getBreedOffspring(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.AgeableMob);
+  public boolean isFood(net.minecraft.world.item.ItemStack);
+  public net.minecraft.world.phys.Vec3 getLeashOffset();
+  private void setVariant(net.minecraft.core.Holder<net.minecraft.world.entity.animal.pig.PigVariant>);
+  public net.minecraft.core.Holder<net.minecraft.world.entity.animal.pig.PigVariant> getVariant();
+  private net.minecraft.core.Holder<net.minecraft.world.entity.animal.pig.PigSoundVariant> getSoundVariant();
+  private void setSoundVariant(net.minecraft.core.Holder<net.minecraft.world.entity.animal.pig.PigSoundVariant>);
+  private net.minecraft.world.entity.animal.pig.PigSoundVariant$PigSoundSet getSoundSet();
+  public <T> T get(net.minecraft.core.component.DataComponentType<? extends T>);
+  protected void applyImplicitComponents(net.minecraft.core.component.DataComponentGetter);
+  protected <T> boolean applyImplicitComponent(net.minecraft.core.component.DataComponentType<T>, T);
+  public net.minecraft.world.entity.SpawnGroupData finalizeSpawn(net.minecraft.world.level.ServerLevelAccessor, net.minecraft.world.DifficultyInstance, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.world.entity.SpawnGroupData);
+  public net.minecraft.world.entity.AgeableMob getBreedOffspring(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.AgeableMob);
+  private void lambda$thunderHit$0(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.zombie.ZombifiedPiglin);
+  private java.util.Optional lambda$readAdditionalSaveData$0(net.minecraft.resources.ResourceKey);
+  private static void lambda$addAdditionalSaveData$0(net.minecraft.world.level.storage.ValueOutput, net.minecraft.resources.ResourceKey);
+  private static boolean lambda$registerGoals$1(net.minecraft.world.item.ItemStack);
+  private static boolean lambda$registerGoals$0(net.minecraft.world.item.ItemStack);
+  static {};
+}
+Compiled from "PigSoundVariants.java"
+public class net.minecraft.world.entity.animal.pig.PigSoundVariants {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.entity.animal.pig.PigSoundVariant> CLASSIC;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.entity.animal.pig.PigSoundVariant> MINI;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.entity.animal.pig.PigSoundVariant> BIG;
+  public net.minecraft.world.entity.animal.pig.PigSoundVariants();
+  private static net.minecraft.resources.ResourceKey<net.minecraft.world.entity.animal.pig.PigSoundVariant> createKey(net.minecraft.world.entity.animal.pig.PigSoundVariants$SoundSet);
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.entity.animal.pig.PigSoundVariant>);
+  private static void register(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.entity.animal.pig.PigSoundVariant>, net.minecraft.resources.ResourceKey<net.minecraft.world.entity.animal.pig.PigSoundVariant>, net.minecraft.world.entity.animal.pig.PigSoundVariants$SoundSet);
+  public static net.minecraft.core.Holder<net.minecraft.world.entity.animal.pig.PigSoundVariant> pickRandomSoundVariant(net.minecraft.core.RegistryAccess, net.minecraft.util.RandomSource);
+  static {};
+}
+Compiled from "PigVariant.java"
+public final class net.minecraft.world.entity.animal.pig.PigVariant extends java.lang.Record implements net.minecraft.world.entity.variant.PriorityProvider<net.minecraft.world.entity.variant.SpawnContext, net.minecraft.world.entity.variant.SpawnCondition> {
+  private final net.minecraft.world.entity.variant.ModelAndTexture<net.minecraft.world.entity.animal.pig.PigVariant$ModelType> modelAndTexture;
+  private final net.minecraft.core.ClientAsset$ResourceTexture babyTexture;
+  private final net.minecraft.world.entity.variant.SpawnPrioritySelectors spawnConditions;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.entity.animal.pig.PigVariant> DIRECT_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.entity.animal.pig.PigVariant> NETWORK_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.core.Holder<net.minecraft.world.entity.animal.pig.PigVariant>> CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.core.Holder<net.minecraft.world.entity.animal.pig.PigVariant>> STREAM_CODEC;
+  private net.minecraft.world.entity.animal.pig.PigVariant(net.minecraft.world.entity.variant.ModelAndTexture<net.minecraft.world.entity.animal.pig.PigVariant$ModelType>, net.minecraft.core.ClientAsset$ResourceTexture);
+  public net.minecraft.world.entity.animal.pig.PigVariant(net.minecraft.world.entity.variant.ModelAndTexture<net.minecraft.world.entity.animal.pig.PigVariant$ModelType>, net.minecraft.core.ClientAsset$ResourceTexture, net.minecraft.world.entity.variant.SpawnPrioritySelectors);
+  public java.util.List<net.minecraft.world.entity.variant.PriorityProvider$Selector<net.minecraft.world.entity.variant.SpawnContext, net.minecraft.world.entity.variant.SpawnCondition>> selectors();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.entity.variant.ModelAndTexture<net.minecraft.world.entity.animal.pig.PigVariant$ModelType> modelAndTexture();
+  public net.minecraft.core.ClientAsset$ResourceTexture babyTexture();
+  public net.minecraft.world.entity.variant.SpawnPrioritySelectors spawnConditions();
+  private static com.mojang.datafixers.kinds.App lambda$static$1(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "PigSoundVariant.java"
+public final class net.minecraft.world.entity.animal.pig.PigSoundVariant extends java.lang.Record {
+  private final net.minecraft.world.entity.animal.pig.PigSoundVariant$PigSoundSet adultSounds;
+  private final net.minecraft.world.entity.animal.pig.PigSoundVariant$PigSoundSet babySounds;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.entity.animal.pig.PigSoundVariant> DIRECT_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.entity.animal.pig.PigSoundVariant> NETWORK_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.core.Holder<net.minecraft.world.entity.animal.pig.PigSoundVariant>> CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.core.Holder<net.minecraft.world.entity.animal.pig.PigSoundVariant>> STREAM_CODEC;
+  public net.minecraft.world.entity.animal.pig.PigSoundVariant(net.minecraft.world.entity.animal.pig.PigSoundVariant$PigSoundSet, net.minecraft.world.entity.animal.pig.PigSoundVariant$PigSoundSet);
+  private static com.mojang.serialization.Codec<net.minecraft.world.entity.animal.pig.PigSoundVariant> codec();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.entity.animal.pig.PigSoundVariant$PigSoundSet adultSounds();
+  public net.minecraft.world.entity.animal.pig.PigSoundVariant$PigSoundSet babySounds();
+  private static com.mojang.datafixers.kinds.App lambda$codec$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "PigSoundVariants.java"
+public final class net.minecraft.world.entity.animal.pig.PigSoundVariants$SoundSet extends java.lang.Enum<net.minecraft.world.entity.animal.pig.PigSoundVariants$SoundSet> {
+  public static final net.minecraft.world.entity.animal.pig.PigSoundVariants$SoundSet CLASSIC;
+  public static final net.minecraft.world.entity.animal.pig.PigSoundVariants$SoundSet MINI;
+  public static final net.minecraft.world.entity.animal.pig.PigSoundVariants$SoundSet BIG;
+  private final java.lang.String identifier;
+  private final java.lang.String soundEventIdentifier;
+  private static final net.minecraft.world.entity.animal.pig.PigSoundVariants$SoundSet[] $VALUES;
+  public static net.minecraft.world.entity.animal.pig.PigSoundVariants$SoundSet[] values();
+  public static net.minecraft.world.entity.animal.pig.PigSoundVariants$SoundSet valueOf(java.lang.String);
+  private net.minecraft.world.entity.animal.pig.PigSoundVariants$SoundSet(java.lang.String, java.lang.String);
+  public java.lang.String getIdentifier();
+  public java.lang.String getSoundEventIdentifier();
+  private static net.minecraft.world.entity.animal.pig.PigSoundVariants$SoundSet[] $values();
+  static {};
+}
+Compiled from "PigVariants.java"
+public class net.minecraft.world.entity.animal.pig.PigVariants {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.entity.animal.pig.PigVariant> TEMPERATE;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.entity.animal.pig.PigVariant> WARM;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.entity.animal.pig.PigVariant> COLD;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.entity.animal.pig.PigVariant> DEFAULT;
+  public net.minecraft.world.entity.animal.pig.PigVariants();
+  private static net.minecraft.resources.ResourceKey<net.minecraft.world.entity.animal.pig.PigVariant> createKey(net.minecraft.resources.Identifier);
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.entity.animal.pig.PigVariant>);
+  private static void register(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.entity.animal.pig.PigVariant>, net.minecraft.resources.ResourceKey<net.minecraft.world.entity.animal.pig.PigVariant>, net.minecraft.world.entity.animal.pig.PigVariant$ModelType, java.lang.String, java.lang.String, net.minecraft.tags.TagKey<net.minecraft.world.level.biome.Biome>);
+  private static void register(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.entity.animal.pig.PigVariant>, net.minecraft.resources.ResourceKey<net.minecraft.world.entity.animal.pig.PigVariant>, net.minecraft.world.entity.animal.pig.PigVariant$ModelType, java.lang.String, java.lang.String, net.minecraft.world.entity.variant.SpawnPrioritySelectors);
+  static {};
+}
+Compiled from "PigVariant.java"
+public final class net.minecraft.world.entity.animal.pig.PigVariant$ModelType extends java.lang.Enum<net.minecraft.world.entity.animal.pig.PigVariant$ModelType> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.world.entity.animal.pig.PigVariant$ModelType NORMAL;
+  public static final net.minecraft.world.entity.animal.pig.PigVariant$ModelType COLD;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.entity.animal.pig.PigVariant$ModelType> CODEC;
+  private final java.lang.String name;
+  private static final net.minecraft.world.entity.animal.pig.PigVariant$ModelType[] $VALUES;
+  public static net.minecraft.world.entity.animal.pig.PigVariant$ModelType[] values();
+  public static net.minecraft.world.entity.animal.pig.PigVariant$ModelType valueOf(java.lang.String);
+  private net.minecraft.world.entity.animal.pig.PigVariant$ModelType(java.lang.String);
+  public java.lang.String getSerializedName();
+  private static net.minecraft.world.entity.animal.pig.PigVariant$ModelType[] $values();
+  static {};
+}

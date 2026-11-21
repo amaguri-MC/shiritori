@@ -1,0 +1,374 @@
+Compiled from "OutgoingRpcMethod.java"
+public final class net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes extends java.lang.Record {
+  private final boolean discoverable;
+  private final boolean allowPreServerInit;
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes(boolean, boolean);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public boolean discoverable();
+  public boolean allowPreServerInit();
+}
+Compiled from "JsonRPCUtils.java"
+public class net.minecraft.server.jsonrpc.JsonRPCUtils {
+  public static final java.lang.String JSON_RPC_VERSION;
+  public static final java.lang.String OPEN_RPC_VERSION;
+  public net.minecraft.server.jsonrpc.JsonRPCUtils();
+  public static com.google.gson.JsonObject createSuccessResult(com.google.gson.JsonElement, com.google.gson.JsonElement);
+  public static com.google.gson.JsonObject createRequest(java.lang.Integer, net.minecraft.resources.Identifier, java.util.List<com.google.gson.JsonElement>);
+  public static com.google.gson.JsonObject createRequest(java.lang.Integer, java.lang.String, java.util.List<com.google.gson.JsonElement>);
+  public static com.google.gson.JsonObject createError(com.google.gson.JsonElement, java.lang.String, int, java.lang.String);
+  public static com.google.gson.JsonElement getRequestId(com.google.gson.JsonObject);
+  public static java.lang.String getMethodName(com.google.gson.JsonObject);
+  public static com.google.gson.JsonElement getParams(com.google.gson.JsonObject);
+  public static com.google.gson.JsonElement getResult(com.google.gson.JsonObject);
+  public static com.google.gson.JsonObject getError(com.google.gson.JsonObject);
+}
+Compiled from "JsonRpcNotificationService.java"
+public class net.minecraft.server.jsonrpc.JsonRpcNotificationService implements net.minecraft.server.notifications.NotificationService {
+  private final net.minecraft.server.jsonrpc.ManagementServer managementServer;
+  private final net.minecraft.server.jsonrpc.internalapi.MinecraftApi minecraftApi;
+  public net.minecraft.server.jsonrpc.JsonRpcNotificationService(net.minecraft.server.jsonrpc.internalapi.MinecraftApi, net.minecraft.server.jsonrpc.ManagementServer);
+  public void playerJoined(net.minecraft.server.level.ServerPlayer);
+  public void playerLeft(net.minecraft.server.level.ServerPlayer);
+  public void serverStarted();
+  public void serverShuttingDown();
+  public void serverSaveStarted();
+  public void serverSaveCompleted();
+  public void serverActivityOccured();
+  public void playerOped(net.minecraft.server.players.ServerOpListEntry);
+  public void playerDeoped(net.minecraft.server.players.ServerOpListEntry);
+  public void playerAddedToAllowlist(net.minecraft.server.players.NameAndId);
+  public void playerRemovedFromAllowlist(net.minecraft.server.players.NameAndId);
+  public void ipBanned(net.minecraft.server.players.IpBanListEntry);
+  public void ipUnbanned(java.lang.String);
+  public void playerBanned(net.minecraft.server.players.UserBanListEntry);
+  public void playerUnbanned(net.minecraft.server.players.NameAndId);
+  public <T> void onGameRuleChanged(net.minecraft.world.level.gamerules.GameRule<T>, T);
+  public void statusHeartbeat();
+  private void broadcastNotification(net.minecraft.core.Holder$Reference<? extends net.minecraft.server.jsonrpc.OutgoingRpcMethod<java.lang.Void, ?>>);
+  private <Params> void broadcastNotification(net.minecraft.core.Holder$Reference<? extends net.minecraft.server.jsonrpc.OutgoingRpcMethod<Params, ?>>, Params);
+  private static void lambda$broadcastNotification$1(net.minecraft.core.Holder$Reference, java.lang.Object, net.minecraft.server.jsonrpc.Connection);
+  private static void lambda$broadcastNotification$0(net.minecraft.core.Holder$Reference, net.minecraft.server.jsonrpc.Connection);
+}
+Compiled from "IncomingRpcMethod.java"
+public final class net.minecraft.server.jsonrpc.IncomingRpcMethod$ParameterlessMethod<Params, Result> extends java.lang.Record implements net.minecraft.server.jsonrpc.IncomingRpcMethod<Params, Result> {
+  private final net.minecraft.server.jsonrpc.api.MethodInfo<Params, Result> info;
+  private final net.minecraft.server.jsonrpc.IncomingRpcMethod$Attributes attributes;
+  private final net.minecraft.server.jsonrpc.IncomingRpcMethod$ParameterlessRpcMethodFunction<Result> supplier;
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$ParameterlessMethod(net.minecraft.server.jsonrpc.api.MethodInfo<Params, Result>, net.minecraft.server.jsonrpc.IncomingRpcMethod$Attributes, net.minecraft.server.jsonrpc.IncomingRpcMethod$ParameterlessRpcMethodFunction<Result>);
+  public com.google.gson.JsonElement apply(net.minecraft.server.jsonrpc.internalapi.MinecraftApi, com.google.gson.JsonElement, net.minecraft.server.jsonrpc.methods.ClientInfo);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.jsonrpc.api.MethodInfo<Params, Result> info();
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$Attributes attributes();
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$ParameterlessRpcMethodFunction<Result> supplier();
+}
+Compiled from "JsonRpc.java"
+public class net.minecraft.server.jsonrpc.JsonRpc {
+  private static final org.slf4j.Logger LOGGER;
+  public net.minecraft.server.jsonrpc.JsonRpc();
+  public static net.minecraft.server.jsonrpc.ManagementServer create(net.minecraft.server.dedicated.DedicatedServerSettings, net.minecraft.server.notifications.NotificationManager);
+  private static io.netty.handler.ssl.SslContext createSslContext(net.minecraft.server.dedicated.DedicatedServerProperties);
+  static {};
+}
+Compiled from "IncomingRpcMethod.java"
+public interface net.minecraft.server.jsonrpc.IncomingRpcMethod$ParameterlessRpcMethodFunction<Result> {
+  public abstract Result apply(net.minecraft.server.jsonrpc.internalapi.MinecraftApi, net.minecraft.server.jsonrpc.methods.ClientInfo);
+}
+Compiled from "ManagementServer.java"
+public class net.minecraft.server.jsonrpc.ManagementServer {
+  private static final org.slf4j.Logger LOGGER;
+  private final com.google.common.net.HostAndPort hostAndPort;
+  private final net.minecraft.server.jsonrpc.security.AuthenticationHandler authenticationHandler;
+  private io.netty.channel.Channel serverChannel;
+  private final io.netty.channel.EventLoopGroup eventLoopGroup;
+  private java.util.concurrent.ScheduledFuture<?> heartbeat;
+  private final java.util.Set<net.minecraft.server.jsonrpc.Connection> connections;
+  public net.minecraft.server.jsonrpc.ManagementServer(com.google.common.net.HostAndPort, net.minecraft.server.jsonrpc.security.AuthenticationHandler);
+  public net.minecraft.server.jsonrpc.ManagementServer(com.google.common.net.HostAndPort, net.minecraft.server.jsonrpc.security.AuthenticationHandler, io.netty.channel.EventLoopGroup);
+  public boolean scheduleHeartbeat(net.minecraft.server.notifications.NotificationManager, long);
+  public void onConnected(net.minecraft.server.jsonrpc.Connection);
+  public void onDisconnected(net.minecraft.server.jsonrpc.Connection);
+  public void startWithoutTls(net.minecraft.server.jsonrpc.internalapi.MinecraftApi);
+  public void startWithTls(net.minecraft.server.jsonrpc.internalapi.MinecraftApi, io.netty.handler.ssl.SslContext);
+  private void start(net.minecraft.server.jsonrpc.internalapi.MinecraftApi, io.netty.handler.ssl.SslContext);
+  public void stop(boolean) throws java.lang.InterruptedException;
+  public void tick();
+  public int getPort();
+  void forEachConnection(java.util.function.Consumer<net.minecraft.server.jsonrpc.Connection>);
+  static {};
+}
+Compiled from "OutgoingRpcMethod.java"
+public final class net.minecraft.server.jsonrpc.OutgoingRpcMethod$Notification<Params> extends java.lang.Record implements net.minecraft.server.jsonrpc.OutgoingRpcMethod<Params, java.lang.Void> {
+  private final net.minecraft.server.jsonrpc.api.MethodInfo<Params, java.lang.Void> info;
+  private final net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes attributes;
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethod$Notification(net.minecraft.server.jsonrpc.api.MethodInfo<Params, java.lang.Void>, net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes);
+  public com.google.gson.JsonElement encodeParams(Params);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.jsonrpc.api.MethodInfo<Params, java.lang.Void> info();
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes attributes();
+}
+Compiled from "IncomingRpcMethod.java"
+public final class net.minecraft.server.jsonrpc.IncomingRpcMethod$Attributes extends java.lang.Record {
+  private final boolean runOnMainThread;
+  private final boolean discoverable;
+  private final boolean allowPreServerInit;
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$Attributes(boolean, boolean, boolean);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public boolean runOnMainThread();
+  public boolean discoverable();
+  public boolean allowPreServerInit();
+}
+Compiled from "ManagementServer.java"
+class net.minecraft.server.jsonrpc.ManagementServer$1 extends io.netty.channel.ChannelInitializer<io.netty.channel.Channel> {
+  final io.netty.handler.ssl.SslContext val$sslContext;
+  final net.minecraft.server.jsonrpc.internalapi.MinecraftApi val$minecraftApi;
+  final net.minecraft.server.jsonrpc.JsonRpcLogger val$jsonrpcLogger;
+  final net.minecraft.server.jsonrpc.ManagementServer this$0;
+  net.minecraft.server.jsonrpc.ManagementServer$1(net.minecraft.server.jsonrpc.ManagementServer, io.netty.handler.ssl.SslContext, net.minecraft.server.jsonrpc.internalapi.MinecraftApi, net.minecraft.server.jsonrpc.JsonRpcLogger);
+  protected void initChannel(io.netty.channel.Channel);
+}
+Compiled from "JsonRpcLogger.java"
+public class net.minecraft.server.jsonrpc.JsonRpcLogger {
+  private static final org.slf4j.Logger LOGGER;
+  private static final java.lang.String PREFIX;
+  public net.minecraft.server.jsonrpc.JsonRpcLogger();
+  public void log(net.minecraft.server.jsonrpc.methods.ClientInfo, java.lang.String, java.lang.Object...);
+  static {};
+}
+Compiled from "OutgoingRpcMethod.java"
+public class net.minecraft.server.jsonrpc.OutgoingRpcMethod$OutgoingRpcMethodBuilder<Params, Result> {
+  public static final net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes DEFAULT_ATTRIBUTES;
+  private final net.minecraft.server.jsonrpc.OutgoingRpcMethod$Factory<Params, Result> method;
+  private java.lang.String description;
+  private net.minecraft.server.jsonrpc.api.ParamInfo<Params> paramInfo;
+  private net.minecraft.server.jsonrpc.api.ResultInfo<Result> resultInfo;
+  private boolean allowPreServerInit;
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethod$OutgoingRpcMethodBuilder(net.minecraft.server.jsonrpc.OutgoingRpcMethod$Factory<Params, Result>);
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethod$OutgoingRpcMethodBuilder<Params, Result> description(java.lang.String);
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethod$OutgoingRpcMethodBuilder<Params, Result> response(java.lang.String, net.minecraft.server.jsonrpc.api.Schema<Result>);
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethod$OutgoingRpcMethodBuilder<Params, Result> param(java.lang.String, net.minecraft.server.jsonrpc.api.Schema<Params>);
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethod$OutgoingRpcMethodBuilder<Params, Result> allowPreServerInit();
+  private net.minecraft.server.jsonrpc.OutgoingRpcMethod<Params, Result> build();
+  public net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<Params, Result>> register(java.lang.String);
+  private net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<Params, Result>> register(net.minecraft.resources.Identifier);
+  static {};
+}
+Compiled from "PendingRpcRequest.java"
+public final class net.minecraft.server.jsonrpc.PendingRpcRequest<Result> extends java.lang.Record {
+  private final net.minecraft.core.Holder$Reference<? extends net.minecraft.server.jsonrpc.OutgoingRpcMethod<?, ? extends Result>> method;
+  private final java.util.concurrent.CompletableFuture<Result> resultFuture;
+  private final long timeoutTime;
+  public net.minecraft.server.jsonrpc.PendingRpcRequest(net.minecraft.core.Holder$Reference<? extends net.minecraft.server.jsonrpc.OutgoingRpcMethod<?, ? extends Result>>, java.util.concurrent.CompletableFuture<Result>, long);
+  public void accept(com.google.gson.JsonElement);
+  public boolean timedOut(long);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.Holder$Reference<? extends net.minecraft.server.jsonrpc.OutgoingRpcMethod<?, ? extends Result>> method();
+  public java.util.concurrent.CompletableFuture<Result> resultFuture();
+  public long timeoutTime();
+}
+Compiled from "OutgoingRpcMethod.java"
+public interface net.minecraft.server.jsonrpc.OutgoingRpcMethod<Params, Result> {
+  public static final java.lang.String NOTIFICATION_PREFIX;
+  public abstract net.minecraft.server.jsonrpc.api.MethodInfo<Params, Result> info();
+  public abstract net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes attributes();
+  public default com.google.gson.JsonElement encodeParams(Params);
+  public default Result decodeResult(com.google.gson.JsonElement);
+  public static net.minecraft.server.jsonrpc.OutgoingRpcMethod$OutgoingRpcMethodBuilder<java.lang.Void, java.lang.Void> notification();
+  public static <Params> net.minecraft.server.jsonrpc.OutgoingRpcMethod$OutgoingRpcMethodBuilder<Params, java.lang.Void> notificationWithParams();
+  public static <Result> net.minecraft.server.jsonrpc.OutgoingRpcMethod$OutgoingRpcMethodBuilder<java.lang.Void, Result> request();
+  public static <Params, Result> net.minecraft.server.jsonrpc.OutgoingRpcMethod$OutgoingRpcMethodBuilder<Params, Result> requestWithParams();
+}
+Compiled from "IncomingRpcMethod.java"
+public class net.minecraft.server.jsonrpc.IncomingRpcMethod$IncomingRpcMethodBuilder<Params, Result> {
+  private java.lang.String description;
+  private net.minecraft.server.jsonrpc.api.ParamInfo<Params> paramInfo;
+  private net.minecraft.server.jsonrpc.api.ResultInfo<Result> resultInfo;
+  private boolean discoverable;
+  private boolean runOnMainThread;
+  private net.minecraft.server.jsonrpc.IncomingRpcMethod$ParameterlessRpcMethodFunction<Result> parameterlessFunction;
+  private net.minecraft.server.jsonrpc.IncomingRpcMethod$RpcMethodFunction<Params, Result> parameterFunction;
+  private boolean allowPreServerInit;
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$IncomingRpcMethodBuilder(net.minecraft.server.jsonrpc.IncomingRpcMethod$ParameterlessRpcMethodFunction<Result>);
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$IncomingRpcMethodBuilder(net.minecraft.server.jsonrpc.IncomingRpcMethod$RpcMethodFunction<Params, Result>);
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$IncomingRpcMethodBuilder(java.util.function.Function<net.minecraft.server.jsonrpc.internalapi.MinecraftApi, Result>);
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$IncomingRpcMethodBuilder<Params, Result> description(java.lang.String);
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$IncomingRpcMethodBuilder<Params, Result> response(java.lang.String, net.minecraft.server.jsonrpc.api.Schema<Result>);
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$IncomingRpcMethodBuilder<Params, Result> param(java.lang.String, net.minecraft.server.jsonrpc.api.Schema<Params>);
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$IncomingRpcMethodBuilder<Params, Result> undiscoverable();
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$IncomingRpcMethodBuilder<Params, Result> notOnMainThread();
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$IncomingRpcMethodBuilder<Params, Result> allowPreServerInit();
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod<Params, Result> build();
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod<?, ?> register(net.minecraft.core.Registry<net.minecraft.server.jsonrpc.IncomingRpcMethod<?, ?>>, java.lang.String);
+  private net.minecraft.server.jsonrpc.IncomingRpcMethod<?, ?> register(net.minecraft.core.Registry<net.minecraft.server.jsonrpc.IncomingRpcMethod<?, ?>>, net.minecraft.resources.Identifier);
+  private static java.lang.Object lambda$new$0(java.util.function.Function, net.minecraft.server.jsonrpc.internalapi.MinecraftApi, net.minecraft.server.jsonrpc.methods.ClientInfo);
+}
+Compiled from "package-info.java"
+interface net.minecraft.server.jsonrpc.package-info {
+}
+Compiled from "OutgoingRpcMethod.java"
+public interface net.minecraft.server.jsonrpc.OutgoingRpcMethod$Factory<Params, Result> {
+  public abstract net.minecraft.server.jsonrpc.OutgoingRpcMethod<Params, Result> create(net.minecraft.server.jsonrpc.api.MethodInfo<Params, Result>, net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes);
+}
+Compiled from "OutgoingRpcMethods.java"
+public class net.minecraft.server.jsonrpc.OutgoingRpcMethods {
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<java.lang.Void, java.lang.Void>> SERVER_STARTED;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<java.lang.Void, java.lang.Void>> SERVER_SHUTTING_DOWN;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<java.lang.Void, java.lang.Void>> SERVER_SAVE_STARTED;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<java.lang.Void, java.lang.Void>> SERVER_SAVE_COMPLETED;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<java.lang.Void, java.lang.Void>> SERVER_ACTIVITY_OCCURRED;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<net.minecraft.server.jsonrpc.api.PlayerDto, java.lang.Void>> PLAYER_JOINED;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<net.minecraft.server.jsonrpc.api.PlayerDto, java.lang.Void>> PLAYER_LEFT;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<net.minecraft.server.jsonrpc.methods.OperatorService$OperatorDto, java.lang.Void>> PLAYER_OPED;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<net.minecraft.server.jsonrpc.methods.OperatorService$OperatorDto, java.lang.Void>> PLAYER_DEOPED;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<net.minecraft.server.jsonrpc.api.PlayerDto, java.lang.Void>> PLAYER_ADDED_TO_ALLOWLIST;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<net.minecraft.server.jsonrpc.api.PlayerDto, java.lang.Void>> PLAYER_REMOVED_FROM_ALLOWLIST;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<net.minecraft.server.jsonrpc.methods.IpBanlistService$IpBanDto, java.lang.Void>> IP_BANNED;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<java.lang.String, java.lang.Void>> IP_UNBANNED;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<net.minecraft.server.jsonrpc.methods.BanlistService$UserBanDto, java.lang.Void>> PLAYER_BANNED;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<net.minecraft.server.jsonrpc.api.PlayerDto, java.lang.Void>> PLAYER_UNBANNED;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<net.minecraft.server.jsonrpc.methods.GameRulesService$GameRuleUpdate<?>, java.lang.Void>> GAMERULE_CHANGED;
+  public static final net.minecraft.core.Holder$Reference<net.minecraft.server.jsonrpc.OutgoingRpcMethod<net.minecraft.server.jsonrpc.methods.ServerStateService$ServerState, java.lang.Void>> STATUS_HEARTBEAT;
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethods();
+  static {};
+}
+Compiled from "OutgoingRpcMethod.java"
+public final class net.minecraft.server.jsonrpc.OutgoingRpcMethod$Method<Params, Result> extends java.lang.Record implements net.minecraft.server.jsonrpc.OutgoingRpcMethod<Params, Result> {
+  private final net.minecraft.server.jsonrpc.api.MethodInfo<Params, Result> info;
+  private final net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes attributes;
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethod$Method(net.minecraft.server.jsonrpc.api.MethodInfo<Params, Result>, net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes);
+  public com.google.gson.JsonElement encodeParams(Params);
+  public Result decodeResult(com.google.gson.JsonElement);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.jsonrpc.api.MethodInfo<Params, Result> info();
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes attributes();
+}
+Compiled from "IncomingRpcMethod.java"
+public final class net.minecraft.server.jsonrpc.IncomingRpcMethod$Method<Params, Result> extends java.lang.Record implements net.minecraft.server.jsonrpc.IncomingRpcMethod<Params, Result> {
+  private final net.minecraft.server.jsonrpc.api.MethodInfo<Params, Result> info;
+  private final net.minecraft.server.jsonrpc.IncomingRpcMethod$Attributes attributes;
+  private final net.minecraft.server.jsonrpc.IncomingRpcMethod$RpcMethodFunction<Params, Result> function;
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$Method(net.minecraft.server.jsonrpc.api.MethodInfo<Params, Result>, net.minecraft.server.jsonrpc.IncomingRpcMethod$Attributes, net.minecraft.server.jsonrpc.IncomingRpcMethod$RpcMethodFunction<Params, Result>);
+  public com.google.gson.JsonElement apply(net.minecraft.server.jsonrpc.internalapi.MinecraftApi, com.google.gson.JsonElement, net.minecraft.server.jsonrpc.methods.ClientInfo);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.jsonrpc.api.MethodInfo<Params, Result> info();
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$Attributes attributes();
+  public net.minecraft.server.jsonrpc.IncomingRpcMethod$RpcMethodFunction<Params, Result> function();
+}
+Compiled from "IncomingRpcMethod.java"
+public interface net.minecraft.server.jsonrpc.IncomingRpcMethod<Params, Result> {
+  public abstract net.minecraft.server.jsonrpc.api.MethodInfo<Params, Result> info();
+  public abstract net.minecraft.server.jsonrpc.IncomingRpcMethod$Attributes attributes();
+  public abstract com.google.gson.JsonElement apply(net.minecraft.server.jsonrpc.internalapi.MinecraftApi, com.google.gson.JsonElement, net.minecraft.server.jsonrpc.methods.ClientInfo);
+  public static <Result> net.minecraft.server.jsonrpc.IncomingRpcMethod$IncomingRpcMethodBuilder<java.lang.Void, Result> method(net.minecraft.server.jsonrpc.IncomingRpcMethod$ParameterlessRpcMethodFunction<Result>);
+  public static <Params, Result> net.minecraft.server.jsonrpc.IncomingRpcMethod$IncomingRpcMethodBuilder<Params, Result> method(net.minecraft.server.jsonrpc.IncomingRpcMethod$RpcMethodFunction<Params, Result>);
+  public static <Result> net.minecraft.server.jsonrpc.IncomingRpcMethod$IncomingRpcMethodBuilder<java.lang.Void, Result> method(java.util.function.Function<net.minecraft.server.jsonrpc.internalapi.MinecraftApi, Result>);
+}
+Compiled from "IncomingRpcMethod.java"
+public interface net.minecraft.server.jsonrpc.IncomingRpcMethod$RpcMethodFunction<Params, Result> {
+  public abstract Result apply(net.minecraft.server.jsonrpc.internalapi.MinecraftApi, Params, net.minecraft.server.jsonrpc.methods.ClientInfo);
+}
+Compiled from "JsonRPCErrors.java"
+public final class net.minecraft.server.jsonrpc.JsonRPCErrors extends java.lang.Enum<net.minecraft.server.jsonrpc.JsonRPCErrors> {
+  public static final net.minecraft.server.jsonrpc.JsonRPCErrors PARSE_ERROR;
+  public static final net.minecraft.server.jsonrpc.JsonRPCErrors INVALID_REQUEST;
+  public static final net.minecraft.server.jsonrpc.JsonRPCErrors METHOD_NOT_FOUND;
+  public static final net.minecraft.server.jsonrpc.JsonRPCErrors INVALID_PARAMS;
+  public static final net.minecraft.server.jsonrpc.JsonRPCErrors INTERNAL_ERROR;
+  private final int errorCode;
+  private final java.lang.String message;
+  private static final net.minecraft.server.jsonrpc.JsonRPCErrors[] $VALUES;
+  public static net.minecraft.server.jsonrpc.JsonRPCErrors[] values();
+  public static net.minecraft.server.jsonrpc.JsonRPCErrors valueOf(java.lang.String);
+  private net.minecraft.server.jsonrpc.JsonRPCErrors(int, java.lang.String);
+  public com.google.gson.JsonObject createWithUnknownId(java.lang.String);
+  public com.google.gson.JsonObject createWithoutData(com.google.gson.JsonElement);
+  public com.google.gson.JsonObject create(com.google.gson.JsonElement, java.lang.String);
+  private static net.minecraft.server.jsonrpc.JsonRPCErrors[] $values();
+  static {};
+}
+Compiled from "OutgoingRpcMethod.java"
+public final class net.minecraft.server.jsonrpc.OutgoingRpcMethod$ParmeterlessNotification extends java.lang.Record implements net.minecraft.server.jsonrpc.OutgoingRpcMethod<java.lang.Void, java.lang.Void> {
+  private final net.minecraft.server.jsonrpc.api.MethodInfo<java.lang.Void, java.lang.Void> info;
+  private final net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes attributes;
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethod$ParmeterlessNotification(net.minecraft.server.jsonrpc.api.MethodInfo<java.lang.Void, java.lang.Void>, net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.jsonrpc.api.MethodInfo<java.lang.Void, java.lang.Void> info();
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes attributes();
+}
+Compiled from "Connection.java"
+public class net.minecraft.server.jsonrpc.Connection extends io.netty.channel.SimpleChannelInboundHandler<com.google.gson.JsonElement> {
+  private static final org.slf4j.Logger LOGGER;
+  private static final java.util.concurrent.atomic.AtomicInteger CONNECTION_ID_COUNTER;
+  private final net.minecraft.server.jsonrpc.JsonRpcLogger jsonRpcLogger;
+  private final net.minecraft.server.jsonrpc.methods.ClientInfo clientInfo;
+  private final net.minecraft.server.jsonrpc.ManagementServer managementServer;
+  private final io.netty.channel.Channel channel;
+  private final net.minecraft.server.jsonrpc.internalapi.MinecraftApi minecraftApi;
+  private final java.util.concurrent.atomic.AtomicInteger transactionId;
+  private final it.unimi.dsi.fastutil.ints.Int2ObjectMap<net.minecraft.server.jsonrpc.PendingRpcRequest<?>> pendingRequests;
+  public net.minecraft.server.jsonrpc.Connection(io.netty.channel.Channel, net.minecraft.server.jsonrpc.ManagementServer, net.minecraft.server.jsonrpc.internalapi.MinecraftApi, net.minecraft.server.jsonrpc.JsonRpcLogger);
+  public void tick();
+  public void channelActive(io.netty.channel.ChannelHandlerContext) throws java.lang.Exception;
+  public void channelInactive(io.netty.channel.ChannelHandlerContext) throws java.lang.Exception;
+  public void exceptionCaught(io.netty.channel.ChannelHandlerContext, java.lang.Throwable) throws java.lang.Exception;
+  protected void channelRead0(io.netty.channel.ChannelHandlerContext, com.google.gson.JsonElement);
+  private com.google.gson.JsonArray handleBatchRequest(java.util.List<com.google.gson.JsonElement>);
+  public void sendNotification(net.minecraft.core.Holder$Reference<? extends net.minecraft.server.jsonrpc.OutgoingRpcMethod<java.lang.Void, ?>>);
+  public <Params> void sendNotification(net.minecraft.core.Holder$Reference<? extends net.minecraft.server.jsonrpc.OutgoingRpcMethod<Params, ?>>, Params);
+  public <Result> java.util.concurrent.CompletableFuture<Result> sendRequest(net.minecraft.core.Holder$Reference<? extends net.minecraft.server.jsonrpc.OutgoingRpcMethod<java.lang.Void, Result>>);
+  public <Params, Result> java.util.concurrent.CompletableFuture<Result> sendRequest(net.minecraft.core.Holder$Reference<? extends net.minecraft.server.jsonrpc.OutgoingRpcMethod<Params, Result>>, Params);
+  private <Params, Result> java.util.concurrent.CompletableFuture<Result> sendRequest(net.minecraft.core.Holder$Reference<? extends net.minecraft.server.jsonrpc.OutgoingRpcMethod<Params, ? extends Result>>, Params, boolean);
+  com.google.gson.JsonObject handleJsonObject(com.google.gson.JsonObject);
+  private static boolean isValidRequestId(com.google.gson.JsonElement);
+  private static boolean isValidResponseId(com.google.gson.JsonElement);
+  private com.google.gson.JsonObject handleIncomingRequest(com.google.gson.JsonElement, java.lang.String, com.google.gson.JsonElement);
+  public com.google.gson.JsonElement dispatchIncomingRequest(java.lang.String, com.google.gson.JsonElement);
+  private void handleRequestResponse(int, com.google.gson.JsonElement);
+  private com.google.gson.JsonObject handleError(com.google.gson.JsonElement, com.google.gson.JsonObject);
+  protected void channelRead0(io.netty.channel.ChannelHandlerContext, java.lang.Object) throws java.lang.Exception;
+  private com.google.gson.JsonElement lambda$dispatchIncomingRequest$0(java.util.Optional, com.google.gson.JsonElement);
+  private com.google.gson.JsonObject lambda$handleBatchRequest$0(com.google.gson.JsonElement);
+  private static boolean lambda$tick$0(long, it.unimi.dsi.fastutil.ints.Int2ObjectMap$Entry);
+  static {};
+}
+Compiled from "IncomingRpcMethods.java"
+public class net.minecraft.server.jsonrpc.IncomingRpcMethods {
+  public net.minecraft.server.jsonrpc.IncomingRpcMethods();
+  public static net.minecraft.server.jsonrpc.IncomingRpcMethod<?, ?> bootstrap(net.minecraft.core.Registry<net.minecraft.server.jsonrpc.IncomingRpcMethod<?, ?>>);
+  private static void registerAllowListService(net.minecraft.core.Registry<net.minecraft.server.jsonrpc.IncomingRpcMethod<?, ?>>);
+  private static void registerBanlistService(net.minecraft.core.Registry<net.minecraft.server.jsonrpc.IncomingRpcMethod<?, ?>>);
+  private static void registerIpBanlistService(net.minecraft.core.Registry<net.minecraft.server.jsonrpc.IncomingRpcMethod<?, ?>>);
+  private static void registerPlayerService(net.minecraft.core.Registry<net.minecraft.server.jsonrpc.IncomingRpcMethod<?, ?>>);
+  private static void registerOperatorService(net.minecraft.core.Registry<net.minecraft.server.jsonrpc.IncomingRpcMethod<?, ?>>);
+  private static void registerServerStateService(net.minecraft.core.Registry<net.minecraft.server.jsonrpc.IncomingRpcMethod<?, ?>>);
+  private static void registerServerSettingsService(net.minecraft.core.Registry<net.minecraft.server.jsonrpc.IncomingRpcMethod<?, ?>>);
+  private static void registerGameRuleService(net.minecraft.core.Registry<net.minecraft.server.jsonrpc.IncomingRpcMethod<?, ?>>);
+  private static net.minecraft.server.jsonrpc.methods.DiscoveryService$DiscoverResponse lambda$bootstrap$0(net.minecraft.server.jsonrpc.internalapi.MinecraftApi);
+}
+Compiled from "OutgoingRpcMethod.java"
+public final class net.minecraft.server.jsonrpc.OutgoingRpcMethod$ParameterlessMethod<Result> extends java.lang.Record implements net.minecraft.server.jsonrpc.OutgoingRpcMethod<java.lang.Void, Result> {
+  private final net.minecraft.server.jsonrpc.api.MethodInfo<java.lang.Void, Result> info;
+  private final net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes attributes;
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethod$ParameterlessMethod(net.minecraft.server.jsonrpc.api.MethodInfo<java.lang.Void, Result>, net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes);
+  public Result decodeResult(com.google.gson.JsonElement);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.jsonrpc.api.MethodInfo<java.lang.Void, Result> info();
+  public net.minecraft.server.jsonrpc.OutgoingRpcMethod$Attributes attributes();
+}

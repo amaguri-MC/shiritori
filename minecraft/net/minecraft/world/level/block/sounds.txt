@@ -1,0 +1,22 @@
+Compiled from "package-info.java"
+interface net.minecraft.world.level.block.sounds.package-info {
+}
+Compiled from "AmbientDesertBlockSoundsPlayer.java"
+public class net.minecraft.world.level.block.sounds.AmbientDesertBlockSoundsPlayer {
+  private static final int IDLE_SOUND_CHANCE;
+  private static final int DRY_GRASS_SOUND_CHANCE;
+  private static final int DEAD_BUSH_SOUND_CHANCE;
+  private static final int DEAD_BUSH_SOUND_BADLANDS_DECREASED_CHANCE;
+  private static final int SURROUNDING_BLOCKS_PLAY_SOUND_THRESHOLD;
+  private static final int SURROUNDING_BLOCKS_DISTANCE_HORIZONTAL_CHECK;
+  private static final int SURROUNDING_BLOCKS_DISTANCE_VERTICAL_CHECK;
+  private static final int HORIZONTAL_DIRECTIONS;
+  public net.minecraft.world.level.block.sounds.AmbientDesertBlockSoundsPlayer();
+  public static void playAmbientSandSounds(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  public static void playAmbientDryGrassSounds(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  public static void playAmbientDeadBushSounds(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  public static boolean shouldPlayDesertDryVegetationBlockSounds(net.minecraft.world.level.Level, net.minecraft.core.BlockPos);
+  private static boolean shouldPlayAmbientSandSound(net.minecraft.world.level.Level, net.minecraft.core.BlockPos);
+  private static boolean columnContainsTriggeringBlock(net.minecraft.world.level.Level, net.minecraft.core.BlockPos$MutableBlockPos);
+  private static boolean canTriggerAmbientDesertSandSounds(net.minecraft.world.level.block.state.BlockState);
+}

@@ -1,0 +1,92 @@
+Compiled from "FeatureFlags.java"
+public class net.minecraft.world.flag.FeatureFlags {
+  public static final net.minecraft.world.flag.FeatureFlag VANILLA;
+  public static final net.minecraft.world.flag.FeatureFlag TRADE_REBALANCE;
+  public static final net.minecraft.world.flag.FeatureFlag REDSTONE_EXPERIMENTS;
+  public static final net.minecraft.world.flag.FeatureFlag MINECART_IMPROVEMENTS;
+  public static final net.minecraft.world.flag.FeatureFlagRegistry REGISTRY;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.flag.FeatureFlagSet> CODEC;
+  public static final net.minecraft.world.flag.FeatureFlagSet VANILLA_SET;
+  public static final net.minecraft.world.flag.FeatureFlagSet DEFAULT_FLAGS;
+  public net.minecraft.world.flag.FeatureFlags();
+  public static java.lang.String printMissingFlags(net.minecraft.world.flag.FeatureFlagSet, net.minecraft.world.flag.FeatureFlagSet);
+  public static java.lang.String printMissingFlags(net.minecraft.world.flag.FeatureFlagRegistry, net.minecraft.world.flag.FeatureFlagSet, net.minecraft.world.flag.FeatureFlagSet);
+  public static boolean isExperimental(net.minecraft.world.flag.FeatureFlagSet);
+  private static boolean lambda$printMissingFlags$0(java.util.Set, net.minecraft.resources.Identifier);
+  static {};
+}
+Compiled from "FeatureFlag.java"
+public class net.minecraft.world.flag.FeatureFlag {
+  final net.minecraft.world.flag.FeatureFlagUniverse universe;
+  final long mask;
+  net.minecraft.world.flag.FeatureFlag(net.minecraft.world.flag.FeatureFlagUniverse, int);
+}
+Compiled from "FeatureFlagRegistry.java"
+public class net.minecraft.world.flag.FeatureFlagRegistry {
+  private static final org.slf4j.Logger LOGGER;
+  private final net.minecraft.world.flag.FeatureFlagUniverse universe;
+  private final java.util.Map<net.minecraft.resources.Identifier, net.minecraft.world.flag.FeatureFlag> names;
+  private final net.minecraft.world.flag.FeatureFlagSet allFlags;
+  private net.minecraft.world.flag.FeatureFlagRegistry(net.minecraft.world.flag.FeatureFlagUniverse, net.minecraft.world.flag.FeatureFlagSet, java.util.Map<net.minecraft.resources.Identifier, net.minecraft.world.flag.FeatureFlag>);
+  public boolean isSubset(net.minecraft.world.flag.FeatureFlagSet);
+  public net.minecraft.world.flag.FeatureFlagSet allFlags();
+  public net.minecraft.world.flag.FeatureFlagSet fromNames(java.lang.Iterable<net.minecraft.resources.Identifier>);
+  public net.minecraft.world.flag.FeatureFlagSet subset(net.minecraft.world.flag.FeatureFlag...);
+  public net.minecraft.world.flag.FeatureFlagSet fromNames(java.lang.Iterable<net.minecraft.resources.Identifier>, java.util.function.Consumer<net.minecraft.resources.Identifier>);
+  public java.util.Set<net.minecraft.resources.Identifier> toNames(net.minecraft.world.flag.FeatureFlagSet);
+  public com.mojang.serialization.Codec<net.minecraft.world.flag.FeatureFlagSet> codec();
+  private java.util.List lambda$codec$2(net.minecraft.world.flag.FeatureFlagSet);
+  private com.mojang.serialization.DataResult lambda$codec$0(java.util.List);
+  private static java.lang.String lambda$codec$1(java.util.Set);
+  private static void lambda$toNames$0(net.minecraft.world.flag.FeatureFlagSet, java.util.Set, net.minecraft.resources.Identifier, net.minecraft.world.flag.FeatureFlag);
+  private static void lambda$fromNames$0(net.minecraft.resources.Identifier);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.flag.package-info {
+}
+Compiled from "FeatureElement.java"
+public interface net.minecraft.world.flag.FeatureElement {
+  public static final java.util.Set<net.minecraft.resources.ResourceKey<? extends net.minecraft.core.Registry<? extends net.minecraft.world.flag.FeatureElement>>> FILTERED_REGISTRIES;
+  public abstract net.minecraft.world.flag.FeatureFlagSet requiredFeatures();
+  public default boolean isEnabled(net.minecraft.world.flag.FeatureFlagSet);
+  static {};
+}
+Compiled from "FeatureFlagSet.java"
+public final class net.minecraft.world.flag.FeatureFlagSet {
+  private static final net.minecraft.world.flag.FeatureFlagSet EMPTY;
+  public static final int MAX_CONTAINER_SIZE;
+  private final net.minecraft.world.flag.FeatureFlagUniverse universe;
+  private final long mask;
+  private net.minecraft.world.flag.FeatureFlagSet(net.minecraft.world.flag.FeatureFlagUniverse, long);
+  static net.minecraft.world.flag.FeatureFlagSet create(net.minecraft.world.flag.FeatureFlagUniverse, java.util.Collection<net.minecraft.world.flag.FeatureFlag>);
+  public static net.minecraft.world.flag.FeatureFlagSet of();
+  public static net.minecraft.world.flag.FeatureFlagSet of(net.minecraft.world.flag.FeatureFlag);
+  public static net.minecraft.world.flag.FeatureFlagSet of(net.minecraft.world.flag.FeatureFlag, net.minecraft.world.flag.FeatureFlag...);
+  private static long computeMask(net.minecraft.world.flag.FeatureFlagUniverse, long, java.lang.Iterable<net.minecraft.world.flag.FeatureFlag>);
+  public boolean contains(net.minecraft.world.flag.FeatureFlag);
+  public boolean isEmpty();
+  public boolean isSubsetOf(net.minecraft.world.flag.FeatureFlagSet);
+  public boolean intersects(net.minecraft.world.flag.FeatureFlagSet);
+  public net.minecraft.world.flag.FeatureFlagSet join(net.minecraft.world.flag.FeatureFlagSet);
+  public net.minecraft.world.flag.FeatureFlagSet subtract(net.minecraft.world.flag.FeatureFlagSet);
+  public boolean equals(java.lang.Object);
+  public int hashCode();
+  static {};
+}
+Compiled from "FeatureFlagUniverse.java"
+public class net.minecraft.world.flag.FeatureFlagUniverse {
+  private final java.lang.String id;
+  public net.minecraft.world.flag.FeatureFlagUniverse(java.lang.String);
+  public java.lang.String toString();
+}
+Compiled from "FeatureFlagRegistry.java"
+public class net.minecraft.world.flag.FeatureFlagRegistry$Builder {
+  private final net.minecraft.world.flag.FeatureFlagUniverse universe;
+  private int id;
+  private final java.util.Map<net.minecraft.resources.Identifier, net.minecraft.world.flag.FeatureFlag> flags;
+  public net.minecraft.world.flag.FeatureFlagRegistry$Builder(java.lang.String);
+  public net.minecraft.world.flag.FeatureFlag createVanilla(java.lang.String);
+  public net.minecraft.world.flag.FeatureFlag create(net.minecraft.resources.Identifier);
+  public net.minecraft.world.flag.FeatureFlagRegistry build();
+}

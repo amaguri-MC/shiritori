@@ -1,0 +1,33 @@
+Compiled from "MinecraftServerStatistics.java"
+final class net.minecraft.util.monitoring.jmx.MinecraftServerStatistics$AttributeDescription {
+  private final java.lang.String name;
+  private final java.util.function.Supplier<java.lang.Object> getter;
+  private final java.lang.String description;
+  private final java.lang.Class<?> type;
+  private net.minecraft.util.monitoring.jmx.MinecraftServerStatistics$AttributeDescription(java.lang.String, java.util.function.Supplier<java.lang.Object>, java.lang.String, java.lang.Class<?>);
+  private javax.management.MBeanAttributeInfo asMBeanAttributeInfo();
+}
+Compiled from "package-info.java"
+interface net.minecraft.util.monitoring.jmx.package-info {
+}
+Compiled from "MinecraftServerStatistics.java"
+public final class net.minecraft.util.monitoring.jmx.MinecraftServerStatistics implements javax.management.DynamicMBean {
+  private static final org.slf4j.Logger LOGGER;
+  private final net.minecraft.server.MinecraftServer server;
+  private final javax.management.MBeanInfo mBeanInfo;
+  private final java.util.Map<java.lang.String, net.minecraft.util.monitoring.jmx.MinecraftServerStatistics$AttributeDescription> attributeDescriptionByName;
+  private net.minecraft.util.monitoring.jmx.MinecraftServerStatistics(net.minecraft.server.MinecraftServer);
+  public static void registerJmxMonitoring(net.minecraft.server.MinecraftServer);
+  private float getAverageTickTime();
+  private long[] getTickTimes();
+  public java.lang.Object getAttribute(java.lang.String);
+  public void setAttribute(javax.management.Attribute);
+  public javax.management.AttributeList getAttributes(java.lang.String[]);
+  public javax.management.AttributeList setAttributes(javax.management.AttributeList);
+  public java.lang.Object invoke(java.lang.String, java.lang.Object[], java.lang.String[]);
+  public javax.management.MBeanInfo getMBeanInfo();
+  private static javax.management.Attribute lambda$getAttributes$0(net.minecraft.util.monitoring.jmx.MinecraftServerStatistics$AttributeDescription);
+  private static javax.management.MBeanAttributeInfo[] lambda$new$1(int);
+  private static java.lang.String lambda$new$0(net.minecraft.util.monitoring.jmx.MinecraftServerStatistics$AttributeDescription);
+  static {};
+}

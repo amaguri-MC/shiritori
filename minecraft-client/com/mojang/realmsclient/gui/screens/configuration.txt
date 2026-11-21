@@ -1,0 +1,532 @@
+Compiled from "RealmsBackupInfoScreen.java"
+class com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen$BackupInfoList extends net.minecraft.client.gui.components.ObjectSelectionList<com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen$BackupInfoListEntry> {
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen$BackupInfoList(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen, net.minecraft.client.Minecraft);
+  private void lambda$new$0(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen, java.lang.String, java.lang.String);
+}
+Compiled from "RealmsBackupInfoScreen.java"
+class com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen$BackupInfoListEntry extends net.minecraft.client.gui.components.ObjectSelectionList$Entry<com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen$BackupInfoListEntry> {
+  private static final net.minecraft.network.chat.Component TEMPLATE_NAME;
+  private static final net.minecraft.network.chat.Component GAME_DIFFICULTY;
+  private static final net.minecraft.network.chat.Component NAME;
+  private static final net.minecraft.network.chat.Component GAME_SERVER_VERSION;
+  private static final net.minecraft.network.chat.Component UPLOADED;
+  private static final net.minecraft.network.chat.Component ENABLED_PACK;
+  private static final net.minecraft.network.chat.Component DESCRIPTION;
+  private static final net.minecraft.network.chat.Component GAME_MODE;
+  private static final net.minecraft.network.chat.Component SEED;
+  private static final net.minecraft.network.chat.Component WORLD_TYPE;
+  private static final net.minecraft.network.chat.Component UNDEFINED;
+  private final java.lang.String key;
+  private final java.lang.String value;
+  private final net.minecraft.network.chat.Component keyComponent;
+  private final net.minecraft.network.chat.Component valueComponent;
+  final com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen this$0;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen$BackupInfoListEntry(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen, java.lang.String, java.lang.String);
+  public void extractContent(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, boolean, float);
+  private net.minecraft.network.chat.Component translateKey(java.lang.String);
+  public net.minecraft.network.chat.Component getNarration();
+  static {};
+}
+Compiled from "RealmsBackupInfoScreen.java"
+public class com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen extends net.minecraft.realms.RealmsScreen {
+  private static final net.minecraft.network.chat.Component TITLE;
+  private static final net.minecraft.network.chat.Component UNKNOWN;
+  private final net.minecraft.client.gui.screens.Screen lastScreen;
+  private final com.mojang.realmsclient.dto.Backup backup;
+  private final net.minecraft.client.gui.layouts.HeaderAndFooterLayout layout;
+  private com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen$BackupInfoList backupInfoList;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen(net.minecraft.client.gui.screens.Screen, com.mojang.realmsclient.dto.Backup);
+  public void init();
+  protected void repositionElements();
+  public void onClose();
+  private net.minecraft.network.chat.Component checkForSpecificMetadata(java.lang.String, java.lang.String);
+  private net.minecraft.network.chat.Component gameDifficultyMetadata(java.lang.String);
+  private net.minecraft.network.chat.Component gameModeMetadata(java.lang.String);
+  private net.minecraft.network.chat.Component parseWorldType(java.lang.String);
+  static net.minecraft.client.gui.Font access$000(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen);
+  static net.minecraft.client.gui.Font access$100(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen);
+  private static void lambda$init$1(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupInfoScreen, net.minecraft.client.gui.components.AbstractWidget);
+  private void lambda$init$0(net.minecraft.client.gui.components.Button);
+  static {};
+}
+Compiled from "RealmsBackupScreen.java"
+class com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen$1 extends java.lang.Thread {
+  final com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen this$0;
+  com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen$1(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen, java.lang.String);
+  public void run();
+  private void lambda$run$0(java.util.List);
+  private com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen$Entry lambda$run$1(com.mojang.realmsclient.dto.Backup);
+}
+Compiled from "RealmsBackupScreen.java"
+class com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen$BackupObjectSelectionList extends net.minecraft.client.gui.components.ContainerObjectSelectionList<com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen$Entry> {
+  private static final int ITEM_HEIGHT;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen$BackupObjectSelectionList(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen);
+  public int getRowWidth();
+}
+Compiled from "RealmsBackupScreen.java"
+class com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen$Entry extends net.minecraft.client.gui.components.ContainerObjectSelectionList$Entry<com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen$Entry> {
+  private static final int Y_PADDING;
+  private final com.mojang.realmsclient.dto.Backup backup;
+  private net.minecraft.client.gui.components.Button restoreButton;
+  private net.minecraft.client.gui.components.Button changesButton;
+  private final java.util.List<net.minecraft.client.gui.components.AbstractWidget> children;
+  final com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen this$0;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen$Entry(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen, com.mojang.realmsclient.dto.Backup);
+  private net.minecraft.network.chat.MutableComponent narrationForBackupEntry(java.util.function.Supplier<net.minecraft.network.chat.MutableComponent>);
+  private void populateChangeList(com.mojang.realmsclient.dto.Backup);
+  private void addToChangeList(java.lang.String);
+  private void restoreClicked();
+  public java.util.List<? extends net.minecraft.client.gui.components.events.GuiEventListener> children();
+  public java.util.List<? extends net.minecraft.client.gui.narration.NarratableEntry> narratables();
+  public void extractContent(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, boolean, float);
+  private void lambda$restoreClicked$0(net.minecraft.client.gui.components.PopupScreen);
+  private void lambda$new$1(net.minecraft.client.gui.components.Button);
+  private void lambda$new$0(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen, net.minecraft.client.gui.components.Button);
+}
+Compiled from "RealmsBackupScreen.java"
+public class com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen extends net.minecraft.realms.RealmsScreen {
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.network.chat.Component TITLE;
+  private static final net.minecraft.network.chat.Component RESTORE_TOOLTIP;
+  private static final net.minecraft.network.chat.Component HAS_CHANGES_TOOLTIP;
+  private static final net.minecraft.network.chat.Component NO_BACKUPS_LABEL;
+  private static final net.minecraft.network.chat.Component DOWNLOAD_LATEST;
+  private static final java.lang.String UPLOADED_KEY;
+  private static final int PADDING;
+  public static final java.time.format.DateTimeFormatter SHORT_DATE_FORMAT;
+  private final com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen lastScreen;
+  private java.util.List<com.mojang.realmsclient.dto.Backup> backups;
+  private com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen$BackupObjectSelectionList backupList;
+  private final net.minecraft.client.gui.layouts.HeaderAndFooterLayout layout;
+  private final int slotId;
+  private net.minecraft.client.gui.components.Button downloadButton;
+  private final com.mojang.realmsclient.dto.RealmsServer serverData;
+  private boolean noBackups;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen(com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, com.mojang.realmsclient.dto.RealmsServer, int);
+  public void init();
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, float);
+  protected void repositionElements();
+  private void fetchRealmsBackups();
+  public void onClose();
+  private void downloadClicked();
+  static net.minecraft.client.Minecraft access$000(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen);
+  static net.minecraft.client.gui.Font access$100(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen);
+  static net.minecraft.client.Minecraft access$200(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen);
+  static net.minecraft.client.gui.Font access$300(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen);
+  static net.minecraft.client.Minecraft access$400(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen);
+  static net.minecraft.client.Minecraft access$500(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen);
+  static net.minecraft.client.gui.Font access$600(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen);
+  static net.minecraft.client.gui.Font access$700(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen);
+  static net.minecraft.client.gui.Font access$800(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen);
+  private void lambda$downloadClicked$0(net.minecraft.client.gui.components.PopupScreen);
+  private static void lambda$init$2(com.mojang.realmsclient.gui.screens.configuration.RealmsBackupScreen, net.minecraft.client.gui.components.AbstractWidget);
+  private void lambda$init$1(net.minecraft.client.gui.components.Button);
+  private void lambda$init$0(net.minecraft.client.gui.components.Button);
+  static {};
+}
+Compiled from "RealmsConfigurationTab.java"
+public interface com.mojang.realmsclient.gui.screens.configuration.RealmsConfigurationTab {
+  public abstract void updateData(com.mojang.realmsclient.dto.RealmsServer);
+  public default void onSelected(com.mojang.realmsclient.dto.RealmsServer);
+  public default void onDeselected(com.mojang.realmsclient.dto.RealmsServer);
+}
+Compiled from "RealmsConfigureWorldScreen.java"
+public class com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen extends net.minecraft.realms.RealmsScreen {
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.network.chat.Component PLAY_TEXT;
+  private final com.mojang.realmsclient.RealmsMainScreen lastScreen;
+  private com.mojang.realmsclient.dto.RealmsServer serverData;
+  private com.mojang.realmsclient.dto.PreferredRegionsDto regions;
+  private com.mojang.realmsclient.dto.Subscription subscription;
+  private final java.util.Map<com.mojang.realmsclient.dto.RealmsRegion, com.mojang.realmsclient.dto.ServiceQuality> regionServiceQuality;
+  private final long serverId;
+  private boolean stateChanged;
+  private final net.minecraft.client.gui.components.tabs.TabManager tabManager;
+  private net.minecraft.client.gui.components.Button playButton;
+  private net.minecraft.client.gui.components.tabs.MenuTabBar tabNavigationBar;
+  final net.minecraft.client.gui.layouts.HeaderAndFooterLayout layout;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen(com.mojang.realmsclient.RealmsMainScreen, long, com.mojang.realmsclient.dto.RealmsServer, com.mojang.realmsclient.dto.PreferredRegionsDto);
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen(com.mojang.realmsclient.RealmsMainScreen, long);
+  public void init();
+  private void onTabSelected(net.minecraft.client.gui.components.tabs.Tab);
+  private void onTabDeselected(net.minecraft.client.gui.components.tabs.Tab);
+  public int getContentHeight();
+  public int getHeaderHeight();
+  public net.minecraft.client.gui.screens.Screen getLastScreen();
+  public net.minecraft.client.gui.screens.Screen createErrorScreen(com.mojang.realmsclient.exception.RealmsServiceException);
+  public void repositionElements();
+  private void updateButtonStates();
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, float);
+  public boolean keyPressed(net.minecraft.client.input.KeyEvent);
+  protected void extractMenuBackground(net.minecraft.client.gui.GuiGraphicsExtractor);
+  public void onClose();
+  public void fetchRegionData();
+  public void fetchServerData(long);
+  public void fetchSubscription(long);
+  private void onRealmsDataFetched();
+  public void saveSlotSettings(com.mojang.realmsclient.dto.RealmsSlot);
+  public void saveSettings(java.lang.String, java.lang.String, com.mojang.realmsclient.dto.RegionSelectionPreference, com.mojang.realmsclient.dto.RealmsRegion);
+  public void openTheWorld(boolean);
+  public void closeTheWorld();
+  public void stateChanged();
+  public boolean invitePlayer(long, java.lang.String);
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen getNewScreen();
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen getNewScreenWithKnownData(com.mojang.realmsclient.dto.RealmsServer);
+  private void lambda$fetchSubscription$3(com.mojang.realmsclient.dto.Subscription);
+  private void lambda$fetchSubscription$1(com.mojang.realmsclient.exception.RealmsServiceException);
+  private void lambda$fetchSubscription$2(com.mojang.realmsclient.exception.RealmsServiceException);
+  private static com.mojang.realmsclient.dto.Subscription lambda$fetchSubscription$0(long, com.mojang.realmsclient.client.RealmsClient) throws com.mojang.realmsclient.exception.RealmsServiceException;
+  private void lambda$fetchServerData$1(com.mojang.realmsclient.dto.RealmsServer);
+  private static com.mojang.realmsclient.dto.RealmsServer lambda$fetchServerData$0(long, com.mojang.realmsclient.client.RealmsClient) throws com.mojang.realmsclient.exception.RealmsServiceException;
+  private void lambda$fetchRegionData$0(com.mojang.realmsclient.dto.PreferredRegionsDto);
+  private void lambda$init$2(net.minecraft.client.gui.components.AbstractWidget);
+  private void lambda$init$1(net.minecraft.client.gui.components.Button);
+  private void lambda$init$0(net.minecraft.client.gui.components.Button);
+  private static void lambda$tabManager$1(com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, net.minecraft.client.gui.components.AbstractWidget);
+  private static void lambda$tabManager$0(com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, net.minecraft.client.gui.components.AbstractWidget);
+  static {};
+}
+Compiled from "RealmsInviteScreen.java"
+public class com.mojang.realmsclient.gui.screens.configuration.RealmsInviteScreen extends net.minecraft.realms.RealmsScreen {
+  private static final net.minecraft.network.chat.Component TITLE;
+  private static final net.minecraft.network.chat.Component NAME_LABEL;
+  private static final net.minecraft.network.chat.Component INVITING_PLAYER_TEXT;
+  private static final net.minecraft.network.chat.Component NO_SUCH_PLAYER_ERROR_TEXT;
+  private static final net.minecraft.network.chat.Component DUPLICATE_PLAYER_TEXT;
+  private final net.minecraft.client.gui.layouts.HeaderAndFooterLayout layout;
+  private net.minecraft.client.gui.components.EditBox profileName;
+  private net.minecraft.client.gui.components.Button inviteButton;
+  private final com.mojang.realmsclient.dto.RealmsServer serverData;
+  private final com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen configureScreen;
+  private net.minecraft.network.chat.Component message;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsInviteScreen(com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, com.mojang.realmsclient.dto.RealmsServer);
+  public void init();
+  protected void repositionElements();
+  protected void setInitialFocus();
+  private void onInvite();
+  private void showMessage(net.minecraft.network.chat.Component);
+  public void onClose();
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, float);
+  private void lambda$onInvite$2(java.lang.Boolean);
+  private java.lang.Boolean lambda$onInvite$1(long, java.lang.String);
+  private boolean lambda$onInvite$0(com.mojang.realmsclient.dto.PlayerInfo);
+  private static void lambda$init$2(com.mojang.realmsclient.gui.screens.configuration.RealmsInviteScreen, net.minecraft.client.gui.components.AbstractWidget);
+  private void lambda$init$1(net.minecraft.client.gui.components.Button);
+  private void lambda$init$0(net.minecraft.client.gui.components.Button);
+  static {};
+}
+Compiled from "RealmsPlayersTab.java"
+abstract class com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab$Entry extends net.minecraft.client.gui.components.ContainerObjectSelectionList$Entry<com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab$Entry> {
+  private com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab$Entry();
+}
+Compiled from "RealmsPlayersTab.java"
+class com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab$HeaderEntry extends com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab$Entry {
+  private java.lang.String cachedNumberOfInvites;
+  private final net.minecraft.client.gui.components.FocusableTextWidget invitedWidget;
+  final com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab this$0;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab$HeaderEntry(com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab);
+  public void extractContent(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, boolean, float);
+  private int height(int);
+  public java.util.List<? extends net.minecraft.client.gui.narration.NarratableEntry> narratables();
+  public java.util.List<? extends net.minecraft.client.gui.components.events.GuiEventListener> children();
+}
+Compiled from "RealmsPlayersTab.java"
+class com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab$InvitedObjectSelectionList extends net.minecraft.client.gui.components.ContainerObjectSelectionList<com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab$Entry> {
+  private static final int PLAYER_ENTRY_HEIGHT;
+  final com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab this$0;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab$InvitedObjectSelectionList(com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab, int, int);
+  private void updateList(com.mojang.realmsclient.dto.RealmsServer);
+  private void populateList(com.mojang.realmsclient.dto.RealmsServer);
+  protected void extractListBackground(net.minecraft.client.gui.GuiGraphicsExtractor);
+  protected void extractListSeparators(net.minecraft.client.gui.GuiGraphicsExtractor);
+  public int getRowWidth();
+  private com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab$PlayerEntry lambda$populateList$0(com.mojang.realmsclient.dto.PlayerInfo);
+}
+Compiled from "RealmsPlayersTab.java"
+class com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab$PlayerEntry extends com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab$Entry {
+  protected static final int SKIN_FACE_SIZE;
+  private static final net.minecraft.network.chat.Component NORMAL_USER_TEXT;
+  private static final net.minecraft.network.chat.Component OP_TEXT;
+  private static final net.minecraft.network.chat.Component REMOVE_TEXT;
+  private static final net.minecraft.resources.Identifier MAKE_OP_SPRITE;
+  private static final net.minecraft.resources.Identifier REMOVE_OP_SPRITE;
+  private static final net.minecraft.resources.Identifier REMOVE_PLAYER_SPRITE;
+  private static final int ICON_WIDTH;
+  private static final int ICON_HEIGHT;
+  private final com.mojang.realmsclient.dto.PlayerInfo playerInfo;
+  private final net.minecraft.client.gui.components.Button removeButton;
+  private final net.minecraft.client.gui.components.Button makeOpButton;
+  private final net.minecraft.client.gui.components.Button removeOpButton;
+  final com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab this$0;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab$PlayerEntry(com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab, com.mojang.realmsclient.dto.PlayerInfo);
+  private void op(int);
+  private void deop(int);
+  private void uninvite(int);
+  private void updateOps(com.mojang.realmsclient.dto.Ops);
+  private void updateOpButtons();
+  private net.minecraft.client.gui.components.Button activeOpButton();
+  public java.util.List<? extends net.minecraft.client.gui.components.events.GuiEventListener> children();
+  public java.util.List<? extends net.minecraft.client.gui.narration.NarratableEntry> narratables();
+  public void extractContent(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, boolean, float);
+  private void lambda$uninvite$0(com.mojang.realmsclient.dto.PlayerInfo, int, boolean);
+  private static void lambda$uninvite$2(com.mojang.realmsclient.exception.RealmsServiceException);
+  private void lambda$uninvite$1(com.mojang.realmsclient.dto.PlayerInfo, com.mojang.realmsclient.client.RealmsClient) throws com.mojang.realmsclient.exception.RealmsServiceException;
+  private void lambda$deop$2(com.mojang.realmsclient.dto.Ops);
+  private static void lambda$deop$1(com.mojang.realmsclient.exception.RealmsServiceException);
+  private com.mojang.realmsclient.dto.Ops lambda$deop$0(java.util.UUID, com.mojang.realmsclient.client.RealmsClient) throws com.mojang.realmsclient.exception.RealmsServiceException;
+  private void lambda$op$2(com.mojang.realmsclient.dto.Ops);
+  private static void lambda$op$1(com.mojang.realmsclient.exception.RealmsServiceException);
+  private com.mojang.realmsclient.dto.Ops lambda$op$0(java.util.UUID, com.mojang.realmsclient.client.RealmsClient) throws com.mojang.realmsclient.exception.RealmsServiceException;
+  private static net.minecraft.network.chat.MutableComponent lambda$new$5(com.mojang.realmsclient.dto.PlayerInfo, java.util.function.Supplier);
+  private void lambda$new$4(int, net.minecraft.client.gui.components.Button);
+  private static net.minecraft.network.chat.MutableComponent lambda$new$3(com.mojang.realmsclient.dto.PlayerInfo, java.util.function.Supplier);
+  private void lambda$new$2(int, net.minecraft.client.gui.components.Button);
+  private static net.minecraft.network.chat.MutableComponent lambda$new$1(com.mojang.realmsclient.dto.PlayerInfo, java.util.function.Supplier);
+  private void lambda$new$0(int, net.minecraft.client.gui.components.Button);
+  static {};
+}
+Compiled from "RealmsPlayersTab.java"
+public class com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab extends net.minecraft.client.gui.components.tabs.GridLayoutTab implements com.mojang.realmsclient.gui.screens.configuration.RealmsConfigurationTab {
+  private static final org.slf4j.Logger LOGGER;
+  public static final net.minecraft.network.chat.Component TITLE;
+  private static final net.minecraft.network.chat.Component QUESTION_TITLE;
+  private static final int PADDING;
+  private final com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen configurationScreen;
+  private final net.minecraft.client.Minecraft minecraft;
+  private final net.minecraft.client.gui.Font font;
+  private com.mojang.realmsclient.dto.RealmsServer serverData;
+  private final com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab$InvitedObjectSelectionList invitedList;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsPlayersTab(com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, net.minecraft.client.Minecraft, com.mojang.realmsclient.dto.RealmsServer);
+  public int calculateListHeight();
+  public void doLayout(net.minecraft.client.gui.navigation.ScreenRectangle);
+  public void updateData(com.mojang.realmsclient.dto.RealmsServer);
+  private static void lambda$new$0(net.minecraft.client.Minecraft, com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.gui.components.Button);
+  static {};
+}
+Compiled from "RealmsPreferredRegionSelectionScreen.java"
+class com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList$Entry extends net.minecraft.client.gui.components.ObjectSelectionList$Entry<com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList$Entry> {
+  private final com.mojang.realmsclient.gui.screens.configuration.RealmsSettingsTab$RegionSelection regionSelection;
+  private final net.minecraft.network.chat.Component name;
+  final com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList this$1;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList$Entry(com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList, com.mojang.realmsclient.dto.RegionSelectionPreference, com.mojang.realmsclient.dto.RealmsRegion);
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList$Entry(com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList, com.mojang.realmsclient.gui.screens.configuration.RealmsSettingsTab$RegionSelection);
+  public net.minecraft.network.chat.Component getNarration();
+  public void extractContent(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, boolean, float);
+  public boolean mouseClicked(net.minecraft.client.input.MouseButtonEvent, boolean);
+  public boolean keyPressed(net.minecraft.client.input.KeyEvent);
+}
+Compiled from "RealmsPreferredRegionSelectionScreen.java"
+class com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList extends net.minecraft.client.gui.components.ObjectSelectionList<com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList$Entry> {
+  final com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen this$0;
+  private com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList(com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen);
+  public void setSelected(com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList$Entry);
+  public void setSelected(net.minecraft.client.gui.components.AbstractSelectionList$Entry);
+  static net.minecraft.client.Minecraft access$200(com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList);
+  static net.minecraft.client.Minecraft access$300(com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList);
+  private static void lambda$new$1(com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList, com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList$Entry);
+  private com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList$Entry lambda$new$0(com.mojang.realmsclient.dto.RealmsRegion);
+}
+Compiled from "RealmsPreferredRegionSelectionScreen.java"
+public class com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen extends net.minecraft.client.gui.screens.Screen {
+  private static final net.minecraft.network.chat.Component REGION_SELECTION_LABEL;
+  private static final int SPACING;
+  private final net.minecraft.client.gui.layouts.HeaderAndFooterLayout layout;
+  private final net.minecraft.client.gui.screens.Screen parent;
+  private final java.util.function.BiConsumer<com.mojang.realmsclient.dto.RegionSelectionPreference, com.mojang.realmsclient.dto.RealmsRegion> applySettings;
+  private final java.util.Map<com.mojang.realmsclient.dto.RealmsRegion, com.mojang.realmsclient.dto.ServiceQuality> regionServiceQuality;
+  private com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList list;
+  private com.mojang.realmsclient.gui.screens.configuration.RealmsSettingsTab$RegionSelection selection;
+  private net.minecraft.client.gui.components.Button doneButton;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen(net.minecraft.client.gui.screens.Screen, java.util.function.BiConsumer<com.mojang.realmsclient.dto.RegionSelectionPreference, com.mojang.realmsclient.dto.RealmsRegion>, java.util.Map<com.mojang.realmsclient.dto.RealmsRegion, com.mojang.realmsclient.dto.ServiceQuality>, com.mojang.realmsclient.gui.screens.configuration.RealmsSettingsTab$RegionSelection);
+  public void onClose();
+  protected void init();
+  protected void repositionElements();
+  private void onDone();
+  private void updateButtonValidity();
+  static net.minecraft.client.Minecraft access$000(com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen);
+  static net.minecraft.client.gui.Font access$100(com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen);
+  private static void lambda$init$3(com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen, net.minecraft.client.gui.components.AbstractWidget);
+  private boolean lambda$init$2(com.mojang.realmsclient.gui.screens.configuration.RealmsPreferredRegionSelectionScreen$RegionSelectionList$Entry);
+  private void lambda$init$1(net.minecraft.client.gui.components.Button);
+  private void lambda$init$0(net.minecraft.client.gui.components.Button);
+  static {};
+}
+Compiled from "RealmsSettingsTab.java"
+public final class com.mojang.realmsclient.gui.screens.configuration.RealmsSettingsTab$RegionSelection extends java.lang.Record {
+  private final com.mojang.realmsclient.dto.RegionSelectionPreference preference;
+  private final com.mojang.realmsclient.dto.RealmsRegion region;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsSettingsTab$RegionSelection(com.mojang.realmsclient.dto.RegionSelectionPreference, com.mojang.realmsclient.dto.RealmsRegion);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.realmsclient.dto.RegionSelectionPreference preference();
+  public com.mojang.realmsclient.dto.RealmsRegion region();
+}
+Compiled from "RealmsSettingsTab.java"
+public class com.mojang.realmsclient.gui.screens.configuration.RealmsSettingsTab extends net.minecraft.client.gui.components.tabs.GridLayoutTab implements com.mojang.realmsclient.gui.screens.configuration.RealmsConfigurationTab {
+  private static final int COMPONENT_WIDTH;
+  private static final int EXTRA_SPACING;
+  private static final int DEFAULT_SPACING;
+  public static final net.minecraft.network.chat.Component TITLE;
+  private static final net.minecraft.network.chat.Component NAME_LABEL;
+  private static final net.minecraft.network.chat.Component DESCRIPTION_LABEL;
+  private static final net.minecraft.network.chat.Component REGION_PREFERENCE_LABEL;
+  private static final net.minecraft.client.gui.components.Tooltip REALM_NAME_VALIDATION_ERROR_TOOLTIP;
+  private final com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen configurationScreen;
+  private final net.minecraft.client.Minecraft minecraft;
+  private com.mojang.realmsclient.dto.RealmsServer serverData;
+  private final java.util.Map<com.mojang.realmsclient.dto.RealmsRegion, com.mojang.realmsclient.dto.ServiceQuality> regionServiceQuality;
+  private final net.minecraft.client.gui.components.Button closeOpenButton;
+  private final net.minecraft.client.gui.components.EditBox descEdit;
+  private final net.minecraft.client.gui.components.EditBox nameEdit;
+  private final net.minecraft.client.gui.components.StringWidget selectedRegionStringWidget;
+  private final net.minecraft.client.gui.components.ImageWidget selectedRegionImageWidget;
+  private com.mojang.realmsclient.gui.screens.configuration.RealmsSettingsTab$RegionSelection preferredRegionSelection;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsSettingsTab(com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, net.minecraft.client.Minecraft, com.mojang.realmsclient.dto.RealmsServer, java.util.Map<com.mojang.realmsclient.dto.RealmsRegion, com.mojang.realmsclient.dto.ServiceQuality>);
+  private static net.minecraft.network.chat.MutableComponent getTranslatableFromPreference(com.mojang.realmsclient.gui.screens.configuration.RealmsSettingsTab$RegionSelection);
+  private static net.minecraft.resources.Identifier getServiceQualityIcon(com.mojang.realmsclient.gui.screens.configuration.RealmsSettingsTab$RegionSelection, java.util.Map<com.mojang.realmsclient.dto.RealmsRegion, com.mojang.realmsclient.dto.ServiceQuality>);
+  private boolean isRealmNameValid();
+  private void openPreferenceSelector();
+  private void applyRegionPreferenceSelection(com.mojang.realmsclient.dto.RegionSelectionPreference, com.mojang.realmsclient.dto.RealmsRegion);
+  private void updateRegionPreferenceValues();
+  public void onSelected(com.mojang.realmsclient.dto.RealmsServer);
+  public void updateData(com.mojang.realmsclient.dto.RealmsServer);
+  public void onDeselected(com.mojang.realmsclient.dto.RealmsServer);
+  public void save();
+  private static void lambda$updateData$0(com.mojang.realmsclient.dto.RealmsServer, com.mojang.realmsclient.dto.RealmsRegion);
+  private void lambda$new$2(com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.Minecraft, com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, net.minecraft.client.gui.components.Button);
+  private void lambda$new$3(com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, net.minecraft.client.gui.components.PopupScreen);
+  private void lambda$new$1(net.minecraft.client.gui.components.Button);
+  private void lambda$new$0(java.lang.String);
+  static {};
+}
+Compiled from "RealmsSlotOptionsScreen.java"
+class com.mojang.realmsclient.gui.screens.configuration.RealmsSlotOptionsScreen$1 {
+  static final int[] $SwitchMap$com$mojang$realmsclient$dto$RealmsServer$WorldType;
+  static {};
+}
+Compiled from "RealmsSlotOptionsScreen.java"
+class com.mojang.realmsclient.gui.screens.configuration.RealmsSlotOptionsScreen$SettingsSlider extends net.minecraft.client.gui.components.AbstractSliderButton {
+  private final double minValue;
+  private final double maxValue;
+  final com.mojang.realmsclient.gui.screens.configuration.RealmsSlotOptionsScreen this$0;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsSlotOptionsScreen$SettingsSlider(com.mojang.realmsclient.gui.screens.configuration.RealmsSlotOptionsScreen, int, int, int, int, float, float);
+  public void applyValue();
+  protected void updateMessage();
+}
+Compiled from "RealmsSlotOptionsScreen.java"
+public class com.mojang.realmsclient.gui.screens.configuration.RealmsSlotOptionsScreen extends net.minecraft.realms.RealmsScreen {
+  private static final int DEFAULT_DIFFICULTY;
+  public static final java.util.List<net.minecraft.world.Difficulty> DIFFICULTIES;
+  private static final int DEFAULT_GAME_MODE;
+  public static final java.util.List<net.minecraft.world.level.GameType> GAME_MODES;
+  private static final net.minecraft.network.chat.Component TITLE;
+  private static final net.minecraft.network.chat.Component WORLD_NAME_EDIT_LABEL;
+  private static final net.minecraft.network.chat.Component SPAWN_PROTECTION_TEXT;
+  private static final net.minecraft.network.chat.Component GAME_MODE_BUTTON;
+  private static final net.minecraft.network.chat.Component DIFFICULTY_BUTTON;
+  private static final net.minecraft.network.chat.Component FORCE_GAME_MODE_BUTTON;
+  private static final int SPACING;
+  private final net.minecraft.client.gui.layouts.HeaderAndFooterLayout layout;
+  private final com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen parentScreen;
+  private final com.mojang.realmsclient.dto.RealmsSlot slot;
+  private final com.mojang.realmsclient.dto.RealmsServer$WorldType worldType;
+  private final java.lang.String defaultSlotName;
+  private int spawnProtection;
+  private boolean forceGameMode;
+  private net.minecraft.world.Difficulty difficulty;
+  private net.minecraft.world.level.GameType gameMode;
+  private java.lang.String worldName;
+  private net.minecraft.client.gui.components.StringWidget warningHeader;
+  private com.mojang.realmsclient.gui.screens.configuration.RealmsSlotOptionsScreen$SettingsSlider spawnProtectionButton;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsSlotOptionsScreen(com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, com.mojang.realmsclient.dto.RealmsSlot, com.mojang.realmsclient.dto.RealmsServer$WorldType, int);
+  public void init();
+  protected void repositionElements();
+  public void onClose();
+  private static <T> T findByIndex(java.util.List<T>, int, int);
+  private static <T> int findIndex(java.util.List<T>, T, int);
+  public net.minecraft.network.chat.Component getNarrationMessage();
+  private void setWorldName(java.lang.String);
+  private void saveSettings();
+  private static void lambda$init$5(com.mojang.realmsclient.gui.screens.configuration.RealmsSlotOptionsScreen, net.minecraft.client.gui.components.AbstractWidget);
+  private void lambda$init$4(net.minecraft.client.gui.components.Button);
+  private void lambda$init$3(net.minecraft.client.gui.components.Button);
+  private void lambda$init$2(net.minecraft.client.gui.components.CycleButton, java.lang.Boolean);
+  private void lambda$init$1(net.minecraft.client.gui.components.CycleButton, net.minecraft.world.level.GameType);
+  private void lambda$init$0(net.minecraft.client.gui.components.CycleButton, net.minecraft.world.Difficulty);
+  static {};
+}
+Compiled from "RealmsSubscriptionTab.java"
+public class com.mojang.realmsclient.gui.screens.configuration.RealmsSubscriptionTab extends net.minecraft.client.gui.components.tabs.GridLayoutTab implements com.mojang.realmsclient.gui.screens.configuration.RealmsConfigurationTab {
+  private static final int DEFAULT_COMPONENT_WIDTH;
+  private static final int EXTRA_SPACING;
+  private static final int DEFAULT_SPACING;
+  public static final net.minecraft.network.chat.Component TITLE;
+  private static final net.minecraft.network.chat.Component SUBSCRIPTION_START_LABEL;
+  private static final net.minecraft.network.chat.Component TIME_LEFT_LABEL;
+  private static final net.minecraft.network.chat.Component DAYS_LEFT_LABEL;
+  private static final net.minecraft.network.chat.Component SUBSCRIPTION_EXPIRED_TEXT;
+  private static final net.minecraft.network.chat.Component SUBSCRIPTION_LESS_THAN_A_DAY_TEXT;
+  private static final net.minecraft.network.chat.Component RECURRING_INFO;
+  private final com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen configurationScreen;
+  private final net.minecraft.client.Minecraft minecraft;
+  private final net.minecraft.client.gui.components.Button deleteButton;
+  private final net.minecraft.client.gui.components.FocusableTextWidget subscriptionInfo;
+  private final net.minecraft.network.chat.Component startDate;
+  private final net.minecraft.network.chat.Component daysLeft;
+  private com.mojang.realmsclient.dto.RealmsServer serverData;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsSubscriptionTab(com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, net.minecraft.client.Minecraft, com.mojang.realmsclient.dto.RealmsServer, com.mojang.realmsclient.dto.Subscription);
+  private void deleteRealm();
+  private static net.minecraft.network.chat.Component localPresentation(java.time.Instant);
+  private net.minecraft.network.chat.Component daysLeftPresentation(int);
+  public void updateData(com.mojang.realmsclient.dto.RealmsServer);
+  public net.minecraft.network.chat.Component getTabExtraNarration();
+  private void lambda$deleteRealm$1();
+  private void lambda$deleteRealm$0(com.mojang.realmsclient.client.RealmsClient) throws com.mojang.realmsclient.exception.RealmsServiceException;
+  private void lambda$new$1(net.minecraft.client.Minecraft, com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, net.minecraft.client.gui.components.Button);
+  private void lambda$new$2(net.minecraft.client.gui.components.PopupScreen);
+  private static void lambda$new$0(com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.Minecraft, net.minecraft.client.gui.components.Button);
+  static {};
+}
+Compiled from "RealmsWorldsTab.java"
+class com.mojang.realmsclient.gui.screens.configuration.RealmsWorldsTab$1 {
+  static final int[] $SwitchMap$com$mojang$realmsclient$gui$RealmsWorldSlotButton$Action;
+  static {};
+}
+Compiled from "RealmsWorldsTab.java"
+public class com.mojang.realmsclient.gui.screens.configuration.RealmsWorldsTab extends net.minecraft.client.gui.components.tabs.GridLayoutTab implements com.mojang.realmsclient.gui.screens.configuration.RealmsConfigurationTab {
+  static final net.minecraft.network.chat.Component TITLE;
+  private final com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen configurationScreen;
+  private final net.minecraft.client.Minecraft minecraft;
+  private com.mojang.realmsclient.dto.RealmsServer serverData;
+  private final net.minecraft.client.gui.components.Button optionsButton;
+  private final net.minecraft.client.gui.components.Button backupButton;
+  private final net.minecraft.client.gui.components.Button resetWorldButton;
+  private final java.util.List<com.mojang.realmsclient.gui.RealmsWorldSlotButton> slotButtonList;
+  public com.mojang.realmsclient.gui.screens.configuration.RealmsWorldsTab(com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, net.minecraft.client.Minecraft, com.mojang.realmsclient.dto.RealmsServer);
+  private void resetButtonPressed();
+  private void templateSelectionCallback(com.mojang.realmsclient.dto.WorldTemplate);
+  private boolean isMinigame();
+  public void onSelected(com.mojang.realmsclient.dto.RealmsServer);
+  public void updateData(com.mojang.realmsclient.dto.RealmsServer);
+  private com.mojang.realmsclient.gui.RealmsWorldSlotButton createSlotButton(int);
+  private void switchToMinigame();
+  private void switchToFullSlot(int, com.mojang.realmsclient.dto.RealmsServer);
+  private void switchToEmptySlot(int, com.mojang.realmsclient.dto.RealmsServer);
+  private void lambda$switchToEmptySlot$0(int, com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.gui.components.PopupScreen);
+  private void lambda$switchToEmptySlot$1();
+  private void lambda$switchToEmptySlot$2();
+  private void lambda$switchToFullSlot$0(com.mojang.realmsclient.dto.RealmsServer, int, net.minecraft.client.gui.components.PopupScreen);
+  private void lambda$switchToFullSlot$1(com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen);
+  private void lambda$switchToFullSlot$2(com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen);
+  private void lambda$createSlotButton$0(int, net.minecraft.client.gui.components.Button);
+  private void lambda$resetButtonPressed$0();
+  private void lambda$resetButtonPressed$1();
+  private void lambda$new$2(net.minecraft.client.gui.components.Button);
+  private static void lambda$new$1(net.minecraft.client.Minecraft, com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.gui.components.Button);
+  private static void lambda$new$0(net.minecraft.client.Minecraft, com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen, com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.gui.components.Button);
+  static {};
+}
+Compiled from "package-info.java"
+interface com.mojang.realmsclient.gui.screens.configuration.package-info {
+}

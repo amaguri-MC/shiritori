@@ -1,0 +1,108 @@
+Compiled from "PackFormat.java"
+class net.minecraft.server.packs.metadata.pack.PackFormat$1 {
+  static final int[] $SwitchMap$net$minecraft$server$packs$PackType;
+  static {};
+}
+Compiled from "PackFormat.java"
+public final class net.minecraft.server.packs.metadata.pack.PackFormat$IntermediaryFormat extends java.lang.Record {
+  private final java.util.Optional<net.minecraft.server.packs.metadata.pack.PackFormat> min;
+  private final java.util.Optional<net.minecraft.server.packs.metadata.pack.PackFormat> max;
+  private final java.util.Optional<java.lang.Integer> format;
+  private final java.util.Optional<net.minecraft.util.InclusiveRange<java.lang.Integer>> supported;
+  private static final com.mojang.serialization.MapCodec<net.minecraft.server.packs.metadata.pack.PackFormat$IntermediaryFormat> PACK_CODEC;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.server.packs.metadata.pack.PackFormat$IntermediaryFormat> OVERLAY_CODEC;
+  public net.minecraft.server.packs.metadata.pack.PackFormat$IntermediaryFormat(java.util.Optional<net.minecraft.server.packs.metadata.pack.PackFormat>, java.util.Optional<net.minecraft.server.packs.metadata.pack.PackFormat>, java.util.Optional<java.lang.Integer>, java.util.Optional<net.minecraft.util.InclusiveRange<java.lang.Integer>>);
+  public static net.minecraft.server.packs.metadata.pack.PackFormat$IntermediaryFormat fromRange(net.minecraft.util.InclusiveRange<net.minecraft.server.packs.metadata.pack.PackFormat>, int);
+  public int effectiveMinMajorVersion();
+  public com.mojang.serialization.DataResult<net.minecraft.util.InclusiveRange<net.minecraft.server.packs.metadata.pack.PackFormat>> validate(int, boolean, boolean, java.lang.String, java.lang.String);
+  private com.mojang.serialization.DataResult<net.minecraft.util.InclusiveRange<net.minecraft.server.packs.metadata.pack.PackFormat>> validateNewFormat(int, boolean, boolean, java.lang.String, java.lang.String);
+  private com.mojang.serialization.DataResult<net.minecraft.util.InclusiveRange<net.minecraft.server.packs.metadata.pack.PackFormat>> validateOldFormat(int, boolean, java.lang.String, java.lang.String);
+  private java.lang.String validatePackFormatForRange(int, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Optional<net.minecraft.server.packs.metadata.pack.PackFormat> min();
+  public java.util.Optional<net.minecraft.server.packs.metadata.pack.PackFormat> max();
+  public java.util.Optional<java.lang.Integer> format();
+  public java.util.Optional<net.minecraft.util.InclusiveRange<java.lang.Integer>> supported();
+  private static java.lang.String lambda$validateOldFormat$2(java.lang.String, int, int);
+  private static java.lang.String lambda$validateOldFormat$1(java.lang.String);
+  private static java.lang.String lambda$validateOldFormat$0(java.lang.String, int);
+  private static java.lang.String lambda$validateNewFormat$7(java.lang.String, int, int);
+  private static java.lang.String lambda$validateNewFormat$6(java.lang.String);
+  private static java.lang.String lambda$validateNewFormat$5(java.lang.String, int, int, java.lang.String);
+  private java.lang.String lambda$validateNewFormat$4(java.lang.String, java.lang.String, net.minecraft.util.InclusiveRange);
+  private java.lang.String lambda$validateNewFormat$3(java.lang.String, java.lang.String, net.minecraft.util.InclusiveRange);
+  private static java.lang.String lambda$validateNewFormat$2(java.lang.String);
+  private static java.lang.String lambda$validateNewFormat$1(java.lang.String, java.lang.String, int);
+  private java.lang.String lambda$validateNewFormat$0(java.lang.String);
+  private static java.lang.String lambda$validate$3(java.lang.String);
+  private static java.lang.String lambda$validate$2(java.lang.String, int);
+  private static java.lang.String lambda$validate$1(java.lang.String, java.lang.String);
+  private static java.lang.String lambda$validate$0(java.lang.String);
+  private static com.mojang.datafixers.kinds.App lambda$static$1(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.server.packs.metadata.pack.PackFormat$IntermediaryFormat lambda$static$2(java.util.Optional, java.util.Optional, java.util.Optional);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "PackFormat.java"
+public interface net.minecraft.server.packs.metadata.pack.PackFormat$IntermediaryFormatHolder {
+  public abstract net.minecraft.server.packs.metadata.pack.PackFormat$IntermediaryFormat format();
+}
+Compiled from "PackFormat.java"
+public final class net.minecraft.server.packs.metadata.pack.PackFormat extends java.lang.Record implements java.lang.Comparable<net.minecraft.server.packs.metadata.pack.PackFormat> {
+  private final int major;
+  private final int minor;
+  private static final org.slf4j.Logger LOGGER;
+  public static final com.mojang.serialization.Codec<net.minecraft.server.packs.metadata.pack.PackFormat> BOTTOM_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.server.packs.metadata.pack.PackFormat> TOP_CODEC;
+  public net.minecraft.server.packs.metadata.pack.PackFormat(int, int);
+  private static com.mojang.serialization.Codec<net.minecraft.server.packs.metadata.pack.PackFormat> fullCodec(int);
+  public static <ResultType, HolderType extends net.minecraft.server.packs.metadata.pack.PackFormat$IntermediaryFormatHolder> com.mojang.serialization.DataResult<java.util.List<ResultType>> validateHolderList(java.util.List<HolderType>, int, java.util.function.BiFunction<HolderType, net.minecraft.util.InclusiveRange<net.minecraft.server.packs.metadata.pack.PackFormat>, ResultType>);
+  public static int lastPreMinorVersion(net.minecraft.server.packs.PackType);
+  public static com.mojang.serialization.MapCodec<net.minecraft.util.InclusiveRange<net.minecraft.server.packs.metadata.pack.PackFormat>> packCodec(net.minecraft.server.packs.PackType);
+  public static net.minecraft.server.packs.metadata.pack.PackFormat of(int, int);
+  public static net.minecraft.server.packs.metadata.pack.PackFormat of(int);
+  public net.minecraft.util.InclusiveRange<net.minecraft.server.packs.metadata.pack.PackFormat> minorRange();
+  public int compareTo(net.minecraft.server.packs.metadata.pack.PackFormat);
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int major();
+  public int minor();
+  public int compareTo(java.lang.Object);
+  private static com.mojang.serialization.DataResult lambda$packCodec$1(int, net.minecraft.util.InclusiveRange);
+  private static com.mojang.serialization.DataResult lambda$packCodec$0(int, net.minecraft.server.packs.metadata.pack.PackFormat$IntermediaryFormat);
+  private static java.util.List lambda$fullCodec$1(int, net.minecraft.server.packs.metadata.pack.PackFormat);
+  private static net.minecraft.server.packs.metadata.pack.PackFormat lambda$fullCodec$0(int, java.util.List);
+  static {};
+}
+Compiled from "PackMetadataSection.java"
+class net.minecraft.server.packs.metadata.pack.PackMetadataSection$1 {
+  static final int[] $SwitchMap$net$minecraft$server$packs$PackType;
+  static {};
+}
+Compiled from "PackMetadataSection.java"
+public final class net.minecraft.server.packs.metadata.pack.PackMetadataSection extends java.lang.Record {
+  private final net.minecraft.network.chat.Component description;
+  private final net.minecraft.util.InclusiveRange<net.minecraft.server.packs.metadata.pack.PackFormat> supportedFormats;
+  private static final com.mojang.serialization.Codec<net.minecraft.server.packs.metadata.pack.PackMetadataSection> FALLBACK_CODEC;
+  public static final net.minecraft.server.packs.metadata.MetadataSectionType<net.minecraft.server.packs.metadata.pack.PackMetadataSection> CLIENT_TYPE;
+  public static final net.minecraft.server.packs.metadata.MetadataSectionType<net.minecraft.server.packs.metadata.pack.PackMetadataSection> SERVER_TYPE;
+  public static final net.minecraft.server.packs.metadata.MetadataSectionType<net.minecraft.server.packs.metadata.pack.PackMetadataSection> FALLBACK_TYPE;
+  public net.minecraft.server.packs.metadata.pack.PackMetadataSection(net.minecraft.network.chat.Component, net.minecraft.util.InclusiveRange<net.minecraft.server.packs.metadata.pack.PackFormat>);
+  private static com.mojang.serialization.Codec<net.minecraft.server.packs.metadata.pack.PackMetadataSection> codecForPackType(net.minecraft.server.packs.PackType);
+  public static net.minecraft.server.packs.metadata.MetadataSectionType<net.minecraft.server.packs.metadata.pack.PackMetadataSection> forPackType(net.minecraft.server.packs.PackType);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.network.chat.Component description();
+  public net.minecraft.util.InclusiveRange<net.minecraft.server.packs.metadata.pack.PackFormat> supportedFormats();
+  private static com.mojang.datafixers.kinds.App lambda$codecForPackType$0(net.minecraft.server.packs.PackType, com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.server.packs.metadata.pack.PackMetadataSection lambda$static$1(net.minecraft.network.chat.Component);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.server.packs.metadata.pack.package-info {
+}

@@ -1,0 +1,848 @@
+Compiled from "IcebergFeature.java"
+public class net.minecraft.world.level.levelgen.feature.IcebergFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.IcebergFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration>);
+  private void generateCutOut(net.minecraft.util.RandomSource, net.minecraft.world.level.LevelAccessor, int, int, net.minecraft.core.BlockPos, boolean, int, double, int);
+  private void carve(int, int, net.minecraft.core.BlockPos, net.minecraft.world.level.LevelAccessor, boolean, double, net.minecraft.core.BlockPos, int, int);
+  private void removeFloatingSnowLayer(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos);
+  private void generateIcebergBlock(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, int, int, int, int, int, int, boolean, int, double, boolean, net.minecraft.world.level.block.state.BlockState);
+  private void setIcebergBlock(net.minecraft.core.BlockPos, net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, int, int, boolean, boolean, net.minecraft.world.level.block.state.BlockState);
+  private int getEllipseC(int, int, int);
+  private double signedDistanceCircle(int, int, net.minecraft.core.BlockPos, int, net.minecraft.util.RandomSource);
+  private double signedDistanceEllipse(int, int, net.minecraft.core.BlockPos, int, int, double);
+  private int heightDependentRadiusRound(net.minecraft.util.RandomSource, int, int, int);
+  private int heightDependentRadiusEllipse(int, int, int);
+  private int heightDependentRadiusSteep(net.minecraft.util.RandomSource, int, int, int);
+  private static boolean isIcebergState(net.minecraft.world.level.block.state.BlockState);
+  private boolean belowIsAir(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  private void smooth(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, int, int, boolean, int);
+}
+Compiled from "BasaltColumnsFeature.java"
+public class net.minecraft.world.level.levelgen.feature.BasaltColumnsFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.ColumnFeatureConfiguration> {
+  private static final com.google.common.collect.ImmutableList<net.minecraft.world.level.block.Block> CANNOT_PLACE_ON;
+  private static final int CLUSTERED_REACH;
+  private static final int CLUSTERED_SIZE;
+  private static final int UNCLUSTERED_REACH;
+  private static final int UNCLUSTERED_SIZE;
+  public net.minecraft.world.level.levelgen.feature.BasaltColumnsFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.ColumnFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.ColumnFeatureConfiguration>);
+  private boolean placeColumn(net.minecraft.world.level.LevelAccessor, int, net.minecraft.core.BlockPos, int, int);
+  private static net.minecraft.core.BlockPos findSurface(net.minecraft.world.level.LevelAccessor, int, net.minecraft.core.BlockPos$MutableBlockPos, int);
+  private static boolean canPlaceAt(net.minecraft.world.level.LevelAccessor, int, net.minecraft.core.BlockPos$MutableBlockPos);
+  private static net.minecraft.core.BlockPos findAir(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos$MutableBlockPos, int);
+  private static boolean isAirOrLavaOcean(net.minecraft.world.level.LevelAccessor, int, net.minecraft.core.BlockPos);
+  static {};
+}
+Compiled from "SnowAndFreezeFeature.java"
+public class net.minecraft.world.level.levelgen.feature.SnowAndFreezeFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.SnowAndFreezeFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+}
+Compiled from "VinesFeature.java"
+public class net.minecraft.world.level.levelgen.feature.VinesFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.VinesFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+}
+Compiled from "FillLayerFeature.java"
+public class net.minecraft.world.level.levelgen.feature.FillLayerFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.LayerConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.FillLayerFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.LayerConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.LayerConfiguration>);
+}
+Compiled from "GlowstoneFeature.java"
+public class net.minecraft.world.level.levelgen.feature.GlowstoneFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.GlowstoneFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+}
+Compiled from "FossilFeature.java"
+public class net.minecraft.world.level.levelgen.feature.FossilFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.FossilFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.FossilFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.FossilFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.FossilFeatureConfiguration>);
+  private static int countEmptyCorners(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.levelgen.structure.BoundingBox);
+  private static void lambda$countEmptyCorners$0(net.minecraft.world.level.WorldGenLevel, org.apache.commons.lang3.mutable.MutableInt, net.minecraft.core.BlockPos);
+}
+Compiled from "SpringFeature.java"
+public class net.minecraft.world.level.levelgen.feature.SpringFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.SpringFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration>);
+}
+Compiled from "VoidStartPlatformFeature.java"
+public class net.minecraft.world.level.levelgen.feature.VoidStartPlatformFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  private static final net.minecraft.core.BlockPos PLATFORM_OFFSET;
+  private static final net.minecraft.world.level.ChunkPos PLATFORM_ORIGIN_CHUNK;
+  private static final int PLATFORM_RADIUS;
+  private static final int PLATFORM_RADIUS_CHUNKS;
+  public net.minecraft.world.level.levelgen.feature.VoidStartPlatformFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  private static int checkerboardDistance(int, int, int, int);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  static {};
+}
+Compiled from "LargeDripstoneFeature.java"
+final class net.minecraft.world.level.levelgen.feature.LargeDripstoneFeature$LargeDripstone {
+  private net.minecraft.core.BlockPos root;
+  private final boolean pointingUp;
+  private int radius;
+  private final double bluntness;
+  private final double scale;
+  private net.minecraft.world.level.levelgen.feature.LargeDripstoneFeature$LargeDripstone(net.minecraft.core.BlockPos, boolean, int, double, double);
+  private int getHeight();
+  private int getMinY();
+  private int getMaxY();
+  private boolean moveBackUntilBaseIsInsideStoneAndShrinkRadiusIfNecessary(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.levelgen.feature.LargeDripstoneFeature$WindOffsetter);
+  private int getHeightAtRadius(float);
+  private void placeBlocks(net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.LargeDripstoneFeature$WindOffsetter);
+  private boolean isSuitableForWind(net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration);
+}
+Compiled from "ReplaceBlobsFeature.java"
+public class net.minecraft.world.level.levelgen.feature.ReplaceBlobsFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.ReplaceSphereConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.ReplaceBlobsFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.ReplaceSphereConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.ReplaceSphereConfiguration>);
+  private static net.minecraft.core.BlockPos findTarget(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos$MutableBlockPos, net.minecraft.world.level.block.Block);
+}
+Compiled from "EndPodiumFeature.java"
+public class net.minecraft.world.level.levelgen.feature.EndPodiumFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  public static final int PODIUM_RADIUS;
+  public static final int PODIUM_PILLAR_HEIGHT;
+  public static final int RIM_RADIUS;
+  public static final float CORNER_ROUNDING;
+  private static final net.minecraft.core.BlockPos END_PODIUM_LOCATION;
+  private final boolean active;
+  public static net.minecraft.core.BlockPos getLocation(net.minecraft.core.BlockPos);
+  public net.minecraft.world.level.levelgen.feature.EndPodiumFeature(boolean);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  private void dropPreviousAndSetBlock(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block);
+  static {};
+}
+Compiled from "SpeleothemClusterFeature.java"
+public class net.minecraft.world.level.levelgen.feature.SpeleothemClusterFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.SpeleothemClusterFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration>);
+  private void placeColumn(net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, int, int, float, double, int, float, net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private boolean isLava(net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos);
+  private int getSpeleothemHeight(net.minecraft.util.RandomSource, int, int, float, int, net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private boolean canPlacePool(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private boolean canBeAdjacentToWater(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos);
+  private void replaceBlocksWithBaseBlocks(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, int, net.minecraft.core.Direction, net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private double getChanceOfStalagmiteOrStalactite(int, int, int, int, net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration);
+  private static float randomBetweenBiased(net.minecraft.util.RandomSource, float, float, float, float);
+}
+Compiled from "HugeFungusFeature.java"
+public class net.minecraft.world.level.levelgen.feature.HugeFungusFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration> {
+  private static final float HUGE_PROBABILITY;
+  public net.minecraft.world.level.levelgen.feature.HugeFungusFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration>);
+  private static boolean isReplaceable(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration, boolean);
+  private void placeStem(net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration, net.minecraft.core.BlockPos, int, boolean);
+  private void placeHat(net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration, net.minecraft.core.BlockPos, int, boolean);
+  private void placeHatBlock(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration, net.minecraft.core.BlockPos$MutableBlockPos, float, float, float);
+  private void placeHatDropBlock(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, boolean);
+  private static void tryPlaceWeepingVines(net.minecraft.core.BlockPos, net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource);
+}
+Compiled from "LargeDripstoneFeature.java"
+final class net.minecraft.world.level.levelgen.feature.LargeDripstoneFeature$WindOffsetter {
+  private final int originY;
+  private final net.minecraft.world.phys.Vec3 windSpeed;
+  private final int maxOffset;
+  private net.minecraft.world.level.levelgen.feature.LargeDripstoneFeature$WindOffsetter(int, net.minecraft.util.RandomSource, net.minecraft.util.valueproviders.FloatProvider, int);
+  private net.minecraft.world.level.levelgen.feature.LargeDripstoneFeature$WindOffsetter();
+  private static net.minecraft.world.level.levelgen.feature.LargeDripstoneFeature$WindOffsetter noWind();
+  private net.minecraft.core.BlockPos offset(net.minecraft.core.BlockPos);
+}
+Compiled from "LakeFeature.java"
+public final class net.minecraft.world.level.levelgen.feature.LakeFeature$Configuration extends java.lang.Record implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  private final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider fluid;
+  private final net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider barrier;
+  private final net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate canPlaceFeature;
+  private final net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate canReplaceWithAirOrFluid;
+  private final net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate canReplaceWithBarrier;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.LakeFeature$Configuration> CODEC;
+  public net.minecraft.world.level.levelgen.feature.LakeFeature$Configuration(net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider, net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate, net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate, net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider fluid();
+  public net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider barrier();
+  public net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate canPlaceFeature();
+  public net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate canReplaceWithAirOrFluid();
+  public net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate canReplaceWithBarrier();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "FeatureCountTracker.java"
+public class net.minecraft.world.level.levelgen.feature.FeatureCountTracker {
+  private static final org.slf4j.Logger LOGGER;
+  private static final com.google.common.cache.LoadingCache<net.minecraft.server.level.ServerLevel, net.minecraft.world.level.levelgen.feature.FeatureCountTracker$LevelData> data;
+  public net.minecraft.world.level.levelgen.feature.FeatureCountTracker();
+  public static void chunkDecorated(net.minecraft.server.level.ServerLevel);
+  public static void featurePlaced(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>, java.util.Optional<net.minecraft.world.level.levelgen.placement.PlacedFeature>);
+  public static void clearCounts();
+  public static void logCounts();
+  private static void lambda$logCounts$0(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.levelgen.feature.FeatureCountTracker$LevelData);
+  private static void lambda$logCounts$1(java.lang.String, int, net.minecraft.core.Registry, net.minecraft.world.level.levelgen.feature.FeatureCountTracker$FeatureData, int);
+  private static java.lang.Integer lambda$featurePlaced$0(net.minecraft.world.level.levelgen.feature.FeatureCountTracker$FeatureData, java.lang.Integer);
+  static {};
+}
+Compiled from "OreFeature.java"
+public class net.minecraft.world.level.levelgen.feature.OreFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.OreFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration>);
+  protected boolean doPlace(net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration, double, double, double, double, double, double, int, int, int, int, int);
+  public static boolean canPlaceOre(net.minecraft.world.level.block.state.BlockState, java.util.function.Function<net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState>, net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration, net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration$TargetBlockState, net.minecraft.core.BlockPos$MutableBlockPos);
+  protected static boolean shouldSkipAirCheck(net.minecraft.util.RandomSource, float);
+}
+Compiled from "TreeFeature.java"
+public class net.minecraft.world.level.levelgen.feature.TreeFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration> {
+  private static final int BLOCK_UPDATE_FLAGS;
+  public net.minecraft.world.level.levelgen.feature.TreeFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration>);
+  public static boolean isVine(net.minecraft.world.level.LevelSimulatedReader, net.minecraft.core.BlockPos);
+  public static boolean isAirOrLeaves(net.minecraft.world.level.LevelSimulatedReader, net.minecraft.core.BlockPos);
+  private static void setBlockKnownShape(net.minecraft.world.level.LevelWriter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  public static boolean validTreePos(net.minecraft.world.level.LevelSimulatedReader, net.minecraft.core.BlockPos);
+  private boolean doPlace(net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, java.util.function.BiConsumer<net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState>, java.util.function.BiConsumer<net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState>, net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer$FoliageSetter, net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration);
+  private int getMaxFreeTreeHeight(net.minecraft.world.level.WorldGenLevel, int, net.minecraft.core.BlockPos, net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration);
+  protected void setBlock(net.minecraft.world.level.LevelWriter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  public final boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration>);
+  private static net.minecraft.world.phys.shapes.DiscreteVoxelShape updateLeaves(net.minecraft.world.level.LevelAccessor, net.minecraft.world.level.levelgen.structure.BoundingBox, java.util.Set<net.minecraft.core.BlockPos>, java.util.Set<net.minecraft.core.BlockPos>, java.util.Set<net.minecraft.core.BlockPos>);
+  public static java.util.List<net.minecraft.core.BlockPos> getLowestTrunkOrRootOfTree(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context);
+  private static java.lang.Boolean lambda$place$4(net.minecraft.world.level.WorldGenLevel, java.util.Set, java.util.Set, java.util.Set, net.minecraft.world.level.levelgen.structure.BoundingBox);
+  private static void lambda$place$3(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context, net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator);
+  private static void lambda$place$2(java.util.Set, net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  private static void lambda$place$1(java.util.Set, net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  private static void lambda$place$0(java.util.Set, net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  private static void lambda$doPlace$1(net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration, net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer$FoliageSetter, net.minecraft.util.RandomSource, int, int, int, net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer$FoliageAttachment);
+  private static net.minecraft.core.BlockPos lambda$doPlace$0(net.minecraft.core.BlockPos, net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.rootplacers.RootPlacer);
+  private static boolean lambda$validTreePos$0(net.minecraft.world.level.block.state.BlockState);
+  private static boolean lambda$isAirOrLeaves$0(net.minecraft.world.level.block.state.BlockState);
+  private static boolean lambda$isVine$0(net.minecraft.world.level.block.state.BlockState);
+}
+Compiled from "BonusChestFeature.java"
+public class net.minecraft.world.level.levelgen.feature.BonusChestFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.BonusChestFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+}
+Compiled from "BasaltPillarFeature.java"
+public class net.minecraft.world.level.levelgen.feature.BasaltPillarFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.BasaltPillarFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  private void placeBaseHangOff(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos);
+  private boolean placeHangOff(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos);
+}
+Compiled from "KelpFeature.java"
+public class net.minecraft.world.level.levelgen.feature.KelpFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.KelpFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+}
+Compiled from "DiskFeature.java"
+public class net.minecraft.world.level.levelgen.feature.DiskFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.DiskConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.DiskFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.DiskConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.DiskConfiguration>);
+  protected boolean placeColumn(net.minecraft.world.level.levelgen.feature.configurations.DiskConfiguration, net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, int, int, net.minecraft.core.BlockPos$MutableBlockPos);
+}
+Compiled from "SpeleothemFeature.java"
+public class net.minecraft.world.level.levelgen.feature.SpeleothemFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.SpeleothemFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration>);
+  private static java.util.Optional<net.minecraft.core.Direction> getTipDirection(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration);
+  private static void createPatchOfBaseBlocks(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration);
+}
+Compiled from "FeatureCountTracker.java"
+class net.minecraft.world.level.levelgen.feature.FeatureCountTracker$1 extends com.google.common.cache.CacheLoader<net.minecraft.server.level.ServerLevel, net.minecraft.world.level.levelgen.feature.FeatureCountTracker$LevelData> {
+  net.minecraft.world.level.levelgen.feature.FeatureCountTracker$1();
+  public net.minecraft.world.level.levelgen.feature.FeatureCountTracker$LevelData load(net.minecraft.server.level.ServerLevel);
+  public java.lang.Object load(java.lang.Object) throws java.lang.Exception;
+}
+Compiled from "LargeDripstoneFeature.java"
+public class net.minecraft.world.level.levelgen.feature.LargeDripstoneFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.LargeDripstoneFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration>);
+  private static net.minecraft.world.level.levelgen.feature.LargeDripstoneFeature$LargeDripstone makeDripstone(net.minecraft.core.BlockPos, boolean, net.minecraft.util.RandomSource, int, net.minecraft.util.valueproviders.FloatProvider, net.minecraft.util.valueproviders.FloatProvider);
+  private void placeDebugMarkers(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.levelgen.Column$Range, net.minecraft.world.level.levelgen.feature.LargeDripstoneFeature$WindOffsetter);
+  private static boolean lambda$place$0(net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration, net.minecraft.world.level.block.state.BlockState);
+}
+Compiled from "HugeRedMushroomFeature.java"
+public class net.minecraft.world.level.levelgen.feature.HugeRedMushroomFeature extends net.minecraft.world.level.levelgen.feature.AbstractHugeMushroomFeature {
+  public net.minecraft.world.level.levelgen.feature.HugeRedMushroomFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration>);
+  protected void makeCap(net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, int, net.minecraft.core.BlockPos$MutableBlockPos, net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration);
+  protected int getTreeRadiusForHeight(int, int, int, int);
+}
+Compiled from "GeodeFeature.java"
+public class net.minecraft.world.level.levelgen.feature.GeodeFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.GeodeConfiguration> {
+  private static final net.minecraft.core.Direction[] DIRECTIONS;
+  public net.minecraft.world.level.levelgen.feature.GeodeFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.GeodeConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.GeodeConfiguration>);
+  private static boolean lambda$place$0(net.minecraft.core.HolderSet, net.minecraft.world.level.block.state.BlockState);
+  static {};
+}
+Compiled from "EndPlatformFeature.java"
+public class net.minecraft.world.level.levelgen.feature.EndPlatformFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.EndPlatformFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public static void createEndPlatform(net.minecraft.world.level.ServerLevelAccessor, net.minecraft.core.BlockPos, boolean);
+}
+Compiled from "LakeFeature.java"
+public class net.minecraft.world.level.levelgen.feature.LakeFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.LakeFeature$Configuration> {
+  private static final net.minecraft.world.level.block.state.BlockState AIR;
+  public net.minecraft.world.level.levelgen.feature.LakeFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.LakeFeature$Configuration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.LakeFeature$Configuration>);
+  static {};
+}
+Compiled from "EndSpikeFeature.java"
+class net.minecraft.world.level.levelgen.feature.EndSpikeFeature$SpikeCacheLoader extends com.google.common.cache.CacheLoader<java.lang.Long, java.util.List<net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike>> {
+  private net.minecraft.world.level.levelgen.feature.EndSpikeFeature$SpikeCacheLoader();
+  public java.util.List<net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike> load(java.lang.Long);
+  public java.lang.Object load(java.lang.Object) throws java.lang.Exception;
+}
+Compiled from "CoralMushroomFeature.java"
+public class net.minecraft.world.level.levelgen.feature.CoralMushroomFeature extends net.minecraft.world.level.levelgen.feature.CoralFeature {
+  public net.minecraft.world.level.levelgen.feature.CoralMushroomFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  protected boolean placeFeature(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+}
+Compiled from "FossilFeatureConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.FossilFeatureConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.FossilFeatureConfiguration> CODEC;
+  public final java.util.List<net.minecraft.resources.Identifier> fossilStructures;
+  public final java.util.List<net.minecraft.resources.Identifier> overlayStructures;
+  public final net.minecraft.core.Holder<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> fossilProcessors;
+  public final net.minecraft.core.Holder<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList> overlayProcessors;
+  public final int maxEmptyCornersAllowed;
+  public net.minecraft.world.level.levelgen.feature.FossilFeatureConfiguration(java.util.List<net.minecraft.resources.Identifier>, java.util.List<net.minecraft.resources.Identifier>, net.minecraft.core.Holder<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList>, net.minecraft.core.Holder<net.minecraft.world.level.levelgen.structure.templatesystem.StructureProcessorList>, int);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Integer lambda$static$5(net.minecraft.world.level.levelgen.feature.FossilFeatureConfiguration);
+  private static net.minecraft.core.Holder lambda$static$4(net.minecraft.world.level.levelgen.feature.FossilFeatureConfiguration);
+  private static net.minecraft.core.Holder lambda$static$3(net.minecraft.world.level.levelgen.feature.FossilFeatureConfiguration);
+  private static java.util.List lambda$static$2(net.minecraft.world.level.levelgen.feature.FossilFeatureConfiguration);
+  private static java.util.List lambda$static$1(net.minecraft.world.level.levelgen.feature.FossilFeatureConfiguration);
+  static {};
+}
+Compiled from "NoOpFeature.java"
+public class net.minecraft.world.level.levelgen.feature.NoOpFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.NoOpFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+}
+Compiled from "CoralTreeFeature.java"
+public class net.minecraft.world.level.levelgen.feature.CoralTreeFeature extends net.minecraft.world.level.levelgen.feature.CoralFeature {
+  public net.minecraft.world.level.levelgen.feature.CoralTreeFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  protected boolean placeFeature(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+}
+Compiled from "BlockPileFeature.java"
+public class net.minecraft.world.level.levelgen.feature.BlockPileFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.BlockPileConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.BlockPileFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.BlockPileConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.BlockPileConfiguration>);
+  private boolean mayPlaceOn(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  private void tryPlaceBlock(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.configurations.BlockPileConfiguration);
+}
+Compiled from "SeaPickleFeature.java"
+public class net.minecraft.world.level.levelgen.feature.SeaPickleFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.CountConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.SeaPickleFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.CountConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.CountConfiguration>);
+}
+Compiled from "FeatureCountTracker.java"
+final class net.minecraft.world.level.levelgen.feature.FeatureCountTracker$FeatureData extends java.lang.Record {
+  private final net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?> feature;
+  private final java.util.Optional<net.minecraft.world.level.levelgen.placement.PlacedFeature> topFeature;
+  private net.minecraft.world.level.levelgen.feature.FeatureCountTracker$FeatureData(net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>, java.util.Optional<net.minecraft.world.level.levelgen.placement.PlacedFeature>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?> feature();
+  public java.util.Optional<net.minecraft.world.level.levelgen.placement.PlacedFeature> topFeature();
+}
+Compiled from "NetherForestVegetationFeature.java"
+public class net.minecraft.world.level.levelgen.feature.NetherForestVegetationFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NetherForestVegetationConfig> {
+  public net.minecraft.world.level.levelgen.feature.NetherForestVegetationFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NetherForestVegetationConfig>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NetherForestVegetationConfig>);
+}
+Compiled from "EndIslandFeature.java"
+public class net.minecraft.world.level.levelgen.feature.EndIslandFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.EndIslandFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+}
+Compiled from "VegetationPatchFeature.java"
+public class net.minecraft.world.level.levelgen.feature.VegetationPatchFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.VegetationPatchFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration>);
+  protected java.util.Set<net.minecraft.core.BlockPos> placeGroundPatch(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, java.util.function.Predicate<net.minecraft.world.level.block.state.BlockState>, int, int);
+  protected void distributeVegetation(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration>, net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration, net.minecraft.util.RandomSource, java.util.Set<net.minecraft.core.BlockPos>, int, int);
+  protected boolean placeVegetation(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration, net.minecraft.world.level.chunk.ChunkGenerator, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos);
+  protected boolean placeGround(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration, java.util.function.Predicate<net.minecraft.world.level.block.state.BlockState>, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos$MutableBlockPos, int);
+  private static boolean lambda$placeGroundPatch$0(net.minecraft.world.level.block.state.BlockState);
+  private static boolean lambda$place$0(net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration, net.minecraft.world.level.block.state.BlockState);
+}
+Compiled from "BlockBlobFeature.java"
+public class net.minecraft.world.level.levelgen.feature.BlockBlobFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.BlockBlobConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.BlockBlobFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.BlockBlobConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.BlockBlobConfiguration>);
+}
+Compiled from "UnderwaterMagmaFeature.java"
+public class net.minecraft.world.level.levelgen.feature.UnderwaterMagmaFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.UnderwaterMagmaConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.UnderwaterMagmaFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.UnderwaterMagmaConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.UnderwaterMagmaConfiguration>);
+  private static java.util.OptionalInt getFloorY(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.levelgen.feature.configurations.UnderwaterMagmaConfiguration);
+  private boolean isValidPlacement(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos);
+  private static boolean isWaterOrAir(net.minecraft.world.level.block.state.BlockState);
+  private boolean isVisibleFromOutside(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, net.minecraft.core.Direction);
+  private static boolean lambda$getFloorY$1(net.minecraft.world.level.block.state.BlockState);
+  private static boolean lambda$getFloorY$0(net.minecraft.world.level.block.state.BlockState);
+  private static int lambda$place$2(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos);
+  private boolean lambda$place$1(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos);
+  private static boolean lambda$place$0(net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.configurations.UnderwaterMagmaConfiguration, net.minecraft.core.BlockPos);
+}
+Compiled from "ReplaceBlockFeature.java"
+public class net.minecraft.world.level.levelgen.feature.ReplaceBlockFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.ReplaceBlockConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.ReplaceBlockFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.ReplaceBlockConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.ReplaceBlockConfiguration>);
+}
+Compiled from "EndSpikeFeature.java"
+public class net.minecraft.world.level.levelgen.feature.EndSpikeFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.EndSpikeConfiguration> {
+  public static final int NUMBER_OF_SPIKES;
+  private static final int SPIKE_DISTANCE;
+  private static final com.google.common.cache.LoadingCache<java.lang.Long, java.util.List<net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike>> SPIKE_CACHE;
+  public net.minecraft.world.level.levelgen.feature.EndSpikeFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.EndSpikeConfiguration>);
+  public static java.util.List<net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike> getSpikesForLevel(net.minecraft.world.level.WorldGenLevel);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.EndSpikeConfiguration>);
+  private void placeSpike(net.minecraft.world.level.ServerLevelAccessor, net.minecraft.util.RandomSource, net.minecraft.world.level.levelgen.feature.configurations.EndSpikeConfiguration, net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike);
+  static {};
+}
+Compiled from "EndGatewayFeature.java"
+public class net.minecraft.world.level.levelgen.feature.EndGatewayFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.EndGatewayConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.EndGatewayFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.EndGatewayConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.EndGatewayConfiguration>);
+  private static void lambda$place$0(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.levelgen.feature.configurations.EndGatewayConfiguration, net.minecraft.core.BlockPos);
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.level.levelgen.feature.package-info {
+}
+Compiled from "TreeFeature.java"
+class net.minecraft.world.level.levelgen.feature.TreeFeature$1 implements net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer$FoliageSetter {
+  final java.util.Set val$foliage;
+  final net.minecraft.world.level.WorldGenLevel val$level;
+  net.minecraft.world.level.levelgen.feature.TreeFeature$1();
+  public void set(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  public boolean isSet(net.minecraft.core.BlockPos);
+}
+Compiled from "Feature.java"
+public abstract class net.minecraft.world.level.levelgen.feature.Feature<FC extends net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration> {
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> NO_OP;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration> TREE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration> FALLEN_TREE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.BlockPileConfiguration> BLOCK_PILE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.SpringConfiguration> SPRING;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> CHORUS_PLANT;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.ReplaceBlockConfiguration> REPLACE_SINGLE_BLOCK;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> VOID_START_PLATFORM;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> DESERT_WELL;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.FossilFeatureConfiguration> FOSSIL;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration> HUGE_RED_MUSHROOM;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration> HUGE_BROWN_MUSHROOM;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.SpikeConfiguration> SPIKE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> GLOWSTONE_BLOB;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> FREEZE_TOP_LAYER;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> VINES;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration> BLOCK_COLUMN;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration> VEGETATION_PATCH;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration> WATERLOGGED_VEGETATION_PATCH;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.RootSystemConfiguration> ROOT_SYSTEM;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration> MULTIFACE_GROWTH;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.UnderwaterMagmaConfiguration> UNDERWATER_MAGMA;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> MONSTER_ROOM;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> BLUE_ICE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.BlockStateConfiguration> ICEBERG;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.BlockBlobConfiguration> BLOCK_BLOB;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.DiskConfiguration> DISK;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.LakeFeature$Configuration> LAKE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration> ORE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> END_PLATFORM;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.EndSpikeConfiguration> END_SPIKE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> END_ISLAND;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.EndGatewayConfiguration> END_GATEWAY;
+  public static final net.minecraft.world.level.levelgen.feature.SeagrassFeature SEAGRASS;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> KELP;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> CORAL_TREE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> CORAL_MUSHROOM;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> CORAL_CLAW;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.CountConfiguration> SEA_PICKLE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration> SIMPLE_BLOCK;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration> BAMBOO;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration> HUGE_FUNGUS;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NetherForestVegetationConfig> NETHER_FOREST_VEGETATION;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> WEEPING_VINES;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.TwistingVinesConfig> TWISTING_VINES;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.ColumnFeatureConfiguration> BASALT_COLUMNS;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration> DELTA_FEATURE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.ReplaceSphereConfiguration> REPLACE_BLOBS;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.LayerConfiguration> FILL_LAYER;
+  public static final net.minecraft.world.level.levelgen.feature.BonusChestFeature BONUS_CHEST;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> BASALT_PILLAR;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration> SCATTERED_ORE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration> RANDOM_SELECTOR;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.WeightedRandomFeatureConfiguration> WEIGHTED_RANDOM_SELECTOR;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.CompositeFeatureConfiguration> SIMPLE_RANDOM_SELECTOR;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.RandomBooleanFeatureConfiguration> RANDOM_BOOLEAN_SELECTOR;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.CompositeFeatureConfiguration> SEQUENCE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.TemplateFeatureConfiguration> TEMPLATE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.GeodeConfiguration> GEODE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.SpeleothemClusterConfiguration> SPELEOTHEM_CLUSTER;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.LargeDripstoneConfiguration> LARGE_DRIPSTONE;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.SpeleothemConfiguration> SPELEOTHEM;
+  public static final net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.SculkPatchConfiguration> SCULK_PATCH;
+  private final com.mojang.serialization.MapCodec<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<FC, net.minecraft.world.level.levelgen.feature.Feature<FC>>> configuredCodec;
+  private static <C extends net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration, F extends net.minecraft.world.level.levelgen.feature.Feature<C>> F register(java.lang.String, F);
+  public net.minecraft.world.level.levelgen.feature.Feature(com.mojang.serialization.Codec<FC>);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<FC, net.minecraft.world.level.levelgen.feature.Feature<FC>>> configuredCodec();
+  protected void setBlock(net.minecraft.world.level.LevelWriter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  public static java.util.function.Predicate<net.minecraft.world.level.block.state.BlockState> isReplaceable(net.minecraft.tags.TagKey<net.minecraft.world.level.block.Block>);
+  protected void safeSetBlock(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, java.util.function.Predicate<net.minecraft.world.level.block.state.BlockState>);
+  public abstract boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<FC>);
+  public boolean place(FC, net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.chunk.ChunkGenerator, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos);
+  public static boolean checkNeighbors(java.util.function.Function<net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState>, net.minecraft.core.BlockPos, java.util.function.Predicate<net.minecraft.world.level.block.state.BlockState>);
+  public static boolean isAdjacentToAir(java.util.function.Function<net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState>, net.minecraft.core.BlockPos);
+  protected void markAboveForPostProcessing(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos);
+  private static boolean lambda$isReplaceable$0(net.minecraft.tags.TagKey, net.minecraft.world.level.block.state.BlockState);
+  private net.minecraft.world.level.levelgen.feature.ConfiguredFeature lambda$new$0(net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration);
+  static {};
+}
+Compiled from "EndSpikeFeature.java"
+public class net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike> CODEC;
+  private final int centerX;
+  private final int centerZ;
+  private final int radius;
+  private final int height;
+  private final boolean guarded;
+  private final net.minecraft.world.phys.AABB topBoundingBox;
+  public net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike(int, int, int, int, boolean);
+  public boolean isCenterWithinChunk(net.minecraft.core.BlockPos);
+  public int getCenterX();
+  public int getCenterZ();
+  public int getRadius();
+  public int getHeight();
+  public boolean isGuarded();
+  public net.minecraft.world.phys.AABB getTopBoundingBox();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Boolean lambda$static$5(net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike);
+  private static java.lang.Integer lambda$static$4(net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike);
+  private static java.lang.Integer lambda$static$3(net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike);
+  private static java.lang.Integer lambda$static$2(net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike);
+  private static java.lang.Integer lambda$static$1(net.minecraft.world.level.levelgen.feature.EndSpikeFeature$EndSpike);
+  static {};
+}
+Compiled from "CoralFeature.java"
+public abstract class net.minecraft.world.level.levelgen.feature.CoralFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.CoralFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  protected abstract boolean placeFeature(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  protected boolean placeCoralBlock(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  private static void lambda$placeCoralBlock$1(net.minecraft.core.Direction, net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block);
+  private static void lambda$placeCoralBlock$0(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block);
+}
+Compiled from "SimpleRandomSelectorFeature.java"
+public class net.minecraft.world.level.levelgen.feature.SimpleRandomSelectorFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.CompositeFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.SimpleRandomSelectorFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.CompositeFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.CompositeFeatureConfiguration>);
+}
+Compiled from "RandomSelectorFeature.java"
+public class net.minecraft.world.level.levelgen.feature.RandomSelectorFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.RandomSelectorFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.RandomFeatureConfiguration>);
+}
+Compiled from "ChorusPlantFeature.java"
+public class net.minecraft.world.level.levelgen.feature.ChorusPlantFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.ChorusPlantFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+}
+Compiled from "ConfiguredFeature.java"
+public final class net.minecraft.world.level.levelgen.feature.ConfiguredFeature<FC extends net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration, F extends net.minecraft.world.level.levelgen.feature.Feature<FC>> extends java.lang.Record {
+  private final F feature;
+  private final FC config;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>> DIRECT_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.core.Holder<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>> CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.core.HolderSet<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>> LIST_CODEC;
+  public net.minecraft.world.level.levelgen.feature.ConfiguredFeature(F, FC);
+  public boolean place(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.chunk.ChunkGenerator, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos);
+  public java.util.stream.Stream<net.minecraft.core.Holder<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>> getSubFeatures();
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public F feature();
+  public FC config();
+  private static net.minecraft.world.level.levelgen.feature.Feature lambda$static$0(net.minecraft.world.level.levelgen.feature.ConfiguredFeature);
+  static {};
+}
+Compiled from "FeaturePlaceContext.java"
+public class net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<FC extends net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration> {
+  private final java.util.Optional<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>> topFeature;
+  private final net.minecraft.world.level.WorldGenLevel level;
+  private final net.minecraft.world.level.chunk.ChunkGenerator chunkGenerator;
+  private final net.minecraft.util.RandomSource random;
+  private final net.minecraft.core.BlockPos origin;
+  private final FC config;
+  public net.minecraft.world.level.levelgen.feature.FeaturePlaceContext(java.util.Optional<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>>, net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.chunk.ChunkGenerator, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, FC);
+  public java.util.Optional<net.minecraft.world.level.levelgen.feature.ConfiguredFeature<?, ?>> topFeature();
+  public net.minecraft.world.level.WorldGenLevel level();
+  public net.minecraft.world.level.chunk.ChunkGenerator chunkGenerator();
+  public net.minecraft.util.RandomSource random();
+  public net.minecraft.core.BlockPos origin();
+  public FC config();
+}
+Compiled from "WaterloggedVegetationPatchFeature.java"
+public class net.minecraft.world.level.levelgen.feature.WaterloggedVegetationPatchFeature extends net.minecraft.world.level.levelgen.feature.VegetationPatchFeature {
+  public net.minecraft.world.level.levelgen.feature.WaterloggedVegetationPatchFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration>);
+  protected java.util.Set<net.minecraft.core.BlockPos> placeGroundPatch(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, java.util.function.Predicate<net.minecraft.world.level.block.state.BlockState>, int, int);
+  private static boolean isExposed(net.minecraft.world.level.WorldGenLevel, java.util.Set<net.minecraft.core.BlockPos>, net.minecraft.core.BlockPos, net.minecraft.core.BlockPos$MutableBlockPos);
+  private static boolean isExposedDirection(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.core.BlockPos$MutableBlockPos, net.minecraft.core.Direction);
+  protected boolean placeVegetation(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.levelgen.feature.configurations.VegetationPatchConfiguration, net.minecraft.world.level.chunk.ChunkGenerator, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos);
+}
+Compiled from "CoralClawFeature.java"
+public class net.minecraft.world.level.levelgen.feature.CoralClawFeature extends net.minecraft.world.level.levelgen.feature.CoralFeature {
+  public net.minecraft.world.level.levelgen.feature.CoralClawFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  protected boolean placeFeature(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+}
+Compiled from "SeagrassFeature.java"
+public class net.minecraft.world.level.levelgen.feature.SeagrassFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.SeagrassFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration>);
+}
+Compiled from "TemplateFeature.java"
+public class net.minecraft.world.level.levelgen.feature.TemplateFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.TemplateFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.TemplateFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.TemplateFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.TemplateFeatureConfiguration>);
+  private net.minecraft.core.Vec3i getRotatedOffset(net.minecraft.world.level.block.Rotation, net.minecraft.core.Direction$Axis, net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplate);
+}
+Compiled from "DeltaFeature.java"
+public class net.minecraft.world.level.levelgen.feature.DeltaFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration> {
+  private static final com.google.common.collect.ImmutableList<net.minecraft.world.level.block.Block> CANNOT_REPLACE;
+  private static final net.minecraft.core.Direction[] DIRECTIONS;
+  private static final double RIM_SPAWN_CHANCE;
+  public net.minecraft.world.level.levelgen.feature.DeltaFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration>);
+  private static boolean isClear(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, net.minecraft.world.level.levelgen.feature.configurations.DeltaFeatureConfiguration);
+  static {};
+}
+Compiled from "HugeFungusConfiguration.java"
+public class net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration implements net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration> CODEC;
+  public final net.minecraft.world.level.block.state.BlockState validBaseState;
+  public final net.minecraft.world.level.block.state.BlockState stemState;
+  public final net.minecraft.world.level.block.state.BlockState hatState;
+  public final net.minecraft.world.level.block.state.BlockState decorState;
+  public final net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate replaceableBlocks;
+  public final boolean planted;
+  public net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate, boolean);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Boolean lambda$static$6(net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration);
+  private static net.minecraft.world.level.levelgen.blockpredicates.BlockPredicate lambda$static$5(net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$4(net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$3(net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$2(net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration);
+  private static net.minecraft.world.level.block.state.BlockState lambda$static$1(net.minecraft.world.level.levelgen.feature.HugeFungusConfiguration);
+  static {};
+}
+Compiled from "SimpleBlockFeature.java"
+public class net.minecraft.world.level.levelgen.feature.SimpleBlockFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.SimpleBlockFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.SimpleBlockConfiguration>);
+}
+Compiled from "FallenTreeFeature.java"
+public class net.minecraft.world.level.levelgen.feature.FallenTreeFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration> {
+  private static final int STUMP_HEIGHT;
+  private static final int STUMP_HEIGHT_PLUS_EMPTY_SPACE;
+  private static final int FALLEN_LOG_MAX_FALL_HEIGHT_TO_GROUND;
+  private static final int FALLEN_LOG_MAX_GROUND_GAP;
+  private static final int FALLEN_LOG_MAX_SPACE_FROM_STUMP;
+  public net.minecraft.world.level.levelgen.feature.FallenTreeFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration>);
+  private void placeFallenTree(net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration, net.minecraft.core.BlockPos, net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource);
+  private void setGroundHeightForFallenLogStartPos(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos$MutableBlockPos);
+  private void placeStump(net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration, net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos$MutableBlockPos);
+  private boolean canPlaceEntireFallenLog(net.minecraft.world.level.WorldGenLevel, int, net.minecraft.core.BlockPos$MutableBlockPos, net.minecraft.core.Direction);
+  private void placeFallenLog(net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration, net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, int, net.minecraft.core.BlockPos$MutableBlockPos, net.minecraft.core.Direction);
+  private boolean mayPlaceOn(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos);
+  private boolean isOverSolidGround(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos);
+  private net.minecraft.core.BlockPos placeLogBlock(net.minecraft.world.level.levelgen.feature.configurations.FallenTreeConfiguration, net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos$MutableBlockPos, java.util.function.Function<net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.BlockState>);
+  private void decorateLogs(net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, java.util.Set<net.minecraft.core.BlockPos>, java.util.List<net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator>);
+  private java.util.function.BiConsumer<net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState> getDecorationSetter(net.minecraft.world.level.WorldGenLevel);
+  private static java.util.function.Function<net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.state.BlockState> getSidewaysStateModifier(net.minecraft.core.Direction);
+  private static net.minecraft.world.level.block.state.BlockState lambda$getSidewaysStateModifier$0(net.minecraft.core.Direction, net.minecraft.world.level.block.state.BlockState);
+  private static void lambda$getDecorationSetter$0(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  private static void lambda$decorateLogs$0(net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator$Context, net.minecraft.world.level.levelgen.feature.treedecorators.TreeDecorator);
+}
+Compiled from "RootSystemFeature.java"
+public class net.minecraft.world.level.levelgen.feature.RootSystemFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.RootSystemConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.RootSystemFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.RootSystemConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.RootSystemConfiguration>);
+  private static boolean spaceForTree(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.levelgen.feature.configurations.RootSystemConfiguration, net.minecraft.core.BlockPos);
+  private static boolean isAllowedTreeSpace(net.minecraft.world.level.block.state.BlockState, int, int);
+  private static boolean placeDirtAndTree(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.chunk.ChunkGenerator, net.minecraft.world.level.levelgen.feature.configurations.RootSystemConfiguration, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos$MutableBlockPos, net.minecraft.core.BlockPos);
+  private static void placeDirt(net.minecraft.core.BlockPos, int, net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.levelgen.feature.configurations.RootSystemConfiguration, net.minecraft.util.RandomSource);
+  private static void placeRootedDirt(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.levelgen.feature.configurations.RootSystemConfiguration, net.minecraft.util.RandomSource, int, int, net.minecraft.core.BlockPos$MutableBlockPos);
+  private static void placeRoots(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.levelgen.feature.configurations.RootSystemConfiguration, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, net.minecraft.core.BlockPos$MutableBlockPos);
+  private static boolean lambda$placeRootedDirt$0(net.minecraft.world.level.levelgen.feature.configurations.RootSystemConfiguration, net.minecraft.world.level.block.state.BlockState);
+}
+Compiled from "WeightedRandomSelectorFeature.java"
+public class net.minecraft.world.level.levelgen.feature.WeightedRandomSelectorFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.WeightedRandomFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.WeightedRandomSelectorFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.WeightedRandomFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.WeightedRandomFeatureConfiguration>);
+  private static java.lang.Boolean lambda$place$0(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.chunk.ChunkGenerator, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, net.minecraft.core.Holder);
+}
+Compiled from "MultifaceGrowthFeature.java"
+public class net.minecraft.world.level.levelgen.feature.MultifaceGrowthFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.MultifaceGrowthFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration>);
+  public static boolean placeGrowthIfPossible(net.minecraft.world.level.block.MultifaceSpreadeableBlock, net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.levelgen.feature.configurations.MultifaceGrowthConfiguration, net.minecraft.util.RandomSource, java.util.List<net.minecraft.core.Direction>);
+  private static boolean isAirOrWater(net.minecraft.world.level.block.state.BlockState);
+}
+Compiled from "SculkPatchFeature.java"
+public class net.minecraft.world.level.levelgen.feature.SculkPatchFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.SculkPatchConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.SculkPatchFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.SculkPatchConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.SculkPatchConfiguration>);
+  private boolean canSpreadFrom(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos);
+  private static boolean lambda$canSpreadFrom$0(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos);
+}
+Compiled from "DesertWellFeature.java"
+public class net.minecraft.world.level.levelgen.feature.DesertWellFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  private static final net.minecraft.world.level.block.state.predicate.BlockStatePredicate IS_SAND;
+  private final net.minecraft.world.level.block.state.BlockState sand;
+  private final net.minecraft.world.level.block.state.BlockState sandSlab;
+  private final net.minecraft.world.level.block.state.BlockState sandstone;
+  private final net.minecraft.world.level.block.state.BlockState water;
+  public net.minecraft.world.level.levelgen.feature.DesertWellFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  private static void placeSusSand(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos);
+  private static void lambda$placeSusSand$0(net.minecraft.core.BlockPos, net.minecraft.world.level.block.entity.BrushableBlockEntity);
+  static {};
+}
+Compiled from "WeepingVinesFeature.java"
+public class net.minecraft.world.level.levelgen.feature.WeepingVinesFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  private static final net.minecraft.core.Direction[] DIRECTIONS;
+  public net.minecraft.world.level.levelgen.feature.WeepingVinesFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  private void placeRoofNetherWart(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos);
+  private void placeRoofWeepingVines(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos);
+  public static void placeWeepingVinesColumn(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos$MutableBlockPos, int, int, int);
+  static {};
+}
+Compiled from "SpeleothemUtils.java"
+public class net.minecraft.world.level.levelgen.feature.SpeleothemUtils {
+  public net.minecraft.world.level.levelgen.feature.SpeleothemUtils();
+  protected static double getSpeleothemHeight(double, double, double, double);
+  protected static boolean isCircleMostlyEmbeddedInStone(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, int);
+  protected static boolean isEmptyOrWater(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos);
+  protected static boolean isEmptyOrWaterOrLava(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos);
+  protected static void buildBaseToTipColumn(net.minecraft.core.Direction, int, boolean, java.util.function.Consumer<net.minecraft.world.level.block.state.BlockState>, net.minecraft.world.level.block.Block);
+  protected static void growSpeleothem(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, net.minecraft.core.Direction, int, boolean, net.minecraft.world.level.block.Block, net.minecraft.world.level.block.Block, net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block>);
+  protected static boolean placeBaseBlockIfPossible(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block, net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block>);
+  private static net.minecraft.world.level.block.state.BlockState createPointedBlock(net.minecraft.core.Direction, net.minecraft.world.level.block.state.properties.SpeleothemThickness, net.minecraft.world.level.block.Block);
+  public static boolean isBaseOrLava(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.Block, net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block>);
+  public static boolean isBase(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.Block, net.minecraft.core.HolderSet<net.minecraft.world.level.block.Block>);
+  public static boolean isEmptyOrWater(net.minecraft.world.level.block.state.BlockState);
+  public static boolean isNeitherEmptyNorWater(net.minecraft.world.level.block.state.BlockState);
+  public static boolean isEmptyOrWaterOrLava(net.minecraft.world.level.block.state.BlockState);
+  private static void lambda$growSpeleothem$0(net.minecraft.world.level.block.Block, net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos$MutableBlockPos, net.minecraft.core.Direction, net.minecraft.world.level.block.state.BlockState);
+}
+Compiled from "WeightedPlacedFeature.java"
+public final class net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature extends java.lang.Record {
+  private final net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature> feature;
+  private final float chance;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature> CODEC;
+  public net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature(net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature>, float);
+  public boolean place(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.chunk.ChunkGenerator, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.Holder<net.minecraft.world.level.levelgen.placement.PlacedFeature> feature();
+  public float chance();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Float lambda$static$2(net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature);
+  private static net.minecraft.core.Holder lambda$static$1(net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature);
+  static {};
+}
+Compiled from "AbstractHugeMushroomFeature.java"
+public abstract class net.minecraft.world.level.levelgen.feature.AbstractHugeMushroomFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration> {
+  public static final int MIN_MUSHROOM_HEIGHT;
+  public net.minecraft.world.level.levelgen.feature.AbstractHugeMushroomFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration>);
+  protected void placeTrunk(net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration, int, net.minecraft.core.BlockPos$MutableBlockPos);
+  protected void placeMushroomBlock(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos$MutableBlockPos, net.minecraft.world.level.block.state.BlockState);
+  protected int getTreeHeight(net.minecraft.util.RandomSource);
+  protected boolean isValidPosition(net.minecraft.world.level.WorldGenLevel, net.minecraft.core.BlockPos, int, net.minecraft.core.BlockPos$MutableBlockPos, net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration>);
+  protected abstract int getTreeRadiusForHeight(int, int, int, int);
+  protected abstract void makeCap(net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, int, net.minecraft.core.BlockPos$MutableBlockPos, net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration);
+}
+Compiled from "SequenceFeature.java"
+public class net.minecraft.world.level.levelgen.feature.SequenceFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.CompositeFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.SequenceFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.CompositeFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.CompositeFeatureConfiguration>);
+}
+Compiled from "ScatteredOreFeature.java"
+public class net.minecraft.world.level.levelgen.feature.ScatteredOreFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration> {
+  private static final int MAX_DIST_FROM_ORIGIN;
+  public net.minecraft.world.level.levelgen.feature.ScatteredOreFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration>);
+  private void offsetTargetPos(net.minecraft.core.BlockPos$MutableBlockPos, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, int);
+  private int getRandomPlacementInOneAxisRelativeToOrigin(net.minecraft.util.RandomSource, int);
+}
+Compiled from "MonsterRoomFeature.java"
+public class net.minecraft.world.level.levelgen.feature.MonsterRoomFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.world.entity.EntityType<?>[] MOBS;
+  private static final net.minecraft.world.level.block.state.BlockState AIR;
+  public net.minecraft.world.level.levelgen.feature.MonsterRoomFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  private net.minecraft.world.entity.EntityType<?> randomEntityId(net.minecraft.util.RandomSource);
+  static {};
+}
+Compiled from "RandomBooleanSelectorFeature.java"
+public class net.minecraft.world.level.levelgen.feature.RandomBooleanSelectorFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.RandomBooleanFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.RandomBooleanSelectorFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.RandomBooleanFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.RandomBooleanFeatureConfiguration>);
+}
+Compiled from "BambooFeature.java"
+public class net.minecraft.world.level.levelgen.feature.BambooFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration> {
+  private static final net.minecraft.world.level.block.state.BlockState BAMBOO_TRUNK;
+  private static final net.minecraft.world.level.block.state.BlockState BAMBOO_FINAL_LARGE;
+  private static final net.minecraft.world.level.block.state.BlockState BAMBOO_TOP_LARGE;
+  private static final net.minecraft.world.level.block.state.BlockState BAMBOO_TOP_SMALL;
+  public net.minecraft.world.level.levelgen.feature.BambooFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration>);
+  static {};
+}
+Compiled from "TwistingVinesFeature.java"
+public class net.minecraft.world.level.levelgen.feature.TwistingVinesFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.TwistingVinesConfig> {
+  public net.minecraft.world.level.levelgen.feature.TwistingVinesFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.TwistingVinesConfig>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.TwistingVinesConfig>);
+  private static boolean findFirstAirBlockAboveGround(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos$MutableBlockPos);
+  public static void placeWeepingVinesColumn(net.minecraft.world.level.LevelAccessor, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos$MutableBlockPos, int, int, int);
+  private static boolean isInvalidPlacementLocation(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos);
+}
+Compiled from "HugeBrownMushroomFeature.java"
+public class net.minecraft.world.level.levelgen.feature.HugeBrownMushroomFeature extends net.minecraft.world.level.levelgen.feature.AbstractHugeMushroomFeature {
+  public net.minecraft.world.level.levelgen.feature.HugeBrownMushroomFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration>);
+  protected void makeCap(net.minecraft.world.level.WorldGenLevel, net.minecraft.util.RandomSource, net.minecraft.core.BlockPos, int, net.minecraft.core.BlockPos$MutableBlockPos, net.minecraft.world.level.levelgen.feature.configurations.HugeMushroomFeatureConfiguration);
+  protected int getTreeRadiusForHeight(int, int, int, int);
+}
+Compiled from "FeatureCountTracker.java"
+final class net.minecraft.world.level.levelgen.feature.FeatureCountTracker$LevelData extends java.lang.Record {
+  private final it.unimi.dsi.fastutil.objects.Object2IntMap<net.minecraft.world.level.levelgen.feature.FeatureCountTracker$FeatureData> featureData;
+  private final org.apache.commons.lang3.mutable.MutableInt chunksWithFeatures;
+  private net.minecraft.world.level.levelgen.feature.FeatureCountTracker$LevelData(it.unimi.dsi.fastutil.objects.Object2IntMap<net.minecraft.world.level.levelgen.feature.FeatureCountTracker$FeatureData>, org.apache.commons.lang3.mutable.MutableInt);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public it.unimi.dsi.fastutil.objects.Object2IntMap<net.minecraft.world.level.levelgen.feature.FeatureCountTracker$FeatureData> featureData();
+  public org.apache.commons.lang3.mutable.MutableInt chunksWithFeatures();
+}
+Compiled from "BlueIceFeature.java"
+public class net.minecraft.world.level.levelgen.feature.BlueIceFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.BlueIceFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration>);
+}
+Compiled from "BlockColumnFeature.java"
+public class net.minecraft.world.level.levelgen.feature.BlockColumnFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.BlockColumnFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.BlockColumnConfiguration>);
+  private static void truncate(int[], int, int, boolean);
+}
+Compiled from "SpikeFeature.java"
+public class net.minecraft.world.level.levelgen.feature.SpikeFeature extends net.minecraft.world.level.levelgen.feature.Feature<net.minecraft.world.level.levelgen.feature.configurations.SpikeConfiguration> {
+  public net.minecraft.world.level.levelgen.feature.SpikeFeature(com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.feature.configurations.SpikeConfiguration>);
+  public boolean place(net.minecraft.world.level.levelgen.feature.FeaturePlaceContext<net.minecraft.world.level.levelgen.feature.configurations.SpikeConfiguration>);
+}

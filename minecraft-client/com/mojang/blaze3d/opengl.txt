@@ -1,0 +1,1065 @@
+Compiled from "BufferStorage.java"
+class com.mojang.blaze3d.opengl.BufferStorage$Immutable extends com.mojang.blaze3d.opengl.BufferStorage {
+  private com.mojang.blaze3d.opengl.BufferStorage$Immutable();
+  public com.mojang.blaze3d.opengl.GlBuffer createBuffer(com.mojang.blaze3d.opengl.DirectStateAccess, int, long);
+  public com.mojang.blaze3d.opengl.GlBuffer createBuffer(com.mojang.blaze3d.opengl.DirectStateAccess, int, java.nio.ByteBuffer);
+}
+Compiled from "BufferStorage.java"
+class com.mojang.blaze3d.opengl.BufferStorage$Mutable extends com.mojang.blaze3d.opengl.BufferStorage {
+  private com.mojang.blaze3d.opengl.BufferStorage$Mutable();
+  public com.mojang.blaze3d.opengl.GlBuffer createBuffer(com.mojang.blaze3d.opengl.DirectStateAccess, int, long);
+  public com.mojang.blaze3d.opengl.GlBuffer createBuffer(com.mojang.blaze3d.opengl.DirectStateAccess, int, java.nio.ByteBuffer);
+}
+Compiled from "BufferStorage.java"
+public abstract class com.mojang.blaze3d.opengl.BufferStorage {
+  public com.mojang.blaze3d.opengl.BufferStorage();
+  public static com.mojang.blaze3d.opengl.BufferStorage create(org.lwjgl.opengl.GLCapabilities, java.util.Set<java.lang.String>);
+  public abstract com.mojang.blaze3d.opengl.GlBuffer createBuffer(com.mojang.blaze3d.opengl.DirectStateAccess, int, long);
+  public abstract com.mojang.blaze3d.opengl.GlBuffer createBuffer(com.mojang.blaze3d.opengl.DirectStateAccess, int, java.nio.ByteBuffer);
+}
+Compiled from "DirectStateAccess.java"
+class com.mojang.blaze3d.opengl.DirectStateAccess$Core extends com.mojang.blaze3d.opengl.DirectStateAccess {
+  private com.mojang.blaze3d.opengl.DirectStateAccess$Core();
+  public int createBuffer();
+  public void bufferData(int, long, int);
+  public void bufferData(int, java.nio.ByteBuffer, int);
+  public void bufferSubData(int, long, java.nio.ByteBuffer, int);
+  public void bufferStorage(int, long, int);
+  public void bufferStorage(int, java.nio.ByteBuffer, int);
+  public java.nio.ByteBuffer mapBufferRange(int, long, long, int, int);
+  public void unmapBuffer(int, int);
+  public int createFrameBufferObject();
+  public void bindFrameBufferTextures(int, int[], int[], int, int, int);
+  public void blitFrameBuffers(int, int, int, int, int, int, int, int, int, int, int, int);
+  public void flushMappedBufferRange(int, long, long, int);
+  public void copyBufferSubData(int, int, long, long, long);
+}
+Compiled from "DirectStateAccess.java"
+class com.mojang.blaze3d.opengl.DirectStateAccess$Emulated extends com.mojang.blaze3d.opengl.DirectStateAccess {
+  private com.mojang.blaze3d.opengl.DirectStateAccess$Emulated();
+  public int createBuffer();
+  public void bufferData(int, long, int);
+  public void bufferData(int, java.nio.ByteBuffer, int);
+  public void bufferSubData(int, long, java.nio.ByteBuffer, int);
+  public void bufferStorage(int, long, int);
+  public void bufferStorage(int, java.nio.ByteBuffer, int);
+  public java.nio.ByteBuffer mapBufferRange(int, long, long, int, int);
+  public void unmapBuffer(int, int);
+  public void flushMappedBufferRange(int, long, long, int);
+  public void copyBufferSubData(int, int, long, long, long);
+  public int createFrameBufferObject();
+  public void bindFrameBufferTextures(int, int[], int[], int, int, int);
+  public void blitFrameBuffers(int, int, int, int, int, int, int, int, int, int, int, int);
+}
+Compiled from "DirectStateAccess.java"
+public abstract class com.mojang.blaze3d.opengl.DirectStateAccess {
+  public com.mojang.blaze3d.opengl.DirectStateAccess();
+  public static com.mojang.blaze3d.opengl.DirectStateAccess create(org.lwjgl.opengl.GLCapabilities, java.util.Set<java.lang.String>, com.mojang.blaze3d.opengl.GlHeuristics);
+  public abstract int createBuffer();
+  public abstract void bufferData(int, long, int);
+  public abstract void bufferData(int, java.nio.ByteBuffer, int);
+  public abstract void bufferSubData(int, long, java.nio.ByteBuffer, int);
+  public abstract void bufferStorage(int, long, int);
+  public abstract void bufferStorage(int, java.nio.ByteBuffer, int);
+  public abstract java.nio.ByteBuffer mapBufferRange(int, long, long, int, int);
+  public abstract void unmapBuffer(int, int);
+  public abstract int createFrameBufferObject();
+  public abstract void bindFrameBufferTextures(int, int[], int[], int, int, int);
+  public void bindFrameBufferTextures(int, int, int, int, int);
+  public abstract void blitFrameBuffers(int, int, int, int, int, int, int, int, int, int, int, int);
+  public abstract void flushMappedBufferRange(int, long, long, int);
+  public abstract void copyBufferSubData(int, int, long, long, long);
+}
+Compiled from "FrameBufferAttachment.java"
+public interface com.mojang.blaze3d.opengl.FrameBufferAttachment {
+  public abstract int glId();
+  public abstract int fboMipLevel();
+  public abstract void addAssociatedFbo(com.mojang.blaze3d.opengl.FrameBufferCache$CacheKey);
+  public abstract void removeAssociatedFbo(com.mojang.blaze3d.opengl.FrameBufferCache$CacheKey);
+}
+Compiled from "FrameBufferCache.java"
+public class com.mojang.blaze3d.opengl.FrameBufferCache$CacheKey {
+  private final int[] data;
+  private final int hash;
+  public final java.util.List<com.mojang.blaze3d.opengl.FrameBufferAttachment> associatedAttachments;
+  public com.mojang.blaze3d.opengl.FrameBufferCache$CacheKey(java.util.List<com.mojang.blaze3d.opengl.FrameBufferAttachment>, com.mojang.blaze3d.opengl.FrameBufferAttachment);
+  public int hashCode();
+  public boolean equals(java.lang.Object);
+}
+Compiled from "FrameBufferCache.java"
+public class com.mojang.blaze3d.opengl.FrameBufferCache {
+  private final it.unimi.dsi.fastutil.objects.Object2IntMap<com.mojang.blaze3d.opengl.FrameBufferCache$CacheKey> cache;
+  public com.mojang.blaze3d.opengl.FrameBufferCache();
+  public int getFbo(com.mojang.blaze3d.opengl.DirectStateAccess, java.util.List<com.mojang.blaze3d.opengl.FrameBufferAttachment>, com.mojang.blaze3d.opengl.FrameBufferAttachment);
+  private int createFbo(com.mojang.blaze3d.opengl.FrameBufferCache$CacheKey, com.mojang.blaze3d.opengl.DirectStateAccess, java.util.List<com.mojang.blaze3d.opengl.FrameBufferAttachment>, com.mojang.blaze3d.opengl.FrameBufferAttachment);
+  public void destroyFbo(com.mojang.blaze3d.opengl.FrameBufferCache$CacheKey);
+  private int lambda$getFbo$0(com.mojang.blaze3d.opengl.FrameBufferCache$CacheKey, com.mojang.blaze3d.opengl.DirectStateAccess, java.util.List, com.mojang.blaze3d.opengl.FrameBufferAttachment, java.lang.Object);
+}
+Compiled from "GlBackend.java"
+public class com.mojang.blaze3d.opengl.GlBackend implements com.mojang.blaze3d.systems.GpuBackend {
+  private static final int VERSION_MAJOR;
+  private static final int VERSION_MINOR;
+  public com.mojang.blaze3d.opengl.GlBackend();
+  public java.lang.String getName();
+  public void setWindowHints();
+  public void handleWindowCreationErrors(com.mojang.blaze3d.GLFWErrorCapture$Error) throws com.mojang.blaze3d.systems.BackendCreationException;
+  public com.mojang.blaze3d.systems.GpuDevice createDevice(long, com.mojang.blaze3d.shaders.ShaderSource, com.mojang.blaze3d.shaders.GpuDebugOptions, java.lang.Runnable);
+}
+Compiled from "GlBuffer.java"
+class com.mojang.blaze3d.opengl.GlBuffer$Direct$1 implements java.lang.Runnable {
+  private boolean closed;
+  final com.mojang.blaze3d.opengl.GlBuffer$Direct this$0;
+  com.mojang.blaze3d.opengl.GlBuffer$Direct$1(com.mojang.blaze3d.opengl.GlBuffer$Direct);
+  public void run();
+}
+Compiled from "GlBuffer.java"
+public class com.mojang.blaze3d.opengl.GlBuffer$Direct extends com.mojang.blaze3d.opengl.GlBuffer {
+  private boolean closed;
+  private final com.mojang.blaze3d.opengl.DirectStateAccess dsa;
+  protected final int mappingFlags;
+  protected java.nio.ByteBuffer mappedBuffer;
+  protected com.mojang.blaze3d.opengl.GlBuffer$Direct(com.mojang.blaze3d.opengl.DirectStateAccess, int, long, int, boolean);
+  public boolean isClosed();
+  public void close();
+  public com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView map(long, long, boolean, boolean);
+  private void unmap();
+}
+Compiled from "GlBuffer.java"
+public abstract class com.mojang.blaze3d.opengl.GlBuffer extends com.mojang.blaze3d.buffers.GpuBuffer {
+  protected static final com.mojang.jtracy.MemoryPool MEMORY_POOL;
+  private final int handle;
+  protected final boolean canPersistentMap;
+  protected int mappingRefCount;
+  protected com.mojang.blaze3d.opengl.GlBuffer(int, long, int, boolean);
+  public int handle();
+  protected void checkCanBeUsed();
+  static {};
+}
+Compiled from "GlCommandEncoder.java"
+class com.mojang.blaze3d.opengl.GlCommandEncoder implements com.mojang.blaze3d.systems.CommandEncoderBackend,java.lang.AutoCloseable {
+  private static final org.slf4j.Logger LOGGER;
+  public static final int MAX_SUBMITS_IN_FLIGHT;
+  private static final long NO_FENCE;
+  private final com.mojang.blaze3d.opengl.GlDevice device;
+  private final com.mojang.blaze3d.opengl.GlTransientMemory transientMemory;
+  private final long[] fences;
+  private long currentSubmitIndex;
+  private final int readFbo;
+  private final int drawFbo;
+  private com.mojang.blaze3d.pipeline.RenderPipeline lastPipeline;
+  private com.mojang.blaze3d.opengl.GlProgram lastProgram;
+  private com.mojang.blaze3d.opengl.VertexArrayCache$VertexArray lastVertexArray;
+  private final java.util.List<com.mojang.blaze3d.opengl.FrameBufferAttachment> renderPassColorTextures;
+  static final boolean $assertionsDisabled;
+  protected com.mojang.blaze3d.opengl.GlCommandEncoder(com.mojang.blaze3d.opengl.GlDevice);
+  public void close();
+  public long currentSubmitIndex();
+  public int currentSubmitSlot();
+  public void submit();
+  public boolean awaitSubmit(long, long);
+  public com.mojang.blaze3d.systems.TransientMemory transientMemory();
+  public com.mojang.blaze3d.systems.RenderPassBackend createRenderPass(com.mojang.blaze3d.systems.RenderPassDescriptor);
+  public void clearColorTexture(com.mojang.blaze3d.textures.GpuTexture, org.joml.Vector4fc);
+  public void clearColorAndDepthTextures(com.mojang.blaze3d.textures.GpuTexture, org.joml.Vector4fc, com.mojang.blaze3d.textures.GpuTexture, double);
+  public void clearColorAndDepthTextures(com.mojang.blaze3d.textures.GpuTexture, org.joml.Vector4fc, com.mojang.blaze3d.textures.GpuTexture, double, int, int, int, int);
+  public void clearDepthTexture(com.mojang.blaze3d.textures.GpuTexture, double);
+  public void writeToBuffer(com.mojang.blaze3d.buffers.GpuBufferSlice, java.nio.ByteBuffer);
+  public void copyToBuffer(com.mojang.blaze3d.buffers.GpuBufferSlice, com.mojang.blaze3d.buffers.GpuBufferSlice);
+  public void writeToTexture(com.mojang.blaze3d.textures.GpuTexture, java.nio.ByteBuffer, int, int, int, int, int, int);
+  public void copyBufferToTexture(com.mojang.blaze3d.buffers.GpuBufferSlice, int, int, int, int, com.mojang.blaze3d.textures.GpuTexture, int, int, int, int, int, int);
+  public void copyTextureToBuffer(com.mojang.blaze3d.textures.GpuTexture, com.mojang.blaze3d.buffers.GpuBuffer, long, java.lang.Runnable, int);
+  public void copyTextureToBuffer(com.mojang.blaze3d.textures.GpuTexture, com.mojang.blaze3d.buffers.GpuBuffer, long, java.lang.Runnable, int, int, int, int, int);
+  public void copyTextureToTexture(com.mojang.blaze3d.textures.GpuTexture, com.mojang.blaze3d.textures.GpuTexture, int, int, int, int, int, int, int);
+  public void presentTexture(com.mojang.blaze3d.textures.GpuTextureView, int, int);
+  public com.mojang.blaze3d.buffers.GpuFence createFence();
+  protected <T> void executeDrawMultiple(com.mojang.blaze3d.opengl.GlRenderPass, java.util.Collection<com.mojang.blaze3d.systems.RenderPass$Draw<T>>, com.mojang.blaze3d.buffers.GpuBuffer, com.mojang.blaze3d.IndexType, java.util.Collection<java.lang.String>, T);
+  private void validateDraw(com.mojang.blaze3d.opengl.GlRenderPass, com.mojang.blaze3d.IndexType);
+  protected void executeDraw(com.mojang.blaze3d.opengl.GlRenderPass, int, int, int, com.mojang.blaze3d.IndexType, int, int);
+  public void executeDraws(com.mojang.blaze3d.opengl.GlRenderPass, com.mojang.blaze3d.IndexType, org.lwjgl.PointerBuffer, java.nio.IntBuffer, java.nio.IntBuffer, int);
+  protected void executeDrawIndirect(com.mojang.blaze3d.opengl.GlRenderPass, com.mojang.blaze3d.IndexType, com.mojang.blaze3d.opengl.GlBuffer, long, int);
+  private void drawFromBuffers(com.mojang.blaze3d.opengl.GlRenderPass, int, int, int, com.mojang.blaze3d.IndexType, com.mojang.blaze3d.opengl.GlRenderPipeline, int, int);
+  private boolean trySetup(com.mojang.blaze3d.opengl.GlRenderPass, java.util.Collection<java.lang.String>);
+  private void applyPipelineState(com.mojang.blaze3d.pipeline.RenderPipeline);
+  public void submitRenderPass();
+  public void writeTimestamp(com.mojang.blaze3d.systems.GpuQueryPool, int);
+  private static void lambda$executeDrawMultiple$0(com.mojang.blaze3d.opengl.GlRenderPass, java.lang.String, com.mojang.blaze3d.buffers.GpuBufferSlice);
+  static {};
+}
+Compiled from "GlConst.java"
+class com.mojang.blaze3d.opengl.GlConst$1 {
+  static final int[] $SwitchMap$com$mojang$blaze3d$platform$CompareOp;
+  static final int[] $SwitchMap$com$mojang$blaze3d$platform$PolygonMode;
+  static final int[] $SwitchMap$com$mojang$blaze3d$platform$BlendFactor;
+  static final int[] $SwitchMap$com$mojang$blaze3d$platform$BlendOp;
+  static final int[] $SwitchMap$com$mojang$blaze3d$PrimitiveTopology;
+  static final int[] $SwitchMap$com$mojang$blaze3d$IndexType;
+  static final int[] $SwitchMap$com$mojang$blaze3d$textures$AddressMode;
+  static final int[] $SwitchMap$com$mojang$blaze3d$GpuFormat;
+  static final int[] $SwitchMap$com$mojang$blaze3d$shaders$ShaderType;
+  static {};
+}
+Compiled from "GlConst.java"
+public class com.mojang.blaze3d.opengl.GlConst {
+  public static final int GL_READ_FRAMEBUFFER;
+  public static final int GL_DRAW_FRAMEBUFFER;
+  public static final int GL_TRUE;
+  public static final int GL_FALSE;
+  public static final int GL_NONE;
+  public static final int GL_LINES;
+  public static final int GL_LINE_STRIP;
+  public static final int GL_TRIANGLE_STRIP;
+  public static final int GL_TRIANGLE_FAN;
+  public static final int GL_TRIANGLES;
+  public static final int GL_POINTS;
+  public static final int GL_WRITE_ONLY;
+  public static final int GL_READ_ONLY;
+  public static final int GL_READ_WRITE;
+  public static final int GL_MAP_READ_BIT;
+  public static final int GL_MAP_WRITE_BIT;
+  public static final int GL_EQUAL;
+  public static final int GL_LEQUAL;
+  public static final int GL_LESS;
+  public static final int GL_GREATER;
+  public static final int GL_GEQUAL;
+  public static final int GL_ALWAYS;
+  public static final int GL_TEXTURE_MAG_FILTER;
+  public static final int GL_TEXTURE_MIN_FILTER;
+  public static final int GL_TEXTURE_WRAP_S;
+  public static final int GL_TEXTURE_WRAP_T;
+  public static final int GL_NEAREST;
+  public static final int GL_LINEAR;
+  public static final int GL_NEAREST_MIPMAP_LINEAR;
+  public static final int GL_LINEAR_MIPMAP_LINEAR;
+  public static final int GL_CLAMP_TO_EDGE;
+  public static final int GL_REPEAT;
+  public static final int GL_FRONT;
+  public static final int GL_FRONT_AND_BACK;
+  public static final int GL_LINE;
+  public static final int GL_FILL;
+  public static final int GL_BYTE;
+  public static final int GL_UNSIGNED_BYTE;
+  public static final int GL_SHORT;
+  public static final int GL_UNSIGNED_SHORT;
+  public static final int GL_INT;
+  public static final int GL_UNSIGNED_INT;
+  public static final int GL_FLOAT;
+  public static final int GL_ZERO;
+  public static final int GL_ONE;
+  public static final int GL_SRC_COLOR;
+  public static final int GL_ONE_MINUS_SRC_COLOR;
+  public static final int GL_SRC_ALPHA;
+  public static final int GL_ONE_MINUS_SRC_ALPHA;
+  public static final int GL_DST_ALPHA;
+  public static final int GL_ONE_MINUS_DST_ALPHA;
+  public static final int GL_DST_COLOR;
+  public static final int GL_ONE_MINUS_DST_COLOR;
+  public static final int GL_REPLACE;
+  public static final int GL_DEPTH_BUFFER_BIT;
+  public static final int GL_COLOR_BUFFER_BIT;
+  public static final int GL_RGBA8;
+  public static final int GL_PROXY_TEXTURE_2D;
+  public static final int GL_RGBA;
+  public static final int GL_TEXTURE_WIDTH;
+  public static final int GL_BGR;
+  public static final int GL_FUNC_ADD;
+  public static final int GL_MIN;
+  public static final int GL_MAX;
+  public static final int GL_FUNC_SUBTRACT;
+  public static final int GL_FUNC_REVERSE_SUBTRACT;
+  public static final int GL_DEPTH_COMPONENT24;
+  public static final int GL_STATIC_DRAW;
+  public static final int GL_DYNAMIC_DRAW;
+  public static final int GL_STREAM_DRAW;
+  public static final int GL_STATIC_READ;
+  public static final int GL_DYNAMIC_READ;
+  public static final int GL_STREAM_READ;
+  public static final int GL_STATIC_COPY;
+  public static final int GL_DYNAMIC_COPY;
+  public static final int GL_STREAM_COPY;
+  public static final int GL_SYNC_GPU_COMMANDS_COMPLETE;
+  public static final int GL_TIMEOUT_EXPIRED;
+  public static final int GL_WAIT_FAILED;
+  public static final int GL_UNPACK_SWAP_BYTES;
+  public static final int GL_UNPACK_LSB_FIRST;
+  public static final int GL_UNPACK_ROW_LENGTH;
+  public static final int GL_UNPACK_SKIP_ROWS;
+  public static final int GL_UNPACK_SKIP_PIXELS;
+  public static final int GL_UNPACK_ALIGNMENT;
+  public static final int GL_PACK_ALIGNMENT;
+  public static final int GL_PACK_ROW_LENGTH;
+  public static final int GL_MAX_TEXTURE_SIZE;
+  public static final int GL_TEXTURE_2D;
+  public static final int[] CUBEMAP_TARGETS;
+  public static final int GL_DEPTH_COMPONENT;
+  public static final int GL_DEPTH_COMPONENT32;
+  public static final int GL_FRAMEBUFFER;
+  public static final int GL_RENDERBUFFER;
+  public static final int GL_COLOR_ATTACHMENT0;
+  public static final int GL_DEPTH_ATTACHMENT;
+  public static final int GL_FRAMEBUFFER_COMPLETE;
+  public static final int GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT;
+  public static final int GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT;
+  public static final int GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER;
+  public static final int GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER;
+  public static final int GL_FRAMEBUFFER_UNSUPPORTED;
+  public static final int GL_LINK_STATUS;
+  public static final int GL_COMPILE_STATUS;
+  public static final int GL_VERTEX_SHADER;
+  public static final int GL_FRAGMENT_SHADER;
+  public static final int GL_TEXTURE0;
+  public static final int GL_TEXTURE1;
+  public static final int GL_TEXTURE2;
+  public static final int GL_TEXTURE_COMPARE_MODE;
+  public static final int GL_ARRAY_BUFFER;
+  public static final int GL_ELEMENT_ARRAY_BUFFER;
+  public static final int GL_PIXEL_PACK_BUFFER;
+  public static final int GL_COPY_READ_BUFFER;
+  public static final int GL_COPY_WRITE_BUFFER;
+  public static final int GL_PIXEL_UNPACK_BUFFER;
+  public static final int GL_UNIFORM_BUFFER;
+  public static final int GL_RGB;
+  public static final int GL_RG;
+  public static final int GL_R8;
+  public static final int GL_RED;
+  public static final int GL_OUT_OF_MEMORY;
+  public com.mojang.blaze3d.opengl.GlConst();
+  public static int toGl(com.mojang.blaze3d.platform.CompareOp);
+  public static int toGl(com.mojang.blaze3d.platform.PolygonMode);
+  public static int toGl(com.mojang.blaze3d.platform.BlendFactor);
+  public static int toGl(com.mojang.blaze3d.platform.BlendOp);
+  public static int toGl(com.mojang.blaze3d.PrimitiveTopology);
+  public static int toGl(com.mojang.blaze3d.IndexType);
+  public static int toGl(com.mojang.blaze3d.textures.AddressMode);
+  public static int glFormatChannelCount(int);
+  public static boolean isGlFormatInteger(int);
+  public static boolean isFormatNormalized(com.mojang.blaze3d.GpuFormat);
+  public static int toGlInternalId(com.mojang.blaze3d.GpuFormat);
+  public static int toGlExternalId(com.mojang.blaze3d.GpuFormat);
+  public static int toGlType(com.mojang.blaze3d.GpuFormat);
+  public static int toGl(com.mojang.blaze3d.shaders.ShaderType);
+  public static int bufferUsageToGlFlag(int);
+  public static int bufferUsageToGlEnum(int);
+  static {};
+}
+Compiled from "GlDebug.java"
+class com.mojang.blaze3d.opengl.GlDebug$LogEntry {
+  private final int id;
+  private final int source;
+  private final int type;
+  private final int severity;
+  private final java.lang.String message;
+  private int count;
+  private com.mojang.blaze3d.opengl.GlDebug$LogEntry(int, int, int, int, java.lang.String);
+  private boolean isSame(int, int, int, int, java.lang.String);
+  public java.lang.String toString();
+}
+Compiled from "GlDebug.java"
+public class com.mojang.blaze3d.opengl.GlDebug {
+  private static final org.slf4j.Logger LOGGER;
+  private static final int CIRCULAR_LOG_SIZE;
+  private final java.util.Queue<com.mojang.blaze3d.opengl.GlDebug$LogEntry> MESSAGE_BUFFER;
+  private volatile com.mojang.blaze3d.opengl.GlDebug$LogEntry lastEntry;
+  private static final java.util.List<java.lang.Integer> DEBUG_LEVELS;
+  private static final java.util.List<java.lang.Integer> DEBUG_LEVELS_ARB;
+  public com.mojang.blaze3d.opengl.GlDebug();
+  private static java.lang.String printUnknownToken(int);
+  public static java.lang.String sourceToString(int);
+  public static java.lang.String typeToString(int);
+  public static java.lang.String severityToString(int);
+  private void printDebugLog(int, int, int, int, int, long, long);
+  public java.util.List<java.lang.String> getLastOpenGlDebugMessages();
+  public static com.mojang.blaze3d.opengl.GlDebug enableDebugCallback(int, boolean, java.util.Set<java.lang.String>);
+  static {};
+}
+Compiled from "GlDebugLabel.java"
+class com.mojang.blaze3d.opengl.GlDebugLabel$Core extends com.mojang.blaze3d.opengl.GlDebugLabel {
+  private final int maxLabelLength;
+  private com.mojang.blaze3d.opengl.GlDebugLabel$Core();
+  public void applyLabel(com.mojang.blaze3d.opengl.GlBuffer, java.util.function.Supplier<java.lang.String>);
+  public void applyLabel(com.mojang.blaze3d.opengl.GlTexture);
+  public void applyLabel(com.mojang.blaze3d.opengl.GlShaderModule);
+  public void applyLabel(com.mojang.blaze3d.opengl.GlProgram);
+  public void applyLabel(com.mojang.blaze3d.opengl.VertexArrayCache$VertexArray);
+  public void pushDebugGroup(java.util.function.Supplier<java.lang.String>);
+  public void popDebugGroup();
+  public boolean exists();
+}
+Compiled from "GlDebugLabel.java"
+class com.mojang.blaze3d.opengl.GlDebugLabel$Empty extends com.mojang.blaze3d.opengl.GlDebugLabel {
+  private com.mojang.blaze3d.opengl.GlDebugLabel$Empty();
+}
+Compiled from "GlDebugLabel.java"
+class com.mojang.blaze3d.opengl.GlDebugLabel$Ext extends com.mojang.blaze3d.opengl.GlDebugLabel {
+  private com.mojang.blaze3d.opengl.GlDebugLabel$Ext();
+  public void applyLabel(com.mojang.blaze3d.opengl.GlBuffer, java.util.function.Supplier<java.lang.String>);
+  public void applyLabel(com.mojang.blaze3d.opengl.GlTexture);
+  public void applyLabel(com.mojang.blaze3d.opengl.GlShaderModule);
+  public void applyLabel(com.mojang.blaze3d.opengl.GlProgram);
+  public void applyLabel(com.mojang.blaze3d.opengl.VertexArrayCache$VertexArray);
+  public boolean exists();
+}
+Compiled from "GlDebugLabel.java"
+public abstract class com.mojang.blaze3d.opengl.GlDebugLabel {
+  private static final org.slf4j.Logger LOGGER;
+  public com.mojang.blaze3d.opengl.GlDebugLabel();
+  public void applyLabel(com.mojang.blaze3d.opengl.GlBuffer, java.util.function.Supplier<java.lang.String>);
+  public void applyLabel(com.mojang.blaze3d.opengl.GlTexture);
+  public void applyLabel(com.mojang.blaze3d.opengl.GlShaderModule);
+  public void applyLabel(com.mojang.blaze3d.opengl.GlProgram);
+  public void applyLabel(com.mojang.blaze3d.opengl.VertexArrayCache$VertexArray);
+  public void pushDebugGroup(java.util.function.Supplier<java.lang.String>);
+  public void popDebugGroup();
+  public static com.mojang.blaze3d.opengl.GlDebugLabel create(org.lwjgl.opengl.GLCapabilities, boolean, java.util.Set<java.lang.String>);
+  public boolean exists();
+  static {};
+}
+Compiled from "GlDevice.java"
+final class com.mojang.blaze3d.opengl.GlDevice$ShaderCompilationKey extends java.lang.Record {
+  private final net.minecraft.resources.Identifier id;
+  private final com.mojang.blaze3d.shaders.ShaderType type;
+  private final net.minecraft.client.renderer.ShaderDefines defines;
+  private com.mojang.blaze3d.opengl.GlDevice$ShaderCompilationKey(net.minecraft.resources.Identifier, com.mojang.blaze3d.shaders.ShaderType, net.minecraft.client.renderer.ShaderDefines);
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier id();
+  public com.mojang.blaze3d.shaders.ShaderType type();
+  public net.minecraft.client.renderer.ShaderDefines defines();
+}
+Compiled from "GlDevice.java"
+class com.mojang.blaze3d.opengl.GlDevice implements com.mojang.blaze3d.systems.GpuDeviceBackend {
+  private static final org.slf4j.Logger LOGGER;
+  protected static boolean USE_GL_ARB_vertex_attrib_binding;
+  protected static boolean USE_GL_KHR_debug;
+  protected static boolean USE_GL_EXT_debug_label;
+  protected static boolean USE_GL_ARB_debug_output;
+  protected static boolean USE_GL_ARB_direct_state_access;
+  protected static boolean USE_GL_ARB_buffer_storage;
+  protected static boolean USE_GL_ARB_base_instance;
+  protected static boolean USE_GL_ARB_draw_indirect;
+  protected static boolean USE_GL_ARB_multi_draw_indirect;
+  protected static boolean USE_GL_ARB_shader_draw_parameters;
+  private final com.mojang.blaze3d.opengl.GlCommandEncoder encoder;
+  private final com.mojang.blaze3d.opengl.GlDebug debugLog;
+  private final com.mojang.blaze3d.opengl.GlDebugLabel debugLabels;
+  private final com.mojang.blaze3d.opengl.DirectStateAccess directStateAccess;
+  private final com.mojang.blaze3d.shaders.ShaderSource defaultShaderSource;
+  private final java.util.Map<com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.opengl.GlRenderPipeline> pipelineCache;
+  private final java.util.Map<com.mojang.blaze3d.opengl.GlDevice$ShaderCompilationKey, com.mojang.blaze3d.opengl.GlShaderModule> shaderCache;
+  private final com.mojang.blaze3d.opengl.FrameBufferCache frameBufferCache;
+  private final com.mojang.blaze3d.opengl.VertexArrayCache vertexArrayCache;
+  private final com.mojang.blaze3d.opengl.BufferStorage bufferStorage;
+  private final com.mojang.blaze3d.systems.DeviceInfo deviceInfo;
+  public com.mojang.blaze3d.opengl.GlDevice(long, com.mojang.blaze3d.shaders.ShaderSource, com.mojang.blaze3d.shaders.GpuDebugOptions);
+  public com.mojang.blaze3d.opengl.GlDebugLabel debugLabels();
+  public com.mojang.blaze3d.systems.GpuSurfaceBackend createSurface(long);
+  public com.mojang.blaze3d.systems.CommandEncoderBackend createCommandEncoder();
+  public com.mojang.blaze3d.textures.GpuSampler createSampler(com.mojang.blaze3d.textures.AddressMode, com.mojang.blaze3d.textures.AddressMode, com.mojang.blaze3d.textures.FilterMode, com.mojang.blaze3d.textures.FilterMode, int, java.util.OptionalDouble);
+  public com.mojang.blaze3d.textures.GpuTexture createTexture(java.util.function.Supplier<java.lang.String>, int, com.mojang.blaze3d.GpuFormat, int, int, int, int);
+  public com.mojang.blaze3d.textures.GpuTexture createTexture(java.lang.String, int, com.mojang.blaze3d.GpuFormat, int, int, int, int);
+  public com.mojang.blaze3d.textures.GpuTextureView createTextureView(com.mojang.blaze3d.textures.GpuTexture);
+  public com.mojang.blaze3d.textures.GpuTextureView createTextureView(com.mojang.blaze3d.textures.GpuTexture, int, int);
+  public com.mojang.blaze3d.buffers.GpuBuffer createBuffer(java.util.function.Supplier<java.lang.String>, int, long);
+  public com.mojang.blaze3d.buffers.GpuBuffer createBuffer(java.util.function.Supplier<java.lang.String>, int, java.nio.ByteBuffer);
+  public java.util.List<java.lang.String> getLastDebugMessages();
+  public boolean isDebuggingEnabled();
+  public void clearPipelineCache();
+  private static void sacrificeShaderToOpenGlAndAmd();
+  public void close();
+  public com.mojang.blaze3d.opengl.DirectStateAccess directStateAccess();
+  protected com.mojang.blaze3d.opengl.GlRenderPipeline getOrCompilePipeline(com.mojang.blaze3d.pipeline.RenderPipeline);
+  protected com.mojang.blaze3d.opengl.GlShaderModule getOrCompileShader(net.minecraft.resources.Identifier, com.mojang.blaze3d.shaders.ShaderType, net.minecraft.client.renderer.ShaderDefines, com.mojang.blaze3d.shaders.ShaderSource);
+  public com.mojang.blaze3d.opengl.GlRenderPipeline precompilePipeline(com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.shaders.ShaderSource);
+  private com.mojang.blaze3d.opengl.GlShaderModule compileShader(com.mojang.blaze3d.opengl.GlDevice$ShaderCompilationKey, com.mojang.blaze3d.shaders.ShaderSource);
+  private com.mojang.blaze3d.opengl.GlProgram compileProgram(com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.shaders.ShaderSource);
+  private com.mojang.blaze3d.opengl.GlRenderPipeline compilePipeline(com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.shaders.ShaderSource);
+  public com.mojang.blaze3d.opengl.VertexArrayCache vertexArrayCache();
+  public com.mojang.blaze3d.opengl.BufferStorage getBufferStorage();
+  public com.mojang.blaze3d.opengl.FrameBufferCache frameBufferCache();
+  public com.mojang.blaze3d.systems.GpuQueryPool createTimestampQueryPool(int);
+  public long getTimestampNow();
+  public com.mojang.blaze3d.systems.DeviceInfo getDeviceInfo();
+  public com.mojang.blaze3d.pipeline.CompiledRenderPipeline precompilePipeline(com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.shaders.ShaderSource);
+  private com.mojang.blaze3d.opengl.GlRenderPipeline lambda$precompilePipeline$0(com.mojang.blaze3d.shaders.ShaderSource, com.mojang.blaze3d.pipeline.RenderPipeline);
+  private com.mojang.blaze3d.opengl.GlShaderModule lambda$getOrCompileShader$0(com.mojang.blaze3d.shaders.ShaderSource, com.mojang.blaze3d.opengl.GlDevice$ShaderCompilationKey);
+  private com.mojang.blaze3d.opengl.GlRenderPipeline lambda$getOrCompilePipeline$0(com.mojang.blaze3d.pipeline.RenderPipeline);
+  static {};
+}
+Compiled from "GlFence.java"
+public class com.mojang.blaze3d.opengl.GlFence implements com.mojang.blaze3d.buffers.GpuFence {
+  private final com.mojang.blaze3d.opengl.GlCommandEncoder encoder;
+  private final long submitIndex;
+  private boolean closedOrCompleted;
+  com.mojang.blaze3d.opengl.GlFence(com.mojang.blaze3d.opengl.GlCommandEncoder);
+  public void close();
+  public boolean awaitCompletion(long);
+}
+Compiled from "GlHeuristics.java"
+public class com.mojang.blaze3d.opengl.GlHeuristics {
+  private static final org.slf4j.Logger LOGGER;
+  private static final java.util.List<java.lang.String> DEVICE_NAMES_THAT_IMPLY_CPU;
+  private static final java.util.List<java.lang.String> DEVICE_NAMES_THAT_IMPLY_VIRTUAL;
+  private final boolean isGlOnDx12;
+  private final boolean isAmd;
+  com.mojang.blaze3d.opengl.GlHeuristics(java.lang.String);
+  public boolean isGlOnDx12();
+  public boolean isAmd();
+  private static boolean isGlOnDx12(java.lang.String);
+  private static boolean isAmd(java.lang.String);
+  private static int getMaxSupportedTextureSize();
+  public com.mojang.blaze3d.systems.DeviceInfo createDeviceInfo(org.lwjgl.opengl.GLCapabilities, int, java.util.Set<java.lang.String>);
+  private com.mojang.blaze3d.systems.DeviceType guessDeviceType(java.lang.String, java.lang.String);
+  static {};
+}
+Compiled from "GlProgram.java"
+class com.mojang.blaze3d.opengl.GlProgram$1 {
+  static final int[] $SwitchMap$com$mojang$blaze3d$shaders$UniformType;
+  static {};
+}
+Compiled from "GlProgram.java"
+public class com.mojang.blaze3d.opengl.GlProgram implements java.lang.AutoCloseable {
+  private static final org.slf4j.Logger LOGGER;
+  public static final java.util.Set<java.lang.String> BUILT_IN_UNIFORMS;
+  public static final com.mojang.blaze3d.opengl.GlProgram INVALID_PROGRAM;
+  private final java.util.Map<java.lang.String, com.mojang.blaze3d.opengl.Uniform> uniformsByName;
+  private final int programId;
+  private final java.lang.String debugLabel;
+  private com.mojang.blaze3d.opengl.GlProgram(int, java.lang.String);
+  public static com.mojang.blaze3d.opengl.GlProgram link(com.mojang.blaze3d.opengl.GlShaderModule, com.mojang.blaze3d.opengl.GlShaderModule, com.mojang.blaze3d.vertex.VertexFormat[], java.lang.String) throws net.minecraft.client.renderer.ShaderManager$CompilationException;
+  public void setupBindGroupLayouts(java.util.List<com.mojang.blaze3d.pipeline.BindGroupLayout>);
+  public void close();
+  public com.mojang.blaze3d.opengl.Uniform getUniform(java.lang.String);
+  public int getProgramId();
+  public java.lang.String toString();
+  public java.lang.String getDebugLabel();
+  public java.util.Map<java.lang.String, com.mojang.blaze3d.opengl.Uniform> getUniforms();
+  static {};
+}
+Compiled from "GlQueryPool.java"
+public class com.mojang.blaze3d.opengl.GlQueryPool implements com.mojang.blaze3d.systems.GpuQueryPool {
+  private final int[] handles;
+  private boolean closed;
+  public com.mojang.blaze3d.opengl.GlQueryPool(int);
+  public int size();
+  public java.util.OptionalLong getValue(int);
+  public java.util.OptionalLong[] getValues(int, int);
+  protected void writeTimestamp(int);
+  public void close();
+}
+Compiled from "GlRenderPass.java"
+public final class com.mojang.blaze3d.opengl.GlRenderPass$TextureViewAndSampler extends java.lang.Record {
+  private final com.mojang.blaze3d.opengl.GlTextureView view;
+  private final com.mojang.blaze3d.opengl.GlSampler sampler;
+  protected com.mojang.blaze3d.opengl.GlRenderPass$TextureViewAndSampler(com.mojang.blaze3d.opengl.GlTextureView, com.mojang.blaze3d.opengl.GlSampler);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.opengl.GlTextureView view();
+  public com.mojang.blaze3d.opengl.GlSampler sampler();
+}
+Compiled from "GlRenderPass.java"
+class com.mojang.blaze3d.opengl.GlRenderPass implements com.mojang.blaze3d.systems.RenderPassBackend {
+  public static final boolean VALIDATION;
+  private final com.mojang.blaze3d.opengl.GlCommandEncoder encoder;
+  private final com.mojang.blaze3d.opengl.GlDevice device;
+  private final boolean hasDepthTexture;
+  private final com.mojang.blaze3d.systems.ScissorState defaultScissorState;
+  protected com.mojang.blaze3d.opengl.GlRenderPipeline pipeline;
+  protected final com.mojang.blaze3d.buffers.GpuBufferSlice[] vertexBuffers;
+  protected boolean vertexBufferDirty;
+  protected com.mojang.blaze3d.buffers.GpuBuffer indexBuffer;
+  protected com.mojang.blaze3d.IndexType indexType;
+  private final com.mojang.blaze3d.systems.ScissorState scissorState;
+  protected final java.util.HashMap<java.lang.String, com.mojang.blaze3d.buffers.GpuBufferSlice> uniforms;
+  protected final java.util.HashMap<java.lang.String, com.mojang.blaze3d.opengl.GlRenderPass$TextureViewAndSampler> samplers;
+  protected final java.util.Set<java.lang.String> dirtyUniforms;
+  protected final int colorAttachmentCount;
+  public com.mojang.blaze3d.opengl.GlRenderPass(com.mojang.blaze3d.opengl.GlCommandEncoder, com.mojang.blaze3d.opengl.GlDevice, boolean, int, com.mojang.blaze3d.systems.ScissorState);
+  public boolean hasDepthTexture();
+  public void pushDebugGroup(java.util.function.Supplier<java.lang.String>);
+  public void popDebugGroup();
+  public void setPipeline(com.mojang.blaze3d.pipeline.RenderPipeline);
+  public void bindTexture(java.lang.String, com.mojang.blaze3d.textures.GpuTextureView, com.mojang.blaze3d.textures.GpuSampler);
+  public void setUniform(java.lang.String, com.mojang.blaze3d.buffers.GpuBuffer);
+  public void setUniform(java.lang.String, com.mojang.blaze3d.buffers.GpuBufferSlice);
+  public void enableScissor(int, int, int, int);
+  public void disableScissor();
+  public boolean isScissorEnabled();
+  public int getScissorX();
+  public int getScissorY();
+  public int getScissorWidth();
+  public int getScissorHeight();
+  public void setVertexBuffer(int, com.mojang.blaze3d.buffers.GpuBufferSlice);
+  public void setIndexBuffer(com.mojang.blaze3d.buffers.GpuBuffer, com.mojang.blaze3d.IndexType);
+  public void drawIndexed(int, int, int, int, int);
+  public void multiDrawIndexed(java.nio.IntBuffer, int, int, int);
+  public void multiDrawIndexed(org.lwjgl.PointerBuffer, java.nio.IntBuffer, java.nio.IntBuffer, int);
+  public void drawIndexedIndirect(com.mojang.blaze3d.buffers.GpuBufferSlice, int);
+  public <T> void drawMultipleIndexed(java.util.Collection<com.mojang.blaze3d.systems.RenderPass$Draw<T>>, com.mojang.blaze3d.buffers.GpuBuffer, com.mojang.blaze3d.IndexType, java.util.Collection<java.lang.String>, T);
+  public void draw(int, int, int, int);
+  public void multiDraw(java.nio.IntBuffer, int, int, int);
+  public void multiDraw(java.nio.IntBuffer, java.nio.IntBuffer, int);
+  public void drawIndirect(com.mojang.blaze3d.buffers.GpuBufferSlice, int);
+  public void writeTimestamp(com.mojang.blaze3d.systems.GpuQueryPool, int);
+  static {};
+}
+Compiled from "GlRenderPipeline.java"
+public final class com.mojang.blaze3d.opengl.GlRenderPipeline extends java.lang.Record implements com.mojang.blaze3d.pipeline.CompiledRenderPipeline {
+  private final com.mojang.blaze3d.pipeline.RenderPipeline info;
+  private final com.mojang.blaze3d.opengl.GlProgram program;
+  public com.mojang.blaze3d.opengl.GlRenderPipeline(com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.opengl.GlProgram);
+  public boolean isValid();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.pipeline.RenderPipeline info();
+  public com.mojang.blaze3d.opengl.GlProgram program();
+}
+Compiled from "GlSampler.java"
+class com.mojang.blaze3d.opengl.GlSampler$1 {
+  static final int[] $SwitchMap$com$mojang$blaze3d$textures$FilterMode;
+  static {};
+}
+Compiled from "GlSampler.java"
+public class com.mojang.blaze3d.opengl.GlSampler extends com.mojang.blaze3d.textures.GpuSampler {
+  private final int id;
+  private final com.mojang.blaze3d.textures.AddressMode addressModeU;
+  private final com.mojang.blaze3d.textures.AddressMode addressModeV;
+  private final com.mojang.blaze3d.textures.FilterMode minFilter;
+  private final com.mojang.blaze3d.textures.FilterMode magFilter;
+  private final int maxAnisotropy;
+  private final java.util.OptionalDouble maxLod;
+  private boolean closed;
+  public com.mojang.blaze3d.opengl.GlSampler(com.mojang.blaze3d.textures.AddressMode, com.mojang.blaze3d.textures.AddressMode, com.mojang.blaze3d.textures.FilterMode, com.mojang.blaze3d.textures.FilterMode, int, java.util.OptionalDouble);
+  public int getId();
+  public com.mojang.blaze3d.textures.AddressMode getAddressModeU();
+  public com.mojang.blaze3d.textures.AddressMode getAddressModeV();
+  public com.mojang.blaze3d.textures.FilterMode getMinFilter();
+  public com.mojang.blaze3d.textures.FilterMode getMagFilter();
+  public int getMaxAnisotropy();
+  public java.util.OptionalDouble getMaxLod();
+  public void close();
+  public boolean isClosed();
+}
+Compiled from "GlShaderModule.java"
+public class com.mojang.blaze3d.opengl.GlShaderModule implements java.lang.AutoCloseable {
+  private static final int NOT_ALLOCATED;
+  public static final com.mojang.blaze3d.opengl.GlShaderModule INVALID_SHADER;
+  private final net.minecraft.resources.Identifier id;
+  private int shaderId;
+  private final com.mojang.blaze3d.shaders.ShaderType type;
+  public com.mojang.blaze3d.opengl.GlShaderModule(int, net.minecraft.resources.Identifier, com.mojang.blaze3d.shaders.ShaderType);
+  public void close();
+  public net.minecraft.resources.Identifier getId();
+  public int getShaderId();
+  public java.lang.String getDebugLabel();
+  static {};
+}
+Compiled from "GlStateManager.java"
+class com.mojang.blaze3d.opengl.GlStateManager$BlendState {
+  public final com.mojang.blaze3d.opengl.GlStateManager$BooleanState mode;
+  public int srcRgb;
+  public int dstRgb;
+  public int modeRgb;
+  public int srcAlpha;
+  public int dstAlpha;
+  public int modeAlpha;
+  private com.mojang.blaze3d.opengl.GlStateManager$BlendState();
+}
+Compiled from "GlStateManager.java"
+class com.mojang.blaze3d.opengl.GlStateManager$BooleanState {
+  private final int state;
+  private boolean enabled;
+  public com.mojang.blaze3d.opengl.GlStateManager$BooleanState(int);
+  public void disable();
+  public void enable();
+  public void setEnabled(boolean);
+}
+Compiled from "GlStateManager.java"
+class com.mojang.blaze3d.opengl.GlStateManager$ColorLogicState {
+  public final com.mojang.blaze3d.opengl.GlStateManager$BooleanState enable;
+  public int op;
+  private com.mojang.blaze3d.opengl.GlStateManager$ColorLogicState();
+}
+Compiled from "GlStateManager.java"
+class com.mojang.blaze3d.opengl.GlStateManager$CullState {
+  public final com.mojang.blaze3d.opengl.GlStateManager$BooleanState enable;
+  private com.mojang.blaze3d.opengl.GlStateManager$CullState();
+}
+Compiled from "GlStateManager.java"
+class com.mojang.blaze3d.opengl.GlStateManager$DepthState {
+  public final com.mojang.blaze3d.opengl.GlStateManager$BooleanState mode;
+  public boolean mask;
+  public int func;
+  private com.mojang.blaze3d.opengl.GlStateManager$DepthState();
+}
+Compiled from "GlStateManager.java"
+class com.mojang.blaze3d.opengl.GlStateManager$PolygonOffsetState {
+  public final com.mojang.blaze3d.opengl.GlStateManager$BooleanState fill;
+  public float factor;
+  public float units;
+  private com.mojang.blaze3d.opengl.GlStateManager$PolygonOffsetState();
+}
+Compiled from "GlStateManager.java"
+class com.mojang.blaze3d.opengl.GlStateManager$ScissorState {
+  public final com.mojang.blaze3d.opengl.GlStateManager$BooleanState mode;
+  private com.mojang.blaze3d.opengl.GlStateManager$ScissorState();
+}
+Compiled from "GlStateManager.java"
+class com.mojang.blaze3d.opengl.GlStateManager$TextureState {
+  public int binding;
+  private com.mojang.blaze3d.opengl.GlStateManager$TextureState();
+}
+Compiled from "GlStateManager.java"
+public class com.mojang.blaze3d.opengl.GlStateManager {
+  private static final com.mojang.jtracy.Plot PLOT_TEXTURES;
+  private static int numTextures;
+  private static final com.mojang.jtracy.Plot PLOT_BUFFERS;
+  private static int numBuffers;
+  private static final com.mojang.blaze3d.opengl.GlStateManager$BlendState[] BLEND;
+  private static final com.mojang.blaze3d.opengl.GlStateManager$DepthState DEPTH;
+  private static final com.mojang.blaze3d.opengl.GlStateManager$CullState CULL;
+  private static final com.mojang.blaze3d.opengl.GlStateManager$PolygonOffsetState POLY_OFFSET;
+  private static final com.mojang.blaze3d.opengl.GlStateManager$ColorLogicState COLOR_LOGIC;
+  private static final com.mojang.blaze3d.opengl.GlStateManager$ScissorState SCISSOR;
+  private static int activeTexture;
+  private static final int TEXTURE_COUNT;
+  private static final com.mojang.blaze3d.opengl.GlStateManager$TextureState[] TEXTURES;
+  private static final int[] COLOR_MASK;
+  private static int readFbo;
+  private static int writeFbo;
+  public com.mojang.blaze3d.opengl.GlStateManager();
+  public static void _disableScissorTest();
+  public static void _enableScissorTest();
+  public static void _scissorBox(int, int, int, int);
+  public static void _disableDepthTest();
+  public static void _enableDepthTest();
+  public static void _depthFunc(int);
+  public static void _depthMask(boolean);
+  public static void _disableBlend(int);
+  public static void _enableBlend(int);
+  public static void _blendFuncSeparate(int, int, int, int);
+  public static void _blendEquationSeparate(int, int);
+  public static int glGetProgrami(int, int);
+  public static void glAttachShader(int, int);
+  public static void glDeleteShader(int);
+  public static int glCreateShader(int);
+  public static void glShaderSource(int, java.lang.String);
+  public static void glCompileShader(int);
+  public static int glGetShaderi(int, int);
+  public static void _glUseProgram(int);
+  public static int glCreateProgram();
+  public static void glDeleteProgram(int);
+  public static void glLinkProgram(int);
+  public static int _glGetUniformLocation(int, java.lang.CharSequence);
+  public static void _glUniform1i(int, int);
+  public static void _glBindAttribLocation(int, int, java.lang.CharSequence);
+  static void incrementTrackedBuffers();
+  public static int _glGenBuffers();
+  public static int _glGenVertexArrays();
+  public static void _glBindBuffer(int, int);
+  public static void _glBindVertexArray(int);
+  public static void _glBufferData(int, java.nio.ByteBuffer, int);
+  public static void _glBufferSubData(int, long, java.nio.ByteBuffer);
+  public static void _glBufferData(int, long, int);
+  public static java.nio.ByteBuffer _glMapBufferRange(int, long, long, int);
+  public static void _glUnmapBuffer(int);
+  public static void _glDeleteBuffers(int);
+  public static void _glBindFramebuffer(int, int);
+  public static int getFrameBuffer(int);
+  public static void _glBlitFrameBuffer(int, int, int, int, int, int, int, int, int, int);
+  public static void _glDeleteFramebuffers(int);
+  public static int glGenFramebuffers();
+  public static void _glFramebufferTexture2D(int, int, int, int, int);
+  public static void glBlendFuncSeparate(int, int, int, int);
+  public static void glBlendEquationSeparate(int, int);
+  public static java.lang.String glGetShaderInfoLog(int, int);
+  public static java.lang.String glGetProgramInfoLog(int, int);
+  public static void _enableCull();
+  public static void _disableCull();
+  public static void _polygonMode(int, int);
+  public static void _enablePolygonOffset();
+  public static void _disablePolygonOffset();
+  public static void _polygonOffset(float, float);
+  public static void _enableColorLogicOp();
+  public static void _disableColorLogicOp();
+  public static void _logicOp(int);
+  public static void _activeTexture(int);
+  public static void _texParameter(int, int, int);
+  public static int _getTexLevelParameter(int, int, int);
+  public static int _genTexture();
+  public static void _deleteTexture(int);
+  public static void _bindTexture(int);
+  public static void _texImage2D(int, int, int, int, int, int, int, int, java.nio.ByteBuffer);
+  public static void _texSubImage2D(int, int, int, int, int, int, int, int, long);
+  public static void _texSubImage2D(int, int, int, int, int, int, int, int, java.nio.ByteBuffer);
+  public static void _viewport(int, int, int, int);
+  public static void _colorMask(int);
+  public static void _colorMask(int, int);
+  public static void _clear(int);
+  public static void _clearBuffer(int, org.joml.Vector4fc);
+  public static void _clearBuffer(double);
+  public static void _vertexAttribPointer(int, int, int, boolean, int, long);
+  public static void _vertexAttribIPointer(int, int, int, int, long);
+  public static void _enableVertexAttribArray(int);
+  public static void _drawElements(int, int, int, long);
+  public static void _drawArrays(int, int, int);
+  public static void _pixelStore(int, int);
+  public static void _readPixels(int, int, int, int, int, int, long);
+  public static int _getError();
+  public static void clearGlErrors();
+  public static java.lang.String _getString(int);
+  public static int _getInteger(int);
+  public static long _glFenceSync(int, int);
+  public static int _glClientWaitSync(long, int, long);
+  public static void _glDeleteSync(long);
+  private static com.mojang.blaze3d.opengl.GlStateManager$BlendState lambda$static$2(int);
+  private static int lambda$static$1(int);
+  private static com.mojang.blaze3d.opengl.GlStateManager$TextureState[] lambda$TEXTURES$0(int);
+  private static com.mojang.blaze3d.opengl.GlStateManager$TextureState lambda$static$0(int);
+  static {};
+}
+Compiled from "GlSurface.java"
+public class com.mojang.blaze3d.opengl.GlSurface implements com.mojang.blaze3d.systems.GpuSurfaceBackend {
+  private static final java.util.Set<com.mojang.blaze3d.systems.GpuSurface$PresentMode> SUPPORTED_PRESENT_MODES;
+  private final long windowHandle;
+  private int swapchainWidth;
+  private int swapchainHeight;
+  public com.mojang.blaze3d.opengl.GlSurface(long);
+  public void configure(com.mojang.blaze3d.systems.GpuSurface$Configuration) throws com.mojang.blaze3d.systems.SurfaceException;
+  public boolean isSuboptimal();
+  public void acquireNextTexture();
+  public void blitFromTexture(com.mojang.blaze3d.systems.CommandEncoderBackend, com.mojang.blaze3d.textures.GpuTextureView);
+  public void present();
+  public void close();
+  public java.util.Collection<com.mojang.blaze3d.systems.GpuSurface$PresentMode> supportedPresentModes();
+  static {};
+}
+Compiled from "GlTexture.java"
+public class com.mojang.blaze3d.opengl.GlTexture extends com.mojang.blaze3d.textures.GpuTexture implements com.mojang.blaze3d.opengl.FrameBufferAttachment {
+  private static final int EMPTY;
+  protected final int id;
+  private final com.mojang.blaze3d.opengl.FrameBufferCache frameBufferCache;
+  private final java.util.List<com.mojang.blaze3d.opengl.FrameBufferCache$CacheKey> fboKeys;
+  protected boolean closed;
+  private int views;
+  protected com.mojang.blaze3d.opengl.GlTexture(int, java.lang.String, com.mojang.blaze3d.GpuFormat, int, int, int, int, int, com.mojang.blaze3d.opengl.FrameBufferCache);
+  public void close();
+  private void destroyImmediately();
+  public boolean isClosed();
+  public int glId();
+  public int fboMipLevel();
+  public void addAssociatedFbo(com.mojang.blaze3d.opengl.FrameBufferCache$CacheKey);
+  public void removeAssociatedFbo(com.mojang.blaze3d.opengl.FrameBufferCache$CacheKey);
+  public void addViews();
+  public void removeViews();
+}
+Compiled from "GlTextureView.java"
+public class com.mojang.blaze3d.opengl.GlTextureView extends com.mojang.blaze3d.textures.GpuTextureView implements com.mojang.blaze3d.opengl.FrameBufferAttachment {
+  private static final int EMPTY;
+  private boolean closed;
+  private final com.mojang.blaze3d.opengl.FrameBufferCache frameBufferCache;
+  private final java.util.List<com.mojang.blaze3d.opengl.FrameBufferCache$CacheKey> fboKeys;
+  protected com.mojang.blaze3d.opengl.GlTextureView(com.mojang.blaze3d.opengl.GlTexture, int, int, com.mojang.blaze3d.opengl.FrameBufferCache);
+  public boolean isClosed();
+  public void close();
+  public com.mojang.blaze3d.opengl.GlTexture texture();
+  public int glId();
+  public int fboMipLevel();
+  public void addAssociatedFbo(com.mojang.blaze3d.opengl.FrameBufferCache$CacheKey);
+  public void removeAssociatedFbo(com.mojang.blaze3d.opengl.FrameBufferCache$CacheKey);
+  public com.mojang.blaze3d.textures.GpuTexture texture();
+}
+Compiled from "GlTransientMemory.java"
+final class com.mojang.blaze3d.opengl.GlTransientMemory$Fallback$GlAllocation extends java.lang.Record {
+  private final com.mojang.blaze3d.opengl.GlBuffer glBuffer;
+  private final long hostBuffer;
+  private com.mojang.blaze3d.opengl.GlTransientMemory$Fallback$GlAllocation(com.mojang.blaze3d.opengl.GlBuffer, long);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.opengl.GlBuffer glBuffer();
+  public long hostBuffer();
+}
+Compiled from "GlTransientMemory.java"
+class com.mojang.blaze3d.opengl.GlTransientMemory$Fallback extends com.mojang.blaze3d.opengl.GlTransientMemory {
+  private final com.mojang.blaze3d.util.TransientBlockAllocator<com.mojang.blaze3d.opengl.GlTransientMemory$Fallback$GlAllocation> blockAllocator;
+  com.mojang.blaze3d.opengl.GlTransientMemory$Fallback(com.mojang.blaze3d.opengl.GlDevice, com.mojang.blaze3d.opengl.GlCommandEncoder);
+  public void close();
+  public void rotate();
+  private com.mojang.blaze3d.opengl.GlTransientMemory$Fallback$GlAllocation allocateGlBlock(long);
+  private void freeGlBlock(com.mojang.blaze3d.opengl.GlTransientMemory$Fallback$GlAllocation);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView allocateStaging(long, long, int, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice allocateGpu(long, long, int, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView allocateGpuMapped(long, long, int, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice uploadStaging(java.util.List<java.nio.ByteBuffer>, long, int, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice uploadGpu(java.util.List<java.nio.ByteBuffer>, long, int, long, long);
+  public java.util.List<com.mojang.blaze3d.buffers.GpuBufferSlice> multiUploadStaging(java.util.List<java.nio.ByteBuffer>, long, int);
+  public java.util.List<com.mojang.blaze3d.buffers.GpuBufferSlice> multiUploadGpu(java.util.List<java.nio.ByteBuffer>, long, int);
+  private static java.lang.Integer lambda$multiUploadGpu$0(java.util.List, int);
+  private void lambda$allocateStaging$0(com.mojang.blaze3d.opengl.GlTransientMemory$TransientGpuBuffer, com.mojang.blaze3d.buffers.GpuBufferSlice, com.mojang.blaze3d.util.TransientBlockAllocator$Allocation, int);
+  private static java.lang.String lambda$allocateGlBlock$0();
+}
+Compiled from "GlTransientMemory.java"
+final class com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping$GlAllocation extends java.lang.Record {
+  private final int glBuffer;
+  private final long hostPtr;
+  private final long size;
+  private com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping$GlAllocation(int, long, long);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int glBuffer();
+  public long hostPtr();
+  public long size();
+}
+Compiled from "GlTransientMemory.java"
+final class com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping$Rotation extends java.lang.Record implements java.lang.Runnable {
+  private final java.lang.Runnable staging;
+  private final java.lang.Runnable gpu;
+  private final java.lang.Runnable gpuMapped;
+  private com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping$Rotation(java.lang.Runnable, java.lang.Runnable, java.lang.Runnable);
+  public void run();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.Runnable staging();
+  public java.lang.Runnable gpu();
+  public java.lang.Runnable gpuMapped();
+}
+Compiled from "GlTransientMemory.java"
+class com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping extends com.mojang.blaze3d.opengl.GlTransientMemory {
+  private final com.mojang.blaze3d.util.TransientBlockAllocator<com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping$GlAllocation> stagingBlockAllocator;
+  private final com.mojang.blaze3d.util.TransientBlockAllocator<com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping$GlAllocation> gpuBlockAllocator;
+  private final com.mojang.blaze3d.util.TransientBlockAllocator<com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping$GlAllocation> gpuMappedBlockAllocator;
+  private final com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping$Rotation[] rotations;
+  static final boolean $assertionsDisabled;
+  com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping(com.mojang.blaze3d.opengl.GlDevice, com.mojang.blaze3d.opengl.GlCommandEncoder);
+  public void close();
+  public void rotate();
+  private com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping$GlAllocation allocateGlBlock(long, boolean, boolean);
+  private void freeGlBlock(com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping$GlAllocation);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView allocateStaging(long, long, int, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice allocateGpu(long, long, int, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView allocateGpuMapped(long, long, int, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice uploadStaging(java.util.List<java.nio.ByteBuffer>, long, int, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice uploadGpu(java.util.List<java.nio.ByteBuffer>, long, int, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice upload(java.util.List<java.nio.ByteBuffer>, long, int, long, long, boolean);
+  public java.util.List<com.mojang.blaze3d.buffers.GpuBufferSlice> multiUploadStaging(java.util.List<java.nio.ByteBuffer>, long, int);
+  public java.util.List<com.mojang.blaze3d.buffers.GpuBufferSlice> multiUploadGpu(java.util.List<java.nio.ByteBuffer>, long, int);
+  public java.util.List<com.mojang.blaze3d.buffers.GpuBufferSlice> multiUpload(java.util.List<java.nio.ByteBuffer>, long, int, boolean);
+  private static java.lang.Integer lambda$multiUpload$0(java.util.List, int);
+  private static void lambda$allocateGpuMapped$0();
+  private static void lambda$allocateStaging$0();
+  private static java.lang.String lambda$allocateGlBlock$0();
+  private com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping$GlAllocation lambda$new$2(long);
+  private com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping$GlAllocation lambda$new$1(long);
+  private com.mojang.blaze3d.opengl.GlTransientMemory$PersistentMapping$GlAllocation lambda$new$0(long);
+  static {};
+}
+Compiled from "GlTransientMemory.java"
+class com.mojang.blaze3d.opengl.GlTransientMemory$TransientGpuBuffer extends com.mojang.blaze3d.opengl.GlBuffer {
+  private boolean closed;
+  private final long bufferSubmitIndex;
+  final com.mojang.blaze3d.opengl.GlTransientMemory this$0;
+  protected com.mojang.blaze3d.opengl.GlTransientMemory$TransientGpuBuffer(com.mojang.blaze3d.opengl.GlTransientMemory, int, int, long);
+  public boolean isClosed();
+  public void close();
+  public com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView map(long, long, boolean, boolean);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice slice(long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice slice();
+}
+Compiled from "GlTransientMemory.java"
+public abstract class com.mojang.blaze3d.opengl.GlTransientMemory implements com.mojang.blaze3d.systems.TransientMemory,java.lang.AutoCloseable {
+  private static final long BLOCK_SIZE;
+  private static final long MAX_CPU_ALIGNMENT;
+  private static final long MAX_GPU_ALIGNMENT;
+  final com.mojang.blaze3d.opengl.GlCommandEncoder encoder;
+  protected final com.mojang.blaze3d.opengl.DirectStateAccess dsa;
+  protected final com.mojang.blaze3d.opengl.BufferStorage bufferStorage;
+  protected final com.mojang.blaze3d.opengl.GlDebugLabel debugLabels;
+  private final com.mojang.blaze3d.util.TransientBlockAllocator<java.lang.Long> cpuBlockAllocator;
+  static final boolean $assertionsDisabled;
+  com.mojang.blaze3d.opengl.GlTransientMemory(com.mojang.blaze3d.opengl.GlDevice, com.mojang.blaze3d.opengl.GlCommandEncoder);
+  public void close();
+  public java.nio.ByteBuffer allocateCpu(long, long, long, long);
+  public void rotate();
+  static {};
+}
+Compiled from "GlUtil.java"
+public class com.mojang.blaze3d.opengl.GlUtil {
+  public com.mojang.blaze3d.opengl.GlUtil();
+  public static int selectBufferBindTarget(int);
+}
+Compiled from "Uniform.java"
+public final class com.mojang.blaze3d.opengl.Uniform$Sampler extends java.lang.Record implements com.mojang.blaze3d.opengl.Uniform {
+  private final int location;
+  private final int samplerIndex;
+  public com.mojang.blaze3d.opengl.Uniform$Sampler(int, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int location();
+  public int samplerIndex();
+}
+Compiled from "Uniform.java"
+public final class com.mojang.blaze3d.opengl.Uniform$Ubo extends java.lang.Record implements com.mojang.blaze3d.opengl.Uniform {
+  private final int blockBinding;
+  public com.mojang.blaze3d.opengl.Uniform$Ubo(int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int blockBinding();
+}
+Compiled from "Uniform.java"
+public final class com.mojang.blaze3d.opengl.Uniform$Utb extends java.lang.Record implements com.mojang.blaze3d.opengl.Uniform {
+  private final int location;
+  private final int samplerIndex;
+  private final com.mojang.blaze3d.GpuFormat format;
+  private final int texture;
+  public com.mojang.blaze3d.opengl.Uniform$Utb(int, int, com.mojang.blaze3d.GpuFormat);
+  public com.mojang.blaze3d.opengl.Uniform$Utb(int, int, com.mojang.blaze3d.GpuFormat, int);
+  public void close();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int location();
+  public int samplerIndex();
+  public com.mojang.blaze3d.GpuFormat format();
+  public int texture();
+}
+Compiled from "Uniform.java"
+public interface com.mojang.blaze3d.opengl.Uniform extends java.lang.AutoCloseable {
+  public default void close();
+}
+Compiled from "VertexArrayCache.java"
+class com.mojang.blaze3d.opengl.VertexArrayCache$Emulated extends com.mojang.blaze3d.opengl.VertexArrayCache {
+  private final java.util.Map<java.util.List<com.mojang.blaze3d.vertex.VertexFormat>, com.mojang.blaze3d.opengl.VertexArrayCache$VertexArray> cache;
+  private final com.mojang.blaze3d.opengl.GlDebugLabel debugLabels;
+  public com.mojang.blaze3d.opengl.VertexArrayCache$Emulated(com.mojang.blaze3d.opengl.GlDebugLabel);
+  public com.mojang.blaze3d.opengl.VertexArrayCache$VertexArray bindVertexArray(com.mojang.blaze3d.vertex.VertexFormat[], com.mojang.blaze3d.buffers.GpuBufferSlice[], com.mojang.blaze3d.opengl.VertexArrayCache$VertexArray);
+  private static void setupCombinedAttributes(com.mojang.blaze3d.vertex.VertexFormat[], boolean, com.mojang.blaze3d.buffers.GpuBufferSlice[]);
+}
+Compiled from "VertexArrayCache.java"
+class com.mojang.blaze3d.opengl.VertexArrayCache$Separate extends com.mojang.blaze3d.opengl.VertexArrayCache {
+  private final java.util.Map<java.util.List<com.mojang.blaze3d.vertex.VertexFormat>, com.mojang.blaze3d.opengl.VertexArrayCache$VertexArray> cache;
+  private final com.mojang.blaze3d.opengl.GlDebugLabel debugLabels;
+  private final boolean needsMesaWorkaround;
+  public com.mojang.blaze3d.opengl.VertexArrayCache$Separate(com.mojang.blaze3d.opengl.GlDebugLabel);
+  public com.mojang.blaze3d.opengl.VertexArrayCache$VertexArray bindVertexArray(com.mojang.blaze3d.vertex.VertexFormat[], com.mojang.blaze3d.buffers.GpuBufferSlice[], com.mojang.blaze3d.opengl.VertexArrayCache$VertexArray);
+}
+Compiled from "VertexArrayCache.java"
+public class com.mojang.blaze3d.opengl.VertexArrayCache$VertexArray {
+  final int id;
+  final java.lang.String formatName;
+  private com.mojang.blaze3d.opengl.VertexArrayCache$VertexArray(int, com.mojang.blaze3d.vertex.VertexFormat[]);
+}
+Compiled from "VertexArrayCache.java"
+public abstract class com.mojang.blaze3d.opengl.VertexArrayCache {
+  public com.mojang.blaze3d.opengl.VertexArrayCache();
+  public static com.mojang.blaze3d.opengl.VertexArrayCache create(org.lwjgl.opengl.GLCapabilities, com.mojang.blaze3d.opengl.GlDebugLabel, java.util.Set<java.lang.String>);
+  public abstract com.mojang.blaze3d.opengl.VertexArrayCache$VertexArray bindVertexArray(com.mojang.blaze3d.vertex.VertexFormat[], com.mojang.blaze3d.buffers.GpuBufferSlice[], com.mojang.blaze3d.opengl.VertexArrayCache$VertexArray);
+}
+Compiled from "package-info.java"
+interface com.mojang.blaze3d.opengl.package-info {
+}

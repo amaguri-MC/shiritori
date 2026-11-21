@@ -1,0 +1,106 @@
+Compiled from "GpuBuffer.java"
+public interface com.mojang.blaze3d.buffers.GpuBuffer$Usage extends java.lang.annotation.Annotation {
+}
+Compiled from "GpuBuffer.java"
+public abstract class com.mojang.blaze3d.buffers.GpuBuffer implements java.lang.AutoCloseable {
+  public static final int USAGE_MAP_READ;
+  public static final int USAGE_MAP_WRITE;
+  public static final int USAGE_HINT_CLIENT_STORAGE;
+  public static final int USAGE_COPY_DST;
+  public static final int USAGE_COPY_SRC;
+  public static final int USAGE_VERTEX;
+  public static final int USAGE_INDEX;
+  public static final int USAGE_UNIFORM;
+  public static final int USAGE_UNIFORM_TEXEL_BUFFER;
+  public static final int USAGE_INDIRECT_PARAMETERS;
+  private final int usage;
+  private final long size;
+  private final com.mojang.blaze3d.buffers.GpuBufferSlice defaultSlice;
+  public com.mojang.blaze3d.buffers.GpuBuffer(int, long);
+  public long size();
+  public int usage();
+  public abstract boolean isClosed();
+  public abstract void close();
+  public com.mojang.blaze3d.buffers.GpuBufferSlice slice(long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice slice();
+  public com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView map(boolean, boolean);
+  public abstract com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView map(long, long, boolean, boolean);
+}
+Compiled from "GpuBufferSlice.java"
+public final class com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView extends java.lang.Record implements java.lang.AutoCloseable {
+  private final com.mojang.blaze3d.buffers.GpuBufferSlice slice;
+  private final java.nio.ByteBuffer data;
+  private final java.lang.Runnable onClose;
+  public com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView(com.mojang.blaze3d.buffers.GpuBufferSlice, java.nio.ByteBuffer, java.lang.Runnable);
+  public void close();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice slice();
+  public java.nio.ByteBuffer data();
+  public java.lang.Runnable onClose();
+}
+Compiled from "GpuBufferSlice.java"
+public final class com.mojang.blaze3d.buffers.GpuBufferSlice extends java.lang.Record {
+  private final com.mojang.blaze3d.buffers.GpuBuffer buffer;
+  private final long offset;
+  private final long length;
+  public com.mojang.blaze3d.buffers.GpuBufferSlice(com.mojang.blaze3d.buffers.GpuBuffer, long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice slice(long, long);
+  public com.mojang.blaze3d.buffers.GpuBufferSlice$MappedView map(boolean, boolean);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.buffers.GpuBuffer buffer();
+  public long offset();
+  public long length();
+}
+Compiled from "GpuFence.java"
+public interface com.mojang.blaze3d.buffers.GpuFence extends java.lang.AutoCloseable {
+  public abstract void close();
+  public abstract boolean awaitCompletion(long);
+}
+Compiled from "Std140Builder.java"
+public class com.mojang.blaze3d.buffers.Std140Builder {
+  private final java.nio.ByteBuffer buffer;
+  private final int start;
+  private com.mojang.blaze3d.buffers.Std140Builder(java.nio.ByteBuffer);
+  public static com.mojang.blaze3d.buffers.Std140Builder intoBuffer(java.nio.ByteBuffer);
+  public static com.mojang.blaze3d.buffers.Std140Builder onStack(org.lwjgl.system.MemoryStack, int);
+  public java.nio.ByteBuffer get();
+  public com.mojang.blaze3d.buffers.Std140Builder align(int);
+  public com.mojang.blaze3d.buffers.Std140Builder putFloat(float);
+  public com.mojang.blaze3d.buffers.Std140Builder putInt(int);
+  public com.mojang.blaze3d.buffers.Std140Builder putVec2(float, float);
+  public com.mojang.blaze3d.buffers.Std140Builder putVec2(org.joml.Vector2fc);
+  public com.mojang.blaze3d.buffers.Std140Builder putIVec2(int, int);
+  public com.mojang.blaze3d.buffers.Std140Builder putIVec2(org.joml.Vector2ic);
+  public com.mojang.blaze3d.buffers.Std140Builder putVec3(float, float, float);
+  public com.mojang.blaze3d.buffers.Std140Builder putVec3(org.joml.Vector3fc);
+  public com.mojang.blaze3d.buffers.Std140Builder putIVec3(int, int, int);
+  public com.mojang.blaze3d.buffers.Std140Builder putIVec3(org.joml.Vector3ic);
+  public com.mojang.blaze3d.buffers.Std140Builder putVec4(float, float, float, float);
+  public com.mojang.blaze3d.buffers.Std140Builder putVec4(org.joml.Vector4fc);
+  public com.mojang.blaze3d.buffers.Std140Builder putIVec4(int, int, int, int);
+  public com.mojang.blaze3d.buffers.Std140Builder putIVec4(org.joml.Vector4ic);
+  public com.mojang.blaze3d.buffers.Std140Builder putMat4f(org.joml.Matrix4fc);
+}
+Compiled from "Std140SizeCalculator.java"
+public class com.mojang.blaze3d.buffers.Std140SizeCalculator {
+  private int size;
+  public com.mojang.blaze3d.buffers.Std140SizeCalculator();
+  public int get();
+  public com.mojang.blaze3d.buffers.Std140SizeCalculator align(int);
+  public com.mojang.blaze3d.buffers.Std140SizeCalculator putFloat();
+  public com.mojang.blaze3d.buffers.Std140SizeCalculator putInt();
+  public com.mojang.blaze3d.buffers.Std140SizeCalculator putVec2();
+  public com.mojang.blaze3d.buffers.Std140SizeCalculator putIVec2();
+  public com.mojang.blaze3d.buffers.Std140SizeCalculator putVec3();
+  public com.mojang.blaze3d.buffers.Std140SizeCalculator putIVec3();
+  public com.mojang.blaze3d.buffers.Std140SizeCalculator putVec4();
+  public com.mojang.blaze3d.buffers.Std140SizeCalculator putIVec4();
+  public com.mojang.blaze3d.buffers.Std140SizeCalculator putMat4f();
+}
+Compiled from "package-info.java"
+interface com.mojang.blaze3d.buffers.package-info {
+}

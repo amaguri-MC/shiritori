@@ -1,0 +1,226 @@
+Compiled from "CommonLifecycleEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents$TagsLoaded {
+  public abstract void onTagsLoaded(net.minecraft.core.RegistryAccess, boolean);
+}
+Compiled from "CommonLifecycleEvents.java"
+public final class net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents {
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents$TagsLoaded> TAGS_LOADED;
+  private net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents();
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents$TagsLoaded lambda$static$0(net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents$TagsLoaded[]);
+  private static void lambda$static$1(net.fabricmc.fabric.api.event.lifecycle.v1.CommonLifecycleEvents$TagsLoaded[], net.minecraft.core.RegistryAccess, boolean);
+  static {};
+}
+Compiled from "EntityLoadData.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.EntityLoadData {
+  public default net.minecraft.world.entity.EntitySpawnReason spawnReason();
+  public default boolean isLoadedFromDisk();
+}
+Compiled from "ServerBlockEntityEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents$Load {
+  public abstract void onLoad(net.minecraft.world.level.block.entity.BlockEntity, net.minecraft.server.level.ServerLevel);
+}
+Compiled from "ServerBlockEntityEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents$Unload {
+  public abstract void onUnload(net.minecraft.world.level.block.entity.BlockEntity, net.minecraft.server.level.ServerLevel);
+}
+Compiled from "ServerBlockEntityEvents.java"
+public final class net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents {
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents$Load> BLOCK_ENTITY_LOAD;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents$Unload> BLOCK_ENTITY_UNLOAD;
+  private net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents();
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents$Unload lambda$static$2(net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents$Unload[]);
+  private static void lambda$static$3(net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents$Unload[], net.minecraft.world.level.block.entity.BlockEntity, net.minecraft.server.level.ServerLevel);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents$Load lambda$static$0(net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents$Load[]);
+  private static void lambda$static$1(net.fabricmc.fabric.api.event.lifecycle.v1.ServerBlockEntityEvents$Load[], net.minecraft.world.level.block.entity.BlockEntity, net.minecraft.server.level.ServerLevel);
+  static {};
+}
+Compiled from "ServerChunkEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$FullChunkStatusChange {
+  public abstract void onFullChunkStatusChange(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.chunk.LevelChunk, net.minecraft.server.level.FullChunkStatus, net.minecraft.server.level.FullChunkStatus);
+}
+Compiled from "ServerChunkEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Generate {
+  public abstract void onChunkGenerate(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.chunk.LevelChunk);
+}
+Compiled from "ServerChunkEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Load {
+  public abstract void onChunkLoad(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.chunk.LevelChunk, boolean);
+}
+Compiled from "ServerChunkEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Unload {
+  public abstract void onChunkUnload(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.chunk.LevelChunk);
+}
+Compiled from "ServerChunkEvents.java"
+public final class net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents {
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Load> CHUNK_LOAD;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Generate> CHUNK_GENERATE;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Unload> CHUNK_UNLOAD;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$FullChunkStatusChange> FULL_CHUNK_STATUS_CHANGE;
+  private net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents();
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$FullChunkStatusChange lambda$static$7(net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$FullChunkStatusChange[]);
+  private static void lambda$static$8(net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$FullChunkStatusChange[], net.minecraft.server.level.ServerLevel, net.minecraft.world.level.chunk.LevelChunk, net.minecraft.server.level.FullChunkStatus, net.minecraft.server.level.FullChunkStatus);
+  private static void lambda$static$6(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.chunk.LevelChunk, net.minecraft.server.level.FullChunkStatus, net.minecraft.server.level.FullChunkStatus);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Unload lambda$static$4(net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Unload[]);
+  private static void lambda$static$5(net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Unload[], net.minecraft.server.level.ServerLevel, net.minecraft.world.level.chunk.LevelChunk);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Generate lambda$static$2(net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Generate[]);
+  private static void lambda$static$3(net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Generate[], net.minecraft.server.level.ServerLevel, net.minecraft.world.level.chunk.LevelChunk);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Load lambda$static$0(net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Load[]);
+  private static void lambda$static$1(net.fabricmc.fabric.api.event.lifecycle.v1.ServerChunkEvents$Load[], net.minecraft.server.level.ServerLevel, net.minecraft.world.level.chunk.LevelChunk, boolean);
+  static {};
+}
+Compiled from "ServerEntityEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$AllowLoad {
+  public abstract boolean onAllowLoad(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.EntitySpawnReason, boolean);
+}
+Compiled from "ServerEntityEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$EquipmentChange {
+  public abstract void onChange(net.minecraft.world.entity.LivingEntity, net.minecraft.world.entity.EquipmentSlot, net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+}
+Compiled from "ServerEntityEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$Load {
+  public abstract void onLoad(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel);
+}
+Compiled from "ServerEntityEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$Unload {
+  public abstract void onUnload(net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel);
+}
+Compiled from "ServerEntityEvents.java"
+public final class net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents {
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$Load> ENTITY_LOAD;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$AllowLoad> ALLOW_LOAD;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$Unload> ENTITY_UNLOAD;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$EquipmentChange> EQUIPMENT_CHANGE;
+  private net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents();
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$EquipmentChange lambda$static$6(net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$EquipmentChange[]);
+  private static void lambda$static$7(net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$EquipmentChange[], net.minecraft.world.entity.LivingEntity, net.minecraft.world.entity.EquipmentSlot, net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$Unload lambda$static$4(net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$Unload[]);
+  private static void lambda$static$5(net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$Unload[], net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$AllowLoad lambda$static$2(net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$AllowLoad[]);
+  private static boolean lambda$static$3(net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$AllowLoad[], net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.EntitySpawnReason, boolean);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$Load lambda$static$0(net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$Load[]);
+  private static void lambda$static$1(net.fabricmc.fabric.api.event.lifecycle.v1.ServerEntityEvents$Load[], net.minecraft.world.entity.Entity, net.minecraft.server.level.ServerLevel);
+  static {};
+}
+Compiled from "ServerLevelEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents$Load {
+  public abstract void onLevelLoad(net.minecraft.server.MinecraftServer, net.minecraft.server.level.ServerLevel);
+}
+Compiled from "ServerLevelEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents$Unload {
+  public abstract void onLevelUnload(net.minecraft.server.MinecraftServer, net.minecraft.server.level.ServerLevel);
+}
+Compiled from "ServerLevelEvents.java"
+public final class net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents {
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents$Load> LOAD;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents$Unload> UNLOAD;
+  private net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents();
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents$Unload lambda$static$2(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents$Unload[]);
+  private static void lambda$static$3(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents$Unload[], net.minecraft.server.MinecraftServer, net.minecraft.server.level.ServerLevel);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents$Load lambda$static$0(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents$Load[]);
+  private static void lambda$static$1(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLevelEvents$Load[], net.minecraft.server.MinecraftServer, net.minecraft.server.level.ServerLevel);
+  static {};
+}
+Compiled from "ServerLifecycleEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$AfterSave {
+  public abstract void onAfterSave(net.minecraft.server.MinecraftServer, boolean, boolean);
+}
+Compiled from "ServerLifecycleEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$BeforeSave {
+  public abstract void onBeforeSave(net.minecraft.server.MinecraftServer, boolean, boolean);
+}
+Compiled from "ServerLifecycleEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$EndDataPackReload {
+  public abstract void endDataPackReload(net.minecraft.server.MinecraftServer, net.minecraft.server.packs.resources.CloseableResourceManager, boolean);
+}
+Compiled from "ServerLifecycleEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStarted {
+  public abstract void onServerStarted(net.minecraft.server.MinecraftServer);
+}
+Compiled from "ServerLifecycleEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStarting {
+  public abstract void onServerStarting(net.minecraft.server.MinecraftServer);
+}
+Compiled from "ServerLifecycleEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStopped {
+  public abstract void onServerStopped(net.minecraft.server.MinecraftServer);
+}
+Compiled from "ServerLifecycleEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStopping {
+  public abstract void onServerStopping(net.minecraft.server.MinecraftServer);
+}
+Compiled from "ServerLifecycleEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$StartDataPackReload {
+  public abstract void startDataPackReload(net.minecraft.server.MinecraftServer, net.minecraft.server.packs.resources.CloseableResourceManager);
+}
+Compiled from "ServerLifecycleEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$SyncDataPackContents {
+  public abstract void onSyncDataPackContents(net.minecraft.server.level.ServerPlayer, boolean);
+}
+Compiled from "ServerLifecycleEvents.java"
+public final class net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents {
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStarting> SERVER_STARTING;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStarted> SERVER_STARTED;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStopping> SERVER_STOPPING;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStopped> SERVER_STOPPED;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$SyncDataPackContents> SYNC_DATA_PACK_CONTENTS;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$StartDataPackReload> START_DATA_PACK_RELOAD;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$EndDataPackReload> END_DATA_PACK_RELOAD;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$BeforeSave> BEFORE_SAVE;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$AfterSave> AFTER_SAVE;
+  private net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents();
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$AfterSave lambda$static$16(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$AfterSave[]);
+  private static void lambda$static$17(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$AfterSave[], net.minecraft.server.MinecraftServer, boolean, boolean);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$BeforeSave lambda$static$14(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$BeforeSave[]);
+  private static void lambda$static$15(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$BeforeSave[], net.minecraft.server.MinecraftServer, boolean, boolean);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$EndDataPackReload lambda$static$12(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$EndDataPackReload[]);
+  private static void lambda$static$13(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$EndDataPackReload[], net.minecraft.server.MinecraftServer, net.minecraft.server.packs.resources.CloseableResourceManager, boolean);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$StartDataPackReload lambda$static$10(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$StartDataPackReload[]);
+  private static void lambda$static$11(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$StartDataPackReload[], net.minecraft.server.MinecraftServer, net.minecraft.server.packs.resources.CloseableResourceManager);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$SyncDataPackContents lambda$static$8(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$SyncDataPackContents[]);
+  private static void lambda$static$9(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$SyncDataPackContents[], net.minecraft.server.level.ServerPlayer, boolean);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStopped lambda$static$6(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStopped[]);
+  private static void lambda$static$7(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStopped[], net.minecraft.server.MinecraftServer);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStopping lambda$static$4(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStopping[]);
+  private static void lambda$static$5(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStopping[], net.minecraft.server.MinecraftServer);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStarted lambda$static$2(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStarted[]);
+  private static void lambda$static$3(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStarted[], net.minecraft.server.MinecraftServer);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStarting lambda$static$0(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStarting[]);
+  private static void lambda$static$1(net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents$ServerStarting[], net.minecraft.server.MinecraftServer);
+  static {};
+}
+Compiled from "ServerTickEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$EndLevelTick {
+  public abstract void onEndTick(net.minecraft.server.level.ServerLevel);
+}
+Compiled from "ServerTickEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$EndTick {
+  public abstract void onEndTick(net.minecraft.server.MinecraftServer);
+}
+Compiled from "ServerTickEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$StartLevelTick {
+  public abstract void onStartTick(net.minecraft.server.level.ServerLevel);
+}
+Compiled from "ServerTickEvents.java"
+public interface net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$StartTick {
+  public abstract void onStartTick(net.minecraft.server.MinecraftServer);
+}
+Compiled from "ServerTickEvents.java"
+public final class net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents {
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$StartTick> START_SERVER_TICK;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$EndTick> END_SERVER_TICK;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$StartLevelTick> START_LEVEL_TICK;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$EndLevelTick> END_LEVEL_TICK;
+  private net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents();
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$EndLevelTick lambda$static$6(net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$EndLevelTick[]);
+  private static void lambda$static$7(net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$EndLevelTick[], net.minecraft.server.level.ServerLevel);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$StartLevelTick lambda$static$4(net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$StartLevelTick[]);
+  private static void lambda$static$5(net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$StartLevelTick[], net.minecraft.server.level.ServerLevel);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$EndTick lambda$static$2(net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$EndTick[]);
+  private static void lambda$static$3(net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$EndTick[], net.minecraft.server.MinecraftServer);
+  private static net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$StartTick lambda$static$0(net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$StartTick[]);
+  private static void lambda$static$1(net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents$StartTick[], net.minecraft.server.MinecraftServer);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.fabricmc.fabric.api.event.lifecycle.v1.package-info {
+}

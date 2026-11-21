@@ -1,0 +1,536 @@
+Compiled from "AmbientAdditionsSettings.java"
+public final class net.minecraft.world.attribute.AmbientAdditionsSettings extends java.lang.Record {
+  private final net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> soundEvent;
+  private final double tickChance;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.attribute.AmbientAdditionsSettings> CODEC;
+  public net.minecraft.world.attribute.AmbientAdditionsSettings(net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent>, double);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> soundEvent();
+  public double tickChance();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Double lambda$static$2(net.minecraft.world.attribute.AmbientAdditionsSettings);
+  private static net.minecraft.core.Holder lambda$static$1(net.minecraft.world.attribute.AmbientAdditionsSettings);
+  static {};
+}
+Compiled from "AmbientMoodSettings.java"
+public final class net.minecraft.world.attribute.AmbientMoodSettings extends java.lang.Record {
+  private final net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> soundEvent;
+  private final int tickDelay;
+  private final int blockSearchExtent;
+  private final double soundPositionOffset;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.attribute.AmbientMoodSettings> CODEC;
+  public static final net.minecraft.world.attribute.AmbientMoodSettings LEGACY_CAVE_SETTINGS;
+  public net.minecraft.world.attribute.AmbientMoodSettings(net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent>, int, int, double);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent> soundEvent();
+  public int tickDelay();
+  public int blockSearchExtent();
+  public double soundPositionOffset();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Double lambda$static$4(net.minecraft.world.attribute.AmbientMoodSettings);
+  private static java.lang.Integer lambda$static$3(net.minecraft.world.attribute.AmbientMoodSettings);
+  private static java.lang.Integer lambda$static$2(net.minecraft.world.attribute.AmbientMoodSettings);
+  private static net.minecraft.core.Holder lambda$static$1(net.minecraft.world.attribute.AmbientMoodSettings);
+  static {};
+}
+Compiled from "AmbientParticle.java"
+public final class net.minecraft.world.attribute.AmbientParticle extends java.lang.Record {
+  private final net.minecraft.core.particles.ParticleOptions particle;
+  private final float probability;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.attribute.AmbientParticle> CODEC;
+  public net.minecraft.world.attribute.AmbientParticle(net.minecraft.core.particles.ParticleOptions, float);
+  public boolean canSpawn(net.minecraft.util.RandomSource);
+  public static java.util.List<net.minecraft.world.attribute.AmbientParticle> of(net.minecraft.core.particles.ParticleOptions, float);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.particles.ParticleOptions particle();
+  public float probability();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Float lambda$static$2(net.minecraft.world.attribute.AmbientParticle);
+  private static net.minecraft.core.particles.ParticleOptions lambda$static$1(net.minecraft.world.attribute.AmbientParticle);
+  static {};
+}
+Compiled from "AmbientSounds.java"
+public final class net.minecraft.world.attribute.AmbientSounds extends java.lang.Record {
+  private final java.util.Optional<net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent>> loop;
+  private final java.util.Optional<net.minecraft.world.attribute.AmbientMoodSettings> mood;
+  private final java.util.List<net.minecraft.world.attribute.AmbientAdditionsSettings> additions;
+  public static final net.minecraft.world.attribute.AmbientSounds EMPTY;
+  public static final net.minecraft.world.attribute.AmbientSounds LEGACY_CAVE_SETTINGS;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.attribute.AmbientSounds> CODEC;
+  public net.minecraft.world.attribute.AmbientSounds(java.util.Optional<net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent>>, java.util.Optional<net.minecraft.world.attribute.AmbientMoodSettings>, java.util.List<net.minecraft.world.attribute.AmbientAdditionsSettings>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Optional<net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent>> loop();
+  public java.util.Optional<net.minecraft.world.attribute.AmbientMoodSettings> mood();
+  public java.util.List<net.minecraft.world.attribute.AmbientAdditionsSettings> additions();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "AttributeRange.java"
+class net.minecraft.world.attribute.AttributeRange$1 implements net.minecraft.world.attribute.AttributeRange<Value> {
+  net.minecraft.world.attribute.AttributeRange$1();
+  public com.mojang.serialization.DataResult<Value> validate(Value);
+  public Value sanitize(Value);
+}
+Compiled from "AttributeRange.java"
+class net.minecraft.world.attribute.AttributeRange$2 implements net.minecraft.world.attribute.AttributeRange<java.lang.Float> {
+  final float val$minValue;
+  final float val$maxValue;
+  net.minecraft.world.attribute.AttributeRange$2(float, float);
+  public com.mojang.serialization.DataResult<java.lang.Float> validate(java.lang.Float);
+  public java.lang.Float sanitize(java.lang.Float);
+  public java.lang.Object sanitize(java.lang.Object);
+  public com.mojang.serialization.DataResult validate(java.lang.Object);
+  private static java.lang.String lambda$validate$0(java.lang.Float, float, float);
+}
+Compiled from "AttributeRange.java"
+public interface net.minecraft.world.attribute.AttributeRange<Value> {
+  public static final net.minecraft.world.attribute.AttributeRange<java.lang.Float> UNIT_FLOAT;
+  public static final net.minecraft.world.attribute.AttributeRange<java.lang.Float> NON_NEGATIVE_FLOAT;
+  public static <Value> net.minecraft.world.attribute.AttributeRange<Value> any();
+  public static net.minecraft.world.attribute.AttributeRange<java.lang.Float> ofFloat(float, float);
+  public abstract com.mojang.serialization.DataResult<Value> validate(Value);
+  public abstract Value sanitize(Value);
+  static {};
+}
+Compiled from "AttributeType.java"
+public final class net.minecraft.world.attribute.AttributeType<Value> extends java.lang.Record {
+  private final com.mojang.serialization.Codec<Value> valueCodec;
+  private final java.util.Map<net.minecraft.world.attribute.modifier.AttributeModifier$OperationId, net.minecraft.world.attribute.modifier.AttributeModifier<Value, ?>> modifierLibrary;
+  private final com.mojang.serialization.Codec<net.minecraft.world.attribute.modifier.AttributeModifier<Value, ?>> modifierCodec;
+  private final net.minecraft.world.attribute.LerpFunction<Value> keyframeLerp;
+  private final net.minecraft.world.attribute.LerpFunction<Value> stateChangeLerp;
+  private final net.minecraft.world.attribute.LerpFunction<Value> spatialLerp;
+  private final net.minecraft.world.attribute.LerpFunction<Value> partialTickLerp;
+  private final net.minecraft.util.ToFloatFunction<Value> toFloat;
+  public net.minecraft.world.attribute.AttributeType(com.mojang.serialization.Codec<Value>, java.util.Map<net.minecraft.world.attribute.modifier.AttributeModifier$OperationId, net.minecraft.world.attribute.modifier.AttributeModifier<Value, ?>>, com.mojang.serialization.Codec<net.minecraft.world.attribute.modifier.AttributeModifier<Value, ?>>, net.minecraft.world.attribute.LerpFunction<Value>, net.minecraft.world.attribute.LerpFunction<Value>, net.minecraft.world.attribute.LerpFunction<Value>, net.minecraft.world.attribute.LerpFunction<Value>, net.minecraft.util.ToFloatFunction<Value>);
+  public static <Value> net.minecraft.world.attribute.AttributeType<Value> ofInterpolated(com.mojang.serialization.Codec<Value>, java.util.Map<net.minecraft.world.attribute.modifier.AttributeModifier$OperationId, net.minecraft.world.attribute.modifier.AttributeModifier<Value, ?>>, net.minecraft.world.attribute.LerpFunction<Value>);
+  public static <Value> net.minecraft.world.attribute.AttributeType<Value> ofInterpolated(com.mojang.serialization.Codec<Value>, java.util.Map<net.minecraft.world.attribute.modifier.AttributeModifier$OperationId, net.minecraft.world.attribute.modifier.AttributeModifier<Value, ?>>, net.minecraft.world.attribute.LerpFunction<Value>, net.minecraft.world.attribute.LerpFunction<Value>, net.minecraft.util.ToFloatFunction<Value>);
+  public static <Value> net.minecraft.world.attribute.AttributeType<Value> ofNotInterpolated(com.mojang.serialization.Codec<Value>, java.util.Map<net.minecraft.world.attribute.modifier.AttributeModifier$OperationId, net.minecraft.world.attribute.modifier.AttributeModifier<Value, ?>>);
+  public static <Value> net.minecraft.world.attribute.AttributeType<Value> ofNotInterpolated(com.mojang.serialization.Codec<Value>);
+  private static <Value> com.mojang.serialization.Codec<net.minecraft.world.attribute.modifier.AttributeModifier<Value, ?>> createModifierCodec(java.util.Map<net.minecraft.world.attribute.modifier.AttributeModifier$OperationId, net.minecraft.world.attribute.modifier.AttributeModifier<Value, ?>>);
+  public void checkAllowedModifier(net.minecraft.world.attribute.modifier.AttributeModifier<Value, ?>);
+  public float toFloat(Value);
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.serialization.Codec<Value> valueCodec();
+  public java.util.Map<net.minecraft.world.attribute.modifier.AttributeModifier$OperationId, net.minecraft.world.attribute.modifier.AttributeModifier<Value, ?>> modifierLibrary();
+  public com.mojang.serialization.Codec<net.minecraft.world.attribute.modifier.AttributeModifier<Value, ?>> modifierCodec();
+  public net.minecraft.world.attribute.LerpFunction<Value> keyframeLerp();
+  public net.minecraft.world.attribute.LerpFunction<Value> stateChangeLerp();
+  public net.minecraft.world.attribute.LerpFunction<Value> spatialLerp();
+  public net.minecraft.world.attribute.LerpFunction<Value> partialTickLerp();
+  public net.minecraft.util.ToFloatFunction<Value> toFloat();
+}
+Compiled from "AttributeTypes.java"
+public interface net.minecraft.world.attribute.AttributeTypes {
+  public static final net.minecraft.world.attribute.AttributeType<java.lang.Boolean> BOOLEAN;
+  public static final net.minecraft.world.attribute.AttributeType<net.minecraft.util.TriState> TRI_STATE;
+  public static final net.minecraft.world.attribute.AttributeType<java.lang.Float> FLOAT;
+  public static final net.minecraft.world.attribute.AttributeType<java.lang.Float> ANGLE_DEGREES;
+  public static final net.minecraft.world.attribute.AttributeType<java.lang.Integer> RGB_COLOR;
+  public static final net.minecraft.world.attribute.AttributeType<java.lang.Integer> ARGB_COLOR;
+  public static final net.minecraft.world.attribute.AttributeType<java.lang.Integer> INTEGER;
+  public static final net.minecraft.world.attribute.AttributeType<net.minecraft.world.level.MoonPhase> MOON_PHASE;
+  public static final net.minecraft.world.attribute.AttributeType<net.minecraft.world.entity.schedule.Activity> ACTIVITY;
+  public static final net.minecraft.world.attribute.AttributeType<net.minecraft.world.attribute.BedRule> BED_RULE;
+  public static final net.minecraft.world.attribute.AttributeType<net.minecraft.core.particles.ParticleOptions> PARTICLE;
+  public static final net.minecraft.world.attribute.AttributeType<java.util.List<net.minecraft.world.attribute.AmbientParticle>> AMBIENT_PARTICLES;
+  public static final net.minecraft.world.attribute.AttributeType<net.minecraft.world.attribute.BackgroundMusic> BACKGROUND_MUSIC;
+  public static final net.minecraft.world.attribute.AttributeType<net.minecraft.world.attribute.AmbientSounds> AMBIENT_SOUNDS;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.attribute.AttributeType<?>> CODEC;
+  public static net.minecraft.world.attribute.AttributeType<?> bootstrap(net.minecraft.core.Registry<net.minecraft.world.attribute.AttributeType<?>>);
+  public static <Value> net.minecraft.world.attribute.AttributeType<Value> register(java.lang.String, net.minecraft.world.attribute.AttributeType<Value>);
+  private static float lambda$static$2(java.lang.Integer);
+  private static float lambda$static$1(java.lang.Float);
+  private static float lambda$static$0(java.lang.Float);
+  static {};
+}
+Compiled from "BackgroundMusic.java"
+public final class net.minecraft.world.attribute.BackgroundMusic extends java.lang.Record {
+  private final java.util.Optional<net.minecraft.sounds.Music> defaultMusic;
+  private final java.util.Optional<net.minecraft.sounds.Music> creativeMusic;
+  private final java.util.Optional<net.minecraft.sounds.Music> underwaterMusic;
+  public static final net.minecraft.world.attribute.BackgroundMusic EMPTY;
+  public static final net.minecraft.world.attribute.BackgroundMusic OVERWORLD;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.attribute.BackgroundMusic> CODEC;
+  public net.minecraft.world.attribute.BackgroundMusic(net.minecraft.sounds.Music);
+  public net.minecraft.world.attribute.BackgroundMusic(net.minecraft.core.Holder<net.minecraft.sounds.SoundEvent>);
+  public net.minecraft.world.attribute.BackgroundMusic(java.util.Optional<net.minecraft.sounds.Music>, java.util.Optional<net.minecraft.sounds.Music>, java.util.Optional<net.minecraft.sounds.Music>);
+  public net.minecraft.world.attribute.BackgroundMusic withUnderwater(net.minecraft.sounds.Music);
+  public java.util.Optional<net.minecraft.sounds.Music> select(boolean, boolean);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Optional<net.minecraft.sounds.Music> defaultMusic();
+  public java.util.Optional<net.minecraft.sounds.Music> creativeMusic();
+  public java.util.Optional<net.minecraft.sounds.Music> underwaterMusic();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "BedRule.java"
+public final class net.minecraft.world.attribute.BedRule$Rule extends java.lang.Enum<net.minecraft.world.attribute.BedRule$Rule> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.world.attribute.BedRule$Rule ALWAYS;
+  public static final net.minecraft.world.attribute.BedRule$Rule WHEN_DARK;
+  public static final net.minecraft.world.attribute.BedRule$Rule NEVER;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.attribute.BedRule$Rule> CODEC;
+  private final java.lang.String name;
+  private static final net.minecraft.world.attribute.BedRule$Rule[] $VALUES;
+  public static net.minecraft.world.attribute.BedRule$Rule[] values();
+  public static net.minecraft.world.attribute.BedRule$Rule valueOf(java.lang.String);
+  private net.minecraft.world.attribute.BedRule$Rule(java.lang.String);
+  public boolean test(net.minecraft.world.level.Level);
+  public java.lang.String getSerializedName();
+  private static net.minecraft.world.attribute.BedRule$Rule[] $values();
+  static {};
+}
+Compiled from "BedRule.java"
+public final class net.minecraft.world.attribute.BedRule extends java.lang.Record {
+  private final net.minecraft.world.attribute.BedRule$Rule canSleep;
+  private final net.minecraft.world.attribute.BedRule$Rule canSetSpawn;
+  private final boolean explodes;
+  private final java.util.Optional<net.minecraft.network.chat.Component> errorMessage;
+  public static final net.minecraft.world.attribute.BedRule CAN_SLEEP_WHEN_DARK;
+  public static final net.minecraft.world.attribute.BedRule EXPLODES;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.attribute.BedRule> CODEC;
+  public net.minecraft.world.attribute.BedRule(net.minecraft.world.attribute.BedRule$Rule, net.minecraft.world.attribute.BedRule$Rule, boolean, java.util.Optional<net.minecraft.network.chat.Component>);
+  public boolean canSleep(net.minecraft.world.level.Level);
+  public boolean canSetSpawn(net.minecraft.world.level.Level);
+  public net.minecraft.world.entity.player.Player$BedSleepingProblem asProblem();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.attribute.BedRule$Rule canSleep();
+  public net.minecraft.world.attribute.BedRule$Rule canSetSpawn();
+  public boolean explodes();
+  public java.util.Optional<net.minecraft.network.chat.Component> errorMessage();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "EnvironmentAttribute.java"
+public class net.minecraft.world.attribute.EnvironmentAttribute$Builder<Value> {
+  private final net.minecraft.world.attribute.AttributeType<Value> type;
+  private Value defaultValue;
+  private net.minecraft.world.attribute.AttributeRange<Value> valueRange;
+  private boolean isSyncable;
+  private boolean isPositional;
+  private boolean isSpatiallyInterpolated;
+  public net.minecraft.world.attribute.EnvironmentAttribute$Builder(net.minecraft.world.attribute.AttributeType<Value>);
+  public net.minecraft.world.attribute.EnvironmentAttribute$Builder<Value> defaultValue(Value);
+  public net.minecraft.world.attribute.EnvironmentAttribute$Builder<Value> valueRange(net.minecraft.world.attribute.AttributeRange<Value>);
+  public net.minecraft.world.attribute.EnvironmentAttribute$Builder<Value> syncable();
+  public net.minecraft.world.attribute.EnvironmentAttribute$Builder<Value> notPositional();
+  public net.minecraft.world.attribute.EnvironmentAttribute$Builder<Value> spatiallyInterpolated();
+  public net.minecraft.world.attribute.EnvironmentAttribute<Value> build();
+}
+Compiled from "EnvironmentAttribute.java"
+public class net.minecraft.world.attribute.EnvironmentAttribute<Value> {
+  private final net.minecraft.world.attribute.AttributeType<Value> type;
+  private final Value defaultValue;
+  private final net.minecraft.world.attribute.AttributeRange<Value> valueRange;
+  private final boolean isSyncable;
+  private final boolean isPositional;
+  private final boolean isSpatiallyInterpolated;
+  private net.minecraft.world.attribute.EnvironmentAttribute(net.minecraft.world.attribute.AttributeType<Value>, Value, net.minecraft.world.attribute.AttributeRange<Value>, boolean, boolean, boolean);
+  public static <Value> net.minecraft.world.attribute.EnvironmentAttribute$Builder<Value> builder(net.minecraft.world.attribute.AttributeType<Value>);
+  public net.minecraft.world.attribute.AttributeType<Value> type();
+  public Value defaultValue();
+  public com.mojang.serialization.Codec<Value> valueCodec();
+  public Value sanitizeValue(Value);
+  public boolean isSyncable();
+  public boolean isPositional();
+  public boolean isSpatiallyInterpolated();
+  public java.lang.String toString();
+}
+Compiled from "EnvironmentAttributeLayer.java"
+public interface net.minecraft.world.attribute.EnvironmentAttributeLayer$Constant<Value> extends net.minecraft.world.attribute.EnvironmentAttributeLayer<Value> {
+  public abstract Value applyConstant(Value);
+}
+Compiled from "EnvironmentAttributeLayer.java"
+public interface net.minecraft.world.attribute.EnvironmentAttributeLayer$Positional<Value> extends net.minecraft.world.attribute.EnvironmentAttributeLayer<Value> {
+  public abstract Value applyPositional(Value, net.minecraft.world.phys.Vec3, net.minecraft.world.attribute.SpatialAttributeInterpolator);
+}
+Compiled from "EnvironmentAttributeLayer.java"
+public interface net.minecraft.world.attribute.EnvironmentAttributeLayer$TimeBased<Value> extends net.minecraft.world.attribute.EnvironmentAttributeLayer<Value> {
+  public abstract Value applyTimeBased(Value, int);
+}
+Compiled from "EnvironmentAttributeLayer.java"
+public interface net.minecraft.world.attribute.EnvironmentAttributeLayer<Value> {
+}
+Compiled from "EnvironmentAttributeMap.java"
+public class net.minecraft.world.attribute.EnvironmentAttributeMap$Builder {
+  private final java.util.Map<net.minecraft.world.attribute.EnvironmentAttribute<?>, net.minecraft.world.attribute.EnvironmentAttributeMap$Entry<?, ?>> entries;
+  private net.minecraft.world.attribute.EnvironmentAttributeMap$Builder();
+  public net.minecraft.world.attribute.EnvironmentAttributeMap$Builder putAll(net.minecraft.world.attribute.EnvironmentAttributeMap);
+  public <Value, Parameter> net.minecraft.world.attribute.EnvironmentAttributeMap$Builder modify(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.attribute.modifier.AttributeModifier<Value, Parameter>, Parameter);
+  public <Value> net.minecraft.world.attribute.EnvironmentAttributeMap$Builder set(net.minecraft.world.attribute.EnvironmentAttribute<Value>, Value);
+  public net.minecraft.world.attribute.EnvironmentAttributeMap build();
+}
+Compiled from "EnvironmentAttributeMap.java"
+public final class net.minecraft.world.attribute.EnvironmentAttributeMap$Entry<Value, Argument> extends java.lang.Record {
+  private final Argument argument;
+  private final net.minecraft.world.attribute.modifier.AttributeModifier<Value, Argument> modifier;
+  public net.minecraft.world.attribute.EnvironmentAttributeMap$Entry(Argument, net.minecraft.world.attribute.modifier.AttributeModifier<Value, Argument>);
+  private static <Value> com.mojang.serialization.Codec<net.minecraft.world.attribute.EnvironmentAttributeMap$Entry<Value, ?>> createCodec(net.minecraft.world.attribute.EnvironmentAttribute<Value>);
+  private static <Value, Argument> com.mojang.serialization.MapCodec<net.minecraft.world.attribute.EnvironmentAttributeMap$Entry<Value, Argument>> createFullCodec(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.attribute.modifier.AttributeModifier<Value, Argument>);
+  public Value applyModifier(Value);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public Argument argument();
+  public net.minecraft.world.attribute.modifier.AttributeModifier<Value, Argument> modifier();
+  private static com.mojang.datafixers.kinds.App lambda$createFullCodec$0(net.minecraft.world.attribute.modifier.AttributeModifier, net.minecraft.world.attribute.EnvironmentAttribute, com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.attribute.EnvironmentAttributeMap$Entry lambda$createFullCodec$1(net.minecraft.world.attribute.modifier.AttributeModifier, java.lang.Object);
+  private static com.mojang.datafixers.util.Either lambda$createCodec$4(net.minecraft.world.attribute.EnvironmentAttributeMap$Entry);
+  private static net.minecraft.world.attribute.EnvironmentAttributeMap$Entry lambda$createCodec$1(com.mojang.datafixers.util.Either);
+  private static net.minecraft.world.attribute.EnvironmentAttributeMap$Entry lambda$createCodec$3(net.minecraft.world.attribute.EnvironmentAttributeMap$Entry);
+  private static net.minecraft.world.attribute.EnvironmentAttributeMap$Entry lambda$createCodec$2(java.lang.Object);
+  private static com.mojang.serialization.MapCodec lambda$createCodec$0(net.minecraft.world.attribute.EnvironmentAttribute, net.minecraft.world.attribute.modifier.AttributeModifier);
+}
+Compiled from "EnvironmentAttributeMap.java"
+public final class net.minecraft.world.attribute.EnvironmentAttributeMap {
+  public static final net.minecraft.world.attribute.EnvironmentAttributeMap EMPTY;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.attribute.EnvironmentAttributeMap> CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.attribute.EnvironmentAttributeMap> NETWORK_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.attribute.EnvironmentAttributeMap> CODEC_ONLY_POSITIONAL;
+  private final java.util.Map<net.minecraft.world.attribute.EnvironmentAttribute<?>, net.minecraft.world.attribute.EnvironmentAttributeMap$Entry<?, ?>> entries;
+  private static net.minecraft.world.attribute.EnvironmentAttributeMap filterSyncable(net.minecraft.world.attribute.EnvironmentAttributeMap);
+  private net.minecraft.world.attribute.EnvironmentAttributeMap(java.util.Map<net.minecraft.world.attribute.EnvironmentAttribute<?>, net.minecraft.world.attribute.EnvironmentAttributeMap$Entry<?, ?>>);
+  public static net.minecraft.world.attribute.EnvironmentAttributeMap$Builder builder();
+  public <Value> net.minecraft.world.attribute.EnvironmentAttributeMap$Entry<Value, ?> get(net.minecraft.world.attribute.EnvironmentAttribute<Value>);
+  public <Value> Value applyModifier(net.minecraft.world.attribute.EnvironmentAttribute<Value>, Value);
+  public boolean contains(net.minecraft.world.attribute.EnvironmentAttribute<?>);
+  public java.util.Set<net.minecraft.world.attribute.EnvironmentAttribute<?>> keySet();
+  public boolean equals(java.lang.Object);
+  public int hashCode();
+  public java.lang.String toString();
+  private static com.mojang.serialization.DataResult lambda$static$2(net.minecraft.world.attribute.EnvironmentAttributeMap);
+  private static java.lang.String lambda$static$4(java.util.List);
+  private static boolean lambda$static$3(net.minecraft.world.attribute.EnvironmentAttribute);
+  private static com.mojang.serialization.Codec lambda$static$0();
+  private static java.util.Map lambda$static$1(net.minecraft.world.attribute.EnvironmentAttributeMap);
+  static {};
+}
+Compiled from "EnvironmentAttributeProbe.java"
+class net.minecraft.world.attribute.EnvironmentAttributeProbe$ValueProbe<Value> {
+  private Value lastValue;
+  private Value newValue;
+  final net.minecraft.world.attribute.EnvironmentAttributeProbe this$0;
+  public net.minecraft.world.attribute.EnvironmentAttributeProbe$ValueProbe(net.minecraft.world.attribute.EnvironmentAttribute<Value>);
+  private Value getValueFromLevel(net.minecraft.world.attribute.EnvironmentAttribute<Value>);
+  public boolean tick();
+  public Value get(net.minecraft.world.attribute.EnvironmentAttribute<Value>, float);
+}
+Compiled from "EnvironmentAttributeProbe.java"
+public class net.minecraft.world.attribute.EnvironmentAttributeProbe {
+  private final java.util.Map<net.minecraft.world.attribute.EnvironmentAttribute<?>, net.minecraft.world.attribute.EnvironmentAttributeProbe$ValueProbe<?>> valueProbes;
+  private final java.util.function.Function<net.minecraft.world.attribute.EnvironmentAttribute<?>, net.minecraft.world.attribute.EnvironmentAttributeProbe$ValueProbe<?>> valueProbeFactory;
+  private net.minecraft.world.level.Level level;
+  private net.minecraft.world.phys.Vec3 position;
+  private final net.minecraft.world.attribute.SpatialAttributeInterpolator biomeInterpolator;
+  public net.minecraft.world.attribute.EnvironmentAttributeProbe();
+  public void reset();
+  public void tick(net.minecraft.world.level.Level, net.minecraft.world.phys.Vec3);
+  public <Value> Value getValue(net.minecraft.world.attribute.EnvironmentAttribute<Value>, float);
+  private void lambda$tick$0(double, net.minecraft.core.Holder);
+  private net.minecraft.world.attribute.EnvironmentAttributeProbe$ValueProbe lambda$valueProbeFactory$0(net.minecraft.world.attribute.EnvironmentAttribute);
+}
+Compiled from "EnvironmentAttributeReader.java"
+class net.minecraft.world.attribute.EnvironmentAttributeReader$1 implements net.minecraft.world.attribute.EnvironmentAttributeReader {
+  net.minecraft.world.attribute.EnvironmentAttributeReader$1();
+  public <Value> Value getDimensionValue(net.minecraft.world.attribute.EnvironmentAttribute<Value>);
+  public <Value> Value getValue(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.phys.Vec3, net.minecraft.world.attribute.SpatialAttributeInterpolator);
+}
+Compiled from "EnvironmentAttributeReader.java"
+public interface net.minecraft.world.attribute.EnvironmentAttributeReader {
+  public static final net.minecraft.world.attribute.EnvironmentAttributeReader EMPTY;
+  public abstract <Value> Value getDimensionValue(net.minecraft.world.attribute.EnvironmentAttribute<Value>);
+  public default <Value> Value getValue(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.core.BlockPos);
+  public default <Value> Value getValue(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.phys.Vec3);
+  public abstract <Value> Value getValue(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.phys.Vec3, net.minecraft.world.attribute.SpatialAttributeInterpolator);
+  public default <Value> Value getValue(net.minecraft.world.level.storage.loot.LootContext, net.minecraft.world.attribute.EnvironmentAttribute<Value>);
+  static {};
+}
+Compiled from "EnvironmentAttributeSystem.java"
+public class net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder {
+  private final java.util.Map<net.minecraft.world.attribute.EnvironmentAttribute<?>, java.util.List<net.minecraft.world.attribute.EnvironmentAttributeLayer<?>>> layersByAttribute;
+  private net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder();
+  public net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder addDefaultLayers(net.minecraft.world.level.Level);
+  public net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder addConstantLayer(net.minecraft.world.attribute.EnvironmentAttributeMap);
+  private <Value> net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder addConstantEntry(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.attribute.EnvironmentAttributeMap);
+  public <Value> net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder addConstantLayer(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.attribute.EnvironmentAttributeLayer$Constant<Value>);
+  public <Value> net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder addTimeBasedLayer(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.attribute.EnvironmentAttributeLayer$TimeBased<Value>);
+  public <Value> net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder addPositionalLayer(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.attribute.EnvironmentAttributeLayer$Positional<Value>);
+  private <Value> net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder addLayer(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.attribute.EnvironmentAttributeLayer<Value>);
+  public net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder addTimelineLayer(net.minecraft.core.Holder<net.minecraft.world.timeline.Timeline>, net.minecraft.world.clock.ClockManager);
+  private <Value> void addTimelineLayerForAttribute(net.minecraft.core.Holder<net.minecraft.world.timeline.Timeline>, net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.clock.ClockManager);
+  public net.minecraft.world.attribute.EnvironmentAttributeSystem build();
+  private static java.util.List lambda$addLayer$0(net.minecraft.world.attribute.EnvironmentAttribute);
+}
+Compiled from "EnvironmentAttributeSystem.java"
+class net.minecraft.world.attribute.EnvironmentAttributeSystem$ValueSampler<Value> {
+  private final net.minecraft.world.attribute.EnvironmentAttribute<Value> attribute;
+  private final Value baseValue;
+  private final java.util.List<net.minecraft.world.attribute.EnvironmentAttributeLayer<Value>> layers;
+  private final boolean isAffectedByPosition;
+  private Value cachedTickValue;
+  private int cacheTickId;
+  private net.minecraft.world.attribute.EnvironmentAttributeSystem$ValueSampler(net.minecraft.world.attribute.EnvironmentAttribute<Value>, Value, java.util.List<net.minecraft.world.attribute.EnvironmentAttributeLayer<Value>>, boolean);
+  public void invalidateTickCache();
+  public Value getDimensionValue();
+  public Value getValue(net.minecraft.world.phys.Vec3, net.minecraft.world.attribute.SpatialAttributeInterpolator);
+  private Value computeValuePositional(net.minecraft.world.phys.Vec3, net.minecraft.world.attribute.SpatialAttributeInterpolator);
+  private Value computeValueNotPositional();
+}
+Compiled from "EnvironmentAttributeSystem.java"
+public class net.minecraft.world.attribute.EnvironmentAttributeSystem implements net.minecraft.world.attribute.EnvironmentAttributeReader {
+  private final java.util.Map<net.minecraft.world.attribute.EnvironmentAttribute<?>, net.minecraft.world.attribute.EnvironmentAttributeSystem$ValueSampler<?>> attributeSamplers;
+  private net.minecraft.world.attribute.EnvironmentAttributeSystem(java.util.Map<net.minecraft.world.attribute.EnvironmentAttribute<?>, java.util.List<net.minecraft.world.attribute.EnvironmentAttributeLayer<?>>>);
+  private <Value> net.minecraft.world.attribute.EnvironmentAttributeSystem$ValueSampler<Value> bakeLayerSampler(net.minecraft.world.attribute.EnvironmentAttribute<Value>, java.util.List<? extends net.minecraft.world.attribute.EnvironmentAttributeLayer<?>>);
+  public static net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder builder();
+  private static void addDefaultLayers(net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder, net.minecraft.world.level.Level);
+  private static void addDimensionLayer(net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder, net.minecraft.world.level.dimension.DimensionType);
+  private static void addBiomeLayer(net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder, net.minecraft.core.HolderLookup<net.minecraft.world.level.biome.Biome>, net.minecraft.world.level.biome.BiomeManager);
+  private static <Value> void addBiomeLayerForAttribute(net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder, net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.level.biome.BiomeManager);
+  public void invalidateTickCache();
+  private <Value> net.minecraft.world.attribute.EnvironmentAttributeSystem$ValueSampler<Value> getValueSampler(net.minecraft.world.attribute.EnvironmentAttribute<Value>);
+  public <Value> Value getDimensionValue(net.minecraft.world.attribute.EnvironmentAttribute<Value>);
+  public <Value> Value getValue(net.minecraft.world.attribute.EnvironmentAttribute<Value>, net.minecraft.world.phys.Vec3, net.minecraft.world.attribute.SpatialAttributeInterpolator);
+  <Value> Value getConstantBaseValue(net.minecraft.world.attribute.EnvironmentAttribute<Value>);
+  boolean isAffectedByPosition(net.minecraft.world.attribute.EnvironmentAttribute<?>);
+  private static java.lang.Object lambda$addBiomeLayerForAttribute$0(net.minecraft.world.attribute.EnvironmentAttribute, net.minecraft.world.level.biome.BiomeManager, java.lang.Object, net.minecraft.world.phys.Vec3, net.minecraft.world.attribute.SpatialAttributeInterpolator);
+  private static void lambda$addBiomeLayer$1(net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder, net.minecraft.world.level.biome.BiomeManager, net.minecraft.world.attribute.EnvironmentAttribute);
+  private static java.util.stream.Stream lambda$addBiomeLayer$0(net.minecraft.core.Holder$Reference);
+  private static void lambda$addDefaultLayers$0(net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder, net.minecraft.world.clock.ClockManager, net.minecraft.core.Holder);
+  private static boolean lambda$bakeLayerSampler$0(net.minecraft.world.attribute.EnvironmentAttributeLayer);
+  private void lambda$new$0(net.minecraft.world.attribute.EnvironmentAttribute, java.util.List);
+}
+Compiled from "EnvironmentAttributes.java"
+public interface net.minecraft.world.attribute.EnvironmentAttributes {
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Integer> FOG_COLOR;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> FOG_START_DISTANCE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> FOG_END_DISTANCE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> SKY_FOG_END_DISTANCE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> CLOUD_FOG_END_DISTANCE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Integer> WATER_FOG_COLOR;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> WATER_FOG_START_DISTANCE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> WATER_FOG_END_DISTANCE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Integer> SKY_COLOR;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Integer> SUNRISE_SUNSET_COLOR;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Integer> CLOUD_COLOR;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> CLOUD_HEIGHT;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> SUN_ANGLE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> MOON_ANGLE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> STAR_ANGLE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<net.minecraft.world.level.MoonPhase> MOON_PHASE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> STAR_BRIGHTNESS;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Integer> BLOCK_LIGHT_TINT;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Integer> SKY_LIGHT_COLOR;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> SKY_LIGHT_FACTOR;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Integer> NIGHT_VISION_COLOR;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Integer> AMBIENT_LIGHT_COLOR;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<net.minecraft.core.particles.ParticleOptions> DEFAULT_DRIPSTONE_PARTICLE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.util.List<net.minecraft.world.attribute.AmbientParticle>> AMBIENT_PARTICLES;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<net.minecraft.world.attribute.BackgroundMusic> BACKGROUND_MUSIC;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> MUSIC_VOLUME;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<net.minecraft.world.attribute.AmbientSounds> AMBIENT_SOUNDS;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Boolean> FIREFLY_BUSH_SOUNDS;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> SKY_LIGHT_LEVEL;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Boolean> CAN_START_RAID;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Boolean> WATER_EVAPORATES;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<net.minecraft.world.attribute.BedRule> BED_RULE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Boolean> RESPAWN_ANCHOR_WORKS;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Boolean> NETHER_PORTAL_SPAWNS_PIGLINS;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Boolean> FAST_LAVA;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Boolean> INCREASED_FIRE_BURNOUT;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<net.minecraft.util.TriState> EYEBLOSSOM_OPEN;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> TURTLE_EGG_HATCH_CHANCE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Boolean> PIGLINS_ZOMBIFY;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Boolean> SNOW_GOLEM_MELTS;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Boolean> CREAKING_ACTIVE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> SURFACE_SLIME_SPAWN_CHANCE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Float> CAT_WAKING_UP_GIFT_CHANCE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Boolean> BEES_STAY_IN_HIVE;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Boolean> MONSTERS_BURN;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<java.lang.Boolean> CAN_PILLAGER_PATROL_SPAWN;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<net.minecraft.world.entity.schedule.Activity> VILLAGER_ACTIVITY;
+  public static final net.minecraft.world.attribute.EnvironmentAttribute<net.minecraft.world.entity.schedule.Activity> BABY_VILLAGER_ACTIVITY;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.attribute.EnvironmentAttribute<?>> CODEC;
+  public static net.minecraft.world.attribute.EnvironmentAttribute<?> bootstrap(net.minecraft.core.Registry<net.minecraft.world.attribute.EnvironmentAttribute<?>>);
+  private static <Value> net.minecraft.world.attribute.EnvironmentAttribute<Value> register(java.lang.String, net.minecraft.world.attribute.EnvironmentAttribute$Builder<Value>);
+  static {};
+}
+Compiled from "GaussianSampler.java"
+public interface net.minecraft.world.attribute.GaussianSampler$Accumulator<V> {
+  public abstract void accumulate(double, V);
+}
+Compiled from "GaussianSampler.java"
+public interface net.minecraft.world.attribute.GaussianSampler$Sampler<V> {
+  public abstract V get(int, int, int);
+}
+Compiled from "GaussianSampler.java"
+public class net.minecraft.world.attribute.GaussianSampler {
+  private static final int GAUSSIAN_SAMPLE_RADIUS;
+  private static final int GAUSSIAN_SAMPLE_BREADTH;
+  private static final double[] GAUSSIAN_SAMPLE_KERNEL;
+  public net.minecraft.world.attribute.GaussianSampler();
+  public static <V> void sample(net.minecraft.world.phys.Vec3, net.minecraft.world.attribute.GaussianSampler$Sampler<V>, net.minecraft.world.attribute.GaussianSampler$Accumulator<V>);
+  static {};
+}
+Compiled from "LerpFunction.java"
+public interface net.minecraft.world.attribute.LerpFunction<T> {
+  public static final net.minecraft.world.attribute.LerpFunction<?> CONSTANT;
+  public static net.minecraft.world.attribute.LerpFunction<java.lang.Float> ofFloat();
+  public static net.minecraft.world.attribute.LerpFunction<java.lang.Integer> ofInteger();
+  public static net.minecraft.world.attribute.LerpFunction<java.lang.Float> ofDegrees(float);
+  public static <T> net.minecraft.world.attribute.LerpFunction<T> ofConstant();
+  public static <T> net.minecraft.world.attribute.LerpFunction<T> ofStep(float);
+  public static net.minecraft.world.attribute.LerpFunction<java.lang.Integer> ofColor();
+  public abstract T apply(float, T, T);
+  private static java.lang.Object lambda$ofStep$0(float, float, java.lang.Object, java.lang.Object);
+  private static java.lang.Float lambda$ofDegrees$0(float, float, java.lang.Float, java.lang.Float);
+  static {};
+}
+Compiled from "SpatialAttributeInterpolator.java"
+public class net.minecraft.world.attribute.SpatialAttributeInterpolator {
+  private final it.unimi.dsi.fastutil.objects.Reference2DoubleArrayMap<net.minecraft.world.attribute.EnvironmentAttributeMap> weightsBySource;
+  public net.minecraft.world.attribute.SpatialAttributeInterpolator();
+  public void clear();
+  public net.minecraft.world.attribute.SpatialAttributeInterpolator accumulate(double, net.minecraft.world.attribute.EnvironmentAttributeMap);
+  public <Value> Value applyAttributeLayer(net.minecraft.world.attribute.EnvironmentAttribute<Value>, Value);
+}
+Compiled from "WeatherAttributes.java"
+class net.minecraft.world.attribute.WeatherAttributes$WeatherAccess$1 implements net.minecraft.world.attribute.WeatherAttributes$WeatherAccess {
+  final net.minecraft.world.level.Level val$level;
+  net.minecraft.world.attribute.WeatherAttributes$WeatherAccess$1();
+  public float rainLevel();
+  public float thunderLevel();
+}
+Compiled from "WeatherAttributes.java"
+public interface net.minecraft.world.attribute.WeatherAttributes$WeatherAccess {
+  public static net.minecraft.world.attribute.WeatherAttributes$WeatherAccess from(net.minecraft.world.level.Level);
+  public abstract float rainLevel();
+  public abstract float thunderLevel();
+}
+Compiled from "WeatherAttributes.java"
+public class net.minecraft.world.attribute.WeatherAttributes {
+  public static final net.minecraft.world.attribute.EnvironmentAttributeMap RAIN;
+  public static final net.minecraft.world.attribute.EnvironmentAttributeMap THUNDER;
+  private static final java.util.Set<net.minecraft.world.attribute.EnvironmentAttribute<?>> WEATHER_ATTRIBUTES;
+  public net.minecraft.world.attribute.WeatherAttributes();
+  public static void addBuiltinLayers(net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder, net.minecraft.world.attribute.WeatherAttributes$WeatherAccess);
+  private static <Value> void addLayer(net.minecraft.world.attribute.EnvironmentAttributeSystem$Builder, net.minecraft.world.attribute.WeatherAttributes$WeatherAccess, net.minecraft.world.attribute.EnvironmentAttribute<Value>);
+  private static java.lang.Object lambda$addLayer$0(net.minecraft.world.attribute.WeatherAttributes$WeatherAccess, net.minecraft.world.attribute.EnvironmentAttributeMap$Entry, net.minecraft.world.attribute.EnvironmentAttribute, net.minecraft.world.attribute.EnvironmentAttributeMap$Entry, java.lang.Object, int);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.attribute.package-info {
+}

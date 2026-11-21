@@ -1,0 +1,98 @@
+Compiled from "DataFetcher.java"
+final class com.mojang.realmsclient.gui.task.DataFetcher$ComputationResult<T> extends java.lang.Record {
+  private final com.mojang.datafixers.util.Either<T, java.lang.Exception> value;
+  private final long time;
+  private com.mojang.realmsclient.gui.task.DataFetcher$ComputationResult(com.mojang.datafixers.util.Either<T, java.lang.Exception>, long);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.datafixers.util.Either<T, java.lang.Exception> value();
+  public long time();
+}
+Compiled from "DataFetcher.java"
+class com.mojang.realmsclient.gui.task.DataFetcher$SubscribedTask<T> {
+  private final com.mojang.realmsclient.gui.task.DataFetcher$Task<T> task;
+  private final java.util.function.Consumer<T> output;
+  private long lastCheckTime;
+  private com.mojang.realmsclient.gui.task.DataFetcher$SubscribedTask(com.mojang.realmsclient.gui.task.DataFetcher$Task<T>, java.util.function.Consumer<T>);
+  private void update(long);
+  private void runCallbackIfNeeded();
+  private void runCallback();
+  private void reset();
+}
+Compiled from "DataFetcher.java"
+public class com.mojang.realmsclient.gui.task.DataFetcher$Subscription {
+  private final java.util.List<com.mojang.realmsclient.gui.task.DataFetcher$SubscribedTask<?>> subscriptions;
+  final com.mojang.realmsclient.gui.task.DataFetcher this$0;
+  public com.mojang.realmsclient.gui.task.DataFetcher$Subscription(com.mojang.realmsclient.gui.task.DataFetcher);
+  public <T> void subscribe(com.mojang.realmsclient.gui.task.DataFetcher$Task<T>, java.util.function.Consumer<T>);
+  public void forceUpdate();
+  public void tick();
+  public void reset();
+}
+Compiled from "DataFetcher.java"
+final class com.mojang.realmsclient.gui.task.DataFetcher$SuccessfulComputationResult<T> extends java.lang.Record {
+  private final T value;
+  private final long time;
+  private com.mojang.realmsclient.gui.task.DataFetcher$SuccessfulComputationResult(T, long);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public T value();
+  public long time();
+}
+Compiled from "DataFetcher.java"
+public class com.mojang.realmsclient.gui.task.DataFetcher$Task<T> {
+  private final java.lang.String id;
+  private final java.util.concurrent.Callable<T> updater;
+  private final long period;
+  private final com.mojang.realmsclient.gui.task.RepeatedDelayStrategy repeatStrategy;
+  private java.util.concurrent.CompletableFuture<com.mojang.realmsclient.gui.task.DataFetcher$ComputationResult<T>> pendingTask;
+  private com.mojang.realmsclient.gui.task.DataFetcher$SuccessfulComputationResult<T> lastResult;
+  private long nextUpdate;
+  final com.mojang.realmsclient.gui.task.DataFetcher this$0;
+  private com.mojang.realmsclient.gui.task.DataFetcher$Task(java.lang.String, java.util.concurrent.Callable<T>, long, com.mojang.realmsclient.gui.task.RepeatedDelayStrategy);
+  private void updateIfNeeded(long);
+  public void reset();
+  private com.mojang.realmsclient.gui.task.DataFetcher$ComputationResult lambda$updateIfNeeded$2();
+  private void lambda$updateIfNeeded$1(long, java.lang.Exception);
+  private void lambda$updateIfNeeded$0(long, java.lang.Object);
+}
+Compiled from "DataFetcher.java"
+public class com.mojang.realmsclient.gui.task.DataFetcher {
+  private static final org.slf4j.Logger LOGGER;
+  private final java.util.concurrent.Executor executor;
+  private final java.util.concurrent.TimeUnit resolution;
+  private final net.minecraft.util.TimeSource timeSource;
+  public com.mojang.realmsclient.gui.task.DataFetcher(java.util.concurrent.Executor, java.util.concurrent.TimeUnit, net.minecraft.util.TimeSource);
+  public <T> com.mojang.realmsclient.gui.task.DataFetcher$Task<T> createTask(java.lang.String, java.util.concurrent.Callable<T>, java.time.Duration, com.mojang.realmsclient.gui.task.RepeatedDelayStrategy);
+  public com.mojang.realmsclient.gui.task.DataFetcher$Subscription createSubscription();
+  static {};
+}
+Compiled from "RepeatedDelayStrategy.java"
+class com.mojang.realmsclient.gui.task.RepeatedDelayStrategy$1 implements com.mojang.realmsclient.gui.task.RepeatedDelayStrategy {
+  com.mojang.realmsclient.gui.task.RepeatedDelayStrategy$1();
+  public long delayCyclesAfterSuccess();
+  public long delayCyclesAfterFailure();
+}
+Compiled from "RepeatedDelayStrategy.java"
+class com.mojang.realmsclient.gui.task.RepeatedDelayStrategy$2 implements com.mojang.realmsclient.gui.task.RepeatedDelayStrategy {
+  private static final org.slf4j.Logger LOGGER;
+  private int failureCount;
+  final int val$maxBackoff;
+  com.mojang.realmsclient.gui.task.RepeatedDelayStrategy$2();
+  public long delayCyclesAfterSuccess();
+  public long delayCyclesAfterFailure();
+  static {};
+}
+Compiled from "RepeatedDelayStrategy.java"
+public interface com.mojang.realmsclient.gui.task.RepeatedDelayStrategy {
+  public static final com.mojang.realmsclient.gui.task.RepeatedDelayStrategy CONSTANT;
+  public abstract long delayCyclesAfterSuccess();
+  public abstract long delayCyclesAfterFailure();
+  public static com.mojang.realmsclient.gui.task.RepeatedDelayStrategy exponentialBackoff(int);
+  static {};
+}
+Compiled from "package-info.java"
+interface com.mojang.realmsclient.gui.task.package-info {
+}

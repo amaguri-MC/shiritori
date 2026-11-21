@@ -1,0 +1,220 @@
+Compiled from "package-info.java"
+interface net.minecraft.world.level.redstone.package-info {
+}
+Compiled from "Orientation.java"
+public final class net.minecraft.world.level.redstone.Orientation$SideBias extends java.lang.Enum<net.minecraft.world.level.redstone.Orientation$SideBias> {
+  public static final net.minecraft.world.level.redstone.Orientation$SideBias LEFT;
+  public static final net.minecraft.world.level.redstone.Orientation$SideBias RIGHT;
+  private final java.lang.String name;
+  private static final net.minecraft.world.level.redstone.Orientation$SideBias[] $VALUES;
+  public static net.minecraft.world.level.redstone.Orientation$SideBias[] values();
+  public static net.minecraft.world.level.redstone.Orientation$SideBias valueOf(java.lang.String);
+  private net.minecraft.world.level.redstone.Orientation$SideBias(java.lang.String);
+  public net.minecraft.world.level.redstone.Orientation$SideBias getOpposite();
+  public java.lang.String toString();
+  private static net.minecraft.world.level.redstone.Orientation$SideBias[] $values();
+  static {};
+}
+Compiled from "DefaultRedstoneWireEvaluator.java"
+public class net.minecraft.world.level.redstone.DefaultRedstoneWireEvaluator extends net.minecraft.world.level.redstone.RedstoneWireEvaluator {
+  public net.minecraft.world.level.redstone.DefaultRedstoneWireEvaluator(net.minecraft.world.level.block.RedStoneWireBlock);
+  public void updatePowerStrength(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.redstone.Orientation, boolean);
+  private int calculateTargetStrength(net.minecraft.world.level.Level, net.minecraft.core.BlockPos);
+}
+Compiled from "Redstone.java"
+public class net.minecraft.world.level.redstone.Redstone {
+  public static final int BITS;
+  public static final int MASK;
+  public static final int SIGNAL_MIN;
+  public static final int SIGNAL_MAX;
+  public static final int SIGNAL_NONE;
+  public net.minecraft.world.level.redstone.Redstone();
+}
+Compiled from "CollectingNeighborUpdater.java"
+final class net.minecraft.world.level.redstone.CollectingNeighborUpdater$FullNeighborUpdate extends java.lang.Record implements net.minecraft.world.level.redstone.CollectingNeighborUpdater$NeighborUpdates {
+  private final net.minecraft.world.level.block.state.BlockState state;
+  private final net.minecraft.core.BlockPos pos;
+  private final net.minecraft.world.level.block.Block block;
+  private final net.minecraft.world.level.redstone.Orientation orientation;
+  private final boolean movedByPiston;
+  private net.minecraft.world.level.redstone.CollectingNeighborUpdater$FullNeighborUpdate(net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block, net.minecraft.world.level.redstone.Orientation, boolean);
+  public boolean runNext(net.minecraft.world.level.Level);
+  public void forEachUpdatedPos(java.util.function.Consumer<net.minecraft.core.BlockPos>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.block.state.BlockState state();
+  public net.minecraft.core.BlockPos pos();
+  public net.minecraft.world.level.block.Block block();
+  public net.minecraft.world.level.redstone.Orientation orientation();
+  public boolean movedByPiston();
+}
+Compiled from "ExperimentalRedstoneUtils.java"
+public class net.minecraft.world.level.redstone.ExperimentalRedstoneUtils {
+  public net.minecraft.world.level.redstone.ExperimentalRedstoneUtils();
+  public static net.minecraft.world.level.redstone.Orientation initialOrientation(net.minecraft.world.level.Level, net.minecraft.core.Direction, net.minecraft.core.Direction);
+  public static net.minecraft.world.level.redstone.Orientation withFront(net.minecraft.world.level.redstone.Orientation, net.minecraft.core.Direction);
+}
+Compiled from "Orientation.java"
+public class net.minecraft.world.level.redstone.Orientation {
+  public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, net.minecraft.world.level.redstone.Orientation> STREAM_CODEC;
+  private static final net.minecraft.world.level.redstone.Orientation[] ORIENTATIONS;
+  private final net.minecraft.core.Direction up;
+  private final net.minecraft.core.Direction front;
+  private final net.minecraft.core.Direction side;
+  private final net.minecraft.world.level.redstone.Orientation$SideBias sideBias;
+  private final int index;
+  private final java.util.List<net.minecraft.core.Direction> neighbors;
+  private final java.util.List<net.minecraft.core.Direction> horizontalNeighbors;
+  private final java.util.List<net.minecraft.core.Direction> verticalNeighbors;
+  private final java.util.Map<net.minecraft.core.Direction, net.minecraft.world.level.redstone.Orientation> withFront;
+  private final java.util.Map<net.minecraft.core.Direction, net.minecraft.world.level.redstone.Orientation> withUp;
+  private final java.util.Map<net.minecraft.world.level.redstone.Orientation$SideBias, net.minecraft.world.level.redstone.Orientation> withSideBias;
+  private net.minecraft.world.level.redstone.Orientation(net.minecraft.core.Direction, net.minecraft.core.Direction, net.minecraft.world.level.redstone.Orientation$SideBias);
+  public static net.minecraft.world.level.redstone.Orientation of(net.minecraft.core.Direction, net.minecraft.core.Direction, net.minecraft.world.level.redstone.Orientation$SideBias);
+  public net.minecraft.world.level.redstone.Orientation withUp(net.minecraft.core.Direction);
+  public net.minecraft.world.level.redstone.Orientation withFront(net.minecraft.core.Direction);
+  public net.minecraft.world.level.redstone.Orientation withFrontPreserveUp(net.minecraft.core.Direction);
+  public net.minecraft.world.level.redstone.Orientation withFrontAdjustSideBias(net.minecraft.core.Direction);
+  public net.minecraft.world.level.redstone.Orientation withSideBias(net.minecraft.world.level.redstone.Orientation$SideBias);
+  public net.minecraft.world.level.redstone.Orientation withMirror();
+  public net.minecraft.core.Direction getFront();
+  public net.minecraft.core.Direction getUp();
+  public net.minecraft.core.Direction getSide();
+  public net.minecraft.world.level.redstone.Orientation$SideBias getSideBias();
+  public java.util.List<net.minecraft.core.Direction> getDirections();
+  public java.util.List<net.minecraft.core.Direction> getHorizontalDirections();
+  public java.util.List<net.minecraft.core.Direction> getVerticalDirections();
+  public java.lang.String toString();
+  public int getIndex();
+  public static net.minecraft.world.level.redstone.Orientation fromIndex(int);
+  public static net.minecraft.world.level.redstone.Orientation random(net.minecraft.util.RandomSource);
+  private static net.minecraft.world.level.redstone.Orientation generateContext(net.minecraft.world.level.redstone.Orientation, net.minecraft.world.level.redstone.Orientation[]);
+  protected static int generateIndex(net.minecraft.core.Direction, net.minecraft.core.Direction, net.minecraft.world.level.redstone.Orientation$SideBias);
+  private boolean lambda$new$1(net.minecraft.core.Direction);
+  private boolean lambda$new$0(net.minecraft.core.Direction);
+  private static net.minecraft.world.level.redstone.Orientation[] lambda$static$0();
+  static {};
+}
+Compiled from "CollectingNeighborUpdater.java"
+public class net.minecraft.world.level.redstone.CollectingNeighborUpdater implements net.minecraft.world.level.redstone.NeighborUpdater {
+  private static final org.slf4j.Logger LOGGER;
+  private final net.minecraft.world.level.Level level;
+  private final int maxChainedNeighborUpdates;
+  private final java.util.ArrayDeque<net.minecraft.world.level.redstone.CollectingNeighborUpdater$NeighborUpdates> stack;
+  private final java.util.List<net.minecraft.world.level.redstone.CollectingNeighborUpdater$NeighborUpdates> addedThisLayer;
+  private int count;
+  private java.util.function.Consumer<net.minecraft.core.BlockPos> debugListener;
+  public net.minecraft.world.level.redstone.CollectingNeighborUpdater(net.minecraft.world.level.Level, int);
+  public void setDebugListener(java.util.function.Consumer<net.minecraft.core.BlockPos>);
+  public void shapeUpdate(net.minecraft.core.Direction, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, net.minecraft.core.BlockPos, int, int);
+  public void neighborChanged(net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block, net.minecraft.world.level.redstone.Orientation);
+  public void neighborChanged(net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block, net.minecraft.world.level.redstone.Orientation, boolean);
+  public void updateNeighborsAtExceptFromFacing(net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block, net.minecraft.core.Direction, net.minecraft.world.level.redstone.Orientation);
+  private void addAndRun(net.minecraft.core.BlockPos, net.minecraft.world.level.redstone.CollectingNeighborUpdater$NeighborUpdates);
+  private void runUpdates();
+  static {};
+}
+Compiled from "CollectingNeighborUpdater.java"
+interface net.minecraft.world.level.redstone.CollectingNeighborUpdater$NeighborUpdates {
+  public abstract boolean runNext(net.minecraft.world.level.Level);
+  public abstract void forEachUpdatedPos(java.util.function.Consumer<net.minecraft.core.BlockPos>);
+}
+Compiled from "RedstoneWireEvaluator.java"
+public abstract class net.minecraft.world.level.redstone.RedstoneWireEvaluator {
+  protected final net.minecraft.world.level.block.RedStoneWireBlock wireBlock;
+  protected net.minecraft.world.level.redstone.RedstoneWireEvaluator(net.minecraft.world.level.block.RedStoneWireBlock);
+  public abstract void updatePowerStrength(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.redstone.Orientation, boolean);
+  protected int getBlockSignal(net.minecraft.world.level.Level, net.minecraft.core.BlockPos);
+  protected int getWireSignal(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  protected int getIncomingWireSignal(net.minecraft.world.level.Level, net.minecraft.core.BlockPos);
+}
+Compiled from "InstantNeighborUpdater.java"
+public class net.minecraft.world.level.redstone.InstantNeighborUpdater implements net.minecraft.world.level.redstone.NeighborUpdater {
+  private final net.minecraft.world.level.Level level;
+  public net.minecraft.world.level.redstone.InstantNeighborUpdater(net.minecraft.world.level.Level);
+  public void shapeUpdate(net.minecraft.core.Direction, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, net.minecraft.core.BlockPos, int, int);
+  public void neighborChanged(net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block, net.minecraft.world.level.redstone.Orientation);
+  public void neighborChanged(net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block, net.minecraft.world.level.redstone.Orientation, boolean);
+}
+Compiled from "CollectingNeighborUpdater.java"
+final class net.minecraft.world.level.redstone.CollectingNeighborUpdater$SimpleNeighborUpdate extends java.lang.Record implements net.minecraft.world.level.redstone.CollectingNeighborUpdater$NeighborUpdates {
+  private final net.minecraft.core.BlockPos pos;
+  private final net.minecraft.world.level.block.Block block;
+  private final net.minecraft.world.level.redstone.Orientation orientation;
+  private net.minecraft.world.level.redstone.CollectingNeighborUpdater$SimpleNeighborUpdate(net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block, net.minecraft.world.level.redstone.Orientation);
+  public boolean runNext(net.minecraft.world.level.Level);
+  public void forEachUpdatedPos(java.util.function.Consumer<net.minecraft.core.BlockPos>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.BlockPos pos();
+  public net.minecraft.world.level.block.Block block();
+  public net.minecraft.world.level.redstone.Orientation orientation();
+}
+Compiled from "CollectingNeighborUpdater.java"
+final class net.minecraft.world.level.redstone.CollectingNeighborUpdater$MultiNeighborUpdate implements net.minecraft.world.level.redstone.CollectingNeighborUpdater$NeighborUpdates {
+  private final net.minecraft.core.BlockPos sourcePos;
+  private final net.minecraft.world.level.block.Block sourceBlock;
+  private net.minecraft.world.level.redstone.Orientation orientation;
+  private final net.minecraft.core.Direction skipDirection;
+  private int idx;
+  public net.minecraft.world.level.redstone.CollectingNeighborUpdater$MultiNeighborUpdate(net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block, net.minecraft.world.level.redstone.Orientation, net.minecraft.core.Direction);
+  public boolean runNext(net.minecraft.world.level.Level);
+  public void forEachUpdatedPos(java.util.function.Consumer<net.minecraft.core.BlockPos>);
+}
+Compiled from "NeighborUpdater.java"
+public interface net.minecraft.world.level.redstone.NeighborUpdater {
+  public static final net.minecraft.core.Direction[] UPDATE_ORDER;
+  public abstract void shapeUpdate(net.minecraft.core.Direction, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, net.minecraft.core.BlockPos, int, int);
+  public abstract void neighborChanged(net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block, net.minecraft.world.level.redstone.Orientation);
+  public abstract void neighborChanged(net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block, net.minecraft.world.level.redstone.Orientation, boolean);
+  public default void updateNeighborsAtExceptFromFacing(net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block, net.minecraft.core.Direction, net.minecraft.world.level.redstone.Orientation);
+  public static void executeShapeUpdate(net.minecraft.world.level.LevelAccessor, net.minecraft.core.Direction, net.minecraft.core.BlockPos, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, int, int);
+  public static void executeUpdate(net.minecraft.world.level.Level, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, net.minecraft.world.level.block.Block, net.minecraft.world.level.redstone.Orientation, boolean);
+  private static java.lang.String lambda$executeUpdate$0(net.minecraft.world.level.block.Block) throws java.lang.Exception;
+  static {};
+}
+Compiled from "ExperimentalRedstoneWireEvaluator.java"
+public class net.minecraft.world.level.redstone.ExperimentalRedstoneWireEvaluator extends net.minecraft.world.level.redstone.RedstoneWireEvaluator {
+  private final java.util.Deque<net.minecraft.core.BlockPos> wiresToTurnOff;
+  private final java.util.Deque<net.minecraft.core.BlockPos> wiresToTurnOn;
+  private final it.unimi.dsi.fastutil.objects.Object2IntMap<net.minecraft.core.BlockPos> updatedWires;
+  public net.minecraft.world.level.redstone.ExperimentalRedstoneWireEvaluator(net.minecraft.world.level.block.RedStoneWireBlock);
+  public void updatePowerStrength(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.redstone.Orientation, boolean);
+  private void causeNeighborUpdates(net.minecraft.world.level.Level);
+  private static boolean isConnected(net.minecraft.world.level.block.state.BlockState, net.minecraft.core.Direction);
+  private static net.minecraft.world.level.redstone.Orientation getInitialOrientation(net.minecraft.world.level.Level, net.minecraft.world.level.redstone.Orientation);
+  private void calculateCurrentChanges(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.redstone.Orientation);
+  private static int packOrientationAndPower(net.minecraft.world.level.redstone.Orientation, int);
+  private static net.minecraft.world.level.redstone.Orientation unpackOrientation(int);
+  private static int unpackPower(int);
+  private void setPower(net.minecraft.core.BlockPos, int, net.minecraft.world.level.redstone.Orientation);
+  private void propagateChangeToNeighbors(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, int, net.minecraft.world.level.redstone.Orientation, boolean);
+  private void enqueueNeighborWire(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, int, net.minecraft.world.level.redstone.Orientation, boolean);
+  protected int getWireSignal(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  private static java.lang.Integer lambda$setPower$0(net.minecraft.world.level.redstone.Orientation, int, net.minecraft.core.BlockPos, java.lang.Integer);
+  private static void lambda$causeNeighborUpdates$1(net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, int);
+  private void lambda$causeNeighborUpdates$0(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, int);
+}
+Compiled from "CollectingNeighborUpdater.java"
+final class net.minecraft.world.level.redstone.CollectingNeighborUpdater$ShapeUpdate extends java.lang.Record implements net.minecraft.world.level.redstone.CollectingNeighborUpdater$NeighborUpdates {
+  private final net.minecraft.core.Direction direction;
+  private final net.minecraft.world.level.block.state.BlockState neighborState;
+  private final net.minecraft.core.BlockPos pos;
+  private final net.minecraft.core.BlockPos neighborPos;
+  private final int updateFlags;
+  private final int updateLimit;
+  private net.minecraft.world.level.redstone.CollectingNeighborUpdater$ShapeUpdate(net.minecraft.core.Direction, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos, net.minecraft.core.BlockPos, int, int);
+  public boolean runNext(net.minecraft.world.level.Level);
+  public void forEachUpdatedPos(java.util.function.Consumer<net.minecraft.core.BlockPos>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.Direction direction();
+  public net.minecraft.world.level.block.state.BlockState neighborState();
+  public net.minecraft.core.BlockPos pos();
+  public net.minecraft.core.BlockPos neighborPos();
+  public int updateFlags();
+  public int updateLimit();
+}

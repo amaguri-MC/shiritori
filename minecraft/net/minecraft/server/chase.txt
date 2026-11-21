@@ -1,0 +1,77 @@
+Compiled from "ChaseServer.java"
+final class net.minecraft.server.chase.ChaseServer$PlayerPosition extends java.lang.Record {
+  private final java.lang.String dimensionName;
+  private final double x;
+  private final double y;
+  private final double z;
+  private final float yRot;
+  private final float xRot;
+  private net.minecraft.server.chase.ChaseServer$PlayerPosition(java.lang.String, double, double, double, float, float);
+  private java.lang.String format();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String dimensionName();
+  public double x();
+  public double y();
+  public double z();
+  public float yRot();
+  public float xRot();
+}
+Compiled from "ChaseClient.java"
+final class net.minecraft.server.chase.ChaseClient$TeleportTarget extends java.lang.Record {
+  private final net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> level;
+  private final net.minecraft.world.phys.Vec3 pos;
+  private final net.minecraft.world.phys.Vec2 rot;
+  private net.minecraft.server.chase.ChaseClient$TeleportTarget(net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level>, net.minecraft.world.phys.Vec3, net.minecraft.world.phys.Vec2);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.ResourceKey<net.minecraft.world.level.Level> level();
+  public net.minecraft.world.phys.Vec3 pos();
+  public net.minecraft.world.phys.Vec2 rot();
+}
+Compiled from "ChaseClient.java"
+public class net.minecraft.server.chase.ChaseClient {
+  private static final org.slf4j.Logger LOGGER;
+  private static final int RECONNECT_INTERVAL_SECONDS;
+  private final java.lang.String serverHost;
+  private final int serverPort;
+  private final net.minecraft.server.MinecraftServer server;
+  private volatile boolean wantsToRun;
+  private java.net.Socket socket;
+  private java.lang.Thread thread;
+  public net.minecraft.server.chase.ChaseClient(java.lang.String, int, net.minecraft.server.MinecraftServer);
+  public void start();
+  public void stop();
+  public void run();
+  private void handleMessage(java.lang.String);
+  private void handleTeleport(java.util.Scanner);
+  private static java.util.Optional<net.minecraft.server.chase.ChaseClient$TeleportTarget> parseTarget(java.util.Scanner);
+  private void executeCommand(java.lang.String);
+  private void lambda$executeCommand$0(java.lang.String);
+  private void lambda$handleTeleport$0(net.minecraft.server.chase.ChaseClient$TeleportTarget);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.server.chase.package-info {
+}
+Compiled from "ChaseServer.java"
+public class net.minecraft.server.chase.ChaseServer {
+  private static final org.slf4j.Logger LOGGER;
+  private final java.lang.String serverBindAddress;
+  private final int serverPort;
+  private final net.minecraft.server.players.PlayerList playerList;
+  private final int broadcastIntervalMs;
+  private volatile boolean wantsToRun;
+  private java.net.ServerSocket serverSocket;
+  private final java.util.concurrent.CopyOnWriteArrayList<java.net.Socket> clientSockets;
+  public net.minecraft.server.chase.ChaseServer(java.lang.String, int, net.minecraft.server.players.PlayerList, int);
+  public void start() throws java.io.IOException;
+  private void runSender();
+  public void stop();
+  private void runAcceptor();
+  private net.minecraft.server.chase.ChaseServer$PlayerPosition getPlayerPosition();
+  private static void lambda$runSender$0(java.net.Socket, byte[]);
+  static {};
+}

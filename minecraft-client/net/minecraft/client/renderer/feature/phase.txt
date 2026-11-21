@@ -1,0 +1,52 @@
+Compiled from "FeatureRenderPhase.java"
+public interface net.minecraft.client.renderer.feature.phase.FeatureRenderPhase$Output {
+  public abstract void accept(net.minecraft.client.renderer.feature.submit.SubmitNode, boolean);
+  public default <Submit extends net.minecraft.client.renderer.feature.submit.SubmitNode> void acceptFeatureGroup(net.minecraft.client.renderer.feature.FeatureRendererType<Submit>, java.util.Collection<Submit>, boolean);
+}
+Compiled from "FeatureRenderPhase.java"
+public interface net.minecraft.client.renderer.feature.phase.FeatureRenderPhase<Submit extends net.minecraft.client.renderer.feature.submit.SubmitNode> {
+  public abstract void submit(Submit);
+  public abstract void sortInto(net.minecraft.client.renderer.feature.phase.FeatureRenderPhase$Output);
+  public abstract boolean isEmpty();
+}
+Compiled from "SimpleFeatureRenderPhase.java"
+class net.minecraft.client.renderer.feature.phase.SimpleFeatureRenderPhase$FeatureSubmits<Submit extends net.minecraft.client.renderer.feature.submit.SubmitNode> {
+  private final net.minecraft.client.renderer.feature.FeatureRendererType<Submit> featureType;
+  private final java.util.List<Submit> unbatched;
+  private final java.util.Map<java.lang.Object, java.util.List<Submit>> batches;
+  private net.minecraft.client.renderer.feature.phase.SimpleFeatureRenderPhase$FeatureSubmits(net.minecraft.client.renderer.feature.FeatureRendererType<Submit>);
+  public void addUnchecked(net.minecraft.client.renderer.feature.submit.SubmitNode);
+  public void add(Submit);
+  private static java.lang.Object batchKey(net.minecraft.client.renderer.feature.submit.SubmitNode);
+  public boolean isEmpty();
+  public void clear();
+  private static boolean lambda$clear$0(java.util.List);
+  private static java.util.List lambda$add$0(java.lang.Object);
+}
+Compiled from "SimpleFeatureRenderPhase.java"
+public class net.minecraft.client.renderer.feature.phase.SimpleFeatureRenderPhase implements net.minecraft.client.renderer.feature.phase.FeatureRenderPhase<net.minecraft.client.renderer.feature.submit.SubmitNode> {
+  private net.minecraft.client.renderer.feature.phase.SimpleFeatureRenderPhase$FeatureSubmits<?>[] submitsByFeature;
+  public net.minecraft.client.renderer.feature.phase.SimpleFeatureRenderPhase();
+  public void submit(net.minecraft.client.renderer.feature.submit.SubmitNode);
+  public void sortInto(net.minecraft.client.renderer.feature.phase.FeatureRenderPhase$Output);
+  private static <Submit extends net.minecraft.client.renderer.feature.submit.SubmitNode> void sortFeatureInto(net.minecraft.client.renderer.feature.phase.FeatureRenderPhase$Output, net.minecraft.client.renderer.feature.phase.SimpleFeatureRenderPhase$FeatureSubmits<Submit>);
+  private static <V> java.util.Collection<V> maybeShuffle(java.util.Collection<V>);
+  private static <V> V[] maybeShuffle(V[]);
+  public void clear();
+  public boolean isEmpty();
+}
+Compiled from "TranslucentFeatureRenderPhase.java"
+public class net.minecraft.client.renderer.feature.phase.TranslucentFeatureRenderPhase implements net.minecraft.client.renderer.feature.phase.FeatureRenderPhase<net.minecraft.client.renderer.feature.submit.TranslucentSubmit> {
+  private final java.util.List<net.minecraft.client.renderer.feature.submit.TranslucentSubmit> submits;
+  private final it.unimi.dsi.fastutil.floats.FloatList distances;
+  public net.minecraft.client.renderer.feature.phase.TranslucentFeatureRenderPhase();
+  public void submit(net.minecraft.client.renderer.feature.submit.TranslucentSubmit);
+  public void sortInto(net.minecraft.client.renderer.feature.phase.FeatureRenderPhase$Output);
+  private int[] sortIndices();
+  public boolean isEmpty();
+  public void submit(net.minecraft.client.renderer.feature.submit.SubmitNode);
+  private int lambda$sortIndices$0(int, int);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.renderer.feature.phase.package-info {
+}

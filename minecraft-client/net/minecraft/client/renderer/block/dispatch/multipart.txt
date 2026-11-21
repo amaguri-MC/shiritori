@@ -1,0 +1,194 @@
+Compiled from "CombinedCondition.java"
+final class net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation$1 extends net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation {
+  private net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation$1(java.lang.String, int, java.lang.String);
+  public <V> java.util.function.Predicate<V> apply(java.util.List<java.util.function.Predicate<V>>);
+}
+Compiled from "CombinedCondition.java"
+final class net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation$2 extends net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation {
+  private net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation$2(java.lang.String, int, java.lang.String);
+  public <V> java.util.function.Predicate<V> apply(java.util.List<java.util.function.Predicate<V>>);
+}
+Compiled from "CombinedCondition.java"
+public abstract class net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation extends java.lang.Enum<net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation AND;
+  public static final net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation OR;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation> CODEC;
+  private final java.lang.String name;
+  private static final net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation[] $VALUES;
+  public static net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation[] values();
+  public static net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation valueOf(java.lang.String);
+  private net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation(java.lang.String);
+  public java.lang.String getSerializedName();
+  public abstract <V> java.util.function.Predicate<V> apply(java.util.List<java.util.function.Predicate<V>>);
+  private static net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation[] $values();
+  static {};
+}
+Compiled from "CombinedCondition.java"
+public final class net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition extends java.lang.Record implements net.minecraft.client.renderer.block.dispatch.multipart.Condition {
+  private final net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation operation;
+  private final java.util.List<net.minecraft.client.renderer.block.dispatch.multipart.Condition> terms;
+  public net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition(net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation, java.util.List<net.minecraft.client.renderer.block.dispatch.multipart.Condition>);
+  public <O, S extends net.minecraft.world.level.block.state.StateHolder<O, S>> java.util.function.Predicate<S> instantiate(net.minecraft.world.level.block.state.StateDefinition<O, S>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition$Operation operation();
+  public java.util.List<net.minecraft.client.renderer.block.dispatch.multipart.Condition> terms();
+  private static java.util.function.Predicate lambda$instantiate$0(net.minecraft.world.level.block.state.StateDefinition, net.minecraft.client.renderer.block.dispatch.multipart.Condition);
+}
+Compiled from "Condition.java"
+public interface net.minecraft.client.renderer.block.dispatch.multipart.Condition {
+  public static final com.mojang.serialization.Codec<net.minecraft.client.renderer.block.dispatch.multipart.Condition> CODEC;
+  public abstract <O, S extends net.minecraft.world.level.block.state.StateHolder<O, S>> java.util.function.Predicate<S> instantiate(net.minecraft.world.level.block.state.StateDefinition<O, S>);
+  private static com.mojang.serialization.Codec lambda$static$0(com.mojang.serialization.Codec);
+  private static com.mojang.serialization.DataResult lambda$static$7(net.minecraft.client.renderer.block.dispatch.multipart.Condition);
+  private static java.lang.String lambda$static$8();
+  private static net.minecraft.client.renderer.block.dispatch.multipart.Condition lambda$static$4(com.mojang.datafixers.util.Either);
+  private static java.lang.Record lambda$static$6(net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition);
+  private static java.lang.Record lambda$static$5(net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition);
+  private static java.util.Map lambda$static$3(net.minecraft.client.renderer.block.dispatch.multipart.CombinedCondition);
+  private static com.mojang.serialization.DataResult lambda$static$1(java.util.Map);
+  private static java.lang.String lambda$static$2();
+  static {};
+}
+Compiled from "KeyValueCondition.java"
+public final class net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Term extends java.lang.Record {
+  private final java.lang.String value;
+  private final boolean negated;
+  private static final java.lang.String NEGATE;
+  public net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Term(java.lang.String, boolean);
+  public static net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Term parse(java.lang.String);
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String value();
+  public boolean negated();
+}
+Compiled from "KeyValueCondition.java"
+public final class net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Terms extends java.lang.Record {
+  private final java.util.List<net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Term> entries;
+  private static final char SEPARATOR;
+  private static final com.google.common.base.Joiner JOINER;
+  private static final com.google.common.base.Splitter SPLITTER;
+  private static final com.mojang.serialization.Codec<java.lang.String> LEGACY_REPRESENTATION_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Terms> CODEC;
+  public net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Terms(java.util.List<net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Term>);
+  public static com.mojang.serialization.DataResult<net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Terms> parse(java.lang.String);
+  public java.lang.String toString();
+  public <O, S extends net.minecraft.world.level.block.state.StateHolder<O, S>, T extends java.lang.Comparable<T>> java.util.function.Predicate<S> instantiate(O, net.minecraft.world.level.block.state.properties.Property<T>);
+  private <T extends java.lang.Comparable<T>> T getValueOrThrow(java.lang.Object, net.minecraft.world.level.block.state.properties.Property<T>, java.lang.String);
+  private <T extends java.lang.Comparable<T>> java.util.function.Predicate<T> instantiate(java.lang.Object, net.minecraft.world.level.block.state.properties.Property<T>, net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Term);
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Term> entries();
+  private static boolean lambda$instantiate$6(java.lang.Comparable, java.lang.Comparable);
+  private static boolean lambda$instantiate$5(java.lang.Comparable, java.lang.Comparable);
+  private static boolean lambda$instantiate$4(net.minecraft.world.level.block.state.properties.Property, java.util.List, boolean, net.minecraft.world.level.block.state.StateHolder);
+  private static boolean lambda$instantiate$3(net.minecraft.world.level.block.state.properties.Property, java.lang.Comparable, boolean, net.minecraft.world.level.block.state.StateHolder);
+  private static boolean lambda$instantiate$2(net.minecraft.world.level.block.state.StateHolder);
+  private static boolean lambda$instantiate$1(net.minecraft.world.level.block.state.StateHolder);
+  private java.util.function.Predicate lambda$instantiate$0(java.lang.Object, net.minecraft.world.level.block.state.properties.Property, net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Term);
+  private static java.lang.String lambda$parse$1(java.lang.String);
+  private static java.lang.String lambda$parse$0();
+  private static com.mojang.serialization.DataResult lambda$static$1(java.lang.String);
+  private static java.lang.String lambda$static$2();
+  private static java.lang.String lambda$static$0(com.mojang.datafixers.util.Either);
+  static {};
+}
+Compiled from "KeyValueCondition.java"
+public final class net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition extends java.lang.Record implements net.minecraft.client.renderer.block.dispatch.multipart.Condition {
+  private final java.util.Map<java.lang.String, net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Terms> tests;
+  private static final org.slf4j.Logger LOGGER;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition> CODEC;
+  public net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition(java.util.Map<java.lang.String, net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Terms>);
+  public <O, S extends net.minecraft.world.level.block.state.StateHolder<O, S>> java.util.function.Predicate<S> instantiate(net.minecraft.world.level.block.state.StateDefinition<O, S>);
+  private static <O, S extends net.minecraft.world.level.block.state.StateHolder<O, S>> java.util.function.Predicate<S> instantiate(net.minecraft.world.level.block.state.StateDefinition<O, S>, java.lang.String, net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Terms);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Map<java.lang.String, net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Terms> tests();
+  private static void lambda$instantiate$0(java.util.List, net.minecraft.world.level.block.state.StateDefinition, java.lang.String, net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Terms);
+  static {};
+}
+Compiled from "MultiPartModel.java"
+public final class net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Selector<T> extends java.lang.Record {
+  private final java.util.function.Predicate<net.minecraft.world.level.block.state.BlockState> condition;
+  private final T model;
+  public net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Selector(java.util.function.Predicate<net.minecraft.world.level.block.state.BlockState>, T);
+  public <S> net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Selector<S> with(S);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.function.Predicate<net.minecraft.world.level.block.state.BlockState> condition();
+  public T model();
+}
+Compiled from "MultiPartModel.java"
+final class net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$SharedBakedState {
+  private final java.util.List<net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Selector<net.minecraft.client.renderer.block.dispatch.BlockStateModel>> selectors;
+  private final net.minecraft.client.resources.model.sprite.Material$Baked particleMaterial;
+  private final int materialFlags;
+  private final java.util.Map<java.util.BitSet, java.util.List<net.minecraft.client.renderer.block.dispatch.BlockStateModel>> subsets;
+  private static net.minecraft.client.renderer.block.dispatch.BlockStateModel getFirstModel(java.util.List<net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Selector<net.minecraft.client.renderer.block.dispatch.BlockStateModel>>);
+  private static int computeMaterialFlags(java.util.List<net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Selector<net.minecraft.client.renderer.block.dispatch.BlockStateModel>>);
+  public net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$SharedBakedState(java.util.List<net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Selector<net.minecraft.client.renderer.block.dispatch.BlockStateModel>>);
+  public java.util.List<net.minecraft.client.renderer.block.dispatch.BlockStateModel> selectModels(net.minecraft.world.level.block.state.BlockState);
+  private java.util.List lambda$selectModels$0(java.util.BitSet);
+}
+Compiled from "MultiPartModel.java"
+class net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Unbaked$1 implements net.minecraft.client.resources.model.ModelBaker$SharedOperationKey<net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$SharedBakedState> {
+  final net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Unbaked this$0;
+  net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Unbaked$1(net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Unbaked);
+  public net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$SharedBakedState compute(net.minecraft.client.resources.model.ModelBaker);
+  public java.lang.Object compute(net.minecraft.client.resources.model.ModelBaker);
+}
+Compiled from "MultiPartModel.java"
+final class net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Unbaked$1Key extends java.lang.Record {
+  private final net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Unbaked model;
+  private final it.unimi.dsi.fastutil.ints.IntList selectors;
+  net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Unbaked$1Key(net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Unbaked, it.unimi.dsi.fastutil.ints.IntList);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Unbaked model();
+  public it.unimi.dsi.fastutil.ints.IntList selectors();
+}
+Compiled from "MultiPartModel.java"
+public class net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Unbaked implements net.minecraft.client.renderer.block.dispatch.BlockStateModel$UnbakedRoot {
+  private final java.util.List<net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Selector<net.minecraft.client.renderer.block.dispatch.BlockStateModel$Unbaked>> selectors;
+  private final net.minecraft.client.resources.model.ModelBaker$SharedOperationKey<net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$SharedBakedState> sharedStateKey;
+  public net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Unbaked(java.util.List<net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Selector<net.minecraft.client.renderer.block.dispatch.BlockStateModel$Unbaked>>);
+  public java.lang.Object visualEqualityGroup(net.minecraft.world.level.block.state.BlockState);
+  public void resolveDependencies(net.minecraft.client.resources.model.ResolvableModel$Resolver);
+  public net.minecraft.client.renderer.block.dispatch.BlockStateModel bake(net.minecraft.world.level.block.state.BlockState, net.minecraft.client.resources.model.ModelBaker);
+  private static void lambda$resolveDependencies$0(net.minecraft.client.resources.model.ResolvableModel$Resolver, net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$Selector);
+}
+Compiled from "MultiPartModel.java"
+public class net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel implements net.minecraft.client.renderer.block.dispatch.BlockStateModel {
+  private final net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$SharedBakedState shared;
+  private final net.minecraft.world.level.block.state.BlockState blockState;
+  private java.util.List<net.minecraft.client.renderer.block.dispatch.BlockStateModel> models;
+  private net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel(net.minecraft.client.renderer.block.dispatch.multipart.MultiPartModel$SharedBakedState, net.minecraft.world.level.block.state.BlockState);
+  public net.minecraft.client.resources.model.sprite.Material$Baked particleMaterial();
+  public int materialFlags();
+  public void collectParts(net.minecraft.util.RandomSource, java.util.List<net.minecraft.client.renderer.block.dispatch.BlockStateModelPart>);
+}
+Compiled from "Selector.java"
+public final class net.minecraft.client.renderer.block.dispatch.multipart.Selector extends java.lang.Record {
+  private final java.util.Optional<net.minecraft.client.renderer.block.dispatch.multipart.Condition> condition;
+  private final net.minecraft.client.renderer.block.dispatch.BlockStateModel$Unbaked variant;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.renderer.block.dispatch.multipart.Selector> CODEC;
+  public net.minecraft.client.renderer.block.dispatch.multipart.Selector(java.util.Optional<net.minecraft.client.renderer.block.dispatch.multipart.Condition>, net.minecraft.client.renderer.block.dispatch.BlockStateModel$Unbaked);
+  public <O, S extends net.minecraft.world.level.block.state.StateHolder<O, S>> java.util.function.Predicate<S> instantiate(net.minecraft.world.level.block.state.StateDefinition<O, S>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Optional<net.minecraft.client.renderer.block.dispatch.multipart.Condition> condition();
+  public net.minecraft.client.renderer.block.dispatch.BlockStateModel$Unbaked variant();
+  private static boolean lambda$instantiate$1(net.minecraft.world.level.block.state.StateHolder);
+  private static java.util.function.Predicate lambda$instantiate$0(net.minecraft.world.level.block.state.StateDefinition, net.minecraft.client.renderer.block.dispatch.multipart.Condition);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.renderer.block.dispatch.multipart.package-info {
+}

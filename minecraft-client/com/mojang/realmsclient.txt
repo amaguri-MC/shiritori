@@ -1,0 +1,393 @@
+Compiled from "RealmsAvailability.java"
+public final class com.mojang.realmsclient.RealmsAvailability$Result extends java.lang.Record {
+  private final com.mojang.realmsclient.RealmsAvailability$Type type;
+  private final com.mojang.realmsclient.exception.RealmsServiceException exception;
+  public com.mojang.realmsclient.RealmsAvailability$Result(com.mojang.realmsclient.RealmsAvailability$Type);
+  public com.mojang.realmsclient.RealmsAvailability$Result(com.mojang.realmsclient.exception.RealmsServiceException);
+  public com.mojang.realmsclient.RealmsAvailability$Result(com.mojang.realmsclient.RealmsAvailability$Type, com.mojang.realmsclient.exception.RealmsServiceException);
+  public net.minecraft.client.gui.screens.Screen createErrorScreen(net.minecraft.client.gui.screens.Screen);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.realmsclient.RealmsAvailability$Type type();
+  public com.mojang.realmsclient.exception.RealmsServiceException exception();
+}
+Compiled from "RealmsAvailability.java"
+public final class com.mojang.realmsclient.RealmsAvailability$Type extends java.lang.Enum<com.mojang.realmsclient.RealmsAvailability$Type> {
+  public static final com.mojang.realmsclient.RealmsAvailability$Type SUCCESS;
+  public static final com.mojang.realmsclient.RealmsAvailability$Type INCOMPATIBLE_CLIENT;
+  public static final com.mojang.realmsclient.RealmsAvailability$Type NEEDS_PARENTAL_CONSENT;
+  public static final com.mojang.realmsclient.RealmsAvailability$Type AUTHENTICATION_ERROR;
+  public static final com.mojang.realmsclient.RealmsAvailability$Type UNEXPECTED_ERROR;
+  private static final com.mojang.realmsclient.RealmsAvailability$Type[] $VALUES;
+  public static com.mojang.realmsclient.RealmsAvailability$Type[] values();
+  public static com.mojang.realmsclient.RealmsAvailability$Type valueOf(java.lang.String);
+  private com.mojang.realmsclient.RealmsAvailability$Type();
+  private static com.mojang.realmsclient.RealmsAvailability$Type[] $values();
+  static {};
+}
+Compiled from "RealmsAvailability.java"
+public class com.mojang.realmsclient.RealmsAvailability {
+  private static final org.slf4j.Logger LOGGER;
+  private static java.util.concurrent.CompletableFuture<com.mojang.realmsclient.RealmsAvailability$Result> future;
+  public com.mojang.realmsclient.RealmsAvailability();
+  public static java.util.concurrent.CompletableFuture<com.mojang.realmsclient.RealmsAvailability$Result> get();
+  private static boolean shouldRefresh(java.util.concurrent.CompletableFuture<com.mojang.realmsclient.RealmsAvailability$Result>);
+  private static java.util.concurrent.CompletableFuture<com.mojang.realmsclient.RealmsAvailability$Result> check();
+  private static com.mojang.realmsclient.RealmsAvailability$Result lambda$check$0();
+  static {};
+}
+Compiled from "RealmsMainScreen.java"
+class com.mojang.realmsclient.RealmsMainScreen$1 extends java.lang.Thread {
+  final com.mojang.realmsclient.dto.RealmsServer val$server;
+  final com.mojang.realmsclient.RealmsMainScreen this$0;
+  com.mojang.realmsclient.RealmsMainScreen$1(com.mojang.realmsclient.RealmsMainScreen, java.lang.String, com.mojang.realmsclient.dto.RealmsServer);
+  public void run();
+  private void lambda$run$0(com.mojang.realmsclient.exception.RealmsServiceException);
+}
+Compiled from "RealmsMainScreen.java"
+class com.mojang.realmsclient.RealmsMainScreen$2 {
+  static final int[] $SwitchMap$com$mojang$realmsclient$client$RealmsClient$Environment;
+  static final int[] $SwitchMap$com$mojang$realmsclient$dto$RealmsServer$Compatibility;
+  static {};
+}
+Compiled from "RealmsMainScreen.java"
+class com.mojang.realmsclient.RealmsMainScreen$AvailableSnapshotEntry extends com.mojang.realmsclient.RealmsMainScreen$Entry {
+  private static final net.minecraft.network.chat.Component START_SNAPSHOT_REALM;
+  private static final int TEXT_PADDING;
+  private final net.minecraft.client.gui.components.WidgetTooltipHolder tooltip;
+  private final com.mojang.realmsclient.dto.RealmsServer parent;
+  final com.mojang.realmsclient.RealmsMainScreen this$0;
+  public com.mojang.realmsclient.RealmsMainScreen$AvailableSnapshotEntry(com.mojang.realmsclient.RealmsMainScreen, com.mojang.realmsclient.dto.RealmsServer);
+  public void extractContent(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, boolean, float);
+  public boolean mouseClicked(net.minecraft.client.input.MouseButtonEvent, boolean);
+  public boolean keyPressed(net.minecraft.client.input.KeyEvent);
+  private void addSnapshotRealm();
+  public net.minecraft.network.chat.Component getNarration();
+  private void lambda$addSnapshotRealm$0(net.minecraft.client.gui.components.PopupScreen);
+  static {};
+}
+Compiled from "RealmsMainScreen.java"
+class com.mojang.realmsclient.RealmsMainScreen$CrossButton extends net.minecraft.client.gui.components.ImageButton {
+  private static final net.minecraft.client.gui.components.WidgetSprites SPRITES;
+  protected com.mojang.realmsclient.RealmsMainScreen$CrossButton(net.minecraft.client.gui.components.Button$OnPress, net.minecraft.network.chat.Component);
+  static {};
+}
+Compiled from "RealmsMainScreen.java"
+abstract class com.mojang.realmsclient.RealmsMainScreen$Entry extends net.minecraft.client.gui.components.ObjectSelectionList$Entry<com.mojang.realmsclient.RealmsMainScreen$Entry> {
+  protected static final int STATUS_LIGHT_WIDTH;
+  private static final int STATUS_LIGHT_HEIGHT;
+  protected static final int PADDING_X;
+  protected static final int PADDING_Y;
+  final com.mojang.realmsclient.RealmsMainScreen this$0;
+  private com.mojang.realmsclient.RealmsMainScreen$Entry(com.mojang.realmsclient.RealmsMainScreen);
+  protected void extractStatusLights(com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int, int);
+  private void extractRealmStatus(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int, int, net.minecraft.resources.Identifier, java.util.function.Supplier<net.minecraft.network.chat.Component>);
+  protected void extractFirstLine(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int, int, com.mojang.realmsclient.dto.RealmsServer);
+  protected void extractSecondLine(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int, com.mojang.realmsclient.dto.RealmsServer);
+  protected void extractThirdLine(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, com.mojang.realmsclient.dto.RealmsServer);
+  protected void extractClampedString(net.minecraft.client.gui.GuiGraphicsExtractor, java.lang.String, int, int, int, int);
+  protected int versionTextX(int, int, net.minecraft.network.chat.Component);
+  protected int gameModeTextX(int, int, net.minecraft.network.chat.Component);
+  protected int extractGameMode(com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int);
+  protected int firstLineY(int);
+  protected int lineHeight();
+  protected int textX(int);
+  protected int secondLineY(int);
+  protected int thirdLineY(int);
+  private static net.minecraft.network.chat.Component lambda$extractStatusLights$3();
+  private static net.minecraft.network.chat.Component lambda$extractStatusLights$2(com.mojang.realmsclient.dto.RealmsServer);
+  private static net.minecraft.network.chat.Component lambda$extractStatusLights$1();
+  private static net.minecraft.network.chat.Component lambda$extractStatusLights$0();
+}
+Compiled from "RealmsMainScreen.java"
+final class com.mojang.realmsclient.RealmsMainScreen$LayoutState extends java.lang.Enum<com.mojang.realmsclient.RealmsMainScreen$LayoutState> {
+  public static final com.mojang.realmsclient.RealmsMainScreen$LayoutState LOADING;
+  public static final com.mojang.realmsclient.RealmsMainScreen$LayoutState NO_REALMS;
+  public static final com.mojang.realmsclient.RealmsMainScreen$LayoutState LIST;
+  private static final com.mojang.realmsclient.RealmsMainScreen$LayoutState[] $VALUES;
+  public static com.mojang.realmsclient.RealmsMainScreen$LayoutState[] values();
+  public static com.mojang.realmsclient.RealmsMainScreen$LayoutState valueOf(java.lang.String);
+  private com.mojang.realmsclient.RealmsMainScreen$LayoutState();
+  private static com.mojang.realmsclient.RealmsMainScreen$LayoutState[] $values();
+  static {};
+}
+Compiled from "RealmsMainScreen.java"
+class com.mojang.realmsclient.RealmsMainScreen$NotificationButton extends net.minecraft.client.gui.components.SpriteIconButton$CenteredIcon {
+  private static final net.minecraft.resources.Identifier[] NOTIFICATION_ICONS;
+  private static final int UNKNOWN_COUNT;
+  private static final int SIZE;
+  private static final int SPRITE_SIZE;
+  private int notificationCount;
+  public com.mojang.realmsclient.RealmsMainScreen$NotificationButton(net.minecraft.network.chat.Component, net.minecraft.resources.Identifier, net.minecraft.client.gui.components.Button$OnPress, net.minecraft.network.chat.Component);
+  private int notificationCount();
+  public void setNotificationCount(int);
+  public void extractContents(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, float);
+  private void extractNotificationCounter(net.minecraft.client.gui.GuiGraphicsExtractor);
+  static {};
+}
+Compiled from "RealmsMainScreen.java"
+class com.mojang.realmsclient.RealmsMainScreen$NotificationMessageEntry extends com.mojang.realmsclient.RealmsMainScreen$Entry {
+  private static final int SIDE_MARGINS;
+  public static final int PADDING;
+  public static final int HEIGHT_WITHOUT_TEXT;
+  private final net.minecraft.network.chat.Component text;
+  private final java.util.List<net.minecraft.client.gui.components.AbstractWidget> children;
+  private final com.mojang.realmsclient.RealmsMainScreen$CrossButton dismissButton;
+  private final net.minecraft.client.gui.components.MultiLineTextWidget textWidget;
+  private final net.minecraft.client.gui.layouts.GridLayout gridLayout;
+  private final net.minecraft.client.gui.layouts.FrameLayout textFrame;
+  private final net.minecraft.client.gui.components.Button button;
+  private int lastEntryWidth;
+  public com.mojang.realmsclient.RealmsMainScreen$NotificationMessageEntry(com.mojang.realmsclient.RealmsMainScreen, com.mojang.realmsclient.RealmsMainScreen, int, net.minecraft.network.chat.Component, com.mojang.realmsclient.dto.RealmsNotification$VisitUrl);
+  public boolean keyPressed(net.minecraft.client.input.KeyEvent);
+  private void updateEntryWidth();
+  private void refreshLayout(int);
+  public static int textWidth(int);
+  public void extractContent(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, boolean, float);
+  public boolean mouseClicked(net.minecraft.client.input.MouseButtonEvent, boolean);
+  public net.minecraft.network.chat.Component getText();
+  public net.minecraft.network.chat.Component getNarration();
+  private static void lambda$extractContent$0(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, float, net.minecraft.client.gui.components.AbstractWidget);
+  private static java.lang.Boolean lambda$new$1(com.mojang.realmsclient.RealmsMainScreen$NotificationMessageEntry);
+  private static void lambda$new$0(com.mojang.realmsclient.RealmsMainScreen, com.mojang.realmsclient.dto.RealmsNotification$VisitUrl, net.minecraft.client.gui.components.Button);
+}
+Compiled from "RealmsMainScreen.java"
+class com.mojang.realmsclient.RealmsMainScreen$ParentEntry extends com.mojang.realmsclient.RealmsMainScreen$Entry {
+  private final com.mojang.realmsclient.dto.RealmsServer server;
+  private final net.minecraft.client.gui.components.WidgetTooltipHolder tooltip;
+  public com.mojang.realmsclient.RealmsMainScreen$ParentEntry(com.mojang.realmsclient.RealmsMainScreen, com.mojang.realmsclient.dto.RealmsServer);
+  public void extractContent(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, boolean, float);
+  public net.minecraft.network.chat.Component getNarration();
+}
+Compiled from "RealmsMainScreen.java"
+class com.mojang.realmsclient.RealmsMainScreen$RealmSelectionList extends net.minecraft.client.gui.components.ObjectSelectionList<com.mojang.realmsclient.RealmsMainScreen$Entry> {
+  final com.mojang.realmsclient.RealmsMainScreen this$0;
+  public com.mojang.realmsclient.RealmsMainScreen$RealmSelectionList(com.mojang.realmsclient.RealmsMainScreen);
+  public void setSelected(com.mojang.realmsclient.RealmsMainScreen$Entry);
+  public int getRowWidth();
+  private void refreshEntries(com.mojang.realmsclient.RealmsMainScreen);
+  private void addEntriesForNotification(com.mojang.realmsclient.dto.RealmsNotification$VisitUrl, com.mojang.realmsclient.RealmsMainScreen, com.mojang.realmsclient.RealmsMainScreen$Entry);
+  private void refreshServerEntries(com.mojang.realmsclient.RealmsMainScreen$Entry);
+  public void setSelected(net.minecraft.client.gui.components.AbstractSelectionList$Entry);
+}
+Compiled from "RealmsMainScreen.java"
+interface com.mojang.realmsclient.RealmsMainScreen$RealmsCall<T> {
+  public abstract T request(com.mojang.realmsclient.client.RealmsClient) throws com.mojang.realmsclient.exception.RealmsServiceException;
+}
+Compiled from "RealmsMainScreen.java"
+class com.mojang.realmsclient.RealmsMainScreen$ServerEntry extends com.mojang.realmsclient.RealmsMainScreen$Entry {
+  private static final net.minecraft.network.chat.Component ONLINE_PLAYERS_TOOLTIP_HEADER;
+  private static final int PLAYERS_ONLINE_SPRITE_SIZE;
+  private static final int PLAYERS_ONLINE_SPRITE_SEPARATION;
+  private static final int SKIN_HEAD_LARGE_WIDTH;
+  private final com.mojang.realmsclient.dto.RealmsServer serverData;
+  private final net.minecraft.client.gui.components.WidgetTooltipHolder tooltip;
+  final com.mojang.realmsclient.RealmsMainScreen this$0;
+  public com.mojang.realmsclient.RealmsMainScreen$ServerEntry(com.mojang.realmsclient.RealmsMainScreen, com.mojang.realmsclient.dto.RealmsServer);
+  public void extractContent(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, boolean, float);
+  private boolean extractOnlinePlayers(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, int, int, int, int, float);
+  private void playRealm();
+  private void createUnitializedRealm();
+  public boolean mouseClicked(net.minecraft.client.input.MouseButtonEvent, boolean);
+  public boolean keyPressed(net.minecraft.client.input.KeyEvent);
+  public net.minecraft.network.chat.Component getNarration();
+  public com.mojang.realmsclient.dto.RealmsServer getServer();
+  static {};
+}
+Compiled from "RealmsMainScreen.java"
+public class com.mojang.realmsclient.RealmsMainScreen extends net.minecraft.realms.RealmsScreen {
+  private static final net.minecraft.resources.Identifier INFO_SPRITE;
+  private static final net.minecraft.resources.Identifier NEW_REALM_SPRITE;
+  private static final net.minecraft.resources.Identifier EXPIRED_SPRITE;
+  private static final net.minecraft.resources.Identifier EXPIRES_SOON_SPRITE;
+  private static final net.minecraft.resources.Identifier OPEN_SPRITE;
+  private static final net.minecraft.resources.Identifier CLOSED_SPRITE;
+  private static final net.minecraft.resources.Identifier INVITE_SPRITE;
+  private static final net.minecraft.resources.Identifier NEWS_SPRITE;
+  public static final net.minecraft.resources.Identifier HARDCORE_MODE_SPRITE;
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.resources.Identifier NO_REALMS_LOCATION;
+  private static final net.minecraft.network.chat.Component TITLE;
+  private static final net.minecraft.network.chat.Component LOADING_TEXT;
+  private static final net.minecraft.network.chat.Component SERVER_UNITIALIZED_TEXT;
+  private static final net.minecraft.network.chat.Component SUBSCRIPTION_EXPIRED_TEXT;
+  private static final net.minecraft.network.chat.Component SUBSCRIPTION_RENEW_TEXT;
+  private static final net.minecraft.network.chat.Component TRIAL_EXPIRED_TEXT;
+  private static final net.minecraft.network.chat.Component PLAY_TEXT;
+  private static final net.minecraft.network.chat.Component LEAVE_SERVER_TEXT;
+  private static final net.minecraft.network.chat.Component CONFIGURE_SERVER_TEXT;
+  private static final net.minecraft.network.chat.Component SERVER_EXPIRED_TOOLTIP;
+  private static final net.minecraft.network.chat.Component SERVER_EXPIRES_SOON_TOOLTIP;
+  private static final net.minecraft.network.chat.Component SERVER_EXPIRES_IN_DAY_TOOLTIP;
+  private static final net.minecraft.network.chat.Component SERVER_OPEN_TOOLTIP;
+  private static final net.minecraft.network.chat.Component SERVER_CLOSED_TOOLTIP;
+  private static final net.minecraft.network.chat.Component UNITIALIZED_WORLD_NARRATION;
+  private static final net.minecraft.network.chat.Component NO_REALMS_TEXT;
+  private static final net.minecraft.network.chat.Component NO_PENDING_INVITES;
+  private static final net.minecraft.network.chat.Component PENDING_INVITES;
+  private static final net.minecraft.network.chat.Component INCOMPATIBLE_POPUP_TITLE;
+  private static final net.minecraft.network.chat.Component INCOMPATIBLE_RELEASE_TYPE_POPUP_MESSAGE;
+  private static final int BUTTON_WIDTH;
+  private static final int BUTTON_COLUMNS;
+  private static final int BUTTON_SPACING;
+  private static final int CONTENT_WIDTH;
+  private static final int LOGO_PADDING;
+  private static final int HEADER_HEIGHT;
+  private static final int FOOTER_PADDING;
+  private static final int NEW_REALM_SPRITE_WIDTH;
+  private static final int NEW_REALM_SPRITE_HEIGHT;
+  private static final boolean SNAPSHOT;
+  private static boolean snapshotToggle;
+  private final java.util.concurrent.CompletableFuture<com.mojang.realmsclient.RealmsAvailability$Result> availability;
+  private com.mojang.realmsclient.gui.task.DataFetcher$Subscription dataSubscription;
+  private final java.util.Set<java.util.UUID> handledSeenNotifications;
+  private static boolean regionsPinged;
+  private final com.google.common.util.concurrent.RateLimiter inviteNarrationLimiter;
+  private final net.minecraft.client.gui.screens.Screen lastScreen;
+  private net.minecraft.client.gui.components.Button playButton;
+  private net.minecraft.client.gui.components.Button backButton;
+  private net.minecraft.client.gui.components.Button renewButton;
+  private net.minecraft.client.gui.components.Button configureButton;
+  private net.minecraft.client.gui.components.Button leaveButton;
+  private com.mojang.realmsclient.RealmsMainScreen$RealmSelectionList realmSelectionList;
+  private com.mojang.realmsclient.gui.RealmsServerList serverList;
+  private java.util.List<com.mojang.realmsclient.dto.RealmsServer> availableSnapshotServers;
+  private com.mojang.realmsclient.dto.RealmsServerPlayerLists onlinePlayersPerRealm;
+  private volatile boolean trialsAvailable;
+  private volatile java.lang.String newsLink;
+  private final java.util.List<com.mojang.realmsclient.dto.RealmsNotification> notifications;
+  private net.minecraft.client.gui.components.Button addRealmButton;
+  private com.mojang.realmsclient.RealmsMainScreen$NotificationButton pendingInvitesButton;
+  private com.mojang.realmsclient.RealmsMainScreen$NotificationButton newsButton;
+  private com.mojang.realmsclient.RealmsMainScreen$LayoutState activeLayoutState;
+  private net.minecraft.client.gui.layouts.HeaderAndFooterLayout layout;
+  public com.mojang.realmsclient.RealmsMainScreen(net.minecraft.client.gui.screens.Screen);
+  public void init();
+  public static boolean isSnapshot();
+  protected void repositionElements();
+  public void onClose();
+  private void updateLayout();
+  private void updateLayout(com.mojang.realmsclient.RealmsMainScreen$LayoutState);
+  private net.minecraft.client.gui.layouts.HeaderAndFooterLayout createLayout(com.mojang.realmsclient.RealmsMainScreen$LayoutState);
+  private net.minecraft.client.gui.layouts.Layout createHeader();
+  private net.minecraft.client.gui.layouts.Layout createFooter(com.mojang.realmsclient.RealmsMainScreen$LayoutState);
+  private net.minecraft.client.gui.layouts.LinearLayout createNoRealmsContent();
+  private void updateButtonStates();
+  private boolean shouldRenewButtonBeActive(com.mojang.realmsclient.dto.RealmsServer);
+  private boolean shouldConfigureButtonBeActive(com.mojang.realmsclient.dto.RealmsServer);
+  private boolean shouldLeaveButtonBeActive(com.mojang.realmsclient.dto.RealmsServer);
+  public void tick();
+  public static void refreshPendingInvites();
+  public static void refreshServerList();
+  private void debugRefreshDataFetchers();
+  private com.mojang.realmsclient.gui.task.DataFetcher$Subscription initDataFetcher(com.mojang.realmsclient.gui.RealmsDataFetcher);
+  private void markNotificationsAsSeen(java.util.Collection<com.mojang.realmsclient.dto.RealmsNotification>);
+  private static <T> void callRealmsClient(com.mojang.realmsclient.RealmsMainScreen$RealmsCall<T>, java.util.function.Consumer<T>);
+  private void refreshListAndLayout();
+  private void pingRegions();
+  private java.util.List<java.lang.Long> getOwnedNonExpiredRealmIds();
+  private void onRenew(com.mojang.realmsclient.dto.RealmsServer);
+  private void configureClicked(com.mojang.realmsclient.dto.RealmsServer);
+  private void leaveClicked(com.mojang.realmsclient.dto.RealmsServer);
+  private com.mojang.realmsclient.dto.RealmsServer getSelectedServer();
+  private void leaveServer(com.mojang.realmsclient.dto.RealmsServer);
+  private void dismissNotification(java.util.UUID);
+  public void resetScreen();
+  public net.minecraft.network.chat.Component getNarrationMessage();
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, float);
+  private void openTrialAvailablePopup();
+  public static void play(com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.gui.screens.Screen);
+  public static void play(com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.gui.screens.Screen, boolean);
+  private static void confirmToPlay(com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.gui.screens.Screen, net.minecraft.network.chat.Component, net.minecraft.network.chat.Component, net.minecraft.network.chat.Component);
+  private static void upgradeRealmAndPlay(com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.gui.screens.Screen);
+  public static net.minecraft.network.chat.Component getVersionComponent(java.lang.String, boolean);
+  public static net.minecraft.network.chat.Component getVersionComponent(java.lang.String, int);
+  public static net.minecraft.network.chat.Component getGameModeComponent(int, boolean);
+  private static boolean isSelfOwnedServer(com.mojang.realmsclient.dto.RealmsServer);
+  private boolean isSelfOwnedNonExpiredServer(com.mojang.realmsclient.dto.RealmsServer);
+  private void extractEnvironment(net.minecraft.client.gui.GuiGraphicsExtractor, java.lang.String, int);
+  static net.minecraft.client.Minecraft access$000(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.Minecraft access$100(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.Minecraft access$200(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$300(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$400(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$500(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$600(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$700(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$800(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$900(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$1000(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$1100(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$1200(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$1300(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$1400(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$1500(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$1600(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$1700(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$1800(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$1900(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$2000(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.Minecraft access$2100(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.Minecraft access$2200(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.Minecraft access$2300(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.Minecraft access$2400(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$2500(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$2600(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.Minecraft access$2700(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.gui.Font access$2800(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.Minecraft access$2900(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.Minecraft access$3000(com.mojang.realmsclient.RealmsMainScreen);
+  static net.minecraft.client.Minecraft access$3100(com.mojang.realmsclient.RealmsMainScreen);
+  private static void lambda$confirmToPlay$0(net.minecraft.client.gui.screens.Screen, com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.gui.components.PopupScreen);
+  private void lambda$dismissNotification$1(java.util.UUID, java.lang.Object);
+  private static boolean lambda$dismissNotification$2(java.util.UUID, com.mojang.realmsclient.dto.RealmsNotification);
+  private static java.lang.Object lambda$dismissNotification$0(java.util.UUID, com.mojang.realmsclient.client.RealmsClient) throws com.mojang.realmsclient.exception.RealmsServiceException;
+  private void lambda$leaveClicked$0(com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.gui.components.PopupScreen);
+  private void lambda$onRenew$0(java.lang.String, boolean);
+  private void lambda$pingRegions$0();
+  private static java.lang.Void lambda$callRealmsClient$1(java.lang.Throwable);
+  private static java.lang.Object lambda$callRealmsClient$0(com.mojang.realmsclient.RealmsMainScreen$RealmsCall, net.minecraft.client.Minecraft);
+  private void lambda$markNotificationsAsSeen$1(java.util.List, java.lang.Object);
+  private static java.lang.Object lambda$markNotificationsAsSeen$0(java.util.List, com.mojang.realmsclient.client.RealmsClient) throws com.mojang.realmsclient.exception.RealmsServiceException;
+  private void lambda$initDataFetcher$5(com.mojang.realmsclient.gui.RealmsDataFetcher, com.mojang.realmsclient.dto.RealmsNews);
+  private void lambda$initDataFetcher$4(com.mojang.realmsclient.dto.RealmsServerPlayerLists);
+  private void lambda$initDataFetcher$3(java.lang.Boolean);
+  private void lambda$initDataFetcher$2(java.lang.Integer);
+  private void lambda$initDataFetcher$1(java.util.List);
+  private void lambda$initDataFetcher$0(com.mojang.realmsclient.gui.RealmsDataFetcher$ServerListData);
+  private static void lambda$updateLayout$1(com.mojang.realmsclient.RealmsMainScreen, net.minecraft.client.gui.components.AbstractWidget);
+  private static void lambda$updateLayout$0(com.mojang.realmsclient.RealmsMainScreen, net.minecraft.client.gui.components.AbstractWidget);
+  private void lambda$init$9(com.mojang.realmsclient.RealmsAvailability$Result);
+  private void lambda$init$8(net.minecraft.client.gui.components.CycleButton, java.lang.Boolean);
+  private void lambda$init$7(net.minecraft.client.gui.components.Button);
+  private void lambda$init$6(net.minecraft.client.gui.components.Button);
+  private void lambda$init$5(net.minecraft.client.gui.components.Button);
+  private void lambda$init$4(net.minecraft.client.gui.components.Button);
+  private void lambda$init$3(net.minecraft.client.gui.components.Button);
+  private void lambda$init$2(net.minecraft.client.gui.components.Button);
+  private void lambda$init$1(net.minecraft.client.gui.components.Button);
+  private void lambda$init$0(net.minecraft.network.chat.Component, net.minecraft.client.gui.components.Button);
+  static {};
+}
+Compiled from "Unit.java"
+public final class com.mojang.realmsclient.Unit extends java.lang.Enum<com.mojang.realmsclient.Unit> {
+  public static final com.mojang.realmsclient.Unit B;
+  public static final com.mojang.realmsclient.Unit KB;
+  public static final com.mojang.realmsclient.Unit MB;
+  public static final com.mojang.realmsclient.Unit GB;
+  private static final int BASE_UNIT;
+  private static final com.mojang.realmsclient.Unit[] $VALUES;
+  public static com.mojang.realmsclient.Unit[] values();
+  public static com.mojang.realmsclient.Unit valueOf(java.lang.String);
+  private com.mojang.realmsclient.Unit();
+  public static com.mojang.realmsclient.Unit getLargest(long);
+  public static double convertTo(long, com.mojang.realmsclient.Unit);
+  public static java.lang.String humanReadable(long);
+  public static java.lang.String humanReadable(long, com.mojang.realmsclient.Unit);
+  private static com.mojang.realmsclient.Unit[] $values();
+  static {};
+}
+Compiled from "package-info.java"
+interface com.mojang.realmsclient.package-info {
+}

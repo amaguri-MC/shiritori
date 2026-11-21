@@ -1,0 +1,112 @@
+Compiled from "GlslCompiler.java"
+public final class com.mojang.blaze3d.vulkan.glsl.GlslCompiler$CompiledModules extends java.lang.Record {
+  private final long vertex;
+  private final long fragment;
+  private final com.mojang.blaze3d.vulkan.VulkanBindGroupLayout layout;
+  public com.mojang.blaze3d.vulkan.glsl.GlslCompiler$CompiledModules(long, long, com.mojang.blaze3d.vulkan.VulkanBindGroupLayout);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public long vertex();
+  public long fragment();
+  public com.mojang.blaze3d.vulkan.VulkanBindGroupLayout layout();
+}
+Compiled from "GlslCompiler.java"
+public class com.mojang.blaze3d.vulkan.glsl.GlslCompiler implements java.lang.AutoCloseable {
+  private final long shaderCompiler;
+  private final long shaderOptions;
+  private final net.minecraft.client.renderer.ShaderDefines globalDefines;
+  public com.mojang.blaze3d.vulkan.glsl.GlslCompiler();
+  public com.mojang.blaze3d.vulkan.glsl.IntermediaryShaderModule createIntermediary(java.lang.String, java.lang.String, com.mojang.blaze3d.shaders.ShaderType) throws com.mojang.blaze3d.vulkan.glsl.ShaderCompileException;
+  public com.mojang.blaze3d.vulkan.glsl.GlslCompiler$CompiledModules compile(com.mojang.blaze3d.vulkan.VulkanDevice, com.mojang.blaze3d.pipeline.RenderPipeline, com.mojang.blaze3d.vulkan.glsl.IntermediaryShaderModule, com.mojang.blaze3d.vulkan.glsl.IntermediaryShaderModule) throws com.mojang.blaze3d.vulkan.glsl.ShaderCompileException;
+  public void close();
+  private static void addToBindGroup(java.util.List<com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$Entry>, com.mojang.blaze3d.vulkan.glsl.IntermediaryShaderModule, com.mojang.blaze3d.pipeline.RenderPipeline) throws com.mojang.blaze3d.vulkan.glsl.ShaderCompileException;
+  private static boolean lambda$addToBindGroup$4(java.lang.String, com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$Entry);
+  private static boolean lambda$addToBindGroup$3(java.lang.String, com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$Entry);
+  private static boolean lambda$addToBindGroup$2(java.lang.String, com.mojang.blaze3d.pipeline.BindGroupLayout$UniformDescription);
+  private static boolean lambda$addToBindGroup$1(java.lang.String, com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$Entry);
+  private static boolean lambda$addToBindGroup$0(java.lang.String, com.mojang.blaze3d.pipeline.BindGroupLayout$UniformDescription);
+}
+Compiled from "IntermediaryShaderModule.java"
+class com.mojang.blaze3d.vulkan.glsl.IntermediaryShaderModule$1 {
+  static final int[] $SwitchMap$com$mojang$blaze3d$vulkan$VulkanBindGroupLayout$VulkanBindGroupEntryType;
+  static {};
+}
+Compiled from "IntermediaryShaderModule.java"
+public final class com.mojang.blaze3d.vulkan.glsl.IntermediaryShaderModule extends java.lang.Record implements java.lang.AutoCloseable {
+  private final java.lang.String name;
+  private final java.nio.ByteBuffer spirv;
+  private final java.util.List<com.mojang.blaze3d.vulkan.glsl.SpvUniformBuffer> uniformBuffers;
+  private final java.util.List<com.mojang.blaze3d.vulkan.glsl.SpvSampler> samplers;
+  private final java.util.List<com.mojang.blaze3d.vulkan.glsl.SpvVariable> outputs;
+  private final java.util.List<com.mojang.blaze3d.vulkan.glsl.SpvVariable> inputs;
+  public static final com.mojang.blaze3d.vulkan.glsl.IntermediaryShaderModule INVALID;
+  public com.mojang.blaze3d.vulkan.glsl.IntermediaryShaderModule(java.lang.String, java.nio.ByteBuffer, java.util.List<com.mojang.blaze3d.vulkan.glsl.SpvUniformBuffer>, java.util.List<com.mojang.blaze3d.vulkan.glsl.SpvSampler>, java.util.List<com.mojang.blaze3d.vulkan.glsl.SpvVariable>, java.util.List<com.mojang.blaze3d.vulkan.glsl.SpvVariable>);
+  public static com.mojang.blaze3d.vulkan.glsl.IntermediaryShaderModule createFromSpirv(java.lang.String, java.nio.ByteBuffer) throws com.mojang.blaze3d.vulkan.glsl.ShaderCompileException;
+  public void close();
+  public void rebind(java.util.List<java.lang.String>, java.util.List<com.mojang.blaze3d.vulkan.VulkanBindGroupLayout$Entry>) throws com.mojang.blaze3d.vulkan.glsl.ShaderCompileException;
+  public long createVulkanShaderModule(com.mojang.blaze3d.vulkan.VulkanDevice);
+  private com.mojang.blaze3d.vulkan.glsl.SpvUniformBuffer getUniformBuffer(java.lang.String);
+  private com.mojang.blaze3d.vulkan.glsl.SpvSampler getSampler(java.lang.String);
+  private com.mojang.blaze3d.vulkan.glsl.SpvVariable getInputVariable(java.lang.String);
+  private static void throwIfError(int, java.lang.String) throws com.mojang.blaze3d.vulkan.glsl.ShaderCompileException;
+  private static int getDecorationOffset(long, org.lwjgl.util.spvc.SpvcReflectedResource, int, java.nio.IntBuffer) throws com.mojang.blaze3d.vulkan.glsl.ShaderCompileException;
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String name();
+  public java.nio.ByteBuffer spirv();
+  public java.util.List<com.mojang.blaze3d.vulkan.glsl.SpvUniformBuffer> uniformBuffers();
+  public java.util.List<com.mojang.blaze3d.vulkan.glsl.SpvSampler> samplers();
+  public java.util.List<com.mojang.blaze3d.vulkan.glsl.SpvVariable> outputs();
+  public java.util.List<com.mojang.blaze3d.vulkan.glsl.SpvVariable> inputs();
+  private java.lang.String lambda$createVulkanShaderModule$0();
+  static {};
+}
+Compiled from "ShaderCompileException.java"
+public class com.mojang.blaze3d.vulkan.glsl.ShaderCompileException extends java.lang.Exception {
+  public com.mojang.blaze3d.vulkan.glsl.ShaderCompileException(java.lang.String);
+}
+Compiled from "SpvSampler.java"
+final class com.mojang.blaze3d.vulkan.glsl.SpvSampler extends java.lang.Record {
+  private final java.lang.String name;
+  private final int bindingOffset;
+  private final int dimensions;
+  com.mojang.blaze3d.vulkan.glsl.SpvSampler(java.lang.String, int, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String name();
+  public int bindingOffset();
+  public int dimensions();
+}
+Compiled from "SpvUniformBuffer.java"
+final class com.mojang.blaze3d.vulkan.glsl.SpvUniformBuffer extends java.lang.Record {
+  private final java.lang.String name;
+  private final int bindingOffset;
+  com.mojang.blaze3d.vulkan.glsl.SpvUniformBuffer(java.lang.String, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String name();
+  public int bindingOffset();
+}
+Compiled from "SpvVariable.java"
+final class com.mojang.blaze3d.vulkan.glsl.SpvVariable extends java.lang.Record {
+  private final java.lang.String name;
+  private final int locationOffset;
+  com.mojang.blaze3d.vulkan.glsl.SpvVariable(java.lang.String, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String name();
+  public int locationOffset();
+}
+Compiled from "SpvcUtil.java"
+class com.mojang.blaze3d.vulkan.glsl.SpvcUtil {
+  private com.mojang.blaze3d.vulkan.glsl.SpvcUtil();
+  public static java.lang.String imageDimensionToString(int);
+}
+Compiled from "package-info.java"
+interface com.mojang.blaze3d.vulkan.glsl.package-info {
+}

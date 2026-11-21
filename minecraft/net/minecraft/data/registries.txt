@@ -1,0 +1,51 @@
+Compiled from "TradeRebalanceRegistries.java"
+public class net.minecraft.data.registries.TradeRebalanceRegistries {
+  private static final net.minecraft.core.RegistrySetBuilder BUILDER;
+  public net.minecraft.data.registries.TradeRebalanceRegistries();
+  public static java.util.concurrent.CompletableFuture<net.minecraft.core.RegistrySetBuilder$PatchedRegistries> createLookup(java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+  static {};
+}
+Compiled from "RegistriesDatapackGenerator.java"
+public class net.minecraft.data.registries.RegistriesDatapackGenerator implements net.minecraft.data.DataProvider {
+  private final net.minecraft.data.PackOutput output;
+  private final java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider> registries;
+  public net.minecraft.data.registries.RegistriesDatapackGenerator(net.minecraft.data.PackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+  public java.util.concurrent.CompletableFuture<?> run(net.minecraft.data.CachedOutput);
+  private <T> java.util.Optional<java.util.concurrent.CompletableFuture<?>> dumpRegistryCap(net.minecraft.data.CachedOutput, net.minecraft.core.HolderLookup$Provider, com.mojang.serialization.DynamicOps<com.google.gson.JsonElement>, net.minecraft.resources.RegistryDataLoader$RegistryData<T>);
+  private static <E> java.util.concurrent.CompletableFuture<?> dumpValue(java.nio.file.Path, net.minecraft.data.CachedOutput, com.mojang.serialization.DynamicOps<com.google.gson.JsonElement>, com.mojang.serialization.Encoder<E>, E);
+  public final java.lang.String getName();
+  private static java.util.concurrent.CompletableFuture lambda$dumpValue$1(java.nio.file.Path, com.mojang.serialization.DataResult$Error);
+  private static java.util.concurrent.CompletableFuture lambda$dumpValue$0(net.minecraft.data.CachedOutput, java.nio.file.Path, com.google.gson.JsonElement);
+  private java.util.concurrent.CompletableFuture lambda$dumpRegistryCap$0(net.minecraft.resources.ResourceKey, net.minecraft.data.CachedOutput, com.mojang.serialization.DynamicOps, net.minecraft.resources.RegistryDataLoader$RegistryData, net.minecraft.core.HolderLookup$RegistryLookup);
+  private static java.util.concurrent.CompletableFuture[] lambda$dumpRegistryCap$2(int);
+  private static java.util.concurrent.CompletableFuture lambda$dumpRegistryCap$1(net.minecraft.data.PackOutput$PathProvider, net.minecraft.data.CachedOutput, com.mojang.serialization.DynamicOps, net.minecraft.resources.RegistryDataLoader$RegistryData, net.minecraft.core.Holder$Reference);
+  private java.util.concurrent.CompletionStage lambda$run$0(net.minecraft.data.CachedOutput, net.minecraft.core.HolderLookup$Provider);
+  private static java.util.concurrent.CompletableFuture[] lambda$run$2(int);
+  private java.util.stream.Stream lambda$run$1(net.minecraft.data.CachedOutput, net.minecraft.core.HolderLookup$Provider, com.mojang.serialization.DynamicOps, net.minecraft.resources.RegistryDataLoader$RegistryData);
+}
+Compiled from "RegistryPatchGenerator.java"
+public class net.minecraft.data.registries.RegistryPatchGenerator {
+  public net.minecraft.data.registries.RegistryPatchGenerator();
+  public static java.util.concurrent.CompletableFuture<net.minecraft.core.RegistrySetBuilder$PatchedRegistries> createLookup(java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>, net.minecraft.core.RegistrySetBuilder);
+  private static net.minecraft.core.RegistrySetBuilder$PatchedRegistries lambda$createLookup$0(net.minecraft.core.RegistrySetBuilder, net.minecraft.core.HolderLookup$Provider);
+  private static net.minecraft.core.HolderLookup$RegistryLookup lambda$createLookup$3(net.minecraft.core.HolderLookup$Provider);
+  private static net.minecraft.core.HolderLookup$RegistryLookup lambda$createLookup$2(net.minecraft.core.HolderLookup$Provider);
+  private static void lambda$createLookup$1(net.minecraft.core.Cloner$Factory, net.minecraft.resources.RegistryDataLoader$RegistryData);
+}
+Compiled from "VanillaRegistries.java"
+public class net.minecraft.data.registries.VanillaRegistries {
+  private static final net.minecraft.core.RegistrySetBuilder BUILDER;
+  public net.minecraft.data.registries.VanillaRegistries();
+  private static void validateThatAllBiomeFeaturesHaveBiomeFilter(net.minecraft.core.HolderLookup$Provider);
+  public static void validateThatAllBiomeFeaturesHaveBiomeFilter(net.minecraft.core.HolderGetter<net.minecraft.world.level.levelgen.placement.PlacedFeature>, net.minecraft.core.HolderLookup<net.minecraft.world.level.biome.Biome>);
+  private static boolean validatePlacedFeature(net.minecraft.world.level.levelgen.placement.PlacedFeature);
+  public static net.minecraft.core.HolderLookup$Provider createLookup();
+  private static void lambda$validateThatAllBiomeFeaturesHaveBiomeFilter$0(net.minecraft.core.HolderGetter, net.minecraft.core.Holder$Reference);
+  private static void lambda$validateThatAllBiomeFeaturesHaveBiomeFilter$1(net.minecraft.core.HolderGetter, net.minecraft.resources.Identifier, net.minecraft.core.Holder$Reference, net.minecraft.core.Holder);
+  private static void lambda$validateThatAllBiomeFeaturesHaveBiomeFilter$3(net.minecraft.core.Holder$Reference, net.minecraft.world.level.levelgen.placement.PlacedFeature);
+  private static void lambda$validateThatAllBiomeFeaturesHaveBiomeFilter$2(net.minecraft.core.HolderGetter, net.minecraft.resources.Identifier, net.minecraft.resources.ResourceKey);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.data.registries.package-info {
+}

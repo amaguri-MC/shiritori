@@ -1,0 +1,288 @@
+Compiled from "WeightedListInt.java"
+public class net.minecraft.util.valueproviders.WeightedListInt implements net.minecraft.util.valueproviders.IntProvider {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.WeightedListInt> MAP_CODEC;
+  private final net.minecraft.util.random.WeightedList<net.minecraft.util.valueproviders.IntProvider> distribution;
+  private final int minValue;
+  private final int maxValue;
+  public net.minecraft.util.valueproviders.WeightedListInt(net.minecraft.util.random.WeightedList<net.minecraft.util.valueproviders.IntProvider>);
+  public int sample(net.minecraft.util.RandomSource);
+  public int minInclusive();
+  public int maxInclusive();
+  public com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.WeightedListInt> codec();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.util.random.WeightedList lambda$static$1(net.minecraft.util.valueproviders.WeightedListInt);
+  static {};
+}
+Compiled from "ClampedInt.java"
+public final class net.minecraft.util.valueproviders.ClampedInt extends java.lang.Record implements net.minecraft.util.valueproviders.IntProvider {
+  private final net.minecraft.util.valueproviders.IntProvider source;
+  private final int minInclusive;
+  private final int maxInclusive;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.ClampedInt> MAP_CODEC;
+  public net.minecraft.util.valueproviders.ClampedInt(net.minecraft.util.valueproviders.IntProvider, int, int);
+  public static net.minecraft.util.valueproviders.ClampedInt of(net.minecraft.util.valueproviders.IntProvider, int, int);
+  public int sample(net.minecraft.util.RandomSource);
+  public int minInclusive();
+  public int maxInclusive();
+  public com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.ClampedInt> codec();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.util.valueproviders.IntProvider source();
+  private static com.mojang.serialization.DataResult lambda$static$1(net.minecraft.util.valueproviders.ClampedInt);
+  private static java.lang.String lambda$static$2(net.minecraft.util.valueproviders.ClampedInt);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "IntProviders.java"
+public class net.minecraft.util.valueproviders.IntProviders {
+  private static final com.mojang.serialization.Codec<com.mojang.datafixers.util.Either<java.lang.Integer, net.minecraft.util.valueproviders.IntProvider>> CONSTANT_OR_DISPATCH_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.util.valueproviders.IntProvider> CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.util.valueproviders.IntProvider> NON_NEGATIVE_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.util.valueproviders.IntProvider> POSITIVE_CODEC;
+  public net.minecraft.util.valueproviders.IntProviders();
+  public static com.mojang.serialization.Codec<net.minecraft.util.valueproviders.IntProvider> codec(int, int);
+  public static <T extends net.minecraft.util.valueproviders.IntProvider> com.mojang.serialization.Codec<T> validateCodec(int, int, com.mojang.serialization.Codec<T>);
+  private static <T extends net.minecraft.util.valueproviders.IntProvider> com.mojang.serialization.DataResult<T> validate(int, int, T);
+  public static com.mojang.serialization.MapCodec<? extends net.minecraft.util.valueproviders.IntProvider> bootstrap(net.minecraft.core.Registry<com.mojang.serialization.MapCodec<? extends net.minecraft.util.valueproviders.IntProvider>>);
+  private static java.lang.String lambda$validate$1(int, net.minecraft.util.valueproviders.IntProvider);
+  private static java.lang.String lambda$validate$0(int, net.minecraft.util.valueproviders.IntProvider);
+  private static com.mojang.serialization.DataResult lambda$validateCodec$0(int, int, net.minecraft.util.valueproviders.IntProvider);
+  private static com.mojang.datafixers.util.Either lambda$static$3(net.minecraft.util.valueproviders.IntProvider);
+  private static net.minecraft.util.valueproviders.IntProvider lambda$static$1(com.mojang.datafixers.util.Either);
+  private static net.minecraft.util.valueproviders.IntProvider lambda$static$2(net.minecraft.util.valueproviders.IntProvider);
+  private static com.mojang.serialization.MapCodec lambda$static$0(com.mojang.serialization.MapCodec);
+  static {};
+}
+Compiled from "ConstantInt.java"
+public final class net.minecraft.util.valueproviders.ConstantInt extends java.lang.Record implements net.minecraft.util.valueproviders.IntProvider {
+  private final int value;
+  public static final net.minecraft.util.valueproviders.ConstantInt ZERO;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.ConstantInt> MAP_CODEC;
+  public net.minecraft.util.valueproviders.ConstantInt(int);
+  public static net.minecraft.util.valueproviders.ConstantInt of(int);
+  public int sample(net.minecraft.util.RandomSource);
+  public int minInclusive();
+  public int maxInclusive();
+  public com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.ConstantInt> codec();
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int value();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "ConstantFloat.java"
+public final class net.minecraft.util.valueproviders.ConstantFloat extends java.lang.Record implements net.minecraft.util.valueproviders.FloatProvider {
+  private final float value;
+  public static final net.minecraft.util.valueproviders.ConstantFloat ZERO;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.ConstantFloat> MAP_CODEC;
+  public net.minecraft.util.valueproviders.ConstantFloat(float);
+  public static net.minecraft.util.valueproviders.ConstantFloat of(float);
+  public float sample(net.minecraft.util.RandomSource);
+  public float min();
+  public float max();
+  public com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.ConstantFloat> codec();
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float value();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "TrapezoidFloat.java"
+public final class net.minecraft.util.valueproviders.TrapezoidFloat extends java.lang.Record implements net.minecraft.util.valueproviders.FloatProvider {
+  private final float min;
+  private final float max;
+  private final float plateau;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.TrapezoidFloat> MAP_CODEC;
+  public net.minecraft.util.valueproviders.TrapezoidFloat(float, float, float);
+  public static net.minecraft.util.valueproviders.TrapezoidFloat of(float, float, float);
+  public float sample(net.minecraft.util.RandomSource);
+  public com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.TrapezoidFloat> codec();
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float min();
+  public float max();
+  public float plateau();
+  private static com.mojang.serialization.DataResult lambda$static$1(net.minecraft.util.valueproviders.TrapezoidFloat);
+  private static java.lang.String lambda$static$3(net.minecraft.util.valueproviders.TrapezoidFloat);
+  private static java.lang.String lambda$static$2(net.minecraft.util.valueproviders.TrapezoidFloat);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "FloatProvider.java"
+public interface net.minecraft.util.valueproviders.FloatProvider extends net.minecraft.util.valueproviders.SampledFloat {
+  public abstract float min();
+  public abstract float max();
+  public abstract com.mojang.serialization.MapCodec<? extends net.minecraft.util.valueproviders.FloatProvider> codec();
+}
+Compiled from "SampledFloat.java"
+public interface net.minecraft.util.valueproviders.SampledFloat {
+  public abstract float sample(net.minecraft.util.RandomSource);
+}
+Compiled from "IntProvider.java"
+public interface net.minecraft.util.valueproviders.IntProvider {
+  public abstract int sample(net.minecraft.util.RandomSource);
+  public abstract int minInclusive();
+  public abstract int maxInclusive();
+  public abstract com.mojang.serialization.MapCodec<? extends net.minecraft.util.valueproviders.IntProvider> codec();
+}
+Compiled from "ClampedNormalInt.java"
+public final class net.minecraft.util.valueproviders.ClampedNormalInt extends java.lang.Record implements net.minecraft.util.valueproviders.IntProvider {
+  private final float mean;
+  private final float deviation;
+  private final int minInclusive;
+  private final int maxInclusive;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.ClampedNormalInt> MAP_CODEC;
+  public net.minecraft.util.valueproviders.ClampedNormalInt(float, float, int, int);
+  public static net.minecraft.util.valueproviders.ClampedNormalInt of(float, float, int, int);
+  public int sample(net.minecraft.util.RandomSource);
+  public static int sample(net.minecraft.util.RandomSource, float, float, float, float);
+  public com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.ClampedNormalInt> codec();
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float mean();
+  public float deviation();
+  public int minInclusive();
+  public int maxInclusive();
+  private static com.mojang.serialization.DataResult lambda$static$1(net.minecraft.util.valueproviders.ClampedNormalInt);
+  private static java.lang.String lambda$static$2(net.minecraft.util.valueproviders.ClampedNormalInt);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "BiasedToBottomInt.java"
+public final class net.minecraft.util.valueproviders.BiasedToBottomInt extends java.lang.Record implements net.minecraft.util.valueproviders.IntProvider {
+  private final int minInclusive;
+  private final int maxInclusive;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.BiasedToBottomInt> MAP_CODEC;
+  public net.minecraft.util.valueproviders.BiasedToBottomInt(int, int);
+  public static net.minecraft.util.valueproviders.BiasedToBottomInt of(int, int);
+  public int sample(net.minecraft.util.RandomSource);
+  public com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.BiasedToBottomInt> codec();
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int minInclusive();
+  public int maxInclusive();
+  private static com.mojang.serialization.DataResult lambda$static$1(net.minecraft.util.valueproviders.BiasedToBottomInt);
+  private static java.lang.String lambda$static$2(net.minecraft.util.valueproviders.BiasedToBottomInt);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "FloatProviders.java"
+public class net.minecraft.util.valueproviders.FloatProviders {
+  private static final com.mojang.serialization.Codec<com.mojang.datafixers.util.Either<java.lang.Float, net.minecraft.util.valueproviders.FloatProvider>> CONSTANT_OR_DISPATCH_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.util.valueproviders.FloatProvider> CODEC;
+  public net.minecraft.util.valueproviders.FloatProviders();
+  public static com.mojang.serialization.Codec<net.minecraft.util.valueproviders.FloatProvider> codec(float, float);
+  public static com.mojang.serialization.Codec<net.minecraft.util.valueproviders.FloatProvider> codec(float);
+  public static com.mojang.serialization.MapCodec<? extends net.minecraft.util.valueproviders.FloatProvider> bootstrap(net.minecraft.core.Registry<com.mojang.serialization.MapCodec<? extends net.minecraft.util.valueproviders.FloatProvider>>);
+  private static com.mojang.serialization.DataResult lambda$codec$3(float, net.minecraft.util.valueproviders.FloatProvider);
+  private static java.lang.String lambda$codec$4(float, net.minecraft.util.valueproviders.FloatProvider);
+  private static com.mojang.serialization.DataResult lambda$codec$0(float, float, net.minecraft.util.valueproviders.FloatProvider);
+  private static java.lang.String lambda$codec$2(float, net.minecraft.util.valueproviders.FloatProvider);
+  private static java.lang.String lambda$codec$1(float, net.minecraft.util.valueproviders.FloatProvider);
+  private static com.mojang.datafixers.util.Either lambda$static$3(net.minecraft.util.valueproviders.FloatProvider);
+  private static net.minecraft.util.valueproviders.FloatProvider lambda$static$1(com.mojang.datafixers.util.Either);
+  private static net.minecraft.util.valueproviders.FloatProvider lambda$static$2(net.minecraft.util.valueproviders.FloatProvider);
+  private static com.mojang.serialization.MapCodec lambda$static$0(com.mojang.serialization.MapCodec);
+  static {};
+}
+Compiled from "UniformInt.java"
+public final class net.minecraft.util.valueproviders.UniformInt extends java.lang.Record implements net.minecraft.util.valueproviders.IntProvider {
+  private final int minInclusive;
+  private final int maxInclusive;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.UniformInt> MAP_CODEC;
+  public net.minecraft.util.valueproviders.UniformInt(int, int);
+  public static net.minecraft.util.valueproviders.UniformInt of(int, int);
+  public int sample(net.minecraft.util.RandomSource);
+  public com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.UniformInt> codec();
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int minInclusive();
+  public int maxInclusive();
+  private static com.mojang.serialization.DataResult lambda$static$1(net.minecraft.util.valueproviders.UniformInt);
+  private static java.lang.String lambda$static$2(net.minecraft.util.valueproviders.UniformInt);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "TrapezoidInt.java"
+public final class net.minecraft.util.valueproviders.TrapezoidInt extends java.lang.Record implements net.minecraft.util.valueproviders.IntProvider {
+  private final int minInclusive;
+  private final int maxInclusive;
+  private final int plateau;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.TrapezoidInt> MAP_CODEC;
+  public net.minecraft.util.valueproviders.TrapezoidInt(int, int, int);
+  public static net.minecraft.util.valueproviders.TrapezoidInt of(int, int, int);
+  public static net.minecraft.util.valueproviders.IntProvider triangle(int);
+  public int sample(net.minecraft.util.RandomSource);
+  public com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.TrapezoidInt> codec();
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int minInclusive();
+  public int maxInclusive();
+  public int plateau();
+  private static com.mojang.serialization.DataResult lambda$static$1(net.minecraft.util.valueproviders.TrapezoidInt);
+  private static java.lang.String lambda$static$3(net.minecraft.util.valueproviders.TrapezoidInt);
+  private static java.lang.String lambda$static$2(net.minecraft.util.valueproviders.TrapezoidInt);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "UniformFloat.java"
+public final class net.minecraft.util.valueproviders.UniformFloat extends java.lang.Record implements net.minecraft.util.valueproviders.FloatProvider {
+  private final float min;
+  private final float max;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.UniformFloat> MAP_CODEC;
+  public net.minecraft.util.valueproviders.UniformFloat(float, float);
+  public static net.minecraft.util.valueproviders.UniformFloat of(float, float);
+  public float sample(net.minecraft.util.RandomSource);
+  public com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.UniformFloat> codec();
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float min();
+  public float max();
+  private static com.mojang.serialization.DataResult lambda$static$1(net.minecraft.util.valueproviders.UniformFloat);
+  private static java.lang.String lambda$static$2(net.minecraft.util.valueproviders.UniformFloat);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.util.valueproviders.package-info {
+}
+Compiled from "ClampedNormalFloat.java"
+public final class net.minecraft.util.valueproviders.ClampedNormalFloat extends java.lang.Record implements net.minecraft.util.valueproviders.FloatProvider {
+  private final float mean;
+  private final float deviation;
+  private final float min;
+  private final float max;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.ClampedNormalFloat> MAP_CODEC;
+  public net.minecraft.util.valueproviders.ClampedNormalFloat(float, float, float, float);
+  public static net.minecraft.util.valueproviders.ClampedNormalFloat of(float, float, float, float);
+  public float sample(net.minecraft.util.RandomSource);
+  public static float sample(net.minecraft.util.RandomSource, float, float, float, float);
+  public com.mojang.serialization.MapCodec<net.minecraft.util.valueproviders.ClampedNormalFloat> codec();
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float mean();
+  public float deviation();
+  public float min();
+  public float max();
+  private static com.mojang.serialization.DataResult lambda$static$1(net.minecraft.util.valueproviders.ClampedNormalFloat);
+  private static java.lang.String lambda$static$2(net.minecraft.util.valueproviders.ClampedNormalFloat);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "MultipliedFloats.java"
+public class net.minecraft.util.valueproviders.MultipliedFloats implements net.minecraft.util.valueproviders.SampledFloat {
+  private final net.minecraft.util.valueproviders.SampledFloat[] values;
+  public net.minecraft.util.valueproviders.MultipliedFloats(net.minecraft.util.valueproviders.SampledFloat...);
+  public float sample(net.minecraft.util.RandomSource);
+  public java.lang.String toString();
+}

@@ -1,0 +1,36 @@
+Compiled from "FrogModel.java"
+public class net.minecraft.client.model.animal.frog.FrogModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.FrogRenderState> {
+  private static final float MAX_WALK_ANIMATION_SPEED;
+  private static final float MAX_SWIM_ANIMATION_SPEED;
+  private static final float WALK_ANIMATION_SCALE_FACTOR;
+  private final net.minecraft.client.model.geom.ModelPart body;
+  private final net.minecraft.client.model.geom.ModelPart head;
+  private final net.minecraft.client.model.geom.ModelPart eyes;
+  private final net.minecraft.client.model.geom.ModelPart tongue;
+  private final net.minecraft.client.model.geom.ModelPart leftArm;
+  private final net.minecraft.client.model.geom.ModelPart rightArm;
+  private final net.minecraft.client.model.geom.ModelPart leftLeg;
+  private final net.minecraft.client.model.geom.ModelPart rightLeg;
+  private final net.minecraft.client.model.geom.ModelPart croakingBody;
+  private final net.minecraft.client.animation.KeyframeAnimation jumpAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation croakAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation tongueAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation swimAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation walkAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation idleWaterAnimation;
+  public net.minecraft.client.model.animal.frog.FrogModel(net.minecraft.client.model.geom.ModelPart);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+  public void setupAnim(net.minecraft.client.renderer.entity.state.FrogRenderState);
+  public void setupAnim(java.lang.Object);
+}
+Compiled from "TadpoleModel.java"
+public class net.minecraft.client.model.animal.frog.TadpoleModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.LivingEntityRenderState> {
+  private final net.minecraft.client.model.geom.ModelPart tail;
+  public net.minecraft.client.model.animal.frog.TadpoleModel(net.minecraft.client.model.geom.ModelPart);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+  public void setupAnim(net.minecraft.client.renderer.entity.state.LivingEntityRenderState);
+  public void setupAnim(java.lang.Object);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.model.animal.frog.package-info {
+}

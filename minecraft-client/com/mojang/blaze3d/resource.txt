@@ -1,0 +1,76 @@
+Compiled from "CrossFrameResourcePool.java"
+public final class com.mojang.blaze3d.resource.CrossFrameResourcePool$ResourceEntry<T> implements java.lang.AutoCloseable {
+  private final com.mojang.blaze3d.resource.ResourceDescriptor<T> descriptor;
+  private final T value;
+  private int framesToLive;
+  private com.mojang.blaze3d.resource.CrossFrameResourcePool$ResourceEntry(com.mojang.blaze3d.resource.ResourceDescriptor<T>, T, int);
+  public void close();
+}
+Compiled from "CrossFrameResourcePool.java"
+public class com.mojang.blaze3d.resource.CrossFrameResourcePool implements com.mojang.blaze3d.resource.GraphicsResourceAllocator,java.lang.AutoCloseable {
+  private final int framesToKeepResource;
+  private final java.util.Deque<com.mojang.blaze3d.resource.CrossFrameResourcePool$ResourceEntry<?>> pool;
+  public com.mojang.blaze3d.resource.CrossFrameResourcePool(int);
+  public void endFrame();
+  public <T> T acquire(com.mojang.blaze3d.resource.ResourceDescriptor<T>);
+  private <T> T acquireWithoutPreparing(com.mojang.blaze3d.resource.ResourceDescriptor<T>);
+  public <T> void release(com.mojang.blaze3d.resource.ResourceDescriptor<T>, T);
+  public void clear();
+  public void close();
+  protected java.util.Collection<com.mojang.blaze3d.resource.CrossFrameResourcePool$ResourceEntry<?>> entries();
+}
+Compiled from "GraphicsResourceAllocator.java"
+class com.mojang.blaze3d.resource.GraphicsResourceAllocator$1 implements com.mojang.blaze3d.resource.GraphicsResourceAllocator {
+  com.mojang.blaze3d.resource.GraphicsResourceAllocator$1();
+  public <T> T acquire(com.mojang.blaze3d.resource.ResourceDescriptor<T>);
+  public <T> void release(com.mojang.blaze3d.resource.ResourceDescriptor<T>, T);
+}
+Compiled from "GraphicsResourceAllocator.java"
+public interface com.mojang.blaze3d.resource.GraphicsResourceAllocator {
+  public static final com.mojang.blaze3d.resource.GraphicsResourceAllocator UNPOOLED;
+  public abstract <T> T acquire(com.mojang.blaze3d.resource.ResourceDescriptor<T>);
+  public abstract <T> void release(com.mojang.blaze3d.resource.ResourceDescriptor<T>, T);
+  static {};
+}
+Compiled from "RenderTargetDescriptor.java"
+public final class com.mojang.blaze3d.resource.RenderTargetDescriptor extends java.lang.Record implements com.mojang.blaze3d.resource.ResourceDescriptor<com.mojang.blaze3d.pipeline.RenderTarget> {
+  private final int width;
+  private final int height;
+  private final boolean useDepth;
+  private final org.joml.Vector4fc clearColor;
+  private final com.mojang.blaze3d.GpuFormat format;
+  public com.mojang.blaze3d.resource.RenderTargetDescriptor(int, int, boolean, org.joml.Vector4fc, com.mojang.blaze3d.GpuFormat);
+  public com.mojang.blaze3d.pipeline.RenderTarget allocate();
+  public void prepare(com.mojang.blaze3d.pipeline.RenderTarget);
+  public void free(com.mojang.blaze3d.pipeline.RenderTarget);
+  public boolean canUsePhysicalResource(com.mojang.blaze3d.resource.ResourceDescriptor<?>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int width();
+  public int height();
+  public boolean useDepth();
+  public org.joml.Vector4fc clearColor();
+  public com.mojang.blaze3d.GpuFormat format();
+  public void free(java.lang.Object);
+  public void prepare(java.lang.Object);
+  public java.lang.Object allocate();
+}
+Compiled from "ResourceDescriptor.java"
+public interface com.mojang.blaze3d.resource.ResourceDescriptor<T> {
+  public abstract T allocate();
+  public default void prepare(T);
+  public abstract void free(T);
+  public default boolean canUsePhysicalResource(com.mojang.blaze3d.resource.ResourceDescriptor<?>);
+}
+Compiled from "ResourceHandle.java"
+public interface com.mojang.blaze3d.resource.ResourceHandle<T> {
+  public static final com.mojang.blaze3d.resource.ResourceHandle<?> INVALID_HANDLE;
+  public static <T> com.mojang.blaze3d.resource.ResourceHandle<T> invalid();
+  public abstract T get();
+  private static java.lang.Object lambda$static$0();
+  static {};
+}
+Compiled from "package-info.java"
+interface com.mojang.blaze3d.resource.package-info {
+}

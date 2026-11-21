@@ -1,0 +1,161 @@
+Compiled from "CloseServerTask.java"
+public class com.mojang.realmsclient.util.task.CloseServerTask extends com.mojang.realmsclient.util.task.LongRunningTask {
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.network.chat.Component TITLE;
+  private final com.mojang.realmsclient.dto.RealmsServer serverData;
+  private final com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen configureScreen;
+  public com.mojang.realmsclient.util.task.CloseServerTask(com.mojang.realmsclient.dto.RealmsServer, com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen);
+  public void run();
+  public net.minecraft.network.chat.Component getTitle();
+  static {};
+}
+Compiled from "ConnectTask.java"
+public class com.mojang.realmsclient.util.task.ConnectTask extends com.mojang.realmsclient.util.task.LongRunningTask {
+  private static final net.minecraft.network.chat.Component TITLE;
+  private final net.minecraft.realms.RealmsConnect realmsConnect;
+  private final com.mojang.realmsclient.dto.RealmsServer server;
+  private final com.mojang.realmsclient.dto.RealmsJoinInformation address;
+  public com.mojang.realmsclient.util.task.ConnectTask(net.minecraft.client.gui.screens.Screen, com.mojang.realmsclient.dto.RealmsServer, com.mojang.realmsclient.dto.RealmsJoinInformation);
+  public void run();
+  public void abortTask();
+  public void tick();
+  public net.minecraft.network.chat.Component getTitle();
+  static {};
+}
+Compiled from "DownloadTask.java"
+public class com.mojang.realmsclient.util.task.DownloadTask extends com.mojang.realmsclient.util.task.LongRunningTask {
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.network.chat.Component TITLE;
+  private final long realmId;
+  private final int slot;
+  private final net.minecraft.client.gui.screens.Screen lastScreen;
+  private final java.lang.String downloadName;
+  public com.mojang.realmsclient.util.task.DownloadTask(long, int, java.lang.String, net.minecraft.client.gui.screens.Screen);
+  public void run();
+  public net.minecraft.network.chat.Component getTitle();
+  private static void lambda$run$0(boolean);
+  static {};
+}
+Compiled from "GetServerDetailsTask.java"
+public class com.mojang.realmsclient.util.task.GetServerDetailsTask extends com.mojang.realmsclient.util.task.LongRunningTask {
+  private static final net.minecraft.network.chat.Component APPLYING_PACK_TEXT;
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.network.chat.Component TITLE;
+  private final com.mojang.realmsclient.dto.RealmsServer server;
+  private final net.minecraft.client.gui.screens.Screen lastScreen;
+  public com.mojang.realmsclient.util.task.GetServerDetailsTask(net.minecraft.client.gui.screens.Screen, com.mojang.realmsclient.dto.RealmsServer);
+  public void run();
+  private static java.util.UUID generatePackId(com.mojang.realmsclient.dto.RealmsServer);
+  public net.minecraft.network.chat.Component getTitle();
+  private com.mojang.realmsclient.dto.RealmsJoinInformation fetchServerAddress() throws com.mojang.realmsclient.exception.RealmsServiceException, java.util.concurrent.TimeoutException, java.util.concurrent.CancellationException;
+  public com.mojang.realmsclient.gui.screens.RealmsLongRunningMcoTaskScreen connectScreen(com.mojang.realmsclient.dto.RealmsJoinInformation);
+  private net.minecraft.client.gui.components.PopupScreen resourcePackDownloadConfirmationScreen(com.mojang.realmsclient.dto.RealmsJoinInformation, java.util.UUID, java.util.function.Function<com.mojang.realmsclient.dto.RealmsJoinInformation, net.minecraft.client.gui.screens.Screen>);
+  private java.util.concurrent.CompletableFuture<?> scheduleResourcePackDownload(com.mojang.realmsclient.dto.RealmsJoinInformation, java.util.UUID);
+  private void lambda$resourcePackDownloadConfirmationScreen$0(com.mojang.realmsclient.dto.RealmsJoinInformation, java.util.UUID, java.util.function.Function, net.minecraft.client.gui.components.PopupScreen);
+  private java.lang.Void lambda$resourcePackDownloadConfirmationScreen$2(com.mojang.realmsclient.dto.RealmsJoinInformation, java.lang.Throwable);
+  private static void lambda$resourcePackDownloadConfirmationScreen$1(java.util.function.Function, com.mojang.realmsclient.dto.RealmsJoinInformation);
+  static {};
+}
+Compiled from "LongRunningTask.java"
+public abstract class com.mojang.realmsclient.util.task.LongRunningTask implements java.lang.Runnable {
+  protected static final int NUMBER_OF_RETRIES;
+  private static final org.slf4j.Logger LOGGER;
+  private boolean aborted;
+  public com.mojang.realmsclient.util.task.LongRunningTask();
+  protected static void pause(long);
+  public static void setScreen(net.minecraft.client.gui.screens.Screen);
+  protected void error(net.minecraft.network.chat.Component);
+  protected void error(java.lang.Exception);
+  protected void error(com.mojang.realmsclient.exception.RealmsServiceException);
+  public abstract net.minecraft.network.chat.Component getTitle();
+  public boolean aborted();
+  public void tick();
+  public void init();
+  public void abortTask();
+  private static void lambda$error$0(net.minecraft.client.Minecraft, net.minecraft.network.chat.Component);
+  private static void lambda$setScreen$0(net.minecraft.client.Minecraft, net.minecraft.client.gui.screens.Screen);
+  static {};
+}
+Compiled from "OpenServerTask.java"
+public class com.mojang.realmsclient.util.task.OpenServerTask extends com.mojang.realmsclient.util.task.LongRunningTask {
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.network.chat.Component TITLE;
+  private final com.mojang.realmsclient.dto.RealmsServer serverData;
+  private final net.minecraft.client.gui.screens.Screen returnScreen;
+  private final boolean join;
+  private final net.minecraft.client.Minecraft minecraft;
+  public com.mojang.realmsclient.util.task.OpenServerTask(com.mojang.realmsclient.dto.RealmsServer, net.minecraft.client.gui.screens.Screen, boolean, net.minecraft.client.Minecraft);
+  public void run();
+  public net.minecraft.network.chat.Component getTitle();
+  private void lambda$run$0();
+  static {};
+}
+Compiled from "RealmCreationTask.java"
+public class com.mojang.realmsclient.util.task.RealmCreationTask extends com.mojang.realmsclient.util.task.LongRunningTask {
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.network.chat.Component TITLE;
+  private final java.lang.String name;
+  private final java.lang.String motd;
+  private final long realmId;
+  public com.mojang.realmsclient.util.task.RealmCreationTask(long, java.lang.String, java.lang.String);
+  public void run();
+  public net.minecraft.network.chat.Component getTitle();
+  static {};
+}
+Compiled from "ResettingTemplateWorldTask.java"
+public class com.mojang.realmsclient.util.task.ResettingTemplateWorldTask extends com.mojang.realmsclient.util.task.ResettingWorldTask {
+  private final com.mojang.realmsclient.dto.WorldTemplate template;
+  public com.mojang.realmsclient.util.task.ResettingTemplateWorldTask(com.mojang.realmsclient.dto.WorldTemplate, long, net.minecraft.network.chat.Component, java.lang.Runnable);
+  protected void sendResetRequest(com.mojang.realmsclient.client.RealmsClient, long) throws com.mojang.realmsclient.exception.RealmsServiceException;
+}
+Compiled from "ResettingWorldTask.java"
+public abstract class com.mojang.realmsclient.util.task.ResettingWorldTask extends com.mojang.realmsclient.util.task.LongRunningTask {
+  private static final org.slf4j.Logger LOGGER;
+  private final long serverId;
+  private final net.minecraft.network.chat.Component title;
+  private final java.lang.Runnable callback;
+  public com.mojang.realmsclient.util.task.ResettingWorldTask(long, net.minecraft.network.chat.Component, java.lang.Runnable);
+  protected abstract void sendResetRequest(com.mojang.realmsclient.client.RealmsClient, long) throws com.mojang.realmsclient.exception.RealmsServiceException;
+  public void run();
+  public net.minecraft.network.chat.Component getTitle();
+  static {};
+}
+Compiled from "RestoreTask.java"
+public class com.mojang.realmsclient.util.task.RestoreTask extends com.mojang.realmsclient.util.task.LongRunningTask {
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.network.chat.Component TITLE;
+  private final com.mojang.realmsclient.dto.Backup backup;
+  private final long realmId;
+  private final com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen lastScreen;
+  public com.mojang.realmsclient.util.task.RestoreTask(com.mojang.realmsclient.dto.Backup, long, com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen);
+  public void run();
+  public net.minecraft.network.chat.Component getTitle();
+  static {};
+}
+Compiled from "SwitchMinigameTask.java"
+public class com.mojang.realmsclient.util.task.SwitchMinigameTask extends com.mojang.realmsclient.util.task.LongRunningTask {
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.network.chat.Component TITLE;
+  private final long realmId;
+  private final com.mojang.realmsclient.dto.WorldTemplate worldTemplate;
+  private final com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen nextScreen;
+  public com.mojang.realmsclient.util.task.SwitchMinigameTask(long, com.mojang.realmsclient.dto.WorldTemplate, com.mojang.realmsclient.gui.screens.configuration.RealmsConfigureWorldScreen);
+  public void run();
+  public net.minecraft.network.chat.Component getTitle();
+  static {};
+}
+Compiled from "SwitchSlotTask.java"
+public class com.mojang.realmsclient.util.task.SwitchSlotTask extends com.mojang.realmsclient.util.task.LongRunningTask {
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.network.chat.Component TITLE;
+  private final long realmId;
+  private final int slot;
+  private final java.lang.Runnable callback;
+  public com.mojang.realmsclient.util.task.SwitchSlotTask(long, int, java.lang.Runnable);
+  public void run();
+  public net.minecraft.network.chat.Component getTitle();
+  static {};
+}
+Compiled from "package-info.java"
+interface com.mojang.realmsclient.util.task.package-info {
+}

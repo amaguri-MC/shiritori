@@ -1,0 +1,304 @@
+Compiled from "EntryGroup.java"
+public class net.minecraft.world.level.storage.loot.entries.EntryGroup$Builder extends net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<net.minecraft.world.level.storage.loot.entries.EntryGroup$Builder> {
+  private final com.google.common.collect.ImmutableList$Builder<net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer> entries;
+  public net.minecraft.world.level.storage.loot.entries.EntryGroup$Builder(net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<?>...);
+  protected net.minecraft.world.level.storage.loot.entries.EntryGroup$Builder getThis();
+  public net.minecraft.world.level.storage.loot.entries.EntryGroup$Builder append(net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<?>);
+  public net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer build();
+  protected net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder getThis();
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.level.storage.loot.entries.package-info {
+}
+Compiled from "LootPoolSingletonContainer.java"
+public abstract class net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Builder<T extends net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Builder<T>> extends net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<T> implements net.minecraft.world.level.storage.loot.functions.FunctionUserBuilder<T> {
+  protected int weight;
+  protected int quality;
+  private final com.google.common.collect.ImmutableList$Builder<net.minecraft.world.level.storage.loot.functions.LootItemFunction> functions;
+  public net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Builder();
+  public T apply(net.minecraft.world.level.storage.loot.functions.LootItemFunction$Builder);
+  protected java.util.List<net.minecraft.world.level.storage.loot.functions.LootItemFunction> getFunctions();
+  public T setWeight(int);
+  public T setQuality(int);
+  public net.minecraft.world.level.storage.loot.functions.FunctionUserBuilder unwrap();
+  public net.minecraft.world.level.storage.loot.functions.FunctionUserBuilder apply(net.minecraft.world.level.storage.loot.functions.LootItemFunction$Builder);
+}
+Compiled from "EmptyLootItem.java"
+public class net.minecraft.world.level.storage.loot.entries.EmptyLootItem extends net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.EmptyLootItem> MAP_CODEC;
+  private net.minecraft.world.level.storage.loot.entries.EmptyLootItem(int, int, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>, java.util.List<net.minecraft.world.level.storage.loot.functions.LootItemFunction>);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.EmptyLootItem> codec();
+  public void createItemStack(java.util.function.Consumer<net.minecraft.world.item.ItemStack>, net.minecraft.world.level.storage.loot.LootContext);
+  public static net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Builder<?> emptyItem();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "ComposableEntryContainer.java"
+public interface net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer {
+  public static final net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer ALWAYS_FALSE;
+  public static final net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer ALWAYS_TRUE;
+  public abstract boolean expand(net.minecraft.world.level.storage.loot.LootContext, java.util.function.Consumer<net.minecraft.world.level.storage.loot.entries.LootPoolEntry>);
+  public default net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer and(net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer);
+  public default net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer or(net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer);
+  private boolean lambda$or$0(net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer, net.minecraft.world.level.storage.loot.LootContext, java.util.function.Consumer);
+  private boolean lambda$and$0(net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer, net.minecraft.world.level.storage.loot.LootContext, java.util.function.Consumer);
+  private static boolean lambda$static$1(net.minecraft.world.level.storage.loot.LootContext, java.util.function.Consumer);
+  private static boolean lambda$static$0(net.minecraft.world.level.storage.loot.LootContext, java.util.function.Consumer);
+  static {};
+}
+Compiled from "LootItem.java"
+public class net.minecraft.world.level.storage.loot.entries.LootItem extends net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.LootItem> MAP_CODEC;
+  private final net.minecraft.core.Holder<net.minecraft.world.item.Item> item;
+  private net.minecraft.world.level.storage.loot.entries.LootItem(net.minecraft.core.Holder<net.minecraft.world.item.Item>, int, int, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>, java.util.List<net.minecraft.world.level.storage.loot.functions.LootItemFunction>);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.LootItem> codec();
+  public void createItemStack(java.util.function.Consumer<net.minecraft.world.item.ItemStack>, net.minecraft.world.level.storage.loot.LootContext);
+  public static net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Builder<?> lootTableItem(net.minecraft.world.level.ItemLike);
+  private static net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer lambda$lootTableItem$0(net.minecraft.world.level.ItemLike, int, int, java.util.List, java.util.List);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.core.Holder lambda$static$1(net.minecraft.world.level.storage.loot.entries.LootItem);
+  static {};
+}
+Compiled from "SequentialEntry.java"
+public class net.minecraft.world.level.storage.loot.entries.SequentialEntry extends net.minecraft.world.level.storage.loot.entries.CompositeEntryBase {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.SequentialEntry> MAP_CODEC;
+  public net.minecraft.world.level.storage.loot.entries.SequentialEntry(java.util.List<net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer>, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.SequentialEntry> codec();
+  protected net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer compose(java.util.List<? extends net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer>);
+  public static net.minecraft.world.level.storage.loot.entries.SequentialEntry$Builder sequential(net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<?>...);
+  private static boolean lambda$compose$0(java.util.List, net.minecraft.world.level.storage.loot.LootContext, java.util.function.Consumer);
+  static {};
+}
+Compiled from "LootPoolSingletonContainer.java"
+public interface net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$EntryConstructor {
+  public abstract net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer build(int, int, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>, java.util.List<net.minecraft.world.level.storage.loot.functions.LootItemFunction>);
+}
+Compiled from "TagEntry.java"
+public class net.minecraft.world.level.storage.loot.entries.TagEntry extends net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.TagEntry> MAP_CODEC;
+  private final net.minecraft.tags.TagKey<net.minecraft.world.item.Item> tag;
+  private final boolean expand;
+  private net.minecraft.world.level.storage.loot.entries.TagEntry(net.minecraft.tags.TagKey<net.minecraft.world.item.Item>, boolean, int, int, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>, java.util.List<net.minecraft.world.level.storage.loot.functions.LootItemFunction>);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.TagEntry> codec();
+  public void createItemStack(java.util.function.Consumer<net.minecraft.world.item.ItemStack>, net.minecraft.world.level.storage.loot.LootContext);
+  private boolean expandTag(net.minecraft.world.level.storage.loot.LootContext, java.util.function.Consumer<net.minecraft.world.level.storage.loot.entries.LootPoolEntry>);
+  public boolean expand(net.minecraft.world.level.storage.loot.LootContext, java.util.function.Consumer<net.minecraft.world.level.storage.loot.entries.LootPoolEntry>);
+  public static net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Builder<?> tagContents(net.minecraft.tags.TagKey<net.minecraft.world.item.Item>);
+  public static net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Builder<?> expandTag(net.minecraft.tags.TagKey<net.minecraft.world.item.Item>);
+  private static net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer lambda$expandTag$0(net.minecraft.tags.TagKey, int, int, java.util.List, java.util.List);
+  private static net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer lambda$tagContents$0(net.minecraft.tags.TagKey, int, int, java.util.List, java.util.List);
+  private static void lambda$createItemStack$0(java.util.function.Consumer, net.minecraft.core.Holder);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Boolean lambda$static$2(net.minecraft.world.level.storage.loot.entries.TagEntry);
+  private static net.minecraft.tags.TagKey lambda$static$1(net.minecraft.world.level.storage.loot.entries.TagEntry);
+  static {};
+}
+Compiled from "SequentialEntry.java"
+public class net.minecraft.world.level.storage.loot.entries.SequentialEntry$Builder extends net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<net.minecraft.world.level.storage.loot.entries.SequentialEntry$Builder> {
+  private final com.google.common.collect.ImmutableList$Builder<net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer> entries;
+  public net.minecraft.world.level.storage.loot.entries.SequentialEntry$Builder(net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<?>...);
+  protected net.minecraft.world.level.storage.loot.entries.SequentialEntry$Builder getThis();
+  public net.minecraft.world.level.storage.loot.entries.SequentialEntry$Builder then(net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<?>);
+  public net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer build();
+  protected net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder getThis();
+}
+Compiled from "TagEntry.java"
+class net.minecraft.world.level.storage.loot.entries.TagEntry$1 extends net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$EntryBase {
+  final net.minecraft.core.Holder val$item;
+  net.minecraft.world.level.storage.loot.entries.TagEntry$1(net.minecraft.world.level.storage.loot.entries.TagEntry, net.minecraft.core.Holder);
+  public void createItemStack(java.util.function.Consumer<net.minecraft.world.item.ItemStack>, net.minecraft.world.level.storage.loot.LootContext);
+}
+Compiled from "CompositeEntryBase.java"
+public interface net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$CompositeEntryConstructor<T extends net.minecraft.world.level.storage.loot.entries.CompositeEntryBase> {
+  public abstract T create(java.util.List<net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer>, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>);
+}
+Compiled from "LootPoolSingletonContainer.java"
+public abstract class net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer extends net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer {
+  public static final int DEFAULT_WEIGHT;
+  public static final int DEFAULT_QUALITY;
+  protected final int weight;
+  protected final int quality;
+  protected final java.util.List<net.minecraft.world.level.storage.loot.functions.LootItemFunction> functions;
+  private final java.util.function.BiFunction<net.minecraft.world.item.ItemStack, net.minecraft.world.level.storage.loot.LootContext, net.minecraft.world.item.ItemStack> compositeFunction;
+  private final net.minecraft.world.level.storage.loot.entries.LootPoolEntry entry;
+  protected net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer(int, int, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>, java.util.List<net.minecraft.world.level.storage.loot.functions.LootItemFunction>);
+  public abstract com.mojang.serialization.MapCodec<? extends net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer> codec();
+  protected static <T extends net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer> com.mojang.datafixers.Products$P4<com.mojang.serialization.codecs.RecordCodecBuilder$Mu<T>, java.lang.Integer, java.lang.Integer, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>, java.util.List<net.minecraft.world.level.storage.loot.functions.LootItemFunction>> singletonFields(com.mojang.serialization.codecs.RecordCodecBuilder$Instance<T>);
+  public void validate(net.minecraft.world.level.storage.loot.ValidationContext);
+  protected abstract void createItemStack(java.util.function.Consumer<net.minecraft.world.item.ItemStack>, net.minecraft.world.level.storage.loot.LootContext);
+  public boolean expand(net.minecraft.world.level.storage.loot.LootContext, java.util.function.Consumer<net.minecraft.world.level.storage.loot.entries.LootPoolEntry>);
+  public static net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Builder<?> simpleBuilder(net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$EntryConstructor);
+  private static java.util.List lambda$singletonFields$2(net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer);
+  private static java.lang.Integer lambda$singletonFields$1(net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer);
+  private static java.lang.Integer lambda$singletonFields$0(net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer);
+}
+Compiled from "AlternativesEntry.java"
+public class net.minecraft.world.level.storage.loot.entries.AlternativesEntry extends net.minecraft.world.level.storage.loot.entries.CompositeEntryBase {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.AlternativesEntry> MAP_CODEC;
+  public static final net.minecraft.util.ProblemReporter$Problem UNREACHABLE_PROBLEM;
+  public net.minecraft.world.level.storage.loot.entries.AlternativesEntry(java.util.List<net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer>, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.AlternativesEntry> codec();
+  protected net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer compose(java.util.List<? extends net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer>);
+  public void validate(net.minecraft.world.level.storage.loot.ValidationContext);
+  public static net.minecraft.world.level.storage.loot.entries.AlternativesEntry$Builder alternatives(net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<?>...);
+  public static <E> net.minecraft.world.level.storage.loot.entries.AlternativesEntry$Builder alternatives(java.util.Collection<E>, java.util.function.Function<E, net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<?>>);
+  private static net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder[] lambda$alternatives$0(int);
+  private static boolean lambda$compose$0(java.util.List, net.minecraft.world.level.storage.loot.LootContext, java.util.function.Consumer);
+  static {};
+}
+Compiled from "LootPoolEntry.java"
+public interface net.minecraft.world.level.storage.loot.entries.LootPoolEntry {
+  public abstract int getWeight(float);
+  public abstract void createItemStack(java.util.function.Consumer<net.minecraft.world.item.ItemStack>, net.minecraft.world.level.storage.loot.LootContext);
+}
+Compiled from "EntryGroup.java"
+public class net.minecraft.world.level.storage.loot.entries.EntryGroup extends net.minecraft.world.level.storage.loot.entries.CompositeEntryBase {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.EntryGroup> MAP_CODEC;
+  public net.minecraft.world.level.storage.loot.entries.EntryGroup(java.util.List<net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer>, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.EntryGroup> codec();
+  protected net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer compose(java.util.List<? extends net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer>);
+  public static net.minecraft.world.level.storage.loot.entries.EntryGroup$Builder list(net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<?>...);
+  private static boolean lambda$compose$1(java.util.List, net.minecraft.world.level.storage.loot.LootContext, java.util.function.Consumer);
+  private static boolean lambda$compose$0(net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer, net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer, net.minecraft.world.level.storage.loot.LootContext, java.util.function.Consumer);
+  static {};
+}
+Compiled from "SlotLoot.java"
+public class net.minecraft.world.level.storage.loot.entries.SlotLoot extends net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.SlotLoot> MAP_CODEC;
+  private final net.minecraft.world.item.slot.SlotSource slotSource;
+  private net.minecraft.world.level.storage.loot.entries.SlotLoot(net.minecraft.world.item.slot.SlotSource, int, int, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>, java.util.List<net.minecraft.world.level.storage.loot.functions.LootItemFunction>);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.SlotLoot> codec();
+  public void createItemStack(java.util.function.Consumer<net.minecraft.world.item.ItemStack>, net.minecraft.world.level.storage.loot.LootContext);
+  public void validate(net.minecraft.world.level.storage.loot.ValidationContext);
+  private static boolean lambda$createItemStack$0(net.minecraft.world.item.ItemStack);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.slot.SlotSource lambda$static$1(net.minecraft.world.level.storage.loot.entries.SlotLoot);
+  static {};
+}
+Compiled from "NestedLootTable.java"
+public class net.minecraft.world.level.storage.loot.entries.NestedLootTable extends net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.NestedLootTable> MAP_CODEC;
+  public static final net.minecraft.util.ProblemReporter$PathElement INLINE_LOOT_TABLE_PATH_ELEMENT;
+  private final com.mojang.datafixers.util.Either<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable> contents;
+  private net.minecraft.world.level.storage.loot.entries.NestedLootTable(com.mojang.datafixers.util.Either<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable>, int, int, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>, java.util.List<net.minecraft.world.level.storage.loot.functions.LootItemFunction>);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.NestedLootTable> codec();
+  public void createItemStack(java.util.function.Consumer<net.minecraft.world.item.ItemStack>, net.minecraft.world.level.storage.loot.LootContext);
+  public void validate(net.minecraft.world.level.storage.loot.ValidationContext);
+  public static net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Builder<?> lootTableReference(net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>);
+  public static net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Builder<?> inlineLootTable(net.minecraft.world.level.storage.loot.LootTable);
+  private static net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer lambda$inlineLootTable$0(net.minecraft.world.level.storage.loot.LootTable, int, int, java.util.List, java.util.List);
+  private static net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer lambda$lootTableReference$0(net.minecraft.resources.ResourceKey, int, int, java.util.List, java.util.List);
+  private static void lambda$validate$1(net.minecraft.world.level.storage.loot.ValidationContext, net.minecraft.world.level.storage.loot.LootTable);
+  private static void lambda$validate$0(net.minecraft.world.level.storage.loot.ValidationContext, net.minecraft.resources.ResourceKey);
+  private static net.minecraft.world.level.storage.loot.LootTable lambda$createItemStack$1(net.minecraft.world.level.storage.loot.LootTable);
+  private static net.minecraft.world.level.storage.loot.LootTable lambda$createItemStack$0(net.minecraft.world.level.storage.loot.LootContext, net.minecraft.resources.ResourceKey);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static com.mojang.datafixers.util.Either lambda$static$1(net.minecraft.world.level.storage.loot.entries.NestedLootTable);
+  static {};
+}
+Compiled from "LootPoolEntryContainer.java"
+public abstract class net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer implements net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer,net.minecraft.world.level.storage.loot.Validatable {
+  protected final java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition> conditions;
+  private final java.util.function.Predicate<net.minecraft.world.level.storage.loot.LootContext> compositeCondition;
+  protected net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer(java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>);
+  protected static <T extends net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer> com.mojang.datafixers.Products$P1<com.mojang.serialization.codecs.RecordCodecBuilder$Mu<T>, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>> commonFields(com.mojang.serialization.codecs.RecordCodecBuilder$Instance<T>);
+  public void validate(net.minecraft.world.level.storage.loot.ValidationContext);
+  protected final boolean canRun(net.minecraft.world.level.storage.loot.LootContext);
+  public abstract com.mojang.serialization.MapCodec<? extends net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer> codec();
+  private static java.util.List lambda$commonFields$0(net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer);
+}
+Compiled from "DynamicLoot.java"
+public class net.minecraft.world.level.storage.loot.entries.DynamicLoot extends net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.DynamicLoot> MAP_CODEC;
+  private final net.minecraft.resources.Identifier name;
+  private net.minecraft.world.level.storage.loot.entries.DynamicLoot(net.minecraft.resources.Identifier, int, int, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>, java.util.List<net.minecraft.world.level.storage.loot.functions.LootItemFunction>);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.entries.DynamicLoot> codec();
+  public void createItemStack(java.util.function.Consumer<net.minecraft.world.item.ItemStack>, net.minecraft.world.level.storage.loot.LootContext);
+  public static net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Builder<?> dynamicEntry(net.minecraft.resources.Identifier);
+  private static net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer lambda$dynamicEntry$0(net.minecraft.resources.Identifier, int, int, java.util.List, java.util.List);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.resources.Identifier lambda$static$1(net.minecraft.world.level.storage.loot.entries.DynamicLoot);
+  static {};
+}
+Compiled from "AlternativesEntry.java"
+public class net.minecraft.world.level.storage.loot.entries.AlternativesEntry$Builder extends net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<net.minecraft.world.level.storage.loot.entries.AlternativesEntry$Builder> {
+  private final com.google.common.collect.ImmutableList$Builder<net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer> entries;
+  public net.minecraft.world.level.storage.loot.entries.AlternativesEntry$Builder(net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<?>...);
+  protected net.minecraft.world.level.storage.loot.entries.AlternativesEntry$Builder getThis();
+  public net.minecraft.world.level.storage.loot.entries.AlternativesEntry$Builder otherwise(net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<?>);
+  public net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer build();
+  protected net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder getThis();
+}
+Compiled from "LootPoolSingletonContainer.java"
+class net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$1 extends net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$EntryBase {
+  final net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer this$0;
+  net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$1(net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer);
+  public void createItemStack(java.util.function.Consumer<net.minecraft.world.item.ItemStack>, net.minecraft.world.level.storage.loot.LootContext);
+}
+Compiled from "NestedLootTable.java"
+class net.minecraft.world.level.storage.loot.entries.NestedLootTable$1 implements net.minecraft.util.ProblemReporter$PathElement {
+  net.minecraft.world.level.storage.loot.entries.NestedLootTable$1();
+  public java.lang.String get();
+}
+Compiled from "LootPoolEntries.java"
+public class net.minecraft.world.level.storage.loot.entries.LootPoolEntries {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer> CODEC;
+  public net.minecraft.world.level.storage.loot.entries.LootPoolEntries();
+  public static com.mojang.serialization.MapCodec<? extends net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer> bootstrap(net.minecraft.core.Registry<com.mojang.serialization.MapCodec<? extends net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer>>);
+  private static com.mojang.serialization.MapCodec lambda$static$0(com.mojang.serialization.MapCodec);
+  static {};
+}
+Compiled from "CompositeEntryBase.java"
+class net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$1 implements net.minecraft.util.ProblemReporter$Problem {
+  net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$1();
+  public java.lang.String description();
+}
+Compiled from "LootPoolSingletonContainer.java"
+class net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$DummyBuilder extends net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$Builder<net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$DummyBuilder> {
+  private final net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$EntryConstructor constructor;
+  public net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$DummyBuilder(net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$EntryConstructor);
+  protected net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$DummyBuilder getThis();
+  public net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer build();
+  protected net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder getThis();
+}
+Compiled from "LootPoolSingletonContainer.java"
+public abstract class net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$EntryBase implements net.minecraft.world.level.storage.loot.entries.LootPoolEntry {
+  final net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer this$0;
+  protected net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer$EntryBase(net.minecraft.world.level.storage.loot.entries.LootPoolSingletonContainer);
+  public int getWeight(float);
+}
+Compiled from "CompositeEntryBase.java"
+public abstract class net.minecraft.world.level.storage.loot.entries.CompositeEntryBase extends net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer {
+  public static final net.minecraft.util.ProblemReporter$Problem NO_CHILDREN_PROBLEM;
+  protected final java.util.List<net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer> children;
+  private final net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer composedChildren;
+  protected net.minecraft.world.level.storage.loot.entries.CompositeEntryBase(java.util.List<net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer>, java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition>);
+  public abstract com.mojang.serialization.MapCodec<? extends net.minecraft.world.level.storage.loot.entries.CompositeEntryBase> codec();
+  public void validate(net.minecraft.world.level.storage.loot.ValidationContext);
+  protected abstract net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer compose(java.util.List<? extends net.minecraft.world.level.storage.loot.entries.ComposableEntryContainer>);
+  public final boolean expand(net.minecraft.world.level.storage.loot.LootContext, java.util.function.Consumer<net.minecraft.world.level.storage.loot.entries.LootPoolEntry>);
+  public static <T extends net.minecraft.world.level.storage.loot.entries.CompositeEntryBase> com.mojang.serialization.MapCodec<T> createCodec(net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$CompositeEntryConstructor<T>);
+  private static com.mojang.datafixers.kinds.App lambda$createCodec$0(net.minecraft.world.level.storage.loot.entries.CompositeEntryBase$CompositeEntryConstructor, com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.util.List lambda$createCodec$1(net.minecraft.world.level.storage.loot.entries.CompositeEntryBase);
+  static {};
+}
+Compiled from "LootPoolEntryContainer.java"
+public abstract class net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<T extends net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<T>> implements net.minecraft.world.level.storage.loot.predicates.ConditionUserBuilder<T> {
+  private final com.google.common.collect.ImmutableList$Builder<net.minecraft.world.level.storage.loot.predicates.LootItemCondition> conditions;
+  public net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder();
+  protected abstract T getThis();
+  public T when(net.minecraft.world.level.storage.loot.predicates.LootItemCondition$Builder);
+  public final T unwrap();
+  protected java.util.List<net.minecraft.world.level.storage.loot.predicates.LootItemCondition> getConditions();
+  public net.minecraft.world.level.storage.loot.entries.AlternativesEntry$Builder otherwise(net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<?>);
+  public net.minecraft.world.level.storage.loot.entries.EntryGroup$Builder append(net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<?>);
+  public net.minecraft.world.level.storage.loot.entries.SequentialEntry$Builder then(net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder<?>);
+  public abstract net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer build();
+  public net.minecraft.world.level.storage.loot.predicates.ConditionUserBuilder unwrap();
+  public net.minecraft.world.level.storage.loot.predicates.ConditionUserBuilder when(net.minecraft.world.level.storage.loot.predicates.LootItemCondition$Builder);
+}
+Compiled from "AlternativesEntry.java"
+class net.minecraft.world.level.storage.loot.entries.AlternativesEntry$1 implements net.minecraft.util.ProblemReporter$Problem {
+  net.minecraft.world.level.storage.loot.entries.AlternativesEntry$1();
+  public java.lang.String description();
+}

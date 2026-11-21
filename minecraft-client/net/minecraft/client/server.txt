@@ -1,0 +1,138 @@
+Compiled from "IntegratedPlayerList.java"
+public class net.minecraft.client.server.IntegratedPlayerList extends net.minecraft.server.players.PlayerList {
+  public net.minecraft.client.server.IntegratedPlayerList(net.minecraft.client.server.IntegratedServer, net.minecraft.core.LayeredRegistryAccess<net.minecraft.server.RegistryLayer>, net.minecraft.world.level.storage.PlayerDataStorage);
+  public net.minecraft.network.chat.Component canPlayerLogin(java.net.SocketAddress, net.minecraft.server.players.NameAndId);
+  public net.minecraft.client.server.IntegratedServer getServer();
+  public net.minecraft.server.MinecraftServer getServer();
+}
+Compiled from "IntegratedServer.java"
+public class net.minecraft.client.server.IntegratedServer extends net.minecraft.server.MinecraftServer {
+  private static final org.slf4j.Logger LOGGER;
+  private static final int MIN_SIM_DISTANCE;
+  public static final int MAX_PLAYERS;
+  private final net.minecraft.client.Minecraft minecraft;
+  private boolean paused;
+  private int publishedPort;
+  private net.minecraft.world.level.GameType gameTypeForOtherPlayers;
+  private java.lang.Boolean commandsAllowedForOtherPlayers;
+  private net.minecraft.client.server.LanServerPinger lanPinger;
+  private java.util.UUID uuid;
+  private int previousSimulationDistance;
+  private volatile java.util.List<net.minecraft.gizmos.SimpleGizmoCollector$GizmoInstance> latestTicksGizmos;
+  private final net.minecraft.gizmos.SimpleGizmoCollector gizmoCollector;
+  private net.minecraft.server.MinecraftServer$MultiplayerScope multiplayerScope;
+  public net.minecraft.client.server.IntegratedServer(java.lang.Thread, net.minecraft.client.Minecraft, net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess, net.minecraft.server.packs.repository.PackRepository, net.minecraft.server.WorldStem, java.util.Optional<net.minecraft.world.level.gamerules.GameRules>, net.minecraft.server.Services, net.minecraft.server.level.progress.LevelLoadListener);
+  protected boolean initServer();
+  public boolean isPaused();
+  protected void processPacketsAndTick(boolean);
+  protected void tickServer(java.util.function.BooleanSupplier);
+  protected net.minecraft.util.debugchart.LocalSampleLogger getTickTimeLogger();
+  public boolean isTickTimeLoggingEnabled();
+  private void tickPaused();
+  public boolean shouldRconBroadcast();
+  public boolean shouldInformAdmins();
+  public java.nio.file.Path getServerDirectory();
+  public boolean isDedicatedServer();
+  public int getRateLimitPacketsPerSecond();
+  public int getCommandSpamThresholdSeconds();
+  public int getChatSpamThresholdSeconds();
+  public boolean useNativeTransport();
+  protected void onServerCrash(net.minecraft.CrashReport);
+  public net.minecraft.SystemReport fillServerSystemReport(net.minecraft.SystemReport);
+  public net.minecraft.util.ModCheck getModdedStatus();
+  public boolean publishServer(net.minecraft.server.MinecraftServer$MultiplayerScope, net.minecraft.world.level.GameType, boolean, int);
+  public boolean publishServer(net.minecraft.server.MinecraftServer$MultiplayerScope, int);
+  public void setWorldGameType(net.minecraft.world.level.GameType);
+  public net.minecraft.world.level.GameType getGameTypeForOtherPlayers();
+  public void setGameTypeForOtherPlayers(net.minecraft.world.level.GameType);
+  private void applyGameTypeToPlayers(net.minecraft.world.level.GameType, boolean);
+  public void setWorldAllowCommands(boolean);
+  public boolean commandsAllowedForOtherPlayers();
+  public void setCommandsAllowedForOtherPlayers(boolean);
+  private void updateCommandsAllowedForOtherPlayers();
+  private void updatePermissionAndChatAbilities(net.minecraft.client.player.LocalPlayer);
+  private void teardownPublishedState();
+  private void stopLanPinger();
+  public boolean unpublishServer();
+  public void stopServer();
+  public void halt(boolean);
+  public boolean isPublished();
+  public int getPort();
+  public net.minecraft.server.permissions.LevelBasedPermissionSet operatorUserPermissions();
+  public net.minecraft.server.permissions.LevelBasedPermissionSet getFunctionCompilationPermissions();
+  public void setUUID(java.util.UUID);
+  public boolean isSingleplayerOwner(net.minecraft.server.players.NameAndId);
+  public int getScaledTrackingDistance(int);
+  public boolean forceSynchronousWrites();
+  public net.minecraft.world.level.GameType getForcedGameType();
+  protected net.minecraft.core.GlobalPos selectLevelLoadFocusPos();
+  public void sendLowDiskSpaceWarning();
+  public void reportChunkLoadFailure(java.lang.Throwable, net.minecraft.world.level.chunk.storage.RegionStorageInfo, net.minecraft.world.level.ChunkPos);
+  public void reportChunkSaveFailure(java.lang.Throwable, net.minecraft.world.level.chunk.storage.RegionStorageInfo, net.minecraft.world.level.ChunkPos);
+  public int getMaxPlayers();
+  public java.util.Collection<net.minecraft.gizmos.SimpleGizmoCollector$GizmoInstance> getPerTickGizmos();
+  private void setMultiplayerScope(net.minecraft.server.MinecraftServer$MultiplayerScope);
+  public net.minecraft.server.MinecraftServer$MultiplayerScope getMultiplayerScope();
+  protected net.minecraft.util.debugchart.SampleLogger getTickTimeLogger();
+  public net.minecraft.server.permissions.PermissionSet getFunctionCompilationPermissions();
+  private void lambda$reportChunkSaveFailure$0(net.minecraft.world.level.ChunkPos);
+  private void lambda$reportChunkLoadFailure$0(net.minecraft.world.level.ChunkPos);
+  private void lambda$halt$0();
+  private java.lang.Object lambda$fillServerSystemReport$0() throws java.lang.Exception;
+  static {};
+}
+Compiled from "LanServer.java"
+public class net.minecraft.client.server.LanServer {
+  private final java.lang.String motd;
+  private final java.lang.String address;
+  private long pingTime;
+  public net.minecraft.client.server.LanServer(java.lang.String, java.lang.String);
+  public java.lang.String getMotd();
+  public java.lang.String getAddress();
+  public void updatePingTime();
+}
+Compiled from "LanServerDetection.java"
+public class net.minecraft.client.server.LanServerDetection$LanServerDetector extends java.lang.Thread {
+  private final net.minecraft.client.server.LanServerDetection$LanServerList serverList;
+  private final java.net.InetAddress pingGroup;
+  private final java.net.MulticastSocket socket;
+  public net.minecraft.client.server.LanServerDetection$LanServerDetector(net.minecraft.client.server.LanServerDetection$LanServerList) throws java.io.IOException;
+  public void run();
+}
+Compiled from "LanServerDetection.java"
+public class net.minecraft.client.server.LanServerDetection$LanServerList {
+  private final java.util.List<net.minecraft.client.server.LanServer> servers;
+  private boolean isDirty;
+  public net.minecraft.client.server.LanServerDetection$LanServerList();
+  public synchronized java.util.List<net.minecraft.client.server.LanServer> takeDirtyServers();
+  public synchronized void addServer(java.lang.String, java.net.InetAddress);
+}
+Compiled from "LanServerDetection.java"
+public class net.minecraft.client.server.LanServerDetection {
+  private static final java.util.concurrent.atomic.AtomicInteger UNIQUE_THREAD_ID;
+  private static final org.slf4j.Logger LOGGER;
+  public net.minecraft.client.server.LanServerDetection();
+  static {};
+}
+Compiled from "LanServerPinger.java"
+public class net.minecraft.client.server.LanServerPinger extends java.lang.Thread {
+  private static final java.util.concurrent.atomic.AtomicInteger UNIQUE_THREAD_ID;
+  private static final org.slf4j.Logger LOGGER;
+  public static final java.lang.String MULTICAST_GROUP;
+  public static final int PING_PORT;
+  private static final long PING_INTERVAL;
+  private final java.lang.String motd;
+  private final java.net.DatagramSocket socket;
+  private boolean isRunning;
+  private final java.lang.String serverAddress;
+  public net.minecraft.client.server.LanServerPinger(java.lang.String, java.lang.String) throws java.io.IOException;
+  public void run();
+  public void interrupt();
+  public static java.lang.String createPingString(java.lang.String, java.lang.String);
+  public static java.lang.String parseMotd(java.lang.String);
+  public static java.lang.String parseAddress(java.lang.String);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.server.package-info {
+}

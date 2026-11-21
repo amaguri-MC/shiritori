@@ -1,0 +1,34 @@
+Compiled from "NautilusArmorModel.java"
+public class net.minecraft.client.model.animal.nautilus.NautilusArmorModel extends net.minecraft.client.model.animal.nautilus.NautilusModel {
+  private final net.minecraft.client.model.geom.ModelPart nautilus;
+  private final net.minecraft.client.model.geom.ModelPart shell;
+  public net.minecraft.client.model.animal.nautilus.NautilusArmorModel(net.minecraft.client.model.geom.ModelPart);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+}
+Compiled from "NautilusModel.java"
+public class net.minecraft.client.model.animal.nautilus.NautilusModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.NautilusRenderState> {
+  private static final float SWIM_ANIMATION_SPEED_MAX;
+  private static final float SWIM_ANIMATION_SCALE_FACTOR;
+  private static final float IDLE_SWIM_ANIMATION_SPEED;
+  private static final float IDLE_SWIM_ANIMATION_SCALE;
+  protected final net.minecraft.client.model.geom.ModelPart body;
+  protected final net.minecraft.client.model.geom.ModelPart nautilus;
+  private final net.minecraft.client.animation.KeyframeAnimation swimAnimation;
+  public net.minecraft.client.model.animal.nautilus.NautilusModel(net.minecraft.client.model.geom.ModelPart);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+  public static net.minecraft.client.model.geom.builders.MeshDefinition createBodyMesh();
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBabyBodyLayer();
+  public void setupAnim(net.minecraft.client.renderer.entity.state.NautilusRenderState);
+  private void applyBodyRotation(float, float);
+  public void setupAnim(java.lang.Object);
+}
+Compiled from "NautilusSaddleModel.java"
+public class net.minecraft.client.model.animal.nautilus.NautilusSaddleModel extends net.minecraft.client.model.animal.nautilus.NautilusModel {
+  private final net.minecraft.client.model.geom.ModelPart nautilus;
+  private final net.minecraft.client.model.geom.ModelPart shell;
+  public net.minecraft.client.model.animal.nautilus.NautilusSaddleModel(net.minecraft.client.model.geom.ModelPart);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createSaddleLayer();
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.model.animal.nautilus.package-info {
+}

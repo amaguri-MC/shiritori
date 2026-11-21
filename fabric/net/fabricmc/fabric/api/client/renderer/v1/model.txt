@@ -1,0 +1,95 @@
+Compiled from "FabricBlockStateModel.java"
+public interface net.fabricmc.fabric.api.client.renderer.v1.model.FabricBlockStateModel {
+  public default void emitQuads(net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter, net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.util.RandomSource, java.util.function.Predicate<net.minecraft.core.Direction>);
+  public default java.lang.Object createGeometryKey(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.util.RandomSource);
+  public default net.minecraft.client.resources.model.sprite.Material$Baked particleMaterial(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  public default int materialFlags(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.util.RandomSource);
+  public default boolean hasMaterialFlag(net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.util.RandomSource, int);
+  private static boolean lambda$emitQuads$0(net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableQuadView);
+}
+Compiled from "FabricBlockStateModelPart.java"
+public interface net.fabricmc.fabric.api.client.renderer.v1.model.FabricBlockStateModelPart {
+  public default void emitQuads(net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadEmitter, java.util.function.Predicate<net.minecraft.core.Direction>);
+}
+Compiled from "FabricBlockStateModelSet.java"
+public interface net.fabricmc.fabric.api.client.renderer.v1.model.FabricBlockStateModelSet {
+  public default net.minecraft.client.resources.model.sprite.Material$Baked getParticleMaterial(net.minecraft.world.level.block.state.BlockState, net.minecraft.client.renderer.block.BlockAndTintGetter, net.minecraft.core.BlockPos);
+}
+Compiled from "MeshQuadCollection.java"
+class net.fabricmc.fabric.api.client.renderer.v1.model.MeshQuadCollection$1 implements java.util.function.Consumer<net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadView> {
+  int flags;
+  net.fabricmc.fabric.api.client.renderer.v1.model.MeshQuadCollection$1();
+  public void accept(net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadView);
+  public void accept(java.lang.Object);
+}
+Compiled from "MeshQuadCollection.java"
+public final class net.fabricmc.fabric.api.client.renderer.v1.model.MeshQuadCollection extends net.minecraft.client.resources.model.geometry.QuadCollection {
+  private final net.fabricmc.fabric.api.client.renderer.v1.mesh.Mesh mesh;
+  private int materialFlags;
+  public net.fabricmc.fabric.api.client.renderer.v1.model.MeshQuadCollection(net.fabricmc.fabric.api.client.renderer.v1.mesh.Mesh);
+  public net.fabricmc.fabric.api.client.renderer.v1.mesh.Mesh getMesh();
+  private static int computeMaterialFlags(net.fabricmc.fabric.api.client.renderer.v1.mesh.Mesh);
+  public int materialFlags();
+}
+Compiled from "ModelHelper.java"
+public final class net.fabricmc.fabric.api.client.renderer.v1.model.ModelHelper {
+  private static final net.minecraft.core.Direction[] FACES;
+  public static final int NULL_FACE_ID;
+  private net.fabricmc.fabric.api.client.renderer.v1.model.ModelHelper();
+  public static int toFaceIndex(net.minecraft.core.Direction);
+  public static net.minecraft.core.Direction faceFromIndex(int);
+  public static com.mojang.blaze3d.platform.Transparency computeTransparency(net.minecraft.client.renderer.texture.TextureAtlasSprite, net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadView);
+  public static int computeMaterialFlags(net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadView);
+  static {};
+}
+Compiled from "ModelStateHelper.java"
+class net.fabricmc.fabric.api.client.renderer.v1.model.ModelStateHelper$1 implements net.minecraft.client.renderer.block.dispatch.ModelState {
+  final com.mojang.math.Transformation val$transformation;
+  net.fabricmc.fabric.api.client.renderer.v1.model.ModelStateHelper$1();
+  public com.mojang.math.Transformation transformation();
+}
+Compiled from "ModelStateHelper.java"
+class net.fabricmc.fabric.api.client.renderer.v1.model.ModelStateHelper$2 implements net.minecraft.client.renderer.block.dispatch.ModelState {
+  final com.mojang.math.Transformation val$transformation;
+  final java.util.Map val$faceTransformations;
+  final java.util.Map val$inverseFaceTransformations;
+  net.fabricmc.fabric.api.client.renderer.v1.model.ModelStateHelper$2();
+  public com.mojang.math.Transformation transformation();
+  public org.joml.Matrix4fc faceTransformation(net.minecraft.core.Direction);
+  public org.joml.Matrix4fc inverseFaceTransformation(net.minecraft.core.Direction);
+}
+Compiled from "ModelStateHelper.java"
+class net.fabricmc.fabric.api.client.renderer.v1.model.ModelStateHelper$3 implements net.minecraft.client.renderer.block.dispatch.ModelState {
+  final com.mojang.math.Transformation val$transformation;
+  final java.util.Map val$faceTransformations;
+  final java.util.Map val$inverseFaceTransformations;
+  net.fabricmc.fabric.api.client.renderer.v1.model.ModelStateHelper$3();
+  public com.mojang.math.Transformation transformation();
+  public org.joml.Matrix4fc faceTransformation(net.minecraft.core.Direction);
+  public org.joml.Matrix4fc inverseFaceTransformation(net.minecraft.core.Direction);
+}
+Compiled from "ModelStateHelper.java"
+class net.fabricmc.fabric.api.client.renderer.v1.model.ModelStateHelper$4 implements net.minecraft.client.renderer.block.dispatch.ModelState {
+  final com.mojang.math.Transformation val$transformation;
+  final net.minecraft.client.renderer.block.dispatch.ModelState val$faceTransformDelegate;
+  net.fabricmc.fabric.api.client.renderer.v1.model.ModelStateHelper$4();
+  public com.mojang.math.Transformation transformation();
+  public org.joml.Matrix4fc faceTransformation(net.minecraft.core.Direction);
+  public org.joml.Matrix4fc inverseFaceTransformation(net.minecraft.core.Direction);
+}
+Compiled from "ModelStateHelper.java"
+public final class net.fabricmc.fabric.api.client.renderer.v1.model.ModelStateHelper {
+  private static final net.minecraft.core.Direction[] DIRECTIONS;
+  private net.fabricmc.fabric.api.client.renderer.v1.model.ModelStateHelper();
+  public static net.minecraft.client.renderer.block.dispatch.ModelState of(com.mojang.math.Transformation, boolean);
+  public static net.minecraft.client.renderer.block.dispatch.ModelState multiply(net.minecraft.client.renderer.block.dispatch.ModelState, net.minecraft.client.renderer.block.dispatch.ModelState);
+  public static net.fabricmc.fabric.api.client.renderer.v1.mesh.QuadTransform asQuadTransform(net.minecraft.client.renderer.block.dispatch.ModelState, net.fabricmc.fabric.api.client.renderer.v1.sprite.SpriteFinderGetter);
+  private static float getFrameFromU(net.minecraft.client.renderer.texture.TextureAtlasSprite, float);
+  private static float getFrameFromV(net.minecraft.client.renderer.texture.TextureAtlasSprite, float);
+  private static boolean lambda$asQuadTransform$1(net.minecraft.client.renderer.block.dispatch.ModelState, net.fabricmc.fabric.api.client.renderer.v1.sprite.SpriteFinderGetter, org.joml.Vector3f, org.joml.Vector4f, org.joml.Matrix4fc, org.joml.Matrix3f, net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableQuadView);
+  private static boolean lambda$asQuadTransform$0(net.fabricmc.fabric.api.client.renderer.v1.mesh.MutableQuadView);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.fabricmc.fabric.api.client.renderer.v1.model.package-info {
+}

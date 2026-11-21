@@ -1,0 +1,44 @@
+Compiled from "JfrResultJsonSerializer.java"
+public class net.minecraft.util.profiling.jfr.serialize.JfrResultJsonSerializer {
+  private static final java.lang.String BYTES_PER_SECOND;
+  private static final java.lang.String COUNT;
+  private static final java.lang.String DURATION_NANOS_TOTAL;
+  private static final java.lang.String TOTAL_BYTES;
+  private static final java.lang.String COUNT_PER_SECOND;
+  private final com.google.gson.Gson gson;
+  public net.minecraft.util.profiling.jfr.serialize.JfrResultJsonSerializer();
+  private static void serializePacketId(net.minecraft.util.profiling.jfr.stats.PacketIdentification, com.google.gson.JsonObject);
+  private static void serializeChunkId(net.minecraft.util.profiling.jfr.stats.ChunkIdentification, com.google.gson.JsonObject);
+  public java.lang.String format(net.minecraft.util.profiling.jfr.parse.JfrStatsResult);
+  private com.google.gson.JsonElement heap(net.minecraft.util.profiling.jfr.stats.GcHeapStat$Summary);
+  private com.google.gson.JsonElement structureGen(java.util.List<net.minecraft.util.profiling.jfr.stats.StructureGenStat>);
+  private com.google.gson.JsonElement chunkGen(java.util.List<com.mojang.datafixers.util.Pair<net.minecraft.world.level.chunk.status.ChunkStatus, net.minecraft.util.profiling.jfr.stats.TimedStatSummary<net.minecraft.util.profiling.jfr.stats.ChunkGenStat>>>);
+  private com.google.gson.JsonElement threadAllocations(net.minecraft.util.profiling.jfr.stats.ThreadAllocationStat$Summary);
+  private com.google.gson.JsonElement serverTicks(java.util.List<net.minecraft.util.profiling.jfr.stats.TickTimeStat>);
+  private com.google.gson.JsonElement fps(java.util.List<net.minecraft.util.profiling.jfr.stats.FpsStat>);
+  private com.google.gson.JsonElement fileIO(net.minecraft.util.profiling.jfr.parse.JfrStatsResult);
+  private com.google.gson.JsonElement fileIoSummary(net.minecraft.util.profiling.jfr.stats.FileIOStat$Summary);
+  private com.google.gson.JsonElement network(net.minecraft.util.profiling.jfr.parse.JfrStatsResult);
+  private <T> com.google.gson.JsonElement ioSummary(net.minecraft.util.profiling.jfr.stats.IoSummary<T>, java.util.function.BiConsumer<T, com.google.gson.JsonObject>);
+  private com.google.gson.JsonElement cpu(java.util.List<net.minecraft.util.profiling.jfr.stats.CpuLoadStat>);
+  private static com.google.gson.JsonObject lambda$cpu$0(java.util.List, java.util.function.ToDoubleFunction);
+  private static void lambda$ioSummary$0(com.google.gson.JsonArray, java.util.function.BiConsumer, com.mojang.datafixers.util.Pair);
+  private static void lambda$fileIoSummary$0(com.google.gson.JsonArray, com.mojang.datafixers.util.Pair);
+  private static void lambda$fps$0(com.google.gson.JsonObject, java.lang.Integer, java.lang.Double);
+  private static void lambda$serverTicks$1(com.google.gson.JsonObject, java.lang.Integer, java.lang.Double);
+  private static double lambda$serverTicks$0(net.minecraft.util.profiling.jfr.stats.TickTimeStat);
+  private static void lambda$threadAllocations$0(com.google.gson.JsonArray, java.lang.String, java.lang.Double);
+  private static void lambda$threadAllocations$1(java.lang.String, java.lang.Double, com.google.gson.JsonObject);
+  private static com.google.gson.JsonElement lambda$chunkGen$4(net.minecraft.util.profiling.jfr.stats.ChunkGenStat);
+  private static void lambda$chunkGen$3(com.google.gson.JsonObject, java.lang.Integer, java.lang.Double);
+  private static void lambda$chunkGen$2(com.google.gson.JsonObject, com.google.gson.JsonObject);
+  private static void lambda$chunkGen$1(com.google.gson.JsonObject, com.google.gson.JsonArray);
+  private static double lambda$chunkGen$0(com.mojang.datafixers.util.Pair);
+  private static void lambda$structureGen$0(com.google.gson.JsonArray, com.google.gson.JsonObject, net.minecraft.util.profiling.jfr.stats.TimedStatSummary, java.lang.String, java.util.List);
+  private static com.google.gson.JsonElement lambda$structureGen$3(net.minecraft.util.profiling.jfr.stats.StructureGenStat);
+  private static void lambda$structureGen$2(com.google.gson.JsonObject, java.lang.Integer, java.lang.Double);
+  private static void lambda$structureGen$1(com.google.gson.JsonObject, com.google.gson.JsonObject);
+}
+Compiled from "package-info.java"
+interface net.minecraft.util.profiling.jfr.serialize.package-info {
+}

@@ -1,0 +1,595 @@
+Compiled from "ActiveArea.java"
+public interface net.minecraft.client.gui.font.ActiveArea {
+  public abstract net.minecraft.network.chat.Style style();
+  public abstract float activeLeft();
+  public abstract float activeTop();
+  public abstract float activeRight();
+  public abstract float activeBottom();
+}
+Compiled from "AllMissingGlyphProvider.java"
+class net.minecraft.client.gui.font.AllMissingGlyphProvider$1 implements com.mojang.blaze3d.font.UnbakedGlyph {
+  net.minecraft.client.gui.font.AllMissingGlyphProvider$1();
+  public com.mojang.blaze3d.font.GlyphInfo info();
+  public net.minecraft.client.gui.font.glyphs.BakedGlyph bake(com.mojang.blaze3d.font.UnbakedGlyph$Stitcher);
+}
+Compiled from "AllMissingGlyphProvider.java"
+public class net.minecraft.client.gui.font.AllMissingGlyphProvider implements com.mojang.blaze3d.font.GlyphProvider {
+  private static final com.mojang.blaze3d.font.UnbakedGlyph MISSING_INSTANCE;
+  public net.minecraft.client.gui.font.AllMissingGlyphProvider();
+  public com.mojang.blaze3d.font.UnbakedGlyph getGlyph(int);
+  public it.unimi.dsi.fastutil.ints.IntSet getSupportedGlyphs();
+  static {};
+}
+Compiled from "AtlasGlyphProvider.java"
+class net.minecraft.client.gui.font.AtlasGlyphProvider$1 implements net.minecraft.client.gui.font.glyphs.BakedGlyph {
+  final net.minecraft.client.renderer.texture.TextureAtlasSprite val$sprite;
+  final net.minecraft.client.gui.font.AtlasGlyphProvider this$0;
+  net.minecraft.client.gui.font.AtlasGlyphProvider$1();
+  public com.mojang.blaze3d.font.GlyphInfo info();
+  public net.minecraft.client.gui.font.TextRenderable$Styled createGlyph(float, float, int, int, net.minecraft.network.chat.Style, float, float);
+}
+Compiled from "AtlasGlyphProvider.java"
+final class net.minecraft.client.gui.font.AtlasGlyphProvider$Instance extends java.lang.Record implements net.minecraft.client.gui.font.PlainTextRenderable {
+  private final net.minecraft.client.gui.font.GlyphRenderTypes renderTypes;
+  private final com.mojang.blaze3d.textures.GpuTextureView textureView;
+  private final net.minecraft.client.renderer.texture.TextureAtlasSprite sprite;
+  private final float x;
+  private final float y;
+  private final int color;
+  private final int shadowColor;
+  private final float shadowOffset;
+  private final net.minecraft.network.chat.Style style;
+  private net.minecraft.client.gui.font.AtlasGlyphProvider$Instance(net.minecraft.client.gui.font.GlyphRenderTypes, com.mojang.blaze3d.textures.GpuTextureView, net.minecraft.client.renderer.texture.TextureAtlasSprite, float, float, int, int, float, net.minecraft.network.chat.Style);
+  public void renderSprite(org.joml.Matrix4fc, com.mojang.blaze3d.vertex.VertexConsumer, int, float, float, float, int);
+  public net.minecraft.client.renderer.rendertype.RenderType renderType(net.minecraft.client.gui.Font$DisplayMode);
+  public com.mojang.blaze3d.pipeline.RenderPipeline guiPipeline();
+  public com.mojang.blaze3d.textures.GpuTextureView textureView();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.gui.font.GlyphRenderTypes renderTypes();
+  public net.minecraft.client.renderer.texture.TextureAtlasSprite sprite();
+  public float x();
+  public float y();
+  public int color();
+  public int shadowColor();
+  public float shadowOffset();
+  public net.minecraft.network.chat.Style style();
+}
+Compiled from "AtlasGlyphProvider.java"
+public class net.minecraft.client.gui.font.AtlasGlyphProvider {
+  private static final com.mojang.blaze3d.font.GlyphInfo GLYPH_INFO;
+  private final net.minecraft.client.renderer.texture.TextureAtlas atlas;
+  private final net.minecraft.client.gui.font.GlyphRenderTypes renderTypes;
+  private final net.minecraft.client.gui.GlyphSource missingWrapper;
+  private final java.util.Map<net.minecraft.resources.Identifier, net.minecraft.client.gui.GlyphSource> wrapperCache;
+  private final java.util.function.Function<net.minecraft.resources.Identifier, net.minecraft.client.gui.GlyphSource> spriteResolver;
+  public net.minecraft.client.gui.font.AtlasGlyphProvider(net.minecraft.client.renderer.texture.TextureAtlas);
+  public net.minecraft.client.gui.GlyphSource sourceForSprite(net.minecraft.resources.Identifier);
+  private net.minecraft.client.gui.GlyphSource createSprite(net.minecraft.client.renderer.texture.TextureAtlasSprite);
+  private net.minecraft.client.gui.GlyphSource lambda$new$0(net.minecraft.client.renderer.texture.TextureAtlas, net.minecraft.client.renderer.texture.TextureAtlasSprite, net.minecraft.resources.Identifier);
+  static {};
+}
+Compiled from "CodepointMap.java"
+public interface net.minecraft.client.gui.font.CodepointMap$Output<T> {
+  public abstract void accept(int, T);
+}
+Compiled from "CodepointMap.java"
+public class net.minecraft.client.gui.font.CodepointMap<T> {
+  private static final int BLOCK_BITS;
+  private static final int BLOCK_SIZE;
+  private static final int IN_BLOCK_MASK;
+  private static final int MAX_BLOCK;
+  private static final int BLOCK_COUNT;
+  private final T[] empty;
+  private final T[][] blockMap;
+  private final java.util.function.IntFunction<T[]> blockConstructor;
+  public net.minecraft.client.gui.font.CodepointMap(java.util.function.IntFunction<T[]>, java.util.function.IntFunction<T[][]>);
+  public void clear();
+  public T get(int);
+  public T put(int, T);
+  public T computeIfAbsent(int, java.util.function.IntFunction<T>);
+  public T remove(int);
+  public void forEach(net.minecraft.client.gui.font.CodepointMap$Output<T>);
+  public it.unimi.dsi.fastutil.ints.IntSet keySet();
+  private static void lambda$keySet$0(it.unimi.dsi.fastutil.ints.IntOpenHashSet, int, java.lang.Object);
+}
+Compiled from "EmptyArea.java"
+public final class net.minecraft.client.gui.font.EmptyArea extends java.lang.Record implements net.minecraft.client.gui.font.ActiveArea {
+  private final float x;
+  private final float y;
+  private final float advance;
+  private final float ascent;
+  private final float height;
+  private final net.minecraft.network.chat.Style style;
+  public static final float DEFAULT_HEIGHT;
+  public static final float DEFAULT_ASCENT;
+  public net.minecraft.client.gui.font.EmptyArea(float, float, float, float, float, net.minecraft.network.chat.Style);
+  public float activeLeft();
+  public float activeTop();
+  public float activeRight();
+  public float activeBottom();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float x();
+  public float y();
+  public float advance();
+  public float ascent();
+  public float height();
+  public net.minecraft.network.chat.Style style();
+}
+Compiled from "FontManager.java"
+final class net.minecraft.client.gui.font.FontManager$BuilderId extends java.lang.Record {
+  private final net.minecraft.resources.Identifier fontId;
+  private final java.lang.String pack;
+  private final int index;
+  private net.minecraft.client.gui.font.FontManager$BuilderId(net.minecraft.resources.Identifier, java.lang.String, int);
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier fontId();
+  public java.lang.String pack();
+  public int index();
+}
+Compiled from "FontManager.java"
+final class net.minecraft.client.gui.font.FontManager$BuilderResult extends java.lang.Record {
+  private final net.minecraft.client.gui.font.FontManager$BuilderId id;
+  private final net.minecraft.client.gui.font.FontOption$Filter filter;
+  private final com.mojang.datafixers.util.Either<java.util.concurrent.CompletableFuture<java.util.Optional<com.mojang.blaze3d.font.GlyphProvider>>, net.minecraft.resources.Identifier> result;
+  private net.minecraft.client.gui.font.FontManager$BuilderResult(net.minecraft.client.gui.font.FontManager$BuilderId, net.minecraft.client.gui.font.FontOption$Filter, com.mojang.datafixers.util.Either<java.util.concurrent.CompletableFuture<java.util.Optional<com.mojang.blaze3d.font.GlyphProvider>>, net.minecraft.resources.Identifier>);
+  public java.util.Optional<java.util.List<com.mojang.blaze3d.font.GlyphProvider$Conditional>> resolve(java.util.function.Function<net.minecraft.resources.Identifier, java.util.List<com.mojang.blaze3d.font.GlyphProvider$Conditional>>);
+  private com.mojang.blaze3d.font.GlyphProvider$Conditional mergeFilters(com.mojang.blaze3d.font.GlyphProvider$Conditional);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.gui.font.FontManager$BuilderId id();
+  public net.minecraft.client.gui.font.FontOption$Filter filter();
+  public com.mojang.datafixers.util.Either<java.util.concurrent.CompletableFuture<java.util.Optional<com.mojang.blaze3d.font.GlyphProvider>>, net.minecraft.resources.Identifier> result();
+  private java.util.Optional lambda$resolve$2(java.util.function.Function, net.minecraft.resources.Identifier);
+  private java.util.Optional lambda$resolve$0(java.util.concurrent.CompletableFuture);
+  private java.util.List lambda$resolve$1(com.mojang.blaze3d.font.GlyphProvider);
+}
+Compiled from "FontManager.java"
+final class net.minecraft.client.gui.font.FontManager$CachedFontProvider$CachedEntry extends java.lang.Record {
+  private final net.minecraft.network.chat.FontDescription description;
+  private final net.minecraft.client.gui.GlyphSource source;
+  private net.minecraft.client.gui.font.FontManager$CachedFontProvider$CachedEntry(net.minecraft.network.chat.FontDescription, net.minecraft.client.gui.GlyphSource);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.network.chat.FontDescription description();
+  public net.minecraft.client.gui.GlyphSource source();
+}
+Compiled from "FontManager.java"
+class net.minecraft.client.gui.font.FontManager$CachedFontProvider implements net.minecraft.client.gui.Font$Provider,java.lang.AutoCloseable {
+  private final boolean nonFishyOnly;
+  private volatile net.minecraft.client.gui.font.FontManager$CachedFontProvider$CachedEntry lastEntry;
+  private volatile net.minecraft.client.gui.font.glyphs.EffectGlyph whiteGlyph;
+  final net.minecraft.client.gui.font.FontManager this$0;
+  private net.minecraft.client.gui.font.FontManager$CachedFontProvider(net.minecraft.client.gui.font.FontManager, boolean);
+  public void invalidate();
+  public void close();
+  private net.minecraft.client.gui.GlyphSource getGlyphSource(net.minecraft.network.chat.FontDescription);
+  public net.minecraft.client.gui.GlyphSource glyphs(net.minecraft.network.chat.FontDescription);
+  public net.minecraft.client.gui.font.glyphs.EffectGlyph effect();
+}
+Compiled from "FontManager.java"
+final class net.minecraft.client.gui.font.FontManager$FontDefinitionFile extends java.lang.Record {
+  private final java.util.List<net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Conditional> providers;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.gui.font.FontManager$FontDefinitionFile> CODEC;
+  private net.minecraft.client.gui.font.FontManager$FontDefinitionFile(java.util.List<net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Conditional>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Conditional> providers();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "FontManager.java"
+final class net.minecraft.client.gui.font.FontManager$Preparation extends java.lang.Record {
+  private final java.util.Map<net.minecraft.resources.Identifier, java.util.List<com.mojang.blaze3d.font.GlyphProvider$Conditional>> fontSets;
+  private final java.util.List<com.mojang.blaze3d.font.GlyphProvider> allProviders;
+  private net.minecraft.client.gui.font.FontManager$Preparation(java.util.Map<net.minecraft.resources.Identifier, java.util.List<com.mojang.blaze3d.font.GlyphProvider$Conditional>>, java.util.List<com.mojang.blaze3d.font.GlyphProvider>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Map<net.minecraft.resources.Identifier, java.util.List<com.mojang.blaze3d.font.GlyphProvider$Conditional>> fontSets();
+  public java.util.List<com.mojang.blaze3d.font.GlyphProvider> allProviders();
+}
+Compiled from "FontManager.java"
+final class net.minecraft.client.gui.font.FontManager$UnresolvedBuilderBundle extends java.lang.Record implements net.minecraft.util.DependencySorter$Entry<net.minecraft.resources.Identifier> {
+  private final net.minecraft.resources.Identifier fontId;
+  private final java.util.List<net.minecraft.client.gui.font.FontManager$BuilderResult> builders;
+  private final java.util.Set<net.minecraft.resources.Identifier> dependencies;
+  public net.minecraft.client.gui.font.FontManager$UnresolvedBuilderBundle(net.minecraft.resources.Identifier);
+  private net.minecraft.client.gui.font.FontManager$UnresolvedBuilderBundle(net.minecraft.resources.Identifier, java.util.List<net.minecraft.client.gui.font.FontManager$BuilderResult>, java.util.Set<net.minecraft.resources.Identifier>);
+  public void add(net.minecraft.client.gui.font.FontManager$BuilderId, net.minecraft.client.gui.font.FontOption$Filter, net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Reference);
+  public void add(net.minecraft.client.gui.font.FontManager$BuilderId, net.minecraft.client.gui.font.FontOption$Filter, java.util.concurrent.CompletableFuture<java.util.Optional<com.mojang.blaze3d.font.GlyphProvider>>);
+  private java.util.stream.Stream<java.util.concurrent.CompletableFuture<java.util.Optional<com.mojang.blaze3d.font.GlyphProvider>>> listBuilders();
+  public java.util.Optional<java.util.List<com.mojang.blaze3d.font.GlyphProvider$Conditional>> resolve(java.util.function.Function<net.minecraft.resources.Identifier, java.util.List<com.mojang.blaze3d.font.GlyphProvider$Conditional>>);
+  public void visitRequiredDependencies(java.util.function.Consumer<net.minecraft.resources.Identifier>);
+  public void visitOptionalDependencies(java.util.function.Consumer<net.minecraft.resources.Identifier>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier fontId();
+  public java.util.List<net.minecraft.client.gui.font.FontManager$BuilderResult> builders();
+  public java.util.Set<net.minecraft.resources.Identifier> dependencies();
+  private static java.util.stream.Stream lambda$listBuilders$0(net.minecraft.client.gui.font.FontManager$BuilderResult);
+}
+Compiled from "FontManager.java"
+public class net.minecraft.client.gui.font.FontManager implements java.lang.AutoCloseable,net.minecraft.server.packs.resources.PreparableReloadListener {
+  private static final org.slf4j.Logger LOGGER;
+  private static final java.lang.String FONTS_PATH;
+  public static final net.minecraft.resources.Identifier MISSING_FONT;
+  private static final net.minecraft.resources.FileToIdConverter FONT_DEFINITIONS;
+  private static final com.google.gson.Gson GSON;
+  private final net.minecraft.client.gui.font.FontSet missingFontSet;
+  private final java.util.List<com.mojang.blaze3d.font.GlyphProvider> providersToClose;
+  private final java.util.Map<net.minecraft.resources.Identifier, net.minecraft.client.gui.font.FontSet> fontSets;
+  private final net.minecraft.client.renderer.texture.TextureManager textureManager;
+  private final net.minecraft.client.gui.font.FontManager$CachedFontProvider anyGlyphs;
+  private final net.minecraft.client.gui.font.FontManager$CachedFontProvider nonFishyGlyphs;
+  private final net.minecraft.client.resources.model.sprite.AtlasManager atlasManager;
+  private final java.util.Map<net.minecraft.resources.Identifier, net.minecraft.client.gui.font.AtlasGlyphProvider> atlasProviders;
+  private final net.minecraft.client.gui.font.PlayerGlyphProvider playerProvider;
+  public net.minecraft.client.gui.font.FontManager(net.minecraft.client.renderer.texture.TextureManager, net.minecraft.client.resources.model.sprite.AtlasManager, net.minecraft.client.renderer.PlayerSkinRenderCache);
+  private net.minecraft.client.gui.font.FontSet createFontSet(net.minecraft.resources.Identifier, java.util.List<com.mojang.blaze3d.font.GlyphProvider$Conditional>, java.util.Set<net.minecraft.client.gui.font.FontOption>);
+  private static com.mojang.blaze3d.font.GlyphProvider$Conditional createFallbackProvider();
+  public java.util.concurrent.CompletableFuture<java.lang.Void> reload(net.minecraft.server.packs.resources.PreparableReloadListener$SharedState, java.util.concurrent.Executor, net.minecraft.server.packs.resources.PreparableReloadListener$PreparationBarrier, java.util.concurrent.Executor);
+  private java.util.concurrent.CompletableFuture<net.minecraft.client.gui.font.FontManager$Preparation> prepare(net.minecraft.server.packs.resources.ResourceManager, java.util.concurrent.Executor);
+  private java.util.concurrent.CompletableFuture<java.util.Optional<com.mojang.blaze3d.font.GlyphProvider>> safeLoad(net.minecraft.client.gui.font.FontManager$BuilderId, net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Loader, net.minecraft.server.packs.resources.ResourceManager, java.util.concurrent.Executor);
+  private java.util.Map<net.minecraft.resources.Identifier, java.util.List<com.mojang.blaze3d.font.GlyphProvider$Conditional>> resolveProviders(java.util.List<net.minecraft.client.gui.font.FontManager$UnresolvedBuilderBundle>);
+  private void finalizeProviderLoading(java.util.List<com.mojang.blaze3d.font.GlyphProvider$Conditional>, com.mojang.blaze3d.font.GlyphProvider$Conditional);
+  private static java.util.Set<net.minecraft.client.gui.font.FontOption> getFontOptions(net.minecraft.client.Options);
+  private void apply(net.minecraft.client.gui.font.FontManager$Preparation, net.minecraft.util.profiling.ProfilerFiller);
+  public void updateOptions(net.minecraft.client.Options);
+  private static java.util.List<com.mojang.datafixers.util.Pair<net.minecraft.client.gui.font.FontManager$BuilderId, net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Conditional>> loadResourceStack(java.util.List<net.minecraft.server.packs.resources.Resource>, net.minecraft.resources.Identifier);
+  public net.minecraft.client.gui.Font createFont();
+  public net.minecraft.client.gui.Font createFontFilterFishy();
+  private net.minecraft.client.gui.font.FontSet getFontSetRaw(net.minecraft.resources.Identifier);
+  private net.minecraft.client.gui.GlyphSource getSpriteFont(net.minecraft.network.chat.FontDescription$AtlasSprite);
+  public void close();
+  private void lambda$apply$1(net.minecraft.resources.Identifier, net.minecraft.client.renderer.texture.TextureAtlas);
+  private void lambda$apply$0(java.util.Set, net.minecraft.resources.Identifier, java.util.List);
+  private static void lambda$finalizeProviderLoading$0(java.util.List, int);
+  private static void lambda$resolveProviders$1(java.util.Map, net.minecraft.resources.Identifier, net.minecraft.client.gui.font.FontManager$UnresolvedBuilderBundle);
+  private static void lambda$resolveProviders$2(java.util.Map, net.minecraft.resources.Identifier, java.util.List);
+  private static void lambda$resolveProviders$0(net.minecraft.util.DependencySorter, net.minecraft.client.gui.font.FontManager$UnresolvedBuilderBundle);
+  private static java.util.Optional lambda$safeLoad$0(net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Loader, net.minecraft.server.packs.resources.ResourceManager, net.minecraft.client.gui.font.FontManager$BuilderId);
+  private java.util.concurrent.CompletionStage lambda$prepare$3(java.util.concurrent.Executor, java.util.List);
+  private java.util.concurrent.CompletionStage lambda$prepare$4(java.util.List, com.mojang.blaze3d.font.GlyphProvider$Conditional, java.util.concurrent.Executor, java.util.List);
+  private static net.minecraft.client.gui.font.FontManager$Preparation lambda$prepare$8(java.util.List, java.util.Map, java.lang.Void);
+  private static java.util.concurrent.CompletableFuture[] lambda$prepare$7(int);
+  private java.util.concurrent.CompletableFuture lambda$prepare$5(com.mojang.blaze3d.font.GlyphProvider$Conditional, java.util.concurrent.Executor, java.util.List);
+  private void lambda$prepare$6(java.util.List, com.mojang.blaze3d.font.GlyphProvider$Conditional);
+  private net.minecraft.client.gui.font.FontManager$UnresolvedBuilderBundle lambda$prepare$0(java.util.Map$Entry, net.minecraft.resources.Identifier, net.minecraft.server.packs.resources.ResourceManager, java.util.concurrent.Executor);
+  private static void lambda$prepare$2(net.minecraft.client.gui.font.FontManager$UnresolvedBuilderBundle, net.minecraft.client.gui.font.FontManager$BuilderId, net.minecraft.client.gui.font.FontOption$Filter, net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Reference);
+  private void lambda$prepare$1(net.minecraft.client.gui.font.FontManager$BuilderId, net.minecraft.server.packs.resources.ResourceManager, java.util.concurrent.Executor, net.minecraft.client.gui.font.FontManager$UnresolvedBuilderBundle, net.minecraft.client.gui.font.FontOption$Filter, net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Loader);
+  private void lambda$reload$0(net.minecraft.client.gui.font.FontManager$Preparation);
+  static {};
+}
+Compiled from "FontOption.java"
+public class net.minecraft.client.gui.font.FontOption$Filter {
+  private final java.util.Map<net.minecraft.client.gui.font.FontOption, java.lang.Boolean> values;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.gui.font.FontOption$Filter> CODEC;
+  public static final net.minecraft.client.gui.font.FontOption$Filter ALWAYS_PASS;
+  public net.minecraft.client.gui.font.FontOption$Filter(java.util.Map<net.minecraft.client.gui.font.FontOption, java.lang.Boolean>);
+  public boolean apply(java.util.Set<net.minecraft.client.gui.font.FontOption>);
+  public net.minecraft.client.gui.font.FontOption$Filter merge(net.minecraft.client.gui.font.FontOption$Filter);
+  private static java.util.Map lambda$static$0(net.minecraft.client.gui.font.FontOption$Filter);
+  static {};
+}
+Compiled from "FontOption.java"
+public final class net.minecraft.client.gui.font.FontOption extends java.lang.Enum<net.minecraft.client.gui.font.FontOption> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.client.gui.font.FontOption UNIFORM;
+  public static final net.minecraft.client.gui.font.FontOption JAPANESE_VARIANTS;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.gui.font.FontOption> CODEC;
+  private final java.lang.String name;
+  private static final net.minecraft.client.gui.font.FontOption[] $VALUES;
+  public static net.minecraft.client.gui.font.FontOption[] values();
+  public static net.minecraft.client.gui.font.FontOption valueOf(java.lang.String);
+  private net.minecraft.client.gui.font.FontOption(java.lang.String);
+  public java.lang.String getSerializedName();
+  private static net.minecraft.client.gui.font.FontOption[] $values();
+  static {};
+}
+Compiled from "FontSet.java"
+class net.minecraft.client.gui.font.FontSet$1 implements net.minecraft.client.gui.font.glyphs.BakedGlyph {
+  net.minecraft.client.gui.font.FontSet$1();
+  public com.mojang.blaze3d.font.GlyphInfo info();
+  public net.minecraft.client.gui.font.TextRenderable$Styled createGlyph(float, float, int, int, net.minecraft.network.chat.Style, float, float);
+}
+Compiled from "FontSet.java"
+class net.minecraft.client.gui.font.FontSet$2 implements com.mojang.blaze3d.font.UnbakedGlyph$Stitcher {
+  final net.minecraft.client.gui.font.FontSet this$0;
+  net.minecraft.client.gui.font.FontSet$2(net.minecraft.client.gui.font.FontSet);
+  public net.minecraft.client.gui.font.glyphs.BakedGlyph stitch(com.mojang.blaze3d.font.GlyphInfo, com.mojang.blaze3d.font.GlyphBitmap);
+  public net.minecraft.client.gui.font.glyphs.BakedGlyph getMissing();
+}
+Compiled from "FontSet.java"
+class net.minecraft.client.gui.font.FontSet$DelayedBake implements java.util.function.Supplier<net.minecraft.client.gui.font.glyphs.BakedGlyph> {
+  private final com.mojang.blaze3d.font.UnbakedGlyph unbaked;
+  private net.minecraft.client.gui.font.glyphs.BakedGlyph baked;
+  final net.minecraft.client.gui.font.FontSet this$0;
+  private net.minecraft.client.gui.font.FontSet$DelayedBake(net.minecraft.client.gui.font.FontSet, com.mojang.blaze3d.font.UnbakedGlyph);
+  public net.minecraft.client.gui.font.glyphs.BakedGlyph get();
+  public java.lang.Object get();
+}
+Compiled from "FontSet.java"
+final class net.minecraft.client.gui.font.FontSet$SelectedGlyphs extends java.lang.Record {
+  private final java.util.function.Supplier<net.minecraft.client.gui.font.glyphs.BakedGlyph> any;
+  private final java.util.function.Supplier<net.minecraft.client.gui.font.glyphs.BakedGlyph> nonFishy;
+  private net.minecraft.client.gui.font.FontSet$SelectedGlyphs(java.util.function.Supplier<net.minecraft.client.gui.font.glyphs.BakedGlyph>, java.util.function.Supplier<net.minecraft.client.gui.font.glyphs.BakedGlyph>);
+  private java.util.function.Supplier<net.minecraft.client.gui.font.glyphs.BakedGlyph> select(boolean);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.function.Supplier<net.minecraft.client.gui.font.glyphs.BakedGlyph> any();
+  public java.util.function.Supplier<net.minecraft.client.gui.font.glyphs.BakedGlyph> nonFishy();
+}
+Compiled from "FontSet.java"
+public class net.minecraft.client.gui.font.FontSet$Source implements net.minecraft.client.gui.GlyphSource {
+  private final boolean filterFishyGlyphs;
+  final net.minecraft.client.gui.font.FontSet this$0;
+  public net.minecraft.client.gui.font.FontSet$Source(net.minecraft.client.gui.font.FontSet, boolean);
+  public net.minecraft.client.gui.font.glyphs.BakedGlyph getGlyph(int);
+  public net.minecraft.client.gui.font.glyphs.BakedGlyph getRandomGlyph(net.minecraft.util.RandomSource, int);
+}
+Compiled from "FontSet.java"
+public class net.minecraft.client.gui.font.FontSet implements java.lang.AutoCloseable {
+  private static final float LARGE_FORWARD_ADVANCE;
+  private static final net.minecraft.client.gui.font.glyphs.BakedGlyph INVISIBLE_MISSING_GLYPH;
+  private final net.minecraft.client.gui.font.GlyphStitcher stitcher;
+  private final com.mojang.blaze3d.font.UnbakedGlyph$Stitcher wrappedStitcher;
+  private java.util.List<com.mojang.blaze3d.font.GlyphProvider$Conditional> allProviders;
+  private java.util.List<com.mojang.blaze3d.font.GlyphProvider> activeProviders;
+  private final it.unimi.dsi.fastutil.ints.Int2ObjectMap<it.unimi.dsi.fastutil.ints.IntList> glyphsByWidth;
+  private final net.minecraft.client.gui.font.CodepointMap<net.minecraft.client.gui.font.FontSet$SelectedGlyphs> glyphCache;
+  private final java.util.function.IntFunction<net.minecraft.client.gui.font.FontSet$SelectedGlyphs> glyphGetter;
+  private net.minecraft.client.gui.font.glyphs.BakedGlyph missingGlyph;
+  private final java.util.function.Supplier<net.minecraft.client.gui.font.glyphs.BakedGlyph> missingGlyphGetter;
+  private final net.minecraft.client.gui.font.FontSet$SelectedGlyphs missingSelectedGlyphs;
+  private net.minecraft.client.gui.font.glyphs.EffectGlyph whiteGlyph;
+  private final net.minecraft.client.gui.GlyphSource anyGlyphs;
+  private final net.minecraft.client.gui.GlyphSource nonFishyGlyphs;
+  public net.minecraft.client.gui.font.FontSet(net.minecraft.client.gui.font.GlyphStitcher);
+  public void reload(java.util.List<com.mojang.blaze3d.font.GlyphProvider$Conditional>, java.util.Set<net.minecraft.client.gui.font.FontOption>);
+  public void reload(java.util.Set<net.minecraft.client.gui.font.FontOption>);
+  private void resetTextures();
+  private java.util.List<com.mojang.blaze3d.font.GlyphProvider> selectProviders(java.util.List<com.mojang.blaze3d.font.GlyphProvider$Conditional>, java.util.Set<net.minecraft.client.gui.font.FontOption>);
+  public void close();
+  private static boolean hasFishyAdvance(com.mojang.blaze3d.font.GlyphInfo);
+  private net.minecraft.client.gui.font.FontSet$SelectedGlyphs computeGlyphInfo(int);
+  private net.minecraft.client.gui.font.FontSet$SelectedGlyphs getGlyph(int);
+  public net.minecraft.client.gui.font.glyphs.BakedGlyph getRandomGlyph(net.minecraft.util.RandomSource, int);
+  public net.minecraft.client.gui.font.glyphs.EffectGlyph whiteGlyph();
+  public net.minecraft.client.gui.GlyphSource source(boolean);
+  private void lambda$selectProviders$0(java.util.List, java.util.Set, int);
+  private static it.unimi.dsi.fastutil.ints.IntList lambda$selectProviders$1(int);
+  private net.minecraft.client.gui.font.glyphs.BakedGlyph lambda$new$0();
+  private static net.minecraft.client.gui.font.FontSet$SelectedGlyphs[][] lambda$glyphCache$1(int);
+  private static net.minecraft.client.gui.font.FontSet$SelectedGlyphs[] lambda$glyphCache$0(int);
+  static {};
+}
+Compiled from "FontTexture.java"
+class net.minecraft.client.gui.font.FontTexture$Node {
+  private final int x;
+  private final int y;
+  private final int width;
+  private final int height;
+  private net.minecraft.client.gui.font.FontTexture$Node left;
+  private net.minecraft.client.gui.font.FontTexture$Node right;
+  private boolean occupied;
+  private net.minecraft.client.gui.font.FontTexture$Node(int, int, int, int);
+  public net.minecraft.client.gui.font.FontTexture$Node insert(com.mojang.blaze3d.font.GlyphBitmap);
+}
+Compiled from "FontTexture.java"
+public class net.minecraft.client.gui.font.FontTexture extends net.minecraft.client.renderer.texture.AbstractTexture implements net.minecraft.client.renderer.texture.Dumpable {
+  private static final int SIZE;
+  private final net.minecraft.client.gui.font.GlyphRenderTypes renderTypes;
+  private final boolean colored;
+  private final net.minecraft.client.gui.font.FontTexture$Node root;
+  public net.minecraft.client.gui.font.FontTexture(java.util.function.Supplier<java.lang.String>, net.minecraft.client.gui.font.GlyphRenderTypes, boolean);
+  public net.minecraft.client.gui.font.glyphs.BakedSheetGlyph add(com.mojang.blaze3d.font.GlyphInfo, com.mojang.blaze3d.font.GlyphBitmap);
+  public void dumpContents(net.minecraft.resources.Identifier, java.nio.file.Path);
+  private static int lambda$dumpContents$0(int);
+}
+Compiled from "GlyphRenderTypes.java"
+class net.minecraft.client.gui.font.GlyphRenderTypes$1 {
+  static final int[] $SwitchMap$net$minecraft$client$gui$Font$DisplayMode;
+  static {};
+}
+Compiled from "GlyphRenderTypes.java"
+public final class net.minecraft.client.gui.font.GlyphRenderTypes extends java.lang.Record {
+  private final net.minecraft.client.renderer.rendertype.RenderType normal;
+  private final net.minecraft.client.renderer.rendertype.RenderType seeThrough;
+  private final net.minecraft.client.renderer.rendertype.RenderType polygonOffset;
+  private final com.mojang.blaze3d.pipeline.RenderPipeline guiPipeline;
+  public net.minecraft.client.gui.font.GlyphRenderTypes(net.minecraft.client.renderer.rendertype.RenderType, net.minecraft.client.renderer.rendertype.RenderType, net.minecraft.client.renderer.rendertype.RenderType, com.mojang.blaze3d.pipeline.RenderPipeline);
+  public static net.minecraft.client.gui.font.GlyphRenderTypes createForGrayscaleTexture(net.minecraft.resources.Identifier);
+  public static net.minecraft.client.gui.font.GlyphRenderTypes createForColorTexture(net.minecraft.resources.Identifier);
+  public net.minecraft.client.renderer.rendertype.RenderType select(net.minecraft.client.gui.Font$DisplayMode);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.renderer.rendertype.RenderType normal();
+  public net.minecraft.client.renderer.rendertype.RenderType seeThrough();
+  public net.minecraft.client.renderer.rendertype.RenderType polygonOffset();
+  public com.mojang.blaze3d.pipeline.RenderPipeline guiPipeline();
+}
+Compiled from "GlyphStitcher.java"
+public class net.minecraft.client.gui.font.GlyphStitcher implements java.lang.AutoCloseable {
+  private final net.minecraft.client.renderer.texture.TextureManager textureManager;
+  private final net.minecraft.resources.Identifier texturePrefix;
+  private final java.util.List<net.minecraft.client.gui.font.FontTexture> textures;
+  public net.minecraft.client.gui.font.GlyphStitcher(net.minecraft.client.renderer.texture.TextureManager, net.minecraft.resources.Identifier);
+  public void reset();
+  public void close();
+  public net.minecraft.client.gui.font.glyphs.BakedSheetGlyph stitch(com.mojang.blaze3d.font.GlyphInfo, com.mojang.blaze3d.font.GlyphBitmap);
+  private net.minecraft.resources.Identifier textureName(int);
+}
+Compiled from "PlainTextRenderable.java"
+public interface net.minecraft.client.gui.font.PlainTextRenderable extends net.minecraft.client.gui.font.TextRenderable$Styled {
+  public static final float DEFAULT_WIDTH;
+  public static final float DEFAULT_HEIGHT;
+  public static final float DEFUAULT_ASCENT;
+  public default void render(org.joml.Matrix4fc, com.mojang.blaze3d.vertex.VertexConsumer, int, boolean);
+  public abstract void renderSprite(org.joml.Matrix4fc, com.mojang.blaze3d.vertex.VertexConsumer, int, float, float, float, int);
+  public abstract float x();
+  public abstract float y();
+  public abstract int color();
+  public abstract int shadowColor();
+  public abstract float shadowOffset();
+  public default float width();
+  public default float height();
+  public default float ascent();
+  public default float left();
+  public default float right();
+  public default float top();
+  public default float bottom();
+}
+Compiled from "PlayerGlyphProvider.java"
+class net.minecraft.client.gui.font.PlayerGlyphProvider$1$1 implements net.minecraft.client.gui.font.glyphs.BakedGlyph {
+  final java.util.function.Supplier val$skin;
+  final boolean val$hat;
+  net.minecraft.client.gui.font.PlayerGlyphProvider$1$1();
+  public com.mojang.blaze3d.font.GlyphInfo info();
+  public net.minecraft.client.gui.font.TextRenderable$Styled createGlyph(float, float, int, int, net.minecraft.network.chat.Style, float, float);
+}
+Compiled from "PlayerGlyphProvider.java"
+class net.minecraft.client.gui.font.PlayerGlyphProvider$1 extends com.google.common.cache.CacheLoader<net.minecraft.network.chat.FontDescription$PlayerSprite, net.minecraft.client.gui.GlyphSource> {
+  final net.minecraft.client.gui.font.PlayerGlyphProvider this$0;
+  net.minecraft.client.gui.font.PlayerGlyphProvider$1(net.minecraft.client.gui.font.PlayerGlyphProvider);
+  public net.minecraft.client.gui.GlyphSource load(net.minecraft.network.chat.FontDescription$PlayerSprite);
+  public java.lang.Object load(java.lang.Object) throws java.lang.Exception;
+}
+Compiled from "PlayerGlyphProvider.java"
+final class net.minecraft.client.gui.font.PlayerGlyphProvider$Instance extends java.lang.Record implements net.minecraft.client.gui.font.PlainTextRenderable {
+  private final java.util.function.Supplier<net.minecraft.client.renderer.PlayerSkinRenderCache$RenderInfo> skin;
+  private final boolean hat;
+  private final float x;
+  private final float y;
+  private final int color;
+  private final int shadowColor;
+  private final float shadowOffset;
+  private final net.minecraft.network.chat.Style style;
+  private net.minecraft.client.gui.font.PlayerGlyphProvider$Instance(java.util.function.Supplier<net.minecraft.client.renderer.PlayerSkinRenderCache$RenderInfo>, boolean, float, float, int, int, float, net.minecraft.network.chat.Style);
+  public void renderSprite(org.joml.Matrix4fc, com.mojang.blaze3d.vertex.VertexConsumer, int, float, float, float, int);
+  private static void renderQuad(org.joml.Matrix4fc, com.mojang.blaze3d.vertex.VertexConsumer, int, float, float, float, float, float, int, float, float, int, int, int, int);
+  public net.minecraft.client.renderer.rendertype.RenderType renderType(net.minecraft.client.gui.Font$DisplayMode);
+  public com.mojang.blaze3d.pipeline.RenderPipeline guiPipeline();
+  public com.mojang.blaze3d.textures.GpuTextureView textureView();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.function.Supplier<net.minecraft.client.renderer.PlayerSkinRenderCache$RenderInfo> skin();
+  public boolean hat();
+  public float x();
+  public float y();
+  public int color();
+  public int shadowColor();
+  public float shadowOffset();
+  public net.minecraft.network.chat.Style style();
+}
+Compiled from "PlayerGlyphProvider.java"
+public class net.minecraft.client.gui.font.PlayerGlyphProvider {
+  private static final com.mojang.blaze3d.font.GlyphInfo GLYPH_INFO;
+  private final net.minecraft.client.renderer.PlayerSkinRenderCache playerSkinRenderCache;
+  private final com.google.common.cache.LoadingCache<net.minecraft.network.chat.FontDescription$PlayerSprite, net.minecraft.client.gui.GlyphSource> wrapperCache;
+  public net.minecraft.client.gui.font.PlayerGlyphProvider(net.minecraft.client.renderer.PlayerSkinRenderCache);
+  public net.minecraft.client.gui.GlyphSource sourceForPlayer(net.minecraft.network.chat.FontDescription$PlayerSprite);
+  static {};
+}
+Compiled from "SingleSpriteSource.java"
+public final class net.minecraft.client.gui.font.SingleSpriteSource extends java.lang.Record implements net.minecraft.client.gui.GlyphSource {
+  private final net.minecraft.client.gui.font.glyphs.BakedGlyph glyph;
+  public net.minecraft.client.gui.font.SingleSpriteSource(net.minecraft.client.gui.font.glyphs.BakedGlyph);
+  public net.minecraft.client.gui.font.glyphs.BakedGlyph getGlyph(int);
+  public net.minecraft.client.gui.font.glyphs.BakedGlyph getRandomGlyph(net.minecraft.util.RandomSource, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.gui.font.glyphs.BakedGlyph glyph();
+}
+Compiled from "TextFieldHelper.java"
+public final class net.minecraft.client.gui.font.TextFieldHelper$CursorStep extends java.lang.Enum<net.minecraft.client.gui.font.TextFieldHelper$CursorStep> {
+  public static final net.minecraft.client.gui.font.TextFieldHelper$CursorStep CHARACTER;
+  public static final net.minecraft.client.gui.font.TextFieldHelper$CursorStep WORD;
+  private static final net.minecraft.client.gui.font.TextFieldHelper$CursorStep[] $VALUES;
+  public static net.minecraft.client.gui.font.TextFieldHelper$CursorStep[] values();
+  public static net.minecraft.client.gui.font.TextFieldHelper$CursorStep valueOf(java.lang.String);
+  private net.minecraft.client.gui.font.TextFieldHelper$CursorStep();
+  private static net.minecraft.client.gui.font.TextFieldHelper$CursorStep[] $values();
+  static {};
+}
+Compiled from "TextFieldHelper.java"
+public class net.minecraft.client.gui.font.TextFieldHelper {
+  private final java.util.function.Supplier<java.lang.String> getMessageFn;
+  private final java.util.function.Consumer<java.lang.String> setMessageFn;
+  private final java.util.function.Supplier<java.lang.String> getClipboardFn;
+  private final java.util.function.Consumer<java.lang.String> setClipboardFn;
+  private final java.util.function.Predicate<java.lang.String> stringValidator;
+  private int cursorPos;
+  private int selectionPos;
+  public net.minecraft.client.gui.font.TextFieldHelper(java.util.function.Supplier<java.lang.String>, java.util.function.Consumer<java.lang.String>, java.util.function.Supplier<java.lang.String>, java.util.function.Consumer<java.lang.String>, java.util.function.Predicate<java.lang.String>);
+  public static java.util.function.Supplier<java.lang.String> createClipboardGetter(net.minecraft.client.Minecraft);
+  public static java.lang.String getClipboardContents(net.minecraft.client.Minecraft);
+  public static java.util.function.Consumer<java.lang.String> createClipboardSetter(net.minecraft.client.Minecraft);
+  public static void setClipboardContents(net.minecraft.client.Minecraft, java.lang.String);
+  public boolean charTyped(net.minecraft.client.input.CharacterEvent);
+  public boolean keyPressed(net.minecraft.client.input.KeyEvent);
+  private int clampToMsgLength(int);
+  private void insertText(java.lang.String, java.lang.String);
+  public void insertText(java.lang.String);
+  private void resetSelectionIfNeeded(boolean);
+  public void moveBy(int, boolean, net.minecraft.client.gui.font.TextFieldHelper$CursorStep);
+  public void moveByChars(int);
+  public void moveByChars(int, boolean);
+  public void moveByWords(int);
+  public void moveByWords(int, boolean);
+  public void removeFromCursor(int, net.minecraft.client.gui.font.TextFieldHelper$CursorStep);
+  public void removeWordsFromCursor(int);
+  public void removeCharsFromCursor(int);
+  public void cut();
+  public void paste();
+  public void copy();
+  public void selectAll();
+  private java.lang.String getSelected(java.lang.String);
+  private java.lang.String deleteSelection(java.lang.String);
+  public void setCursorToStart();
+  public void setCursorToStart(boolean);
+  public void setCursorToEnd();
+  public void setCursorToEnd(boolean);
+  public int getCursorPos();
+  public void setCursorPos(int);
+  public void setCursorPos(int, boolean);
+  public int getSelectionPos();
+  public void setSelectionPos(int);
+  public void setSelectionRange(int, int);
+  public boolean isSelecting();
+  private static void lambda$createClipboardSetter$0(net.minecraft.client.Minecraft, java.lang.String);
+  private static java.lang.String lambda$createClipboardGetter$0(net.minecraft.client.Minecraft);
+}
+Compiled from "TextRenderable.java"
+public interface net.minecraft.client.gui.font.TextRenderable$Styled extends net.minecraft.client.gui.font.TextRenderable,net.minecraft.client.gui.font.ActiveArea {
+  public default float activeLeft();
+  public default float activeTop();
+  public default float activeRight();
+  public default float activeBottom();
+}
+Compiled from "TextRenderable.java"
+public interface net.minecraft.client.gui.font.TextRenderable {
+  public abstract void render(org.joml.Matrix4fc, com.mojang.blaze3d.vertex.VertexConsumer, int, boolean);
+  public abstract net.minecraft.client.renderer.rendertype.RenderType renderType(net.minecraft.client.gui.Font$DisplayMode);
+  public abstract com.mojang.blaze3d.textures.GpuTextureView textureView();
+  public abstract com.mojang.blaze3d.pipeline.RenderPipeline guiPipeline();
+  public abstract float left();
+  public abstract float top();
+  public abstract float right();
+  public abstract float bottom();
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.gui.font.package-info {
+}

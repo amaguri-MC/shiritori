@@ -1,0 +1,58 @@
+Compiled from "package-info.java"
+interface net.minecraft.world.scores.criteria.package-info {
+}
+Compiled from "ObjectiveCriteria.java"
+public final class net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType extends java.lang.Enum<net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType INTEGER;
+  public static final net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType HEARTS;
+  private final java.lang.String id;
+  public static final net.minecraft.util.StringRepresentable$EnumCodec<net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType> CODEC;
+  private static final net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType[] $VALUES;
+  public static net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType[] values();
+  public static net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType valueOf(java.lang.String);
+  private net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType(java.lang.String);
+  public java.lang.String getId();
+  public java.lang.String getSerializedName();
+  public static net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType byId(java.lang.String);
+  private static net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType[] $values();
+  static {};
+}
+Compiled from "ObjectiveCriteria.java"
+public class net.minecraft.world.scores.criteria.ObjectiveCriteria {
+  private static final java.util.Map<java.lang.String, net.minecraft.world.scores.criteria.ObjectiveCriteria> CUSTOM_CRITERIA;
+  private static final java.util.Map<java.lang.String, net.minecraft.world.scores.criteria.ObjectiveCriteria> CRITERIA_CACHE;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.scores.criteria.ObjectiveCriteria> CODEC;
+  public static final net.minecraft.world.scores.criteria.ObjectiveCriteria DUMMY;
+  public static final net.minecraft.world.scores.criteria.ObjectiveCriteria TRIGGER;
+  public static final net.minecraft.world.scores.criteria.ObjectiveCriteria DEATH_COUNT;
+  public static final net.minecraft.world.scores.criteria.ObjectiveCriteria KILL_COUNT_PLAYERS;
+  public static final net.minecraft.world.scores.criteria.ObjectiveCriteria KILL_COUNT_ALL;
+  public static final net.minecraft.world.scores.criteria.ObjectiveCriteria HEALTH;
+  public static final net.minecraft.world.scores.criteria.ObjectiveCriteria FOOD;
+  public static final net.minecraft.world.scores.criteria.ObjectiveCriteria AIR;
+  public static final net.minecraft.world.scores.criteria.ObjectiveCriteria ARMOR;
+  public static final net.minecraft.world.scores.criteria.ObjectiveCriteria EXPERIENCE;
+  public static final net.minecraft.world.scores.criteria.ObjectiveCriteria LEVEL;
+  public static final java.util.Map<net.minecraft.world.scores.TeamColor, net.minecraft.world.scores.criteria.ObjectiveCriteria> TEAM_KILL;
+  public static final java.util.Map<net.minecraft.world.scores.TeamColor, net.minecraft.world.scores.criteria.ObjectiveCriteria> KILLED_BY_TEAM;
+  private final java.lang.String name;
+  private final boolean readOnly;
+  private final net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType renderType;
+  private static java.util.Map<net.minecraft.world.scores.TeamColor, net.minecraft.world.scores.criteria.ObjectiveCriteria> registerForEveryTeamColor(java.util.function.Function<net.minecraft.world.scores.TeamColor, java.lang.String>);
+  private static net.minecraft.world.scores.criteria.ObjectiveCriteria registerCustom(java.lang.String, boolean, net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType);
+  private static net.minecraft.world.scores.criteria.ObjectiveCriteria registerCustom(java.lang.String);
+  protected net.minecraft.world.scores.criteria.ObjectiveCriteria(java.lang.String);
+  protected net.minecraft.world.scores.criteria.ObjectiveCriteria(java.lang.String, boolean, net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType);
+  public static java.util.Set<java.lang.String> getCustomCriteriaNames();
+  public static java.util.Optional<net.minecraft.world.scores.criteria.ObjectiveCriteria> byName(java.lang.String);
+  private static <T> java.util.Optional<net.minecraft.world.scores.criteria.ObjectiveCriteria> getStat(net.minecraft.stats.StatType<T>, net.minecraft.resources.Identifier);
+  public java.lang.String getName();
+  public boolean isReadOnly();
+  public net.minecraft.world.scores.criteria.ObjectiveCriteria$RenderType getDefaultRenderType();
+  private static java.util.Optional lambda$byName$0(java.lang.String, int, net.minecraft.stats.StatType);
+  private static java.lang.String lambda$static$3(net.minecraft.world.scores.TeamColor);
+  private static java.lang.String lambda$static$2(net.minecraft.world.scores.TeamColor);
+  private static com.mojang.serialization.DataResult lambda$static$0(java.lang.String);
+  private static java.lang.String lambda$static$1(java.lang.String);
+  static {};
+}

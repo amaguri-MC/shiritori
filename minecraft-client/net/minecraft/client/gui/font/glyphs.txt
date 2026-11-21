@@ -1,0 +1,156 @@
+Compiled from "BakedGlyph.java"
+public interface net.minecraft.client.gui.font.glyphs.BakedGlyph {
+  public abstract com.mojang.blaze3d.font.GlyphInfo info();
+  public abstract net.minecraft.client.gui.font.TextRenderable$Styled createGlyph(float, float, int, int, net.minecraft.network.chat.Style, float, float);
+}
+Compiled from "BakedSheetGlyph.java"
+final class net.minecraft.client.gui.font.glyphs.BakedSheetGlyph$EffectInstance extends java.lang.Record implements net.minecraft.client.gui.font.TextRenderable {
+  private final net.minecraft.client.gui.font.glyphs.BakedSheetGlyph glyph;
+  private final float x0;
+  private final float y0;
+  private final float x1;
+  private final float y1;
+  private final float depth;
+  private final int color;
+  private final int shadowColor;
+  private final float shadowOffset;
+  private net.minecraft.client.gui.font.glyphs.BakedSheetGlyph$EffectInstance(net.minecraft.client.gui.font.glyphs.BakedSheetGlyph, float, float, float, float, float, int, int, float);
+  public float left();
+  public float top();
+  public float right();
+  public float bottom();
+  private boolean hasShadow();
+  public void render(org.joml.Matrix4fc, com.mojang.blaze3d.vertex.VertexConsumer, int, boolean);
+  public net.minecraft.client.renderer.rendertype.RenderType renderType(net.minecraft.client.gui.Font$DisplayMode);
+  public com.mojang.blaze3d.textures.GpuTextureView textureView();
+  public com.mojang.blaze3d.pipeline.RenderPipeline guiPipeline();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.gui.font.glyphs.BakedSheetGlyph glyph();
+  public float x0();
+  public float y0();
+  public float x1();
+  public float y1();
+  public float depth();
+  public int color();
+  public int shadowColor();
+  public float shadowOffset();
+}
+Compiled from "BakedSheetGlyph.java"
+final class net.minecraft.client.gui.font.glyphs.BakedSheetGlyph$GlyphInstance extends java.lang.Record implements net.minecraft.client.gui.font.TextRenderable$Styled {
+  private final float x;
+  private final float y;
+  private final int color;
+  private final int shadowColor;
+  private final net.minecraft.client.gui.font.glyphs.BakedSheetGlyph glyph;
+  private final net.minecraft.network.chat.Style style;
+  private final float boldOffset;
+  private final float shadowOffset;
+  private net.minecraft.client.gui.font.glyphs.BakedSheetGlyph$GlyphInstance(float, float, int, int, net.minecraft.client.gui.font.glyphs.BakedSheetGlyph, net.minecraft.network.chat.Style, float, float);
+  public float left();
+  public float top();
+  public float right();
+  public float activeRight();
+  public float bottom();
+  private boolean hasShadow();
+  public void render(org.joml.Matrix4fc, com.mojang.blaze3d.vertex.VertexConsumer, int, boolean);
+  public net.minecraft.client.renderer.rendertype.RenderType renderType(net.minecraft.client.gui.Font$DisplayMode);
+  public com.mojang.blaze3d.textures.GpuTextureView textureView();
+  public com.mojang.blaze3d.pipeline.RenderPipeline guiPipeline();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float x();
+  public float y();
+  public int color();
+  public int shadowColor();
+  public net.minecraft.client.gui.font.glyphs.BakedSheetGlyph glyph();
+  public net.minecraft.network.chat.Style style();
+  public float boldOffset();
+  public float shadowOffset();
+}
+Compiled from "BakedSheetGlyph.java"
+public class net.minecraft.client.gui.font.glyphs.BakedSheetGlyph implements net.minecraft.client.gui.font.glyphs.EffectGlyph,net.minecraft.client.gui.font.glyphs.BakedGlyph {
+  public static final float Z_FIGHTER;
+  private final com.mojang.blaze3d.font.GlyphInfo info;
+  private final net.minecraft.client.gui.font.GlyphRenderTypes renderTypes;
+  private final com.mojang.blaze3d.textures.GpuTextureView textureView;
+  private final float u0;
+  private final float u1;
+  private final float v0;
+  private final float v1;
+  private final float left;
+  private final float right;
+  private final float up;
+  private final float down;
+  public net.minecraft.client.gui.font.glyphs.BakedSheetGlyph(com.mojang.blaze3d.font.GlyphInfo, net.minecraft.client.gui.font.GlyphRenderTypes, com.mojang.blaze3d.textures.GpuTextureView, float, float, float, float, float, float, float, float);
+  private float left(net.minecraft.client.gui.font.glyphs.BakedSheetGlyph$GlyphInstance);
+  private float top(net.minecraft.client.gui.font.glyphs.BakedSheetGlyph$GlyphInstance);
+  private float right(net.minecraft.client.gui.font.glyphs.BakedSheetGlyph$GlyphInstance);
+  private float bottom(net.minecraft.client.gui.font.glyphs.BakedSheetGlyph$GlyphInstance);
+  private void renderChar(net.minecraft.client.gui.font.glyphs.BakedSheetGlyph$GlyphInstance, org.joml.Matrix4fc, com.mojang.blaze3d.vertex.VertexConsumer, int, boolean);
+  private void render(boolean, float, float, float, org.joml.Matrix4fc, com.mojang.blaze3d.vertex.VertexConsumer, int, boolean, int);
+  private static float extraThickness(boolean);
+  private float shearBottom();
+  private float shearTop();
+  private void renderEffect(net.minecraft.client.gui.font.glyphs.BakedSheetGlyph$EffectInstance, org.joml.Matrix4fc, com.mojang.blaze3d.vertex.VertexConsumer, int, boolean);
+  private void buildEffect(net.minecraft.client.gui.font.glyphs.BakedSheetGlyph$EffectInstance, float, float, int, com.mojang.blaze3d.vertex.VertexConsumer, int, org.joml.Matrix4fc);
+  public com.mojang.blaze3d.font.GlyphInfo info();
+  public net.minecraft.client.gui.font.TextRenderable$Styled createGlyph(float, float, int, int, net.minecraft.network.chat.Style, float, float);
+  public net.minecraft.client.gui.font.TextRenderable createEffect(float, float, float, float, float, int, int, float);
+}
+Compiled from "EffectGlyph.java"
+public interface net.minecraft.client.gui.font.glyphs.EffectGlyph {
+  public abstract net.minecraft.client.gui.font.TextRenderable createEffect(float, float, float, float, float, int, int, float);
+}
+Compiled from "EmptyGlyph.java"
+class net.minecraft.client.gui.font.glyphs.EmptyGlyph$1 implements net.minecraft.client.gui.font.glyphs.BakedGlyph {
+  final net.minecraft.client.gui.font.glyphs.EmptyGlyph this$0;
+  net.minecraft.client.gui.font.glyphs.EmptyGlyph$1(net.minecraft.client.gui.font.glyphs.EmptyGlyph);
+  public com.mojang.blaze3d.font.GlyphInfo info();
+  public net.minecraft.client.gui.font.TextRenderable$Styled createGlyph(float, float, int, int, net.minecraft.network.chat.Style, float, float);
+}
+Compiled from "EmptyGlyph.java"
+public class net.minecraft.client.gui.font.glyphs.EmptyGlyph implements com.mojang.blaze3d.font.UnbakedGlyph {
+  private final com.mojang.blaze3d.font.GlyphInfo info;
+  public net.minecraft.client.gui.font.glyphs.EmptyGlyph(float);
+  public com.mojang.blaze3d.font.GlyphInfo info();
+  public net.minecraft.client.gui.font.glyphs.BakedGlyph bake(com.mojang.blaze3d.font.UnbakedGlyph$Stitcher);
+}
+Compiled from "SpecialGlyphs.java"
+class net.minecraft.client.gui.font.glyphs.SpecialGlyphs$1 implements com.mojang.blaze3d.font.GlyphBitmap {
+  final net.minecraft.client.gui.font.glyphs.SpecialGlyphs this$0;
+  net.minecraft.client.gui.font.glyphs.SpecialGlyphs$1(net.minecraft.client.gui.font.glyphs.SpecialGlyphs);
+  public int getPixelWidth();
+  public int getPixelHeight();
+  public float getOversample();
+  public void upload(int, int, com.mojang.blaze3d.textures.GpuTexture);
+  public boolean isColored();
+}
+Compiled from "SpecialGlyphs.java"
+interface net.minecraft.client.gui.font.glyphs.SpecialGlyphs$PixelProvider {
+  public abstract int getColor(int, int);
+}
+Compiled from "SpecialGlyphs.java"
+public final class net.minecraft.client.gui.font.glyphs.SpecialGlyphs extends java.lang.Enum<net.minecraft.client.gui.font.glyphs.SpecialGlyphs> implements com.mojang.blaze3d.font.GlyphInfo {
+  public static final net.minecraft.client.gui.font.glyphs.SpecialGlyphs WHITE;
+  public static final net.minecraft.client.gui.font.glyphs.SpecialGlyphs MISSING;
+  private final com.mojang.blaze3d.platform.NativeImage image;
+  private static final net.minecraft.client.gui.font.glyphs.SpecialGlyphs[] $VALUES;
+  public static net.minecraft.client.gui.font.glyphs.SpecialGlyphs[] values();
+  public static net.minecraft.client.gui.font.glyphs.SpecialGlyphs valueOf(java.lang.String);
+  private static com.mojang.blaze3d.platform.NativeImage generate(int, int, net.minecraft.client.gui.font.glyphs.SpecialGlyphs$PixelProvider);
+  private net.minecraft.client.gui.font.glyphs.SpecialGlyphs(java.util.function.Supplier<com.mojang.blaze3d.platform.NativeImage>);
+  public float getAdvance();
+  public net.minecraft.client.gui.font.glyphs.BakedSheetGlyph bake(net.minecraft.client.gui.font.GlyphStitcher);
+  private static net.minecraft.client.gui.font.glyphs.SpecialGlyphs[] $values();
+  private static com.mojang.blaze3d.platform.NativeImage lambda$static$2();
+  private static int lambda$static$3(int, int);
+  private static com.mojang.blaze3d.platform.NativeImage lambda$static$0();
+  private static int lambda$static$1(int, int);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.gui.font.glyphs.package-info {
+}

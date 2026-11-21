@@ -1,0 +1,10 @@
+Compiled from "LeashKnotModel.java"
+public class net.minecraft.client.model.object.leash.LeashKnotModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.EntityRenderState> {
+  private static final java.lang.String KNOT;
+  private final net.minecraft.client.model.geom.ModelPart knot;
+  public net.minecraft.client.model.object.leash.LeashKnotModel(net.minecraft.client.model.geom.ModelPart);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.model.object.leash.package-info {
+}

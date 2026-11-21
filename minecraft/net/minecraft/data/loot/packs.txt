@@ -1,0 +1,403 @@
+Compiled from "VanillaShearingLoot.java"
+public final class net.minecraft.data.loot.packs.VanillaShearingLoot extends java.lang.Record implements net.minecraft.data.loot.LootTableSubProvider {
+  private final net.minecraft.core.HolderLookup$Provider registries;
+  public net.minecraft.data.loot.packs.VanillaShearingLoot(net.minecraft.core.HolderLookup$Provider);
+  public void generate(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.HolderLookup$Provider registries();
+  private static void lambda$generate$0(java.util.function.BiConsumer, net.minecraft.resources.ResourceKey, net.minecraft.world.level.block.Block);
+}
+Compiled from "VanillaChargedCreeperExplosionLoot.java"
+public final class net.minecraft.data.loot.packs.VanillaChargedCreeperExplosionLoot extends java.lang.Record implements net.minecraft.data.loot.LootTableSubProvider {
+  private final net.minecraft.core.HolderLookup$Provider registries;
+  private static final java.util.List<net.minecraft.data.loot.packs.VanillaChargedCreeperExplosionLoot$Entry> ENTRIES;
+  public net.minecraft.data.loot.packs.VanillaChargedCreeperExplosionLoot(net.minecraft.core.HolderLookup$Provider);
+  public void generate(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.HolderLookup$Provider registries();
+  private static net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder[] lambda$generate$0(int);
+  static {};
+}
+Compiled from "VanillaBlockLoot.java"
+public class net.minecraft.data.loot.packs.VanillaBlockLoot extends net.minecraft.data.loot.BlockLootSubProvider {
+  private static final float[] JUNGLE_LEAVES_SAPLING_CHANGES;
+  private static final java.util.Set<net.minecraft.world.item.Item> EXPLOSION_RESISTANT;
+  public net.minecraft.data.loot.packs.VanillaBlockLoot(net.minecraft.core.HolderLookup$Provider);
+  protected void generate();
+  private net.minecraft.world.level.storage.loot.LootTable$Builder createDecoratedPotTable(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder createPitcherCropLoot();
+  private net.minecraft.world.level.storage.loot.LootTable$Builder createMobSkullDrop(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder lambda$createPitcherCropLoot$0(java.lang.Integer);
+  private void lambda$generate$220(net.minecraft.world.level.block.Block, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$219(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$218(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$217(net.minecraft.core.HolderLookup$RegistryLookup, net.minecraft.core.HolderLookup$RegistryLookup, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$216(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$215(net.minecraft.core.HolderLookup$RegistryLookup, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$214(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$213(net.minecraft.core.HolderLookup$RegistryLookup, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$210(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder lambda$generate$212(net.minecraft.world.level.block.Block, java.lang.Integer);
+  private static net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer$Builder lambda$generate$211(net.minecraft.world.level.block.Block, java.lang.Integer);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$209(net.minecraft.core.HolderLookup$RegistryLookup, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$208(net.minecraft.core.HolderLookup$RegistryLookup, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$207(net.minecraft.core.HolderLookup$RegistryLookup, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$206(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$205(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$204(net.minecraft.core.HolderLookup$RegistryLookup, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$203(net.minecraft.core.HolderLookup$RegistryLookup, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$202(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$201(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$200(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$199(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$198(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$197(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$196(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$195(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$194(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$193(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$192(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$191(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$190(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$189(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$188(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$187(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$186(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$185(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$184(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$183(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$182(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$181(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$180(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$179(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$178(net.minecraft.core.HolderLookup$RegistryLookup, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$177(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$176(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$175(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$174(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$173(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$172(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$171(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$170(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$169(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$168(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$167(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$166(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$165(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$164(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$163(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$162(net.minecraft.core.HolderLookup$RegistryLookup, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$161(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$160(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$159(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$158(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$157(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$156(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$155(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$154(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$153(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$152(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$151(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$150(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$149(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$148(net.minecraft.world.level.block.Block);
+  private void lambda$generate$146(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$147(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private void lambda$generate$144(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$145(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$143(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private void lambda$generate$142(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$141(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$140(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$139(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$138(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$137(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$136(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$135(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$134(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$133(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private void lambda$generate$131(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$132(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$130(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$129(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$128(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private void lambda$generate$126(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$127(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$125(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$124(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$123(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$122(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$120(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.functions.LootItemFunction$Builder lambda$generate$121(net.minecraft.world.level.block.Block, java.lang.Integer);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$119(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$118(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$117(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$116(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$115(net.minecraft.world.level.block.Block);
+  private void lambda$generate$113(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$114(net.minecraft.world.level.block.Block, net.minecraft.world.level.block.Block);
+  private void lambda$generate$111(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$112(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$110(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$109(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$108(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$107(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$106(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$105(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$104(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$103(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$102(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$101(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$100(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$99(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$98(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$97(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$96(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$95(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$94(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$93(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$92(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private void lambda$generate$90(net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$91(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$89(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$88(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$87(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$86(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$85(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$84(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$83(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$82(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$81(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$80(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$79(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$78(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$77(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$76(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$75(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$74(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$73(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$72(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$71(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$70(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$69(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$68(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$67(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$66(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$65(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$64(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$63(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$62(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$61(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$60(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$59(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$58(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$57(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$56(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$55(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$54(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$53(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$52(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$51(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$50(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$49(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$48(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$47(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$46(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$45(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$44(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$43(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$42(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$41(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$40(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$39(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$38(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$37(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$36(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$35(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$34(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$33(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$32(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$31(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$30(net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$29(net.minecraft.world.level.block.Block);
+  private void lambda$generate$28(net.minecraft.world.level.block.Block);
+  private static void lambda$generate$27(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$26(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$25(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$24(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$23(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$22(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$21(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$20(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$19(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$18(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$17(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$16(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$15(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$14(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$13(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$12(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$11(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$10(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private net.minecraft.world.level.storage.loot.LootTable$Builder lambda$generate$9(net.minecraft.world.level.block.Block);
+  private static void lambda$generate$8(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$7(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$6(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$5(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$4(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$3(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$2(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$1(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  private static void lambda$generate$0(net.minecraft.data.loot.packs.VanillaBlockLoot, net.minecraft.world.level.block.Block);
+  static {};
+}
+Compiled from "TradeRebalanceChestLoot.java"
+public final class net.minecraft.data.loot.packs.TradeRebalanceChestLoot extends java.lang.Record implements net.minecraft.data.loot.LootTableSubProvider {
+  private final net.minecraft.core.HolderLookup$Provider registries;
+  public net.minecraft.data.loot.packs.TradeRebalanceChestLoot(net.minecraft.core.HolderLookup$Provider);
+  public void generate(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>);
+  public net.minecraft.world.level.storage.loot.LootTable$Builder pillagerOutpostLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder desertPyramidLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder ancientCityLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder jungleTempleLootTable();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.HolderLookup$Provider registries();
+}
+Compiled from "VanillaGiftLoot.java"
+public final class net.minecraft.data.loot.packs.VanillaGiftLoot extends java.lang.Record implements net.minecraft.data.loot.LootTableSubProvider {
+  private final net.minecraft.core.HolderLookup$Provider registries;
+  public net.minecraft.data.loot.packs.VanillaGiftLoot(net.minecraft.core.HolderLookup$Provider);
+  public void generate(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.HolderLookup$Provider registries();
+}
+Compiled from "VanillaLootTableProvider.java"
+public class net.minecraft.data.loot.packs.VanillaLootTableProvider {
+  public net.minecraft.data.loot.packs.VanillaLootTableProvider();
+  public static net.minecraft.data.loot.LootTableProvider create(net.minecraft.data.PackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+}
+Compiled from "VanillaEntityInteractLoot.java"
+public final class net.minecraft.data.loot.packs.VanillaEntityInteractLoot extends java.lang.Record implements net.minecraft.data.loot.LootTableSubProvider {
+  private final net.minecraft.core.HolderLookup$Provider registries;
+  public net.minecraft.data.loot.packs.VanillaEntityInteractLoot(net.minecraft.core.HolderLookup$Provider);
+  public void generate(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.HolderLookup$Provider registries();
+}
+Compiled from "VanillaPiglinBarterLoot.java"
+public final class net.minecraft.data.loot.packs.VanillaPiglinBarterLoot extends java.lang.Record implements net.minecraft.data.loot.LootTableSubProvider {
+  private final net.minecraft.core.HolderLookup$Provider registries;
+  public net.minecraft.data.loot.packs.VanillaPiglinBarterLoot(net.minecraft.core.HolderLookup$Provider);
+  public void generate(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.HolderLookup$Provider registries();
+}
+Compiled from "TradeRebalanceLootTableProvider.java"
+public class net.minecraft.data.loot.packs.TradeRebalanceLootTableProvider {
+  public net.minecraft.data.loot.packs.TradeRebalanceLootTableProvider();
+  public static net.minecraft.data.loot.LootTableProvider create(net.minecraft.data.PackOutput, java.util.concurrent.CompletableFuture<net.minecraft.core.HolderLookup$Provider>);
+}
+Compiled from "VanillaEquipmentLoot.java"
+public final class net.minecraft.data.loot.packs.VanillaEquipmentLoot extends java.lang.Record implements net.minecraft.data.loot.LootTableSubProvider {
+  private final net.minecraft.core.HolderLookup$Provider registries;
+  public net.minecraft.data.loot.packs.VanillaEquipmentLoot(net.minecraft.core.HolderLookup$Provider);
+  public void generate(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>);
+  public static net.minecraft.world.level.storage.loot.LootTable$Builder trialChamberEquipment(net.minecraft.world.item.Item, net.minecraft.world.item.Item, net.minecraft.world.item.equipment.trim.ArmorTrim, net.minecraft.core.HolderLookup$RegistryLookup<net.minecraft.world.item.enchantment.Enchantment>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.HolderLookup$Provider registries();
+}
+Compiled from "VanillaArchaeologyLoot.java"
+public final class net.minecraft.data.loot.packs.VanillaArchaeologyLoot extends java.lang.Record implements net.minecraft.data.loot.LootTableSubProvider {
+  private final net.minecraft.core.HolderLookup$Provider registries;
+  public net.minecraft.data.loot.packs.VanillaArchaeologyLoot(net.minecraft.core.HolderLookup$Provider);
+  public void generate(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.HolderLookup$Provider registries();
+}
+Compiled from "VanillaChargedCreeperExplosionLoot.java"
+final class net.minecraft.data.loot.packs.VanillaChargedCreeperExplosionLoot$Entry extends java.lang.Record {
+  private final net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable> lootTable;
+  private final net.minecraft.world.entity.EntityType<?> entityType;
+  private final net.minecraft.world.item.Item item;
+  private net.minecraft.data.loot.packs.VanillaChargedCreeperExplosionLoot$Entry(net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.entity.EntityType<?>, net.minecraft.world.item.Item);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable> lootTable();
+  public net.minecraft.world.entity.EntityType<?> entityType();
+  public net.minecraft.world.item.Item item();
+}
+Compiled from "VanillaChestLoot.java"
+public final class net.minecraft.data.loot.packs.VanillaChestLoot extends java.lang.Record implements net.minecraft.data.loot.LootTableSubProvider {
+  private final net.minecraft.core.HolderLookup$Provider registries;
+  public net.minecraft.data.loot.packs.VanillaChestLoot(net.minecraft.core.HolderLookup$Provider);
+  public void generate(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>);
+  public void spawnerLootTables(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>);
+  public net.minecraft.world.level.storage.loot.LootTable$Builder shipwreckSupplyLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder shipwreckMapLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder bastionHoglinStableLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder bastionBridgeLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder endCityTreasureLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder netherBridgeLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder bastionTreasureLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder bastionOtherLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder woodlandMansionLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder strongholdLibraryLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder strongholdCorridorLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder ancientCityLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder jungleTempleLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder shipwreckTreasureLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder pillagerOutpostLootTable();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder desertPyramidLootTable();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.HolderLookup$Provider registries();
+}
+Compiled from "VanillaEntityLoot.java"
+public class net.minecraft.data.loot.packs.VanillaEntityLoot extends net.minecraft.data.loot.EntityLootSubProvider {
+  public net.minecraft.data.loot.packs.VanillaEntityLoot(net.minecraft.core.HolderLookup$Provider);
+  public void generate();
+  public net.minecraft.world.level.storage.loot.LootTable$Builder elderGuardianLootTable();
+  private void lambda$generate$0(net.minecraft.resources.ResourceKey, net.minecraft.world.level.block.Block);
+}
+Compiled from "VanillaFishingLoot.java"
+public final class net.minecraft.data.loot.packs.VanillaFishingLoot extends java.lang.Record implements net.minecraft.data.loot.LootTableSubProvider {
+  private final net.minecraft.core.HolderLookup$Provider registries;
+  public net.minecraft.data.loot.packs.VanillaFishingLoot(net.minecraft.core.HolderLookup$Provider);
+  public void generate(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>);
+  public static net.minecraft.world.level.storage.loot.LootTable$Builder fishingFishLootTable();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.HolderLookup$Provider registries();
+}
+Compiled from "package-info.java"
+interface net.minecraft.data.loot.packs.package-info {
+}
+Compiled from "VanillaBlockInteractLoot.java"
+public final class net.minecraft.data.loot.packs.VanillaBlockInteractLoot extends java.lang.Record implements net.minecraft.data.loot.LootTableSubProvider {
+  private final net.minecraft.core.HolderLookup$Provider registries;
+  public net.minecraft.data.loot.packs.VanillaBlockInteractLoot(net.minecraft.core.HolderLookup$Provider);
+  public void generate(java.util.function.BiConsumer<net.minecraft.resources.ResourceKey<net.minecraft.world.level.storage.loot.LootTable>, net.minecraft.world.level.storage.loot.LootTable$Builder>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.HolderLookup$Provider registries();
+}

@@ -1,0 +1,18 @@
+Compiled from "PhantomModel.java"
+public class net.minecraft.client.model.monster.phantom.PhantomModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.PhantomRenderState> {
+  private static final java.lang.String TAIL_BASE;
+  private static final java.lang.String TAIL_TIP;
+  private final net.minecraft.client.model.geom.ModelPart leftWingBase;
+  private final net.minecraft.client.model.geom.ModelPart leftWingTip;
+  private final net.minecraft.client.model.geom.ModelPart rightWingBase;
+  private final net.minecraft.client.model.geom.ModelPart rightWingTip;
+  private final net.minecraft.client.model.geom.ModelPart tailBase;
+  private final net.minecraft.client.model.geom.ModelPart tailTip;
+  public net.minecraft.client.model.monster.phantom.PhantomModel(net.minecraft.client.model.geom.ModelPart);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+  public void setupAnim(net.minecraft.client.renderer.entity.state.PhantomRenderState);
+  public void setupAnim(java.lang.Object);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.model.monster.phantom.package-info {
+}

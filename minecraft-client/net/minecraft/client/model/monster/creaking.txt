@@ -1,0 +1,17 @@
+Compiled from "CreakingModel.java"
+public class net.minecraft.client.model.monster.creaking.CreakingModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.CreakingRenderState> {
+  private final net.minecraft.client.model.geom.ModelPart head;
+  private final net.minecraft.client.animation.KeyframeAnimation walkAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation attackAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation invulnerableAnimation;
+  private final net.minecraft.client.animation.KeyframeAnimation deathAnimation;
+  public net.minecraft.client.model.monster.creaking.CreakingModel(net.minecraft.client.model.geom.ModelPart);
+  private static net.minecraft.client.model.geom.builders.MeshDefinition createMesh();
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createEyesLayer();
+  public void setupAnim(net.minecraft.client.renderer.entity.state.CreakingRenderState);
+  public void setupAnim(java.lang.Object);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.model.monster.creaking.package-info {
+}

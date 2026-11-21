@@ -1,0 +1,40 @@
+Compiled from "PlaceRecipeHelper.java"
+public interface net.minecraft.recipebook.PlaceRecipeHelper {
+  public static <T> void placeRecipe(int, int, net.minecraft.world.item.crafting.Recipe<?>, java.lang.Iterable<T>, net.minecraft.recipebook.PlaceRecipeHelper$Output<T>);
+  public static <T> void placeRecipe(int, int, int, int, java.lang.Iterable<T>, net.minecraft.recipebook.PlaceRecipeHelper$Output<T>);
+}
+Compiled from "ServerPlaceRecipe.java"
+public class net.minecraft.recipebook.ServerPlaceRecipe<R extends net.minecraft.world.item.crafting.Recipe<?>> {
+  private static final int ITEM_NOT_FOUND;
+  private final net.minecraft.world.entity.player.Inventory inventory;
+  private final net.minecraft.recipebook.ServerPlaceRecipe$CraftingMenuAccess<R> menu;
+  private final boolean useMaxItems;
+  private final int gridWidth;
+  private final int gridHeight;
+  private final java.util.List<net.minecraft.world.inventory.Slot> inputGridSlots;
+  private final java.util.List<net.minecraft.world.inventory.Slot> slotsToClear;
+  public static <I extends net.minecraft.world.item.crafting.RecipeInput, R extends net.minecraft.world.item.crafting.Recipe<I>> net.minecraft.world.inventory.RecipeBookMenu$PostPlaceAction placeRecipe(net.minecraft.recipebook.ServerPlaceRecipe$CraftingMenuAccess<R>, int, int, java.util.List<net.minecraft.world.inventory.Slot>, java.util.List<net.minecraft.world.inventory.Slot>, net.minecraft.world.entity.player.Inventory, net.minecraft.world.item.crafting.RecipeHolder<R>, boolean, boolean);
+  private net.minecraft.recipebook.ServerPlaceRecipe(net.minecraft.recipebook.ServerPlaceRecipe$CraftingMenuAccess<R>, net.minecraft.world.entity.player.Inventory, boolean, int, int, java.util.List<net.minecraft.world.inventory.Slot>, java.util.List<net.minecraft.world.inventory.Slot>);
+  private net.minecraft.world.inventory.RecipeBookMenu$PostPlaceAction tryPlaceRecipe(net.minecraft.world.item.crafting.RecipeHolder<R>, net.minecraft.world.entity.player.StackedItemContents);
+  private void clearGrid();
+  private void placeRecipe(net.minecraft.world.item.crafting.RecipeHolder<R>, net.minecraft.world.entity.player.StackedItemContents);
+  private static int clampToMaxStackSize(int, java.util.List<net.minecraft.core.Holder<net.minecraft.world.item.Item>>);
+  private int calculateAmountToCraft(int, boolean);
+  private int moveItemToGrid(net.minecraft.world.inventory.Slot, net.minecraft.core.Holder<net.minecraft.world.item.Item>, int);
+  private boolean testClearGrid();
+  private int getAmountOfFreeSlotsInInventory();
+  private void lambda$placeRecipe$0(java.util.List, int, java.lang.Integer, int, int, int);
+}
+Compiled from "ServerPlaceRecipe.java"
+public interface net.minecraft.recipebook.ServerPlaceRecipe$CraftingMenuAccess<T extends net.minecraft.world.item.crafting.Recipe<?>> {
+  public abstract void fillCraftSlotsStackedContents(net.minecraft.world.entity.player.StackedItemContents);
+  public abstract void clearCraftingContent();
+  public abstract boolean recipeMatches(net.minecraft.world.item.crafting.RecipeHolder<T>);
+}
+Compiled from "package-info.java"
+interface net.minecraft.recipebook.package-info {
+}
+Compiled from "PlaceRecipeHelper.java"
+public interface net.minecraft.recipebook.PlaceRecipeHelper$Output<T> {
+  public abstract void addItemToSlot(T, int, int, int);
+}

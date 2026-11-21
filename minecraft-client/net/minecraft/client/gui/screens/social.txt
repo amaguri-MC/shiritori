@@ -1,0 +1,369 @@
+Compiled from "PlayerEntry.java"
+class net.minecraft.client.gui.screens.social.PlayerEntry$1 extends net.minecraft.client.gui.components.ImageButton {
+  final net.minecraft.client.gui.screens.social.PlayerEntry this$0;
+  net.minecraft.client.gui.screens.social.PlayerEntry$1(net.minecraft.client.gui.screens.social.PlayerEntry, int, int, int, int, net.minecraft.client.gui.components.WidgetSprites, net.minecraft.client.gui.components.Button$OnPress, net.minecraft.network.chat.Component);
+  protected net.minecraft.network.chat.MutableComponent createNarrationMessage();
+}
+Compiled from "PlayerEntry.java"
+class net.minecraft.client.gui.screens.social.PlayerEntry$2 extends net.minecraft.client.gui.components.ImageButton {
+  final net.minecraft.client.gui.screens.social.PlayerEntry this$0;
+  net.minecraft.client.gui.screens.social.PlayerEntry$2(net.minecraft.client.gui.screens.social.PlayerEntry, int, int, int, int, net.minecraft.client.gui.components.WidgetSprites, net.minecraft.client.gui.components.Button$OnPress, net.minecraft.network.chat.Component);
+  protected net.minecraft.network.chat.MutableComponent createNarrationMessage();
+}
+Compiled from "PlayerEntry.java"
+class net.minecraft.client.gui.screens.social.PlayerEntry$3 extends net.minecraft.client.gui.components.ImageButton {
+  final net.minecraft.client.gui.screens.social.PlayerEntry this$0;
+  net.minecraft.client.gui.screens.social.PlayerEntry$3(net.minecraft.client.gui.screens.social.PlayerEntry, int, int, int, int, net.minecraft.client.gui.components.WidgetSprites, net.minecraft.client.gui.components.Button$OnPress, net.minecraft.network.chat.Component);
+  protected net.minecraft.network.chat.MutableComponent createNarrationMessage();
+}
+Compiled from "PlayerEntry.java"
+public class net.minecraft.client.gui.screens.social.PlayerEntry extends net.minecraft.client.gui.components.ContainerObjectSelectionList$Entry<net.minecraft.client.gui.screens.social.PlayerEntry> {
+  private static final net.minecraft.resources.Identifier DRAFT_REPORT_SPRITE;
+  private static final java.time.Duration TOOLTIP_DELAY;
+  private static final net.minecraft.client.gui.components.WidgetSprites REPORT_BUTTON_SPRITES;
+  private static final net.minecraft.client.gui.components.WidgetSprites MUTE_BUTTON_SPRITES;
+  private static final net.minecraft.client.gui.components.WidgetSprites UNMUTE_BUTTON_SPRITES;
+  private final net.minecraft.client.Minecraft minecraft;
+  private final java.util.List<net.minecraft.client.gui.components.AbstractWidget> children;
+  private final java.util.UUID id;
+  private final java.lang.String playerName;
+  private final java.util.function.Supplier<net.minecraft.world.entity.player.PlayerSkin> skinGetter;
+  private boolean isRemoved;
+  private boolean hasRecentMessages;
+  private final boolean reportingEnabled;
+  private boolean hasDraftReport;
+  private final boolean chatReportable;
+  private net.minecraft.client.gui.components.Button hideButton;
+  private net.minecraft.client.gui.components.Button showButton;
+  private net.minecraft.client.gui.components.Button reportButton;
+  private float tooltipHoverTime;
+  private static final net.minecraft.network.chat.Component HIDDEN;
+  private static final net.minecraft.network.chat.Component BLOCKED;
+  private static final net.minecraft.network.chat.Component OFFLINE;
+  private static final net.minecraft.network.chat.Component HIDDEN_OFFLINE;
+  private static final net.minecraft.network.chat.Component BLOCKED_OFFLINE;
+  private static final net.minecraft.network.chat.Component REPORT_DISABLED_TOOLTIP;
+  private static final net.minecraft.network.chat.Component HIDE_TEXT_TOOLTIP;
+  private static final net.minecraft.network.chat.Component SHOW_TEXT_TOOLTIP;
+  private static final net.minecraft.network.chat.Component REPORT_PLAYER_TOOLTIP;
+  private static final int SKIN_SIZE;
+  private static final int PADDING;
+  public static final int SKIN_SHADE;
+  private static final int CHAT_TOGGLE_ICON_SIZE;
+  public static final int BG_FILL;
+  public static final int BG_FILL_REMOVED;
+  public static final int PLAYERNAME_COLOR;
+  public static final int PLAYER_STATUS_COLOR;
+  public net.minecraft.client.gui.screens.social.PlayerEntry(net.minecraft.client.Minecraft, net.minecraft.client.gui.screens.social.SocialInteractionsScreen, java.util.UUID, java.lang.String, java.util.function.Supplier<net.minecraft.world.entity.player.PlayerSkin>, boolean);
+  public void refreshHasDraftReport(net.minecraft.client.multiplayer.chat.report.ReportingContext);
+  private net.minecraft.client.gui.components.Tooltip createReportButtonTooltip();
+  public void extractContent(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, boolean, float);
+  public java.util.List<? extends net.minecraft.client.gui.components.events.GuiEventListener> children();
+  public java.util.List<? extends net.minecraft.client.gui.narration.NarratableEntry> narratables();
+  public java.lang.String getPlayerName();
+  public java.util.UUID getPlayerId();
+  public java.util.function.Supplier<net.minecraft.world.entity.player.PlayerSkin> getSkinGetter();
+  public void setRemoved(boolean);
+  public boolean isRemoved();
+  public void setHasRecentMessages(boolean);
+  public boolean hasRecentMessages();
+  public boolean isChatReportable();
+  private void onHiddenOrShown(boolean, net.minecraft.network.chat.Component);
+  private void updateHideAndShowButton(boolean);
+  private net.minecraft.network.chat.MutableComponent getEntryNarationMessage(net.minecraft.network.chat.MutableComponent);
+  private net.minecraft.network.chat.Component getStatusComponent();
+  private void lambda$new$3(net.minecraft.client.gui.screens.social.PlayerSocialManager, java.util.UUID, java.lang.String, net.minecraft.client.gui.components.Button);
+  private void lambda$new$2(net.minecraft.client.gui.screens.social.PlayerSocialManager, java.util.UUID, java.lang.String, net.minecraft.client.gui.components.Button);
+  private void lambda$new$0(net.minecraft.client.multiplayer.chat.report.ReportingContext, net.minecraft.client.Minecraft, net.minecraft.client.gui.screens.social.SocialInteractionsScreen, boolean, net.minecraft.client.gui.components.Button);
+  private void lambda$new$1(net.minecraft.client.Minecraft, net.minecraft.client.gui.screens.social.SocialInteractionsScreen, net.minecraft.client.multiplayer.chat.report.ReportingContext, boolean);
+  static {};
+}
+Compiled from "PlayerSocialManager.java"
+class net.minecraft.client.gui.screens.social.PlayerSocialManager$1 {
+  static final int[] $SwitchMap$com$mojang$authlib$yggdrasil$FriendsService$ResultCode;
+  static {};
+}
+Compiled from "PlayerSocialManager.java"
+public final class net.minecraft.client.gui.screens.social.PlayerSocialManager$PlayerData extends java.lang.Record {
+  private final java.util.UUID id;
+  private final java.lang.String name;
+  public net.minecraft.client.gui.screens.social.PlayerSocialManager$PlayerData(java.util.UUID, java.lang.String);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.UUID id();
+  public java.lang.String name();
+}
+Compiled from "PlayerSocialManager.java"
+public class net.minecraft.client.gui.screens.social.PlayerSocialManager {
+  private static final net.minecraft.network.chat.Component FRIEND_ACTION_FAILED_MESSAGE;
+  private static final net.minecraft.network.chat.Component FRIEND_ACTION_RATE_LIMITED_MESSAGE;
+  private static final net.minecraft.network.chat.Component FRIEND_ACTION_FORBIDDEN_MESSAGE;
+  private static final net.minecraft.network.chat.Component FRIEND_ACTION_UNKNOWN_PROFILE;
+  private static final net.minecraft.network.chat.Component FRIEND_ACTION_UNAUTHORIZED;
+  private static final net.minecraft.network.chat.Component FRIEND_ACTION_UNAVAILABLE_MESSAGE;
+  private final net.minecraft.client.Minecraft minecraft;
+  private final java.util.Set<java.util.UUID> hiddenPlayers;
+  private final com.mojang.authlib.minecraft.UserApiService service;
+  private final com.mojang.authlib.yggdrasil.FriendsService friendsService;
+  private final net.minecraft.client.gui.screens.social.PresenceHandler presenceHandler;
+  private final java.util.Map<java.lang.String, java.util.UUID> discoveredNamesToUUID;
+  private boolean onlineMode;
+  private java.util.concurrent.CompletableFuture<?> pendingBlockListRefresh;
+  private final net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler remoteFriendListUpdateHandler;
+  private boolean friendListEnabled;
+  private boolean allowFriendRequests;
+  public net.minecraft.client.gui.screens.social.PlayerSocialManager(net.minecraft.client.Minecraft, com.mojang.authlib.minecraft.UserApiService, com.mojang.authlib.yggdrasil.FriendsService, net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler);
+  public void addFriendListUpdateListener(java.lang.Runnable);
+  public void removeFriendListUpdateListener(java.lang.Runnable);
+  public java.util.List<net.minecraft.client.gui.screens.social.PlayerSocialManager$PlayerData> getFriends();
+  public java.util.List<net.minecraft.client.gui.screens.social.PlayerSocialManager$PlayerData> getIncomingRequests();
+  public java.util.List<net.minecraft.client.gui.screens.social.PlayerSocialManager$PlayerData> getOutgoingRequests();
+  public net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State getFriendListState();
+  public void hidePlayer(java.util.UUID);
+  public void showPlayer(java.util.UUID);
+  public boolean shouldHideMessageFrom(java.util.UUID);
+  public boolean isHidden(java.util.UUID);
+  public void startOnlineMode();
+  public void stopOnlineMode();
+  public boolean isBlocked(java.util.UUID);
+  public java.util.Set<java.util.UUID> getHiddenPlayers();
+  public java.util.UUID getDiscoveredUUID(java.lang.String);
+  public void addPlayer(net.minecraft.client.multiplayer.PlayerInfo);
+  public java.util.concurrent.CompletableFuture<com.mojang.authlib.yggdrasil.FriendsService$ResultCode> sendFriendRequest(java.lang.String);
+  public void removePlayer(java.util.UUID);
+  public java.util.concurrent.CompletableFuture<com.mojang.authlib.yggdrasil.FriendsService$ResultCode> removeFriend(java.util.UUID);
+  public java.util.concurrent.CompletableFuture<com.mojang.authlib.yggdrasil.FriendsService$ResultCode> acceptIncomingFriendRequest(java.util.UUID);
+  public java.util.concurrent.CompletableFuture<com.mojang.authlib.yggdrasil.FriendsService$ResultCode> declineIncomingFriendRequest(java.util.UUID);
+  public java.util.concurrent.CompletableFuture<com.mojang.authlib.yggdrasil.FriendsService$ResultCode> revokeOutgoingFriendRequest(java.util.UUID);
+  public java.util.concurrent.CompletableFuture<com.mojang.authlib.yggdrasil.FriendsService$ResultCode> updateFriendSettings(boolean, boolean);
+  private java.util.concurrent.CompletableFuture<com.mojang.authlib.yggdrasil.FriendsService$ResultCode> runAction(java.util.function.Supplier<com.mojang.authlib.yggdrasil.FriendsService$ResultCode>);
+  private void handleResult(com.mojang.authlib.yggdrasil.FriendsService$ResultCode);
+  private void showFailureToast(com.mojang.authlib.yggdrasil.FriendsService$ResultCode);
+  public boolean isFriendListEnabled();
+  public void setFriendListEnabled(boolean);
+  public boolean isAllowFriendRequests();
+  public void setAllowFriendRequests(boolean);
+  public net.minecraft.client.gui.screens.social.PresenceHandler getPresenceHandler();
+  public boolean isFriend(java.util.UUID);
+  private static java.util.List<net.minecraft.client.gui.screens.social.PlayerSocialManager$PlayerData> remap(java.util.List<com.mojang.authlib.yggdrasil.response.FriendDto>);
+  private static net.minecraft.client.gui.screens.social.PlayerSocialManager$PlayerData lambda$remap$0(com.mojang.authlib.yggdrasil.response.FriendDto);
+  private void lambda$showFailureToast$0(net.minecraft.network.chat.Component);
+  private java.util.concurrent.CompletionStage lambda$runAction$1(com.mojang.authlib.yggdrasil.FriendsService$ResultCode);
+  private static com.mojang.authlib.yggdrasil.FriendsService$ResultCode lambda$runAction$2(com.mojang.authlib.yggdrasil.FriendsService$ResultCode, java.lang.Void);
+  private com.mojang.authlib.yggdrasil.FriendsService$ResultCode lambda$runAction$0(java.util.function.Supplier);
+  private com.mojang.authlib.yggdrasil.FriendsService$ResultCode lambda$updateFriendSettings$0(boolean, boolean);
+  private com.mojang.authlib.yggdrasil.FriendsService$ResultCode lambda$revokeOutgoingFriendRequest$0(java.util.UUID);
+  private com.mojang.authlib.yggdrasil.FriendsService$ResultCode lambda$declineIncomingFriendRequest$0(java.util.UUID);
+  private com.mojang.authlib.yggdrasil.FriendsService$ResultCode lambda$acceptIncomingFriendRequest$0(java.util.UUID);
+  private com.mojang.authlib.yggdrasil.FriendsService$ResultCode lambda$removeFriend$0(java.util.UUID);
+  private com.mojang.authlib.yggdrasil.FriendsService$ResultCode lambda$sendFriendRequest$0(java.lang.String);
+  static {};
+}
+Compiled from "PresenceHandler.java"
+class net.minecraft.client.gui.screens.social.PresenceHandler$1 {
+  static final int[] $SwitchMap$net$minecraft$client$PresenceSharing;
+  static {};
+}
+Compiled from "PresenceHandler.java"
+public class net.minecraft.client.gui.screens.social.PresenceHandler {
+  private static final java.time.Duration PRESENCE_UPDATE_INTERVAL;
+  private static final long MAX_PRESENCE_INTERVAL_MULTIPLIER;
+  private final net.minecraft.client.Minecraft minecraft;
+  private final com.mojang.authlib.yggdrasil.FriendsService friendsService;
+  private com.mojang.authlib.yggdrasil.response.PresenceResponse latestPresence;
+  private java.time.Instant lastPresencePost;
+  private boolean updatePresence;
+  public net.minecraft.client.gui.screens.social.PresenceHandler(net.minecraft.client.Minecraft, com.mojang.authlib.yggdrasil.FriendsService);
+  private void updatePresence();
+  private boolean shouldRefreshPresence();
+  public void tick();
+  public void tryUpdatePresence();
+  public com.mojang.authlib.yggdrasil.response.PresenceResponse getLatestPresence();
+  private com.mojang.authlib.yggdrasil.response.PresenceStatus getPublicPresenceStatus();
+  private com.mojang.authlib.yggdrasil.response.PresenceStatus getPresenceStatus();
+  private void lambda$updatePresence$0(com.mojang.authlib.yggdrasil.response.PresenceStatus);
+  private void lambda$updatePresence$1(com.mojang.authlib.yggdrasil.response.PresenceResponse);
+  static {};
+}
+Compiled from "RemoteFriendListUpdateHandler.java"
+class net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$1 {
+  static final int[] $SwitchMap$com$mojang$authlib$yggdrasil$FriendsService$ResultCode;
+  static {};
+}
+Compiled from "RemoteFriendListUpdateHandler.java"
+public final class net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State extends java.lang.Enum<net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State> {
+  public static final net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State LOADING;
+  public static final net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State UPGRADE_NEEDED;
+  public static final net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State CONNECTION_ISSUE;
+  public static final net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State USER_MAY_LACK_ACTIVE_PROFILE;
+  public static final net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State UNAUTHORIZED;
+  public static final net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State TEMPORARY_UNAVAILABLE;
+  public static final net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State GENERIC_ERROR;
+  public static final net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State SUCCESS;
+  private static final net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State[] $VALUES;
+  public static net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State[] values();
+  public static net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State valueOf(java.lang.String);
+  private net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State();
+  private static net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State[] $values();
+  static {};
+}
+Compiled from "RemoteFriendListUpdateHandler.java"
+public final class net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler {
+  private static final org.slf4j.Logger LOGGER;
+  private static final long FOREGROUND_INTERVAL_NANOS;
+  private static final long BACKGROUND_INTERVAL_MULTIPLIER;
+  private static final long POLL_INTERVAL_SECONDS;
+  private final com.mojang.authlib.yggdrasil.FriendsService friendsService;
+  private final net.minecraft.client.Minecraft minecraft;
+  private final java.util.concurrent.ScheduledExecutorService scheduler;
+  private final java.util.concurrent.atomic.AtomicBoolean updateInProgress;
+  private final java.util.concurrent.atomic.AtomicBoolean enabled;
+  private final java.util.Set<java.lang.Runnable> updateListeners;
+  private volatile long lastUpdateNanos;
+  private volatile com.mojang.authlib.yggdrasil.response.FriendData latestFriendData;
+  private volatile net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State state;
+  private volatile java.util.Set<com.mojang.authlib.yggdrasil.response.FriendDto> knownFriends;
+  private volatile java.util.Set<com.mojang.authlib.yggdrasil.response.FriendDto> knownIncoming;
+  private volatile java.util.Set<com.mojang.authlib.yggdrasil.response.FriendDto> knownOutgoing;
+  private java.util.concurrent.ScheduledFuture<?> scheduledTick;
+  public net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler(com.mojang.authlib.yggdrasil.FriendsService, net.minecraft.client.Minecraft);
+  private void runBackgroundTick();
+  public com.mojang.authlib.yggdrasil.response.FriendData getLatestFriendData();
+  public net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State getState();
+  public void addUpdateListener(java.lang.Runnable);
+  public void removeUpdateListener(java.lang.Runnable);
+  private long getUpdateIntervalNanos();
+  void runUpdateFriendDataInternal();
+  private static net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State mapResultCodeToState(com.mojang.authlib.yggdrasil.FriendsService$ResultCode);
+  private void notifyListeners();
+  private boolean detectChangesAndShowToast(com.mojang.authlib.yggdrasil.response.FriendData, net.minecraft.client.gui.screens.social.RemoteFriendListUpdateHandler$State);
+  private boolean isInGameAndToastsDisabled();
+  private void emitToastWithSkin(java.util.UUID, java.lang.String, net.minecraft.client.gui.components.toasts.FriendToast$SkinToastEmitter);
+  public java.util.concurrent.CompletableFuture<java.lang.Void> forceUpdate();
+  public synchronized void start();
+  public synchronized void stop();
+  public synchronized void close();
+  private void lambda$forceUpdate$0(java.util.concurrent.CompletableFuture);
+  private void lambda$emitToastWithSkin$0(net.minecraft.client.gui.components.toasts.FriendToast$SkinToastEmitter, java.lang.String, java.util.UUID);
+  private void lambda$detectChangesAndShowToast$0(com.mojang.authlib.yggdrasil.response.FriendDto);
+  private void lambda$notifyListeners$0();
+  private static java.lang.Thread lambda$new$0(java.lang.Runnable);
+  static {};
+}
+Compiled from "SocialInteractionsPlayerList.java"
+public class net.minecraft.client.gui.screens.social.SocialInteractionsPlayerList extends net.minecraft.client.gui.components.ContainerObjectSelectionList<net.minecraft.client.gui.screens.social.PlayerEntry> {
+  private final net.minecraft.client.gui.screens.social.SocialInteractionsScreen socialInteractionsScreen;
+  private final java.util.List<net.minecraft.client.gui.screens.social.PlayerEntry> players;
+  private java.lang.String filter;
+  public net.minecraft.client.gui.screens.social.SocialInteractionsPlayerList(net.minecraft.client.gui.screens.social.SocialInteractionsScreen, net.minecraft.client.Minecraft, int, int, int, int);
+  protected void extractListBackground(net.minecraft.client.gui.GuiGraphicsExtractor);
+  protected void extractListSeparators(net.minecraft.client.gui.GuiGraphicsExtractor);
+  protected void enableScissor(net.minecraft.client.gui.GuiGraphicsExtractor);
+  public void updatePlayerList(java.util.Collection<java.util.UUID>, double, boolean);
+  private void addOnlinePlayers(java.util.Collection<java.util.UUID>, java.util.Map<java.util.UUID, net.minecraft.client.gui.screens.social.PlayerEntry>);
+  private void addSeenPlayers(java.util.Map<java.util.UUID, net.minecraft.client.gui.screens.social.PlayerEntry>);
+  private net.minecraft.client.gui.screens.social.PlayerEntry makePlayerEntry(java.util.UUID, net.minecraft.client.multiplayer.PlayerInfo);
+  private void updatePlayersFromChatLog(java.util.Map<java.util.UUID, net.minecraft.client.gui.screens.social.PlayerEntry>, boolean);
+  private static java.util.Map<java.util.UUID, com.mojang.authlib.GameProfile> collectProfilesFromChatLog(net.minecraft.client.multiplayer.chat.ChatLog);
+  private void sortPlayerEntries();
+  private void updateFiltersAndScroll(java.util.Collection<net.minecraft.client.gui.screens.social.PlayerEntry>, double);
+  private void updateFilteredPlayers();
+  public void setFilter(java.lang.String);
+  public boolean isEmpty();
+  public void addPlayer(net.minecraft.client.multiplayer.PlayerInfo, net.minecraft.client.gui.screens.social.SocialInteractionsScreen$Page);
+  public void removePlayer(java.util.UUID);
+  public void refreshHasDraftReport();
+  private void lambda$refreshHasDraftReport$0(net.minecraft.client.gui.screens.social.PlayerEntry);
+  private boolean lambda$updateFilteredPlayers$0(net.minecraft.client.gui.screens.social.PlayerEntry);
+  private static java.lang.Integer lambda$sortPlayerEntries$1(net.minecraft.client.gui.screens.social.PlayerEntry);
+  private java.lang.Integer lambda$sortPlayerEntries$0(net.minecraft.client.gui.screens.social.PlayerEntry);
+  private void lambda$updatePlayersFromChatLog$0(boolean, java.util.Map, java.util.UUID, com.mojang.authlib.GameProfile);
+  private net.minecraft.client.gui.screens.social.PlayerEntry lambda$updatePlayersFromChatLog$1(com.mojang.authlib.GameProfile, java.util.UUID);
+  private net.minecraft.client.gui.screens.social.PlayerEntry lambda$addSeenPlayers$0(java.util.Map$Entry, java.util.UUID);
+}
+Compiled from "SocialInteractionsScreen.java"
+class net.minecraft.client.gui.screens.social.SocialInteractionsScreen$1 extends net.minecraft.client.gui.components.EditBox {
+  final net.minecraft.client.gui.screens.social.SocialInteractionsScreen this$0;
+  net.minecraft.client.gui.screens.social.SocialInteractionsScreen$1(net.minecraft.client.gui.screens.social.SocialInteractionsScreen, net.minecraft.client.gui.Font, int, int, int, int, net.minecraft.network.chat.Component);
+  protected net.minecraft.network.chat.MutableComponent createNarrationMessage();
+}
+Compiled from "SocialInteractionsScreen.java"
+public final class net.minecraft.client.gui.screens.social.SocialInteractionsScreen$Page extends java.lang.Enum<net.minecraft.client.gui.screens.social.SocialInteractionsScreen$Page> {
+  public static final net.minecraft.client.gui.screens.social.SocialInteractionsScreen$Page ALL;
+  public static final net.minecraft.client.gui.screens.social.SocialInteractionsScreen$Page HIDDEN;
+  public static final net.minecraft.client.gui.screens.social.SocialInteractionsScreen$Page BLOCKED;
+  private static final net.minecraft.client.gui.screens.social.SocialInteractionsScreen$Page[] $VALUES;
+  public static net.minecraft.client.gui.screens.social.SocialInteractionsScreen$Page[] values();
+  public static net.minecraft.client.gui.screens.social.SocialInteractionsScreen$Page valueOf(java.lang.String);
+  private net.minecraft.client.gui.screens.social.SocialInteractionsScreen$Page();
+  private static net.minecraft.client.gui.screens.social.SocialInteractionsScreen$Page[] $values();
+  static {};
+}
+Compiled from "SocialInteractionsScreen.java"
+public class net.minecraft.client.gui.screens.social.SocialInteractionsScreen extends net.minecraft.client.gui.screens.Screen {
+  private static final net.minecraft.network.chat.Component TITLE;
+  private static final net.minecraft.resources.Identifier BACKGROUND_SPRITE;
+  private static final net.minecraft.resources.Identifier SEARCH_SPRITE;
+  private static final net.minecraft.network.chat.Component TAB_ALL;
+  private static final net.minecraft.network.chat.Component TAB_HIDDEN;
+  private static final net.minecraft.network.chat.Component TAB_BLOCKED;
+  private static final net.minecraft.network.chat.Component TAB_ALL_SELECTED;
+  private static final net.minecraft.network.chat.Component TAB_HIDDEN_SELECTED;
+  private static final net.minecraft.network.chat.Component TAB_BLOCKED_SELECTED;
+  private static final net.minecraft.network.chat.Component SEARCH_HINT;
+  private static final net.minecraft.network.chat.Component EMPTY_SEARCH;
+  private static final net.minecraft.network.chat.Component EMPTY_HIDDEN;
+  private static final net.minecraft.network.chat.Component EMPTY_BLOCKED;
+  private static final net.minecraft.network.chat.Component BLOCKING_HINT;
+  private static final int BG_BORDER_SIZE;
+  private static final int BG_WIDTH;
+  private static final int SEARCH_HEIGHT;
+  private static final int MARGIN_Y;
+  public static final int SEARCH_START;
+  public static final int LIST_START;
+  private static final int IMAGE_WIDTH;
+  private static final int BUTTON_HEIGHT;
+  private static final int ITEM_HEIGHT;
+  private final net.minecraft.client.gui.layouts.HeaderAndFooterLayout layout;
+  private final net.minecraft.client.gui.screens.Screen lastScreen;
+  private net.minecraft.client.gui.screens.social.SocialInteractionsPlayerList socialInteractionsPlayerList;
+  private net.minecraft.client.gui.components.EditBox searchBox;
+  private java.lang.String lastSearch;
+  private net.minecraft.client.gui.screens.social.SocialInteractionsScreen$Page page;
+  private net.minecraft.client.gui.components.Button allButton;
+  private net.minecraft.client.gui.components.Button hiddenButton;
+  private net.minecraft.client.gui.components.Button blockedButton;
+  private net.minecraft.client.gui.components.Button blockingHintButton;
+  private net.minecraft.network.chat.Component serverLabel;
+  private int playerCount;
+  public net.minecraft.client.gui.screens.social.SocialInteractionsScreen();
+  public net.minecraft.client.gui.screens.social.SocialInteractionsScreen(net.minecraft.client.gui.screens.Screen);
+  private int windowHeight();
+  private int listEnd();
+  private int marginX();
+  public net.minecraft.network.chat.Component getNarrationMessage();
+  protected void init();
+  public void added();
+  protected void repositionElements();
+  protected void setInitialFocus();
+  public void onClose();
+  private void showPage(net.minecraft.client.gui.screens.social.SocialInteractionsScreen$Page);
+  public void extractBackground(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, float);
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, int, int, float);
+  public boolean keyPressed(net.minecraft.client.input.KeyEvent);
+  public boolean isPauseScreen();
+  private void checkSearchStringUpdate(java.lang.String);
+  private void updateServerLabel(net.minecraft.client.Minecraft);
+  public void onAddPlayer(net.minecraft.client.multiplayer.PlayerInfo);
+  public void onRemovePlayer(java.util.UUID);
+  private static void lambda$init$4(net.minecraft.client.gui.screens.social.SocialInteractionsScreen, net.minecraft.client.gui.components.AbstractWidget);
+  private void lambda$init$3(net.minecraft.client.gui.components.Button);
+  private void lambda$init$2(net.minecraft.client.gui.components.Button);
+  private void lambda$init$1(net.minecraft.client.gui.components.Button);
+  private void lambda$init$0(net.minecraft.client.gui.components.Button);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.gui.screens.social.package-info {
+}

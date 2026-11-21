@@ -1,0 +1,216 @@
+Compiled from "AbstractDeviceTracker.java"
+public abstract class com.mojang.blaze3d.audio.AbstractDeviceTracker implements com.mojang.blaze3d.audio.DeviceTracker {
+  private volatile com.mojang.blaze3d.audio.DeviceList deviceList;
+  private final java.util.concurrent.atomic.AtomicBoolean updatePending;
+  public com.mojang.blaze3d.audio.AbstractDeviceTracker(com.mojang.blaze3d.audio.DeviceList);
+  protected abstract boolean isUpdateRequested();
+  protected abstract void discardUpdateRequest();
+  public com.mojang.blaze3d.audio.DeviceList currentDevices();
+  public void forceRefresh();
+  public void tick();
+  private void lambda$tick$0();
+}
+Compiled from "CallbackDeviceTracker.java"
+public class com.mojang.blaze3d.audio.CallbackDeviceTracker extends com.mojang.blaze3d.audio.AbstractDeviceTracker {
+  private static final org.slf4j.Logger LOGGER;
+  private volatile boolean updateRequested;
+  private static final int[] SUBSCRIBED_EVENT_TYPES;
+  public static final java.util.HexFormat HEX_FORMAT;
+  public com.mojang.blaze3d.audio.CallbackDeviceTracker(com.mojang.blaze3d.audio.DeviceList);
+  protected boolean isUpdateRequested();
+  protected void discardUpdateRequest();
+  public static boolean isSupported();
+  public static com.mojang.blaze3d.audio.CallbackDeviceTracker createAndInstall(com.mojang.blaze3d.audio.DeviceList);
+  private org.lwjgl.openal.SOFTSystemEventProcI createCallback();
+  private static boolean isSupportedForPlaybackDevice(int);
+  private static java.lang.String deviceTypeToString(int);
+  private void lambda$createCallback$0(int, int, long, int, long, long);
+  static {};
+}
+Compiled from "Channel.java"
+public class com.mojang.blaze3d.audio.Channel {
+  private static final org.slf4j.Logger LOGGER;
+  private static final int QUEUED_BUFFER_COUNT;
+  public static final int BUFFER_DURATION_SECONDS;
+  private final int source;
+  private final java.util.concurrent.atomic.AtomicBoolean initialized;
+  private int streamingBufferSize;
+  private net.minecraft.client.sounds.AudioStream stream;
+  static com.mojang.blaze3d.audio.Channel create();
+  private com.mojang.blaze3d.audio.Channel(int);
+  public void destroy();
+  public void play();
+  private int getState();
+  public void pause();
+  public void unpause();
+  public void stop();
+  public boolean playing();
+  public boolean stopped();
+  public void setSelfPosition(net.minecraft.world.phys.Vec3);
+  public void setPitch(float);
+  public void setLooping(boolean);
+  public void setVolume(float);
+  public void disableAttenuation();
+  public void linearAttenuation(float);
+  public void setRelative(boolean);
+  public void attachStaticBuffer(com.mojang.blaze3d.audio.SoundBuffer);
+  public void attachBufferStream(net.minecraft.client.sounds.AudioStream);
+  private static int calculateBufferSize(javax.sound.sampled.AudioFormat, int);
+  private void pumpBuffers(int);
+  public void updateStream();
+  private int removeProcessedBuffers();
+  private void lambda$pumpBuffers$0(int);
+  private void lambda$attachStaticBuffer$0(int);
+  static {};
+}
+Compiled from "DeviceList.java"
+public final class com.mojang.blaze3d.audio.DeviceList extends java.lang.Record {
+  private final java.lang.String defaultDevice;
+  private final java.util.List<java.lang.String> allDevices;
+  public static final com.mojang.blaze3d.audio.DeviceList EMPTY;
+  public com.mojang.blaze3d.audio.DeviceList(java.lang.String, java.util.List<java.lang.String>);
+  public static com.mojang.blaze3d.audio.DeviceList query();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String defaultDevice();
+  public java.util.List<java.lang.String> allDevices();
+  static {};
+}
+Compiled from "DeviceTracker.java"
+public interface com.mojang.blaze3d.audio.DeviceTracker {
+  public abstract com.mojang.blaze3d.audio.DeviceList currentDevices();
+  public abstract void tick();
+  public abstract void forceRefresh();
+}
+Compiled from "Library.java"
+class com.mojang.blaze3d.audio.Library$1 implements com.mojang.blaze3d.audio.Library$ChannelPool {
+  com.mojang.blaze3d.audio.Library$1();
+  public com.mojang.blaze3d.audio.Channel acquire();
+  public boolean release(com.mojang.blaze3d.audio.Channel);
+  public void cleanup();
+  public int getMaxCount();
+  public int getUsedCount();
+}
+Compiled from "Library.java"
+interface com.mojang.blaze3d.audio.Library$ChannelPool {
+  public abstract com.mojang.blaze3d.audio.Channel acquire();
+  public abstract boolean release(com.mojang.blaze3d.audio.Channel);
+  public abstract void cleanup();
+  public abstract int getMaxCount();
+  public abstract int getUsedCount();
+}
+Compiled from "Library.java"
+class com.mojang.blaze3d.audio.Library$CountingChannelPool implements com.mojang.blaze3d.audio.Library$ChannelPool {
+  private final int limit;
+  private final java.util.Set<com.mojang.blaze3d.audio.Channel> activeChannels;
+  public com.mojang.blaze3d.audio.Library$CountingChannelPool(int);
+  public com.mojang.blaze3d.audio.Channel acquire();
+  public boolean release(com.mojang.blaze3d.audio.Channel);
+  public void cleanup();
+  public int getMaxCount();
+  public int getUsedCount();
+}
+Compiled from "Library.java"
+public final class com.mojang.blaze3d.audio.Library$Pool extends java.lang.Enum<com.mojang.blaze3d.audio.Library$Pool> {
+  public static final com.mojang.blaze3d.audio.Library$Pool STATIC;
+  public static final com.mojang.blaze3d.audio.Library$Pool STREAMING;
+  private static final com.mojang.blaze3d.audio.Library$Pool[] $VALUES;
+  public static com.mojang.blaze3d.audio.Library$Pool[] values();
+  public static com.mojang.blaze3d.audio.Library$Pool valueOf(java.lang.String);
+  private com.mojang.blaze3d.audio.Library$Pool();
+  private static com.mojang.blaze3d.audio.Library$Pool[] $values();
+  static {};
+}
+Compiled from "Library.java"
+public class com.mojang.blaze3d.audio.Library {
+  private static final org.slf4j.Logger LOGGER;
+  public static final int NO_DEVICE;
+  private static final java.lang.String NO_DEVICE_NAME;
+  private static final int DEFAULT_CHANNEL_COUNT;
+  private long currentDevice;
+  private java.lang.String currentDeviceName;
+  private long context;
+  private boolean supportsDisconnections;
+  private static final com.mojang.blaze3d.audio.Library$ChannelPool EMPTY;
+  private com.mojang.blaze3d.audio.Library$ChannelPool staticChannels;
+  private com.mojang.blaze3d.audio.Library$ChannelPool streamingChannels;
+  private final com.mojang.blaze3d.audio.Listener listener;
+  public com.mojang.blaze3d.audio.Library();
+  public void init(java.lang.String, com.mojang.blaze3d.audio.DeviceList, boolean);
+  private java.nio.IntBuffer createAttributes(org.lwjgl.system.MemoryStack, boolean);
+  private int getChannelCount();
+  public java.lang.String currentDeviceName();
+  private static java.lang.String queryDeviceName(long);
+  private static long openDeviceOrFallback(java.lang.String, java.lang.String);
+  private static java.util.OptionalLong tryOpenDevice(java.lang.String);
+  public void cleanup();
+  public com.mojang.blaze3d.audio.Listener getListener();
+  public com.mojang.blaze3d.audio.Channel acquireChannel(com.mojang.blaze3d.audio.Library$Pool);
+  public void releaseChannel(com.mojang.blaze3d.audio.Channel);
+  public java.lang.String getChannelDebugString();
+  public boolean isCurrentDeviceDisconnected();
+  public static com.mojang.blaze3d.audio.DeviceTracker createDeviceTracker();
+  static {};
+}
+Compiled from "Listener.java"
+public class com.mojang.blaze3d.audio.Listener {
+  private com.mojang.blaze3d.audio.ListenerTransform transform;
+  public com.mojang.blaze3d.audio.Listener();
+  public void setTransform(com.mojang.blaze3d.audio.ListenerTransform);
+  public void reset();
+  public com.mojang.blaze3d.audio.ListenerTransform getTransform();
+}
+Compiled from "ListenerTransform.java"
+public final class com.mojang.blaze3d.audio.ListenerTransform extends java.lang.Record {
+  private final net.minecraft.world.phys.Vec3 position;
+  private final net.minecraft.world.phys.Vec3 forward;
+  private final net.minecraft.world.phys.Vec3 up;
+  public static final com.mojang.blaze3d.audio.ListenerTransform INITIAL;
+  public com.mojang.blaze3d.audio.ListenerTransform(net.minecraft.world.phys.Vec3, net.minecraft.world.phys.Vec3, net.minecraft.world.phys.Vec3);
+  public net.minecraft.world.phys.Vec3 right();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.phys.Vec3 position();
+  public net.minecraft.world.phys.Vec3 forward();
+  public net.minecraft.world.phys.Vec3 up();
+  static {};
+}
+Compiled from "OpenAlUtil.java"
+public class com.mojang.blaze3d.audio.OpenAlUtil {
+  private static final org.slf4j.Logger LOGGER;
+  public com.mojang.blaze3d.audio.OpenAlUtil();
+  private static java.lang.String alErrorToString(int);
+  public static boolean checkALError(java.lang.String);
+  private static java.lang.String alcErrorToString(int);
+  public static boolean checkALCError(long, java.lang.String);
+  public static int audioFormatToOpenAl(javax.sound.sampled.AudioFormat);
+  static {};
+}
+Compiled from "PollingDeviceTracker.java"
+public class com.mojang.blaze3d.audio.PollingDeviceTracker extends com.mojang.blaze3d.audio.AbstractDeviceTracker {
+  private static final long DEFAULT_DEVICE_CHECK_INTERVAL_MS;
+  private long lastDeviceCheckTime;
+  public com.mojang.blaze3d.audio.PollingDeviceTracker(com.mojang.blaze3d.audio.DeviceList);
+  protected boolean isUpdateRequested();
+  protected void discardUpdateRequest();
+}
+Compiled from "SoundBuffer.java"
+public class com.mojang.blaze3d.audio.SoundBuffer {
+  private java.nio.ByteBuffer data;
+  private final javax.sound.sampled.AudioFormat format;
+  private boolean hasAlBuffer;
+  private int alBuffer;
+  private final int size;
+  public com.mojang.blaze3d.audio.SoundBuffer(java.nio.ByteBuffer, javax.sound.sampled.AudioFormat);
+  java.util.OptionalInt getAlBuffer();
+  public void discardAlBuffer();
+  public java.util.OptionalInt releaseAlBuffer();
+  public javax.sound.sampled.AudioFormat format();
+  public int size();
+  public boolean isValid();
+}
+Compiled from "package-info.java"
+interface com.mojang.blaze3d.audio.package-info {
+}

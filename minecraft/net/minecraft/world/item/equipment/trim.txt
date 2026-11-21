@@ -1,0 +1,147 @@
+Compiled from "MaterialAssetGroup.java"
+public final class net.minecraft.world.item.equipment.trim.MaterialAssetGroup extends java.lang.Record {
+  private final net.minecraft.world.item.equipment.trim.MaterialAssetGroup$AssetInfo base;
+  private final java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.EquipmentAsset>, net.minecraft.world.item.equipment.trim.MaterialAssetGroup$AssetInfo> overrides;
+  public static final java.lang.String SEPARATOR;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.equipment.trim.MaterialAssetGroup> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, net.minecraft.world.item.equipment.trim.MaterialAssetGroup> STREAM_CODEC;
+  public static final net.minecraft.world.item.equipment.trim.MaterialAssetGroup QUARTZ;
+  public static final net.minecraft.world.item.equipment.trim.MaterialAssetGroup IRON;
+  public static final net.minecraft.world.item.equipment.trim.MaterialAssetGroup NETHERITE;
+  public static final net.minecraft.world.item.equipment.trim.MaterialAssetGroup REDSTONE;
+  public static final net.minecraft.world.item.equipment.trim.MaterialAssetGroup COPPER;
+  public static final net.minecraft.world.item.equipment.trim.MaterialAssetGroup GOLD;
+  public static final net.minecraft.world.item.equipment.trim.MaterialAssetGroup EMERALD;
+  public static final net.minecraft.world.item.equipment.trim.MaterialAssetGroup DIAMOND;
+  public static final net.minecraft.world.item.equipment.trim.MaterialAssetGroup LAPIS;
+  public static final net.minecraft.world.item.equipment.trim.MaterialAssetGroup AMETHYST;
+  public static final net.minecraft.world.item.equipment.trim.MaterialAssetGroup RESIN;
+  public net.minecraft.world.item.equipment.trim.MaterialAssetGroup(net.minecraft.world.item.equipment.trim.MaterialAssetGroup$AssetInfo, java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.EquipmentAsset>, net.minecraft.world.item.equipment.trim.MaterialAssetGroup$AssetInfo>);
+  public static net.minecraft.world.item.equipment.trim.MaterialAssetGroup create(java.lang.String);
+  public static net.minecraft.world.item.equipment.trim.MaterialAssetGroup create(java.lang.String, java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.EquipmentAsset>, java.lang.String>);
+  public net.minecraft.world.item.equipment.trim.MaterialAssetGroup$AssetInfo assetId(net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.EquipmentAsset>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.item.equipment.trim.MaterialAssetGroup$AssetInfo base();
+  public java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.EquipmentAsset>, net.minecraft.world.item.equipment.trim.MaterialAssetGroup$AssetInfo> overrides();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "TrimMaterial.java"
+public final class net.minecraft.world.item.equipment.trim.TrimMaterial extends java.lang.Record {
+  private final net.minecraft.world.item.equipment.trim.MaterialAssetGroup assets;
+  private final net.minecraft.network.chat.Component description;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.item.equipment.trim.TrimMaterial> DIRECT_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.equipment.trim.TrimMaterial> DIRECT_STREAM_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.core.Holder<net.minecraft.world.item.equipment.trim.TrimMaterial>> CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.core.Holder<net.minecraft.world.item.equipment.trim.TrimMaterial>> STREAM_CODEC;
+  public net.minecraft.world.item.equipment.trim.TrimMaterial(net.minecraft.world.item.equipment.trim.MaterialAssetGroup, net.minecraft.network.chat.Component);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.item.equipment.trim.MaterialAssetGroup assets();
+  public net.minecraft.network.chat.Component description();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "TrimPatterns.java"
+public class net.minecraft.world.item.equipment.trim.TrimPatterns {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> SENTRY;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> DUNE;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> COAST;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> WILD;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> WARD;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> EYE;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> VEX;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> TIDE;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> SNOUT;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> RIB;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> SPIRE;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> WAYFINDER;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> SHAPER;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> SILENCE;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> RAISER;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> HOST;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> FLOW;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> BOLT;
+  public net.minecraft.world.item.equipment.trim.TrimPatterns();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.item.equipment.trim.TrimPattern>);
+  public static void register(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.item.equipment.trim.TrimPattern>, net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern>);
+  private static net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern> registryKey(java.lang.String);
+  public static net.minecraft.resources.Identifier defaultAssetId(net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimPattern>);
+  static {};
+}
+Compiled from "MaterialAssetGroup.java"
+public final class net.minecraft.world.item.equipment.trim.MaterialAssetGroup$AssetInfo extends java.lang.Record {
+  private final java.lang.String suffix;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.item.equipment.trim.MaterialAssetGroup$AssetInfo> CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, net.minecraft.world.item.equipment.trim.MaterialAssetGroup$AssetInfo> STREAM_CODEC;
+  public net.minecraft.world.item.equipment.trim.MaterialAssetGroup$AssetInfo(java.lang.String);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String suffix();
+  static {};
+}
+Compiled from "ArmorTrim.java"
+public final class net.minecraft.world.item.equipment.trim.ArmorTrim extends java.lang.Record implements net.minecraft.world.item.component.TooltipProvider {
+  private final net.minecraft.core.Holder<net.minecraft.world.item.equipment.trim.TrimMaterial> material;
+  private final net.minecraft.core.Holder<net.minecraft.world.item.equipment.trim.TrimPattern> pattern;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.item.equipment.trim.ArmorTrim> CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.equipment.trim.ArmorTrim> STREAM_CODEC;
+  private static final net.minecraft.network.chat.Component UPGRADE_TITLE;
+  public net.minecraft.world.item.equipment.trim.ArmorTrim(net.minecraft.core.Holder<net.minecraft.world.item.equipment.trim.TrimMaterial>, net.minecraft.core.Holder<net.minecraft.world.item.equipment.trim.TrimPattern>);
+  public void addToTooltip(net.minecraft.world.item.Item$TooltipContext, java.util.function.Consumer<net.minecraft.network.chat.Component>, net.minecraft.world.item.TooltipFlag, net.minecraft.core.component.DataComponentGetter);
+  public net.minecraft.resources.Identifier layerAssetId(java.lang.String, net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.EquipmentAsset>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.Holder<net.minecraft.world.item.equipment.trim.TrimMaterial> material();
+  public net.minecraft.core.Holder<net.minecraft.world.item.equipment.trim.TrimPattern> pattern();
+  private static java.lang.String lambda$layerAssetId$0(java.lang.String, net.minecraft.world.item.equipment.trim.MaterialAssetGroup$AssetInfo, java.lang.String);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.item.equipment.trim.package-info {
+}
+Compiled from "TrimMaterials.java"
+public class net.minecraft.world.item.equipment.trim.TrimMaterials {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimMaterial> QUARTZ;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimMaterial> IRON;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimMaterial> NETHERITE;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimMaterial> REDSTONE;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimMaterial> COPPER;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimMaterial> GOLD;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimMaterial> EMERALD;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimMaterial> DIAMOND;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimMaterial> LAPIS;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimMaterial> AMETHYST;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimMaterial> RESIN;
+  public net.minecraft.world.item.equipment.trim.TrimMaterials();
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.item.equipment.trim.TrimMaterial>);
+  private static void register(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.world.item.equipment.trim.TrimMaterial>, net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimMaterial>, net.minecraft.network.chat.Style, net.minecraft.world.item.equipment.trim.MaterialAssetGroup);
+  private static net.minecraft.resources.ResourceKey<net.minecraft.world.item.equipment.trim.TrimMaterial> registryKey(java.lang.String);
+  static {};
+}
+Compiled from "TrimPattern.java"
+public final class net.minecraft.world.item.equipment.trim.TrimPattern extends java.lang.Record {
+  private final net.minecraft.resources.Identifier assetId;
+  private final net.minecraft.network.chat.Component description;
+  private final boolean decal;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.item.equipment.trim.TrimPattern> DIRECT_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.equipment.trim.TrimPattern> DIRECT_STREAM_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.core.Holder<net.minecraft.world.item.equipment.trim.TrimPattern>> CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.core.Holder<net.minecraft.world.item.equipment.trim.TrimPattern>> STREAM_CODEC;
+  public net.minecraft.world.item.equipment.trim.TrimPattern(net.minecraft.resources.Identifier, net.minecraft.network.chat.Component, boolean);
+  public net.minecraft.network.chat.Component copyWithStyle(net.minecraft.core.Holder<net.minecraft.world.item.equipment.trim.TrimMaterial>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier assetId();
+  public net.minecraft.network.chat.Component description();
+  public boolean decal();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}

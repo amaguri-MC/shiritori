@@ -1,0 +1,14 @@
+Compiled from "BlazeModel.java"
+public class net.minecraft.client.model.monster.blaze.BlazeModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.LivingEntityRenderState> {
+  private final net.minecraft.client.model.geom.ModelPart[] upperBodyParts;
+  private final net.minecraft.client.model.geom.ModelPart head;
+  public net.minecraft.client.model.monster.blaze.BlazeModel(net.minecraft.client.model.geom.ModelPart);
+  private static java.lang.String getPartName(int);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+  public void setupAnim(net.minecraft.client.renderer.entity.state.LivingEntityRenderState);
+  public void setupAnim(java.lang.Object);
+  private static net.minecraft.client.model.geom.ModelPart lambda$new$0(net.minecraft.client.model.geom.ModelPart, int);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.model.monster.blaze.package-info {
+}

@@ -1,0 +1,48 @@
+Compiled from "AdultStriderModel.java"
+public class net.minecraft.client.model.monster.strider.AdultStriderModel extends net.minecraft.client.model.monster.strider.StriderModel {
+  private static final java.lang.String RIGHT_BOTTOM_BRISTLE;
+  private static final java.lang.String RIGHT_MIDDLE_BRISTLE;
+  private static final java.lang.String RIGHT_TOP_BRISTLE;
+  private static final java.lang.String LEFT_TOP_BRISTLE;
+  private static final java.lang.String LEFT_MIDDLE_BRISTLE;
+  private static final java.lang.String LEFT_BOTTOM_BRISTLE;
+  private final net.minecraft.client.model.geom.ModelPart rightBottomBristle;
+  private final net.minecraft.client.model.geom.ModelPart rightMiddleBristle;
+  private final net.minecraft.client.model.geom.ModelPart rightTopBristle;
+  private final net.minecraft.client.model.geom.ModelPart leftTopBristle;
+  private final net.minecraft.client.model.geom.ModelPart leftMiddleBristle;
+  private final net.minecraft.client.model.geom.ModelPart leftBottomBristle;
+  public net.minecraft.client.model.monster.strider.AdultStriderModel(net.minecraft.client.model.geom.ModelPart);
+  protected void customAnimations(float, float, float);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+  private static void lambda$customAnimations$1(net.minecraft.client.model.geom.ModelPart, java.lang.Float);
+  private static void lambda$customAnimations$0(net.minecraft.client.model.geom.ModelPart, java.lang.Float);
+}
+Compiled from "BabyStriderModel.java"
+public class net.minecraft.client.model.monster.strider.BabyStriderModel extends net.minecraft.client.model.monster.strider.StriderModel {
+  private static final java.lang.String FRONT_BRISTLE;
+  private static final java.lang.String MIDDLE_BRISTLE;
+  private static final java.lang.String BACK_BRISTLE;
+  private final net.minecraft.client.model.geom.ModelPart frontBristle;
+  private final net.minecraft.client.model.geom.ModelPart middleBristle;
+  private final net.minecraft.client.model.geom.ModelPart bottomBristle;
+  public net.minecraft.client.model.monster.strider.BabyStriderModel(net.minecraft.client.model.geom.ModelPart);
+  protected void customAnimations(float, float, float);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+  private static void lambda$customAnimations$0(net.minecraft.client.model.geom.ModelPart, java.lang.Float);
+}
+Compiled from "StriderModel.java"
+public abstract class net.minecraft.client.model.monster.strider.StriderModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.StriderRenderState> {
+  protected static final float SPEED;
+  protected final net.minecraft.client.model.geom.ModelPart rightLeg;
+  protected final net.minecraft.client.model.geom.ModelPart leftLeg;
+  protected final net.minecraft.client.model.geom.ModelPart body;
+  public net.minecraft.client.model.monster.strider.StriderModel(net.minecraft.client.model.geom.ModelPart);
+  public void setupAnim(net.minecraft.client.renderer.entity.state.StriderRenderState);
+  protected abstract void customAnimations(float, float, float);
+  public void animateBristle(float, float, net.minecraft.client.model.geom.ModelPart, net.minecraft.client.model.geom.ModelPart, net.minecraft.client.model.geom.ModelPart, java.util.function.BiConsumer<net.minecraft.client.model.geom.ModelPart, java.lang.Float>);
+  public void setupAnim(java.lang.Object);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.model.monster.strider.package-info {
+}

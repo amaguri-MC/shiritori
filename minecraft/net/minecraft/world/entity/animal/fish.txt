@@ -1,0 +1,287 @@
+Compiled from "AbstractFish.java"
+class net.minecraft.world.entity.animal.fish.AbstractFish$FishMoveControl<T extends net.minecraft.world.entity.animal.fish.AbstractFish> extends net.minecraft.world.entity.ai.control.MoveControl<T> {
+  public net.minecraft.world.entity.animal.fish.AbstractFish$FishMoveControl(T);
+  public void tick();
+}
+Compiled from "WaterAnimal.java"
+public abstract class net.minecraft.world.entity.animal.fish.WaterAnimal extends net.minecraft.world.entity.PathfinderMob {
+  public static final int AMBIENT_SOUND_INTERVAL;
+  protected net.minecraft.world.entity.animal.fish.WaterAnimal(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.fish.WaterAnimal>, net.minecraft.world.level.Level);
+  public boolean checkSpawnObstruction(net.minecraft.world.level.LevelReader);
+  public int getAmbientSoundInterval();
+  protected int getBaseExperienceReward(net.minecraft.server.level.ServerLevel);
+  protected void handleAirSupply(net.minecraft.server.level.ServerLevel, int);
+  public void baseTick();
+  public boolean isPushedByFluid();
+  public boolean canBeLeashed();
+  public static boolean checkSurfaceWaterAnimalSpawnRules(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.fish.WaterAnimal>, net.minecraft.world.level.LevelAccessor, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+}
+Compiled from "TropicalFish.java"
+public final class net.minecraft.world.entity.animal.fish.TropicalFish$Variant extends java.lang.Record {
+  private final net.minecraft.world.entity.animal.fish.TropicalFish$Pattern pattern;
+  private final net.minecraft.world.item.DyeColor baseColor;
+  private final net.minecraft.world.item.DyeColor patternColor;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.entity.animal.fish.TropicalFish$Variant> CODEC;
+  public net.minecraft.world.entity.animal.fish.TropicalFish$Variant(int);
+  public net.minecraft.world.entity.animal.fish.TropicalFish$Variant(net.minecraft.world.entity.animal.fish.TropicalFish$Pattern, net.minecraft.world.item.DyeColor, net.minecraft.world.item.DyeColor);
+  public int getPackedId();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.entity.animal.fish.TropicalFish$Pattern pattern();
+  public net.minecraft.world.item.DyeColor baseColor();
+  public net.minecraft.world.item.DyeColor patternColor();
+  static {};
+}
+Compiled from "AbstractFish.java"
+class net.minecraft.world.entity.animal.fish.AbstractFish$FishSwimGoal extends net.minecraft.world.entity.ai.goal.RandomSwimmingGoal {
+  private final net.minecraft.world.entity.animal.fish.AbstractFish fish;
+  public net.minecraft.world.entity.animal.fish.AbstractFish$FishSwimGoal(net.minecraft.world.entity.animal.fish.AbstractFish);
+  public boolean canUse();
+}
+Compiled from "AbstractFish.java"
+public abstract class net.minecraft.world.entity.animal.fish.AbstractFish extends net.minecraft.world.entity.animal.fish.WaterAnimal implements net.minecraft.world.entity.Bucketable {
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Boolean> FROM_BUCKET;
+  private static final boolean DEFAULT_FROM_BUCKET;
+  public net.minecraft.world.entity.animal.fish.AbstractFish(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.fish.AbstractFish>, net.minecraft.world.level.Level);
+  public static net.minecraft.world.entity.ai.attributes.AttributeSupplier$Builder createAttributes();
+  public boolean requiresCustomPersistence();
+  public boolean removeWhenFarAway(double);
+  public int getMaxSpawnClusterSize();
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  public boolean fromBucket();
+  public void setFromBucket(boolean);
+  protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput);
+  protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput);
+  protected void registerGoals();
+  protected net.minecraft.world.entity.ai.navigation.PathNavigation createNavigation(net.minecraft.world.level.Level);
+  protected void travelInWater(net.minecraft.world.phys.Vec3, double, boolean, double);
+  public void aiStep();
+  protected net.minecraft.world.InteractionResult mobInteract(net.minecraft.world.entity.player.Player, net.minecraft.world.InteractionHand);
+  public void saveToBucketTag(net.minecraft.world.item.ItemStack);
+  public void loadFromBucketTag(net.minecraft.nbt.CompoundTag);
+  public net.minecraft.sounds.SoundEvent getPickupSound();
+  protected boolean canRandomSwim();
+  protected abstract net.minecraft.sounds.SoundEvent getFlopSound();
+  protected net.minecraft.sounds.SoundEvent getSwimSound();
+  protected void playStepSound(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  static {};
+}
+Compiled from "TropicalFish.java"
+public final class net.minecraft.world.entity.animal.fish.TropicalFish$Pattern extends java.lang.Enum<net.minecraft.world.entity.animal.fish.TropicalFish$Pattern> implements net.minecraft.util.StringRepresentable, net.minecraft.world.item.component.TooltipProvider {
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Pattern KOB;
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Pattern SUNSTREAK;
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Pattern SNOOPER;
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Pattern DASHER;
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Pattern BRINELY;
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Pattern SPOTTY;
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Pattern FLOPPER;
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Pattern STRIPEY;
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Pattern GLITTER;
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Pattern BLOCKFISH;
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Pattern BETTY;
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Pattern CLAYFISH;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.entity.animal.fish.TropicalFish$Pattern> CODEC;
+  private static final java.util.function.IntFunction<net.minecraft.world.entity.animal.fish.TropicalFish$Pattern> BY_ID;
+  public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, net.minecraft.world.entity.animal.fish.TropicalFish$Pattern> STREAM_CODEC;
+  private final java.lang.String name;
+  private final net.minecraft.network.chat.Component displayName;
+  private final net.minecraft.world.entity.animal.fish.TropicalFish$Base base;
+  private final int packedId;
+  private static final net.minecraft.world.entity.animal.fish.TropicalFish$Pattern[] $VALUES;
+  public static net.minecraft.world.entity.animal.fish.TropicalFish$Pattern[] values();
+  public static net.minecraft.world.entity.animal.fish.TropicalFish$Pattern valueOf(java.lang.String);
+  private net.minecraft.world.entity.animal.fish.TropicalFish$Pattern(java.lang.String, net.minecraft.world.entity.animal.fish.TropicalFish$Base, int);
+  public static net.minecraft.world.entity.animal.fish.TropicalFish$Pattern byId(int);
+  public net.minecraft.world.entity.animal.fish.TropicalFish$Base base();
+  public int getPackedId();
+  public java.lang.String getSerializedName();
+  public net.minecraft.network.chat.Component displayName();
+  public void addToTooltip(net.minecraft.world.item.Item$TooltipContext, java.util.function.Consumer<net.minecraft.network.chat.Component>, net.minecraft.world.item.TooltipFlag, net.minecraft.core.component.DataComponentGetter);
+  private static net.minecraft.world.entity.animal.fish.TropicalFish$Pattern[] $values();
+  static {};
+}
+Compiled from "AbstractSchoolingFish.java"
+public class net.minecraft.world.entity.animal.fish.AbstractSchoolingFish$SchoolSpawnGroupData implements net.minecraft.world.entity.SpawnGroupData {
+  public final net.minecraft.world.entity.animal.fish.AbstractSchoolingFish leader;
+  public net.minecraft.world.entity.animal.fish.AbstractSchoolingFish$SchoolSpawnGroupData(net.minecraft.world.entity.animal.fish.AbstractSchoolingFish);
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.entity.animal.fish.package-info {
+}
+Compiled from "Pufferfish.java"
+class net.minecraft.world.entity.animal.fish.Pufferfish$PufferfishPuffGoal extends net.minecraft.world.entity.ai.goal.Goal {
+  private final net.minecraft.world.entity.animal.fish.Pufferfish fish;
+  public net.minecraft.world.entity.animal.fish.Pufferfish$PufferfishPuffGoal(net.minecraft.world.entity.animal.fish.Pufferfish);
+  public boolean canUse();
+  public void start();
+  public void stop();
+  private boolean lambda$canUse$0(net.minecraft.world.entity.LivingEntity);
+}
+Compiled from "AbstractSchoolingFish.java"
+public abstract class net.minecraft.world.entity.animal.fish.AbstractSchoolingFish extends net.minecraft.world.entity.animal.fish.AbstractFish {
+  private net.minecraft.world.entity.animal.fish.AbstractSchoolingFish leader;
+  private int schoolSize;
+  public net.minecraft.world.entity.animal.fish.AbstractSchoolingFish(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.fish.AbstractSchoolingFish>, net.minecraft.world.level.Level);
+  protected void registerGoals();
+  public int getMaxSpawnClusterSize();
+  public int getMaxSchoolSize();
+  protected boolean canRandomSwim();
+  public boolean isFollower();
+  public net.minecraft.world.entity.animal.fish.AbstractSchoolingFish startFollowing(net.minecraft.world.entity.animal.fish.AbstractSchoolingFish);
+  public void stopFollowing();
+  private void addFollower();
+  private void removeFollower();
+  public boolean canBeFollowed();
+  public void tick();
+  public boolean hasFollowers();
+  public boolean inRangeOfLeader();
+  public void pathToLeader();
+  public void addFollowers(java.util.stream.Stream<? extends net.minecraft.world.entity.animal.fish.AbstractSchoolingFish>);
+  public net.minecraft.world.entity.SpawnGroupData finalizeSpawn(net.minecraft.world.level.ServerLevelAccessor, net.minecraft.world.DifficultyInstance, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.world.entity.SpawnGroupData);
+  private void lambda$addFollowers$1(net.minecraft.world.entity.animal.fish.AbstractSchoolingFish);
+  private boolean lambda$addFollowers$0(net.minecraft.world.entity.animal.fish.AbstractSchoolingFish);
+}
+Compiled from "TropicalFish.java"
+class net.minecraft.world.entity.animal.fish.TropicalFish$TropicalFishGroupData extends net.minecraft.world.entity.animal.fish.AbstractSchoolingFish$SchoolSpawnGroupData {
+  private final net.minecraft.world.entity.animal.fish.TropicalFish$Variant variant;
+  private net.minecraft.world.entity.animal.fish.TropicalFish$TropicalFishGroupData(net.minecraft.world.entity.animal.fish.TropicalFish, net.minecraft.world.entity.animal.fish.TropicalFish$Variant);
+}
+Compiled from "TropicalFish.java"
+public class net.minecraft.world.entity.animal.fish.TropicalFish extends net.minecraft.world.entity.animal.fish.AbstractSchoolingFish {
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Variant DEFAULT_VARIANT;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Integer> DATA_ID_TYPE_VARIANT;
+  public static final java.util.List<net.minecraft.world.entity.animal.fish.TropicalFish$Variant> COMMON_VARIANTS;
+  private boolean isSchool;
+  public net.minecraft.world.entity.animal.fish.TropicalFish(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.fish.TropicalFish>, net.minecraft.world.level.Level);
+  public static java.lang.String getPredefinedName(int);
+  private static int packVariant(net.minecraft.world.entity.animal.fish.TropicalFish$Pattern, net.minecraft.world.item.DyeColor, net.minecraft.world.item.DyeColor);
+  public static net.minecraft.world.item.DyeColor getBaseColor(int);
+  public static net.minecraft.world.item.DyeColor getPatternColor(int);
+  public static net.minecraft.world.entity.animal.fish.TropicalFish$Pattern getPattern(int);
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput);
+  protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput);
+  private void setPackedVariant(int);
+  public boolean isMaxGroupSizeReached(int);
+  private int getPackedVariant();
+  public net.minecraft.world.item.DyeColor getBaseColor();
+  public net.minecraft.world.item.DyeColor getPatternColor();
+  public net.minecraft.world.entity.animal.fish.TropicalFish$Pattern getPattern();
+  private void setPattern(net.minecraft.world.entity.animal.fish.TropicalFish$Pattern);
+  private void setBaseColor(net.minecraft.world.item.DyeColor);
+  private void setPatternColor(net.minecraft.world.item.DyeColor);
+  public <T> T get(net.minecraft.core.component.DataComponentType<? extends T>);
+  protected void applyImplicitComponents(net.minecraft.core.component.DataComponentGetter);
+  protected <T> boolean applyImplicitComponent(net.minecraft.core.component.DataComponentType<T>, T);
+  public void saveToBucketTag(net.minecraft.world.item.ItemStack);
+  public net.minecraft.world.item.ItemStack getBucketItemStack();
+  protected net.minecraft.sounds.SoundEvent getAmbientSound();
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getFlopSound();
+  public net.minecraft.world.entity.SpawnGroupData finalizeSpawn(net.minecraft.world.level.ServerLevelAccessor, net.minecraft.world.DifficultyInstance, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.world.entity.SpawnGroupData);
+  public static boolean checkTropicalFishSpawnRules(net.minecraft.world.entity.EntityType<net.minecraft.world.entity.animal.fish.TropicalFish>, net.minecraft.world.level.LevelAccessor, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  static {};
+}
+Compiled from "TropicalFish.java"
+public final class net.minecraft.world.entity.animal.fish.TropicalFish$Base extends java.lang.Enum<net.minecraft.world.entity.animal.fish.TropicalFish$Base> {
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Base SMALL;
+  public static final net.minecraft.world.entity.animal.fish.TropicalFish$Base LARGE;
+  private final int id;
+  private static final net.minecraft.world.entity.animal.fish.TropicalFish$Base[] $VALUES;
+  public static net.minecraft.world.entity.animal.fish.TropicalFish$Base[] values();
+  public static net.minecraft.world.entity.animal.fish.TropicalFish$Base valueOf(java.lang.String);
+  private net.minecraft.world.entity.animal.fish.TropicalFish$Base(int);
+  private static net.minecraft.world.entity.animal.fish.TropicalFish$Base[] $values();
+  static {};
+}
+Compiled from "Salmon.java"
+public class net.minecraft.world.entity.animal.fish.Salmon extends net.minecraft.world.entity.animal.fish.AbstractSchoolingFish {
+  private static final java.lang.String TAG_TYPE;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Integer> DATA_TYPE;
+  public net.minecraft.world.entity.animal.fish.Salmon(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.fish.Salmon>, net.minecraft.world.level.Level);
+  public int getMaxSchoolSize();
+  public net.minecraft.world.item.ItemStack getBucketItemStack();
+  protected net.minecraft.sounds.SoundEvent getAmbientSound();
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getFlopSound();
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  public void onSyncedDataUpdated(net.minecraft.network.syncher.EntityDataAccessor<?>);
+  protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput);
+  protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput);
+  public void saveToBucketTag(net.minecraft.world.item.ItemStack);
+  private void setVariant(net.minecraft.world.entity.animal.fish.Salmon$Variant);
+  public net.minecraft.world.entity.animal.fish.Salmon$Variant getVariant();
+  public <T> T get(net.minecraft.core.component.DataComponentType<? extends T>);
+  protected void applyImplicitComponents(net.minecraft.core.component.DataComponentGetter);
+  protected <T> boolean applyImplicitComponent(net.minecraft.core.component.DataComponentType<T>, T);
+  public net.minecraft.world.entity.SpawnGroupData finalizeSpawn(net.minecraft.world.level.ServerLevelAccessor, net.minecraft.world.DifficultyInstance, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.world.entity.SpawnGroupData);
+  public float getSalmonScale();
+  protected net.minecraft.world.entity.EntityDimensions getDefaultDimensions(net.minecraft.world.entity.Pose);
+  static {};
+}
+Compiled from "Salmon.java"
+public final class net.minecraft.world.entity.animal.fish.Salmon$Variant extends java.lang.Enum<net.minecraft.world.entity.animal.fish.Salmon$Variant> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.world.entity.animal.fish.Salmon$Variant SMALL;
+  public static final net.minecraft.world.entity.animal.fish.Salmon$Variant MEDIUM;
+  public static final net.minecraft.world.entity.animal.fish.Salmon$Variant LARGE;
+  public static final net.minecraft.world.entity.animal.fish.Salmon$Variant DEFAULT;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.entity.animal.fish.Salmon$Variant> CODEC;
+  private static final java.util.function.IntFunction<net.minecraft.world.entity.animal.fish.Salmon$Variant> BY_ID;
+  public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, net.minecraft.world.entity.animal.fish.Salmon$Variant> STREAM_CODEC;
+  private final java.lang.String name;
+  private final int id;
+  private final float boundingBoxScale;
+  private static final net.minecraft.world.entity.animal.fish.Salmon$Variant[] $VALUES;
+  public static net.minecraft.world.entity.animal.fish.Salmon$Variant[] values();
+  public static net.minecraft.world.entity.animal.fish.Salmon$Variant valueOf(java.lang.String);
+  private net.minecraft.world.entity.animal.fish.Salmon$Variant(java.lang.String, int, float);
+  public java.lang.String getSerializedName();
+  private int id();
+  private static net.minecraft.world.entity.animal.fish.Salmon$Variant[] $values();
+  static {};
+}
+Compiled from "Pufferfish.java"
+public class net.minecraft.world.entity.animal.fish.Pufferfish extends net.minecraft.world.entity.animal.fish.AbstractFish {
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Integer> PUFF_STATE;
+  private int inflateCounter;
+  private int deflateTimer;
+  private static final net.minecraft.world.entity.ai.targeting.TargetingConditions$Selector SCARY_MOB;
+  private static final net.minecraft.world.entity.ai.targeting.TargetingConditions TARGETING_CONDITIONS;
+  public static final int STATE_SMALL;
+  public static final int STATE_MID;
+  public static final int STATE_FULL;
+  private static final int DEFAULT_PUFF_STATE;
+  public net.minecraft.world.entity.animal.fish.Pufferfish(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.fish.Pufferfish>, net.minecraft.world.level.Level);
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  public int getPuffState();
+  public void setPuffState(int);
+  public void onSyncedDataUpdated(net.minecraft.network.syncher.EntityDataAccessor<?>);
+  protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput);
+  protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput);
+  public net.minecraft.world.item.ItemStack getBucketItemStack();
+  protected void registerGoals();
+  public void tick();
+  public void aiStep();
+  private void touch(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.Mob);
+  public void playerTouch(net.minecraft.world.entity.player.Player);
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getFlopSound();
+  public net.minecraft.world.entity.EntityDimensions getDefaultDimensions(net.minecraft.world.entity.Pose);
+  private static float getScale(int);
+  private boolean lambda$aiStep$0(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.Mob);
+  private static boolean lambda$static$0(net.minecraft.world.entity.LivingEntity, net.minecraft.server.level.ServerLevel);
+  static {};
+}
+Compiled from "Cod.java"
+public class net.minecraft.world.entity.animal.fish.Cod extends net.minecraft.world.entity.animal.fish.AbstractSchoolingFish {
+  public net.minecraft.world.entity.animal.fish.Cod(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.fish.Cod>, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack getBucketItemStack();
+  protected net.minecraft.sounds.SoundEvent getAmbientSound();
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getFlopSound();
+}

@@ -1,0 +1,206 @@
+Compiled from "Sniffer.java"
+public final class net.minecraft.world.entity.animal.sniffer.Sniffer$State extends java.lang.Enum<net.minecraft.world.entity.animal.sniffer.Sniffer$State> {
+  public static final net.minecraft.world.entity.animal.sniffer.Sniffer$State IDLING;
+  public static final net.minecraft.world.entity.animal.sniffer.Sniffer$State FEELING_HAPPY;
+  public static final net.minecraft.world.entity.animal.sniffer.Sniffer$State SCENTING;
+  public static final net.minecraft.world.entity.animal.sniffer.Sniffer$State SNIFFING;
+  public static final net.minecraft.world.entity.animal.sniffer.Sniffer$State SEARCHING;
+  public static final net.minecraft.world.entity.animal.sniffer.Sniffer$State DIGGING;
+  public static final net.minecraft.world.entity.animal.sniffer.Sniffer$State RISING;
+  public static final java.util.function.IntFunction<net.minecraft.world.entity.animal.sniffer.Sniffer$State> BY_ID;
+  public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, net.minecraft.world.entity.animal.sniffer.Sniffer$State> STREAM_CODEC;
+  private final int id;
+  private static final net.minecraft.world.entity.animal.sniffer.Sniffer$State[] $VALUES;
+  public static net.minecraft.world.entity.animal.sniffer.Sniffer$State[] values();
+  public static net.minecraft.world.entity.animal.sniffer.Sniffer$State valueOf(java.lang.String);
+  private net.minecraft.world.entity.animal.sniffer.Sniffer$State(int);
+  public int id();
+  private static net.minecraft.world.entity.animal.sniffer.Sniffer$State[] $values();
+  static {};
+}
+Compiled from "Sniffer.java"
+public class net.minecraft.world.entity.animal.sniffer.Sniffer extends net.minecraft.world.entity.animal.Animal {
+  private static final net.minecraft.world.entity.ai.Brain$Provider<net.minecraft.world.entity.animal.sniffer.Sniffer> BRAIN_PROVIDER;
+  private static final int DIGGING_PARTICLES_DELAY_TICKS;
+  private static final int DIGGING_PARTICLES_DURATION_TICKS;
+  private static final int DIGGING_PARTICLES_AMOUNT;
+  private static final int DIGGING_DROP_SEED_OFFSET_TICKS;
+  private static final int SNIFFER_BABY_START_AGE;
+  private static final float DIGGING_BB_HEIGHT_OFFSET;
+  private static final net.minecraft.world.entity.EntityDimensions DIGGING_DIMENSIONS;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<net.minecraft.world.entity.animal.sniffer.Sniffer$State> DATA_STATE;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Integer> DATA_DROP_SEED_AT_TICK;
+  public final net.minecraft.world.entity.AnimationState feelingHappyAnimationState;
+  public final net.minecraft.world.entity.AnimationState scentingAnimationState;
+  public final net.minecraft.world.entity.AnimationState sniffingAnimationState;
+  public final net.minecraft.world.entity.AnimationState diggingAnimationState;
+  public final net.minecraft.world.entity.AnimationState risingAnimationState;
+  public static net.minecraft.world.entity.ai.attributes.AttributeSupplier$Builder createAttributes();
+  public net.minecraft.world.entity.animal.sniffer.Sniffer(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.Animal>, net.minecraft.world.level.Level);
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  public void onPathfindingStart();
+  public void onPathfindingDone();
+  public int getBabyStartAge();
+  public net.minecraft.world.entity.EntityDimensions getDefaultDimensions(net.minecraft.world.entity.Pose);
+  public boolean isSearching();
+  public boolean isTempted();
+  public boolean canSniff();
+  public boolean canPlayDiggingSound();
+  private net.minecraft.core.BlockPos getHeadBlock();
+  private net.minecraft.world.phys.Vec3 getHeadPosition();
+  public boolean supportQuadLeash();
+  public net.minecraft.world.phys.Vec3[] getQuadLeashOffsets();
+  private net.minecraft.world.entity.animal.sniffer.Sniffer$State getState();
+  private net.minecraft.world.entity.animal.sniffer.Sniffer setState(net.minecraft.world.entity.animal.sniffer.Sniffer$State);
+  public void onSyncedDataUpdated(net.minecraft.network.syncher.EntityDataAccessor<?>);
+  private void resetAnimations();
+  public net.minecraft.world.entity.animal.sniffer.Sniffer transitionTo(net.minecraft.world.entity.animal.sniffer.Sniffer$State);
+  private net.minecraft.world.entity.animal.sniffer.Sniffer onScentingStart();
+  private net.minecraft.world.entity.animal.sniffer.Sniffer onDiggingStart();
+  public net.minecraft.world.entity.animal.sniffer.Sniffer onDiggingComplete(boolean);
+  java.util.Optional<net.minecraft.core.BlockPos> calculateDigPosition();
+  boolean canDig();
+  private boolean canDig(net.minecraft.core.BlockPos);
+  private void dropSeed();
+  private net.minecraft.world.entity.animal.sniffer.Sniffer emitDiggingParticles(net.minecraft.world.entity.AnimationState);
+  private net.minecraft.world.entity.animal.sniffer.Sniffer storeExploredPosition(net.minecraft.core.BlockPos);
+  private java.util.stream.Stream<net.minecraft.core.GlobalPos> getExploredPositions();
+  public void jumpFromGround();
+  public void spawnChildFromBreeding(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.Animal);
+  public void die(net.minecraft.world.damagesource.DamageSource);
+  public void tick();
+  public net.minecraft.world.InteractionResult mobInteract(net.minecraft.world.entity.player.Player, net.minecraft.world.InteractionHand);
+  protected void playEatingSound();
+  private void playSearchingSound();
+  protected void playStepSound(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  protected net.minecraft.sounds.SoundEvent getAmbientSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  public int getMaxHeadYRot();
+  public net.minecraft.world.entity.AgeableMob getBreedOffspring(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.AgeableMob);
+  public boolean canMate(net.minecraft.world.entity.animal.Animal);
+  public boolean isFood(net.minecraft.world.item.ItemStack);
+  protected net.minecraft.world.entity.ai.Brain<net.minecraft.world.entity.animal.sniffer.Sniffer> makeBrain(net.minecraft.world.entity.ai.Brain$Packed);
+  public net.minecraft.world.entity.ai.Brain<net.minecraft.world.entity.animal.sniffer.Sniffer> getBrain();
+  protected void customServerAiStep(net.minecraft.server.level.ServerLevel);
+  private void lambda$dropSeed$0(net.minecraft.core.BlockPos, net.minecraft.server.level.ServerLevel, net.minecraft.world.item.ItemStack);
+  private boolean lambda$canDig$0(net.minecraft.core.BlockPos, net.minecraft.core.GlobalPos);
+  private boolean lambda$calculateDigPosition$1(net.minecraft.core.BlockPos);
+  private net.minecraft.world.phys.Vec3 lambda$calculateDigPosition$0(int);
+  private static java.util.List lambda$static$0(net.minecraft.world.entity.animal.sniffer.Sniffer);
+  static {};
+}
+Compiled from "SnifferAi.java"
+class net.minecraft.world.entity.animal.sniffer.SnifferAi$1 extends net.minecraft.world.entity.ai.behavior.AnimalPanic<net.minecraft.world.entity.animal.sniffer.Sniffer> {
+  net.minecraft.world.entity.animal.sniffer.SnifferAi$1(float);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.PathfinderMob, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+}
+Compiled from "SnifferAi.java"
+class net.minecraft.world.entity.animal.sniffer.SnifferAi$2 extends net.minecraft.world.entity.ai.behavior.AnimalMakeLove {
+  net.minecraft.world.entity.animal.sniffer.SnifferAi$2(net.minecraft.world.entity.EntityType);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.Animal, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+}
+Compiled from "SnifferAi.java"
+class net.minecraft.world.entity.animal.sniffer.SnifferAi$3 extends net.minecraft.world.entity.ai.behavior.FollowTemptation {
+  net.minecraft.world.entity.animal.sniffer.SnifferAi$3(java.util.function.Function, java.util.function.Function);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.PathfinderMob, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+}
+Compiled from "SnifferAi.java"
+class net.minecraft.world.entity.animal.sniffer.SnifferAi$Digging extends net.minecraft.world.entity.ai.behavior.Behavior<net.minecraft.world.entity.animal.sniffer.Sniffer> {
+  private net.minecraft.world.entity.animal.sniffer.SnifferAi$Digging(int, int);
+  protected boolean checkExtraStartConditions(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer);
+  protected boolean canStillUse(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected void stop(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected boolean checkExtraStartConditions(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity);
+  protected boolean canStillUse(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+  protected void stop(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+}
+Compiled from "SnifferAi.java"
+class net.minecraft.world.entity.animal.sniffer.SnifferAi$FeelingHappy extends net.minecraft.world.entity.ai.behavior.Behavior<net.minecraft.world.entity.animal.sniffer.Sniffer> {
+  private net.minecraft.world.entity.animal.sniffer.SnifferAi$FeelingHappy(int, int);
+  protected boolean canStillUse(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected void stop(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected boolean canStillUse(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+  protected void stop(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+}
+Compiled from "SnifferAi.java"
+class net.minecraft.world.entity.animal.sniffer.SnifferAi$FinishedDigging extends net.minecraft.world.entity.ai.behavior.Behavior<net.minecraft.world.entity.animal.sniffer.Sniffer> {
+  private net.minecraft.world.entity.animal.sniffer.SnifferAi$FinishedDigging(int);
+  protected boolean checkExtraStartConditions(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer);
+  protected boolean canStillUse(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected void stop(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected boolean checkExtraStartConditions(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity);
+  protected boolean canStillUse(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+  protected void stop(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+}
+Compiled from "SnifferAi.java"
+class net.minecraft.world.entity.animal.sniffer.SnifferAi$Scenting extends net.minecraft.world.entity.ai.behavior.Behavior<net.minecraft.world.entity.animal.sniffer.Sniffer> {
+  private net.minecraft.world.entity.animal.sniffer.SnifferAi$Scenting(int, int);
+  protected boolean checkExtraStartConditions(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer);
+  protected boolean canStillUse(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected void stop(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected boolean checkExtraStartConditions(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity);
+  protected boolean canStillUse(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+  protected void stop(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+}
+Compiled from "SnifferAi.java"
+class net.minecraft.world.entity.animal.sniffer.SnifferAi$Searching extends net.minecraft.world.entity.ai.behavior.Behavior<net.minecraft.world.entity.animal.sniffer.Sniffer> {
+  private net.minecraft.world.entity.animal.sniffer.SnifferAi$Searching();
+  protected boolean checkExtraStartConditions(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer);
+  protected boolean canStillUse(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected void stop(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected boolean checkExtraStartConditions(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity);
+  protected boolean canStillUse(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+  protected void stop(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+}
+Compiled from "SnifferAi.java"
+class net.minecraft.world.entity.animal.sniffer.SnifferAi$Sniffing extends net.minecraft.world.entity.ai.behavior.Behavior<net.minecraft.world.entity.animal.sniffer.Sniffer> {
+  private net.minecraft.world.entity.animal.sniffer.SnifferAi$Sniffing(int, int);
+  protected boolean checkExtraStartConditions(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer);
+  protected boolean canStillUse(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected void stop(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.animal.sniffer.Sniffer, long);
+  protected boolean checkExtraStartConditions(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity);
+  protected boolean canStillUse(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+  protected void stop(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+  protected void start(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, long);
+  private static void lambda$stop$0(net.minecraft.world.entity.animal.sniffer.Sniffer, net.minecraft.core.BlockPos);
+}
+Compiled from "SnifferAi.java"
+public class net.minecraft.world.entity.animal.sniffer.SnifferAi {
+  private static final org.slf4j.Logger LOGGER;
+  private static final int MAX_LOOK_DISTANCE;
+  private static final int SNIFFING_COOLDOWN_TICKS;
+  private static final float SPEED_MULTIPLIER_WHEN_IDLING;
+  private static final float SPEED_MULTIPLIER_WHEN_PANICKING;
+  private static final float SPEED_MULTIPLIER_WHEN_SNIFFING;
+  private static final float SPEED_MULTIPLIER_WHEN_TEMPTED;
+  public net.minecraft.world.entity.animal.sniffer.SnifferAi();
+  public static java.util.List<net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.animal.sniffer.Sniffer>> getActivities();
+  private static net.minecraft.world.entity.animal.sniffer.Sniffer resetSniffing(net.minecraft.world.entity.animal.sniffer.Sniffer);
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.animal.sniffer.Sniffer> initCoreActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.animal.sniffer.Sniffer> initSniffingActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.animal.sniffer.Sniffer> initDigActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.animal.sniffer.Sniffer> initIdleActivity();
+  public static void updateActivity(net.minecraft.world.entity.animal.sniffer.Sniffer);
+  private static java.lang.Double lambda$initIdleActivity$1(net.minecraft.world.entity.LivingEntity);
+  private static java.lang.Float lambda$initIdleActivity$0(net.minecraft.world.entity.LivingEntity);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.entity.animal.sniffer.package-info {
+}

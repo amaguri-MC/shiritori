@@ -1,0 +1,38 @@
+Compiled from "VulkanFeature.java"
+public final class com.mojang.blaze3d.vulkan.init.VulkanFeature extends java.lang.Record {
+  private final com.mojang.blaze3d.vulkan.init.VulkanPNextStruct struct;
+  private final java.lang.String name;
+  private final long offset;
+  public com.mojang.blaze3d.vulkan.init.VulkanFeature(com.mojang.blaze3d.vulkan.init.VulkanPNextStruct, java.lang.String, long);
+  public boolean get(org.lwjgl.vulkan.VkPhysicalDeviceFeatures2);
+  public boolean get(long);
+  public boolean set(org.lwjgl.vulkan.VkPhysicalDeviceFeatures2, boolean);
+  private boolean set(long, boolean);
+  public void set(org.lwjgl.vulkan.VkPhysicalDeviceFeatures2, boolean, org.lwjgl.system.MemoryStack);
+  public void set(long, boolean, org.lwjgl.system.MemoryStack);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.blaze3d.vulkan.init.VulkanPNextStruct struct();
+  public java.lang.String name();
+  public long offset();
+}
+Compiled from "VulkanPNextStruct.java"
+public final class com.mojang.blaze3d.vulkan.init.VulkanPNextStruct extends java.lang.Record {
+  private final int sType;
+  private final int structSize;
+  public com.mojang.blaze3d.vulkan.init.VulkanPNextStruct(int, int);
+  public long findOrCreateStructInPNextChain(org.lwjgl.vulkan.VkPhysicalDeviceProperties2, org.lwjgl.system.MemoryStack);
+  public long findOrCreateStructInPNextChain(org.lwjgl.vulkan.VkPhysicalDeviceFeatures2, org.lwjgl.system.MemoryStack);
+  public long findOrCreateStructInPNextChain(long, org.lwjgl.system.MemoryStack);
+  public long findStructInPNextChain(long);
+  private static long findStructInPNextChain(long, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int sType();
+  public int structSize();
+}
+Compiled from "package-info.java"
+interface com.mojang.blaze3d.vulkan.init.package-info {
+}

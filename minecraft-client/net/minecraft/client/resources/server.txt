@@ -1,0 +1,289 @@
+Compiled from "DownloadedPackSource.java"
+class net.minecraft.client.resources.server.DownloadedPackSource$1 implements net.minecraft.client.resources.server.PackLoadFeedback {
+  net.minecraft.client.resources.server.DownloadedPackSource$1();
+  public void reportUpdate(java.util.UUID, net.minecraft.client.resources.server.PackLoadFeedback$Update);
+  public void reportFinalResult(java.util.UUID, net.minecraft.client.resources.server.PackLoadFeedback$FinalResult);
+}
+Compiled from "DownloadedPackSource.java"
+class net.minecraft.client.resources.server.DownloadedPackSource$2 implements net.minecraft.client.resources.server.PackLoadFeedback {
+  final net.minecraft.client.resources.server.DownloadedPackSource this$0;
+  net.minecraft.client.resources.server.DownloadedPackSource$2(net.minecraft.client.resources.server.DownloadedPackSource);
+  public void reportUpdate(java.util.UUID, net.minecraft.client.resources.server.PackLoadFeedback$Update);
+  public void reportFinalResult(java.util.UUID, net.minecraft.client.resources.server.PackLoadFeedback$FinalResult);
+}
+Compiled from "DownloadedPackSource.java"
+class net.minecraft.client.resources.server.DownloadedPackSource$3 implements net.minecraft.util.HttpUtil$DownloadProgressListener {
+  private final net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId toastId;
+  private net.minecraft.network.chat.Component title;
+  private net.minecraft.network.chat.Component message;
+  private int count;
+  private int failCount;
+  private java.util.OptionalLong totalBytes;
+  final int val$totalCount;
+  final net.minecraft.client.resources.server.DownloadedPackSource this$0;
+  net.minecraft.client.resources.server.DownloadedPackSource$3();
+  private void updateToast();
+  private void updateProgress(long);
+  public void requestStart();
+  public void downloadStart(java.util.OptionalLong);
+  public void downloadedBytes(long);
+  public void requestFinished(boolean);
+  private void lambda$updateToast$0();
+}
+Compiled from "DownloadedPackSource.java"
+class net.minecraft.client.resources.server.DownloadedPackSource$4 implements net.minecraft.client.resources.server.PackDownloader {
+  private static final int MAX_PACK_SIZE_BYTES;
+  private static final com.google.common.hash.HashFunction CACHE_HASHING_FUNCTION;
+  final net.minecraft.client.User val$user;
+  final net.minecraft.server.packs.DownloadQueue val$downloadQueue;
+  final java.net.Proxy val$proxy;
+  final java.util.concurrent.Executor val$mainThreadExecutor;
+  final net.minecraft.client.resources.server.DownloadedPackSource this$0;
+  net.minecraft.client.resources.server.DownloadedPackSource$4();
+  private java.util.Map<java.lang.String, java.lang.String> createDownloadHeaders();
+  public void download(java.util.Map<java.util.UUID, net.minecraft.server.packs.DownloadQueue$DownloadRequest>, java.util.function.Consumer<net.minecraft.server.packs.DownloadQueue$BatchResult>);
+  static {};
+}
+Compiled from "DownloadedPackSource.java"
+class net.minecraft.client.resources.server.DownloadedPackSource$5 implements java.lang.Runnable {
+  private boolean scheduledInMainExecutor;
+  private boolean hasUpdates;
+  final java.util.concurrent.Executor val$mainThreadExecutor;
+  final net.minecraft.client.resources.server.DownloadedPackSource this$0;
+  net.minecraft.client.resources.server.DownloadedPackSource$5();
+  public void run();
+  private void runAllUpdates();
+}
+Compiled from "DownloadedPackSource.java"
+class net.minecraft.client.resources.server.DownloadedPackSource$6 implements net.minecraft.client.resources.server.PackLoadFeedback {
+  final net.minecraft.network.Connection val$connection;
+  net.minecraft.client.resources.server.DownloadedPackSource$6();
+  public void reportUpdate(java.util.UUID, net.minecraft.client.resources.server.PackLoadFeedback$Update);
+  public void reportFinalResult(java.util.UUID, net.minecraft.client.resources.server.PackLoadFeedback$FinalResult);
+}
+Compiled from "DownloadedPackSource.java"
+class net.minecraft.client.resources.server.DownloadedPackSource$7 implements net.minecraft.client.resources.server.PackLoadFeedback {
+  final net.minecraft.client.resources.server.PackLoadFeedback val$original;
+  final java.util.UUID val$packId;
+  final java.util.concurrent.CompletableFuture val$result;
+  final net.minecraft.client.resources.server.DownloadedPackSource this$0;
+  net.minecraft.client.resources.server.DownloadedPackSource$7();
+  public void reportUpdate(java.util.UUID, net.minecraft.client.resources.server.PackLoadFeedback$Update);
+  public void reportFinalResult(java.util.UUID, net.minecraft.client.resources.server.PackLoadFeedback$FinalResult);
+}
+Compiled from "DownloadedPackSource.java"
+class net.minecraft.client.resources.server.DownloadedPackSource$8 {
+  static final int[] $SwitchMap$net$minecraft$client$resources$server$PackLoadFeedback$Update;
+  static final int[] $SwitchMap$net$minecraft$client$resources$server$PackLoadFeedback$FinalResult;
+  static final int[] $SwitchMap$net$minecraft$client$resources$server$ServerPackManager$PackPromptStatus;
+  static {};
+}
+Compiled from "DownloadedPackSource.java"
+public class net.minecraft.client.resources.server.DownloadedPackSource implements java.lang.AutoCloseable {
+  private static final net.minecraft.network.chat.Component SERVER_NAME;
+  private static final java.util.regex.Pattern SHA1;
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.server.packs.repository.RepositorySource EMPTY_SOURCE;
+  private static final net.minecraft.server.packs.PackSelectionConfig DOWNLOADED_PACK_SELECTION;
+  private static final net.minecraft.client.resources.server.PackLoadFeedback LOG_ONLY_FEEDBACK;
+  private final net.minecraft.client.Minecraft minecraft;
+  private net.minecraft.server.packs.repository.RepositorySource packSource;
+  private net.minecraft.client.resources.server.PackReloadConfig$Callbacks pendingReload;
+  private final net.minecraft.client.resources.server.ServerPackManager manager;
+  private final net.minecraft.server.packs.DownloadQueue downloadQueue;
+  private net.minecraft.server.packs.repository.PackSource packType;
+  private net.minecraft.client.resources.server.PackLoadFeedback packFeedback;
+  private int packIdSerialNumber;
+  public net.minecraft.client.resources.server.DownloadedPackSource(net.minecraft.client.Minecraft, java.nio.file.Path, net.minecraft.client.main.GameConfig$UserData);
+  private net.minecraft.util.HttpUtil$DownloadProgressListener createDownloadNotifier(int);
+  private net.minecraft.client.resources.server.PackDownloader createDownloader(net.minecraft.server.packs.DownloadQueue, java.util.concurrent.Executor, net.minecraft.client.User, java.net.Proxy);
+  private java.lang.Runnable createUpdateScheduler(java.util.concurrent.Executor);
+  private net.minecraft.client.resources.server.PackReloadConfig createReloadConfig();
+  private java.util.List<net.minecraft.server.packs.repository.Pack> loadRequestedPacks(java.util.List<net.minecraft.client.resources.server.PackReloadConfig$IdAndPath>);
+  public net.minecraft.server.packs.repository.RepositorySource createRepositorySource();
+  private static net.minecraft.server.packs.repository.RepositorySource configureSource(java.util.List<net.minecraft.server.packs.repository.Pack>);
+  private void startReload(net.minecraft.client.resources.server.PackReloadConfig$Callbacks);
+  public void onRecovery();
+  public void onRecoveryFailure();
+  public void onReloadSuccess();
+  private static com.google.common.hash.HashCode tryParseSha1Hash(java.lang.String);
+  public void pushPack(java.util.UUID, java.net.URL, java.lang.String);
+  public void pushLocalPack(java.util.UUID, java.nio.file.Path);
+  public void popPack(java.util.UUID);
+  public void popAll();
+  private static net.minecraft.client.resources.server.PackLoadFeedback createPackResponseSender(net.minecraft.network.Connection);
+  public void configureForServerControl(net.minecraft.network.Connection, net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus);
+  public void configureForLocalWorld();
+  public void allowServerPacks();
+  public void rejectServerPacks();
+  public java.util.concurrent.CompletableFuture<java.lang.Void> waitForPackFeedback(java.util.UUID);
+  public void cleanupAfterDisconnect();
+  public void close() throws java.io.IOException;
+  private void lambda$createRepositorySource$0(java.util.function.Consumer);
+  private static void lambda$static$0(java.util.function.Consumer);
+  static {};
+}
+Compiled from "PackDownloader.java"
+public interface net.minecraft.client.resources.server.PackDownloader {
+  public abstract void download(java.util.Map<java.util.UUID, net.minecraft.server.packs.DownloadQueue$DownloadRequest>, java.util.function.Consumer<net.minecraft.server.packs.DownloadQueue$BatchResult>);
+}
+Compiled from "PackLoadFeedback.java"
+public final class net.minecraft.client.resources.server.PackLoadFeedback$FinalResult extends java.lang.Enum<net.minecraft.client.resources.server.PackLoadFeedback$FinalResult> {
+  public static final net.minecraft.client.resources.server.PackLoadFeedback$FinalResult DECLINED;
+  public static final net.minecraft.client.resources.server.PackLoadFeedback$FinalResult APPLIED;
+  public static final net.minecraft.client.resources.server.PackLoadFeedback$FinalResult DISCARDED;
+  public static final net.minecraft.client.resources.server.PackLoadFeedback$FinalResult DOWNLOAD_FAILED;
+  public static final net.minecraft.client.resources.server.PackLoadFeedback$FinalResult ACTIVATION_FAILED;
+  private static final net.minecraft.client.resources.server.PackLoadFeedback$FinalResult[] $VALUES;
+  public static net.minecraft.client.resources.server.PackLoadFeedback$FinalResult[] values();
+  public static net.minecraft.client.resources.server.PackLoadFeedback$FinalResult valueOf(java.lang.String);
+  private net.minecraft.client.resources.server.PackLoadFeedback$FinalResult();
+  private static net.minecraft.client.resources.server.PackLoadFeedback$FinalResult[] $values();
+  static {};
+}
+Compiled from "PackLoadFeedback.java"
+public final class net.minecraft.client.resources.server.PackLoadFeedback$Update extends java.lang.Enum<net.minecraft.client.resources.server.PackLoadFeedback$Update> {
+  public static final net.minecraft.client.resources.server.PackLoadFeedback$Update ACCEPTED;
+  public static final net.minecraft.client.resources.server.PackLoadFeedback$Update DOWNLOADED;
+  private static final net.minecraft.client.resources.server.PackLoadFeedback$Update[] $VALUES;
+  public static net.minecraft.client.resources.server.PackLoadFeedback$Update[] values();
+  public static net.minecraft.client.resources.server.PackLoadFeedback$Update valueOf(java.lang.String);
+  private net.minecraft.client.resources.server.PackLoadFeedback$Update();
+  private static net.minecraft.client.resources.server.PackLoadFeedback$Update[] $values();
+  static {};
+}
+Compiled from "PackLoadFeedback.java"
+public interface net.minecraft.client.resources.server.PackLoadFeedback {
+  public abstract void reportUpdate(java.util.UUID, net.minecraft.client.resources.server.PackLoadFeedback$Update);
+  public abstract void reportFinalResult(java.util.UUID, net.minecraft.client.resources.server.PackLoadFeedback$FinalResult);
+}
+Compiled from "PackReloadConfig.java"
+public interface net.minecraft.client.resources.server.PackReloadConfig$Callbacks {
+  public abstract void onSuccess();
+  public abstract void onFailure(boolean);
+  public abstract java.util.List<net.minecraft.client.resources.server.PackReloadConfig$IdAndPath> packsToLoad();
+}
+Compiled from "PackReloadConfig.java"
+public final class net.minecraft.client.resources.server.PackReloadConfig$IdAndPath extends java.lang.Record {
+  private final java.util.UUID id;
+  private final java.nio.file.Path path;
+  public net.minecraft.client.resources.server.PackReloadConfig$IdAndPath(java.util.UUID, java.nio.file.Path);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.UUID id();
+  public java.nio.file.Path path();
+}
+Compiled from "PackReloadConfig.java"
+public interface net.minecraft.client.resources.server.PackReloadConfig {
+  public abstract void scheduleReload(net.minecraft.client.resources.server.PackReloadConfig$Callbacks);
+}
+Compiled from "ServerPackManager.java"
+class net.minecraft.client.resources.server.ServerPackManager$1 implements net.minecraft.client.resources.server.PackReloadConfig$Callbacks {
+  final java.util.List val$packsToLoad;
+  final java.util.List val$packsToUnload;
+  final net.minecraft.client.resources.server.ServerPackManager this$0;
+  net.minecraft.client.resources.server.ServerPackManager$1();
+  public void onSuccess();
+  public void onFailure(boolean);
+  public java.util.List<net.minecraft.client.resources.server.PackReloadConfig$IdAndPath> packsToLoad();
+  private static net.minecraft.client.resources.server.PackReloadConfig$IdAndPath lambda$packsToLoad$0(net.minecraft.client.resources.server.ServerPackManager$ServerPackData);
+}
+Compiled from "ServerPackManager.java"
+final class net.minecraft.client.resources.server.ServerPackManager$ActivationStatus extends java.lang.Enum<net.minecraft.client.resources.server.ServerPackManager$ActivationStatus> {
+  public static final net.minecraft.client.resources.server.ServerPackManager$ActivationStatus INACTIVE;
+  public static final net.minecraft.client.resources.server.ServerPackManager$ActivationStatus PENDING;
+  public static final net.minecraft.client.resources.server.ServerPackManager$ActivationStatus ACTIVE;
+  private static final net.minecraft.client.resources.server.ServerPackManager$ActivationStatus[] $VALUES;
+  public static net.minecraft.client.resources.server.ServerPackManager$ActivationStatus[] values();
+  public static net.minecraft.client.resources.server.ServerPackManager$ActivationStatus valueOf(java.lang.String);
+  private net.minecraft.client.resources.server.ServerPackManager$ActivationStatus();
+  private static net.minecraft.client.resources.server.ServerPackManager$ActivationStatus[] $values();
+  static {};
+}
+Compiled from "ServerPackManager.java"
+final class net.minecraft.client.resources.server.ServerPackManager$PackDownloadStatus extends java.lang.Enum<net.minecraft.client.resources.server.ServerPackManager$PackDownloadStatus> {
+  public static final net.minecraft.client.resources.server.ServerPackManager$PackDownloadStatus REQUESTED;
+  public static final net.minecraft.client.resources.server.ServerPackManager$PackDownloadStatus PENDING;
+  public static final net.minecraft.client.resources.server.ServerPackManager$PackDownloadStatus DONE;
+  private static final net.minecraft.client.resources.server.ServerPackManager$PackDownloadStatus[] $VALUES;
+  public static net.minecraft.client.resources.server.ServerPackManager$PackDownloadStatus[] values();
+  public static net.minecraft.client.resources.server.ServerPackManager$PackDownloadStatus valueOf(java.lang.String);
+  private net.minecraft.client.resources.server.ServerPackManager$PackDownloadStatus();
+  private static net.minecraft.client.resources.server.ServerPackManager$PackDownloadStatus[] $values();
+  static {};
+}
+Compiled from "ServerPackManager.java"
+public final class net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus extends java.lang.Enum<net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus> {
+  public static final net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus PENDING;
+  public static final net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus ALLOWED;
+  public static final net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus DECLINED;
+  private static final net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus[] $VALUES;
+  public static net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus[] values();
+  public static net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus valueOf(java.lang.String);
+  private net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus();
+  private static net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus[] $values();
+  static {};
+}
+Compiled from "ServerPackManager.java"
+final class net.minecraft.client.resources.server.ServerPackManager$RemovalReason extends java.lang.Enum<net.minecraft.client.resources.server.ServerPackManager$RemovalReason> {
+  public static final net.minecraft.client.resources.server.ServerPackManager$RemovalReason DOWNLOAD_FAILED;
+  public static final net.minecraft.client.resources.server.ServerPackManager$RemovalReason ACTIVATION_FAILED;
+  public static final net.minecraft.client.resources.server.ServerPackManager$RemovalReason DECLINED;
+  public static final net.minecraft.client.resources.server.ServerPackManager$RemovalReason DISCARDED;
+  public static final net.minecraft.client.resources.server.ServerPackManager$RemovalReason SERVER_REMOVED;
+  public static final net.minecraft.client.resources.server.ServerPackManager$RemovalReason SERVER_REPLACED;
+  private final net.minecraft.client.resources.server.PackLoadFeedback$FinalResult serverResponse;
+  private static final net.minecraft.client.resources.server.ServerPackManager$RemovalReason[] $VALUES;
+  public static net.minecraft.client.resources.server.ServerPackManager$RemovalReason[] values();
+  public static net.minecraft.client.resources.server.ServerPackManager$RemovalReason valueOf(java.lang.String);
+  private net.minecraft.client.resources.server.ServerPackManager$RemovalReason(net.minecraft.client.resources.server.PackLoadFeedback$FinalResult);
+  private static net.minecraft.client.resources.server.ServerPackManager$RemovalReason[] $values();
+  static {};
+}
+Compiled from "ServerPackManager.java"
+class net.minecraft.client.resources.server.ServerPackManager$ServerPackData {
+  private final java.util.UUID id;
+  private final java.net.URL url;
+  private final com.google.common.hash.HashCode hash;
+  private java.nio.file.Path path;
+  private net.minecraft.client.resources.server.ServerPackManager$RemovalReason removalReason;
+  private net.minecraft.client.resources.server.ServerPackManager$PackDownloadStatus downloadStatus;
+  private net.minecraft.client.resources.server.ServerPackManager$ActivationStatus activationStatus;
+  private boolean promptAccepted;
+  private net.minecraft.client.resources.server.ServerPackManager$ServerPackData(java.util.UUID, java.net.URL, com.google.common.hash.HashCode);
+  public void setRemovalReasonIfNotSet(net.minecraft.client.resources.server.ServerPackManager$RemovalReason);
+  public boolean isRemoved();
+}
+Compiled from "ServerPackManager.java"
+public class net.minecraft.client.resources.server.ServerPackManager {
+  private final net.minecraft.client.resources.server.PackDownloader downloader;
+  private final net.minecraft.client.resources.server.PackLoadFeedback packLoadFeedback;
+  private final net.minecraft.client.resources.server.PackReloadConfig reloadConfig;
+  private final java.lang.Runnable updateRequest;
+  private net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus packPromptStatus;
+  private final java.util.List<net.minecraft.client.resources.server.ServerPackManager$ServerPackData> packs;
+  public net.minecraft.client.resources.server.ServerPackManager(net.minecraft.client.resources.server.PackDownloader, net.minecraft.client.resources.server.PackLoadFeedback, net.minecraft.client.resources.server.PackReloadConfig, java.lang.Runnable, net.minecraft.client.resources.server.ServerPackManager$PackPromptStatus);
+  private void registerForUpdate();
+  private void markExistingPacksAsRemoved(java.util.UUID);
+  public void pushPack(java.util.UUID, java.net.URL, com.google.common.hash.HashCode);
+  public void pushLocalPack(java.util.UUID, java.nio.file.Path);
+  private void pushNewPack(java.util.UUID, net.minecraft.client.resources.server.ServerPackManager$ServerPackData);
+  private void acceptPack(net.minecraft.client.resources.server.ServerPackManager$ServerPackData);
+  private net.minecraft.client.resources.server.ServerPackManager$ServerPackData findPackInfo(java.util.UUID);
+  public void popPack(java.util.UUID);
+  public void popAll();
+  public void allowServerPacks();
+  public void rejectServerPacks();
+  public void resetPromptStatus();
+  public void tick();
+  private void cleanupRemovedPacks();
+  private void onDownload(java.util.Collection<net.minecraft.client.resources.server.ServerPackManager$ServerPackData>, net.minecraft.server.packs.DownloadQueue$BatchResult);
+  private boolean updateDownloads();
+  private void triggerReloadIfNeeded();
+  private void lambda$updateDownloads$0(java.util.List, net.minecraft.server.packs.DownloadQueue$BatchResult);
+  private boolean lambda$cleanupRemovedPacks$0(net.minecraft.client.resources.server.ServerPackManager$ServerPackData);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.resources.server.package-info {
+}

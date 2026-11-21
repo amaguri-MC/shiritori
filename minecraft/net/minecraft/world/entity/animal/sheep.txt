@@ -1,0 +1,77 @@
+Compiled from "SheepColorSpawnRules.java"
+public class net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules {
+  private static final net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorSpawnConfiguration TEMPERATE_SPAWN_CONFIGURATION;
+  private static final net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorSpawnConfiguration WARM_SPAWN_CONFIGURATION;
+  private static final net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorSpawnConfiguration COLD_SPAWN_CONFIGURATION;
+  public net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules();
+  private static net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorProvider commonColors(net.minecraft.world.item.DyeColor);
+  public static net.minecraft.world.item.DyeColor getSheepColor(net.minecraft.core.Holder<net.minecraft.world.level.biome.Biome>, net.minecraft.util.RandomSource);
+  private static net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorSpawnConfiguration getSheepColorConfiguration(net.minecraft.core.Holder<net.minecraft.world.level.biome.Biome>);
+  private static net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorProvider weighted(net.minecraft.util.random.WeightedList<net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorProvider>);
+  private static net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorProvider single(net.minecraft.world.item.DyeColor);
+  private static net.minecraft.util.random.WeightedList$Builder<net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorProvider> builder();
+  private static net.minecraft.world.item.DyeColor lambda$single$0(net.minecraft.world.item.DyeColor, net.minecraft.util.RandomSource);
+  private static net.minecraft.world.item.DyeColor lambda$weighted$0(net.minecraft.util.random.WeightedList, net.minecraft.util.RandomSource);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.entity.animal.sheep.package-info {
+}
+Compiled from "Sheep.java"
+public class net.minecraft.world.entity.animal.sheep.Sheep extends net.minecraft.world.entity.animal.Animal implements net.minecraft.world.entity.Shearable {
+  private static final int EAT_ANIMATION_TICKS;
+  private static final net.minecraft.world.entity.EntityDimensions BABY_DIMENSIONS;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Byte> DATA_WOOL_ID;
+  private static final net.minecraft.world.item.DyeColor DEFAULT_COLOR;
+  private static final boolean DEFAULT_SHEARED;
+  private int eatAnimationTick;
+  private net.minecraft.world.entity.ai.goal.EatBlockGoal eatBlockGoal;
+  public net.minecraft.world.entity.animal.sheep.Sheep(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.sheep.Sheep>, net.minecraft.world.level.Level);
+  protected void registerGoals();
+  public boolean isFood(net.minecraft.world.item.ItemStack);
+  protected void customServerAiStep(net.minecraft.server.level.ServerLevel);
+  public void aiStep();
+  public static net.minecraft.world.entity.ai.attributes.AttributeSupplier$Builder createAttributes();
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  public void handleEntityEvent(byte);
+  public float getHeadEatPositionScale(float);
+  public float getHeadEatAngleScale(float);
+  public net.minecraft.world.InteractionResult mobInteract(net.minecraft.world.entity.player.Player, net.minecraft.world.InteractionHand);
+  public void shear(net.minecraft.server.level.ServerLevel, net.minecraft.sounds.SoundSource, net.minecraft.world.item.ItemStack);
+  public boolean readyForShearing();
+  protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput);
+  protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput);
+  protected net.minecraft.sounds.SoundEvent getAmbientSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  protected void playStepSound(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  public net.minecraft.world.item.DyeColor getColor();
+  public void setColor(net.minecraft.world.item.DyeColor);
+  public <T> T get(net.minecraft.core.component.DataComponentType<? extends T>);
+  protected void applyImplicitComponents(net.minecraft.core.component.DataComponentGetter);
+  protected <T> boolean applyImplicitComponent(net.minecraft.core.component.DataComponentType<T>, T);
+  public boolean isSheared();
+  public void setSheared(boolean);
+  public static net.minecraft.world.item.DyeColor getRandomSheepColor(net.minecraft.world.level.ServerLevelAccessor, net.minecraft.core.BlockPos);
+  public net.minecraft.world.entity.EntityDimensions getDefaultDimensions(net.minecraft.world.entity.Pose);
+  public net.minecraft.world.entity.animal.sheep.Sheep getBreedOffspring(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.AgeableMob);
+  public void ate();
+  public net.minecraft.world.entity.SpawnGroupData finalizeSpawn(net.minecraft.world.level.ServerLevelAccessor, net.minecraft.world.DifficultyInstance, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.world.entity.SpawnGroupData);
+  public net.minecraft.world.entity.AgeableMob getBreedOffspring(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.AgeableMob);
+  private void lambda$shear$0(net.minecraft.server.level.ServerLevel, net.minecraft.world.item.ItemStack);
+  private static boolean lambda$registerGoals$0(net.minecraft.world.item.ItemStack);
+  static {};
+}
+Compiled from "SheepColorSpawnRules.java"
+interface net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorProvider {
+  public abstract net.minecraft.world.item.DyeColor get(net.minecraft.util.RandomSource);
+}
+Compiled from "SheepColorSpawnRules.java"
+final class net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorSpawnConfiguration extends java.lang.Record {
+  private final net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorProvider colors;
+  private net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorSpawnConfiguration(net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorProvider);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.entity.animal.sheep.SheepColorSpawnRules$SheepColorProvider colors();
+}

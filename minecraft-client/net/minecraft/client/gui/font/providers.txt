@@ -1,0 +1,380 @@
+Compiled from "BitmapProvider.java"
+public final class net.minecraft.client.gui.font.providers.BitmapProvider$Definition extends java.lang.Record implements net.minecraft.client.gui.font.providers.GlyphProviderDefinition {
+  private final net.minecraft.resources.Identifier file;
+  private final int height;
+  private final int ascent;
+  private final int[][] codepointGrid;
+  private static final com.mojang.serialization.Codec<int[][]> CODEPOINT_GRID_CODEC;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.gui.font.providers.BitmapProvider$Definition> CODEC;
+  public net.minecraft.client.gui.font.providers.BitmapProvider$Definition(net.minecraft.resources.Identifier, int, int, int[][]);
+  private static com.mojang.serialization.DataResult<int[][]> validateDimensions(int[][]);
+  private static com.mojang.serialization.DataResult<net.minecraft.client.gui.font.providers.BitmapProvider$Definition> validate(net.minecraft.client.gui.font.providers.BitmapProvider$Definition);
+  public net.minecraft.client.gui.font.providers.GlyphProviderType type();
+  public com.mojang.datafixers.util.Either<net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Loader, net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Reference> unpack();
+  private com.mojang.blaze3d.font.GlyphProvider load(net.minecraft.server.packs.resources.ResourceManager) throws java.io.IOException;
+  private int getActualGlyphWidth(com.mojang.blaze3d.platform.NativeImage, int, int, int, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier file();
+  public int height();
+  public int ascent();
+  public int[][] codepointGrid();
+  private static net.minecraft.client.gui.font.providers.BitmapProvider$Glyph[][] lambda$load$1(int);
+  private static net.minecraft.client.gui.font.providers.BitmapProvider$Glyph[] lambda$load$0(int);
+  private static java.lang.String lambda$validate$0(net.minecraft.client.gui.font.providers.BitmapProvider$Definition);
+  private static com.mojang.datafixers.kinds.App lambda$static$2(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.String lambda$validateDimensions$2(int[], int);
+  private static java.lang.String lambda$validateDimensions$1();
+  private static java.lang.String lambda$validateDimensions$0();
+  private static java.util.List lambda$static$1(int[][]);
+  private static int[][] lambda$static$0(java.util.List);
+  static {};
+}
+Compiled from "BitmapProvider.java"
+class net.minecraft.client.gui.font.providers.BitmapProvider$Glyph$1 implements com.mojang.blaze3d.font.GlyphBitmap {
+  final net.minecraft.client.gui.font.providers.BitmapProvider$Glyph this$0;
+  net.minecraft.client.gui.font.providers.BitmapProvider$Glyph$1(net.minecraft.client.gui.font.providers.BitmapProvider$Glyph);
+  public float getOversample();
+  public int getPixelWidth();
+  public int getPixelHeight();
+  public float getBearingTop();
+  public void upload(int, int, com.mojang.blaze3d.textures.GpuTexture);
+  public boolean isColored();
+}
+Compiled from "BitmapProvider.java"
+final class net.minecraft.client.gui.font.providers.BitmapProvider$Glyph extends java.lang.Record implements com.mojang.blaze3d.font.UnbakedGlyph {
+  private final float scale;
+  private final net.minecraft.client.gui.font.providers.BitmapProvider$ImageDataHolder imageData;
+  private final int offsetX;
+  private final int offsetY;
+  private final int width;
+  private final int height;
+  private final int advance;
+  private final int ascent;
+  private net.minecraft.client.gui.font.providers.BitmapProvider$Glyph(float, net.minecraft.client.gui.font.providers.BitmapProvider$ImageDataHolder, int, int, int, int, int, int);
+  public com.mojang.blaze3d.font.GlyphInfo info();
+  public net.minecraft.client.gui.font.glyphs.BakedGlyph bake(com.mojang.blaze3d.font.UnbakedGlyph$Stitcher);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float scale();
+  public net.minecraft.client.gui.font.providers.BitmapProvider$ImageDataHolder imageData();
+  public int offsetX();
+  public int offsetY();
+  public int width();
+  public int height();
+  public int advance();
+  public int ascent();
+}
+Compiled from "BitmapProvider.java"
+class net.minecraft.client.gui.font.providers.BitmapProvider$ImageDataHolder implements java.lang.AutoCloseable {
+  private final net.minecraft.resources.Identifier identifier;
+  private final com.mojang.blaze3d.platform.NativeImage image;
+  private com.mojang.blaze3d.buffers.GpuBuffer gpuBuffer;
+  private net.minecraft.client.gui.font.providers.BitmapProvider$ImageDataHolder(net.minecraft.resources.Identifier, com.mojang.blaze3d.platform.NativeImage);
+  private com.mojang.blaze3d.buffers.GpuBuffer gpuData();
+  public void close();
+  private java.lang.String lambda$gpuData$0();
+}
+Compiled from "BitmapProvider.java"
+public class net.minecraft.client.gui.font.providers.BitmapProvider implements com.mojang.blaze3d.font.GlyphProvider {
+  private static final org.slf4j.Logger LOGGER;
+  private final net.minecraft.client.gui.font.providers.BitmapProvider$ImageDataHolder imageData;
+  private final net.minecraft.client.gui.font.CodepointMap<net.minecraft.client.gui.font.providers.BitmapProvider$Glyph> glyphs;
+  private net.minecraft.client.gui.font.providers.BitmapProvider(net.minecraft.client.gui.font.providers.BitmapProvider$ImageDataHolder, net.minecraft.client.gui.font.CodepointMap<net.minecraft.client.gui.font.providers.BitmapProvider$Glyph>);
+  public void close();
+  public com.mojang.blaze3d.font.UnbakedGlyph getGlyph(int);
+  public it.unimi.dsi.fastutil.ints.IntSet getSupportedGlyphs();
+  static {};
+}
+Compiled from "FreeTypeUtil.java"
+public class net.minecraft.client.gui.font.providers.FreeTypeUtil {
+  private static final org.slf4j.Logger LOGGER;
+  public static final java.lang.Object LIBRARY_LOCK;
+  private static long library;
+  public net.minecraft.client.gui.font.providers.FreeTypeUtil();
+  public static long getLibrary();
+  public static void assertError(int, java.lang.String);
+  public static boolean checkError(int, java.lang.String);
+  private static java.lang.String describeError(int);
+  public static org.lwjgl.util.freetype.FT_Vector setVector(org.lwjgl.util.freetype.FT_Vector, float, float);
+  public static float x(org.lwjgl.util.freetype.FT_Vector);
+  public static void destroy();
+  static {};
+}
+Compiled from "GlyphProviderDefinition.java"
+public final class net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Conditional extends java.lang.Record {
+  private final net.minecraft.client.gui.font.providers.GlyphProviderDefinition definition;
+  private final net.minecraft.client.gui.font.FontOption$Filter filter;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Conditional> CODEC;
+  public net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Conditional(net.minecraft.client.gui.font.providers.GlyphProviderDefinition, net.minecraft.client.gui.font.FontOption$Filter);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.gui.font.providers.GlyphProviderDefinition definition();
+  public net.minecraft.client.gui.font.FontOption$Filter filter();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "GlyphProviderDefinition.java"
+public interface net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Loader {
+  public abstract com.mojang.blaze3d.font.GlyphProvider load(net.minecraft.server.packs.resources.ResourceManager) throws java.io.IOException;
+}
+Compiled from "GlyphProviderDefinition.java"
+public final class net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Reference extends java.lang.Record {
+  private final net.minecraft.resources.Identifier id;
+  public net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Reference(net.minecraft.resources.Identifier);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier id();
+}
+Compiled from "GlyphProviderDefinition.java"
+public interface net.minecraft.client.gui.font.providers.GlyphProviderDefinition {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.gui.font.providers.GlyphProviderDefinition> MAP_CODEC;
+  public abstract net.minecraft.client.gui.font.providers.GlyphProviderType type();
+  public abstract com.mojang.datafixers.util.Either<net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Loader, net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Reference> unpack();
+  static {};
+}
+Compiled from "GlyphProviderType.java"
+public final class net.minecraft.client.gui.font.providers.GlyphProviderType extends java.lang.Enum<net.minecraft.client.gui.font.providers.GlyphProviderType> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.client.gui.font.providers.GlyphProviderType BITMAP;
+  public static final net.minecraft.client.gui.font.providers.GlyphProviderType TTF;
+  public static final net.minecraft.client.gui.font.providers.GlyphProviderType SPACE;
+  public static final net.minecraft.client.gui.font.providers.GlyphProviderType UNIHEX;
+  public static final net.minecraft.client.gui.font.providers.GlyphProviderType REFERENCE;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.gui.font.providers.GlyphProviderType> CODEC;
+  private final java.lang.String name;
+  private final com.mojang.serialization.MapCodec<? extends net.minecraft.client.gui.font.providers.GlyphProviderDefinition> codec;
+  private static final net.minecraft.client.gui.font.providers.GlyphProviderType[] $VALUES;
+  public static net.minecraft.client.gui.font.providers.GlyphProviderType[] values();
+  public static net.minecraft.client.gui.font.providers.GlyphProviderType valueOf(java.lang.String);
+  private net.minecraft.client.gui.font.providers.GlyphProviderType(java.lang.String, com.mojang.serialization.MapCodec<? extends net.minecraft.client.gui.font.providers.GlyphProviderDefinition>);
+  public java.lang.String getSerializedName();
+  public com.mojang.serialization.MapCodec<? extends net.minecraft.client.gui.font.providers.GlyphProviderDefinition> mapCodec();
+  private static net.minecraft.client.gui.font.providers.GlyphProviderType[] $values();
+  static {};
+}
+Compiled from "ProviderReferenceDefinition.java"
+public final class net.minecraft.client.gui.font.providers.ProviderReferenceDefinition extends java.lang.Record implements net.minecraft.client.gui.font.providers.GlyphProviderDefinition {
+  private final net.minecraft.resources.Identifier id;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.gui.font.providers.ProviderReferenceDefinition> CODEC;
+  public net.minecraft.client.gui.font.providers.ProviderReferenceDefinition(net.minecraft.resources.Identifier);
+  public net.minecraft.client.gui.font.providers.GlyphProviderType type();
+  public com.mojang.datafixers.util.Either<net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Loader, net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Reference> unpack();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier id();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "TrueTypeGlyphProviderDefinition.java"
+public final class net.minecraft.client.gui.font.providers.TrueTypeGlyphProviderDefinition$Shift extends java.lang.Record {
+  private final float x;
+  private final float y;
+  public static final net.minecraft.client.gui.font.providers.TrueTypeGlyphProviderDefinition$Shift NONE;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.gui.font.providers.TrueTypeGlyphProviderDefinition$Shift> CODEC;
+  public net.minecraft.client.gui.font.providers.TrueTypeGlyphProviderDefinition$Shift(float, float);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float x();
+  public float y();
+  private static java.util.List lambda$static$2(net.minecraft.client.gui.font.providers.TrueTypeGlyphProviderDefinition$Shift);
+  private static com.mojang.serialization.DataResult lambda$static$0(java.util.List);
+  private static net.minecraft.client.gui.font.providers.TrueTypeGlyphProviderDefinition$Shift lambda$static$1(java.util.List);
+  static {};
+}
+Compiled from "TrueTypeGlyphProviderDefinition.java"
+public final class net.minecraft.client.gui.font.providers.TrueTypeGlyphProviderDefinition extends java.lang.Record implements net.minecraft.client.gui.font.providers.GlyphProviderDefinition {
+  private final net.minecraft.resources.Identifier location;
+  private final float size;
+  private final float oversample;
+  private final net.minecraft.client.gui.font.providers.TrueTypeGlyphProviderDefinition$Shift shift;
+  private final java.lang.String skip;
+  private static final com.mojang.serialization.Codec<java.lang.String> SKIP_LIST_CODEC;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.gui.font.providers.TrueTypeGlyphProviderDefinition> CODEC;
+  public net.minecraft.client.gui.font.providers.TrueTypeGlyphProviderDefinition(net.minecraft.resources.Identifier, float, float, net.minecraft.client.gui.font.providers.TrueTypeGlyphProviderDefinition$Shift, java.lang.String);
+  public net.minecraft.client.gui.font.providers.GlyphProviderType type();
+  public com.mojang.datafixers.util.Either<net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Loader, net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Reference> unpack();
+  private com.mojang.blaze3d.font.GlyphProvider load(net.minecraft.server.packs.resources.ResourceManager) throws java.io.IOException;
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier location();
+  public float size();
+  public float oversample();
+  public net.minecraft.client.gui.font.providers.TrueTypeGlyphProviderDefinition$Shift shift();
+  public java.lang.String skip();
+  private static com.mojang.datafixers.kinds.App lambda$static$1(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.String lambda$static$0(java.util.List);
+  static {};
+}
+Compiled from "UnihexProvider.java"
+final class net.minecraft.client.gui.font.providers.UnihexProvider$ByteContents extends java.lang.Record implements net.minecraft.client.gui.font.providers.UnihexProvider$LineData {
+  private final byte[] contents;
+  private net.minecraft.client.gui.font.providers.UnihexProvider$ByteContents(byte[]);
+  public int line(int);
+  private static net.minecraft.client.gui.font.providers.UnihexProvider$LineData read(int, it.unimi.dsi.fastutil.bytes.ByteList);
+  public int bitWidth();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public byte[] contents();
+}
+Compiled from "UnihexProvider.java"
+public class net.minecraft.client.gui.font.providers.UnihexProvider$Definition implements net.minecraft.client.gui.font.providers.GlyphProviderDefinition {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.gui.font.providers.UnihexProvider$Definition> CODEC;
+  private final net.minecraft.resources.Identifier hexFile;
+  private final java.util.List<net.minecraft.client.gui.font.providers.UnihexProvider$OverrideRange> sizeOverrides;
+  private net.minecraft.client.gui.font.providers.UnihexProvider$Definition(net.minecraft.resources.Identifier, java.util.List<net.minecraft.client.gui.font.providers.UnihexProvider$OverrideRange>);
+  public net.minecraft.client.gui.font.providers.GlyphProviderType type();
+  public com.mojang.datafixers.util.Either<net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Loader, net.minecraft.client.gui.font.providers.GlyphProviderDefinition$Reference> unpack();
+  private com.mojang.blaze3d.font.GlyphProvider load(net.minecraft.server.packs.resources.ResourceManager) throws java.io.IOException;
+  private net.minecraft.client.gui.font.providers.UnihexProvider loadData(java.io.InputStream) throws java.io.IOException;
+  private static void lambda$loadData$4(net.minecraft.client.gui.font.CodepointMap, int, net.minecraft.client.gui.font.providers.UnihexProvider$LineData);
+  private static net.minecraft.client.gui.font.providers.UnihexProvider$Glyph[][] lambda$loadData$3(int);
+  private static net.minecraft.client.gui.font.providers.UnihexProvider$Glyph[] lambda$loadData$2(int);
+  private static net.minecraft.client.gui.font.providers.UnihexProvider$LineData[][] lambda$loadData$1(int);
+  private static net.minecraft.client.gui.font.providers.UnihexProvider$LineData[] lambda$loadData$0(int);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.util.List lambda$static$2(net.minecraft.client.gui.font.providers.UnihexProvider$Definition);
+  private static net.minecraft.resources.Identifier lambda$static$1(net.minecraft.client.gui.font.providers.UnihexProvider$Definition);
+  static {};
+}
+Compiled from "UnihexProvider.java"
+public final class net.minecraft.client.gui.font.providers.UnihexProvider$Dimensions extends java.lang.Record {
+  private final int left;
+  private final int right;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.client.gui.font.providers.UnihexProvider$Dimensions> MAP_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.gui.font.providers.UnihexProvider$Dimensions> CODEC;
+  public net.minecraft.client.gui.font.providers.UnihexProvider$Dimensions(int, int);
+  public int pack();
+  public static int pack(int, int);
+  public static int left(int);
+  public static int right(int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int left();
+  public int right();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "UnihexProvider.java"
+class net.minecraft.client.gui.font.providers.UnihexProvider$Glyph$1 implements com.mojang.blaze3d.font.GlyphInfo {
+  final net.minecraft.client.gui.font.providers.UnihexProvider$Glyph this$0;
+  net.minecraft.client.gui.font.providers.UnihexProvider$Glyph$1(net.minecraft.client.gui.font.providers.UnihexProvider$Glyph);
+  public float getAdvance();
+  public float getShadowOffset();
+  public float getBoldOffset();
+}
+Compiled from "UnihexProvider.java"
+class net.minecraft.client.gui.font.providers.UnihexProvider$Glyph$2 implements com.mojang.blaze3d.font.GlyphBitmap {
+  final net.minecraft.client.gui.font.providers.UnihexProvider$Glyph this$0;
+  net.minecraft.client.gui.font.providers.UnihexProvider$Glyph$2(net.minecraft.client.gui.font.providers.UnihexProvider$Glyph);
+  public float getOversample();
+  public int getPixelWidth();
+  public int getPixelHeight();
+  public void upload(int, int, com.mojang.blaze3d.textures.GpuTexture);
+  public boolean isColored();
+}
+Compiled from "UnihexProvider.java"
+final class net.minecraft.client.gui.font.providers.UnihexProvider$Glyph extends java.lang.Record implements com.mojang.blaze3d.font.UnbakedGlyph {
+  private final net.minecraft.client.gui.font.providers.UnihexProvider$LineData contents;
+  private final int left;
+  private final int right;
+  private net.minecraft.client.gui.font.providers.UnihexProvider$Glyph(net.minecraft.client.gui.font.providers.UnihexProvider$LineData, int, int);
+  public int width();
+  public com.mojang.blaze3d.font.GlyphInfo info();
+  public net.minecraft.client.gui.font.glyphs.BakedGlyph bake(com.mojang.blaze3d.font.UnbakedGlyph$Stitcher);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.gui.font.providers.UnihexProvider$LineData contents();
+  public int left();
+  public int right();
+}
+Compiled from "UnihexProvider.java"
+final class net.minecraft.client.gui.font.providers.UnihexProvider$IntContents extends java.lang.Record implements net.minecraft.client.gui.font.providers.UnihexProvider$LineData {
+  private final int[] contents;
+  private final int bitWidth;
+  private static final int SIZE_24;
+  private net.minecraft.client.gui.font.providers.UnihexProvider$IntContents(int[], int);
+  public int line(int);
+  private static net.minecraft.client.gui.font.providers.UnihexProvider$LineData read24(int, it.unimi.dsi.fastutil.bytes.ByteList);
+  public static net.minecraft.client.gui.font.providers.UnihexProvider$LineData read32(int, it.unimi.dsi.fastutil.bytes.ByteList);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int[] contents();
+  public int bitWidth();
+}
+Compiled from "UnihexProvider.java"
+public interface net.minecraft.client.gui.font.providers.UnihexProvider$LineData {
+  public abstract int line(int);
+  public abstract int bitWidth();
+  public default int mask();
+  public default int calculateWidth();
+}
+Compiled from "UnihexProvider.java"
+final class net.minecraft.client.gui.font.providers.UnihexProvider$OverrideRange extends java.lang.Record {
+  private final int from;
+  private final int to;
+  private final net.minecraft.client.gui.font.providers.UnihexProvider$Dimensions dimensions;
+  private static final com.mojang.serialization.Codec<net.minecraft.client.gui.font.providers.UnihexProvider$OverrideRange> RAW_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.gui.font.providers.UnihexProvider$OverrideRange> CODEC;
+  private net.minecraft.client.gui.font.providers.UnihexProvider$OverrideRange(int, int, net.minecraft.client.gui.font.providers.UnihexProvider$Dimensions);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int from();
+  public int to();
+  public net.minecraft.client.gui.font.providers.UnihexProvider$Dimensions dimensions();
+  private static com.mojang.serialization.DataResult lambda$static$1(net.minecraft.client.gui.font.providers.UnihexProvider$OverrideRange);
+  private static java.lang.String lambda$static$2(net.minecraft.client.gui.font.providers.UnihexProvider$OverrideRange);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "UnihexProvider.java"
+public interface net.minecraft.client.gui.font.providers.UnihexProvider$ReaderOutput {
+  public abstract void accept(int, net.minecraft.client.gui.font.providers.UnihexProvider$LineData);
+}
+Compiled from "UnihexProvider.java"
+final class net.minecraft.client.gui.font.providers.UnihexProvider$ShortContents extends java.lang.Record implements net.minecraft.client.gui.font.providers.UnihexProvider$LineData {
+  private final short[] contents;
+  private net.minecraft.client.gui.font.providers.UnihexProvider$ShortContents(short[]);
+  public int line(int);
+  private static net.minecraft.client.gui.font.providers.UnihexProvider$LineData read(int, it.unimi.dsi.fastutil.bytes.ByteList);
+  public int bitWidth();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public short[] contents();
+}
+Compiled from "UnihexProvider.java"
+public class net.minecraft.client.gui.font.providers.UnihexProvider implements com.mojang.blaze3d.font.GlyphProvider {
+  private static final org.slf4j.Logger LOGGER;
+  private static final int GLYPH_HEIGHT;
+  private static final int DIGITS_PER_BYTE;
+  private static final int DIGITS_FOR_WIDTH_8;
+  private static final int DIGITS_FOR_WIDTH_16;
+  private static final int DIGITS_FOR_WIDTH_24;
+  private static final int DIGITS_FOR_WIDTH_32;
+  private final net.minecraft.client.gui.font.CodepointMap<net.minecraft.client.gui.font.providers.UnihexProvider$Glyph> glyphs;
+  private net.minecraft.client.gui.font.providers.UnihexProvider(net.minecraft.client.gui.font.CodepointMap<net.minecraft.client.gui.font.providers.UnihexProvider$Glyph>);
+  public com.mojang.blaze3d.font.UnbakedGlyph getGlyph(int);
+  public it.unimi.dsi.fastutil.ints.IntSet getSupportedGlyphs();
+  static void unpackBitsToBytes(java.nio.IntBuffer, int, int, int);
+  private static void unpackBitsToBytes(java.nio.IntBuffer, net.minecraft.client.gui.font.providers.UnihexProvider$LineData, int, int);
+  static void readFromStream(java.io.InputStream, net.minecraft.client.gui.font.providers.UnihexProvider$ReaderOutput) throws java.io.IOException;
+  private static int decodeHex(int, it.unimi.dsi.fastutil.bytes.ByteList, int);
+  private static int decodeHex(int, byte);
+  private static boolean copyUntil(java.io.InputStream, it.unimi.dsi.fastutil.bytes.ByteList, int) throws java.io.IOException;
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.gui.font.providers.package-info {
+}

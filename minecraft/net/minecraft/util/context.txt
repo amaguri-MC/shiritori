@@ -1,0 +1,49 @@
+Compiled from "ContextKeySet.java"
+public class net.minecraft.util.context.ContextKeySet$Builder {
+  private final java.util.Set<net.minecraft.util.context.ContextKey<?>> required;
+  private final java.util.Set<net.minecraft.util.context.ContextKey<?>> optional;
+  public net.minecraft.util.context.ContextKeySet$Builder();
+  public net.minecraft.util.context.ContextKeySet$Builder required(net.minecraft.util.context.ContextKey<?>);
+  public net.minecraft.util.context.ContextKeySet$Builder optional(net.minecraft.util.context.ContextKey<?>);
+  public net.minecraft.util.context.ContextKeySet build();
+}
+Compiled from "ContextMap.java"
+public class net.minecraft.util.context.ContextMap {
+  private final java.util.Map<net.minecraft.util.context.ContextKey<?>, java.lang.Object> params;
+  private net.minecraft.util.context.ContextMap(java.util.Map<net.minecraft.util.context.ContextKey<?>, java.lang.Object>);
+  public boolean has(net.minecraft.util.context.ContextKey<?>);
+  public <T> T getOrThrow(net.minecraft.util.context.ContextKey<T>);
+  public <T> T getOptional(net.minecraft.util.context.ContextKey<T>);
+  public <T> T getOrDefault(net.minecraft.util.context.ContextKey<T>, T);
+}
+Compiled from "ContextMap.java"
+public class net.minecraft.util.context.ContextMap$Builder {
+  private final java.util.Map<net.minecraft.util.context.ContextKey<?>, java.lang.Object> params;
+  public net.minecraft.util.context.ContextMap$Builder();
+  public <T> net.minecraft.util.context.ContextMap$Builder withParameter(net.minecraft.util.context.ContextKey<T>, T);
+  public <T> net.minecraft.util.context.ContextMap$Builder withOptionalParameter(net.minecraft.util.context.ContextKey<T>, T);
+  public <T> T getParameter(net.minecraft.util.context.ContextKey<T>);
+  public <T> T getOptionalParameter(net.minecraft.util.context.ContextKey<T>);
+  public net.minecraft.util.context.ContextMap create(net.minecraft.util.context.ContextKeySet);
+}
+Compiled from "ContextKeySet.java"
+public class net.minecraft.util.context.ContextKeySet {
+  private final java.util.Set<net.minecraft.util.context.ContextKey<?>> required;
+  private final java.util.Set<net.minecraft.util.context.ContextKey<?>> allowed;
+  private net.minecraft.util.context.ContextKeySet(java.util.Set<net.minecraft.util.context.ContextKey<?>>, java.util.Set<net.minecraft.util.context.ContextKey<?>>);
+  public java.util.Set<net.minecraft.util.context.ContextKey<?>> required();
+  public java.util.Set<net.minecraft.util.context.ContextKey<?>> allowed();
+  public java.lang.String toString();
+  private java.lang.String lambda$toString$0(net.minecraft.util.context.ContextKey);
+}
+Compiled from "package-info.java"
+interface net.minecraft.util.context.package-info {
+}
+Compiled from "ContextKey.java"
+public class net.minecraft.util.context.ContextKey<T> {
+  private final net.minecraft.resources.Identifier name;
+  public net.minecraft.util.context.ContextKey(net.minecraft.resources.Identifier);
+  public static <T> net.minecraft.util.context.ContextKey<T> vanilla(java.lang.String);
+  public net.minecraft.resources.Identifier name();
+  public java.lang.String toString();
+}

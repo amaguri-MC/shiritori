@@ -1,0 +1,89 @@
+Compiled from "FullTextSearchTree.java"
+public class net.minecraft.client.searchtree.FullTextSearchTree<T> extends net.minecraft.client.searchtree.IdSearchTree<T> {
+  private final net.minecraft.client.searchtree.SearchTree<T> plainTextSearchTree;
+  public net.minecraft.client.searchtree.FullTextSearchTree(java.util.function.Function<T, java.util.stream.Stream<java.lang.String>>, java.util.function.Function<T, java.util.stream.Stream<net.minecraft.resources.Identifier>>, java.util.List<T>);
+  protected java.util.List<T> searchPlainText(java.lang.String);
+  protected java.util.List<T> searchIdentifier(java.lang.String, java.lang.String);
+}
+Compiled from "IdSearchTree.java"
+public class net.minecraft.client.searchtree.IdSearchTree<T> implements net.minecraft.client.searchtree.SearchTree<T> {
+  protected final java.util.Comparator<T> additionOrder;
+  protected final net.minecraft.client.searchtree.IdentifierSearchTree<T> identifierSearchTree;
+  public net.minecraft.client.searchtree.IdSearchTree(java.util.function.Function<T, java.util.stream.Stream<net.minecraft.resources.Identifier>>, java.util.List<T>);
+  public java.util.List<T> search(java.lang.String);
+  protected java.util.List<T> searchPlainText(java.lang.String);
+  protected java.util.List<T> searchIdentifier(java.lang.String, java.lang.String);
+}
+Compiled from "IdentifierSearchTree.java"
+class net.minecraft.client.searchtree.IdentifierSearchTree$1 implements net.minecraft.client.searchtree.IdentifierSearchTree<T> {
+  net.minecraft.client.searchtree.IdentifierSearchTree$1();
+  public java.util.List<T> searchNamespace(java.lang.String);
+  public java.util.List<T> searchPath(java.lang.String);
+}
+Compiled from "IdentifierSearchTree.java"
+class net.minecraft.client.searchtree.IdentifierSearchTree$2 implements net.minecraft.client.searchtree.IdentifierSearchTree<T> {
+  final net.minecraft.client.searchtree.SuffixArray val$namespaceTree;
+  final net.minecraft.client.searchtree.SuffixArray val$pathTree;
+  net.minecraft.client.searchtree.IdentifierSearchTree$2(net.minecraft.client.searchtree.SuffixArray, net.minecraft.client.searchtree.SuffixArray);
+  public java.util.List<T> searchNamespace(java.lang.String);
+  public java.util.List<T> searchPath(java.lang.String);
+}
+Compiled from "IdentifierSearchTree.java"
+public interface net.minecraft.client.searchtree.IdentifierSearchTree<T> {
+  public static <T> net.minecraft.client.searchtree.IdentifierSearchTree<T> empty();
+  public static <T> net.minecraft.client.searchtree.IdentifierSearchTree<T> create(java.util.List<T>, java.util.function.Function<T, java.util.stream.Stream<net.minecraft.resources.Identifier>>);
+  public abstract java.util.List<T> searchNamespace(java.lang.String);
+  public abstract java.util.List<T> searchPath(java.lang.String);
+  private static void lambda$create$0(net.minecraft.client.searchtree.SuffixArray, java.lang.Object, net.minecraft.client.searchtree.SuffixArray, net.minecraft.resources.Identifier);
+}
+Compiled from "IntersectionIterator.java"
+public class net.minecraft.client.searchtree.IntersectionIterator<T> extends com.google.common.collect.AbstractIterator<T> {
+  private final com.google.common.collect.PeekingIterator<T> firstIterator;
+  private final com.google.common.collect.PeekingIterator<T> secondIterator;
+  private final java.util.Comparator<T> comparator;
+  public net.minecraft.client.searchtree.IntersectionIterator(java.util.Iterator<T>, java.util.Iterator<T>, java.util.Comparator<T>);
+  protected T computeNext();
+}
+Compiled from "MergingUniqueIterator.java"
+public class net.minecraft.client.searchtree.MergingUniqueIterator<T> extends com.google.common.collect.AbstractIterator<T> {
+  private final com.google.common.collect.PeekingIterator<T> firstIterator;
+  private final com.google.common.collect.PeekingIterator<T> secondIterator;
+  private final java.util.Comparator<T> comparator;
+  public net.minecraft.client.searchtree.MergingUniqueIterator(java.util.Iterator<T>, java.util.Iterator<T>, java.util.Comparator<T>);
+  protected T computeNext();
+}
+Compiled from "SearchTree.java"
+public interface net.minecraft.client.searchtree.SearchTree<T> {
+  public static <T> net.minecraft.client.searchtree.SearchTree<T> empty();
+  public static <T> net.minecraft.client.searchtree.SearchTree<T> plainText(java.util.List<T>, java.util.function.Function<T, java.util.stream.Stream<java.lang.String>>);
+  public abstract java.util.List<T> search(java.lang.String);
+  private static void lambda$plainText$0(net.minecraft.client.searchtree.SuffixArray, java.lang.Object, java.lang.String);
+  private static java.util.List lambda$empty$0(java.lang.String);
+}
+Compiled from "SuffixArray.java"
+public class net.minecraft.client.searchtree.SuffixArray<T> {
+  private static final boolean DEBUG_COMPARISONS;
+  private static final boolean DEBUG_ARRAY;
+  private static final org.slf4j.Logger LOGGER;
+  private static final int END_OF_TEXT_MARKER;
+  private static final int END_OF_DATA;
+  protected final java.util.List<T> list;
+  private final it.unimi.dsi.fastutil.ints.IntList chars;
+  private final it.unimi.dsi.fastutil.ints.IntList wordStarts;
+  private it.unimi.dsi.fastutil.ints.IntList suffixToT;
+  private it.unimi.dsi.fastutil.ints.IntList offsets;
+  private int maxStringLength;
+  public net.minecraft.client.searchtree.SuffixArray();
+  public void add(T, java.lang.String);
+  public void generate();
+  private void print();
+  private java.lang.String getString(int);
+  private int compare(java.lang.String, int);
+  public java.util.List<T> search(java.lang.String);
+  private static void lambda$generate$1(int[], int[], int[], int, int);
+  private static int lambda$generate$0(int[], int[], int, int);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.searchtree.package-info {
+}

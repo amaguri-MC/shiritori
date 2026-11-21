@@ -1,0 +1,414 @@
+Compiled from "FilePackResources.java"
+class net.minecraft.server.packs.FilePackResources$SharedZipFileAccess implements java.lang.AutoCloseable {
+  private final java.io.File file;
+  private java.util.zip.ZipFile zipFile;
+  private boolean failedToLoad;
+  private net.minecraft.server.packs.FilePackResources$SharedZipFileAccess(java.io.File);
+  private java.util.zip.ZipFile getOrCreateZipFile();
+  public void close();
+  protected void finalize() throws java.lang.Throwable;
+}
+Compiled from "VanillaPackResources.java"
+public class net.minecraft.server.packs.VanillaPackResources implements net.minecraft.server.packs.PackResources {
+  private static final org.slf4j.Logger LOGGER;
+  private final net.minecraft.server.packs.PackLocationInfo location;
+  private final net.minecraft.server.packs.resources.ResourceMetadata builtInMetadata;
+  private net.minecraft.server.packs.resources.ResourceMetadata resourceMetadata;
+  private final java.util.Set<java.lang.String> namespaces;
+  private final java.util.List<java.nio.file.Path> rootPaths;
+  private final java.util.Map<net.minecraft.server.packs.PackType, java.util.List<java.nio.file.Path>> pathsForType;
+  net.minecraft.server.packs.VanillaPackResources(net.minecraft.server.packs.PackLocationInfo, net.minecraft.server.packs.resources.ResourceMetadata, java.util.Set<java.lang.String>, java.util.List<java.nio.file.Path>, java.util.Map<net.minecraft.server.packs.PackType, java.util.List<java.nio.file.Path>>);
+  public net.minecraft.server.packs.resources.IoSupplier<java.io.InputStream> getRootResource(java.lang.String...);
+  public void listRawPaths(net.minecraft.server.packs.PackType, net.minecraft.resources.Identifier, java.util.function.Consumer<java.nio.file.Path>);
+  public void listResources(net.minecraft.server.packs.PackType, java.lang.String, java.lang.String, net.minecraft.server.packs.PackResources$ResourceOutput);
+  private static void getResources(net.minecraft.server.packs.PackResources$ResourceOutput, java.lang.String, java.nio.file.Path, java.util.List<java.lang.String>);
+  public net.minecraft.server.packs.resources.IoSupplier<java.io.InputStream> getResource(net.minecraft.server.packs.PackType, net.minecraft.resources.Identifier);
+  public java.util.Set<java.lang.String> getNamespaces(net.minecraft.server.packs.PackType);
+  public <T> T getMetadataSection(net.minecraft.server.packs.metadata.MetadataSectionType<T>);
+  public net.minecraft.server.packs.PackLocationInfo location();
+  public void close();
+  public net.minecraft.server.packs.resources.ResourceProvider asProvider();
+  private java.util.Optional lambda$asProvider$0(net.minecraft.resources.Identifier);
+  private net.minecraft.server.packs.resources.Resource lambda$asProvider$1(net.minecraft.server.packs.resources.IoSupplier);
+  private static net.minecraft.server.packs.resources.IoSupplier lambda$getResource$1(net.minecraft.resources.Identifier, com.mojang.serialization.DataResult$Error);
+  private net.minecraft.server.packs.resources.IoSupplier lambda$getResource$0(net.minecraft.resources.Identifier, net.minecraft.server.packs.PackType, java.util.List);
+  private static void lambda$listResources$1(java.lang.String, com.mojang.serialization.DataResult$Error);
+  private void lambda$listResources$0(net.minecraft.server.packs.PackType, net.minecraft.server.packs.PackResources$ResourceOutput, java.lang.String, java.util.List);
+  private static void lambda$listRawPaths$1(net.minecraft.resources.Identifier, com.mojang.serialization.DataResult$Error);
+  private void lambda$listRawPaths$0(net.minecraft.resources.Identifier, net.minecraft.server.packs.PackType, java.util.function.Consumer, java.util.List);
+  static {};
+}
+Compiled from "DownloadCacheCleaner.java"
+public class net.minecraft.server.packs.DownloadCacheCleaner {
+  private static final org.slf4j.Logger LOGGER;
+  public net.minecraft.server.packs.DownloadCacheCleaner();
+  public static void vacuumCacheDir(java.nio.file.Path, int);
+  private static java.util.List<net.minecraft.server.packs.DownloadCacheCleaner$PathAndTime> listFilesWithModificationTimes(java.nio.file.Path) throws java.io.IOException;
+  private static java.util.List<net.minecraft.server.packs.DownloadCacheCleaner$PathAndPriority> prioritizeFilesInDirs(java.util.List<net.minecraft.server.packs.DownloadCacheCleaner$PathAndTime>);
+  static {};
+}
+Compiled from "OverlayMetadataSection.java"
+public final class net.minecraft.server.packs.OverlayMetadataSection$OverlayEntry extends java.lang.Record {
+  private final net.minecraft.util.InclusiveRange<net.minecraft.server.packs.metadata.pack.PackFormat> format;
+  private final java.lang.String overlay;
+  public net.minecraft.server.packs.OverlayMetadataSection$OverlayEntry(net.minecraft.util.InclusiveRange<net.minecraft.server.packs.metadata.pack.PackFormat>, java.lang.String);
+  private static com.mojang.serialization.Codec<java.util.List<net.minecraft.server.packs.OverlayMetadataSection$OverlayEntry>> listCodecForPackType(net.minecraft.server.packs.PackType);
+  public boolean isApplicable(net.minecraft.server.packs.metadata.pack.PackFormat);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.util.InclusiveRange<net.minecraft.server.packs.metadata.pack.PackFormat> format();
+  public java.lang.String overlay();
+  private static com.mojang.serialization.DataResult lambda$listCodecForPackType$2(int, java.util.List);
+  private static net.minecraft.server.packs.OverlayMetadataSection$OverlayEntry$IntermediateEntry lambda$listCodecForPackType$3(int, net.minecraft.server.packs.OverlayMetadataSection$OverlayEntry);
+  private static com.mojang.serialization.DataResult lambda$listCodecForPackType$0(int, java.util.List);
+  private static net.minecraft.server.packs.OverlayMetadataSection$OverlayEntry lambda$listCodecForPackType$1(net.minecraft.server.packs.OverlayMetadataSection$OverlayEntry$IntermediateEntry, net.minecraft.util.InclusiveRange);
+}
+Compiled from "DownloadQueue.java"
+public final class net.minecraft.server.packs.DownloadQueue$DownloadRequest extends java.lang.Record {
+  private final java.net.URL url;
+  private final com.google.common.hash.HashCode hash;
+  public net.minecraft.server.packs.DownloadQueue$DownloadRequest(java.net.URL, com.google.common.hash.HashCode);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.net.URL url();
+  public com.google.common.hash.HashCode hash();
+}
+Compiled from "OverlayMetadataSection.java"
+public final class net.minecraft.server.packs.OverlayMetadataSection extends java.lang.Record {
+  private final java.util.List<net.minecraft.server.packs.OverlayMetadataSection$OverlayEntry> overlays;
+  private static final java.util.regex.Pattern DIR_VALIDATOR;
+  public static final net.minecraft.server.packs.metadata.MetadataSectionType<net.minecraft.server.packs.OverlayMetadataSection> CLIENT_TYPE;
+  public static final net.minecraft.server.packs.metadata.MetadataSectionType<net.minecraft.server.packs.OverlayMetadataSection> SERVER_TYPE;
+  public net.minecraft.server.packs.OverlayMetadataSection(java.util.List<net.minecraft.server.packs.OverlayMetadataSection$OverlayEntry>);
+  private static com.mojang.serialization.DataResult<java.lang.String> validateOverlayDir(java.lang.String);
+  public static com.mojang.serialization.Codec<net.minecraft.server.packs.OverlayMetadataSection> codecForPackType(net.minecraft.server.packs.PackType);
+  public static net.minecraft.server.packs.metadata.MetadataSectionType<net.minecraft.server.packs.OverlayMetadataSection> forPackType(net.minecraft.server.packs.PackType);
+  public java.util.List<java.lang.String> overlaysForVersion(net.minecraft.server.packs.metadata.pack.PackFormat);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<net.minecraft.server.packs.OverlayMetadataSection$OverlayEntry> overlays();
+  private static boolean lambda$overlaysForVersion$0(net.minecraft.server.packs.metadata.pack.PackFormat, net.minecraft.server.packs.OverlayMetadataSection$OverlayEntry);
+  private static com.mojang.datafixers.kinds.App lambda$codecForPackType$0(net.minecraft.server.packs.PackType, com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.String lambda$validateOverlayDir$0(java.lang.String);
+  static {};
+}
+Compiled from "DownloadQueue.java"
+final class net.minecraft.server.packs.DownloadQueue$LogEntry extends java.lang.Record {
+  private final java.util.UUID id;
+  private final java.lang.String url;
+  private final java.time.Instant time;
+  private final java.util.Optional<java.lang.String> hash;
+  private final com.mojang.datafixers.util.Either<java.lang.String, net.minecraft.server.packs.DownloadQueue$FileInfoEntry> errorOrFileInfo;
+  public static final com.mojang.serialization.Codec<net.minecraft.server.packs.DownloadQueue$LogEntry> CODEC;
+  private net.minecraft.server.packs.DownloadQueue$LogEntry(java.util.UUID, java.lang.String, java.time.Instant, java.util.Optional<java.lang.String>, com.mojang.datafixers.util.Either<java.lang.String, net.minecraft.server.packs.DownloadQueue$FileInfoEntry>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.UUID id();
+  public java.lang.String url();
+  public java.time.Instant time();
+  public java.util.Optional<java.lang.String> hash();
+  public com.mojang.datafixers.util.Either<java.lang.String, net.minecraft.server.packs.DownloadQueue$FileInfoEntry> errorOrFileInfo();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "PathPackResources.java"
+public class net.minecraft.server.packs.PathPackResources$PathResourcesSupplier implements net.minecraft.server.packs.repository.Pack$ResourcesSupplier {
+  private final java.nio.file.Path content;
+  public net.minecraft.server.packs.PathPackResources$PathResourcesSupplier(java.nio.file.Path);
+  public net.minecraft.server.packs.PackResources openPrimary(net.minecraft.server.packs.PackLocationInfo);
+  public net.minecraft.server.packs.PackResources openFull(net.minecraft.server.packs.PackLocationInfo, net.minecraft.server.packs.repository.Pack$Metadata);
+}
+Compiled from "PackResources.java"
+public interface net.minecraft.server.packs.PackResources extends java.lang.AutoCloseable {
+  public static final java.lang.String METADATA_EXTENSION;
+  public static final java.lang.String PACK_META;
+  public abstract net.minecraft.server.packs.resources.IoSupplier<java.io.InputStream> getRootResource(java.lang.String...);
+  public abstract net.minecraft.server.packs.resources.IoSupplier<java.io.InputStream> getResource(net.minecraft.server.packs.PackType, net.minecraft.resources.Identifier);
+  public abstract void listResources(net.minecraft.server.packs.PackType, java.lang.String, java.lang.String, net.minecraft.server.packs.PackResources$ResourceOutput);
+  public abstract java.util.Set<java.lang.String> getNamespaces(net.minecraft.server.packs.PackType);
+  public abstract <T> T getMetadataSection(net.minecraft.server.packs.metadata.MetadataSectionType<T>) throws java.io.IOException;
+  public abstract net.minecraft.server.packs.PackLocationInfo location();
+  public default java.lang.String packId();
+  public default java.util.Optional<net.minecraft.server.packs.repository.KnownPack> knownPackInfo();
+  public abstract void close();
+}
+Compiled from "PackType.java"
+public final class net.minecraft.server.packs.PackType extends java.lang.Enum<net.minecraft.server.packs.PackType> {
+  public static final net.minecraft.server.packs.PackType CLIENT_RESOURCES;
+  public static final net.minecraft.server.packs.PackType SERVER_DATA;
+  private final java.lang.String directory;
+  private static final net.minecraft.server.packs.PackType[] $VALUES;
+  public static net.minecraft.server.packs.PackType[] values();
+  public static net.minecraft.server.packs.PackType valueOf(java.lang.String);
+  private net.minecraft.server.packs.PackType(java.lang.String);
+  public java.lang.String getDirectory();
+  private static net.minecraft.server.packs.PackType[] $values();
+  static {};
+}
+Compiled from "CompositePackResources.java"
+public class net.minecraft.server.packs.CompositePackResources implements net.minecraft.server.packs.PackResources {
+  private final net.minecraft.server.packs.PackResources primaryPackResources;
+  private final java.util.List<net.minecraft.server.packs.PackResources> packResourcesStack;
+  public net.minecraft.server.packs.CompositePackResources(net.minecraft.server.packs.PackResources, java.util.List<net.minecraft.server.packs.PackResources>);
+  public net.minecraft.server.packs.resources.IoSupplier<java.io.InputStream> getRootResource(java.lang.String...);
+  public net.minecraft.server.packs.resources.IoSupplier<java.io.InputStream> getResource(net.minecraft.server.packs.PackType, net.minecraft.resources.Identifier);
+  public void listResources(net.minecraft.server.packs.PackType, java.lang.String, java.lang.String, net.minecraft.server.packs.PackResources$ResourceOutput);
+  public java.util.Set<java.lang.String> getNamespaces(net.minecraft.server.packs.PackType);
+  public <T> T getMetadataSection(net.minecraft.server.packs.metadata.MetadataSectionType<T>) throws java.io.IOException;
+  public net.minecraft.server.packs.PackLocationInfo location();
+  public void close();
+}
+Compiled from "PackResources.java"
+public interface net.minecraft.server.packs.PackResources$ResourceOutput extends java.util.function.BiConsumer<net.minecraft.resources.Identifier, net.minecraft.server.packs.resources.IoSupplier<java.io.InputStream>> {
+}
+Compiled from "FilePackResources.java"
+public class net.minecraft.server.packs.FilePackResources extends net.minecraft.server.packs.AbstractPackResources {
+  private static final org.slf4j.Logger LOGGER;
+  private final net.minecraft.server.packs.FilePackResources$SharedZipFileAccess zipFileAccess;
+  private final java.lang.String prefix;
+  private net.minecraft.server.packs.FilePackResources(net.minecraft.server.packs.PackLocationInfo, net.minecraft.server.packs.FilePackResources$SharedZipFileAccess, java.lang.String);
+  private static java.lang.String getPathFromLocation(net.minecraft.server.packs.PackType, net.minecraft.resources.Identifier);
+  public net.minecraft.server.packs.resources.IoSupplier<java.io.InputStream> getRootResource(java.lang.String...);
+  public net.minecraft.server.packs.resources.IoSupplier<java.io.InputStream> getResource(net.minecraft.server.packs.PackType, net.minecraft.resources.Identifier);
+  private java.lang.String addPrefix(java.lang.String);
+  private net.minecraft.server.packs.resources.IoSupplier<java.io.InputStream> getResource(java.lang.String);
+  public java.util.Set<java.lang.String> getNamespaces(net.minecraft.server.packs.PackType);
+  public static java.lang.String extractNamespace(java.lang.String, java.lang.String);
+  public void close();
+  public void listResources(net.minecraft.server.packs.PackType, java.lang.String, java.lang.String, net.minecraft.server.packs.PackResources$ResourceOutput);
+  static {};
+}
+Compiled from "PathPackResources.java"
+public class net.minecraft.server.packs.PathPackResources extends net.minecraft.server.packs.AbstractPackResources {
+  private static final org.slf4j.Logger LOGGER;
+  private static final com.google.common.base.Joiner PATH_JOINER;
+  private final java.nio.file.Path root;
+  public net.minecraft.server.packs.PathPackResources(net.minecraft.server.packs.PackLocationInfo, java.nio.file.Path);
+  public net.minecraft.server.packs.resources.IoSupplier<java.io.InputStream> getRootResource(java.lang.String...);
+  public static boolean validatePath(java.nio.file.Path);
+  private java.nio.file.Path topPackDir(net.minecraft.server.packs.PackType);
+  public net.minecraft.server.packs.resources.IoSupplier<java.io.InputStream> getResource(net.minecraft.server.packs.PackType, net.minecraft.resources.Identifier);
+  public static net.minecraft.server.packs.resources.IoSupplier<java.io.InputStream> getResource(java.nio.file.Path, net.minecraft.resources.Identifier);
+  private static net.minecraft.server.packs.resources.IoSupplier<java.io.InputStream> returnFileIfExists(java.nio.file.Path);
+  public void listResources(net.minecraft.server.packs.PackType, java.lang.String, java.lang.String, net.minecraft.server.packs.PackResources$ResourceOutput);
+  public static void listResources(java.nio.file.Path, java.lang.String, java.lang.String, net.minecraft.server.packs.PackResources$ResourceOutput);
+  public static void listPath(java.lang.String, java.nio.file.Path, java.util.List<java.lang.String>, net.minecraft.server.packs.PackResources$ResourceOutput);
+  private static boolean isRegularFile(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes);
+  public java.util.Set<java.lang.String> getNamespaces(net.minecraft.server.packs.PackType);
+  public static java.util.Set<java.lang.String> getNamespaces(java.nio.file.Path);
+  public void close();
+  private static void lambda$listPath$0(java.nio.file.Path, java.lang.String, net.minecraft.server.packs.PackResources$ResourceOutput, java.nio.file.Path);
+  private static void lambda$listResources$1(java.lang.String, com.mojang.serialization.DataResult$Error);
+  private static void lambda$listResources$0(java.nio.file.Path, java.lang.String, net.minecraft.server.packs.PackResources$ResourceOutput, java.util.List);
+  private static net.minecraft.server.packs.resources.IoSupplier lambda$getResource$1(net.minecraft.resources.Identifier, com.mojang.serialization.DataResult$Error);
+  private static net.minecraft.server.packs.resources.IoSupplier lambda$getResource$0(java.nio.file.Path, java.util.List);
+  static {};
+}
+Compiled from "FilePackResources.java"
+public class net.minecraft.server.packs.FilePackResources$FileResourcesSupplier implements net.minecraft.server.packs.repository.Pack$ResourcesSupplier {
+  private final java.io.File content;
+  public net.minecraft.server.packs.FilePackResources$FileResourcesSupplier(java.nio.file.Path);
+  public net.minecraft.server.packs.FilePackResources$FileResourcesSupplier(java.io.File);
+  public net.minecraft.server.packs.PackResources openPrimary(net.minecraft.server.packs.PackLocationInfo);
+  public net.minecraft.server.packs.PackResources openFull(net.minecraft.server.packs.PackLocationInfo, net.minecraft.server.packs.repository.Pack$Metadata);
+}
+Compiled from "DownloadQueue.java"
+public class net.minecraft.server.packs.DownloadQueue implements java.lang.AutoCloseable {
+  private static final org.slf4j.Logger LOGGER;
+  private static final int MAX_KEPT_PACKS;
+  private final java.nio.file.Path cacheDir;
+  private final net.minecraft.util.eventlog.JsonEventLog<net.minecraft.server.packs.DownloadQueue$LogEntry> eventLog;
+  private final net.minecraft.util.thread.ConsecutiveExecutor tasks;
+  public net.minecraft.server.packs.DownloadQueue(java.nio.file.Path) throws java.io.IOException;
+  private net.minecraft.server.packs.DownloadQueue$BatchResult runDownload(net.minecraft.server.packs.DownloadQueue$BatchConfig, java.util.Map<java.util.UUID, net.minecraft.server.packs.DownloadQueue$DownloadRequest>);
+  private com.mojang.datafixers.util.Either<java.lang.String, net.minecraft.server.packs.DownloadQueue$FileInfoEntry> getFileInfo(java.nio.file.Path);
+  public java.util.concurrent.CompletableFuture<net.minecraft.server.packs.DownloadQueue$BatchResult> downloadBatch(net.minecraft.server.packs.DownloadQueue$BatchConfig, java.util.Map<java.util.UUID, net.minecraft.server.packs.DownloadQueue$DownloadRequest>);
+  public void close() throws java.io.IOException;
+  private net.minecraft.server.packs.DownloadQueue$BatchResult lambda$downloadBatch$0(net.minecraft.server.packs.DownloadQueue$BatchConfig, java.util.Map);
+  private void lambda$runDownload$0(net.minecraft.server.packs.DownloadQueue$BatchConfig, net.minecraft.server.packs.DownloadQueue$BatchResult, java.util.UUID, net.minecraft.server.packs.DownloadQueue$DownloadRequest);
+  static {};
+}
+Compiled from "DownloadCacheCleaner.java"
+final class net.minecraft.server.packs.DownloadCacheCleaner$PathAndTime extends java.lang.Record {
+  private final java.nio.file.Path path;
+  private final java.nio.file.attribute.FileTime modifiedTime;
+  public static final java.util.Comparator<net.minecraft.server.packs.DownloadCacheCleaner$PathAndTime> NEWEST_FIRST;
+  private net.minecraft.server.packs.DownloadCacheCleaner$PathAndTime(java.nio.file.Path, java.nio.file.attribute.FileTime);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.nio.file.Path path();
+  public java.nio.file.attribute.FileTime modifiedTime();
+  static {};
+}
+Compiled from "PackSelectionConfig.java"
+public final class net.minecraft.server.packs.PackSelectionConfig extends java.lang.Record {
+  private final boolean required;
+  private final net.minecraft.server.packs.repository.Pack$Position defaultPosition;
+  private final boolean fixedPosition;
+  public net.minecraft.server.packs.PackSelectionConfig(boolean, net.minecraft.server.packs.repository.Pack$Position, boolean);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public boolean required();
+  public net.minecraft.server.packs.repository.Pack$Position defaultPosition();
+  public boolean fixedPosition();
+}
+Compiled from "PackLocationInfo.java"
+public final class net.minecraft.server.packs.PackLocationInfo extends java.lang.Record {
+  private final java.lang.String id;
+  private final net.minecraft.network.chat.Component title;
+  private final net.minecraft.server.packs.repository.PackSource source;
+  private final java.util.Optional<net.minecraft.server.packs.repository.KnownPack> knownPackInfo;
+  public net.minecraft.server.packs.PackLocationInfo(java.lang.String, net.minecraft.network.chat.Component, net.minecraft.server.packs.repository.PackSource, java.util.Optional<net.minecraft.server.packs.repository.KnownPack>);
+  public net.minecraft.network.chat.Component createChatLink(boolean, net.minecraft.network.chat.Component);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String id();
+  public net.minecraft.network.chat.Component title();
+  public net.minecraft.server.packs.repository.PackSource source();
+  public java.util.Optional<net.minecraft.server.packs.repository.KnownPack> knownPackInfo();
+  private net.minecraft.network.chat.Style lambda$createChatLink$0(boolean, net.minecraft.network.chat.Component, net.minecraft.network.chat.Style);
+}
+Compiled from "AbstractPackResources.java"
+public abstract class net.minecraft.server.packs.AbstractPackResources implements net.minecraft.server.packs.PackResources {
+  private final net.minecraft.server.packs.PackLocationInfo location;
+  private net.minecraft.server.packs.resources.ResourceMetadata metadata;
+  protected net.minecraft.server.packs.AbstractPackResources(net.minecraft.server.packs.PackLocationInfo);
+  public <T> T getMetadataSection(net.minecraft.server.packs.metadata.MetadataSectionType<T>) throws java.io.IOException;
+  public static net.minecraft.server.packs.resources.ResourceMetadata loadMetadata(net.minecraft.server.packs.PackResources) throws java.io.IOException;
+  public net.minecraft.server.packs.PackLocationInfo location();
+}
+Compiled from "DownloadQueue.java"
+public final class net.minecraft.server.packs.DownloadQueue$BatchConfig extends java.lang.Record {
+  private final com.google.common.hash.HashFunction hashFunction;
+  private final int maxSize;
+  private final java.util.Map<java.lang.String, java.lang.String> headers;
+  private final java.net.Proxy proxy;
+  private final net.minecraft.util.HttpUtil$DownloadProgressListener listener;
+  public net.minecraft.server.packs.DownloadQueue$BatchConfig(com.google.common.hash.HashFunction, int, java.util.Map<java.lang.String, java.lang.String>, java.net.Proxy, net.minecraft.util.HttpUtil$DownloadProgressListener);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.google.common.hash.HashFunction hashFunction();
+  public int maxSize();
+  public java.util.Map<java.lang.String, java.lang.String> headers();
+  public java.net.Proxy proxy();
+  public net.minecraft.util.HttpUtil$DownloadProgressListener listener();
+}
+Compiled from "package-info.java"
+interface net.minecraft.server.packs.package-info {
+}
+Compiled from "VanillaPackResourcesBuilder.java"
+public class net.minecraft.server.packs.VanillaPackResourcesBuilder {
+  private static final org.slf4j.Logger LOGGER;
+  public static java.util.function.Consumer<net.minecraft.server.packs.VanillaPackResourcesBuilder> developmentConfig;
+  private static final java.util.Map<net.minecraft.server.packs.PackType, java.nio.file.Path> ROOT_DIR_BY_TYPE;
+  private final java.util.Set<java.nio.file.Path> rootPaths;
+  private final java.util.Map<net.minecraft.server.packs.PackType, java.util.Set<java.nio.file.Path>> pathsForType;
+  private net.minecraft.server.packs.resources.ResourceMetadata metadata;
+  private final java.util.Set<java.lang.String> namespaces;
+  public net.minecraft.server.packs.VanillaPackResourcesBuilder();
+  private boolean validateDirPath(java.nio.file.Path);
+  private void pushRootPath(java.nio.file.Path);
+  private void pushPathForType(net.minecraft.server.packs.PackType, java.nio.file.Path);
+  public net.minecraft.server.packs.VanillaPackResourcesBuilder pushJarResources();
+  public net.minecraft.server.packs.VanillaPackResourcesBuilder pushClasspathResources(net.minecraft.server.packs.PackType, java.lang.Class<?>);
+  public net.minecraft.server.packs.VanillaPackResourcesBuilder applyDevelopmentConfig();
+  public net.minecraft.server.packs.VanillaPackResourcesBuilder pushUniversalPath(java.nio.file.Path);
+  public net.minecraft.server.packs.VanillaPackResourcesBuilder pushAssetPath(net.minecraft.server.packs.PackType, java.nio.file.Path);
+  public net.minecraft.server.packs.VanillaPackResourcesBuilder setMetadata(net.minecraft.server.packs.resources.ResourceMetadata);
+  public net.minecraft.server.packs.VanillaPackResourcesBuilder exposeNamespace(java.lang.String...);
+  public net.minecraft.server.packs.VanillaPackResources build(net.minecraft.server.packs.PackLocationInfo);
+  private static java.util.List<java.nio.file.Path> copyAndReverse(java.util.Collection<java.nio.file.Path>);
+  private java.util.List lambda$build$0(net.minecraft.server.packs.PackType);
+  private void lambda$pushJarResources$0(net.minecraft.server.packs.PackType, java.nio.file.Path);
+  private static java.util.Set lambda$pushPathForType$0(net.minecraft.server.packs.PackType);
+  private static com.google.common.collect.ImmutableMap lambda$static$1();
+  private static void lambda$static$0(net.minecraft.server.packs.VanillaPackResourcesBuilder);
+  static {};
+}
+Compiled from "DownloadCacheCleaner.java"
+class net.minecraft.server.packs.DownloadCacheCleaner$1 extends java.nio.file.SimpleFileVisitor<java.nio.file.Path> {
+  final java.nio.file.Path val$cacheDir;
+  final java.util.List val$unsortedFiles;
+  net.minecraft.server.packs.DownloadCacheCleaner$1(java.nio.file.Path, java.util.List);
+  public java.nio.file.FileVisitResult visitFile(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes);
+  public java.nio.file.FileVisitResult visitFile(java.lang.Object, java.nio.file.attribute.BasicFileAttributes) throws java.io.IOException;
+}
+Compiled from "OverlayMetadataSection.java"
+class net.minecraft.server.packs.OverlayMetadataSection$1 {
+  static final int[] $SwitchMap$net$minecraft$server$packs$PackType;
+  static {};
+}
+Compiled from "DownloadQueue.java"
+public final class net.minecraft.server.packs.DownloadQueue$BatchResult extends java.lang.Record {
+  private final java.util.Map<java.util.UUID, java.nio.file.Path> downloaded;
+  private final java.util.Set<java.util.UUID> failed;
+  public net.minecraft.server.packs.DownloadQueue$BatchResult();
+  public net.minecraft.server.packs.DownloadQueue$BatchResult(java.util.Map<java.util.UUID, java.nio.file.Path>, java.util.Set<java.util.UUID>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Map<java.util.UUID, java.nio.file.Path> downloaded();
+  public java.util.Set<java.util.UUID> failed();
+}
+Compiled from "DownloadQueue.java"
+final class net.minecraft.server.packs.DownloadQueue$FileInfoEntry extends java.lang.Record {
+  private final java.lang.String name;
+  private final long size;
+  public static final com.mojang.serialization.Codec<net.minecraft.server.packs.DownloadQueue$FileInfoEntry> CODEC;
+  private net.minecraft.server.packs.DownloadQueue$FileInfoEntry(java.lang.String, long);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String name();
+  public long size();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "FeatureFlagsMetadataSection.java"
+public final class net.minecraft.server.packs.FeatureFlagsMetadataSection extends java.lang.Record {
+  private final net.minecraft.world.flag.FeatureFlagSet flags;
+  private static final com.mojang.serialization.Codec<net.minecraft.server.packs.FeatureFlagsMetadataSection> CODEC;
+  public static final net.minecraft.server.packs.metadata.MetadataSectionType<net.minecraft.server.packs.FeatureFlagsMetadataSection> TYPE;
+  public net.minecraft.server.packs.FeatureFlagsMetadataSection(net.minecraft.world.flag.FeatureFlagSet);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.flag.FeatureFlagSet flags();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "DownloadCacheCleaner.java"
+final class net.minecraft.server.packs.DownloadCacheCleaner$PathAndPriority extends java.lang.Record {
+  private final java.nio.file.Path path;
+  private final int removalPriority;
+  public static final java.util.Comparator<net.minecraft.server.packs.DownloadCacheCleaner$PathAndPriority> HIGHEST_PRIORITY_FIRST;
+  private net.minecraft.server.packs.DownloadCacheCleaner$PathAndPriority(java.nio.file.Path, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.nio.file.Path path();
+  public int removalPriority();
+  static {};
+}
+Compiled from "OverlayMetadataSection.java"
+final class net.minecraft.server.packs.OverlayMetadataSection$OverlayEntry$IntermediateEntry extends java.lang.Record implements net.minecraft.server.packs.metadata.pack.PackFormat$IntermediaryFormatHolder {
+  private final net.minecraft.server.packs.metadata.pack.PackFormat$IntermediaryFormat format;
+  private final java.lang.String overlay;
+  private static final com.mojang.serialization.Codec<net.minecraft.server.packs.OverlayMetadataSection$OverlayEntry$IntermediateEntry> CODEC;
+  private net.minecraft.server.packs.OverlayMetadataSection$OverlayEntry$IntermediateEntry(net.minecraft.server.packs.metadata.pack.PackFormat$IntermediaryFormat, java.lang.String);
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.packs.metadata.pack.PackFormat$IntermediaryFormat format();
+  public java.lang.String overlay();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}

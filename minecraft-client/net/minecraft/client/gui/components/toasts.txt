@@ -1,0 +1,314 @@
+Compiled from "AdvancementToast.java"
+public class net.minecraft.client.gui.components.toasts.AdvancementToast implements net.minecraft.client.gui.components.toasts.Toast {
+  private static final net.minecraft.resources.Identifier BACKGROUND_SPRITE;
+  public static final int DISPLAY_TIME;
+  private final net.minecraft.advancements.AdvancementHolder advancement;
+  private net.minecraft.client.gui.components.toasts.Toast$Visibility wantedVisibility;
+  private final net.minecraft.world.item.ItemStack iconItem;
+  public net.minecraft.client.gui.components.toasts.AdvancementToast(net.minecraft.advancements.AdvancementHolder);
+  public net.minecraft.client.gui.components.toasts.Toast$Visibility getWantedVisibility();
+  public void update(net.minecraft.client.gui.components.toasts.ToastManager, long);
+  public net.minecraft.sounds.SoundEvent getSoundEvent();
+  private boolean isChallengeAdvancement();
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, net.minecraft.client.gui.Font, long);
+  private static net.minecraft.world.item.ItemStack lambda$new$0(net.minecraft.advancements.DisplayInfo);
+  static {};
+}
+Compiled from "FriendToast.java"
+public interface net.minecraft.client.gui.components.toasts.FriendToast$SkinToastEmitter {
+  public abstract void emit(net.minecraft.client.Minecraft, java.lang.String, java.util.UUID);
+}
+Compiled from "FriendToast.java"
+public class net.minecraft.client.gui.components.toasts.FriendToast implements net.minecraft.client.gui.components.toasts.Toast {
+  private static final net.minecraft.client.gui.components.WidgetSprites BACKGROUND_SPRITE;
+  private static final int FACE_SIZE;
+  private static final int TEXT_LEFT_WITH_FACE;
+  private static final int TEXT_LEFT_NO_FACE;
+  private static final int PADDING_TOP;
+  private static final int PADDING_BOTTOM;
+  private static final int LINE_SPACING;
+  private static final long DEFAULT_DISPLAY_TIME_MS;
+  private final net.minecraft.world.item.component.ResolvableProfile skinProfile;
+  private final java.util.List<net.minecraft.util.FormattedCharSequence> messageLines;
+  private final long displayTimeMs;
+  private net.minecraft.client.gui.components.toasts.Toast$Visibility visibility;
+  public net.minecraft.client.gui.components.toasts.FriendToast(net.minecraft.client.gui.Font, net.minecraft.world.item.component.ResolvableProfile, net.minecraft.network.chat.Component);
+  public net.minecraft.client.gui.components.toasts.FriendToast(net.minecraft.client.gui.Font, net.minecraft.world.item.component.ResolvableProfile, net.minecraft.network.chat.Component, long);
+  public net.minecraft.client.gui.components.toasts.Toast$Visibility getWantedVisibility();
+  public void update(net.minecraft.client.gui.components.toasts.ToastManager, long);
+  public int height();
+  private int contentHeight();
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, net.minecraft.client.gui.Font, long);
+  public void hide();
+  public static void add(net.minecraft.client.gui.components.toasts.ToastManager, net.minecraft.client.gui.Font, net.minecraft.world.item.component.ResolvableProfile, net.minecraft.network.chat.Component);
+  private static void add(net.minecraft.client.Minecraft, net.minecraft.world.item.component.ResolvableProfile, net.minecraft.network.chat.Component);
+  private static void addWithSkin(net.minecraft.client.Minecraft, java.util.UUID, net.minecraft.network.chat.Component);
+  public static void showFriendRequestSent(net.minecraft.client.Minecraft, java.lang.String);
+  public static void showFriendRequestReceived(net.minecraft.client.Minecraft, java.lang.String, java.util.UUID);
+  public static void showFriendRequestAccepted(net.minecraft.client.Minecraft, java.lang.String, java.util.UUID);
+  public static void showFriendAdded(net.minecraft.client.Minecraft, java.lang.String, java.util.UUID);
+  static {};
+}
+Compiled from "NowPlayingToast.java"
+public class net.minecraft.client.gui.components.toasts.NowPlayingToast implements net.minecraft.client.gui.components.toasts.Toast {
+  private static final net.minecraft.resources.Identifier NOW_PLAYING_BACKGROUND_SPRITE;
+  private static final net.minecraft.resources.Identifier MUSIC_NOTES_SPRITE;
+  private static final int PADDING;
+  private static final int MUSIC_NOTES_SIZE;
+  private static final int HEIGHT;
+  private static final int MUSIC_NOTES_SPACE;
+  private static final int VISIBILITY_DURATION;
+  private static final int TEXT_COLOR;
+  private static final long MUSIC_COLOR_CHANGE_FREQUENCY_MS;
+  private static int musicNoteColorTick;
+  private static long lastMusicNoteColorChange;
+  private static int musicNoteColor;
+  private boolean updateToast;
+  private double notificationDisplayTimeMultiplier;
+  private final net.minecraft.client.Minecraft minecraft;
+  private net.minecraft.client.gui.components.toasts.Toast$Visibility wantedVisibility;
+  public net.minecraft.client.gui.components.toasts.NowPlayingToast();
+  public static void extractToast(net.minecraft.client.gui.GuiGraphicsExtractor, net.minecraft.client.gui.Font);
+  private static java.lang.String getCurrentSongName();
+  public static void tickMusicNotes();
+  private static net.minecraft.network.chat.Component getNowPlayingString(java.lang.String);
+  public void showToast(net.minecraft.client.Options);
+  public void update(net.minecraft.client.gui.components.toasts.ToastManager, long);
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, net.minecraft.client.gui.Font, long);
+  public void onFinishedRendering();
+  public int width();
+  private static int getWidth(java.lang.String, net.minecraft.client.gui.Font);
+  public int height();
+  public float xPos(int, float);
+  public float yPos(int);
+  public net.minecraft.client.gui.components.toasts.Toast$Visibility getWantedVisibility();
+  public void setWantedVisibility(net.minecraft.client.gui.components.toasts.Toast$Visibility);
+  static {};
+}
+Compiled from "RecipeToast.java"
+final class net.minecraft.client.gui.components.toasts.RecipeToast$Entry extends java.lang.Record {
+  private final net.minecraft.world.item.ItemStack categoryItem;
+  private final net.minecraft.world.item.ItemStack unlockedItem;
+  private net.minecraft.client.gui.components.toasts.RecipeToast$Entry(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.item.ItemStack categoryItem();
+  public net.minecraft.world.item.ItemStack unlockedItem();
+}
+Compiled from "RecipeToast.java"
+public class net.minecraft.client.gui.components.toasts.RecipeToast implements net.minecraft.client.gui.components.toasts.Toast {
+  private static final net.minecraft.resources.Identifier BACKGROUND_SPRITE;
+  private static final long DISPLAY_TIME;
+  private static final net.minecraft.network.chat.Component TITLE_TEXT;
+  private static final net.minecraft.network.chat.Component DESCRIPTION_TEXT;
+  private final java.util.List<net.minecraft.client.gui.components.toasts.RecipeToast$Entry> recipeItems;
+  private long lastChanged;
+  private boolean changed;
+  private net.minecraft.client.gui.components.toasts.Toast$Visibility wantedVisibility;
+  private int displayedRecipeIndex;
+  private net.minecraft.client.gui.components.toasts.RecipeToast();
+  public net.minecraft.client.gui.components.toasts.Toast$Visibility getWantedVisibility();
+  public void update(net.minecraft.client.gui.components.toasts.ToastManager, long);
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, net.minecraft.client.gui.Font, long);
+  private void addItem(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+  public static void addOrUpdate(net.minecraft.client.gui.components.toasts.ToastManager, net.minecraft.world.item.crafting.display.RecipeDisplay);
+  static {};
+}
+Compiled from "SystemToast.java"
+public class net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId {
+  public static final net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId NARRATOR_TOGGLE;
+  public static final net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId WORLD_BACKUP;
+  public static final net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId PACK_LOAD_FAILURE;
+  public static final net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId WORLD_ACCESS_FAILURE;
+  public static final net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId PACK_COPY_FAILURE;
+  public static final net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId FILE_DROP_FAILURE;
+  public static final net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId PERIODIC_NOTIFICATION;
+  public static final net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId LOW_DISK_SPACE;
+  public static final net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId CHUNK_LOAD_FAILURE;
+  public static final net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId CHUNK_SAVE_FAILURE;
+  public static final net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId UNSECURE_SERVER_WARNING;
+  public static final net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId FRIEND_SYSTEM_NOTIFICATION;
+  private final long displayTime;
+  public net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId(long);
+  public net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId();
+  static {};
+}
+Compiled from "SystemToast.java"
+public class net.minecraft.client.gui.components.toasts.SystemToast implements net.minecraft.client.gui.components.toasts.Toast {
+  private static final net.minecraft.resources.Identifier BACKGROUND_SPRITE;
+  private static final int MAX_LINE_SIZE;
+  private static final int LINE_SPACING;
+  private static final int MARGIN;
+  private static final int TEXT_X_START;
+  private final net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId id;
+  private java.util.List<net.minecraft.util.FormattedCharSequence> titleLines;
+  private java.util.List<net.minecraft.util.FormattedCharSequence> messageLines;
+  private long lastChanged;
+  private boolean changed;
+  private int width;
+  private boolean forceHide;
+  private net.minecraft.client.gui.components.toasts.Toast$Visibility wantedVisibility;
+  public net.minecraft.client.gui.components.toasts.SystemToast(net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId, net.minecraft.network.chat.Component, net.minecraft.network.chat.Component);
+  private static java.util.List<net.minecraft.util.FormattedCharSequence> nullToEmpty(net.minecraft.network.chat.Component);
+  private static java.util.List<net.minecraft.util.FormattedCharSequence> splitToLength(net.minecraft.network.chat.Component);
+  public int width();
+  public int height();
+  public void forceHide();
+  public net.minecraft.client.gui.components.toasts.Toast$Visibility getWantedVisibility();
+  public void update(net.minecraft.client.gui.components.toasts.ToastManager, long);
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, net.minecraft.client.gui.Font, long);
+  private void extractTextLines(net.minecraft.client.gui.GuiGraphicsExtractor, net.minecraft.client.gui.Font, java.util.List<net.minecraft.util.FormattedCharSequence>, int, int);
+  public void reset(net.minecraft.network.chat.Component, net.minecraft.network.chat.Component);
+  private void update(net.minecraft.network.chat.Component, net.minecraft.network.chat.Component);
+  public void recalculateWidth();
+  public net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId getToken();
+  public static void add(net.minecraft.client.gui.components.toasts.ToastManager, net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId, net.minecraft.network.chat.Component, net.minecraft.network.chat.Component);
+  public static void addOrUpdate(net.minecraft.client.gui.components.toasts.ToastManager, net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId, net.minecraft.network.chat.Component, net.minecraft.network.chat.Component);
+  public static void forceHide(net.minecraft.client.gui.components.toasts.ToastManager, net.minecraft.client.gui.components.toasts.SystemToast$SystemToastId);
+  public static void onWorldAccessFailure(net.minecraft.client.Minecraft, java.lang.String);
+  public static void onWorldDeleteFailure(net.minecraft.client.Minecraft, java.lang.String);
+  public static void onPackCopyFailure(net.minecraft.client.Minecraft, java.lang.String);
+  public static void onFileDropFailure(net.minecraft.client.Minecraft, int);
+  public static void onLowDiskSpace(net.minecraft.client.Minecraft);
+  public static void onChunkLoadFailure(net.minecraft.client.Minecraft, net.minecraft.world.level.ChunkPos);
+  public static void onChunkSaveFailure(net.minecraft.client.Minecraft, net.minecraft.world.level.ChunkPos);
+  public java.lang.Object getToken();
+  static {};
+}
+Compiled from "Toast.java"
+public final class net.minecraft.client.gui.components.toasts.Toast$Visibility extends java.lang.Enum<net.minecraft.client.gui.components.toasts.Toast$Visibility> {
+  public static final net.minecraft.client.gui.components.toasts.Toast$Visibility SHOW;
+  public static final net.minecraft.client.gui.components.toasts.Toast$Visibility HIDE;
+  private final net.minecraft.sounds.SoundEvent soundEvent;
+  private static final net.minecraft.client.gui.components.toasts.Toast$Visibility[] $VALUES;
+  public static net.minecraft.client.gui.components.toasts.Toast$Visibility[] values();
+  public static net.minecraft.client.gui.components.toasts.Toast$Visibility valueOf(java.lang.String);
+  private net.minecraft.client.gui.components.toasts.Toast$Visibility(net.minecraft.sounds.SoundEvent);
+  public void playSound(net.minecraft.client.sounds.SoundManager);
+  private static net.minecraft.client.gui.components.toasts.Toast$Visibility[] $values();
+  static {};
+}
+Compiled from "Toast.java"
+public interface net.minecraft.client.gui.components.toasts.Toast {
+  public static final java.lang.Object NO_TOKEN;
+  public static final int DEFAULT_WIDTH;
+  public static final int SLOT_HEIGHT;
+  public abstract net.minecraft.client.gui.components.toasts.Toast$Visibility getWantedVisibility();
+  public abstract void update(net.minecraft.client.gui.components.toasts.ToastManager, long);
+  public default net.minecraft.sounds.SoundEvent getSoundEvent();
+  public abstract void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, net.minecraft.client.gui.Font, long);
+  public default java.lang.Object getToken();
+  public default float xPos(int, float);
+  public default float yPos(int);
+  public default int width();
+  public default int height();
+  public default int occcupiedSlotCount();
+  public default void onFinishedRendering();
+  static {};
+}
+Compiled from "ToastManager.java"
+class net.minecraft.client.gui.components.toasts.ToastManager$1 {
+  static final int[] $SwitchMap$net$minecraft$client$MusicToastDisplayState;
+  static {};
+}
+Compiled from "ToastManager.java"
+class net.minecraft.client.gui.components.toasts.ToastManager$ToastInstance<T extends net.minecraft.client.gui.components.toasts.Toast> {
+  private static final long SLIDE_ANIMATION_DURATION_MS;
+  private final T toast;
+  private final int firstSlotIndex;
+  private final int occupiedSlotCount;
+  private long animationStartTime;
+  private long becameFullyVisibleAt;
+  private net.minecraft.client.gui.components.toasts.Toast$Visibility visibility;
+  private long fullyVisibleFor;
+  private float visiblePortion;
+  protected boolean hasFinishedRendering;
+  final net.minecraft.client.gui.components.toasts.ToastManager this$0;
+  private net.minecraft.client.gui.components.toasts.ToastManager$ToastInstance(T, int, int);
+  public T getToast();
+  public void resetToast();
+  public boolean hasFinishedRendering();
+  private void calculateVisiblePortion(long);
+  public void update();
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, int);
+}
+Compiled from "ToastManager.java"
+public class net.minecraft.client.gui.components.toasts.ToastManager {
+  private static final int SLOT_COUNT;
+  private static final int ALL_SLOTS_OCCUPIED;
+  private final net.minecraft.client.Minecraft minecraft;
+  private final java.util.List<net.minecraft.client.gui.components.toasts.ToastManager$ToastInstance<?>> visibleToasts;
+  private final java.util.BitSet occupiedSlots;
+  private final java.util.Deque<net.minecraft.client.gui.components.toasts.Toast> queued;
+  private final java.util.Set<net.minecraft.sounds.SoundEvent> playedToastSounds;
+  private net.minecraft.client.gui.components.toasts.ToastManager$ToastInstance<net.minecraft.client.gui.components.toasts.NowPlayingToast> nowPlayingToast;
+  public net.minecraft.client.gui.components.toasts.ToastManager(net.minecraft.client.Minecraft, net.minecraft.client.Options);
+  public void update();
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor);
+  private int findFreeSlotsIndex(int);
+  private int freeSlotCount();
+  public <T extends net.minecraft.client.gui.components.toasts.Toast> T getToast(java.lang.Class<? extends T>, java.lang.Object);
+  public void clear();
+  public void addToast(net.minecraft.client.gui.components.toasts.Toast);
+  public void showNowPlayingToast();
+  public void hideNowPlayingToast();
+  public net.minecraft.client.Minecraft getMinecraft();
+  public double getNotificationDisplayTimeMultiplier();
+  private void initializeMusicToast(net.minecraft.client.MusicToastDisplayState);
+  public void setMusicToastDisplayState(net.minecraft.client.MusicToastDisplayState);
+  private boolean lambda$update$1(net.minecraft.client.gui.components.toasts.Toast);
+  private boolean lambda$update$0(org.apache.commons.lang3.mutable.MutableBoolean, net.minecraft.client.gui.components.toasts.ToastManager$ToastInstance);
+}
+Compiled from "TutorialToast.java"
+public final class net.minecraft.client.gui.components.toasts.TutorialToast$Icons extends java.lang.Enum<net.minecraft.client.gui.components.toasts.TutorialToast$Icons> {
+  public static final net.minecraft.client.gui.components.toasts.TutorialToast$Icons MOVEMENT_KEYS;
+  public static final net.minecraft.client.gui.components.toasts.TutorialToast$Icons MOUSE;
+  public static final net.minecraft.client.gui.components.toasts.TutorialToast$Icons TREE;
+  public static final net.minecraft.client.gui.components.toasts.TutorialToast$Icons RECIPE_BOOK;
+  public static final net.minecraft.client.gui.components.toasts.TutorialToast$Icons WOODEN_PLANKS;
+  public static final net.minecraft.client.gui.components.toasts.TutorialToast$Icons SOCIAL_INTERACTIONS;
+  public static final net.minecraft.client.gui.components.toasts.TutorialToast$Icons RIGHT_CLICK;
+  private final net.minecraft.resources.Identifier sprite;
+  private static final net.minecraft.client.gui.components.toasts.TutorialToast$Icons[] $VALUES;
+  public static net.minecraft.client.gui.components.toasts.TutorialToast$Icons[] values();
+  public static net.minecraft.client.gui.components.toasts.TutorialToast$Icons valueOf(java.lang.String);
+  private net.minecraft.client.gui.components.toasts.TutorialToast$Icons(net.minecraft.resources.Identifier);
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, int, int);
+  private static net.minecraft.client.gui.components.toasts.TutorialToast$Icons[] $values();
+  static {};
+}
+Compiled from "TutorialToast.java"
+public class net.minecraft.client.gui.components.toasts.TutorialToast implements net.minecraft.client.gui.components.toasts.Toast {
+  private static final net.minecraft.resources.Identifier BACKGROUND_SPRITE;
+  public static final int PROGRESS_BAR_WIDTH;
+  public static final int PROGRESS_BAR_HEIGHT;
+  public static final int PROGRESS_BAR_X;
+  public static final int PROGRESS_BAR_MARGIN_BOTTOM;
+  private static final int PADDING_TOP;
+  private static final int PADDING_BOTTOM;
+  private static final int LINE_SPACING;
+  private static final int TEXT_LEFT;
+  private static final int TEXT_WIDTH;
+  private final net.minecraft.client.gui.components.toasts.TutorialToast$Icons icon;
+  private final java.util.List<net.minecraft.util.FormattedCharSequence> lines;
+  private net.minecraft.client.gui.components.toasts.Toast$Visibility visibility;
+  private long lastSmoothingTime;
+  private float smoothedProgress;
+  private float progress;
+  private final boolean progressable;
+  private final int timeToDisplayMs;
+  public net.minecraft.client.gui.components.toasts.TutorialToast(net.minecraft.client.gui.Font, net.minecraft.client.gui.components.toasts.TutorialToast$Icons, net.minecraft.network.chat.Component, net.minecraft.network.chat.Component, boolean, int);
+  public net.minecraft.client.gui.components.toasts.TutorialToast(net.minecraft.client.gui.Font, net.minecraft.client.gui.components.toasts.TutorialToast$Icons, net.minecraft.network.chat.Component, net.minecraft.network.chat.Component, boolean);
+  public net.minecraft.client.gui.components.toasts.Toast$Visibility getWantedVisibility();
+  public void update(net.minecraft.client.gui.components.toasts.ToastManager, long);
+  public int height();
+  private int contentHeight();
+  public void extractRenderState(net.minecraft.client.gui.GuiGraphicsExtractor, net.minecraft.client.gui.Font, long);
+  public void hide();
+  public void updateProgress(float);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.gui.components.toasts.package-info {
+}

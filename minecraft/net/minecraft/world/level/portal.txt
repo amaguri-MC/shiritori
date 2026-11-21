@@ -1,0 +1,111 @@
+Compiled from "TeleportTransition.java"
+public final class net.minecraft.world.level.portal.TeleportTransition extends java.lang.Record {
+  private final net.minecraft.server.level.ServerLevel newLevel;
+  private final net.minecraft.world.phys.Vec3 position;
+  private final net.minecraft.world.phys.Vec3 deltaMovement;
+  private final float yRot;
+  private final float xRot;
+  private final boolean missingRespawnBlock;
+  private final boolean asPassenger;
+  private final java.util.Set<net.minecraft.world.entity.Relative> relatives;
+  private final net.minecraft.world.level.portal.TeleportTransition$PostTeleportTransition postTeleportTransition;
+  public static final net.minecraft.world.level.portal.TeleportTransition$PostTeleportTransition DO_NOTHING;
+  public static final net.minecraft.world.level.portal.TeleportTransition$PostTeleportTransition PLAY_PORTAL_SOUND;
+  public static final net.minecraft.world.level.portal.TeleportTransition$PostTeleportTransition PLACE_PORTAL_TICKET;
+  public net.minecraft.world.level.portal.TeleportTransition(net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3, net.minecraft.world.phys.Vec3, float, float, net.minecraft.world.level.portal.TeleportTransition$PostTeleportTransition);
+  public net.minecraft.world.level.portal.TeleportTransition(net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3, net.minecraft.world.phys.Vec3, float, float, java.util.Set<net.minecraft.world.entity.Relative>, net.minecraft.world.level.portal.TeleportTransition$PostTeleportTransition);
+  public net.minecraft.world.level.portal.TeleportTransition(net.minecraft.server.level.ServerLevel, net.minecraft.world.phys.Vec3, net.minecraft.world.phys.Vec3, float, float, boolean, boolean, java.util.Set<net.minecraft.world.entity.Relative>, net.minecraft.world.level.portal.TeleportTransition$PostTeleportTransition);
+  private static void playPortalSound(net.minecraft.world.entity.Entity);
+  private static void placePortalTicket(net.minecraft.world.entity.Entity);
+  public static net.minecraft.world.level.portal.TeleportTransition createDefault(net.minecraft.server.level.ServerPlayer, net.minecraft.world.level.portal.TeleportTransition$PostTeleportTransition);
+  public static net.minecraft.world.level.portal.TeleportTransition missingRespawnBlock(net.minecraft.server.level.ServerPlayer, net.minecraft.world.level.portal.TeleportTransition$PostTeleportTransition);
+  private static net.minecraft.world.phys.Vec3 findAdjustedSharedSpawnPos(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.Entity);
+  public net.minecraft.world.level.portal.TeleportTransition withRotation(float, float);
+  public net.minecraft.world.level.portal.TeleportTransition withPosition(net.minecraft.world.phys.Vec3);
+  public net.minecraft.world.level.portal.TeleportTransition transitionAsPassenger();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.level.ServerLevel newLevel();
+  public net.minecraft.world.phys.Vec3 position();
+  public net.minecraft.world.phys.Vec3 deltaMovement();
+  public float yRot();
+  public float xRot();
+  public boolean missingRespawnBlock();
+  public boolean asPassenger();
+  public java.util.Set<net.minecraft.world.entity.Relative> relatives();
+  public net.minecraft.world.level.portal.TeleportTransition$PostTeleportTransition postTeleportTransition();
+  private static void lambda$static$0(net.minecraft.world.entity.Entity);
+  static {};
+}
+Compiled from "PortalShape.java"
+public class net.minecraft.world.level.portal.PortalShape {
+  private static final int MIN_WIDTH;
+  public static final int MAX_WIDTH;
+  private static final int MIN_HEIGHT;
+  public static final int MAX_HEIGHT;
+  private static final net.minecraft.world.level.block.state.BlockBehaviour$StatePredicate FRAME;
+  private static final float SAFE_TRAVEL_MAX_ENTITY_XY;
+  private static final double SAFE_TRAVEL_MAX_VERTICAL_DELTA;
+  private final net.minecraft.core.Direction$Axis axis;
+  private final net.minecraft.core.Direction rightDir;
+  private final int numPortalBlocks;
+  private final net.minecraft.core.BlockPos bottomLeft;
+  private final int height;
+  private final int width;
+  private net.minecraft.world.level.portal.PortalShape(net.minecraft.core.Direction$Axis, int, net.minecraft.core.Direction, net.minecraft.core.BlockPos, int, int);
+  public static java.util.Optional<net.minecraft.world.level.portal.PortalShape> findEmptyPortalShape(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, net.minecraft.core.Direction$Axis);
+  public static java.util.Optional<net.minecraft.world.level.portal.PortalShape> findPortalShape(net.minecraft.world.level.LevelAccessor, net.minecraft.core.BlockPos, java.util.function.Predicate<net.minecraft.world.level.portal.PortalShape>, net.minecraft.core.Direction$Axis);
+  public static net.minecraft.world.level.portal.PortalShape findAnyShape(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.core.Direction$Axis);
+  private static net.minecraft.core.BlockPos calculateBottomLeft(net.minecraft.world.level.BlockGetter, net.minecraft.core.Direction, net.minecraft.core.BlockPos);
+  private static int calculateWidth(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.core.Direction);
+  private static int getDistanceUntilEdgeAboveFrame(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.core.Direction);
+  private static int calculateHeight(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.core.Direction, int, org.apache.commons.lang3.mutable.MutableInt);
+  private static boolean hasTopFrame(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.core.Direction, net.minecraft.core.BlockPos$MutableBlockPos, int, int);
+  private static int getDistanceUntilTop(net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos, net.minecraft.core.Direction, net.minecraft.core.BlockPos$MutableBlockPos, int, org.apache.commons.lang3.mutable.MutableInt);
+  private static boolean isEmpty(net.minecraft.world.level.block.state.BlockState);
+  public boolean isValid();
+  public void createPortalBlocks(net.minecraft.world.level.LevelAccessor);
+  public boolean isComplete();
+  public static net.minecraft.world.phys.Vec3 getRelativePosition(net.minecraft.util.BlockUtil$FoundRectangle, net.minecraft.core.Direction$Axis, net.minecraft.world.phys.Vec3, net.minecraft.world.entity.EntityDimensions);
+  public static net.minecraft.world.phys.Vec3 findCollisionFreePosition(net.minecraft.world.phys.Vec3, net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.Entity, net.minecraft.world.entity.EntityDimensions);
+  private static net.minecraft.world.phys.Vec3 lambda$findCollisionFreePosition$0(double, net.minecraft.world.phys.Vec3);
+  private static void lambda$createPortalBlocks$0(net.minecraft.world.level.LevelAccessor, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos);
+  private static boolean lambda$findEmptyPortalShape$0(net.minecraft.world.level.portal.PortalShape);
+  private static boolean lambda$static$0(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.BlockGetter, net.minecraft.core.BlockPos);
+  static {};
+}
+Compiled from "TeleportTransition.java"
+public interface net.minecraft.world.level.portal.TeleportTransition$PostTeleportTransition {
+  public abstract void onTransition(net.minecraft.world.entity.Entity);
+  public default net.minecraft.world.level.portal.TeleportTransition$PostTeleportTransition then(net.minecraft.world.level.portal.TeleportTransition$PostTeleportTransition);
+  private void lambda$then$0(net.minecraft.world.level.portal.TeleportTransition$PostTeleportTransition, net.minecraft.world.entity.Entity);
+}
+Compiled from "PortalForcer.java"
+public class net.minecraft.world.level.portal.PortalForcer {
+  public static final int TICKET_RADIUS;
+  private static final int NETHER_PORTAL_RADIUS;
+  private static final int OVERWORLD_PORTAL_RADIUS;
+  private static final int FRAME_HEIGHT;
+  private static final int FRAME_WIDTH;
+  private static final int FRAME_BOX;
+  private static final int FRAME_HEIGHT_START;
+  private static final int FRAME_HEIGHT_END;
+  private static final int FRAME_WIDTH_START;
+  private static final int FRAME_WIDTH_END;
+  private static final int FRAME_BOX_START;
+  private static final int FRAME_BOX_END;
+  private static final int NOTHING_FOUND;
+  private final net.minecraft.server.level.ServerLevel level;
+  public net.minecraft.world.level.portal.PortalForcer(net.minecraft.server.level.ServerLevel);
+  public java.util.Optional<net.minecraft.core.BlockPos> findClosestPortalPosition(net.minecraft.core.BlockPos, boolean, net.minecraft.world.level.border.WorldBorder);
+  public java.util.Optional<net.minecraft.util.BlockUtil$FoundRectangle> createPortal(net.minecraft.core.BlockPos, net.minecraft.core.Direction$Axis);
+  private boolean canPortalReplaceBlock(net.minecraft.core.BlockPos$MutableBlockPos);
+  private boolean canHostFrame(net.minecraft.core.BlockPos, net.minecraft.core.BlockPos$MutableBlockPos, net.minecraft.core.Direction, int);
+  private static double lambda$findClosestPortalPosition$2(net.minecraft.core.BlockPos, net.minecraft.core.BlockPos);
+  private boolean lambda$findClosestPortalPosition$1(net.minecraft.core.BlockPos);
+  private static boolean lambda$findClosestPortalPosition$0(net.minecraft.core.Holder);
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.level.portal.package-info {
+}

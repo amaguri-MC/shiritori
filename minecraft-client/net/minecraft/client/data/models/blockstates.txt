@@ -1,0 +1,185 @@
+Compiled from "BlockModelDefinitionGenerator.java"
+public interface net.minecraft.client.data.models.blockstates.BlockModelDefinitionGenerator {
+  public abstract net.minecraft.world.level.block.Block block();
+  public abstract net.minecraft.client.renderer.block.dispatch.BlockStateModelDispatcher create();
+}
+Compiled from "ConditionBuilder.java"
+public class net.minecraft.client.data.models.blockstates.ConditionBuilder {
+  private final com.google.common.collect.ImmutableMap$Builder<java.lang.String, net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Terms> terms;
+  public net.minecraft.client.data.models.blockstates.ConditionBuilder();
+  private <T extends java.lang.Comparable<T>> void putValue(net.minecraft.world.level.block.state.properties.Property<T>, net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Terms);
+  public final <T extends java.lang.Comparable<T>> net.minecraft.client.data.models.blockstates.ConditionBuilder term(net.minecraft.world.level.block.state.properties.Property<T>, T);
+  public final <T extends java.lang.Comparable<T>> net.minecraft.client.data.models.blockstates.ConditionBuilder term(net.minecraft.world.level.block.state.properties.Property<T>, T, T...);
+  public final <T extends java.lang.Comparable<T>> net.minecraft.client.data.models.blockstates.ConditionBuilder negatedTerm(net.minecraft.world.level.block.state.properties.Property<T>, T);
+  public net.minecraft.client.renderer.block.dispatch.multipart.Condition build();
+  private static net.minecraft.client.renderer.block.dispatch.multipart.KeyValueCondition$Term lambda$term$0(java.lang.String);
+}
+Compiled from "MultiPartGenerator.java"
+final class net.minecraft.client.data.models.blockstates.MultiPartGenerator$Entry extends java.lang.Record {
+  private final java.util.Optional<net.minecraft.client.renderer.block.dispatch.multipart.Condition> condition;
+  private final net.minecraft.client.data.models.MultiVariant variants;
+  private net.minecraft.client.data.models.blockstates.MultiPartGenerator$Entry(java.util.Optional<net.minecraft.client.renderer.block.dispatch.multipart.Condition>, net.minecraft.client.data.models.MultiVariant);
+  public net.minecraft.client.renderer.block.dispatch.multipart.Selector toUnbaked();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Optional<net.minecraft.client.renderer.block.dispatch.multipart.Condition> condition();
+  public net.minecraft.client.data.models.MultiVariant variants();
+}
+Compiled from "MultiPartGenerator.java"
+public class net.minecraft.client.data.models.blockstates.MultiPartGenerator implements net.minecraft.client.data.models.blockstates.BlockModelDefinitionGenerator {
+  private final net.minecraft.world.level.block.Block block;
+  private final java.util.List<net.minecraft.client.data.models.blockstates.MultiPartGenerator$Entry> parts;
+  private net.minecraft.client.data.models.blockstates.MultiPartGenerator(net.minecraft.world.level.block.Block);
+  public net.minecraft.world.level.block.Block block();
+  public static net.minecraft.client.data.models.blockstates.MultiPartGenerator multiPart(net.minecraft.world.level.block.Block);
+  public net.minecraft.client.data.models.blockstates.MultiPartGenerator with(net.minecraft.client.data.models.MultiVariant);
+  private void validateCondition(net.minecraft.client.renderer.block.dispatch.multipart.Condition);
+  public net.minecraft.client.data.models.blockstates.MultiPartGenerator with(net.minecraft.client.renderer.block.dispatch.multipart.Condition, net.minecraft.client.data.models.MultiVariant);
+  public net.minecraft.client.data.models.blockstates.MultiPartGenerator with(net.minecraft.client.data.models.blockstates.ConditionBuilder, net.minecraft.client.data.models.MultiVariant);
+  public net.minecraft.client.renderer.block.dispatch.BlockStateModelDispatcher create();
+}
+Compiled from "MultiVariantGenerator.java"
+public class net.minecraft.client.data.models.blockstates.MultiVariantGenerator$Empty {
+  private final net.minecraft.world.level.block.Block block;
+  public net.minecraft.client.data.models.blockstates.MultiVariantGenerator$Empty(net.minecraft.world.level.block.Block);
+  public net.minecraft.client.data.models.blockstates.MultiVariantGenerator with(net.minecraft.client.data.models.blockstates.PropertyDispatch<net.minecraft.client.data.models.MultiVariant>);
+  private static net.minecraft.client.data.models.blockstates.MultiVariantGenerator$Entry lambda$with$0(java.util.Map$Entry);
+}
+Compiled from "MultiVariantGenerator.java"
+final class net.minecraft.client.data.models.blockstates.MultiVariantGenerator$Entry extends java.lang.Record {
+  private final net.minecraft.client.data.models.blockstates.PropertyValueList properties;
+  private final net.minecraft.client.data.models.MultiVariant variant;
+  private net.minecraft.client.data.models.blockstates.MultiVariantGenerator$Entry(net.minecraft.client.data.models.blockstates.PropertyValueList, net.minecraft.client.data.models.MultiVariant);
+  public java.util.stream.Stream<net.minecraft.client.data.models.blockstates.MultiVariantGenerator$Entry> apply(net.minecraft.client.data.models.blockstates.PropertyDispatch<net.minecraft.client.renderer.block.dispatch.VariantMutator>);
+  public java.util.stream.Stream<net.minecraft.client.data.models.blockstates.MultiVariantGenerator$Entry> apply(net.minecraft.client.renderer.block.dispatch.VariantMutator);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.client.data.models.blockstates.PropertyValueList properties();
+  public net.minecraft.client.data.models.MultiVariant variant();
+  private net.minecraft.client.data.models.blockstates.MultiVariantGenerator$Entry lambda$apply$0(java.util.Map$Entry);
+}
+Compiled from "MultiVariantGenerator.java"
+public class net.minecraft.client.data.models.blockstates.MultiVariantGenerator implements net.minecraft.client.data.models.blockstates.BlockModelDefinitionGenerator {
+  private final net.minecraft.world.level.block.Block block;
+  private final java.util.List<net.minecraft.client.data.models.blockstates.MultiVariantGenerator$Entry> entries;
+  private final java.util.Set<net.minecraft.world.level.block.state.properties.Property<?>> seenProperties;
+  private net.minecraft.client.data.models.blockstates.MultiVariantGenerator(net.minecraft.world.level.block.Block, java.util.List<net.minecraft.client.data.models.blockstates.MultiVariantGenerator$Entry>, java.util.Set<net.minecraft.world.level.block.state.properties.Property<?>>);
+  private static java.util.Set<net.minecraft.world.level.block.state.properties.Property<?>> validateAndExpandProperties(java.util.Set<net.minecraft.world.level.block.state.properties.Property<?>>, net.minecraft.world.level.block.Block, net.minecraft.client.data.models.blockstates.PropertyDispatch<?>);
+  public net.minecraft.client.data.models.blockstates.MultiVariantGenerator with(net.minecraft.client.data.models.blockstates.PropertyDispatch<net.minecraft.client.renderer.block.dispatch.VariantMutator>);
+  public net.minecraft.client.data.models.blockstates.MultiVariantGenerator with(net.minecraft.client.renderer.block.dispatch.VariantMutator);
+  public net.minecraft.client.renderer.block.dispatch.BlockStateModelDispatcher create();
+  public net.minecraft.world.level.block.Block block();
+  public static net.minecraft.client.data.models.blockstates.MultiVariantGenerator$Empty dispatch(net.minecraft.world.level.block.Block);
+  public static net.minecraft.client.data.models.blockstates.MultiVariantGenerator dispatch(net.minecraft.world.level.block.Block, net.minecraft.client.data.models.MultiVariant);
+  private static java.util.stream.Stream lambda$with$1(net.minecraft.client.renderer.block.dispatch.VariantMutator, net.minecraft.client.data.models.blockstates.MultiVariantGenerator$Entry);
+  private static java.util.stream.Stream lambda$with$0(net.minecraft.client.data.models.blockstates.PropertyDispatch, net.minecraft.client.data.models.blockstates.MultiVariantGenerator$Entry);
+  private static void lambda$validateAndExpandProperties$0(net.minecraft.world.level.block.Block, java.util.Set, net.minecraft.world.level.block.state.properties.Property);
+}
+Compiled from "PropertyDispatch.java"
+public class net.minecraft.client.data.models.blockstates.PropertyDispatch$C1<V, T1 extends java.lang.Comparable<T1>> extends net.minecraft.client.data.models.blockstates.PropertyDispatch<V> {
+  private final net.minecraft.world.level.block.state.properties.Property<T1> property1;
+  private net.minecraft.client.data.models.blockstates.PropertyDispatch$C1(net.minecraft.world.level.block.state.properties.Property<T1>);
+  public java.util.List<net.minecraft.world.level.block.state.properties.Property<?>> getDefinedProperties();
+  public net.minecraft.client.data.models.blockstates.PropertyDispatch$C1<V, T1> select(T1, V);
+  public net.minecraft.client.data.models.blockstates.PropertyDispatch<V> generate(java.util.function.Function<T1, V>);
+  private void lambda$generate$0(java.util.function.Function, java.lang.Comparable);
+}
+Compiled from "PropertyDispatch.java"
+public class net.minecraft.client.data.models.blockstates.PropertyDispatch$C2<V, T1 extends java.lang.Comparable<T1>, T2 extends java.lang.Comparable<T2>> extends net.minecraft.client.data.models.blockstates.PropertyDispatch<V> {
+  private final net.minecraft.world.level.block.state.properties.Property<T1> property1;
+  private final net.minecraft.world.level.block.state.properties.Property<T2> property2;
+  private net.minecraft.client.data.models.blockstates.PropertyDispatch$C2(net.minecraft.world.level.block.state.properties.Property<T1>, net.minecraft.world.level.block.state.properties.Property<T2>);
+  public java.util.List<net.minecraft.world.level.block.state.properties.Property<?>> getDefinedProperties();
+  public net.minecraft.client.data.models.blockstates.PropertyDispatch$C2<V, T1, T2> select(T1, T2, V);
+  public net.minecraft.client.data.models.blockstates.PropertyDispatch<V> generate(java.util.function.BiFunction<T1, T2, V>);
+  private void lambda$generate$0(java.util.function.BiFunction, java.lang.Comparable);
+  private void lambda$generate$1(java.lang.Comparable, java.util.function.BiFunction, java.lang.Comparable);
+}
+Compiled from "PropertyDispatch.java"
+public class net.minecraft.client.data.models.blockstates.PropertyDispatch$C3<V, T1 extends java.lang.Comparable<T1>, T2 extends java.lang.Comparable<T2>, T3 extends java.lang.Comparable<T3>> extends net.minecraft.client.data.models.blockstates.PropertyDispatch<V> {
+  private final net.minecraft.world.level.block.state.properties.Property<T1> property1;
+  private final net.minecraft.world.level.block.state.properties.Property<T2> property2;
+  private final net.minecraft.world.level.block.state.properties.Property<T3> property3;
+  private net.minecraft.client.data.models.blockstates.PropertyDispatch$C3(net.minecraft.world.level.block.state.properties.Property<T1>, net.minecraft.world.level.block.state.properties.Property<T2>, net.minecraft.world.level.block.state.properties.Property<T3>);
+  public java.util.List<net.minecraft.world.level.block.state.properties.Property<?>> getDefinedProperties();
+  public net.minecraft.client.data.models.blockstates.PropertyDispatch$C3<V, T1, T2, T3> select(T1, T2, T3, V);
+  public net.minecraft.client.data.models.blockstates.PropertyDispatch<V> generate(com.mojang.datafixers.util.Function3<T1, T2, T3, V>);
+  private void lambda$generate$0(com.mojang.datafixers.util.Function3, java.lang.Comparable);
+  private void lambda$generate$1(java.lang.Comparable, com.mojang.datafixers.util.Function3, java.lang.Comparable);
+  private void lambda$generate$2(java.lang.Comparable, java.lang.Comparable, com.mojang.datafixers.util.Function3, java.lang.Comparable);
+}
+Compiled from "PropertyDispatch.java"
+public class net.minecraft.client.data.models.blockstates.PropertyDispatch$C4<V, T1 extends java.lang.Comparable<T1>, T2 extends java.lang.Comparable<T2>, T3 extends java.lang.Comparable<T3>, T4 extends java.lang.Comparable<T4>> extends net.minecraft.client.data.models.blockstates.PropertyDispatch<V> {
+  private final net.minecraft.world.level.block.state.properties.Property<T1> property1;
+  private final net.minecraft.world.level.block.state.properties.Property<T2> property2;
+  private final net.minecraft.world.level.block.state.properties.Property<T3> property3;
+  private final net.minecraft.world.level.block.state.properties.Property<T4> property4;
+  private net.minecraft.client.data.models.blockstates.PropertyDispatch$C4(net.minecraft.world.level.block.state.properties.Property<T1>, net.minecraft.world.level.block.state.properties.Property<T2>, net.minecraft.world.level.block.state.properties.Property<T3>, net.minecraft.world.level.block.state.properties.Property<T4>);
+  public java.util.List<net.minecraft.world.level.block.state.properties.Property<?>> getDefinedProperties();
+  public net.minecraft.client.data.models.blockstates.PropertyDispatch$C4<V, T1, T2, T3, T4> select(T1, T2, T3, T4, V);
+  public net.minecraft.client.data.models.blockstates.PropertyDispatch<V> generate(com.mojang.datafixers.util.Function4<T1, T2, T3, T4, V>);
+  private void lambda$generate$0(com.mojang.datafixers.util.Function4, java.lang.Comparable);
+  private void lambda$generate$1(java.lang.Comparable, com.mojang.datafixers.util.Function4, java.lang.Comparable);
+  private void lambda$generate$2(java.lang.Comparable, java.lang.Comparable, com.mojang.datafixers.util.Function4, java.lang.Comparable);
+  private void lambda$generate$3(java.lang.Comparable, java.lang.Comparable, java.lang.Comparable, com.mojang.datafixers.util.Function4, java.lang.Comparable);
+}
+Compiled from "PropertyDispatch.java"
+public class net.minecraft.client.data.models.blockstates.PropertyDispatch$C5<V, T1 extends java.lang.Comparable<T1>, T2 extends java.lang.Comparable<T2>, T3 extends java.lang.Comparable<T3>, T4 extends java.lang.Comparable<T4>, T5 extends java.lang.Comparable<T5>> extends net.minecraft.client.data.models.blockstates.PropertyDispatch<V> {
+  private final net.minecraft.world.level.block.state.properties.Property<T1> property1;
+  private final net.minecraft.world.level.block.state.properties.Property<T2> property2;
+  private final net.minecraft.world.level.block.state.properties.Property<T3> property3;
+  private final net.minecraft.world.level.block.state.properties.Property<T4> property4;
+  private final net.minecraft.world.level.block.state.properties.Property<T5> property5;
+  private net.minecraft.client.data.models.blockstates.PropertyDispatch$C5(net.minecraft.world.level.block.state.properties.Property<T1>, net.minecraft.world.level.block.state.properties.Property<T2>, net.minecraft.world.level.block.state.properties.Property<T3>, net.minecraft.world.level.block.state.properties.Property<T4>, net.minecraft.world.level.block.state.properties.Property<T5>);
+  public java.util.List<net.minecraft.world.level.block.state.properties.Property<?>> getDefinedProperties();
+  public net.minecraft.client.data.models.blockstates.PropertyDispatch$C5<V, T1, T2, T3, T4, T5> select(T1, T2, T3, T4, T5, V);
+  public net.minecraft.client.data.models.blockstates.PropertyDispatch<V> generate(com.mojang.datafixers.util.Function5<T1, T2, T3, T4, T5, V>);
+  private void lambda$generate$0(com.mojang.datafixers.util.Function5, java.lang.Comparable);
+  private void lambda$generate$1(java.lang.Comparable, com.mojang.datafixers.util.Function5, java.lang.Comparable);
+  private void lambda$generate$2(java.lang.Comparable, java.lang.Comparable, com.mojang.datafixers.util.Function5, java.lang.Comparable);
+  private void lambda$generate$3(java.lang.Comparable, java.lang.Comparable, java.lang.Comparable, com.mojang.datafixers.util.Function5, java.lang.Comparable);
+  private void lambda$generate$4(java.lang.Comparable, java.lang.Comparable, java.lang.Comparable, java.lang.Comparable, com.mojang.datafixers.util.Function5, java.lang.Comparable);
+}
+Compiled from "PropertyDispatch.java"
+public abstract class net.minecraft.client.data.models.blockstates.PropertyDispatch<V> {
+  private final java.util.Map<net.minecraft.client.data.models.blockstates.PropertyValueList, V> values;
+  public net.minecraft.client.data.models.blockstates.PropertyDispatch();
+  protected void putValue(net.minecraft.client.data.models.blockstates.PropertyValueList, V);
+  java.util.Map<net.minecraft.client.data.models.blockstates.PropertyValueList, V> getEntries();
+  private void verifyComplete();
+  abstract java.util.List<net.minecraft.world.level.block.state.properties.Property<?>> getDefinedProperties();
+  public static <T1 extends java.lang.Comparable<T1>> net.minecraft.client.data.models.blockstates.PropertyDispatch$C1<net.minecraft.client.data.models.MultiVariant, T1> initial(net.minecraft.world.level.block.state.properties.Property<T1>);
+  public static <T1 extends java.lang.Comparable<T1>, T2 extends java.lang.Comparable<T2>> net.minecraft.client.data.models.blockstates.PropertyDispatch$C2<net.minecraft.client.data.models.MultiVariant, T1, T2> initial(net.minecraft.world.level.block.state.properties.Property<T1>, net.minecraft.world.level.block.state.properties.Property<T2>);
+  public static <T1 extends java.lang.Comparable<T1>, T2 extends java.lang.Comparable<T2>, T3 extends java.lang.Comparable<T3>> net.minecraft.client.data.models.blockstates.PropertyDispatch$C3<net.minecraft.client.data.models.MultiVariant, T1, T2, T3> initial(net.minecraft.world.level.block.state.properties.Property<T1>, net.minecraft.world.level.block.state.properties.Property<T2>, net.minecraft.world.level.block.state.properties.Property<T3>);
+  public static <T1 extends java.lang.Comparable<T1>, T2 extends java.lang.Comparable<T2>, T3 extends java.lang.Comparable<T3>, T4 extends java.lang.Comparable<T4>> net.minecraft.client.data.models.blockstates.PropertyDispatch$C4<net.minecraft.client.data.models.MultiVariant, T1, T2, T3, T4> initial(net.minecraft.world.level.block.state.properties.Property<T1>, net.minecraft.world.level.block.state.properties.Property<T2>, net.minecraft.world.level.block.state.properties.Property<T3>, net.minecraft.world.level.block.state.properties.Property<T4>);
+  public static <T1 extends java.lang.Comparable<T1>, T2 extends java.lang.Comparable<T2>, T3 extends java.lang.Comparable<T3>, T4 extends java.lang.Comparable<T4>, T5 extends java.lang.Comparable<T5>> net.minecraft.client.data.models.blockstates.PropertyDispatch$C5<net.minecraft.client.data.models.MultiVariant, T1, T2, T3, T4, T5> initial(net.minecraft.world.level.block.state.properties.Property<T1>, net.minecraft.world.level.block.state.properties.Property<T2>, net.minecraft.world.level.block.state.properties.Property<T3>, net.minecraft.world.level.block.state.properties.Property<T4>, net.minecraft.world.level.block.state.properties.Property<T5>);
+  public static <T1 extends java.lang.Comparable<T1>> net.minecraft.client.data.models.blockstates.PropertyDispatch$C1<net.minecraft.client.renderer.block.dispatch.VariantMutator, T1> modify(net.minecraft.world.level.block.state.properties.Property<T1>);
+  public static <T1 extends java.lang.Comparable<T1>, T2 extends java.lang.Comparable<T2>> net.minecraft.client.data.models.blockstates.PropertyDispatch$C2<net.minecraft.client.renderer.block.dispatch.VariantMutator, T1, T2> modify(net.minecraft.world.level.block.state.properties.Property<T1>, net.minecraft.world.level.block.state.properties.Property<T2>);
+  public static <T1 extends java.lang.Comparable<T1>, T2 extends java.lang.Comparable<T2>, T3 extends java.lang.Comparable<T3>> net.minecraft.client.data.models.blockstates.PropertyDispatch$C3<net.minecraft.client.renderer.block.dispatch.VariantMutator, T1, T2, T3> modify(net.minecraft.world.level.block.state.properties.Property<T1>, net.minecraft.world.level.block.state.properties.Property<T2>, net.minecraft.world.level.block.state.properties.Property<T3>);
+  public static <T1 extends java.lang.Comparable<T1>, T2 extends java.lang.Comparable<T2>, T3 extends java.lang.Comparable<T3>, T4 extends java.lang.Comparable<T4>> net.minecraft.client.data.models.blockstates.PropertyDispatch$C4<net.minecraft.client.renderer.block.dispatch.VariantMutator, T1, T2, T3, T4> modify(net.minecraft.world.level.block.state.properties.Property<T1>, net.minecraft.world.level.block.state.properties.Property<T2>, net.minecraft.world.level.block.state.properties.Property<T3>, net.minecraft.world.level.block.state.properties.Property<T4>);
+  public static <T1 extends java.lang.Comparable<T1>, T2 extends java.lang.Comparable<T2>, T3 extends java.lang.Comparable<T3>, T4 extends java.lang.Comparable<T4>, T5 extends java.lang.Comparable<T5>> net.minecraft.client.data.models.blockstates.PropertyDispatch$C5<net.minecraft.client.renderer.block.dispatch.VariantMutator, T1, T2, T3, T4, T5> modify(net.minecraft.world.level.block.state.properties.Property<T1>, net.minecraft.world.level.block.state.properties.Property<T2>, net.minecraft.world.level.block.state.properties.Property<T3>, net.minecraft.world.level.block.state.properties.Property<T4>, net.minecraft.world.level.block.state.properties.Property<T5>);
+  private boolean lambda$verifyComplete$1(net.minecraft.client.data.models.blockstates.PropertyValueList);
+  private static java.util.stream.Stream lambda$verifyComplete$0(net.minecraft.world.level.block.state.properties.Property, net.minecraft.client.data.models.blockstates.PropertyValueList);
+}
+Compiled from "PropertyValueList.java"
+public final class net.minecraft.client.data.models.blockstates.PropertyValueList extends java.lang.Record {
+  private final java.util.List<net.minecraft.world.level.block.state.properties.Property$Value<?>> values;
+  public static final net.minecraft.client.data.models.blockstates.PropertyValueList EMPTY;
+  private static final java.util.Comparator<net.minecraft.world.level.block.state.properties.Property$Value<?>> COMPARE_BY_NAME;
+  public net.minecraft.client.data.models.blockstates.PropertyValueList(java.util.List<net.minecraft.world.level.block.state.properties.Property$Value<?>>);
+  public net.minecraft.client.data.models.blockstates.PropertyValueList extend(net.minecraft.world.level.block.state.properties.Property$Value<?>);
+  public net.minecraft.client.data.models.blockstates.PropertyValueList extend(net.minecraft.client.data.models.blockstates.PropertyValueList);
+  public static net.minecraft.client.data.models.blockstates.PropertyValueList of(net.minecraft.world.level.block.state.properties.Property$Value<?>...);
+  public java.lang.String getKey();
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<net.minecraft.world.level.block.state.properties.Property$Value<?>> values();
+  private static java.lang.String lambda$static$0(net.minecraft.world.level.block.state.properties.Property$Value);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.data.models.blockstates.package-info {
+}

@@ -1,0 +1,126 @@
+Compiled from "NearestHealableRaiderTargetGoal.java"
+public class net.minecraft.world.entity.ai.goal.target.NearestHealableRaiderTargetGoal<T extends net.minecraft.world.entity.LivingEntity> extends net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal<T> {
+  private static final int DEFAULT_COOLDOWN;
+  private int cooldown;
+  public net.minecraft.world.entity.ai.goal.target.NearestHealableRaiderTargetGoal(net.minecraft.world.entity.raid.Raider, java.lang.Class<T>, boolean, net.minecraft.world.entity.ai.targeting.TargetingConditions$Selector);
+  public int getCooldown();
+  public void decrementCooldown();
+  public boolean canUse();
+  public void start();
+}
+Compiled from "NearestAttackableWitchTargetGoal.java"
+public class net.minecraft.world.entity.ai.goal.target.NearestAttackableWitchTargetGoal<T extends net.minecraft.world.entity.LivingEntity> extends net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal<T> {
+  private boolean canAttack;
+  public net.minecraft.world.entity.ai.goal.target.NearestAttackableWitchTargetGoal(net.minecraft.world.entity.raid.Raider, java.lang.Class<T>, int, boolean, boolean, net.minecraft.world.entity.ai.targeting.TargetingConditions$Selector);
+  public void setCanAttack(boolean);
+  public boolean canUse();
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.entity.ai.goal.target.package-info {
+}
+Compiled from "NearestAttackableTargetGoal.java"
+public class net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal<T extends net.minecraft.world.entity.LivingEntity> extends net.minecraft.world.entity.ai.goal.target.TargetGoal {
+  private static final int DEFAULT_RANDOM_INTERVAL;
+  protected final java.lang.Class<T> targetType;
+  protected final int randomInterval;
+  protected net.minecraft.world.entity.LivingEntity target;
+  protected final net.minecraft.world.entity.ai.targeting.TargetingConditions targetConditions;
+  public net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal(net.minecraft.world.entity.Mob, java.lang.Class<T>, boolean);
+  public net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal(net.minecraft.world.entity.Mob, java.lang.Class<T>, boolean, net.minecraft.world.entity.ai.targeting.TargetingConditions$Selector);
+  public net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal(net.minecraft.world.entity.Mob, java.lang.Class<T>, boolean, boolean);
+  public net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal(net.minecraft.world.entity.Mob, java.lang.Class<T>, int, boolean, boolean, net.minecraft.world.entity.ai.targeting.TargetingConditions$Selector);
+  public boolean canUse();
+  protected net.minecraft.world.phys.AABB getTargetSearchArea(double);
+  protected void findTarget();
+  public void start();
+  public void setTarget(net.minecraft.world.entity.LivingEntity);
+  private net.minecraft.world.entity.ai.targeting.TargetingConditions getTargetConditions();
+  private static boolean lambda$findTarget$0(net.minecraft.world.entity.LivingEntity);
+}
+Compiled from "DefendVillageTargetGoal.java"
+public class net.minecraft.world.entity.ai.goal.target.DefendVillageTargetGoal extends net.minecraft.world.entity.ai.goal.target.TargetGoal {
+  private final net.minecraft.world.entity.animal.golem.IronGolem golem;
+  private net.minecraft.world.entity.LivingEntity potentialTarget;
+  private final net.minecraft.world.entity.ai.targeting.TargetingConditions attackTargeting;
+  public net.minecraft.world.entity.ai.goal.target.DefendVillageTargetGoal(net.minecraft.world.entity.animal.golem.IronGolem);
+  public boolean canUse();
+  public void start();
+}
+Compiled from "NonTameRandomTargetGoal.java"
+public class net.minecraft.world.entity.ai.goal.target.NonTameRandomTargetGoal<T extends net.minecraft.world.entity.LivingEntity> extends net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal<T> {
+  private final net.minecraft.world.entity.TamableAnimal tamableMob;
+  public net.minecraft.world.entity.ai.goal.target.NonTameRandomTargetGoal(net.minecraft.world.entity.TamableAnimal, java.lang.Class<T>, boolean, net.minecraft.world.entity.ai.targeting.TargetingConditions$Selector);
+  public boolean canUse();
+  public boolean canContinueToUse();
+}
+Compiled from "OwnerHurtByTargetGoal.java"
+public class net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal extends net.minecraft.world.entity.ai.goal.target.TargetGoal {
+  private final net.minecraft.world.entity.TamableAnimal tameAnimal;
+  private net.minecraft.world.entity.LivingEntity ownerLastHurtBy;
+  private int timestamp;
+  public net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal(net.minecraft.world.entity.TamableAnimal);
+  public boolean canUse();
+  public void start();
+}
+Compiled from "ResetUniversalAngerTargetGoal.java"
+public class net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal<T extends net.minecraft.world.entity.Mob & net.minecraft.world.entity.NeutralMob> extends net.minecraft.world.entity.ai.goal.Goal {
+  private static final int ALERT_RANGE_Y;
+  private final T mob;
+  private final boolean alertOthersOfSameType;
+  private int lastHurtByPlayerTimestamp;
+  public net.minecraft.world.entity.ai.goal.target.ResetUniversalAngerTargetGoal(T, boolean);
+  public boolean canUse();
+  private boolean wasHurtByPlayer();
+  public void start();
+  private java.util.List<? extends net.minecraft.world.entity.Mob> getNearbyMobsOfSameType();
+  private static net.minecraft.world.entity.NeutralMob lambda$start$1(net.minecraft.world.entity.Mob);
+  private boolean lambda$start$0(net.minecraft.world.entity.Mob);
+}
+Compiled from "HurtByTargetGoal.java"
+public class net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal extends net.minecraft.world.entity.ai.goal.target.TargetGoal {
+  private static final net.minecraft.world.entity.ai.targeting.TargetingConditions HURT_BY_TARGETING;
+  private static final int ALERT_RANGE_Y;
+  private boolean alertSameType;
+  private int timestamp;
+  private final java.lang.Class<?>[] toIgnoreDamage;
+  private java.lang.Class<?>[] toIgnoreAlert;
+  public net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal(net.minecraft.world.entity.PathfinderMob, java.lang.Class<?>...);
+  public boolean canUse();
+  public net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal setAlertOthers(java.lang.Class<?>...);
+  public void start();
+  protected void alertOthers();
+  protected void alertOther(net.minecraft.world.entity.Mob, net.minecraft.world.entity.LivingEntity);
+  static {};
+}
+Compiled from "OwnerHurtTargetGoal.java"
+public class net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal extends net.minecraft.world.entity.ai.goal.target.TargetGoal {
+  private final net.minecraft.world.entity.TamableAnimal tameAnimal;
+  private net.minecraft.world.entity.LivingEntity ownerLastHurt;
+  private int timestamp;
+  public net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal(net.minecraft.world.entity.TamableAnimal);
+  public boolean canUse();
+  public void start();
+}
+Compiled from "TargetGoal.java"
+public abstract class net.minecraft.world.entity.ai.goal.target.TargetGoal extends net.minecraft.world.entity.ai.goal.Goal {
+  private static final int EMPTY_REACH_CACHE;
+  private static final int CAN_REACH_CACHE;
+  private static final int CANT_REACH_CACHE;
+  protected final net.minecraft.world.entity.Mob mob;
+  protected final boolean mustSee;
+  private final boolean mustReach;
+  private int reachCache;
+  private int reachCacheTime;
+  private int unseenTicks;
+  protected net.minecraft.world.entity.LivingEntity targetMob;
+  protected int unseenMemoryTicks;
+  public net.minecraft.world.entity.ai.goal.target.TargetGoal(net.minecraft.world.entity.Mob, boolean);
+  public net.minecraft.world.entity.ai.goal.target.TargetGoal(net.minecraft.world.entity.Mob, boolean, boolean);
+  public boolean canContinueToUse();
+  protected double getFollowDistance();
+  public void start();
+  public void stop();
+  protected boolean canAttack(net.minecraft.world.entity.LivingEntity, net.minecraft.world.entity.ai.targeting.TargetingConditions);
+  private boolean canReach(net.minecraft.world.entity.LivingEntity);
+  public net.minecraft.world.entity.ai.goal.target.TargetGoal setUnseenMemoryTicks(int);
+}

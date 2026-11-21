@@ -1,0 +1,78 @@
+Compiled from "package-info.java"
+interface net.minecraft.server.bossevents.package-info {
+}
+Compiled from "CustomBossEvent.java"
+public class net.minecraft.server.bossevents.CustomBossEvent extends net.minecraft.server.level.ServerBossEvent {
+  private static final int DEFAULT_MAX;
+  private final net.minecraft.resources.Identifier customId;
+  private final java.util.Set<java.util.UUID> players;
+  private int value;
+  private int max;
+  private final java.lang.Runnable dirtyCallback;
+  public net.minecraft.server.bossevents.CustomBossEvent(java.util.UUID, net.minecraft.resources.Identifier, net.minecraft.network.chat.Component, java.lang.Runnable);
+  public net.minecraft.resources.Identifier customId();
+  public void addPlayer(net.minecraft.server.level.ServerPlayer);
+  public void removePlayer(net.minecraft.server.level.ServerPlayer);
+  public void removeAllPlayers();
+  public int value();
+  public int max();
+  public void setValue(int);
+  public void setMax(int);
+  public final net.minecraft.network.chat.Component getDisplayName();
+  public boolean setPlayers(java.util.Collection<net.minecraft.server.level.ServerPlayer>);
+  public static net.minecraft.server.bossevents.CustomBossEvent load(java.util.UUID, net.minecraft.resources.Identifier, net.minecraft.server.bossevents.CustomBossEvent$Packed, java.lang.Runnable);
+  public net.minecraft.server.bossevents.CustomBossEvent$Packed pack();
+  public void onPlayerConnect(net.minecraft.server.level.ServerPlayer);
+  public void onPlayerDisconnect(net.minecraft.server.level.ServerPlayer);
+  public void setDirty();
+  private net.minecraft.network.chat.Style lambda$getDisplayName$0(net.minecraft.network.chat.Style);
+}
+Compiled from "CustomBossEvent.java"
+public final class net.minecraft.server.bossevents.CustomBossEvent$Packed extends java.lang.Record {
+  private final net.minecraft.network.chat.Component name;
+  private final boolean visible;
+  private final int value;
+  private final int max;
+  private final net.minecraft.world.BossEvent$BossBarColor color;
+  private final net.minecraft.world.BossEvent$BossBarOverlay overlay;
+  private final boolean darkenScreen;
+  private final boolean playBossMusic;
+  private final boolean createWorldFog;
+  private final java.util.Set<java.util.UUID> players;
+  public static final com.mojang.serialization.Codec<net.minecraft.server.bossevents.CustomBossEvent$Packed> CODEC;
+  public net.minecraft.server.bossevents.CustomBossEvent$Packed(net.minecraft.network.chat.Component, boolean, int, int, net.minecraft.world.BossEvent$BossBarColor, net.minecraft.world.BossEvent$BossBarOverlay, boolean, boolean, boolean, java.util.Set<java.util.UUID>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.network.chat.Component name();
+  public boolean visible();
+  public int value();
+  public int max();
+  public net.minecraft.world.BossEvent$BossBarColor color();
+  public net.minecraft.world.BossEvent$BossBarOverlay overlay();
+  public boolean darkenScreen();
+  public boolean playBossMusic();
+  public boolean createWorldFog();
+  public java.util.Set<java.util.UUID> players();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "CustomBossEvents.java"
+public class net.minecraft.server.bossevents.CustomBossEvents extends net.minecraft.world.level.saveddata.SavedData {
+  private static final com.mojang.serialization.Codec<java.util.Map<net.minecraft.resources.Identifier, net.minecraft.server.bossevents.CustomBossEvent$Packed>> EVENTS_CODEC;
+  private static final com.mojang.serialization.Codec<net.minecraft.server.bossevents.CustomBossEvents> CODEC;
+  public static final net.minecraft.world.level.saveddata.SavedDataType<net.minecraft.server.bossevents.CustomBossEvents> TYPE;
+  private final java.util.Map<net.minecraft.resources.Identifier, net.minecraft.server.bossevents.CustomBossEvent> events;
+  public net.minecraft.server.bossevents.CustomBossEvents();
+  public net.minecraft.server.bossevents.CustomBossEvent get(net.minecraft.resources.Identifier);
+  public net.minecraft.server.bossevents.CustomBossEvent create(net.minecraft.util.RandomSource, net.minecraft.resources.Identifier, net.minecraft.network.chat.Component);
+  public void remove(net.minecraft.server.bossevents.CustomBossEvent);
+  public java.util.Collection<net.minecraft.resources.Identifier> getIds();
+  public java.util.Collection<net.minecraft.server.bossevents.CustomBossEvent> getEvents();
+  public void onPlayerConnect(net.minecraft.server.level.ServerPlayer);
+  public void onPlayerDisconnect(net.minecraft.server.level.ServerPlayer);
+  private static java.util.Map lambda$static$2(net.minecraft.server.bossevents.CustomBossEvents);
+  private static net.minecraft.server.bossevents.CustomBossEvents lambda$static$0(java.util.Map);
+  private static void lambda$static$1(net.minecraft.server.bossevents.CustomBossEvents, net.minecraft.resources.Identifier, net.minecraft.server.bossevents.CustomBossEvent$Packed);
+  static {};
+}

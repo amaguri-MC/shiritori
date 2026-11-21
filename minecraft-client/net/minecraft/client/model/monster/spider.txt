@@ -1,0 +1,25 @@
+Compiled from "SpiderModel.java"
+public class net.minecraft.client.model.monster.spider.SpiderModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.LivingEntityRenderState> {
+  private static final java.lang.String BODY_0;
+  private static final java.lang.String BODY_1;
+  private static final java.lang.String RIGHT_MIDDLE_FRONT_LEG;
+  private static final java.lang.String LEFT_MIDDLE_FRONT_LEG;
+  private static final java.lang.String RIGHT_MIDDLE_HIND_LEG;
+  private static final java.lang.String LEFT_MIDDLE_HIND_LEG;
+  private final net.minecraft.client.model.geom.ModelPart head;
+  private final net.minecraft.client.model.geom.ModelPart rightHindLeg;
+  private final net.minecraft.client.model.geom.ModelPart leftHindLeg;
+  private final net.minecraft.client.model.geom.ModelPart rightMiddleHindLeg;
+  private final net.minecraft.client.model.geom.ModelPart leftMiddleHindLeg;
+  private final net.minecraft.client.model.geom.ModelPart rightMiddleFrontLeg;
+  private final net.minecraft.client.model.geom.ModelPart leftMiddleFrontLeg;
+  private final net.minecraft.client.model.geom.ModelPart rightFrontLeg;
+  private final net.minecraft.client.model.geom.ModelPart leftFrontLeg;
+  public net.minecraft.client.model.monster.spider.SpiderModel(net.minecraft.client.model.geom.ModelPart);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createSpiderBodyLayer();
+  public void setupAnim(net.minecraft.client.renderer.entity.state.LivingEntityRenderState);
+  public void setupAnim(java.lang.Object);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.model.monster.spider.package-info {
+}

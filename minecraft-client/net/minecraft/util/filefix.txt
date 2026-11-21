@@ -1,0 +1,132 @@
+Compiled from "AbortedFileFixException.java"
+public final class net.minecraft.util.filefix.AbortedFileFixException extends net.minecraft.util.filefix.FileFixException {
+  private final java.util.List<net.minecraft.util.filefix.virtualfilesystem.FileMove> notRevertedMoves;
+  public net.minecraft.util.filefix.AbortedFileFixException(java.lang.Exception, java.util.List<net.minecraft.util.filefix.virtualfilesystem.FileMove>, net.minecraft.util.filefix.FileSystemCapabilities);
+  public net.minecraft.util.filefix.AbortedFileFixException(java.lang.Exception);
+  public java.util.List<net.minecraft.util.filefix.virtualfilesystem.FileMove> notRevertedMoves();
+  protected net.minecraft.CrashReport createCrashReport();
+}
+Compiled from "AtomicMoveNotSupportedFileFixException.java"
+public class net.minecraft.util.filefix.AtomicMoveNotSupportedFileFixException extends net.minecraft.util.filefix.FileFixException {
+  public net.minecraft.util.filefix.AtomicMoveNotSupportedFileFixException(net.minecraft.util.filefix.FileSystemCapabilities);
+}
+Compiled from "CanceledFileFixException.java"
+public class net.minecraft.util.filefix.CanceledFileFixException extends net.minecraft.util.filefix.FileFixException {
+  public net.minecraft.util.filefix.CanceledFileFixException();
+}
+Compiled from "FailedCleanupFileFixException.java"
+public final class net.minecraft.util.filefix.FailedCleanupFileFixException extends net.minecraft.util.filefix.FileFixException {
+  private final java.lang.String newWorldFolderName;
+  public net.minecraft.util.filefix.FailedCleanupFileFixException(java.lang.Exception, java.lang.String, net.minecraft.util.filefix.FileSystemCapabilities);
+  protected net.minecraft.CrashReport createCrashReport();
+  public java.lang.String newWorldFolderName();
+}
+Compiled from "FileFix.java"
+public abstract class net.minecraft.util.filefix.FileFix {
+  private final com.mojang.datafixers.schemas.Schema schema;
+  private final java.util.List<net.minecraft.util.filefix.operations.FileFixOperation> fileFixOperations;
+  public net.minecraft.util.filefix.FileFix(com.mojang.datafixers.schemas.Schema);
+  public final com.mojang.datafixers.schemas.Schema getSchema();
+  public final int getVersion();
+  public void addFileFixOperation(net.minecraft.util.filefix.operations.FileFixOperation);
+  public void addFileContentFix(net.minecraft.util.filefix.operations.ModifyContent$FileAccessFunction);
+  public int countFileOperations();
+  public void runFixOperations(java.nio.file.Path, net.minecraft.util.worldupdate.UpgradeProgress) throws java.io.IOException;
+  public abstract void makeFixer();
+}
+Compiled from "FileFixException.java"
+public class net.minecraft.util.filefix.FileFixException extends java.lang.RuntimeException {
+  protected final net.minecraft.util.filefix.FileSystemCapabilities fileSystemCapabilities;
+  public net.minecraft.util.filefix.FileFixException(java.lang.Exception, net.minecraft.util.filefix.FileSystemCapabilities);
+  protected net.minecraft.CrashReport createCrashReport();
+  public net.minecraft.ReportedException makeReportedException();
+}
+Compiled from "FileFixUtil.java"
+public class net.minecraft.util.filefix.FileFixUtil {
+  private static final org.slf4j.Logger LOGGER;
+  public static final java.lang.String NAMESPACE_PATTERN;
+  public net.minecraft.util.filefix.FileFixUtil();
+  public static void moveFile(java.nio.file.Path, java.lang.String, java.lang.String) throws java.io.IOException;
+  public static void deleteFileOrEmptyDirectory(java.nio.file.Path, java.lang.String) throws java.io.IOException;
+  static {};
+}
+Compiled from "FileFixerUpper.java"
+class net.minecraft.util.filefix.FileFixerUpper$1 extends java.nio.file.SimpleFileVisitor<java.nio.file.Path> {
+  net.minecraft.util.filefix.FileFixerUpper$1();
+  public java.nio.file.FileVisitResult visitFile(java.nio.file.Path, java.nio.file.attribute.BasicFileAttributes);
+  public java.nio.file.FileVisitResult postVisitDirectory(java.nio.file.Path, java.io.IOException);
+  public java.nio.file.FileVisitResult postVisitDirectory(java.lang.Object, java.io.IOException) throws java.io.IOException;
+  public java.nio.file.FileVisitResult visitFile(java.lang.Object, java.nio.file.attribute.BasicFileAttributes) throws java.io.IOException;
+}
+Compiled from "FileFixerUpper.java"
+public class net.minecraft.util.filefix.FileFixerUpper$Builder {
+  public final java.util.List<net.minecraft.util.filefix.FileFix> fileFixes;
+  private final int currentVersion;
+  private int latestFileFixerVersion;
+  private final java.util.List<com.mojang.datafixers.schemas.Schema> knownSchemas;
+  public net.minecraft.util.filefix.FileFixerUpper$Builder(int);
+  public void addFixer(net.minecraft.util.filefix.FileFix);
+  public com.mojang.datafixers.schemas.Schema addSchema(com.mojang.datafixers.DataFixerBuilder, int, java.util.function.BiFunction<java.lang.Integer, com.mojang.datafixers.schemas.Schema, com.mojang.datafixers.schemas.Schema>);
+  public net.minecraft.util.filefix.FileFixerUpper build(com.mojang.datafixers.DataFixerBuilder$Result);
+}
+Compiled from "FileFixerUpper.java"
+public final class net.minecraft.util.filefix.FileFixerUpper$UpgradeInProgress extends java.lang.Record {
+  private final java.util.List<net.minecraft.util.filefix.virtualfilesystem.FileMove> moves;
+  public net.minecraft.util.filefix.FileFixerUpper$UpgradeInProgress(java.util.List<net.minecraft.util.filefix.virtualfilesystem.FileMove>);
+  public static com.mojang.serialization.Codec<net.minecraft.util.filefix.FileFixerUpper$UpgradeInProgress> codec(java.nio.file.Path, java.nio.file.Path);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<net.minecraft.util.filefix.virtualfilesystem.FileMove> moves();
+  private static com.mojang.datafixers.kinds.App lambda$codec$0(java.nio.file.Path, java.nio.file.Path, com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+}
+Compiled from "FileFixerUpper.java"
+public class net.minecraft.util.filefix.FileFixerUpper {
+  private static final int FILE_FIXER_INTRODUCTION_VERSION;
+  private static final com.google.gson.Gson GSON;
+  private static final java.lang.String FILE_FIX_DIRECTORY_NAME;
+  private static final java.lang.String NEW_WORLD_TEMP_NAME;
+  private static final java.lang.String UPGRADE_IN_PROGRESS_NAME;
+  private static final org.slf4j.Logger LOGGER;
+  private final com.mojang.datafixers.DataFixerBuilder$Result dataFixer;
+  private final java.util.List<net.minecraft.util.filefix.FileFix> fileFixes;
+  private final int latestFileFixerVersion;
+  public net.minecraft.util.filefix.FileFixerUpper(com.mojang.datafixers.DataFixerBuilder$Result, java.util.List<net.minecraft.util.filefix.FileFix>, int);
+  public static int worldVersionToFileFixerVersion(int);
+  public boolean requiresFileFixing(int);
+  public com.mojang.serialization.Dynamic<?> fix(net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess, com.mojang.serialization.Dynamic<?>, net.minecraft.util.worldupdate.UpgradeProgress) throws net.minecraft.util.filefix.FileFixException;
+  public com.mojang.serialization.Dynamic<?> fix(net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess, com.mojang.serialization.Dynamic<?>, net.minecraft.util.worldupdate.UpgradeProgress, int) throws net.minecraft.util.filefix.FileFixException;
+  private java.util.List<net.minecraft.util.filefix.virtualfilesystem.FileMove> startOrContinueFileFixing(net.minecraft.util.worldupdate.UpgradeProgress, int, java.nio.file.Path, java.nio.file.Path, java.nio.file.Path, int) throws java.io.IOException;
+  private static void deleteDirectory(java.nio.file.Path) throws java.io.IOException;
+  private static void cleanup(java.nio.file.Path);
+  private java.util.List<net.minecraft.util.filefix.virtualfilesystem.FileMove> applyFileFixersOnCow(net.minecraft.util.worldupdate.UpgradeProgress, int, int, java.nio.file.Path, java.nio.file.Path, java.nio.file.Path) throws java.io.IOException;
+  public void applyFileFixers(net.minecraft.util.worldupdate.UpgradeProgress, int, int, java.nio.file.Path) throws java.io.IOException;
+  private java.util.List<net.minecraft.util.filefix.FileFix> getApplicableFixers(int, int);
+  private void countFiles(java.util.List<net.minecraft.util.filefix.FileFix>, net.minecraft.util.worldupdate.UpgradeProgress);
+  private void writeUpdatedLevelData(java.nio.file.Path, int) throws java.io.IOException;
+  private static com.mojang.serialization.Dynamic<?> addVersionsToLevelData(com.mojang.serialization.Dynamic<?>, int);
+  protected static void swapInFixedWorld(net.minecraft.world.level.storage.LevelStorageSource$LevelStorageAccess, java.util.List<net.minecraft.util.filefix.virtualfilesystem.FileMove>, java.nio.file.Path, java.nio.file.Path) throws net.minecraft.util.filefix.FileFixException;
+  private static void writeMoves(java.util.List<net.minecraft.util.filefix.virtualfilesystem.FileMove>, java.nio.file.Path, java.nio.file.Path, java.nio.file.Path) throws java.io.IOException;
+  private static java.util.List<net.minecraft.util.filefix.virtualfilesystem.FileMove> readMoves(java.nio.file.Path, java.nio.file.Path, java.nio.file.Path) throws java.io.IOException;
+  public static net.minecraft.util.filefix.FileSystemCapabilities detectFileSystemCapabilities(java.nio.file.Path) throws java.io.IOException;
+  private static boolean supportsAtomicMove(java.nio.file.Path) throws java.io.IOException;
+  private static boolean supportsHardLinks(java.nio.file.Path) throws java.io.IOException;
+  private static void lambda$swapInFixedWorld$0(java.nio.file.Path, java.nio.file.Path, java.nio.file.CopyOption[], java.nio.file.Path, net.minecraft.util.filefix.FileSystemCapabilities, org.apache.commons.lang3.mutable.MutableBoolean) throws java.io.IOException;
+  private static boolean lambda$getApplicableFixers$0(int, int, net.minecraft.util.filefix.FileFix);
+  static {};
+}
+Compiled from "FileSystemCapabilities.java"
+public final class net.minecraft.util.filefix.FileSystemCapabilities extends java.lang.Record {
+  private final boolean atomicMove;
+  private final boolean hardLinks;
+  public net.minecraft.util.filefix.FileSystemCapabilities(boolean, boolean);
+  public java.nio.file.CopyOption[] getMoveOptions();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public boolean atomicMove();
+  public boolean hardLinks();
+}
+Compiled from "package-info.java"
+interface net.minecraft.util.filefix.package-info {
+}

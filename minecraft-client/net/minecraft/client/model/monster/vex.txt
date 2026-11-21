@@ -1,0 +1,20 @@
+Compiled from "VexModel.java"
+public class net.minecraft.client.model.monster.vex.VexModel extends net.minecraft.client.model.EntityModel<net.minecraft.client.renderer.entity.state.VexRenderState> implements net.minecraft.client.model.ArmedModel<net.minecraft.client.renderer.entity.state.VexRenderState> {
+  private final net.minecraft.client.model.geom.ModelPart body;
+  private final net.minecraft.client.model.geom.ModelPart rightArm;
+  private final net.minecraft.client.model.geom.ModelPart leftArm;
+  private final net.minecraft.client.model.geom.ModelPart rightWing;
+  private final net.minecraft.client.model.geom.ModelPart leftWing;
+  private final net.minecraft.client.model.geom.ModelPart head;
+  public net.minecraft.client.model.monster.vex.VexModel(net.minecraft.client.model.geom.ModelPart);
+  public static net.minecraft.client.model.geom.builders.LayerDefinition createBodyLayer();
+  public void setupAnim(net.minecraft.client.renderer.entity.state.VexRenderState);
+  private void setArmsCharging(boolean, boolean, float);
+  public void translateToHand(net.minecraft.client.renderer.entity.state.VexRenderState, net.minecraft.world.entity.HumanoidArm, com.mojang.blaze3d.vertex.PoseStack);
+  private void offsetStackPosition(com.mojang.blaze3d.vertex.PoseStack, boolean);
+  public void setupAnim(java.lang.Object);
+  public void translateToHand(net.minecraft.client.renderer.entity.state.EntityRenderState, net.minecraft.world.entity.HumanoidArm, com.mojang.blaze3d.vertex.PoseStack);
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.model.monster.vex.package-info {
+}

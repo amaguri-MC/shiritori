@@ -1,0 +1,87 @@
+Compiled from "BuildContexts.java"
+public class net.minecraft.commands.execution.tasks.BuildContexts$Continuation<T extends net.minecraft.commands.ExecutionCommandSource<T>> extends net.minecraft.commands.execution.tasks.BuildContexts<T> implements net.minecraft.commands.execution.EntryAction<T> {
+  private final net.minecraft.commands.execution.ChainModifiers modifiers;
+  private final T originalSource;
+  private final java.util.List<T> sources;
+  public net.minecraft.commands.execution.tasks.BuildContexts$Continuation(java.lang.String, com.mojang.brigadier.context.ContextChain<T>, net.minecraft.commands.execution.ChainModifiers, T, java.util.List<T>);
+  public void execute(net.minecraft.commands.execution.ExecutionContext<T>, net.minecraft.commands.execution.Frame);
+}
+Compiled from "CallFunction.java"
+public class net.minecraft.commands.execution.tasks.CallFunction<T extends net.minecraft.commands.ExecutionCommandSource<T>> implements net.minecraft.commands.execution.UnboundEntryAction<T> {
+  private final net.minecraft.commands.functions.InstantiatedFunction<T> function;
+  private final net.minecraft.commands.CommandResultCallback resultCallback;
+  private final boolean returnParentFrame;
+  public net.minecraft.commands.execution.tasks.CallFunction(net.minecraft.commands.functions.InstantiatedFunction<T>, net.minecraft.commands.CommandResultCallback, boolean);
+  public void execute(T, net.minecraft.commands.execution.ExecutionContext<T>, net.minecraft.commands.execution.Frame);
+  public void execute(java.lang.Object, net.minecraft.commands.execution.ExecutionContext, net.minecraft.commands.execution.Frame);
+  private static net.minecraft.commands.execution.CommandQueueEntry lambda$execute$0(net.minecraft.commands.ExecutionCommandSource, net.minecraft.commands.execution.Frame, net.minecraft.commands.execution.UnboundEntryAction);
+}
+Compiled from "BuildContexts.java"
+public class net.minecraft.commands.execution.tasks.BuildContexts$TopLevel<T extends net.minecraft.commands.ExecutionCommandSource<T>> extends net.minecraft.commands.execution.tasks.BuildContexts<T> implements net.minecraft.commands.execution.EntryAction<T> {
+  private final T source;
+  public net.minecraft.commands.execution.tasks.BuildContexts$TopLevel(java.lang.String, com.mojang.brigadier.context.ContextChain<T>, T);
+  public void execute(net.minecraft.commands.execution.ExecutionContext<T>, net.minecraft.commands.execution.Frame);
+}
+Compiled from "BuildContexts.java"
+public class net.minecraft.commands.execution.tasks.BuildContexts$Unbound<T extends net.minecraft.commands.ExecutionCommandSource<T>> extends net.minecraft.commands.execution.tasks.BuildContexts<T> implements net.minecraft.commands.execution.UnboundEntryAction<T> {
+  public net.minecraft.commands.execution.tasks.BuildContexts$Unbound(java.lang.String, com.mojang.brigadier.context.ContextChain<T>);
+  public void execute(T, net.minecraft.commands.execution.ExecutionContext<T>, net.minecraft.commands.execution.Frame);
+  public void execute(java.lang.Object, net.minecraft.commands.execution.ExecutionContext, net.minecraft.commands.execution.Frame);
+}
+Compiled from "FallthroughTask.java"
+public class net.minecraft.commands.execution.tasks.FallthroughTask<T extends net.minecraft.commands.ExecutionCommandSource<T>> implements net.minecraft.commands.execution.EntryAction<T> {
+  private static final net.minecraft.commands.execution.tasks.FallthroughTask<? extends net.minecraft.commands.ExecutionCommandSource<?>> INSTANCE;
+  public net.minecraft.commands.execution.tasks.FallthroughTask();
+  public static <T extends net.minecraft.commands.ExecutionCommandSource<T>> net.minecraft.commands.execution.EntryAction<T> instance();
+  public void execute(net.minecraft.commands.execution.ExecutionContext<T>, net.minecraft.commands.execution.Frame);
+  static {};
+}
+Compiled from "ContinuationTask.java"
+public interface net.minecraft.commands.execution.tasks.ContinuationTask$TaskProvider<T, P> {
+  public abstract net.minecraft.commands.execution.CommandQueueEntry<T> create(net.minecraft.commands.execution.Frame, P);
+}
+Compiled from "package-info.java"
+interface net.minecraft.commands.execution.tasks.package-info {
+}
+Compiled from "IsolatedCall.java"
+public class net.minecraft.commands.execution.tasks.IsolatedCall<T extends net.minecraft.commands.ExecutionCommandSource<T>> implements net.minecraft.commands.execution.EntryAction<T> {
+  private final java.util.function.Consumer<net.minecraft.commands.execution.ExecutionControl<T>> taskProducer;
+  private final net.minecraft.commands.CommandResultCallback output;
+  public net.minecraft.commands.execution.tasks.IsolatedCall(java.util.function.Consumer<net.minecraft.commands.execution.ExecutionControl<T>>, net.minecraft.commands.CommandResultCallback);
+  public void execute(net.minecraft.commands.execution.ExecutionContext<T>, net.minecraft.commands.execution.Frame);
+}
+Compiled from "BuildContexts.java"
+public class net.minecraft.commands.execution.tasks.BuildContexts<T extends net.minecraft.commands.ExecutionCommandSource<T>> {
+  public static final com.mojang.brigadier.exceptions.DynamicCommandExceptionType ERROR_FORK_LIMIT_REACHED;
+  private final java.lang.String commandInput;
+  private final com.mojang.brigadier.context.ContextChain<T> command;
+  public net.minecraft.commands.execution.tasks.BuildContexts(java.lang.String, com.mojang.brigadier.context.ContextChain<T>);
+  protected void execute(T, java.util.List<T>, net.minecraft.commands.execution.ExecutionContext<T>, net.minecraft.commands.execution.Frame, net.minecraft.commands.execution.ChainModifiers);
+  protected void traceCommandStart(net.minecraft.commands.execution.ExecutionContext<T>, net.minecraft.commands.execution.Frame);
+  public java.lang.String toString();
+  private static net.minecraft.commands.execution.CommandQueueEntry lambda$execute$2(net.minecraft.commands.execution.tasks.ExecuteCommand, net.minecraft.commands.execution.Frame, net.minecraft.commands.ExecutionCommandSource);
+  private static void lambda$execute$1(com.mojang.brigadier.context.CommandContext, boolean, int);
+  private java.lang.String lambda$execute$0();
+  private static com.mojang.brigadier.Message lambda$static$0(java.lang.Object);
+  static {};
+}
+Compiled from "ExecuteCommand.java"
+public class net.minecraft.commands.execution.tasks.ExecuteCommand<T extends net.minecraft.commands.ExecutionCommandSource<T>> implements net.minecraft.commands.execution.UnboundEntryAction<T> {
+  private final java.lang.String commandInput;
+  private final net.minecraft.commands.execution.ChainModifiers modifiers;
+  private final com.mojang.brigadier.context.CommandContext<T> executionContext;
+  public net.minecraft.commands.execution.tasks.ExecuteCommand(java.lang.String, net.minecraft.commands.execution.ChainModifiers, com.mojang.brigadier.context.CommandContext<T>);
+  public void execute(T, net.minecraft.commands.execution.ExecutionContext<T>, net.minecraft.commands.execution.Frame);
+  public void execute(java.lang.Object, net.minecraft.commands.execution.ExecutionContext, net.minecraft.commands.execution.Frame);
+  private java.lang.String lambda$execute$0();
+}
+Compiled from "ContinuationTask.java"
+public class net.minecraft.commands.execution.tasks.ContinuationTask<T, P> implements net.minecraft.commands.execution.EntryAction<T> {
+  private final net.minecraft.commands.execution.tasks.ContinuationTask$TaskProvider<T, P> taskFactory;
+  private final java.util.List<P> arguments;
+  private final net.minecraft.commands.execution.CommandQueueEntry<T> selfEntry;
+  private int index;
+  private net.minecraft.commands.execution.tasks.ContinuationTask(net.minecraft.commands.execution.tasks.ContinuationTask$TaskProvider<T, P>, java.util.List<P>, net.minecraft.commands.execution.Frame);
+  public void execute(net.minecraft.commands.execution.ExecutionContext<T>, net.minecraft.commands.execution.Frame);
+  public static <T, P> void schedule(net.minecraft.commands.execution.ExecutionContext<T>, net.minecraft.commands.execution.Frame, java.util.List<P>, net.minecraft.commands.execution.tasks.ContinuationTask$TaskProvider<T, P>);
+}

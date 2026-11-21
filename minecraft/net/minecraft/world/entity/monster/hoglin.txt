@@ -1,0 +1,125 @@
+Compiled from "HoglinAi.java"
+public class net.minecraft.world.entity.monster.hoglin.HoglinAi {
+  public static final int REPELLENT_DETECTION_RANGE_HORIZONTAL;
+  public static final int REPELLENT_DETECTION_RANGE_VERTICAL;
+  private static final net.minecraft.util.valueproviders.UniformInt RETREAT_DURATION;
+  private static final int ATTACK_DURATION;
+  private static final int DESIRED_DISTANCE_FROM_PIGLIN_WHEN_IDLING;
+  private static final int DESIRED_DISTANCE_FROM_PIGLIN_WHEN_RETREATING;
+  private static final int ATTACK_INTERVAL;
+  private static final int BABY_ATTACK_INTERVAL;
+  private static final int REPELLENT_PACIFY_TIME;
+  private static final net.minecraft.util.valueproviders.UniformInt ADULT_FOLLOW_RANGE;
+  private static final float SPEED_MULTIPLIER_WHEN_AVOIDING_REPELLENT;
+  private static final float SPEED_MULTIPLIER_WHEN_RETREATING;
+  private static final float SPEED_MULTIPLIER_WHEN_MAKING_LOVE;
+  private static final float SPEED_MULTIPLIER_WHEN_IDLING;
+  private static final float SPEED_MULTIPLIER_WHEN_FOLLOWING_ADULT;
+  public net.minecraft.world.entity.monster.hoglin.HoglinAi();
+  protected static java.util.List<net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.hoglin.Hoglin>> getActivities();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.hoglin.Hoglin> initCoreActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.hoglin.Hoglin> initIdleActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.hoglin.Hoglin> initFightActivity();
+  private static net.minecraft.world.entity.ai.ActivityData<net.minecraft.world.entity.monster.hoglin.Hoglin> initRetreatActivity();
+  private static net.minecraft.world.entity.ai.behavior.RunOne<net.minecraft.world.entity.monster.hoglin.Hoglin> createIdleMovementBehaviors();
+  protected static void updateActivity(net.minecraft.world.entity.monster.hoglin.Hoglin);
+  protected static void onHitTarget(net.minecraft.world.entity.monster.hoglin.Hoglin, net.minecraft.world.entity.LivingEntity);
+  private static void broadcastRetreat(net.minecraft.world.entity.monster.hoglin.Hoglin, net.minecraft.world.entity.LivingEntity);
+  private static void retreatFromNearestTarget(net.minecraft.world.entity.monster.hoglin.Hoglin, net.minecraft.world.entity.LivingEntity);
+  private static void setAvoidTarget(net.minecraft.world.entity.monster.hoglin.Hoglin, net.minecraft.world.entity.LivingEntity);
+  private static java.util.Optional<? extends net.minecraft.world.entity.LivingEntity> findNearestValidAttackTarget(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.hoglin.Hoglin);
+  static boolean isPosNearNearestRepellent(net.minecraft.world.entity.monster.hoglin.Hoglin, net.minecraft.core.BlockPos);
+  private static boolean wantsToStopFleeing(net.minecraft.world.entity.monster.hoglin.Hoglin);
+  private static boolean piglinsOutnumberHoglins(net.minecraft.world.entity.monster.hoglin.Hoglin);
+  protected static void wasHurtBy(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.hoglin.Hoglin, net.minecraft.world.entity.LivingEntity);
+  private static void maybeRetaliate(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.monster.hoglin.Hoglin, net.minecraft.world.entity.LivingEntity);
+  private static void setAttackTarget(net.minecraft.world.entity.monster.hoglin.Hoglin, net.minecraft.world.entity.LivingEntity);
+  private static void broadcastAttackTarget(net.minecraft.world.entity.monster.hoglin.Hoglin, net.minecraft.world.entity.LivingEntity);
+  private static void setAttackTargetIfCloserThanCurrent(net.minecraft.world.entity.monster.hoglin.Hoglin, net.minecraft.world.entity.LivingEntity);
+  public static java.util.Optional<net.minecraft.sounds.SoundEvent> getSoundForCurrentActivity(net.minecraft.world.entity.monster.hoglin.Hoglin);
+  private static net.minecraft.sounds.SoundEvent getSoundForActivity(net.minecraft.world.entity.monster.hoglin.Hoglin, net.minecraft.world.entity.schedule.Activity);
+  private static java.util.List<net.minecraft.world.entity.monster.hoglin.Hoglin> getVisibleAdultHoglins(net.minecraft.world.entity.monster.hoglin.Hoglin);
+  private static boolean isNearRepellent(net.minecraft.world.entity.monster.hoglin.Hoglin);
+  private static boolean isBreeding(net.minecraft.world.entity.monster.hoglin.Hoglin);
+  protected static boolean isPacified(net.minecraft.world.entity.monster.hoglin.Hoglin);
+  private static net.minecraft.sounds.SoundEvent lambda$getSoundForCurrentActivity$0(net.minecraft.world.entity.monster.hoglin.Hoglin, net.minecraft.world.entity.schedule.Activity);
+  private static void lambda$broadcastAttackTarget$0(net.minecraft.world.entity.LivingEntity, net.minecraft.world.entity.monster.hoglin.Hoglin);
+  private static void lambda$broadcastRetreat$0(net.minecraft.world.entity.LivingEntity, net.minecraft.world.entity.monster.hoglin.Hoglin);
+  static {};
+}
+Compiled from "HoglinBase.java"
+public interface net.minecraft.world.entity.monster.hoglin.HoglinBase {
+  public static final int ATTACK_ANIMATION_DURATION;
+  public static final float PROBABILITY_OF_SPAWNING_AS_BABY;
+  public abstract int getAttackAnimationRemainingTicks();
+  public static boolean hurtAndThrowTarget(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LivingEntity, net.minecraft.world.entity.LivingEntity);
+  public static void throwTarget(net.minecraft.world.entity.LivingEntity, net.minecraft.world.entity.LivingEntity);
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.entity.monster.hoglin.package-info {
+}
+Compiled from "Hoglin.java"
+public class net.minecraft.world.entity.monster.hoglin.Hoglin extends net.minecraft.world.entity.animal.Animal implements net.minecraft.world.entity.monster.Enemy,net.minecraft.world.entity.monster.hoglin.HoglinBase {
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Boolean> DATA_IMMUNE_TO_ZOMBIFICATION;
+  private static final net.minecraft.world.entity.EntityDimensions BABY_DIMENSIONS;
+  private static final int MAX_HEALTH;
+  private static final float MOVEMENT_SPEED_WHEN_FIGHTING;
+  private static final int ATTACK_KNOCKBACK;
+  private static final float KNOCKBACK_RESISTANCE;
+  private static final int ATTACK_DAMAGE;
+  private static final float BABY_ATTACK_DAMAGE;
+  private static final boolean DEFAULT_IMMUNE_TO_ZOMBIFICATION;
+  private static final int DEFAULT_TIME_IN_OVERWORLD;
+  private static final boolean DEFAULT_CANNOT_BE_HUNTED;
+  public static final int CONVERSION_TIME;
+  private int attackAnimationRemainingTicks;
+  private int timeInOverworld;
+  private boolean cannotBeHunted;
+  private static final net.minecraft.world.entity.ai.Brain$Provider<net.minecraft.world.entity.monster.hoglin.Hoglin> BRAIN_PROVIDER;
+  public net.minecraft.world.entity.monster.hoglin.Hoglin(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.monster.hoglin.Hoglin>, net.minecraft.world.level.Level);
+  public void setTimeInOverworld(int);
+  public boolean canBeLeashed();
+  public static net.minecraft.world.entity.ai.attributes.AttributeSupplier$Builder createAttributes();
+  public boolean doHurtTarget(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.Entity);
+  protected void blockedByItem(net.minecraft.world.entity.LivingEntity, net.minecraft.world.damagesource.DamageSource, float);
+  public boolean hurtServer(net.minecraft.server.level.ServerLevel, net.minecraft.world.damagesource.DamageSource, float);
+  protected net.minecraft.world.entity.ai.Brain<net.minecraft.world.entity.monster.hoglin.Hoglin> makeBrain(net.minecraft.world.entity.ai.Brain$Packed);
+  public net.minecraft.world.entity.ai.Brain<net.minecraft.world.entity.monster.hoglin.Hoglin> getBrain();
+  protected void customServerAiStep(net.minecraft.server.level.ServerLevel);
+  public void aiStep();
+  public net.minecraft.world.entity.EntityDimensions getDefaultDimensions(net.minecraft.world.entity.Pose);
+  protected void ageBoundaryReached();
+  public static boolean checkHoglinSpawnRules(net.minecraft.world.entity.EntityType<net.minecraft.world.entity.monster.hoglin.Hoglin>, net.minecraft.world.level.LevelAccessor, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  public net.minecraft.world.entity.SpawnGroupData finalizeSpawn(net.minecraft.world.level.ServerLevelAccessor, net.minecraft.world.DifficultyInstance, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.world.entity.SpawnGroupData);
+  public boolean removeWhenFarAway(double);
+  public float getWalkTargetValue(net.minecraft.core.BlockPos, net.minecraft.world.level.LevelReader);
+  public net.minecraft.world.InteractionResult mobInteract(net.minecraft.world.entity.player.Player, net.minecraft.world.InteractionHand);
+  public void handleEntityEvent(byte);
+  public int getAttackAnimationRemainingTicks();
+  public boolean shouldDropExperience();
+  protected int getBaseExperienceReward(net.minecraft.server.level.ServerLevel);
+  private void finishConversion();
+  public boolean isFood(net.minecraft.world.item.ItemStack);
+  public boolean isAdult();
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput);
+  protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput);
+  public void setImmuneToZombification(boolean);
+  private boolean isImmuneToZombification();
+  public boolean isConverting();
+  private void setCannotBeHunted(boolean);
+  public boolean canBeHunted();
+  public net.minecraft.world.entity.AgeableMob getBreedOffspring(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.AgeableMob);
+  public boolean canFallInLove();
+  public net.minecraft.sounds.SoundSource getSoundSource();
+  protected net.minecraft.sounds.SoundEvent getAmbientSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  protected net.minecraft.sounds.SoundEvent getSwimSound();
+  protected net.minecraft.sounds.SoundEvent getSwimSplashSound();
+  protected void playStepSound(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  public net.minecraft.world.entity.LivingEntity getTarget();
+  private static void lambda$finishConversion$0(net.minecraft.world.entity.monster.Zoglin);
+  private static java.util.List lambda$static$0(net.minecraft.world.entity.monster.hoglin.Hoglin);
+  static {};
+}

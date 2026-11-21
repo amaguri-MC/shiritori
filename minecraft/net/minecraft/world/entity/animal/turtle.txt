@@ -1,0 +1,130 @@
+Compiled from "Turtle.java"
+class net.minecraft.world.entity.animal.turtle.Turtle$TurtleGoHomeGoal extends net.minecraft.world.entity.ai.goal.Goal {
+  private final net.minecraft.world.entity.animal.turtle.Turtle turtle;
+  private final double speedModifier;
+  private boolean stuck;
+  private int closeToHomeTryTicks;
+  private static final int GIVE_UP_TICKS;
+  public net.minecraft.world.entity.animal.turtle.Turtle$TurtleGoHomeGoal(net.minecraft.world.entity.animal.turtle.Turtle, double);
+  public boolean canUse();
+  public void start();
+  public void stop();
+  public boolean canContinueToUse();
+  public void tick();
+}
+Compiled from "Turtle.java"
+class net.minecraft.world.entity.animal.turtle.Turtle$TurtleLayEggGoal extends net.minecraft.world.entity.ai.goal.MoveToBlockGoal {
+  private final net.minecraft.world.entity.animal.turtle.Turtle turtle;
+  public net.minecraft.world.entity.animal.turtle.Turtle$TurtleLayEggGoal(net.minecraft.world.entity.animal.turtle.Turtle, double);
+  public boolean canUse();
+  public boolean canContinueToUse();
+  public void tick();
+  protected boolean isValidTarget(net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos);
+}
+Compiled from "Turtle.java"
+class net.minecraft.world.entity.animal.turtle.Turtle$TurtlePathNavigation extends net.minecraft.world.entity.ai.navigation.AmphibiousPathNavigation {
+  public net.minecraft.world.entity.animal.turtle.Turtle$TurtlePathNavigation(net.minecraft.world.entity.animal.turtle.Turtle, net.minecraft.world.level.Level);
+  public boolean isStableDestination(net.minecraft.core.BlockPos);
+}
+Compiled from "Turtle.java"
+class net.minecraft.world.entity.animal.turtle.Turtle$TurtleTravelGoal extends net.minecraft.world.entity.ai.goal.Goal {
+  private final net.minecraft.world.entity.animal.turtle.Turtle turtle;
+  private final double speedModifier;
+  private boolean stuck;
+  public net.minecraft.world.entity.animal.turtle.Turtle$TurtleTravelGoal(net.minecraft.world.entity.animal.turtle.Turtle, double);
+  public boolean canUse();
+  public void start();
+  public void tick();
+  public boolean canContinueToUse();
+  public void stop();
+}
+Compiled from "Turtle.java"
+public class net.minecraft.world.entity.animal.turtle.Turtle extends net.minecraft.world.entity.animal.Animal {
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Boolean> HAS_EGG;
+  private static final net.minecraft.network.syncher.EntityDataAccessor<java.lang.Boolean> LAYING_EGG;
+  private static final float BABY_SCALE;
+  private static final net.minecraft.world.entity.EntityDimensions BABY_DIMENSIONS;
+  private static final boolean DEFAULT_HAS_EGG;
+  private int layEggCounter;
+  public static final net.minecraft.world.entity.ai.targeting.TargetingConditions$Selector BABY_ON_LAND_SELECTOR;
+  private net.minecraft.core.BlockPos homePos;
+  private net.minecraft.core.BlockPos travelPos;
+  private boolean goingHome;
+  public net.minecraft.world.entity.animal.turtle.Turtle(net.minecraft.world.entity.EntityType<? extends net.minecraft.world.entity.animal.turtle.Turtle>, net.minecraft.world.level.Level);
+  public void setHomePos(net.minecraft.core.BlockPos);
+  public net.minecraft.core.BlockPos getHomePos();
+  public boolean hasEgg();
+  private void setHasEgg(boolean);
+  public boolean isLayingEgg();
+  private void setLayingEgg(boolean);
+  protected void defineSynchedData(net.minecraft.network.syncher.SynchedEntityData$Builder);
+  protected void addAdditionalSaveData(net.minecraft.world.level.storage.ValueOutput);
+  protected void readAdditionalSaveData(net.minecraft.world.level.storage.ValueInput);
+  public net.minecraft.world.entity.SpawnGroupData finalizeSpawn(net.minecraft.world.level.ServerLevelAccessor, net.minecraft.world.DifficultyInstance, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.world.entity.SpawnGroupData);
+  public static boolean checkTurtleSpawnRules(net.minecraft.world.entity.EntityType<net.minecraft.world.entity.animal.turtle.Turtle>, net.minecraft.world.level.LevelAccessor, net.minecraft.world.entity.EntitySpawnReason, net.minecraft.core.BlockPos, net.minecraft.util.RandomSource);
+  protected void registerGoals();
+  public static net.minecraft.world.entity.ai.attributes.AttributeSupplier$Builder createAttributes();
+  public boolean isPushedByFluid();
+  public int getAmbientSoundInterval();
+  protected net.minecraft.sounds.SoundEvent getAmbientSound();
+  protected void playSwimSound(float);
+  protected net.minecraft.sounds.SoundEvent getSwimSound();
+  protected net.minecraft.sounds.SoundEvent getHurtSound(net.minecraft.world.damagesource.DamageSource);
+  protected net.minecraft.sounds.SoundEvent getDeathSound();
+  protected void playStepSound(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  public boolean canFallInLove();
+  protected float nextStep();
+  public float getAgeScale();
+  protected net.minecraft.world.entity.ai.navigation.PathNavigation createNavigation(net.minecraft.world.level.Level);
+  public net.minecraft.world.entity.AgeableMob getBreedOffspring(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.AgeableMob);
+  public boolean isFood(net.minecraft.world.item.ItemStack);
+  public float getWalkTargetValue(net.minecraft.core.BlockPos, net.minecraft.world.level.LevelReader);
+  public void aiStep();
+  protected void ageBoundaryReached();
+  protected void travelInWater(net.minecraft.world.phys.Vec3, double, boolean, double);
+  public boolean canBeLeashed();
+  public void thunderHit(net.minecraft.server.level.ServerLevel, net.minecraft.world.entity.LightningBolt);
+  public net.minecraft.world.entity.EntityDimensions getDefaultDimensions(net.minecraft.world.entity.Pose);
+  static net.minecraft.util.RandomSource access$000(net.minecraft.world.entity.animal.turtle.Turtle);
+  static net.minecraft.util.RandomSource access$100(net.minecraft.world.entity.animal.turtle.Turtle);
+  private static boolean lambda$registerGoals$0(net.minecraft.world.item.ItemStack);
+  private static boolean lambda$static$0(net.minecraft.world.entity.LivingEntity, net.minecraft.server.level.ServerLevel);
+  static {};
+}
+Compiled from "Turtle.java"
+class net.minecraft.world.entity.animal.turtle.Turtle$TurtlePanicGoal extends net.minecraft.world.entity.ai.goal.PanicGoal {
+  public net.minecraft.world.entity.animal.turtle.Turtle$TurtlePanicGoal(net.minecraft.world.entity.animal.turtle.Turtle, double);
+  public boolean canUse();
+}
+Compiled from "Turtle.java"
+class net.minecraft.world.entity.animal.turtle.Turtle$TurtleRandomStrollGoal extends net.minecraft.world.entity.ai.goal.RandomStrollGoal {
+  private final net.minecraft.world.entity.animal.turtle.Turtle turtle;
+  private net.minecraft.world.entity.animal.turtle.Turtle$TurtleRandomStrollGoal(net.minecraft.world.entity.animal.turtle.Turtle, double, int);
+  public boolean canUse();
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.entity.animal.turtle.package-info {
+}
+Compiled from "Turtle.java"
+class net.minecraft.world.entity.animal.turtle.Turtle$TurtleMoveControl<T extends net.minecraft.world.entity.animal.turtle.Turtle> extends net.minecraft.world.entity.ai.control.MoveControl<T> {
+  public net.minecraft.world.entity.animal.turtle.Turtle$TurtleMoveControl(T);
+  private void updateSpeed();
+  public void tick();
+}
+Compiled from "Turtle.java"
+class net.minecraft.world.entity.animal.turtle.Turtle$TurtleGoToWaterGoal extends net.minecraft.world.entity.ai.goal.MoveToBlockGoal {
+  private static final int GIVE_UP_TICKS;
+  private final net.minecraft.world.entity.animal.turtle.Turtle turtle;
+  private net.minecraft.world.entity.animal.turtle.Turtle$TurtleGoToWaterGoal(net.minecraft.world.entity.animal.turtle.Turtle, double);
+  public boolean canContinueToUse();
+  public boolean canUse();
+  public boolean shouldRecalculatePath();
+  protected boolean isValidTarget(net.minecraft.world.level.LevelReader, net.minecraft.core.BlockPos);
+}
+Compiled from "Turtle.java"
+class net.minecraft.world.entity.animal.turtle.Turtle$TurtleBreedGoal extends net.minecraft.world.entity.ai.goal.BreedGoal {
+  private final net.minecraft.world.entity.animal.turtle.Turtle turtle;
+  public net.minecraft.world.entity.animal.turtle.Turtle$TurtleBreedGoal(net.minecraft.world.entity.animal.turtle.Turtle, double);
+  public boolean canUse();
+  protected void breed();
+}

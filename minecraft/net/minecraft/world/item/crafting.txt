@@ -1,0 +1,1208 @@
+Compiled from "BlastingRecipe.java"
+public class net.minecraft.world.item.crafting.BlastingRecipe extends net.minecraft.world.item.crafting.AbstractCookingRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.BlastingRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.BlastingRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.BlastingRecipe> SERIALIZER;
+  public net.minecraft.world.item.crafting.BlastingRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.AbstractCookingRecipe$CookingBookInfo, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate, float, int);
+  protected net.minecraft.world.item.Item furnaceIcon();
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.BlastingRecipe> getSerializer();
+  public net.minecraft.world.item.crafting.RecipeType<net.minecraft.world.item.crafting.BlastingRecipe> getType();
+  public net.minecraft.world.item.crafting.RecipeBookCategory recipeBookCategory();
+  static {};
+}
+Compiled from "RecipeManager.java"
+public class net.minecraft.world.item.crafting.RecipeManager extends net.minecraft.server.packs.resources.SimplePreparableReloadListener<net.minecraft.world.item.crafting.RecipeMap> implements net.minecraft.world.item.crafting.RecipeAccess {
+  private static final org.slf4j.Logger LOGGER;
+  private static final java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet>, net.minecraft.world.item.crafting.RecipeManager$IngredientExtractor> RECIPE_PROPERTY_SETS;
+  private static final net.minecraft.resources.FileToIdConverter RECIPE_LISTER;
+  private final net.minecraft.core.HolderLookup$Provider registries;
+  private net.minecraft.world.item.crafting.RecipeMap recipes;
+  private java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet>, net.minecraft.world.item.crafting.RecipePropertySet> propertySets;
+  private net.minecraft.world.item.crafting.SelectableRecipe$SingleInputSet<net.minecraft.world.item.crafting.StonecutterRecipe> stonecutterRecipes;
+  private java.util.List<net.minecraft.world.item.crafting.RecipeManager$ServerDisplayInfo> allDisplays;
+  private java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>, java.util.List<net.minecraft.world.item.crafting.RecipeManager$ServerDisplayInfo>> recipeToDisplay;
+  public net.minecraft.world.item.crafting.RecipeManager(net.minecraft.core.HolderLookup$Provider);
+  protected net.minecraft.world.item.crafting.RecipeMap prepare(net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  protected void apply(net.minecraft.world.item.crafting.RecipeMap, net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  public void finalizeRecipeLoading(net.minecraft.world.flag.FeatureFlagSet);
+  private static java.util.List<net.minecraft.world.item.crafting.Ingredient> filterDisabled(net.minecraft.world.flag.FeatureFlagSet, java.util.List<net.minecraft.world.item.crafting.Ingredient>);
+  private static boolean isIngredientEnabled(net.minecraft.world.flag.FeatureFlagSet, net.minecraft.world.item.crafting.Ingredient);
+  public <I extends net.minecraft.world.item.crafting.RecipeInput, T extends net.minecraft.world.item.crafting.Recipe<I>> java.util.Optional<net.minecraft.world.item.crafting.RecipeHolder<T>> getRecipeFor(net.minecraft.world.item.crafting.RecipeType<T>, I, net.minecraft.world.level.Level, net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>);
+  public <I extends net.minecraft.world.item.crafting.RecipeInput, T extends net.minecraft.world.item.crafting.Recipe<I>> java.util.Optional<net.minecraft.world.item.crafting.RecipeHolder<T>> getRecipeFor(net.minecraft.world.item.crafting.RecipeType<T>, I, net.minecraft.world.level.Level, net.minecraft.world.item.crafting.RecipeHolder<T>);
+  public <I extends net.minecraft.world.item.crafting.RecipeInput, T extends net.minecraft.world.item.crafting.Recipe<I>> java.util.Optional<net.minecraft.world.item.crafting.RecipeHolder<T>> getRecipeFor(net.minecraft.world.item.crafting.RecipeType<T>, I, net.minecraft.world.level.Level);
+  public java.util.Optional<net.minecraft.world.item.crafting.RecipeHolder<?>> byKey(net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>);
+  private <T extends net.minecraft.world.item.crafting.Recipe<?>> net.minecraft.world.item.crafting.RecipeHolder<T> byKeyTyped(net.minecraft.world.item.crafting.RecipeType<T>, net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>);
+  public java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet>, net.minecraft.world.item.crafting.RecipePropertySet> getSynchronizedItemProperties();
+  public net.minecraft.world.item.crafting.SelectableRecipe$SingleInputSet<net.minecraft.world.item.crafting.StonecutterRecipe> getSynchronizedStonecutterRecipes();
+  public net.minecraft.world.item.crafting.RecipePropertySet propertySet(net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet>);
+  public net.minecraft.world.item.crafting.SelectableRecipe$SingleInputSet<net.minecraft.world.item.crafting.StonecutterRecipe> stonecutterRecipes();
+  public java.util.Collection<net.minecraft.world.item.crafting.RecipeHolder<?>> getRecipes();
+  public net.minecraft.world.item.crafting.RecipeManager$ServerDisplayInfo getRecipeFromDisplay(net.minecraft.world.item.crafting.display.RecipeDisplayId);
+  public void listDisplaysForRecipe(net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>, java.util.function.Consumer<net.minecraft.world.item.crafting.display.RecipeDisplayEntry>);
+  protected static net.minecraft.world.item.crafting.RecipeHolder<?> fromJson(net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>, com.google.gson.JsonObject, net.minecraft.core.HolderLookup$Provider);
+  public static <I extends net.minecraft.world.item.crafting.RecipeInput, T extends net.minecraft.world.item.crafting.Recipe<I>> net.minecraft.world.item.crafting.RecipeManager$CachedCheck<I, T> createCheck(net.minecraft.world.item.crafting.RecipeType<T>);
+  private static java.util.List<net.minecraft.world.item.crafting.RecipeManager$ServerDisplayInfo> unpackRecipeInfo(java.lang.Iterable<net.minecraft.world.item.crafting.RecipeHolder<?>>, net.minecraft.world.flag.FeatureFlagSet);
+  private static net.minecraft.world.item.crafting.RecipeManager$IngredientExtractor forSingleInput(net.minecraft.world.item.crafting.RecipeType<? extends net.minecraft.world.item.crafting.SingleItemRecipe>);
+  protected void apply(java.lang.Object, net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  protected java.lang.Object prepare(net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  private static java.util.Optional lambda$forSingleInput$0(net.minecraft.world.item.crafting.RecipeType, net.minecraft.world.item.crafting.Recipe);
+  private static int lambda$unpackRecipeInfo$0(it.unimi.dsi.fastutil.objects.Object2IntMap, java.lang.Object);
+  private static void lambda$listDisplaysForRecipe$0(java.util.function.Consumer, net.minecraft.world.item.crafting.RecipeManager$ServerDisplayInfo);
+  private static boolean lambda$isIngredientEnabled$0(net.minecraft.world.flag.FeatureFlagSet, net.minecraft.core.Holder);
+  private static boolean lambda$filterDisabled$0(net.minecraft.world.flag.FeatureFlagSet, net.minecraft.world.item.crafting.Ingredient);
+  private static net.minecraft.resources.ResourceKey lambda$finalizeRecipeLoading$5(net.minecraft.world.item.crafting.RecipeManager$ServerDisplayInfo);
+  private static net.minecraft.world.item.crafting.RecipePropertySet lambda$finalizeRecipeLoading$4(net.minecraft.world.flag.FeatureFlagSet, net.minecraft.world.item.crafting.RecipeManager$IngredientCollector);
+  private static net.minecraft.resources.ResourceKey lambda$finalizeRecipeLoading$3(net.minecraft.world.item.crafting.RecipeManager$IngredientCollector);
+  private static void lambda$finalizeRecipeLoading$1(java.util.List, net.minecraft.world.flag.FeatureFlagSet, java.util.List, net.minecraft.world.item.crafting.RecipeHolder);
+  private static void lambda$finalizeRecipeLoading$2(net.minecraft.world.item.crafting.Recipe, net.minecraft.world.item.crafting.RecipeManager$IngredientCollector);
+  private static net.minecraft.world.item.crafting.RecipeManager$IngredientCollector lambda$finalizeRecipeLoading$0(java.util.Map$Entry);
+  private static void lambda$prepare$0(java.util.List, net.minecraft.resources.Identifier, net.minecraft.world.item.crafting.Recipe);
+  private static java.util.Optional lambda$static$2(net.minecraft.world.item.crafting.Recipe);
+  private static java.util.Optional lambda$static$1(net.minecraft.world.item.crafting.Recipe);
+  private static java.util.Optional lambda$static$0(net.minecraft.world.item.crafting.Recipe);
+  static {};
+}
+Compiled from "SmeltingRecipe.java"
+public class net.minecraft.world.item.crafting.SmeltingRecipe extends net.minecraft.world.item.crafting.AbstractCookingRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.SmeltingRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.SmeltingRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.SmeltingRecipe> SERIALIZER;
+  public net.minecraft.world.item.crafting.SmeltingRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.AbstractCookingRecipe$CookingBookInfo, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate, float, int);
+  protected net.minecraft.world.item.Item furnaceIcon();
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.SmeltingRecipe> getSerializer();
+  public net.minecraft.world.item.crafting.RecipeType<net.minecraft.world.item.crafting.SmeltingRecipe> getType();
+  public net.minecraft.world.item.crafting.RecipeBookCategory recipeBookCategory();
+  static {};
+}
+Compiled from "StonecutterRecipe.java"
+public class net.minecraft.world.item.crafting.StonecutterRecipe extends net.minecraft.world.item.crafting.SingleItemRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.StonecutterRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.StonecutterRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.StonecutterRecipe> SERIALIZER;
+  public net.minecraft.world.item.crafting.StonecutterRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate);
+  public net.minecraft.world.item.crafting.RecipeType<net.minecraft.world.item.crafting.StonecutterRecipe> getType();
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.StonecutterRecipe> getSerializer();
+  public java.lang.String group();
+  public java.util.List<net.minecraft.world.item.crafting.display.RecipeDisplay> display();
+  public net.minecraft.world.item.crafting.display.SlotDisplay resultDisplay();
+  public net.minecraft.world.item.crafting.RecipeBookCategory recipeBookCategory();
+  static {};
+}
+Compiled from "PlacementInfo.java"
+public class net.minecraft.world.item.crafting.PlacementInfo {
+  public static final int EMPTY_SLOT;
+  public static final net.minecraft.world.item.crafting.PlacementInfo NOT_PLACEABLE;
+  private final java.util.List<net.minecraft.world.item.crafting.Ingredient> ingredients;
+  private final it.unimi.dsi.fastutil.ints.IntList slotsToIngredientIndex;
+  private net.minecraft.world.item.crafting.PlacementInfo(java.util.List<net.minecraft.world.item.crafting.Ingredient>, it.unimi.dsi.fastutil.ints.IntList);
+  public static net.minecraft.world.item.crafting.PlacementInfo create(net.minecraft.world.item.crafting.Ingredient);
+  public static net.minecraft.world.item.crafting.PlacementInfo createFromOptionals(java.util.List<java.util.Optional<net.minecraft.world.item.crafting.Ingredient>>);
+  public static net.minecraft.world.item.crafting.PlacementInfo create(java.util.List<net.minecraft.world.item.crafting.Ingredient>);
+  public it.unimi.dsi.fastutil.ints.IntList slotsToIngredientIndex();
+  public java.util.List<net.minecraft.world.item.crafting.Ingredient> ingredients();
+  public boolean isImpossibleToPlace();
+  static {};
+}
+Compiled from "RecipeManager.java"
+public interface net.minecraft.world.item.crafting.RecipeManager$CachedCheck<I extends net.minecraft.world.item.crafting.RecipeInput, T extends net.minecraft.world.item.crafting.Recipe<I>> {
+  public abstract java.util.Optional<net.minecraft.world.item.crafting.RecipeHolder<T>> getRecipeFor(I, net.minecraft.server.level.ServerLevel);
+}
+Compiled from "AbstractCookingRecipe.java"
+public abstract class net.minecraft.world.item.crafting.AbstractCookingRecipe extends net.minecraft.world.item.crafting.SingleItemRecipe {
+  protected final net.minecraft.world.item.crafting.AbstractCookingRecipe$CookingBookInfo bookInfo;
+  private final float experience;
+  private final int cookingTime;
+  public net.minecraft.world.item.crafting.AbstractCookingRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.AbstractCookingRecipe$CookingBookInfo, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate, float, int);
+  public abstract net.minecraft.world.item.crafting.RecipeSerializer<? extends net.minecraft.world.item.crafting.AbstractCookingRecipe> getSerializer();
+  public abstract net.minecraft.world.item.crafting.RecipeType<? extends net.minecraft.world.item.crafting.AbstractCookingRecipe> getType();
+  public float experience();
+  public int cookingTime();
+  public net.minecraft.world.item.crafting.CookingBookCategory category();
+  public java.lang.String group();
+  protected abstract net.minecraft.world.item.Item furnaceIcon();
+  public java.util.List<net.minecraft.world.item.crafting.display.RecipeDisplay> display();
+  public static <T extends net.minecraft.world.item.crafting.AbstractCookingRecipe> com.mojang.serialization.MapCodec<T> cookingMapCodec(net.minecraft.world.item.crafting.AbstractCookingRecipe$Factory<T>, int);
+  public static <T extends net.minecraft.world.item.crafting.AbstractCookingRecipe> net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, T> cookingStreamCodec(net.minecraft.world.item.crafting.AbstractCookingRecipe$Factory<T>);
+  private static net.minecraft.world.item.crafting.AbstractCookingRecipe$CookingBookInfo lambda$cookingStreamCodec$1(net.minecraft.world.item.crafting.AbstractCookingRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$cookingStreamCodec$0(net.minecraft.world.item.crafting.AbstractCookingRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$cookingMapCodec$0(int, net.minecraft.world.item.crafting.AbstractCookingRecipe$Factory, com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.crafting.AbstractCookingRecipe$CookingBookInfo lambda$cookingMapCodec$2(net.minecraft.world.item.crafting.AbstractCookingRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$cookingMapCodec$1(net.minecraft.world.item.crafting.AbstractCookingRecipe);
+}
+Compiled from "Recipe.java"
+public interface net.minecraft.world.item.crafting.Recipe$BookInfo<CategoryType> {
+  public abstract CategoryType category();
+  public abstract java.lang.String group();
+  public static <CategoryType, SelfType extends net.minecraft.world.item.crafting.Recipe$BookInfo<CategoryType>> com.mojang.serialization.MapCodec<SelfType> mapCodec(com.mojang.serialization.Codec<CategoryType>, CategoryType, net.minecraft.world.item.crafting.Recipe$BookInfo$Constructor<CategoryType, SelfType>);
+  public static <CategoryType, SelfType extends net.minecraft.world.item.crafting.Recipe$BookInfo<CategoryType>> net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, SelfType> streamCodec(net.minecraft.network.codec.StreamCodec<? super net.minecraft.network.RegistryFriendlyByteBuf, CategoryType>, net.minecraft.world.item.crafting.Recipe$BookInfo$Constructor<CategoryType, SelfType>);
+  private static com.mojang.datafixers.kinds.App lambda$mapCodec$0(com.mojang.serialization.Codec, java.lang.Object, net.minecraft.world.item.crafting.Recipe$BookInfo$Constructor, com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+}
+Compiled from "CraftingInput.java"
+public final class net.minecraft.world.item.crafting.CraftingInput$Positioned extends java.lang.Record {
+  private final net.minecraft.world.item.crafting.CraftingInput input;
+  private final int left;
+  private final int top;
+  public static final net.minecraft.world.item.crafting.CraftingInput$Positioned EMPTY;
+  public net.minecraft.world.item.crafting.CraftingInput$Positioned(net.minecraft.world.item.crafting.CraftingInput, int, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.item.crafting.CraftingInput input();
+  public int left();
+  public int top();
+  static {};
+}
+Compiled from "SmokingRecipe.java"
+public class net.minecraft.world.item.crafting.SmokingRecipe extends net.minecraft.world.item.crafting.AbstractCookingRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.SmokingRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.SmokingRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.SmokingRecipe> SERIALIZER;
+  public net.minecraft.world.item.crafting.SmokingRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.AbstractCookingRecipe$CookingBookInfo, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate, float, int);
+  protected net.minecraft.world.item.Item furnaceIcon();
+  public net.minecraft.world.item.crafting.RecipeType<net.minecraft.world.item.crafting.SmokingRecipe> getType();
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.SmokingRecipe> getSerializer();
+  public net.minecraft.world.item.crafting.RecipeBookCategory recipeBookCategory();
+  static {};
+}
+Compiled from "ImbueRecipe.java"
+public class net.minecraft.world.item.crafting.ImbueRecipe extends net.minecraft.world.item.crafting.NormalCraftingRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.ImbueRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.ImbueRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.ImbueRecipe> SERIALIZER;
+  private final net.minecraft.world.item.crafting.Ingredient source;
+  private final net.minecraft.world.item.crafting.Ingredient material;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  public net.minecraft.world.item.crafting.ImbueRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate);
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.CraftingInput);
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.ImbueRecipe> getSerializer();
+  protected net.minecraft.world.item.crafting.PlacementInfo createPlacementInfo();
+  public java.util.List<net.minecraft.world.item.crafting.display.RecipeDisplay> display();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$10(net.minecraft.world.item.crafting.ImbueRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$9(net.minecraft.world.item.crafting.ImbueRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$8(net.minecraft.world.item.crafting.ImbueRecipe);
+  private static net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo lambda$static$7(net.minecraft.world.item.crafting.ImbueRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$static$6(net.minecraft.world.item.crafting.ImbueRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$5(net.minecraft.world.item.crafting.ImbueRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$4(net.minecraft.world.item.crafting.ImbueRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$3(net.minecraft.world.item.crafting.ImbueRecipe);
+  private static net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo lambda$static$2(net.minecraft.world.item.crafting.ImbueRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$static$1(net.minecraft.world.item.crafting.ImbueRecipe);
+  static {};
+}
+Compiled from "SmithingRecipe.java"
+public interface net.minecraft.world.item.crafting.SmithingRecipe extends net.minecraft.world.item.crafting.Recipe<net.minecraft.world.item.crafting.SmithingRecipeInput> {
+  public default net.minecraft.world.item.crafting.RecipeType<net.minecraft.world.item.crafting.SmithingRecipe> getType();
+  public abstract net.minecraft.world.item.crafting.RecipeSerializer<? extends net.minecraft.world.item.crafting.SmithingRecipe> getSerializer();
+  public default boolean matches(net.minecraft.world.item.crafting.SmithingRecipeInput, net.minecraft.world.level.Level);
+  public abstract java.util.Optional<net.minecraft.world.item.crafting.Ingredient> templateIngredient();
+  public abstract net.minecraft.world.item.crafting.Ingredient baseIngredient();
+  public abstract java.util.Optional<net.minecraft.world.item.crafting.Ingredient> additionIngredient();
+  public default net.minecraft.world.item.crafting.RecipeBookCategory recipeBookCategory();
+  public default boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+}
+Compiled from "Recipe.java"
+public interface net.minecraft.world.item.crafting.Recipe<T extends net.minecraft.world.item.crafting.RecipeInput> {
+  public static final com.mojang.serialization.Codec<net.minecraft.world.item.crafting.Recipe<?>> CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>> KEY_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.Recipe<?>> STREAM_CODEC;
+  public abstract boolean matches(T, net.minecraft.world.level.Level);
+  public abstract net.minecraft.world.item.ItemStack assemble(T);
+  public default boolean isSpecial();
+  public abstract boolean showNotification();
+  public abstract java.lang.String group();
+  public abstract net.minecraft.world.item.crafting.RecipeSerializer<? extends net.minecraft.world.item.crafting.Recipe<T>> getSerializer();
+  public abstract net.minecraft.world.item.crafting.RecipeType<? extends net.minecraft.world.item.crafting.Recipe<T>> getType();
+  public abstract net.minecraft.world.item.crafting.PlacementInfo placementInfo();
+  public default java.util.List<net.minecraft.world.item.crafting.display.RecipeDisplay> display();
+  public abstract net.minecraft.world.item.crafting.RecipeBookCategory recipeBookCategory();
+  static {};
+}
+Compiled from "RecipeSerializers.java"
+public class net.minecraft.world.item.crafting.RecipeSerializers {
+  public net.minecraft.world.item.crafting.RecipeSerializers();
+  public static java.lang.Object bootstrap(net.minecraft.core.Registry<net.minecraft.world.item.crafting.RecipeSerializer<?>>);
+}
+Compiled from "CampfireCookingRecipe.java"
+public class net.minecraft.world.item.crafting.CampfireCookingRecipe extends net.minecraft.world.item.crafting.AbstractCookingRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.CampfireCookingRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.CampfireCookingRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.CampfireCookingRecipe> SERIALIZER;
+  public net.minecraft.world.item.crafting.CampfireCookingRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.AbstractCookingRecipe$CookingBookInfo, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate, float, int);
+  protected net.minecraft.world.item.Item furnaceIcon();
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.CampfireCookingRecipe> getSerializer();
+  public net.minecraft.world.item.crafting.RecipeType<net.minecraft.world.item.crafting.CampfireCookingRecipe> getType();
+  public net.minecraft.world.item.crafting.RecipeBookCategory recipeBookCategory();
+  static {};
+}
+Compiled from "SimpleSmithingRecipe.java"
+public abstract class net.minecraft.world.item.crafting.SimpleSmithingRecipe implements net.minecraft.world.item.crafting.SmithingRecipe {
+  protected final net.minecraft.world.item.crafting.Recipe$CommonInfo commonInfo;
+  private net.minecraft.world.item.crafting.PlacementInfo placementInfo;
+  protected net.minecraft.world.item.crafting.SimpleSmithingRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo);
+  public abstract net.minecraft.world.item.crafting.RecipeSerializer<? extends net.minecraft.world.item.crafting.SimpleSmithingRecipe> getSerializer();
+  public net.minecraft.world.item.crafting.PlacementInfo placementInfo();
+  protected abstract net.minecraft.world.item.crafting.PlacementInfo createPlacementInfo();
+  public java.lang.String group();
+  public final boolean showNotification();
+}
+Compiled from "CustomRecipe.java"
+public abstract class net.minecraft.world.item.crafting.CustomRecipe implements net.minecraft.world.item.crafting.CraftingRecipe {
+  public net.minecraft.world.item.crafting.CustomRecipe();
+  public boolean isSpecial();
+  public boolean showNotification();
+  public java.lang.String group();
+  public net.minecraft.world.item.crafting.CraftingBookCategory category();
+  public net.minecraft.world.item.crafting.PlacementInfo placementInfo();
+  public abstract net.minecraft.world.item.crafting.RecipeSerializer<? extends net.minecraft.world.item.crafting.CustomRecipe> getSerializer();
+}
+Compiled from "ShieldDecorationRecipe.java"
+public class net.minecraft.world.item.crafting.ShieldDecorationRecipe extends net.minecraft.world.item.crafting.CustomRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.ShieldDecorationRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.ShieldDecorationRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.ShieldDecorationRecipe> SERIALIZER;
+  private final net.minecraft.world.item.crafting.Ingredient banner;
+  private final net.minecraft.world.item.crafting.Ingredient target;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  public net.minecraft.world.item.crafting.ShieldDecorationRecipe(net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate);
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.CraftingInput);
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.ShieldDecorationRecipe> getSerializer();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$6(net.minecraft.world.item.crafting.ShieldDecorationRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$5(net.minecraft.world.item.crafting.ShieldDecorationRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$4(net.minecraft.world.item.crafting.ShieldDecorationRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$3(net.minecraft.world.item.crafting.ShieldDecorationRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$2(net.minecraft.world.item.crafting.ShieldDecorationRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$1(net.minecraft.world.item.crafting.ShieldDecorationRecipe);
+  static {};
+}
+Compiled from "SmithingTransformRecipe.java"
+public class net.minecraft.world.item.crafting.SmithingTransformRecipe extends net.minecraft.world.item.crafting.SimpleSmithingRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.SmithingTransformRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.SmithingTransformRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.SmithingTransformRecipe> SERIALIZER;
+  private final java.util.Optional<net.minecraft.world.item.crafting.Ingredient> template;
+  private final net.minecraft.world.item.crafting.Ingredient base;
+  private final java.util.Optional<net.minecraft.world.item.crafting.Ingredient> addition;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  public net.minecraft.world.item.crafting.SmithingTransformRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, java.util.Optional<net.minecraft.world.item.crafting.Ingredient>, net.minecraft.world.item.crafting.Ingredient, java.util.Optional<net.minecraft.world.item.crafting.Ingredient>, net.minecraft.world.item.ItemStackTemplate);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.SmithingRecipeInput);
+  public java.util.Optional<net.minecraft.world.item.crafting.Ingredient> templateIngredient();
+  public net.minecraft.world.item.crafting.Ingredient baseIngredient();
+  public java.util.Optional<net.minecraft.world.item.crafting.Ingredient> additionIngredient();
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.SmithingTransformRecipe> getSerializer();
+  protected net.minecraft.world.item.crafting.PlacementInfo createPlacementInfo();
+  public java.util.List<net.minecraft.world.item.crafting.display.RecipeDisplay> display();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$10(net.minecraft.world.item.crafting.SmithingTransformRecipe);
+  private static java.util.Optional lambda$static$9(net.minecraft.world.item.crafting.SmithingTransformRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$8(net.minecraft.world.item.crafting.SmithingTransformRecipe);
+  private static java.util.Optional lambda$static$7(net.minecraft.world.item.crafting.SmithingTransformRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$static$6(net.minecraft.world.item.crafting.SmithingTransformRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$5(net.minecraft.world.item.crafting.SmithingTransformRecipe);
+  private static java.util.Optional lambda$static$4(net.minecraft.world.item.crafting.SmithingTransformRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$3(net.minecraft.world.item.crafting.SmithingTransformRecipe);
+  private static java.util.Optional lambda$static$2(net.minecraft.world.item.crafting.SmithingTransformRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$static$1(net.minecraft.world.item.crafting.SmithingTransformRecipe);
+  static {};
+}
+Compiled from "CraftingRecipe.java"
+public interface net.minecraft.world.item.crafting.CraftingRecipe extends net.minecraft.world.item.crafting.Recipe<net.minecraft.world.item.crafting.CraftingInput> {
+  public default net.minecraft.world.item.crafting.RecipeType<net.minecraft.world.item.crafting.CraftingRecipe> getType();
+  public abstract net.minecraft.world.item.crafting.RecipeSerializer<? extends net.minecraft.world.item.crafting.CraftingRecipe> getSerializer();
+  public abstract net.minecraft.world.item.crafting.CraftingBookCategory category();
+  public default net.minecraft.core.NonNullList<net.minecraft.world.item.ItemStack> getRemainingItems(net.minecraft.world.item.crafting.CraftingInput);
+  public static net.minecraft.core.NonNullList<net.minecraft.world.item.ItemStack> defaultCraftingReminder(net.minecraft.world.item.crafting.CraftingInput);
+  public default net.minecraft.world.item.crafting.RecipeBookCategory recipeBookCategory();
+}
+Compiled from "RecipeType.java"
+class net.minecraft.world.item.crafting.RecipeType$1 implements net.minecraft.world.item.crafting.RecipeType<T> {
+  final java.lang.String val$name;
+  net.minecraft.world.item.crafting.RecipeType$1();
+  public java.lang.String toString();
+}
+Compiled from "RecipeSerializer.java"
+public final class net.minecraft.world.item.crafting.RecipeSerializer<T extends net.minecraft.world.item.crafting.Recipe<?>> extends java.lang.Record {
+  private final com.mojang.serialization.MapCodec<T> codec;
+  private final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, T> streamCodec;
+  public net.minecraft.world.item.crafting.RecipeSerializer(com.mojang.serialization.MapCodec<T>, net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, T>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.serialization.MapCodec<T> codec();
+  public net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, T> streamCodec();
+}
+Compiled from "AbstractCookingRecipe.java"
+public final class net.minecraft.world.item.crafting.AbstractCookingRecipe$CookingBookInfo extends java.lang.Record implements net.minecraft.world.item.crafting.Recipe$BookInfo<net.minecraft.world.item.crafting.CookingBookCategory> {
+  private final net.minecraft.world.item.crafting.CookingBookCategory category;
+  private final java.lang.String group;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.AbstractCookingRecipe$CookingBookInfo> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.AbstractCookingRecipe$CookingBookInfo> STREAM_CODEC;
+  public net.minecraft.world.item.crafting.AbstractCookingRecipe$CookingBookInfo(net.minecraft.world.item.crafting.CookingBookCategory, java.lang.String);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.item.crafting.CookingBookCategory category();
+  public java.lang.String group();
+  public java.lang.Object category();
+  static {};
+}
+Compiled from "RepairItemRecipe.java"
+public class net.minecraft.world.item.crafting.RepairItemRecipe extends net.minecraft.world.item.crafting.CustomRecipe {
+  public static final net.minecraft.world.item.crafting.RepairItemRecipe INSTANCE;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.RepairItemRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.RepairItemRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.RepairItemRecipe> SERIALIZER;
+  public net.minecraft.world.item.crafting.RepairItemRecipe();
+  private static com.mojang.datafixers.util.Pair<net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack> getItemsToCombine(net.minecraft.world.item.crafting.CraftingInput);
+  private static boolean canCombine(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.CraftingInput);
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.RepairItemRecipe> getSerializer();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static void lambda$assemble$0(net.minecraft.world.item.enchantment.ItemEnchantments, net.minecraft.world.item.enchantment.ItemEnchantments, net.minecraft.world.item.enchantment.ItemEnchantments$Mutable);
+  static {};
+}
+Compiled from "RecipeBookCategories.java"
+public class net.minecraft.world.item.crafting.RecipeBookCategories {
+  public static final net.minecraft.world.item.crafting.RecipeBookCategory CRAFTING_BUILDING_BLOCKS;
+  public static final net.minecraft.world.item.crafting.RecipeBookCategory CRAFTING_REDSTONE;
+  public static final net.minecraft.world.item.crafting.RecipeBookCategory CRAFTING_EQUIPMENT;
+  public static final net.minecraft.world.item.crafting.RecipeBookCategory CRAFTING_MISC;
+  public static final net.minecraft.world.item.crafting.RecipeBookCategory FURNACE_FOOD;
+  public static final net.minecraft.world.item.crafting.RecipeBookCategory FURNACE_BLOCKS;
+  public static final net.minecraft.world.item.crafting.RecipeBookCategory FURNACE_MISC;
+  public static final net.minecraft.world.item.crafting.RecipeBookCategory BLAST_FURNACE_BLOCKS;
+  public static final net.minecraft.world.item.crafting.RecipeBookCategory BLAST_FURNACE_MISC;
+  public static final net.minecraft.world.item.crafting.RecipeBookCategory SMOKER_FOOD;
+  public static final net.minecraft.world.item.crafting.RecipeBookCategory STONECUTTER;
+  public static final net.minecraft.world.item.crafting.RecipeBookCategory SMITHING;
+  public static final net.minecraft.world.item.crafting.RecipeBookCategory CAMPFIRE;
+  public net.minecraft.world.item.crafting.RecipeBookCategories();
+  private static net.minecraft.world.item.crafting.RecipeBookCategory register(java.lang.String);
+  public static net.minecraft.world.item.crafting.RecipeBookCategory bootstrap(net.minecraft.core.Registry<net.minecraft.world.item.crafting.RecipeBookCategory>);
+  static {};
+}
+Compiled from "SingleItemRecipe.java"
+public interface net.minecraft.world.item.crafting.SingleItemRecipe$Factory<T extends net.minecraft.world.item.crafting.SingleItemRecipe> {
+  public abstract T create(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate);
+}
+Compiled from "ShapedRecipePattern.java"
+public final class net.minecraft.world.item.crafting.ShapedRecipePattern$Data extends java.lang.Record {
+  private final java.util.Map<java.lang.Character, net.minecraft.world.item.crafting.Ingredient> key;
+  private final java.util.List<java.lang.String> pattern;
+  private static final com.mojang.serialization.Codec<java.util.List<java.lang.String>> PATTERN_CODEC;
+  private static final com.mojang.serialization.Codec<java.lang.Character> SYMBOL_CODEC;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.ShapedRecipePattern$Data> MAP_CODEC;
+  public net.minecraft.world.item.crafting.ShapedRecipePattern$Data(java.util.Map<java.lang.Character, net.minecraft.world.item.crafting.Ingredient>, java.util.List<java.lang.String>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.Map<java.lang.Character, net.minecraft.world.item.crafting.Ingredient> key();
+  public java.util.List<java.lang.String> pattern();
+  private static com.mojang.datafixers.kinds.App lambda$static$8(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.util.List lambda$static$10(net.minecraft.world.item.crafting.ShapedRecipePattern$Data);
+  private static java.util.Map lambda$static$9(net.minecraft.world.item.crafting.ShapedRecipePattern$Data);
+  private static com.mojang.serialization.DataResult lambda$static$5(java.lang.String);
+  private static java.lang.String lambda$static$7();
+  private static java.lang.String lambda$static$6(java.lang.String);
+  private static com.mojang.serialization.DataResult lambda$static$0(java.util.List);
+  private static java.lang.String lambda$static$4();
+  private static java.lang.String lambda$static$3();
+  private static java.lang.String lambda$static$2();
+  private static java.lang.String lambda$static$1();
+  static {};
+}
+Compiled from "RecipePropertySet.java"
+public class net.minecraft.world.item.crafting.RecipePropertySet {
+  public static final net.minecraft.resources.ResourceKey<? extends net.minecraft.core.Registry<net.minecraft.world.item.crafting.RecipePropertySet>> TYPE_KEY;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet> SMITHING_BASE;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet> SMITHING_TEMPLATE;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet> SMITHING_ADDITION;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet> FURNACE_INPUT;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet> BLAST_FURNACE_INPUT;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet> SMOKER_INPUT;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet> CAMPFIRE_INPUT;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.RecipePropertySet> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipePropertySet EMPTY;
+  private final java.util.Set<net.minecraft.core.Holder<net.minecraft.world.item.Item>> items;
+  private net.minecraft.world.item.crafting.RecipePropertySet(java.util.Set<net.minecraft.core.Holder<net.minecraft.world.item.Item>>);
+  private static net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet> registerVanilla(java.lang.String);
+  public boolean test(net.minecraft.world.item.ItemStack);
+  public static net.minecraft.world.item.crafting.RecipePropertySet create(java.util.Collection<net.minecraft.world.item.crafting.Ingredient>);
+  private static java.util.List lambda$static$1(net.minecraft.world.item.crafting.RecipePropertySet);
+  private static net.minecraft.world.item.crafting.RecipePropertySet lambda$static$0(java.util.List);
+  static {};
+}
+Compiled from "SingleItemRecipe.java"
+public abstract class net.minecraft.world.item.crafting.SingleItemRecipe implements net.minecraft.world.item.crafting.Recipe<net.minecraft.world.item.crafting.SingleRecipeInput> {
+  protected final net.minecraft.world.item.crafting.Recipe$CommonInfo commonInfo;
+  private final net.minecraft.world.item.crafting.Ingredient input;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  private net.minecraft.world.item.crafting.PlacementInfo placementInfo;
+  public net.minecraft.world.item.crafting.SingleItemRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate);
+  public abstract net.minecraft.world.item.crafting.RecipeSerializer<? extends net.minecraft.world.item.crafting.SingleItemRecipe> getSerializer();
+  public abstract net.minecraft.world.item.crafting.RecipeType<? extends net.minecraft.world.item.crafting.SingleItemRecipe> getType();
+  public boolean matches(net.minecraft.world.item.crafting.SingleRecipeInput, net.minecraft.world.level.Level);
+  public boolean showNotification();
+  public net.minecraft.world.item.crafting.Ingredient input();
+  protected net.minecraft.world.item.ItemStackTemplate result();
+  public net.minecraft.world.item.crafting.PlacementInfo placementInfo();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.SingleRecipeInput);
+  public static <T extends net.minecraft.world.item.crafting.SingleItemRecipe> com.mojang.serialization.MapCodec<T> simpleMapCodec(net.minecraft.world.item.crafting.SingleItemRecipe$Factory<T>);
+  public static <T extends net.minecraft.world.item.crafting.SingleItemRecipe> net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, T> simpleStreamCodec(net.minecraft.world.item.crafting.SingleItemRecipe$Factory<T>);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$simpleStreamCodec$0(net.minecraft.world.item.crafting.SingleItemRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$simpleMapCodec$0(net.minecraft.world.item.crafting.SingleItemRecipe$Factory, com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$simpleMapCodec$1(net.minecraft.world.item.crafting.SingleItemRecipe);
+}
+Compiled from "ShapedRecipePattern.java"
+public final class net.minecraft.world.item.crafting.ShapedRecipePattern {
+  private static final int MAX_SIZE;
+  public static final char EMPTY_SLOT;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.ShapedRecipePattern> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.ShapedRecipePattern> STREAM_CODEC;
+  private final int width;
+  private final int height;
+  private final java.util.List<java.util.Optional<net.minecraft.world.item.crafting.Ingredient>> ingredients;
+  private final java.util.Optional<net.minecraft.world.item.crafting.ShapedRecipePattern$Data> data;
+  private final int ingredientCount;
+  private final boolean symmetrical;
+  public net.minecraft.world.item.crafting.ShapedRecipePattern(int, int, java.util.List<java.util.Optional<net.minecraft.world.item.crafting.Ingredient>>, java.util.Optional<net.minecraft.world.item.crafting.ShapedRecipePattern$Data>);
+  private static net.minecraft.world.item.crafting.ShapedRecipePattern createFromNetwork(java.lang.Integer, java.lang.Integer, java.util.List<java.util.Optional<net.minecraft.world.item.crafting.Ingredient>>);
+  public static net.minecraft.world.item.crafting.ShapedRecipePattern of(java.util.Map<java.lang.Character, net.minecraft.world.item.crafting.Ingredient>, java.lang.String...);
+  public static net.minecraft.world.item.crafting.ShapedRecipePattern of(java.util.Map<java.lang.Character, net.minecraft.world.item.crafting.Ingredient>, java.util.List<java.lang.String>);
+  private static com.mojang.serialization.DataResult<net.minecraft.world.item.crafting.ShapedRecipePattern> unpack(net.minecraft.world.item.crafting.ShapedRecipePattern$Data);
+  static java.lang.String[] shrink(java.util.List<java.lang.String>);
+  private static int firstNonEmpty(java.lang.String);
+  private static int lastNonEmpty(java.lang.String);
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput);
+  private boolean matches(net.minecraft.world.item.crafting.CraftingInput, boolean);
+  public int width();
+  public int height();
+  public java.util.List<java.util.Optional<net.minecraft.world.item.crafting.Ingredient>> ingredients();
+  private static java.lang.String lambda$unpack$1(it.unimi.dsi.fastutil.chars.CharSet);
+  private static java.lang.String lambda$unpack$0(char);
+  private static java.util.List lambda$static$5(net.minecraft.world.item.crafting.ShapedRecipePattern);
+  private static java.lang.Integer lambda$static$4(net.minecraft.world.item.crafting.ShapedRecipePattern);
+  private static java.lang.Integer lambda$static$3(net.minecraft.world.item.crafting.ShapedRecipePattern);
+  private static com.mojang.serialization.DataResult lambda$static$0(net.minecraft.world.item.crafting.ShapedRecipePattern);
+  private static com.mojang.serialization.DataResult lambda$static$1();
+  private static java.lang.String lambda$static$2();
+  static {};
+}
+Compiled from "BlastingRecipe.java"
+class net.minecraft.world.item.crafting.BlastingRecipe$1 {
+  static final int[] $SwitchMap$net$minecraft$world$item$crafting$CookingBookCategory;
+  static {};
+}
+Compiled from "RecipeManager.java"
+public class net.minecraft.world.item.crafting.RecipeManager$IngredientCollector implements java.util.function.Consumer<net.minecraft.world.item.crafting.Recipe<?>> {
+  private final net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet> key;
+  private final net.minecraft.world.item.crafting.RecipeManager$IngredientExtractor extractor;
+  private final java.util.List<net.minecraft.world.item.crafting.Ingredient> ingredients;
+  protected net.minecraft.world.item.crafting.RecipeManager$IngredientCollector(net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet>, net.minecraft.world.item.crafting.RecipeManager$IngredientExtractor);
+  public void accept(net.minecraft.world.item.crafting.Recipe<?>);
+  public net.minecraft.world.item.crafting.RecipePropertySet asPropertySet(net.minecraft.world.flag.FeatureFlagSet);
+  public void accept(java.lang.Object);
+}
+Compiled from "RecipeBookCategory.java"
+public class net.minecraft.world.item.crafting.RecipeBookCategory implements net.minecraft.world.item.crafting.ExtendedRecipeBookCategory {
+  public net.minecraft.world.item.crafting.RecipeBookCategory();
+}
+Compiled from "Ingredient.java"
+public final class net.minecraft.world.item.crafting.Ingredient implements java.util.function.Predicate<net.minecraft.world.item.ItemStack>, net.minecraft.world.entity.player.StackedContents$IngredientInfo<net.minecraft.core.Holder<net.minecraft.world.item.Item>> {
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.Ingredient> CONTENTS_STREAM_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, java.util.Optional<net.minecraft.world.item.crafting.Ingredient>> OPTIONAL_CONTENTS_STREAM_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.core.HolderSet<net.minecraft.world.item.Item>> NON_AIR_HOLDER_SET_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.item.crafting.Ingredient> CODEC;
+  private final net.minecraft.core.HolderSet<net.minecraft.world.item.Item> values;
+  private net.minecraft.world.item.crafting.Ingredient(net.minecraft.core.HolderSet<net.minecraft.world.item.Item>);
+  public static boolean testOptionalIngredient(java.util.Optional<net.minecraft.world.item.crafting.Ingredient>, net.minecraft.world.item.ItemStack);
+  public java.util.stream.Stream<net.minecraft.core.Holder<net.minecraft.world.item.Item>> items();
+  public boolean isEmpty();
+  public boolean test(net.minecraft.world.item.ItemStack);
+  public boolean acceptsItem(net.minecraft.core.Holder<net.minecraft.world.item.Item>);
+  public boolean equals(java.lang.Object);
+  public int hashCode();
+  public static net.minecraft.world.item.crafting.Ingredient of(net.minecraft.world.level.ItemLike);
+  public static net.minecraft.world.item.crafting.Ingredient of(net.minecraft.world.level.ItemLike...);
+  public static net.minecraft.world.item.crafting.Ingredient of(java.util.stream.Stream<? extends net.minecraft.world.level.ItemLike>);
+  public static net.minecraft.world.item.crafting.Ingredient of(net.minecraft.core.HolderSet<net.minecraft.world.item.Item>);
+  public net.minecraft.world.item.crafting.display.SlotDisplay display();
+  public static net.minecraft.world.item.crafting.display.SlotDisplay optionalIngredientToDisplay(java.util.Optional<net.minecraft.world.item.crafting.Ingredient>);
+  private static net.minecraft.world.item.crafting.display.SlotDisplay displayForSingleItem(net.minecraft.core.Holder<net.minecraft.world.item.Item>);
+  public boolean test(java.lang.Object);
+  public boolean acceptsItem(java.lang.Object);
+  private static java.lang.Record lambda$display$0(java.util.List);
+  private static net.minecraft.core.Holder$Reference lambda$of$0(net.minecraft.world.level.ItemLike);
+  private static java.lang.Boolean lambda$testOptionalIngredient$0(net.minecraft.world.item.ItemStack, net.minecraft.world.item.crafting.Ingredient);
+  private static void lambda$new$0(java.util.List);
+  private static net.minecraft.core.HolderSet lambda$static$4(net.minecraft.world.item.crafting.Ingredient);
+  private static net.minecraft.core.HolderSet lambda$static$2(java.util.Optional);
+  private static net.minecraft.core.HolderSet lambda$static$3(net.minecraft.world.item.crafting.Ingredient);
+  private static java.util.Optional lambda$static$1(net.minecraft.core.HolderSet);
+  private static net.minecraft.core.HolderSet lambda$static$0(net.minecraft.world.item.crafting.Ingredient);
+  static {};
+}
+Compiled from "CraftingInput.java"
+public class net.minecraft.world.item.crafting.CraftingInput implements net.minecraft.world.item.crafting.RecipeInput {
+  public static final net.minecraft.world.item.crafting.CraftingInput EMPTY;
+  private final int width;
+  private final int height;
+  private final java.util.List<net.minecraft.world.item.ItemStack> items;
+  private final net.minecraft.world.entity.player.StackedItemContents stackedContents;
+  private final int ingredientCount;
+  private net.minecraft.world.item.crafting.CraftingInput(int, int, java.util.List<net.minecraft.world.item.ItemStack>);
+  public static net.minecraft.world.item.crafting.CraftingInput of(int, int, java.util.List<net.minecraft.world.item.ItemStack>);
+  public static net.minecraft.world.item.crafting.CraftingInput$Positioned ofPositioned(int, int, java.util.List<net.minecraft.world.item.ItemStack>);
+  public net.minecraft.world.item.ItemStack getItem(int);
+  public net.minecraft.world.item.ItemStack getItem(int, int);
+  public int size();
+  public boolean isEmpty();
+  public net.minecraft.world.entity.player.StackedItemContents stackedContents();
+  public java.util.List<net.minecraft.world.item.ItemStack> items();
+  public int ingredientCount();
+  public int width();
+  public int height();
+  public boolean equals(java.lang.Object);
+  public int hashCode();
+  static {};
+}
+Compiled from "NormalCraftingRecipe.java"
+public abstract class net.minecraft.world.item.crafting.NormalCraftingRecipe implements net.minecraft.world.item.crafting.CraftingRecipe {
+  protected final net.minecraft.world.item.crafting.Recipe$CommonInfo commonInfo;
+  protected final net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo bookInfo;
+  private net.minecraft.world.item.crafting.PlacementInfo placementInfo;
+  protected net.minecraft.world.item.crafting.NormalCraftingRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo);
+  public abstract net.minecraft.world.item.crafting.RecipeSerializer<? extends net.minecraft.world.item.crafting.NormalCraftingRecipe> getSerializer();
+  public final java.lang.String group();
+  public final net.minecraft.world.item.crafting.CraftingBookCategory category();
+  public final boolean showNotification();
+  protected abstract net.minecraft.world.item.crafting.PlacementInfo createPlacementInfo();
+  public final net.minecraft.world.item.crafting.PlacementInfo placementInfo();
+}
+Compiled from "BookCloningRecipe.java"
+public class net.minecraft.world.item.crafting.BookCloningRecipe extends net.minecraft.world.item.crafting.CustomRecipe {
+  public static final net.minecraft.advancements.predicates.MinMaxBounds$Ints ALLOWED_BOOK_GENERATION_RANGES;
+  public static final net.minecraft.advancements.predicates.MinMaxBounds$Ints DEFAULT_BOOK_GENERATION_RANGES;
+  private static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.MinMaxBounds$Ints> ALLOWED_GENERATION_CODEC;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.BookCloningRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.BookCloningRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.BookCloningRecipe> SERIALIZER;
+  private final net.minecraft.world.item.crafting.Ingredient source;
+  private final net.minecraft.world.item.crafting.Ingredient material;
+  private final net.minecraft.advancements.predicates.MinMaxBounds$Ints allowedGenerations;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  public net.minecraft.world.item.crafting.BookCloningRecipe(net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.advancements.predicates.MinMaxBounds$Ints, net.minecraft.world.item.ItemStackTemplate);
+  private boolean canCraftCopy(net.minecraft.world.item.component.WrittenBookContent);
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.CraftingInput);
+  public net.minecraft.core.NonNullList<net.minecraft.world.item.ItemStack> getRemainingItems(net.minecraft.world.item.crafting.CraftingInput);
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.BookCloningRecipe> getSerializer();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$8(net.minecraft.world.item.crafting.BookCloningRecipe);
+  private static net.minecraft.advancements.predicates.MinMaxBounds$Ints lambda$static$7(net.minecraft.world.item.crafting.BookCloningRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$6(net.minecraft.world.item.crafting.BookCloningRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$5(net.minecraft.world.item.crafting.BookCloningRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$4(net.minecraft.world.item.crafting.BookCloningRecipe);
+  private static net.minecraft.advancements.predicates.MinMaxBounds$Ints lambda$static$3(net.minecraft.world.item.crafting.BookCloningRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$2(net.minecraft.world.item.crafting.BookCloningRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$1(net.minecraft.world.item.crafting.BookCloningRecipe);
+  static {};
+}
+Compiled from "SelectableRecipe.java"
+public final class net.minecraft.world.item.crafting.SelectableRecipe$SingleInputSet<T extends net.minecraft.world.item.crafting.Recipe<?>> extends java.lang.Record {
+  private final java.util.List<net.minecraft.world.item.crafting.SelectableRecipe$SingleInputEntry<T>> entries;
+  public net.minecraft.world.item.crafting.SelectableRecipe$SingleInputSet(java.util.List<net.minecraft.world.item.crafting.SelectableRecipe$SingleInputEntry<T>>);
+  public static <T extends net.minecraft.world.item.crafting.Recipe<?>> net.minecraft.world.item.crafting.SelectableRecipe$SingleInputSet<T> empty();
+  public static <T extends net.minecraft.world.item.crafting.Recipe<?>> net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.SelectableRecipe$SingleInputSet<T>> noRecipeCodec();
+  public boolean acceptsInput(net.minecraft.world.item.ItemStack);
+  public net.minecraft.world.item.crafting.SelectableRecipe$SingleInputSet<T> selectByInput(net.minecraft.world.item.ItemStack);
+  public boolean isEmpty();
+  public int size();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<net.minecraft.world.item.crafting.SelectableRecipe$SingleInputEntry<T>> entries();
+  private static boolean lambda$selectByInput$0(net.minecraft.world.item.ItemStack, net.minecraft.world.item.crafting.SelectableRecipe$SingleInputEntry);
+  private static boolean lambda$acceptsInput$0(net.minecraft.world.item.ItemStack, net.minecraft.world.item.crafting.SelectableRecipe$SingleInputEntry);
+}
+Compiled from "Recipe.java"
+public interface net.minecraft.world.item.crafting.Recipe$BookInfo$Constructor<CategoryType, SelfType extends net.minecraft.world.item.crafting.Recipe$BookInfo<CategoryType>> extends java.util.function.BiFunction<CategoryType, java.lang.String, SelfType> {
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.item.crafting.package-info {
+}
+Compiled from "DyeRecipe.java"
+public class net.minecraft.world.item.crafting.DyeRecipe extends net.minecraft.world.item.crafting.NormalCraftingRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.DyeRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.DyeRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.DyeRecipe> SERIALIZER;
+  private final net.minecraft.world.item.crafting.Ingredient target;
+  private final net.minecraft.world.item.crafting.Ingredient dye;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  public net.minecraft.world.item.crafting.DyeRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate);
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.CraftingInput);
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.DyeRecipe> getSerializer();
+  protected net.minecraft.world.item.crafting.PlacementInfo createPlacementInfo();
+  public java.util.List<net.minecraft.world.item.crafting.display.RecipeDisplay> display();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$10(net.minecraft.world.item.crafting.DyeRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$9(net.minecraft.world.item.crafting.DyeRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$8(net.minecraft.world.item.crafting.DyeRecipe);
+  private static net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo lambda$static$7(net.minecraft.world.item.crafting.DyeRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$static$6(net.minecraft.world.item.crafting.DyeRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$5(net.minecraft.world.item.crafting.DyeRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$4(net.minecraft.world.item.crafting.DyeRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$3(net.minecraft.world.item.crafting.DyeRecipe);
+  private static net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo lambda$static$2(net.minecraft.world.item.crafting.DyeRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$static$1(net.minecraft.world.item.crafting.DyeRecipe);
+  static {};
+}
+Compiled from "CraftingBookCategory.java"
+public final class net.minecraft.world.item.crafting.CraftingBookCategory extends java.lang.Enum<net.minecraft.world.item.crafting.CraftingBookCategory> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.world.item.crafting.CraftingBookCategory BUILDING;
+  public static final net.minecraft.world.item.crafting.CraftingBookCategory REDSTONE;
+  public static final net.minecraft.world.item.crafting.CraftingBookCategory EQUIPMENT;
+  public static final net.minecraft.world.item.crafting.CraftingBookCategory MISC;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.item.crafting.CraftingBookCategory> CODEC;
+  public static final java.util.function.IntFunction<net.minecraft.world.item.crafting.CraftingBookCategory> BY_ID;
+  public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, net.minecraft.world.item.crafting.CraftingBookCategory> STREAM_CODEC;
+  private final java.lang.String name;
+  private final int id;
+  private static final net.minecraft.world.item.crafting.CraftingBookCategory[] $VALUES;
+  public static net.minecraft.world.item.crafting.CraftingBookCategory[] values();
+  public static net.minecraft.world.item.crafting.CraftingBookCategory valueOf(java.lang.String);
+  private net.minecraft.world.item.crafting.CraftingBookCategory(java.lang.String, int);
+  public java.lang.String getSerializedName();
+  private int id();
+  private static net.minecraft.world.item.crafting.CraftingBookCategory[] $values();
+  static {};
+}
+Compiled from "TransmuteRecipe.java"
+public class net.minecraft.world.item.crafting.TransmuteRecipe extends net.minecraft.world.item.crafting.NormalCraftingRecipe {
+  private static final int MIN_MATERIAL_COUNT;
+  private static final int MAX_MATERIAL_COUNT;
+  public static final net.minecraft.advancements.predicates.MinMaxBounds$Ints DEFAULT_MATERIAL_COUNT;
+  public static final net.minecraft.advancements.predicates.MinMaxBounds$Ints FULL_RANGE_MATERIAL_COUNT;
+  public static final com.mojang.serialization.Codec<net.minecraft.advancements.predicates.MinMaxBounds$Ints> MATERIAL_COUNT_BOUNDS;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.TransmuteRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.TransmuteRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.TransmuteRecipe> SERIALIZER;
+  private final net.minecraft.world.item.crafting.Ingredient input;
+  private final net.minecraft.world.item.crafting.Ingredient material;
+  private final net.minecraft.advancements.predicates.MinMaxBounds$Ints materialCount;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  private final boolean addMaterialCountToResult;
+  public net.minecraft.world.item.crafting.TransmuteRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.advancements.predicates.MinMaxBounds$Ints, net.minecraft.world.item.ItemStackTemplate, boolean);
+  public static net.minecraft.world.item.ItemStack createWithOriginalComponents(net.minecraft.world.item.ItemStackTemplate, net.minecraft.world.item.ItemStack);
+  public static net.minecraft.world.item.ItemStack createWithOriginalComponents(net.minecraft.world.item.ItemStackTemplate, net.minecraft.world.item.ItemStack, int);
+  private int computeResultSize(int);
+  private net.minecraft.world.item.ItemStack computeResult(net.minecraft.world.item.ItemStack, int);
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.CraftingInput);
+  public java.util.List<net.minecraft.world.item.crafting.display.RecipeDisplay> display();
+  private int minMaterialCount();
+  private int maxMaterialCount();
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.TransmuteRecipe> getSerializer();
+  protected net.minecraft.world.item.crafting.PlacementInfo createPlacementInfo();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static java.lang.Boolean lambda$static$14(net.minecraft.world.item.crafting.TransmuteRecipe);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$13(net.minecraft.world.item.crafting.TransmuteRecipe);
+  private static net.minecraft.advancements.predicates.MinMaxBounds$Ints lambda$static$12(net.minecraft.world.item.crafting.TransmuteRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$11(net.minecraft.world.item.crafting.TransmuteRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$10(net.minecraft.world.item.crafting.TransmuteRecipe);
+  private static net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo lambda$static$9(net.minecraft.world.item.crafting.TransmuteRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$static$8(net.minecraft.world.item.crafting.TransmuteRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.lang.Boolean lambda$static$7(net.minecraft.world.item.crafting.TransmuteRecipe);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$6(net.minecraft.world.item.crafting.TransmuteRecipe);
+  private static net.minecraft.advancements.predicates.MinMaxBounds$Ints lambda$static$5(net.minecraft.world.item.crafting.TransmuteRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$4(net.minecraft.world.item.crafting.TransmuteRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$3(net.minecraft.world.item.crafting.TransmuteRecipe);
+  private static net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo lambda$static$2(net.minecraft.world.item.crafting.TransmuteRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$static$1(net.minecraft.world.item.crafting.TransmuteRecipe);
+  static {};
+}
+Compiled from "RecipeMap.java"
+public class net.minecraft.world.item.crafting.RecipeMap {
+  public static final net.minecraft.world.item.crafting.RecipeMap EMPTY;
+  private final com.google.common.collect.Multimap<net.minecraft.world.item.crafting.RecipeType<?>, net.minecraft.world.item.crafting.RecipeHolder<?>> byType;
+  private final java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>, net.minecraft.world.item.crafting.RecipeHolder<?>> byKey;
+  private net.minecraft.world.item.crafting.RecipeMap(com.google.common.collect.Multimap<net.minecraft.world.item.crafting.RecipeType<?>, net.minecraft.world.item.crafting.RecipeHolder<?>>, java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>, net.minecraft.world.item.crafting.RecipeHolder<?>>);
+  public static net.minecraft.world.item.crafting.RecipeMap create(java.lang.Iterable<net.minecraft.world.item.crafting.RecipeHolder<?>>);
+  public <I extends net.minecraft.world.item.crafting.RecipeInput, T extends net.minecraft.world.item.crafting.Recipe<I>> java.util.Collection<net.minecraft.world.item.crafting.RecipeHolder<T>> byType(net.minecraft.world.item.crafting.RecipeType<T>);
+  public java.util.Collection<net.minecraft.world.item.crafting.RecipeHolder<?>> values();
+  public net.minecraft.world.item.crafting.RecipeHolder<?> byKey(net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>);
+  public <I extends net.minecraft.world.item.crafting.RecipeInput, T extends net.minecraft.world.item.crafting.Recipe<I>> java.util.stream.Stream<net.minecraft.world.item.crafting.RecipeHolder<T>> getRecipesFor(net.minecraft.world.item.crafting.RecipeType<T>, I, net.minecraft.world.level.Level);
+  private static boolean lambda$getRecipesFor$0(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level, net.minecraft.world.item.crafting.RecipeHolder);
+  static {};
+}
+Compiled from "RecipeCache.java"
+final class net.minecraft.world.item.crafting.RecipeCache$Entry extends java.lang.Record {
+  private final net.minecraft.core.NonNullList<net.minecraft.world.item.ItemStack> key;
+  private final int width;
+  private final int height;
+  private final net.minecraft.world.item.crafting.RecipeHolder<net.minecraft.world.item.crafting.CraftingRecipe> value;
+  private net.minecraft.world.item.crafting.RecipeCache$Entry(net.minecraft.core.NonNullList<net.minecraft.world.item.ItemStack>, int, int, net.minecraft.world.item.crafting.RecipeHolder<net.minecraft.world.item.crafting.CraftingRecipe>);
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.core.NonNullList<net.minecraft.world.item.ItemStack> key();
+  public int width();
+  public int height();
+  public net.minecraft.world.item.crafting.RecipeHolder<net.minecraft.world.item.crafting.CraftingRecipe> value();
+}
+Compiled from "FireworkRocketRecipe.java"
+public class net.minecraft.world.item.crafting.FireworkRocketRecipe extends net.minecraft.world.item.crafting.CustomRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.FireworkRocketRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.FireworkRocketRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.FireworkRocketRecipe> SERIALIZER;
+  private final net.minecraft.world.item.crafting.Ingredient shell;
+  private final net.minecraft.world.item.crafting.Ingredient fuel;
+  private final net.minecraft.world.item.crafting.Ingredient star;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  public net.minecraft.world.item.crafting.FireworkRocketRecipe(net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate);
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.CraftingInput);
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.FireworkRocketRecipe> getSerializer();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$8(net.minecraft.world.item.crafting.FireworkRocketRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$7(net.minecraft.world.item.crafting.FireworkRocketRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$6(net.minecraft.world.item.crafting.FireworkRocketRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$5(net.minecraft.world.item.crafting.FireworkRocketRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$4(net.minecraft.world.item.crafting.FireworkRocketRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$3(net.minecraft.world.item.crafting.FireworkRocketRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$2(net.minecraft.world.item.crafting.FireworkRocketRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$1(net.minecraft.world.item.crafting.FireworkRocketRecipe);
+  static {};
+}
+Compiled from "CraftingRecipe.java"
+class net.minecraft.world.item.crafting.CraftingRecipe$1 {
+  static final int[] $SwitchMap$net$minecraft$world$item$crafting$CraftingBookCategory;
+  static {};
+}
+Compiled from "BannerDuplicateRecipe.java"
+public class net.minecraft.world.item.crafting.BannerDuplicateRecipe extends net.minecraft.world.item.crafting.CustomRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.BannerDuplicateRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.BannerDuplicateRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.BannerDuplicateRecipe> SERIALIZER;
+  private final net.minecraft.world.item.crafting.Ingredient banner;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  public net.minecraft.world.item.crafting.BannerDuplicateRecipe(net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate);
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.CraftingInput);
+  public net.minecraft.core.NonNullList<net.minecraft.world.item.ItemStack> getRemainingItems(net.minecraft.world.item.crafting.CraftingInput);
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.BannerDuplicateRecipe> getSerializer();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$4(net.minecraft.world.item.crafting.BannerDuplicateRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$3(net.minecraft.world.item.crafting.BannerDuplicateRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$2(net.minecraft.world.item.crafting.BannerDuplicateRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$1(net.minecraft.world.item.crafting.BannerDuplicateRecipe);
+  static {};
+}
+Compiled from "SmithingTrimRecipe.java"
+public class net.minecraft.world.item.crafting.SmithingTrimRecipe extends net.minecraft.world.item.crafting.SimpleSmithingRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.SmithingTrimRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.SmithingTrimRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.SmithingTrimRecipe> SERIALIZER;
+  private final net.minecraft.world.item.crafting.Ingredient template;
+  private final net.minecraft.world.item.crafting.Ingredient base;
+  private final net.minecraft.world.item.crafting.Ingredient addition;
+  private final net.minecraft.core.Holder<net.minecraft.world.item.equipment.trim.TrimPattern> pattern;
+  public net.minecraft.world.item.crafting.SmithingTrimRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.core.Holder<net.minecraft.world.item.equipment.trim.TrimPattern>);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.SmithingRecipeInput);
+  public static net.minecraft.world.item.ItemStack applyTrim(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack, net.minecraft.core.Holder<net.minecraft.world.item.equipment.trim.TrimPattern>);
+  public java.util.Optional<net.minecraft.world.item.crafting.Ingredient> templateIngredient();
+  public net.minecraft.world.item.crafting.Ingredient baseIngredient();
+  public java.util.Optional<net.minecraft.world.item.crafting.Ingredient> additionIngredient();
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.SmithingTrimRecipe> getSerializer();
+  protected net.minecraft.world.item.crafting.PlacementInfo createPlacementInfo();
+  public java.util.List<net.minecraft.world.item.crafting.display.RecipeDisplay> display();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  private static net.minecraft.core.Holder lambda$static$10(net.minecraft.world.item.crafting.SmithingTrimRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$9(net.minecraft.world.item.crafting.SmithingTrimRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$8(net.minecraft.world.item.crafting.SmithingTrimRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$7(net.minecraft.world.item.crafting.SmithingTrimRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$static$6(net.minecraft.world.item.crafting.SmithingTrimRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.core.Holder lambda$static$5(net.minecraft.world.item.crafting.SmithingTrimRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$4(net.minecraft.world.item.crafting.SmithingTrimRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$3(net.minecraft.world.item.crafting.SmithingTrimRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$2(net.minecraft.world.item.crafting.SmithingTrimRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$static$1(net.minecraft.world.item.crafting.SmithingTrimRecipe);
+  static {};
+}
+Compiled from "MapExtendingRecipe.java"
+public class net.minecraft.world.item.crafting.MapExtendingRecipe extends net.minecraft.world.item.crafting.CustomRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.MapExtendingRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.MapExtendingRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.MapExtendingRecipe> SERIALIZER;
+  private final net.minecraft.world.item.crafting.ShapedRecipePattern pattern;
+  private final net.minecraft.world.item.crafting.Ingredient map;
+  private final net.minecraft.world.item.crafting.Ingredient material;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  public net.minecraft.world.item.crafting.MapExtendingRecipe(net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate);
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.CraftingInput);
+  private static net.minecraft.world.item.ItemStack findFilledMap(net.minecraft.world.item.crafting.CraftingInput);
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.MapExtendingRecipe> getSerializer();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$6(net.minecraft.world.item.crafting.MapExtendingRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$5(net.minecraft.world.item.crafting.MapExtendingRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$4(net.minecraft.world.item.crafting.MapExtendingRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$3(net.minecraft.world.item.crafting.MapExtendingRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$2(net.minecraft.world.item.crafting.MapExtendingRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$1(net.minecraft.world.item.crafting.MapExtendingRecipe);
+  static {};
+}
+Compiled from "FireworkStarRecipe.java"
+public class net.minecraft.world.item.crafting.FireworkStarRecipe extends net.minecraft.world.item.crafting.CustomRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.FireworkStarRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.FireworkStarRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.FireworkStarRecipe> SERIALIZER;
+  private final java.util.Map<net.minecraft.world.item.component.FireworkExplosion$Shape, net.minecraft.world.item.crafting.Ingredient> shapes;
+  private final net.minecraft.world.item.crafting.Ingredient trail;
+  private final net.minecraft.world.item.crafting.Ingredient twinkle;
+  private final net.minecraft.world.item.crafting.Ingredient fuel;
+  private final net.minecraft.world.item.crafting.Ingredient dye;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  public net.minecraft.world.item.crafting.FireworkStarRecipe(java.util.Map<net.minecraft.world.item.component.FireworkExplosion$Shape, net.minecraft.world.item.crafting.Ingredient>, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate);
+  private net.minecraft.world.item.component.FireworkExplosion$Shape findShape(net.minecraft.world.item.ItemStack);
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.CraftingInput);
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.FireworkStarRecipe> getSerializer();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$12(net.minecraft.world.item.crafting.FireworkStarRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$11(net.minecraft.world.item.crafting.FireworkStarRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$10(net.minecraft.world.item.crafting.FireworkStarRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$9(net.minecraft.world.item.crafting.FireworkStarRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$8(net.minecraft.world.item.crafting.FireworkStarRecipe);
+  private static java.util.Map lambda$static$7(net.minecraft.world.item.crafting.FireworkStarRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$6(net.minecraft.world.item.crafting.FireworkStarRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$5(net.minecraft.world.item.crafting.FireworkStarRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$4(net.minecraft.world.item.crafting.FireworkStarRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$3(net.minecraft.world.item.crafting.FireworkStarRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$2(net.minecraft.world.item.crafting.FireworkStarRecipe);
+  private static java.util.Map lambda$static$1(net.minecraft.world.item.crafting.FireworkStarRecipe);
+  static {};
+}
+Compiled from "SmithingRecipeInput.java"
+public final class net.minecraft.world.item.crafting.SmithingRecipeInput extends java.lang.Record implements net.minecraft.world.item.crafting.RecipeInput {
+  private final net.minecraft.world.item.ItemStack template;
+  private final net.minecraft.world.item.ItemStack base;
+  private final net.minecraft.world.item.ItemStack addition;
+  public net.minecraft.world.item.crafting.SmithingRecipeInput(net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack, net.minecraft.world.item.ItemStack);
+  public net.minecraft.world.item.ItemStack getItem(int);
+  public int size();
+  public boolean isEmpty();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.item.ItemStack template();
+  public net.minecraft.world.item.ItemStack base();
+  public net.minecraft.world.item.ItemStack addition();
+}
+Compiled from "SmeltingRecipe.java"
+class net.minecraft.world.item.crafting.SmeltingRecipe$1 {
+  static final int[] $SwitchMap$net$minecraft$world$item$crafting$CookingBookCategory;
+  static {};
+}
+Compiled from "ExtendedRecipeBookCategory.java"
+public interface net.minecraft.world.item.crafting.ExtendedRecipeBookCategory {
+}
+Compiled from "DecoratedPotRecipe.java"
+public class net.minecraft.world.item.crafting.DecoratedPotRecipe extends net.minecraft.world.item.crafting.CustomRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.DecoratedPotRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.DecoratedPotRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.DecoratedPotRecipe> SERIALIZER;
+  private final net.minecraft.world.item.crafting.Ingredient backPattern;
+  private final net.minecraft.world.item.crafting.Ingredient leftPattern;
+  private final net.minecraft.world.item.crafting.Ingredient rightPattern;
+  private final net.minecraft.world.item.crafting.Ingredient frontPattern;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  public net.minecraft.world.item.crafting.DecoratedPotRecipe(net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate);
+  public net.minecraft.world.item.crafting.DecoratedPotRecipe(net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate);
+  private static net.minecraft.world.item.ItemStack back(net.minecraft.world.item.crafting.CraftingInput);
+  private static net.minecraft.world.item.ItemStack left(net.minecraft.world.item.crafting.CraftingInput);
+  private static net.minecraft.world.item.ItemStack right(net.minecraft.world.item.crafting.CraftingInput);
+  private static net.minecraft.world.item.ItemStack front(net.minecraft.world.item.crafting.CraftingInput);
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.CraftingInput);
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.DecoratedPotRecipe> getSerializer();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$10(net.minecraft.world.item.crafting.DecoratedPotRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$9(net.minecraft.world.item.crafting.DecoratedPotRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$8(net.minecraft.world.item.crafting.DecoratedPotRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$7(net.minecraft.world.item.crafting.DecoratedPotRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$6(net.minecraft.world.item.crafting.DecoratedPotRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$5(net.minecraft.world.item.crafting.DecoratedPotRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$4(net.minecraft.world.item.crafting.DecoratedPotRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$3(net.minecraft.world.item.crafting.DecoratedPotRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$2(net.minecraft.world.item.crafting.DecoratedPotRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$1(net.minecraft.world.item.crafting.DecoratedPotRecipe);
+  static {};
+}
+Compiled from "RecipeInput.java"
+public interface net.minecraft.world.item.crafting.RecipeInput {
+  public abstract net.minecraft.world.item.ItemStack getItem(int);
+  public abstract int size();
+  public default boolean isEmpty();
+}
+Compiled from "RecipeCache.java"
+public class net.minecraft.world.item.crafting.RecipeCache {
+  private final net.minecraft.world.item.crafting.RecipeCache$Entry[] entries;
+  private java.lang.ref.WeakReference<net.minecraft.world.item.crafting.RecipeManager> cachedRecipeManager;
+  public net.minecraft.world.item.crafting.RecipeCache(int);
+  public java.util.Optional<net.minecraft.world.item.crafting.RecipeHolder<net.minecraft.world.item.crafting.CraftingRecipe>> get(net.minecraft.server.level.ServerLevel, net.minecraft.world.item.crafting.CraftingInput);
+  private void validateRecipeManager(net.minecraft.server.level.ServerLevel);
+  private java.util.Optional<net.minecraft.world.item.crafting.RecipeHolder<net.minecraft.world.item.crafting.CraftingRecipe>> compute(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.server.level.ServerLevel);
+  private void moveEntryToFront(int);
+  private void insert(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.item.crafting.RecipeHolder<net.minecraft.world.item.crafting.CraftingRecipe>);
+}
+Compiled from "SelectableRecipe.java"
+public final class net.minecraft.world.item.crafting.SelectableRecipe$SingleInputEntry<T extends net.minecraft.world.item.crafting.Recipe<?>> extends java.lang.Record {
+  private final net.minecraft.world.item.crafting.Ingredient input;
+  private final net.minecraft.world.item.crafting.SelectableRecipe<T> recipe;
+  public net.minecraft.world.item.crafting.SelectableRecipe$SingleInputEntry(net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.SelectableRecipe<T>);
+  public static <T extends net.minecraft.world.item.crafting.Recipe<?>> net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.SelectableRecipe$SingleInputEntry<T>> noRecipeCodec();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.item.crafting.Ingredient input();
+  public net.minecraft.world.item.crafting.SelectableRecipe<T> recipe();
+}
+Compiled from "AbstractCookingRecipe.java"
+public interface net.minecraft.world.item.crafting.AbstractCookingRecipe$Factory<T extends net.minecraft.world.item.crafting.AbstractCookingRecipe> {
+  public abstract T create(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.AbstractCookingRecipe$CookingBookInfo, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate, float, int);
+}
+Compiled from "SingleRecipeInput.java"
+public final class net.minecraft.world.item.crafting.SingleRecipeInput extends java.lang.Record implements net.minecraft.world.item.crafting.RecipeInput {
+  private final net.minecraft.world.item.ItemStack item;
+  public net.minecraft.world.item.crafting.SingleRecipeInput(net.minecraft.world.item.ItemStack);
+  public net.minecraft.world.item.ItemStack getItem(int);
+  public int size();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.item.ItemStack item();
+}
+Compiled from "RecipeManager.java"
+public interface net.minecraft.world.item.crafting.RecipeManager$IngredientExtractor {
+  public abstract java.util.Optional<net.minecraft.world.item.crafting.Ingredient> apply(net.minecraft.world.item.crafting.Recipe<?>);
+}
+Compiled from "CookingBookCategory.java"
+public final class net.minecraft.world.item.crafting.CookingBookCategory extends java.lang.Enum<net.minecraft.world.item.crafting.CookingBookCategory> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.world.item.crafting.CookingBookCategory FOOD;
+  public static final net.minecraft.world.item.crafting.CookingBookCategory BLOCKS;
+  public static final net.minecraft.world.item.crafting.CookingBookCategory MISC;
+  private static final java.util.function.IntFunction<net.minecraft.world.item.crafting.CookingBookCategory> BY_ID;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.item.crafting.CookingBookCategory> CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, net.minecraft.world.item.crafting.CookingBookCategory> STREAM_CODEC;
+  private final int id;
+  private final java.lang.String name;
+  private static final net.minecraft.world.item.crafting.CookingBookCategory[] $VALUES;
+  public static net.minecraft.world.item.crafting.CookingBookCategory[] values();
+  public static net.minecraft.world.item.crafting.CookingBookCategory valueOf(java.lang.String);
+  private net.minecraft.world.item.crafting.CookingBookCategory(int, java.lang.String);
+  public java.lang.String getSerializedName();
+  private static net.minecraft.world.item.crafting.CookingBookCategory[] $values();
+  private static int lambda$static$1(net.minecraft.world.item.crafting.CookingBookCategory);
+  private static int lambda$static$0(net.minecraft.world.item.crafting.CookingBookCategory);
+  static {};
+}
+Compiled from "ShapelessRecipe.java"
+public class net.minecraft.world.item.crafting.ShapelessRecipe extends net.minecraft.world.item.crafting.NormalCraftingRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.ShapelessRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.ShapelessRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.ShapelessRecipe> SERIALIZER;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  private final java.util.List<net.minecraft.world.item.crafting.Ingredient> ingredients;
+  public net.minecraft.world.item.crafting.ShapelessRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo, net.minecraft.world.item.ItemStackTemplate, java.util.List<net.minecraft.world.item.crafting.Ingredient>);
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.ShapelessRecipe> getSerializer();
+  protected net.minecraft.world.item.crafting.PlacementInfo createPlacementInfo();
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.CraftingInput);
+  public java.util.List<net.minecraft.world.item.crafting.display.RecipeDisplay> display();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static java.util.List lambda$static$8(net.minecraft.world.item.crafting.ShapelessRecipe);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$7(net.minecraft.world.item.crafting.ShapelessRecipe);
+  private static net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo lambda$static$6(net.minecraft.world.item.crafting.ShapelessRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$static$5(net.minecraft.world.item.crafting.ShapelessRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.util.List lambda$static$4(net.minecraft.world.item.crafting.ShapelessRecipe);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$3(net.minecraft.world.item.crafting.ShapelessRecipe);
+  private static net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo lambda$static$2(net.minecraft.world.item.crafting.ShapelessRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$static$1(net.minecraft.world.item.crafting.ShapelessRecipe);
+  static {};
+}
+Compiled from "SelectableRecipe.java"
+public final class net.minecraft.world.item.crafting.SelectableRecipe<T extends net.minecraft.world.item.crafting.Recipe<?>> extends java.lang.Record {
+  private final net.minecraft.world.item.crafting.display.SlotDisplay optionDisplay;
+  private final java.util.Optional<net.minecraft.world.item.crafting.RecipeHolder<T>> recipe;
+  public net.minecraft.world.item.crafting.SelectableRecipe(net.minecraft.world.item.crafting.display.SlotDisplay, java.util.Optional<net.minecraft.world.item.crafting.RecipeHolder<T>>);
+  public static <T extends net.minecraft.world.item.crafting.Recipe<?>> net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.SelectableRecipe<T>> noRecipeCodec();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.item.crafting.display.SlotDisplay optionDisplay();
+  public java.util.Optional<net.minecraft.world.item.crafting.RecipeHolder<T>> recipe();
+  private static net.minecraft.world.item.crafting.SelectableRecipe lambda$noRecipeCodec$0(net.minecraft.world.item.crafting.display.SlotDisplay);
+}
+Compiled from "RecipeType.java"
+public interface net.minecraft.world.item.crafting.RecipeType<T extends net.minecraft.world.item.crafting.Recipe<?>> {
+  public static final net.minecraft.world.item.crafting.RecipeType<net.minecraft.world.item.crafting.CraftingRecipe> CRAFTING;
+  public static final net.minecraft.world.item.crafting.RecipeType<net.minecraft.world.item.crafting.SmeltingRecipe> SMELTING;
+  public static final net.minecraft.world.item.crafting.RecipeType<net.minecraft.world.item.crafting.BlastingRecipe> BLASTING;
+  public static final net.minecraft.world.item.crafting.RecipeType<net.minecraft.world.item.crafting.SmokingRecipe> SMOKING;
+  public static final net.minecraft.world.item.crafting.RecipeType<net.minecraft.world.item.crafting.CampfireCookingRecipe> CAMPFIRE_COOKING;
+  public static final net.minecraft.world.item.crafting.RecipeType<net.minecraft.world.item.crafting.StonecutterRecipe> STONECUTTING;
+  public static final net.minecraft.world.item.crafting.RecipeType<net.minecraft.world.item.crafting.SmithingRecipe> SMITHING;
+  public static <T extends net.minecraft.world.item.crafting.Recipe<?>> net.minecraft.world.item.crafting.RecipeType<T> register(java.lang.String);
+  static {};
+}
+Compiled from "RecipeManager.java"
+public final class net.minecraft.world.item.crafting.RecipeManager$ServerDisplayInfo extends java.lang.Record {
+  private final net.minecraft.world.item.crafting.display.RecipeDisplayEntry display;
+  private final net.minecraft.world.item.crafting.RecipeHolder<?> parent;
+  public net.minecraft.world.item.crafting.RecipeManager$ServerDisplayInfo(net.minecraft.world.item.crafting.display.RecipeDisplayEntry, net.minecraft.world.item.crafting.RecipeHolder<?>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.item.crafting.display.RecipeDisplayEntry display();
+  public net.minecraft.world.item.crafting.RecipeHolder<?> parent();
+}
+Compiled from "RecipeHolder.java"
+public final class net.minecraft.world.item.crafting.RecipeHolder<T extends net.minecraft.world.item.crafting.Recipe<?>> extends java.lang.Record {
+  private final net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>> id;
+  private final T value;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.RecipeHolder<?>> STREAM_CODEC;
+  public net.minecraft.world.item.crafting.RecipeHolder(net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>>, T);
+  public boolean equals(java.lang.Object);
+  public int hashCode();
+  public java.lang.String toString();
+  public net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>> id();
+  public T value();
+  static {};
+}
+Compiled from "RecipeManager.java"
+class net.minecraft.world.item.crafting.RecipeManager$1 implements net.minecraft.world.item.crafting.RecipeManager$CachedCheck<I, T> {
+  private net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.Recipe<?>> lastRecipe;
+  final net.minecraft.world.item.crafting.RecipeType val$type;
+  net.minecraft.world.item.crafting.RecipeManager$1(net.minecraft.world.item.crafting.RecipeType);
+  public java.util.Optional<net.minecraft.world.item.crafting.RecipeHolder<T>> getRecipeFor(I, net.minecraft.server.level.ServerLevel);
+}
+Compiled from "ShapedRecipe.java"
+public class net.minecraft.world.item.crafting.ShapedRecipe extends net.minecraft.world.item.crafting.NormalCraftingRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.ShapedRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.ShapedRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.ShapedRecipe> SERIALIZER;
+  private final net.minecraft.world.item.crafting.ShapedRecipePattern pattern;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  public net.minecraft.world.item.crafting.ShapedRecipe(net.minecraft.world.item.crafting.Recipe$CommonInfo, net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo, net.minecraft.world.item.crafting.ShapedRecipePattern, net.minecraft.world.item.ItemStackTemplate);
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.ShapedRecipe> getSerializer();
+  public java.util.List<java.util.Optional<net.minecraft.world.item.crafting.Ingredient>> getIngredients();
+  protected net.minecraft.world.item.crafting.PlacementInfo createPlacementInfo();
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.CraftingInput);
+  public int getWidth();
+  public int getHeight();
+  public java.util.List<net.minecraft.world.item.crafting.display.RecipeDisplay> display();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static net.minecraft.world.item.crafting.display.SlotDisplay lambda$display$0(java.util.Optional);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$8(net.minecraft.world.item.crafting.ShapedRecipe);
+  private static net.minecraft.world.item.crafting.ShapedRecipePattern lambda$static$7(net.minecraft.world.item.crafting.ShapedRecipe);
+  private static net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo lambda$static$6(net.minecraft.world.item.crafting.ShapedRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$static$5(net.minecraft.world.item.crafting.ShapedRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$4(net.minecraft.world.item.crafting.ShapedRecipe);
+  private static net.minecraft.world.item.crafting.ShapedRecipePattern lambda$static$3(net.minecraft.world.item.crafting.ShapedRecipe);
+  private static net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo lambda$static$2(net.minecraft.world.item.crafting.ShapedRecipe);
+  private static net.minecraft.world.item.crafting.Recipe$CommonInfo lambda$static$1(net.minecraft.world.item.crafting.ShapedRecipe);
+  static {};
+}
+Compiled from "RecipeAccess.java"
+public interface net.minecraft.world.item.crafting.RecipeAccess {
+  public abstract net.minecraft.world.item.crafting.RecipePropertySet propertySet(net.minecraft.resources.ResourceKey<net.minecraft.world.item.crafting.RecipePropertySet>);
+  public abstract net.minecraft.world.item.crafting.SelectableRecipe$SingleInputSet<net.minecraft.world.item.crafting.StonecutterRecipe> stonecutterRecipes();
+}
+Compiled from "FireworkStarFadeRecipe.java"
+public class net.minecraft.world.item.crafting.FireworkStarFadeRecipe extends net.minecraft.world.item.crafting.CustomRecipe {
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.FireworkStarFadeRecipe> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.FireworkStarFadeRecipe> STREAM_CODEC;
+  public static final net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.FireworkStarFadeRecipe> SERIALIZER;
+  private final net.minecraft.world.item.crafting.Ingredient target;
+  private final net.minecraft.world.item.crafting.Ingredient dye;
+  private final net.minecraft.world.item.ItemStackTemplate result;
+  public net.minecraft.world.item.crafting.FireworkStarFadeRecipe(net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.crafting.Ingredient, net.minecraft.world.item.ItemStackTemplate);
+  public boolean matches(net.minecraft.world.item.crafting.CraftingInput, net.minecraft.world.level.Level);
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.CraftingInput);
+  public net.minecraft.world.item.crafting.RecipeSerializer<net.minecraft.world.item.crafting.FireworkStarFadeRecipe> getSerializer();
+  public net.minecraft.world.item.ItemStack assemble(net.minecraft.world.item.crafting.RecipeInput);
+  public boolean matches(net.minecraft.world.item.crafting.RecipeInput, net.minecraft.world.level.Level);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$6(net.minecraft.world.item.crafting.FireworkStarFadeRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$5(net.minecraft.world.item.crafting.FireworkStarFadeRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$4(net.minecraft.world.item.crafting.FireworkStarFadeRecipe);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static net.minecraft.world.item.ItemStackTemplate lambda$static$3(net.minecraft.world.item.crafting.FireworkStarFadeRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$2(net.minecraft.world.item.crafting.FireworkStarFadeRecipe);
+  private static net.minecraft.world.item.crafting.Ingredient lambda$static$1(net.minecraft.world.item.crafting.FireworkStarFadeRecipe);
+  static {};
+}
+Compiled from "CraftingRecipe.java"
+public final class net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo extends java.lang.Record implements net.minecraft.world.item.crafting.Recipe$BookInfo<net.minecraft.world.item.crafting.CraftingBookCategory> {
+  private final net.minecraft.world.item.crafting.CraftingBookCategory category;
+  private final java.lang.String group;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo> STREAM_CODEC;
+  public net.minecraft.world.item.crafting.CraftingRecipe$CraftingBookInfo(net.minecraft.world.item.crafting.CraftingBookCategory, java.lang.String);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.item.crafting.CraftingBookCategory category();
+  public java.lang.String group();
+  public java.lang.Object category();
+  static {};
+}
+Compiled from "Recipe.java"
+public final class net.minecraft.world.item.crafting.Recipe$CommonInfo extends java.lang.Record {
+  private final boolean showNotification;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.item.crafting.Recipe$CommonInfo> MAP_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.world.item.crafting.Recipe$CommonInfo> STREAM_CODEC;
+  public net.minecraft.world.item.crafting.Recipe$CommonInfo(boolean);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public boolean showNotification();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}

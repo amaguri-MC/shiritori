@@ -1,0 +1,124 @@
+Compiled from "DragonRespawnStage.java"
+final class net.minecraft.world.level.dimension.end.DragonRespawnStage$2 extends net.minecraft.world.level.dimension.end.DragonRespawnStage {
+  private net.minecraft.world.level.dimension.end.DragonRespawnStage$2(java.lang.String, int, java.lang.String);
+  public void tick(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.dimension.end.EnderDragonFight, java.util.List<net.minecraft.world.entity.boss.enderdragon.EndCrystal>, int);
+}
+Compiled from "DragonRespawnStage.java"
+final class net.minecraft.world.level.dimension.end.DragonRespawnStage$1 extends net.minecraft.world.level.dimension.end.DragonRespawnStage {
+  private net.minecraft.world.level.dimension.end.DragonRespawnStage$1(java.lang.String, int, java.lang.String);
+  public void tick(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.dimension.end.EnderDragonFight, java.util.List<net.minecraft.world.entity.boss.enderdragon.EndCrystal>, int);
+}
+Compiled from "EnderDragonFight.java"
+public class net.minecraft.world.level.dimension.end.EnderDragonFight extends net.minecraft.world.level.saveddata.SavedData {
+  private static final org.slf4j.Logger LOGGER;
+  private static final int MAX_TICKS_BEFORE_DRAGON_RESPAWN;
+  private static final int TIME_BETWEEN_CRYSTAL_SCANS;
+  public static final int TIME_BETWEEN_PLAYER_SCANS;
+  private static final int ARENA_SIZE_CHUNKS;
+  public static final int ARENA_TICKET_LEVEL;
+  private static final int GATEWAY_COUNT;
+  private static final int GATEWAY_DISTANCE;
+  public static final int DRAGON_SPAWN_Y;
+  private static final net.minecraft.network.chat.Component EVENT_DISPLAY_NAME;
+  private java.util.function.Predicate<net.minecraft.world.entity.Entity> validPlayer;
+  private net.minecraft.server.level.ServerBossEvent dragonEvent;
+  private net.minecraft.server.level.ServerLevel level;
+  private net.minecraft.core.BlockPos origin;
+  private final java.util.List<java.lang.Integer> gateways;
+  private final net.minecraft.world.level.block.state.pattern.BlockPattern exitPortalPattern;
+  private int ticksSinceDragonSeen;
+  private int aliveCrystals;
+  private int ticksSinceCrystalsScanned;
+  private int ticksSinceLastPlayerScan;
+  private boolean dragonKilled;
+  private boolean hasPreviouslyKilledDragon;
+  private boolean skipArenaLoadedCheck;
+  private java.util.UUID dragonUUID;
+  private boolean needsStateScanning;
+  private net.minecraft.core.BlockPos exitPortalLocation;
+  private net.minecraft.world.level.dimension.end.DragonRespawnStage respawnStage;
+  private int respawnTime;
+  private java.util.List<net.minecraft.world.entity.EntityReference<net.minecraft.world.entity.boss.enderdragon.EndCrystal>> respawnCrystals;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.dimension.end.EnderDragonFight> CODEC;
+  public static final net.minecraft.world.level.saveddata.SavedDataType<net.minecraft.world.level.dimension.end.EnderDragonFight> TYPE;
+  public static net.minecraft.world.level.dimension.end.EnderDragonFight createDefault();
+  public net.minecraft.world.level.dimension.end.EnderDragonFight(boolean, boolean, boolean, java.util.Optional<net.minecraft.world.level.dimension.end.DragonRespawnStage>, int, java.util.Optional<java.util.UUID>, java.util.Optional<net.minecraft.core.BlockPos>, java.util.List<java.lang.Integer>, java.util.List<net.minecraft.world.entity.EntityReference<net.minecraft.world.entity.boss.enderdragon.EndCrystal>>);
+  public void init(net.minecraft.server.level.ServerLevel, long, net.minecraft.core.BlockPos);
+  public void skipArenaLoadedCheck();
+  public void tick();
+  private void scanState();
+  private void findOrCreateDragon();
+  protected void setRespawnStage(net.minecraft.world.level.dimension.end.DragonRespawnStage);
+  private boolean hasActiveExitPortal();
+  private net.minecraft.world.level.block.state.pattern.BlockPattern$BlockPatternMatch findExitPortal();
+  private boolean isArenaLoaded();
+  private void updatePlayers();
+  private void updateCrystalCount();
+  public void setDragonKilled(net.minecraft.world.entity.boss.enderdragon.EnderDragon);
+  public void removeAllGateways();
+  private void spawnNewGateway();
+  private void spawnNewGateway(net.minecraft.core.BlockPos);
+  private void spawnExitPortal(boolean);
+  private net.minecraft.world.entity.boss.enderdragon.EnderDragon createNewDragon();
+  public void updateDragon(net.minecraft.world.entity.boss.enderdragon.EnderDragon);
+  public int aliveCrystals();
+  public void onCrystalDestroyed(net.minecraft.world.entity.boss.enderdragon.EndCrystal, net.minecraft.world.damagesource.DamageSource);
+  private void abortRespawnSequence();
+  public boolean hasPreviouslyKilledDragon();
+  public void tryRespawn();
+  private void respawnDragon(java.util.List<net.minecraft.world.entity.boss.enderdragon.EndCrystal>);
+  public void resetSpikeCrystals();
+  public java.util.UUID dragonUUID();
+  private static boolean lambda$onCrystalDestroyed$0(net.minecraft.world.entity.boss.enderdragon.EndCrystal, net.minecraft.world.entity.EntityReference);
+  private void lambda$spawnNewGateway$1(net.minecraft.core.BlockPos, net.minecraft.core.Holder$Reference);
+  private static java.util.Optional lambda$spawnNewGateway$0(net.minecraft.core.Registry);
+  private boolean lambda$isArenaLoaded$0(net.minecraft.world.level.ChunkPos);
+  private net.minecraft.world.entity.boss.enderdragon.EndCrystal lambda$tick$0(net.minecraft.world.entity.EntityReference);
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static java.util.List lambda$static$9(net.minecraft.world.level.dimension.end.EnderDragonFight);
+  private static java.util.List lambda$static$8(net.minecraft.world.level.dimension.end.EnderDragonFight);
+  private static java.util.Optional lambda$static$7(net.minecraft.world.level.dimension.end.EnderDragonFight);
+  private static java.util.Optional lambda$static$6(net.minecraft.world.level.dimension.end.EnderDragonFight);
+  private static java.lang.Integer lambda$static$5(net.minecraft.world.level.dimension.end.EnderDragonFight);
+  private static java.util.Optional lambda$static$4(net.minecraft.world.level.dimension.end.EnderDragonFight);
+  private static java.lang.Boolean lambda$static$3(net.minecraft.world.level.dimension.end.EnderDragonFight);
+  private static java.lang.Boolean lambda$static$2(net.minecraft.world.level.dimension.end.EnderDragonFight);
+  private static java.lang.Boolean lambda$static$1(net.minecraft.world.level.dimension.end.EnderDragonFight);
+  static {};
+}
+Compiled from "DragonRespawnStage.java"
+final class net.minecraft.world.level.dimension.end.DragonRespawnStage$4 extends net.minecraft.world.level.dimension.end.DragonRespawnStage {
+  private net.minecraft.world.level.dimension.end.DragonRespawnStage$4(java.lang.String, int, java.lang.String);
+  public void tick(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.dimension.end.EnderDragonFight, java.util.List<net.minecraft.world.entity.boss.enderdragon.EndCrystal>, int);
+}
+Compiled from "DragonRespawnStage.java"
+public abstract class net.minecraft.world.level.dimension.end.DragonRespawnStage extends java.lang.Enum<net.minecraft.world.level.dimension.end.DragonRespawnStage> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.world.level.dimension.end.DragonRespawnStage START;
+  public static final net.minecraft.world.level.dimension.end.DragonRespawnStage PREPARING_TO_SUMMON_PILLARS;
+  public static final net.minecraft.world.level.dimension.end.DragonRespawnStage SUMMONING_PILLARS;
+  public static final net.minecraft.world.level.dimension.end.DragonRespawnStage SUMMONING_DRAGON;
+  public static final net.minecraft.world.level.dimension.end.DragonRespawnStage END;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.dimension.end.DragonRespawnStage> CODEC;
+  private final java.lang.String name;
+  private static final net.minecraft.world.level.dimension.end.DragonRespawnStage[] $VALUES;
+  public static net.minecraft.world.level.dimension.end.DragonRespawnStage[] values();
+  public static net.minecraft.world.level.dimension.end.DragonRespawnStage valueOf(java.lang.String);
+  private net.minecraft.world.level.dimension.end.DragonRespawnStage(java.lang.String);
+  public java.lang.String getSerializedName();
+  public abstract void tick(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.dimension.end.EnderDragonFight, java.util.List<net.minecraft.world.entity.boss.enderdragon.EndCrystal>, int);
+  private static net.minecraft.world.level.dimension.end.DragonRespawnStage[] $values();
+  static {};
+}
+Compiled from "DragonRespawnStage.java"
+final class net.minecraft.world.level.dimension.end.DragonRespawnStage$3 extends net.minecraft.world.level.dimension.end.DragonRespawnStage {
+  private net.minecraft.world.level.dimension.end.DragonRespawnStage$3(java.lang.String, int, java.lang.String);
+  public void tick(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.dimension.end.EnderDragonFight, java.util.List<net.minecraft.world.entity.boss.enderdragon.EndCrystal>, int);
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.level.dimension.end.package-info {
+}
+Compiled from "DragonRespawnStage.java"
+final class net.minecraft.world.level.dimension.end.DragonRespawnStage$5 extends net.minecraft.world.level.dimension.end.DragonRespawnStage {
+  private net.minecraft.world.level.dimension.end.DragonRespawnStage$5(java.lang.String, int, java.lang.String);
+  public void tick(net.minecraft.server.level.ServerLevel, net.minecraft.world.level.dimension.end.EnderDragonFight, java.util.List<net.minecraft.world.entity.boss.enderdragon.EndCrystal>, int);
+}

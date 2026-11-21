@@ -1,0 +1,36 @@
+Compiled from "FakePlayer.java"
+final class net.fabricmc.fabric.api.entity.FakePlayer$FakePlayerKey extends java.lang.Record {
+  private final net.minecraft.server.level.ServerLevel level;
+  private final com.mojang.authlib.GameProfile profile;
+  private net.fabricmc.fabric.api.entity.FakePlayer$FakePlayerKey(net.minecraft.server.level.ServerLevel, com.mojang.authlib.GameProfile);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.level.ServerLevel level();
+  public com.mojang.authlib.GameProfile profile();
+}
+Compiled from "FakePlayer.java"
+public class net.fabricmc.fabric.api.entity.FakePlayer extends net.minecraft.server.level.ServerPlayer {
+  public static final java.util.UUID DEFAULT_UUID;
+  private static final com.mojang.authlib.GameProfile DEFAULT_PROFILE;
+  private static final java.util.Map<net.fabricmc.fabric.api.entity.FakePlayer$FakePlayerKey, net.fabricmc.fabric.api.entity.FakePlayer> FAKE_PLAYER_MAP;
+  public static net.fabricmc.fabric.api.entity.FakePlayer get(net.minecraft.server.level.ServerLevel);
+  public static net.fabricmc.fabric.api.entity.FakePlayer get(net.minecraft.server.level.ServerLevel, com.mojang.authlib.GameProfile);
+  protected net.fabricmc.fabric.api.entity.FakePlayer(net.minecraft.server.level.ServerLevel, com.mojang.authlib.GameProfile);
+  public void tick();
+  public void updateOptions(net.minecraft.server.level.ClientInformation);
+  public void awardStat(net.minecraft.stats.Stat<?>, int);
+  public void resetStat(net.minecraft.stats.Stat<?>);
+  public boolean isInvulnerableTo(net.minecraft.server.level.ServerLevel, net.minecraft.world.damagesource.DamageSource);
+  public net.minecraft.world.scores.PlayerTeam getTeam();
+  public void startSleeping(net.minecraft.core.BlockPos);
+  public boolean startRiding(net.minecraft.world.entity.Entity, boolean, boolean);
+  public void openTextEdit(net.minecraft.world.level.block.entity.SignBlockEntity, boolean);
+  public java.util.OptionalInt openMenu(net.minecraft.world.MenuProvider);
+  public void openHorseInventory(net.minecraft.world.entity.animal.equine.AbstractHorse, net.minecraft.world.Container);
+  private static net.fabricmc.fabric.api.entity.FakePlayer lambda$get$0(net.fabricmc.fabric.api.entity.FakePlayer$FakePlayerKey);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.fabricmc.fabric.api.entity.package-info {
+}

@@ -1,0 +1,65 @@
+Compiled from "DataSources.java"
+public class net.minecraft.network.chat.contents.data.DataSources {
+  private static final net.minecraft.util.ExtraCodecs$LateBoundIdMapper<java.lang.String, com.mojang.serialization.MapCodec<? extends net.minecraft.network.chat.contents.data.DataSource>> ID_MAPPER;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.network.chat.contents.data.DataSource> CODEC;
+  public net.minecraft.network.chat.contents.data.DataSources();
+  static {};
+}
+Compiled from "BlockDataSource.java"
+class net.minecraft.network.chat.contents.data.BlockDataSource$1 extends net.minecraft.util.CompilableString$CommandParserHelper<net.minecraft.commands.arguments.coordinates.Coordinates> {
+  net.minecraft.network.chat.contents.data.BlockDataSource$1();
+  protected net.minecraft.commands.arguments.coordinates.Coordinates parse(com.mojang.brigadier.StringReader) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  protected java.lang.String errorMessage(java.lang.String, com.mojang.brigadier.exceptions.CommandSyntaxException);
+  protected java.lang.Object parse(com.mojang.brigadier.StringReader) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+}
+Compiled from "package-info.java"
+interface net.minecraft.network.chat.contents.data.package-info {
+}
+Compiled from "EntityDataSource.java"
+public final class net.minecraft.network.chat.contents.data.EntityDataSource extends java.lang.Record implements net.minecraft.network.chat.contents.data.DataSource {
+  private final net.minecraft.util.CompilableString<net.minecraft.commands.arguments.selector.EntitySelector> selector;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.network.chat.contents.data.EntityDataSource> MAP_CODEC;
+  public net.minecraft.network.chat.contents.data.EntityDataSource(net.minecraft.util.CompilableString<net.minecraft.commands.arguments.selector.EntitySelector>);
+  public java.util.stream.Stream<net.minecraft.nbt.CompoundTag> getData(net.minecraft.commands.CommandSourceStack) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  public com.mojang.serialization.MapCodec<net.minecraft.network.chat.contents.data.EntityDataSource> codec();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.util.CompilableString<net.minecraft.commands.arguments.selector.EntitySelector> selector();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "DataSource.java"
+public interface net.minecraft.network.chat.contents.data.DataSource {
+  public abstract java.util.stream.Stream<net.minecraft.nbt.CompoundTag> getData(net.minecraft.commands.CommandSourceStack) throws com.mojang.brigadier.exceptions.CommandSyntaxException;
+  public abstract com.mojang.serialization.MapCodec<? extends net.minecraft.network.chat.contents.data.DataSource> codec();
+}
+Compiled from "StorageDataSource.java"
+public final class net.minecraft.network.chat.contents.data.StorageDataSource extends java.lang.Record implements net.minecraft.network.chat.contents.data.DataSource {
+  private final net.minecraft.resources.Identifier id;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.network.chat.contents.data.StorageDataSource> MAP_CODEC;
+  public net.minecraft.network.chat.contents.data.StorageDataSource(net.minecraft.resources.Identifier);
+  public java.util.stream.Stream<net.minecraft.nbt.CompoundTag> getData(net.minecraft.commands.CommandSourceStack);
+  public com.mojang.serialization.MapCodec<net.minecraft.network.chat.contents.data.StorageDataSource> codec();
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier id();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "BlockDataSource.java"
+public final class net.minecraft.network.chat.contents.data.BlockDataSource extends java.lang.Record implements net.minecraft.network.chat.contents.data.DataSource {
+  private final net.minecraft.util.CompilableString<net.minecraft.commands.arguments.coordinates.Coordinates> coordinates;
+  public static final com.mojang.serialization.Codec<net.minecraft.util.CompilableString<net.minecraft.commands.arguments.coordinates.Coordinates>> BLOCK_POS_CODEC;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.network.chat.contents.data.BlockDataSource> MAP_CODEC;
+  public net.minecraft.network.chat.contents.data.BlockDataSource(net.minecraft.util.CompilableString<net.minecraft.commands.arguments.coordinates.Coordinates>);
+  public java.util.stream.Stream<net.minecraft.nbt.CompoundTag> getData(net.minecraft.commands.CommandSourceStack);
+  public com.mojang.serialization.MapCodec<net.minecraft.network.chat.contents.data.BlockDataSource> codec();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.util.CompilableString<net.minecraft.commands.arguments.coordinates.Coordinates> coordinates();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}

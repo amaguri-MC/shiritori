@@ -1,0 +1,38 @@
+Compiled from "FabricBlockParticleOption.java"
+public interface net.fabricmc.fabric.api.particle.v1.FabricBlockParticleOption {
+  public static net.minecraft.core.particles.BlockParticleOption create(net.minecraft.core.particles.ParticleType<net.minecraft.core.particles.BlockParticleOption>, net.minecraft.world.level.block.state.BlockState, net.minecraft.core.BlockPos);
+  public default net.minecraft.core.BlockPos getBlockPos();
+}
+Compiled from "FabricParticleTypes.java"
+class net.fabricmc.fabric.api.particle.v1.FabricParticleTypes$1 extends net.minecraft.core.particles.SimpleParticleType {
+  net.fabricmc.fabric.api.particle.v1.FabricParticleTypes$1(boolean);
+}
+Compiled from "FabricParticleTypes.java"
+class net.fabricmc.fabric.api.particle.v1.FabricParticleTypes$2 extends net.minecraft.core.particles.ParticleType<T> {
+  final com.mojang.serialization.MapCodec val$codec;
+  final net.minecraft.network.codec.StreamCodec val$streamCodec;
+  net.fabricmc.fabric.api.particle.v1.FabricParticleTypes$2(boolean, com.mojang.serialization.MapCodec, net.minecraft.network.codec.StreamCodec);
+  public com.mojang.serialization.MapCodec<T> codec();
+  public net.minecraft.network.codec.StreamCodec<? super net.minecraft.network.RegistryFriendlyByteBuf, T> streamCodec();
+}
+Compiled from "FabricParticleTypes.java"
+class net.fabricmc.fabric.api.particle.v1.FabricParticleTypes$3 extends net.minecraft.core.particles.ParticleType<T> {
+  final java.util.function.Function val$codecGetter;
+  final java.util.function.Function val$streamCodecGetter;
+  net.fabricmc.fabric.api.particle.v1.FabricParticleTypes$3(boolean, java.util.function.Function, java.util.function.Function);
+  public com.mojang.serialization.MapCodec<T> codec();
+  public net.minecraft.network.codec.StreamCodec<? super net.minecraft.network.RegistryFriendlyByteBuf, T> streamCodec();
+}
+Compiled from "FabricParticleTypes.java"
+public final class net.fabricmc.fabric.api.particle.v1.FabricParticleTypes {
+  private net.fabricmc.fabric.api.particle.v1.FabricParticleTypes();
+  public static net.minecraft.core.particles.SimpleParticleType simple();
+  public static net.minecraft.core.particles.SimpleParticleType simple(boolean);
+  public static <T extends net.minecraft.core.particles.ParticleOptions> net.minecraft.core.particles.ParticleType<T> complex(com.mojang.serialization.MapCodec<T>, net.minecraft.network.codec.StreamCodec<? super net.minecraft.network.RegistryFriendlyByteBuf, T>);
+  public static <T extends net.minecraft.core.particles.ParticleOptions> net.minecraft.core.particles.ParticleType<T> complex(boolean, com.mojang.serialization.MapCodec<T>, net.minecraft.network.codec.StreamCodec<? super net.minecraft.network.RegistryFriendlyByteBuf, T>);
+  public static <T extends net.minecraft.core.particles.ParticleOptions> net.minecraft.core.particles.ParticleType<T> complex(java.util.function.Function<net.minecraft.core.particles.ParticleType<T>, com.mojang.serialization.MapCodec<T>>, java.util.function.Function<net.minecraft.core.particles.ParticleType<T>, net.minecraft.network.codec.StreamCodec<? super net.minecraft.network.RegistryFriendlyByteBuf, T>>);
+  public static <T extends net.minecraft.core.particles.ParticleOptions> net.minecraft.core.particles.ParticleType<T> complex(boolean, java.util.function.Function<net.minecraft.core.particles.ParticleType<T>, com.mojang.serialization.MapCodec<T>>, java.util.function.Function<net.minecraft.core.particles.ParticleType<T>, net.minecraft.network.codec.StreamCodec<? super net.minecraft.network.RegistryFriendlyByteBuf, T>>);
+}
+Compiled from "package-info.java"
+interface net.fabricmc.fabric.api.particle.v1.package-info {
+}

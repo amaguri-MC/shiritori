@@ -1,0 +1,31 @@
+Compiled from "package-info.java"
+interface net.minecraft.server.waypoints.package-info {
+}
+Compiled from "ServerWaypointManager.java"
+public class net.minecraft.server.waypoints.ServerWaypointManager implements net.minecraft.world.waypoints.WaypointManager<net.minecraft.world.waypoints.WaypointTransmitter> {
+  private final java.util.Set<net.minecraft.world.waypoints.WaypointTransmitter> waypoints;
+  private final java.util.Set<net.minecraft.server.level.ServerPlayer> players;
+  private final com.google.common.collect.Table<net.minecraft.server.level.ServerPlayer, net.minecraft.world.waypoints.WaypointTransmitter, net.minecraft.world.waypoints.WaypointTransmitter$Connection> connections;
+  public net.minecraft.server.waypoints.ServerWaypointManager();
+  public void trackWaypoint(net.minecraft.world.waypoints.WaypointTransmitter);
+  public void updateWaypoint(net.minecraft.world.waypoints.WaypointTransmitter);
+  public void untrackWaypoint(net.minecraft.world.waypoints.WaypointTransmitter);
+  public void addPlayer(net.minecraft.server.level.ServerPlayer);
+  public void updatePlayer(net.minecraft.server.level.ServerPlayer);
+  public void removePlayer(net.minecraft.server.level.ServerPlayer);
+  public void breakAllConnections();
+  public void remakeConnections(net.minecraft.world.waypoints.WaypointTransmitter);
+  public java.util.Set<net.minecraft.world.waypoints.WaypointTransmitter> transmitters();
+  private static boolean isLocatorBarEnabledFor(net.minecraft.server.level.ServerPlayer);
+  private void createConnection(net.minecraft.server.level.ServerPlayer, net.minecraft.world.waypoints.WaypointTransmitter);
+  private void updateConnection(net.minecraft.server.level.ServerPlayer, net.minecraft.world.waypoints.WaypointTransmitter, net.minecraft.world.waypoints.WaypointTransmitter$Connection);
+  public void untrackWaypoint(net.minecraft.world.waypoints.Waypoint);
+  public void updateWaypoint(net.minecraft.world.waypoints.Waypoint);
+  public void trackWaypoint(net.minecraft.world.waypoints.Waypoint);
+  private void lambda$updateConnection$1(net.minecraft.world.waypoints.WaypointTransmitter$Connection, net.minecraft.server.level.ServerPlayer, net.minecraft.world.waypoints.WaypointTransmitter);
+  private void lambda$updateConnection$0(net.minecraft.server.level.ServerPlayer, net.minecraft.world.waypoints.WaypointTransmitter, net.minecraft.world.waypoints.WaypointTransmitter$Connection);
+  private void lambda$createConnection$1(net.minecraft.server.level.ServerPlayer, net.minecraft.world.waypoints.WaypointTransmitter);
+  private void lambda$createConnection$0(net.minecraft.server.level.ServerPlayer, net.minecraft.world.waypoints.WaypointTransmitter, net.minecraft.world.waypoints.WaypointTransmitter$Connection);
+  private static boolean lambda$removePlayer$0(net.minecraft.world.waypoints.WaypointTransmitter$Connection);
+  private static void lambda$untrackWaypoint$0(net.minecraft.server.level.ServerPlayer, net.minecraft.world.waypoints.WaypointTransmitter$Connection);
+}

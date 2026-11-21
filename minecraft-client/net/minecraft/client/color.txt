@@ -1,0 +1,28 @@
+Compiled from "ColorLerper.java"
+public final class net.minecraft.client.color.ColorLerper$Type extends java.lang.Enum<net.minecraft.client.color.ColorLerper$Type> {
+  public static final net.minecraft.client.color.ColorLerper$Type SHEEP;
+  public static final net.minecraft.client.color.ColorLerper$Type MUSIC_NOTE;
+  private final int colorDuration;
+  private final java.util.Map<net.minecraft.world.item.DyeColor, java.lang.Integer> colorByDye;
+  private final net.minecraft.world.item.DyeColor[] colors;
+  private static final net.minecraft.client.color.ColorLerper$Type[] $VALUES;
+  public static net.minecraft.client.color.ColorLerper$Type[] values();
+  public static net.minecraft.client.color.ColorLerper$Type valueOf(java.lang.String);
+  private net.minecraft.client.color.ColorLerper$Type(int, net.minecraft.world.item.DyeColor[], float);
+  public final int getColor(net.minecraft.world.item.DyeColor);
+  private static net.minecraft.client.color.ColorLerper$Type[] $values();
+  private static java.lang.Integer lambda$new$1(float, net.minecraft.world.item.DyeColor);
+  private static net.minecraft.world.item.DyeColor lambda$new$0(net.minecraft.world.item.DyeColor);
+  static {};
+}
+Compiled from "ColorLerper.java"
+public class net.minecraft.client.color.ColorLerper {
+  public static final net.minecraft.world.item.DyeColor[] MUSIC_NOTE_COLORS;
+  public net.minecraft.client.color.ColorLerper();
+  public static int getLerpedColor(net.minecraft.client.color.ColorLerper$Type, float);
+  private static int getModifiedColor(net.minecraft.world.item.DyeColor, float);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.color.package-info {
+}

@@ -1,0 +1,224 @@
+Compiled from "ClientPackSource.java"
+public class net.minecraft.client.resources.ClientPackSource extends net.minecraft.server.packs.repository.BuiltInPackSource {
+  private static final net.minecraft.server.packs.metadata.pack.PackMetadataSection VERSION_METADATA_SECTION;
+  private static final net.minecraft.server.packs.resources.ResourceMetadata BUILT_IN_METADATA;
+  public static final java.lang.String HIGH_CONTRAST_PACK;
+  private static final java.util.Map<java.lang.String, net.minecraft.network.chat.Component> SPECIAL_PACK_NAMES;
+  private static final net.minecraft.server.packs.PackLocationInfo VANILLA_PACK_INFO;
+  private static final net.minecraft.server.packs.PackSelectionConfig VANILLA_SELECTION_CONFIG;
+  private static final net.minecraft.server.packs.PackSelectionConfig BUILT_IN_SELECTION_CONFIG;
+  private static final net.minecraft.resources.Identifier PACKS_DIR;
+  private final java.nio.file.Path externalAssetDir;
+  public net.minecraft.client.resources.ClientPackSource(java.nio.file.Path, net.minecraft.world.level.validation.DirectoryValidator);
+  private static net.minecraft.server.packs.PackLocationInfo createBuiltInPackLocation(java.lang.String, net.minecraft.network.chat.Component);
+  private java.nio.file.Path findExplodedAssetPacks(java.nio.file.Path);
+  private static net.minecraft.server.packs.VanillaPackResources createVanillaPackSource(java.nio.file.Path);
+  protected net.minecraft.network.chat.Component getPackTitle(java.lang.String);
+  protected net.minecraft.server.packs.repository.Pack createVanillaPack(net.minecraft.server.packs.PackResources);
+  protected net.minecraft.server.packs.repository.Pack createBuiltinPack(java.lang.String, net.minecraft.server.packs.repository.Pack$ResourcesSupplier, net.minecraft.network.chat.Component);
+  protected void populatePackList(java.util.function.BiConsumer<java.lang.String, java.util.function.Function<java.lang.String, net.minecraft.server.packs.repository.Pack>>);
+  static {};
+}
+Compiled from "DefaultPlayerSkin.java"
+public class net.minecraft.client.resources.DefaultPlayerSkin {
+  private static final net.minecraft.world.entity.player.PlayerSkin[] DEFAULT_SKINS;
+  public net.minecraft.client.resources.DefaultPlayerSkin();
+  public static net.minecraft.resources.Identifier getDefaultTexture();
+  public static net.minecraft.world.entity.player.PlayerSkin getDefaultSkin();
+  public static net.minecraft.world.entity.player.PlayerSkin get(java.util.UUID);
+  public static net.minecraft.world.entity.player.PlayerSkin get(com.mojang.authlib.GameProfile);
+  private static net.minecraft.world.entity.player.PlayerSkin create(java.lang.String, net.minecraft.world.entity.player.PlayerModelType);
+  static {};
+}
+Compiled from "DryFoliageColorReloadListener.java"
+public class net.minecraft.client.resources.DryFoliageColorReloadListener extends net.minecraft.server.packs.resources.SimplePreparableReloadListener<int[]> {
+  private static final net.minecraft.resources.Identifier LOCATION;
+  public net.minecraft.client.resources.DryFoliageColorReloadListener();
+  protected int[] prepare(net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  protected void apply(int[], net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  protected void apply(java.lang.Object, net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  protected java.lang.Object prepare(net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  static {};
+}
+Compiled from "FoliageColorReloadListener.java"
+public class net.minecraft.client.resources.FoliageColorReloadListener extends net.minecraft.server.packs.resources.SimplePreparableReloadListener<int[]> {
+  private static final net.minecraft.resources.Identifier LOCATION;
+  public net.minecraft.client.resources.FoliageColorReloadListener();
+  protected int[] prepare(net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  protected void apply(int[], net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  protected void apply(java.lang.Object, net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  protected java.lang.Object prepare(net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  static {};
+}
+Compiled from "GrassColorReloadListener.java"
+public class net.minecraft.client.resources.GrassColorReloadListener extends net.minecraft.server.packs.resources.SimplePreparableReloadListener<int[]> {
+  private static final net.minecraft.resources.Identifier LOCATION;
+  public net.minecraft.client.resources.GrassColorReloadListener();
+  protected int[] prepare(net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  protected void apply(int[], net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  protected void apply(java.lang.Object, net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  protected java.lang.Object prepare(net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  static {};
+}
+Compiled from "IndexedAssetSource.java"
+public class net.minecraft.client.resources.IndexedAssetSource {
+  private static final org.slf4j.Logger LOGGER;
+  public static final com.google.common.base.Splitter PATH_SPLITTER;
+  public net.minecraft.client.resources.IndexedAssetSource();
+  public static java.nio.file.Path createIndexFs(java.nio.file.Path, java.lang.String);
+  static {};
+}
+Compiled from "LegacyStuffWrapper.java"
+public class net.minecraft.client.resources.LegacyStuffWrapper {
+  public net.minecraft.client.resources.LegacyStuffWrapper();
+  public static int[] getPixels(net.minecraft.server.packs.resources.ResourceManager, net.minecraft.resources.Identifier) throws java.io.IOException;
+}
+Compiled from "MapTextureManager.java"
+class net.minecraft.client.resources.MapTextureManager$MapInstance implements java.lang.AutoCloseable {
+  private net.minecraft.world.level.saveddata.maps.MapItemSavedData data;
+  private final net.minecraft.client.renderer.texture.DynamicTexture texture;
+  private boolean requiresUpload;
+  private final net.minecraft.resources.Identifier location;
+  private net.minecraft.client.resources.MapTextureManager$MapInstance(net.minecraft.client.resources.MapTextureManager, int, net.minecraft.world.level.saveddata.maps.MapItemSavedData);
+  private void replaceMapData(net.minecraft.world.level.saveddata.maps.MapItemSavedData);
+  public void forceUpload();
+  private void updateTextureIfNeeded();
+  public void close();
+  private static java.lang.String lambda$new$0(int);
+}
+Compiled from "MapTextureManager.java"
+public class net.minecraft.client.resources.MapTextureManager implements java.lang.AutoCloseable {
+  private final it.unimi.dsi.fastutil.ints.Int2ObjectMap<net.minecraft.client.resources.MapTextureManager$MapInstance> maps;
+  private final net.minecraft.client.renderer.texture.TextureManager textureManager;
+  public net.minecraft.client.resources.MapTextureManager(net.minecraft.client.renderer.texture.TextureManager);
+  public void update(net.minecraft.world.level.saveddata.maps.MapId, net.minecraft.world.level.saveddata.maps.MapItemSavedData);
+  public net.minecraft.resources.Identifier prepareMapTexture(net.minecraft.world.level.saveddata.maps.MapId, net.minecraft.world.level.saveddata.maps.MapItemSavedData);
+  public void resetData();
+  private net.minecraft.client.resources.MapTextureManager$MapInstance getOrCreateMapInstance(net.minecraft.world.level.saveddata.maps.MapId, net.minecraft.world.level.saveddata.maps.MapItemSavedData);
+  public void close();
+  private net.minecraft.client.resources.MapTextureManager$MapInstance lambda$getOrCreateMapInstance$0(net.minecraft.world.level.saveddata.maps.MapItemSavedData, java.lang.Integer, net.minecraft.client.resources.MapTextureManager$MapInstance);
+}
+Compiled from "SkinManager.java"
+class net.minecraft.client.resources.SkinManager$1 extends com.google.common.cache.CacheLoader<net.minecraft.client.resources.SkinManager$CacheKey, java.util.concurrent.CompletableFuture<java.util.Optional<net.minecraft.world.entity.player.PlayerSkin>>> {
+  final net.minecraft.server.Services val$services;
+  final java.util.concurrent.Executor val$mainThreadExecutor;
+  final net.minecraft.client.resources.SkinManager this$0;
+  net.minecraft.client.resources.SkinManager$1(net.minecraft.client.resources.SkinManager, net.minecraft.server.Services, java.util.concurrent.Executor);
+  public java.util.concurrent.CompletableFuture<java.util.Optional<net.minecraft.world.entity.player.PlayerSkin>> load(net.minecraft.client.resources.SkinManager$CacheKey);
+  public java.lang.Object load(java.lang.Object) throws java.lang.Exception;
+  private static java.util.Optional lambda$load$2(net.minecraft.client.resources.SkinManager$CacheKey, net.minecraft.world.entity.player.PlayerSkin, java.lang.Throwable);
+  private java.util.concurrent.CompletionStage lambda$load$1(net.minecraft.client.resources.SkinManager$CacheKey, com.mojang.authlib.minecraft.MinecraftProfileTextures);
+  private static com.mojang.authlib.minecraft.MinecraftProfileTextures lambda$load$0(net.minecraft.client.resources.SkinManager$CacheKey, net.minecraft.server.Services);
+}
+Compiled from "SkinManager.java"
+class net.minecraft.client.resources.SkinManager$2 {
+  static final int[] $SwitchMap$com$mojang$authlib$minecraft$MinecraftProfileTexture$Type;
+  static {};
+}
+Compiled from "SkinManager.java"
+final class net.minecraft.client.resources.SkinManager$CacheKey extends java.lang.Record {
+  private final java.util.UUID profileId;
+  private final com.mojang.authlib.properties.Property packedTextures;
+  private net.minecraft.client.resources.SkinManager$CacheKey(java.util.UUID, com.mojang.authlib.properties.Property);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.UUID profileId();
+  public com.mojang.authlib.properties.Property packedTextures();
+}
+Compiled from "SkinManager.java"
+class net.minecraft.client.resources.SkinManager$TextureCache {
+  private final java.nio.file.Path root;
+  private final com.mojang.authlib.minecraft.MinecraftProfileTexture$Type type;
+  private final java.util.Map<java.lang.String, java.util.concurrent.CompletableFuture<net.minecraft.core.ClientAsset$Texture>> textures;
+  final net.minecraft.client.resources.SkinManager this$0;
+  private net.minecraft.client.resources.SkinManager$TextureCache(net.minecraft.client.resources.SkinManager, java.nio.file.Path, com.mojang.authlib.minecraft.MinecraftProfileTexture$Type);
+  public java.util.concurrent.CompletableFuture<net.minecraft.core.ClientAsset$Texture> getOrLoad(com.mojang.authlib.minecraft.MinecraftProfileTexture);
+  private java.util.concurrent.CompletableFuture<net.minecraft.core.ClientAsset$Texture> registerTexture(com.mojang.authlib.minecraft.MinecraftProfileTexture);
+  private net.minecraft.resources.Identifier getTextureLocation(java.lang.String);
+}
+Compiled from "SkinManager.java"
+public class net.minecraft.client.resources.SkinManager {
+  private static final org.slf4j.Logger LOGGER;
+  private final net.minecraft.server.Services services;
+  private final net.minecraft.client.renderer.texture.SkinTextureDownloader skinTextureDownloader;
+  private final com.google.common.cache.LoadingCache<net.minecraft.client.resources.SkinManager$CacheKey, java.util.concurrent.CompletableFuture<java.util.Optional<net.minecraft.world.entity.player.PlayerSkin>>> skinCache;
+  private final net.minecraft.client.resources.SkinManager$TextureCache skinTextures;
+  private final net.minecraft.client.resources.SkinManager$TextureCache capeTextures;
+  private final net.minecraft.client.resources.SkinManager$TextureCache elytraTextures;
+  public net.minecraft.client.resources.SkinManager(java.nio.file.Path, net.minecraft.server.Services, net.minecraft.client.renderer.texture.SkinTextureDownloader, java.util.concurrent.Executor);
+  public java.util.function.Supplier<net.minecraft.world.entity.player.PlayerSkin> createLookup(com.mojang.authlib.GameProfile, boolean);
+  public java.util.concurrent.CompletableFuture<java.util.Optional<net.minecraft.world.entity.player.PlayerSkin>> get(com.mojang.authlib.GameProfile);
+  private java.util.concurrent.CompletableFuture<net.minecraft.world.entity.player.PlayerSkin> registerTextures(java.util.UUID, com.mojang.authlib.minecraft.MinecraftProfileTextures);
+  private static net.minecraft.world.entity.player.PlayerSkin lambda$registerTextures$0(java.util.concurrent.CompletableFuture, java.util.concurrent.CompletableFuture, java.util.concurrent.CompletableFuture, net.minecraft.world.entity.player.PlayerModelType, com.mojang.authlib.minecraft.MinecraftProfileTextures, java.lang.Void);
+  private static net.minecraft.world.entity.player.PlayerSkin lambda$createLookup$3(java.util.concurrent.CompletableFuture, boolean, net.minecraft.world.entity.player.PlayerSkin);
+  private static boolean lambda$createLookup$4(boolean, net.minecraft.world.entity.player.PlayerSkin);
+  private static net.minecraft.world.entity.player.PlayerSkin lambda$createLookup$2(net.minecraft.world.entity.player.PlayerSkin);
+  private static boolean lambda$createLookup$1(boolean, net.minecraft.world.entity.player.PlayerSkin);
+  private static net.minecraft.world.entity.player.PlayerSkin lambda$createLookup$0(net.minecraft.world.entity.player.PlayerSkin);
+  static {};
+}
+Compiled from "SplashManager.java"
+public class net.minecraft.client.resources.SplashManager extends net.minecraft.server.packs.resources.SimplePreparableReloadListener<java.util.List<net.minecraft.network.chat.Component>> {
+  private static final net.minecraft.network.chat.Style DEFAULT_STYLE;
+  public static final net.minecraft.network.chat.Component CHRISTMAS;
+  public static final net.minecraft.network.chat.Component NEW_YEAR;
+  public static final net.minecraft.network.chat.Component HALLOWEEN;
+  private static final net.minecraft.resources.Identifier SPLASHES_LOCATION;
+  private static final net.minecraft.util.RandomSource RANDOM;
+  private java.util.List<net.minecraft.network.chat.Component> splashes;
+  private final net.minecraft.client.User user;
+  public net.minecraft.client.resources.SplashManager(net.minecraft.client.User);
+  private static net.minecraft.network.chat.Component literalSplash(java.lang.String);
+  protected java.util.List<net.minecraft.network.chat.Component> prepare(net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  protected void apply(java.util.List<net.minecraft.network.chat.Component>, net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  public net.minecraft.client.gui.components.SplashRenderer getSplash();
+  protected void apply(java.lang.Object, net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  protected java.lang.Object prepare(net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  private static boolean lambda$prepare$0(java.lang.String);
+  static {};
+}
+Compiled from "WaypointStyle.java"
+public final class net.minecraft.client.resources.WaypointStyle extends java.lang.Record {
+  private final int nearDistance;
+  private final int farDistance;
+  private final java.util.List<net.minecraft.resources.Identifier> sprites;
+  private final java.util.List<net.minecraft.resources.Identifier> spriteLocations;
+  public static final java.lang.String ICON_LOCATION_PREFIX;
+  public static final int DEFAULT_NEAR_DISTANCE;
+  public static final int DEFAULT_FAR_DISTANCE;
+  private static final com.mojang.serialization.Codec<java.lang.Integer> DISTANCE_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.client.resources.WaypointStyle> CODEC;
+  public net.minecraft.client.resources.WaypointStyle(int, int, java.util.List<net.minecraft.resources.Identifier>);
+  public net.minecraft.client.resources.WaypointStyle(int, int, java.util.List<net.minecraft.resources.Identifier>, java.util.List<net.minecraft.resources.Identifier>);
+  public com.mojang.serialization.DataResult<net.minecraft.client.resources.WaypointStyle> validate();
+  public net.minecraft.resources.Identifier sprite(float);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int nearDistance();
+  public int farDistance();
+  public java.util.List<net.minecraft.resources.Identifier> sprites();
+  public java.util.List<net.minecraft.resources.Identifier> spriteLocations();
+  private static net.minecraft.resources.Identifier lambda$new$0(net.minecraft.resources.Identifier);
+  private java.lang.String lambda$validate$2();
+  private java.lang.String lambda$validate$1();
+  private static java.lang.String lambda$validate$0();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "WaypointStyleManager.java"
+public class net.minecraft.client.resources.WaypointStyleManager extends net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener<net.minecraft.client.resources.WaypointStyle> {
+  private static final net.minecraft.resources.FileToIdConverter ASSET_LISTER;
+  private static final net.minecraft.client.resources.WaypointStyle MISSING;
+  private java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.waypoints.WaypointStyleAsset>, net.minecraft.client.resources.WaypointStyle> waypointStyles;
+  public net.minecraft.client.resources.WaypointStyleManager();
+  protected void apply(java.util.Map<net.minecraft.resources.Identifier, net.minecraft.client.resources.WaypointStyle>, net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  public net.minecraft.client.resources.WaypointStyle get(net.minecraft.resources.ResourceKey<net.minecraft.world.waypoints.WaypointStyleAsset>);
+  protected void apply(java.lang.Object, net.minecraft.server.packs.resources.ResourceManager, net.minecraft.util.profiling.ProfilerFiller);
+  private static net.minecraft.resources.ResourceKey lambda$apply$0(java.util.Map$Entry);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.resources.package-info {
+}

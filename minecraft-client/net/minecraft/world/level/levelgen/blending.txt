@@ -1,0 +1,157 @@
+Compiled from "Blender.java"
+class net.minecraft.world.level.levelgen.blending.Blender$1 extends net.minecraft.world.level.levelgen.blending.Blender {
+  net.minecraft.world.level.levelgen.blending.Blender$1(it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap, it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap);
+  public net.minecraft.world.level.levelgen.blending.Blender$BlendingOutput blendOffsetAndFactor(int, int);
+  public double blendDensity(net.minecraft.world.level.levelgen.DensityFunction$FunctionContext, double);
+  public net.minecraft.world.level.biome.BiomeResolver getBiomeResolver(net.minecraft.world.level.biome.BiomeResolver);
+}
+Compiled from "Blender.java"
+public final class net.minecraft.world.level.levelgen.blending.Blender$BlendingOutput extends java.lang.Record {
+  private final double alpha;
+  private final double blendingOffset;
+  public net.minecraft.world.level.levelgen.blending.Blender$BlendingOutput(double, double);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public double alpha();
+  public double blendingOffset();
+}
+Compiled from "Blender.java"
+interface net.minecraft.world.level.levelgen.blending.Blender$CellValueGetter {
+  public abstract double get(net.minecraft.world.level.levelgen.blending.BlendingData, int, int, int);
+}
+Compiled from "Blender.java"
+public interface net.minecraft.world.level.levelgen.blending.Blender$DistanceGetter {
+  public abstract double getDistance(double, double, double);
+}
+Compiled from "Blender.java"
+public class net.minecraft.world.level.levelgen.blending.Blender {
+  private static final net.minecraft.world.level.levelgen.blending.Blender EMPTY;
+  private static final net.minecraft.world.level.levelgen.synth.NormalNoise SHIFT_NOISE;
+  private static final int HEIGHT_BLENDING_RANGE_CELLS;
+  private static final int HEIGHT_BLENDING_RANGE_CHUNKS;
+  private static final int DENSITY_BLENDING_RANGE_CELLS;
+  private static final int DENSITY_BLENDING_RANGE_CHUNKS;
+  private static final double OLD_CHUNK_XZ_RADIUS;
+  private final it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap<net.minecraft.world.level.levelgen.blending.BlendingData> heightAndBiomeBlendingData;
+  private final it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap<net.minecraft.world.level.levelgen.blending.BlendingData> densityBlendingData;
+  public static net.minecraft.world.level.levelgen.blending.Blender empty();
+  public static net.minecraft.world.level.levelgen.blending.Blender of(net.minecraft.server.level.WorldGenRegion);
+  private net.minecraft.world.level.levelgen.blending.Blender(it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap<net.minecraft.world.level.levelgen.blending.BlendingData>, it.unimi.dsi.fastutil.longs.Long2ObjectOpenHashMap<net.minecraft.world.level.levelgen.blending.BlendingData>);
+  public boolean isEmpty();
+  public net.minecraft.world.level.levelgen.blending.Blender$BlendingOutput blendOffsetAndFactor(int, int);
+  private static double heightToOffset(double);
+  public double blendDensity(net.minecraft.world.level.levelgen.DensityFunction$FunctionContext, double);
+  private double getBlendingDataValue(int, int, int, net.minecraft.world.level.levelgen.blending.Blender$CellValueGetter);
+  private double getBlendingDataValue(net.minecraft.world.level.levelgen.blending.Blender$CellValueGetter, int, int, int, int, int);
+  public net.minecraft.world.level.biome.BiomeResolver getBiomeResolver(net.minecraft.world.level.biome.BiomeResolver);
+  private net.minecraft.core.Holder<net.minecraft.world.level.biome.Biome> blendBiome(int, int, int);
+  public static void generateBorderTicks(net.minecraft.server.level.WorldGenRegion, net.minecraft.world.level.chunk.ChunkAccess);
+  private static void generateBorderTick(net.minecraft.world.level.chunk.ChunkAccess, net.minecraft.core.BlockPos);
+  public static void addAroundOldChunksCarvingMaskFilter(net.minecraft.world.level.WorldGenLevel, net.minecraft.world.level.chunk.ProtoChunk);
+  public static net.minecraft.world.level.levelgen.blending.Blender$DistanceGetter makeOldChunkDistanceGetter(net.minecraft.world.level.levelgen.blending.BlendingData, java.util.Map<net.minecraft.core.Direction8, net.minecraft.world.level.levelgen.blending.BlendingData>);
+  private static net.minecraft.world.level.levelgen.blending.Blender$DistanceGetter makeOffsetOldChunkDistanceGetter(net.minecraft.core.Direction8, net.minecraft.world.level.levelgen.blending.BlendingData);
+  private static double distanceToCube(double, double, double, double, double, double);
+  private static double lambda$makeOffsetOldChunkDistanceGetter$0(double, double, double, double, double, double, double);
+  private static double lambda$makeOldChunkDistanceGetter$1(java.util.List, double, double, double);
+  private static void lambda$makeOldChunkDistanceGetter$0(java.util.List, net.minecraft.core.Direction8, net.minecraft.world.level.levelgen.blending.BlendingData);
+  private static boolean lambda$addAroundOldChunksCarvingMaskFilter$0(net.minecraft.world.level.levelgen.blending.Blender$DistanceGetter, int, int, int);
+  private static void lambda$blendBiome$0(int, int, int, org.apache.commons.lang3.mutable.MutableDouble, org.apache.commons.lang3.mutable.MutableObject, long, net.minecraft.world.level.levelgen.blending.BlendingData);
+  private static void lambda$blendBiome$1(int, int, org.apache.commons.lang3.mutable.MutableDouble, org.apache.commons.lang3.mutable.MutableObject, int, int, net.minecraft.core.Holder);
+  private net.minecraft.core.Holder lambda$getBiomeResolver$0(net.minecraft.world.level.biome.BiomeResolver, int, int, int, net.minecraft.world.level.biome.Climate$Sampler);
+  private static void lambda$blendDensity$0(int, int, int, org.apache.commons.lang3.mutable.MutableDouble, org.apache.commons.lang3.mutable.MutableDouble, org.apache.commons.lang3.mutable.MutableDouble, long, net.minecraft.world.level.levelgen.blending.BlendingData);
+  private static void lambda$blendDensity$1(int, int, int, org.apache.commons.lang3.mutable.MutableDouble, org.apache.commons.lang3.mutable.MutableDouble, org.apache.commons.lang3.mutable.MutableDouble, int, int, int, double);
+  private static void lambda$blendOffsetAndFactor$0(int, int, org.apache.commons.lang3.mutable.MutableDouble, org.apache.commons.lang3.mutable.MutableDouble, org.apache.commons.lang3.mutable.MutableDouble, long, net.minecraft.world.level.levelgen.blending.BlendingData);
+  private static void lambda$blendOffsetAndFactor$1(int, int, org.apache.commons.lang3.mutable.MutableDouble, org.apache.commons.lang3.mutable.MutableDouble, org.apache.commons.lang3.mutable.MutableDouble, int, int, double);
+  static {};
+}
+Compiled from "BlendingData.java"
+public interface net.minecraft.world.level.levelgen.blending.BlendingData$BiomeConsumer {
+  public abstract void consume(int, int, net.minecraft.core.Holder<net.minecraft.world.level.biome.Biome>);
+}
+Compiled from "BlendingData.java"
+public interface net.minecraft.world.level.levelgen.blending.BlendingData$DensityConsumer {
+  public abstract void consume(int, int, int, double);
+}
+Compiled from "BlendingData.java"
+public interface net.minecraft.world.level.levelgen.blending.BlendingData$HeightConsumer {
+  public abstract void consume(int, int, double);
+}
+Compiled from "BlendingData.java"
+public final class net.minecraft.world.level.levelgen.blending.BlendingData$Packed extends java.lang.Record {
+  private final int minSection;
+  private final int maxSection;
+  private final java.util.Optional<double[]> heights;
+  private static final com.mojang.serialization.Codec<double[]> DOUBLE_ARRAY_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.levelgen.blending.BlendingData$Packed> CODEC;
+  public net.minecraft.world.level.levelgen.blending.BlendingData$Packed(int, int, java.util.Optional<double[]>);
+  private static com.mojang.serialization.DataResult<net.minecraft.world.level.levelgen.blending.BlendingData$Packed> validateArraySize(net.minecraft.world.level.levelgen.blending.BlendingData$Packed);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public int minSection();
+  public int maxSection();
+  public java.util.Optional<double[]> heights();
+  private static java.lang.String lambda$validateArraySize$0();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "BlendingData.java"
+public class net.minecraft.world.level.levelgen.blending.BlendingData {
+  private static final double BLENDING_DENSITY_FACTOR;
+  protected static final int CELL_WIDTH;
+  protected static final int CELL_HEIGHT;
+  protected static final int CELL_RATIO;
+  private static final double SOLID_DENSITY;
+  private static final double AIR_DENSITY;
+  private static final int CELLS_PER_SECTION_Y;
+  private static final int QUARTS_PER_SECTION;
+  private static final int CELL_HORIZONTAL_MAX_INDEX_INSIDE;
+  private static final int CELL_HORIZONTAL_MAX_INDEX_OUTSIDE;
+  private static final int CELL_COLUMN_INSIDE_COUNT;
+  private static final int CELL_COLUMN_OUTSIDE_COUNT;
+  private static final int CELL_COLUMN_COUNT;
+  private final net.minecraft.world.level.LevelHeightAccessor areaWithOldGeneration;
+  private static final java.util.List<net.minecraft.world.level.block.Block> SURFACE_BLOCKS;
+  protected static final double NO_VALUE;
+  private boolean hasCalculatedData;
+  private final double[] heights;
+  private final java.util.List<java.util.List<net.minecraft.core.Holder<net.minecraft.world.level.biome.Biome>>> biomes;
+  private final transient double[][] densities;
+  private net.minecraft.world.level.levelgen.blending.BlendingData(int, int, java.util.Optional<double[]>);
+  public static net.minecraft.world.level.levelgen.blending.BlendingData unpack(net.minecraft.world.level.levelgen.blending.BlendingData$Packed);
+  public net.minecraft.world.level.levelgen.blending.BlendingData$Packed pack();
+  public static net.minecraft.world.level.levelgen.blending.BlendingData getOrUpdateBlendingData(net.minecraft.server.level.WorldGenRegion, int, int);
+  public static java.util.Set<net.minecraft.core.Direction8> sideByGenerationAge(net.minecraft.world.level.WorldGenLevel, int, int, boolean);
+  private void calculateData(net.minecraft.world.level.chunk.ChunkAccess, java.util.Set<net.minecraft.core.Direction8>);
+  private void addValuesForColumn(int, net.minecraft.world.level.chunk.ChunkAccess, int, int);
+  private int getHeightAtXZ(net.minecraft.world.level.chunk.ChunkAccess, int, int);
+  private static double read1(net.minecraft.world.level.chunk.ChunkAccess, net.minecraft.core.BlockPos$MutableBlockPos);
+  private static double read7(net.minecraft.world.level.chunk.ChunkAccess, net.minecraft.core.BlockPos$MutableBlockPos);
+  private double[] getDensityColumn(net.minecraft.world.level.chunk.ChunkAccess, int, int, int);
+  private java.util.List<net.minecraft.core.Holder<net.minecraft.world.level.biome.Biome>> getBiomeColumn(net.minecraft.world.level.chunk.ChunkAccess, int, int);
+  private static boolean isGround(net.minecraft.world.level.chunk.ChunkAccess, net.minecraft.core.BlockPos);
+  protected double getHeight(int, int, int);
+  private double getDensity(double[], int);
+  protected double getDensity(int, int, int);
+  protected void iterateBiomes(int, int, int, net.minecraft.world.level.levelgen.blending.BlendingData$BiomeConsumer);
+  protected void iterateHeights(int, int, net.minecraft.world.level.levelgen.blending.BlendingData$HeightConsumer);
+  protected void iterateDensities(int, int, int, int, net.minecraft.world.level.levelgen.blending.BlendingData$DensityConsumer);
+  private int cellCountPerColumn();
+  private int quartCountPerColumn();
+  private int getColumnMinY();
+  private int getMinY();
+  private int getCellYIndex(int);
+  private static int getInsideIndex(int, int);
+  private static int getOutsideIndex(int, int);
+  private static int getX(int);
+  private static int getZ(int);
+  private static int zeroIfNegative(int);
+  public net.minecraft.world.level.LevelHeightAccessor getAreaWithOldGeneration();
+  private static double[] lambda$new$0();
+  private static void lambda$new$1(double[]);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.world.level.levelgen.blending.package-info {
+}

@@ -1,0 +1,726 @@
+Compiled from "ServerHandshakePacketListenerImpl.java"
+class net.minecraft.server.network.ServerHandshakePacketListenerImpl$1 {
+  static final int[] $SwitchMap$net$minecraft$network$protocol$handshake$ClientIntent;
+  static {};
+}
+Compiled from "TextFilter.java"
+class net.minecraft.server.network.TextFilter$1 implements net.minecraft.server.network.TextFilter {
+  net.minecraft.server.network.TextFilter$1();
+  public java.util.concurrent.CompletableFuture<net.minecraft.server.network.FilteredText> processStreamMessage(java.lang.String);
+  public java.util.concurrent.CompletableFuture<java.util.List<net.minecraft.server.network.FilteredText>> processMessageBundle(java.util.List<java.lang.String>);
+}
+Compiled from "ServerGamePacketListenerImpl.java"
+public class net.minecraft.server.network.ServerGamePacketListenerImpl extends net.minecraft.server.network.ServerCommonPacketListenerImpl implements net.minecraft.network.protocol.game.ServerGamePacketListener,net.minecraft.server.network.ServerPlayerConnection,net.minecraft.network.TickablePacketListener,net.minecraft.network.protocol.game.GameProtocols$Context {
+  private static final org.slf4j.Logger LOGGER;
+  private static final int NO_BLOCK_UPDATES_TO_ACK;
+  private static final int TRACKED_MESSAGE_DISCONNECT_THRESHOLD;
+  private static final int MAXIMUM_FLYING_TICKS;
+  private static final int ATTACK_INDICATOR_TOLERANCE_TICKS;
+  public static final int CLIENT_LOADED_TIMEOUT_TIME;
+  private static final net.minecraft.network.chat.Component CHAT_VALIDATION_FAILED;
+  private static final net.minecraft.network.chat.Component INVALID_COMMAND_SIGNATURE;
+  private static final int MAX_COMMAND_SUGGESTIONS;
+  public net.minecraft.server.level.ServerPlayer player;
+  public final net.minecraft.server.network.PlayerChunkSender chunkSender;
+  private int tickCount;
+  private int ackBlockChangesUpTo;
+  private final net.minecraft.util.TickThrottler dropSpamThrottler;
+  private final net.minecraft.util.TickThrottler chatSpamThrottler;
+  private final net.minecraft.util.TickThrottler commandSpamThrottler;
+  private double firstGoodX;
+  private double firstGoodY;
+  private double firstGoodZ;
+  private double lastGoodX;
+  private double lastGoodY;
+  private double lastGoodZ;
+  private net.minecraft.world.entity.Entity lastVehicle;
+  private double vehicleFirstGoodX;
+  private double vehicleFirstGoodY;
+  private double vehicleFirstGoodZ;
+  private double vehicleLastGoodX;
+  private double vehicleLastGoodY;
+  private double vehicleLastGoodZ;
+  private net.minecraft.world.phys.Vec3 awaitingPositionFromClient;
+  private int awaitingTeleport;
+  private int awaitingTeleportTime;
+  private boolean clientIsFloating;
+  private int aboveGroundTickCount;
+  private boolean clientVehicleIsFloating;
+  private int aboveGroundVehicleTickCount;
+  private int receivedMovePacketCount;
+  private int knownMovePacketCount;
+  private boolean receivedMovementThisTick;
+  private net.minecraft.network.chat.RemoteChatSession chatSession;
+  private net.minecraft.network.chat.SignedMessageChain$Decoder signedMessageDecoder;
+  private final net.minecraft.network.chat.LastSeenMessagesValidator lastSeenMessages;
+  private int nextChatIndex;
+  private final net.minecraft.network.chat.MessageSignatureCache messageSignatureCache;
+  private final net.minecraft.util.FutureChain chatMessageChain;
+  private boolean waitingForSwitchToConfig;
+  private boolean waitingForRespawn;
+  private int clientLoadedTimeoutTimer;
+  public net.minecraft.server.network.ServerGamePacketListenerImpl(net.minecraft.server.MinecraftServer, net.minecraft.network.Connection, net.minecraft.server.level.ServerPlayer, net.minecraft.server.network.CommonListenerCookie);
+  public void tick();
+  private boolean tickPlayer();
+  private int getMaximumFlyingTicks(net.minecraft.world.entity.Entity);
+  public void resetFlyingTicks();
+  public void resetPosition();
+  public boolean isAcceptingMessages();
+  public boolean shouldHandleMessage(net.minecraft.network.protocol.Packet<?>);
+  protected com.mojang.authlib.GameProfile playerProfile();
+  private <T, R> java.util.concurrent.CompletableFuture<R> filterTextPacket(T, java.util.function.BiFunction<net.minecraft.server.network.TextFilter, T, java.util.concurrent.CompletableFuture<R>>);
+  private java.util.concurrent.CompletableFuture<net.minecraft.server.network.FilteredText> filterTextPacket(java.lang.String);
+  private java.util.concurrent.CompletableFuture<java.util.List<net.minecraft.server.network.FilteredText>> filterTextPacket(java.util.List<java.lang.String>);
+  public void handlePlayerInput(net.minecraft.network.protocol.game.ServerboundPlayerInputPacket);
+  private static boolean containsInvalidValues(double, double, double, float, float);
+  private static double clampHorizontal(double);
+  private static double clampVertical(double);
+  public void handleMoveVehicle(net.minecraft.network.protocol.game.ServerboundMoveVehiclePacket);
+  private boolean noBlocksAround(net.minecraft.world.entity.Entity);
+  public void handleAcceptTeleportPacket(net.minecraft.network.protocol.game.ServerboundAcceptTeleportationPacket);
+  public void handleAcceptPlayerLoad(net.minecraft.network.protocol.game.ServerboundPlayerLoadedPacket);
+  public void handleRecipeBookSeenRecipePacket(net.minecraft.network.protocol.game.ServerboundRecipeBookSeenRecipePacket);
+  public void handleBundleItemSelectedPacket(net.minecraft.network.protocol.game.ServerboundSelectBundleItemPacket);
+  public void handleRecipeBookChangeSettingsPacket(net.minecraft.network.protocol.game.ServerboundRecipeBookChangeSettingsPacket);
+  public void handleSeenAdvancements(net.minecraft.network.protocol.game.ServerboundSeenAdvancementsPacket);
+  public void handleCustomCommandSuggestions(net.minecraft.network.protocol.game.ServerboundCommandSuggestionPacket);
+  public void handleSetCommandBlock(net.minecraft.network.protocol.game.ServerboundSetCommandBlockPacket);
+  public void handleSetCommandMinecart(net.minecraft.network.protocol.game.ServerboundSetCommandMinecartPacket);
+  public void handlePickItemFromBlock(net.minecraft.network.protocol.game.ServerboundPickItemFromBlockPacket);
+  private static void addBlockDataToItem(net.minecraft.world.level.block.state.BlockState, net.minecraft.server.level.ServerLevel, net.minecraft.core.BlockPos, net.minecraft.world.item.ItemStack);
+  public void handlePickItemFromEntity(net.minecraft.network.protocol.game.ServerboundPickItemFromEntityPacket);
+  private void tryPickItem(net.minecraft.world.item.ItemStack);
+  public void handleRenameItem(net.minecraft.network.protocol.game.ServerboundRenameItemPacket);
+  public void handleSetBeaconPacket(net.minecraft.network.protocol.game.ServerboundSetBeaconPacket);
+  public void handleSetGameRule(net.minecraft.network.protocol.game.ServerboundSetGameRulePacket);
+  private <T> void setGameRuleValue(net.minecraft.world.level.gamerules.GameRules, net.minecraft.world.level.gamerules.GameRule<T>, java.lang.String);
+  private <T> void broadcastGameRuleChangeToOperators(net.minecraft.world.level.gamerules.GameRule<T>, T);
+  public void handleSetStructureBlock(net.minecraft.network.protocol.game.ServerboundSetStructureBlockPacket);
+  public void handleSetTestBlock(net.minecraft.network.protocol.game.ServerboundSetTestBlockPacket);
+  public void handleTestInstanceBlockAction(net.minecraft.network.protocol.game.ServerboundTestInstanceBlockActionPacket);
+  public void handleSetJigsawBlock(net.minecraft.network.protocol.game.ServerboundSetJigsawBlockPacket);
+  public void handleJigsawGenerate(net.minecraft.network.protocol.game.ServerboundJigsawGeneratePacket);
+  public void handleSelectTrade(net.minecraft.network.protocol.game.ServerboundSelectTradePacket);
+  public void handleEditBook(net.minecraft.network.protocol.game.ServerboundEditBookPacket);
+  private void updateBookContents(java.util.List<net.minecraft.server.network.FilteredText>, int);
+  private void signBook(net.minecraft.server.network.FilteredText, java.util.List<net.minecraft.server.network.FilteredText>, int);
+  private net.minecraft.server.network.Filterable<java.lang.String> filterableFromOutgoing(net.minecraft.server.network.FilteredText);
+  public void handleEntityTagQuery(net.minecraft.network.protocol.game.ServerboundEntityTagQueryPacket);
+  public void handleContainerSlotStateChanged(net.minecraft.network.protocol.game.ServerboundContainerSlotStateChangedPacket);
+  public void handleBlockEntityTagQuery(net.minecraft.network.protocol.game.ServerboundBlockEntityTagQueryPacket);
+  public void handleMovePlayer(net.minecraft.network.protocol.game.ServerboundMovePlayerPacket);
+  private boolean shouldCheckPlayerMovement(boolean);
+  private boolean updateAwaitingTeleport();
+  private boolean isEntityCollidingWithAnythingNew(net.minecraft.world.level.LevelReader, net.minecraft.world.entity.Entity, net.minecraft.world.phys.AABB, double, double, double);
+  public void teleport(double, double, double, float, float);
+  public void teleport(net.minecraft.world.entity.PositionMoveRotation, java.util.Set<net.minecraft.world.entity.Relative>);
+  public void handlePlayerAction(net.minecraft.network.protocol.game.ServerboundPlayerActionPacket);
+  private static boolean wasBlockPlacementAttempt(net.minecraft.server.level.ServerPlayer, net.minecraft.world.item.ItemStack);
+  public void handleUseItemOn(net.minecraft.network.protocol.game.ServerboundUseItemOnPacket);
+  public void handleUseItem(net.minecraft.network.protocol.game.ServerboundUseItemPacket);
+  public void handleTeleportToEntityPacket(net.minecraft.network.protocol.game.ServerboundTeleportToEntityPacket);
+  public void handlePaddleBoat(net.minecraft.network.protocol.game.ServerboundPaddleBoatPacket);
+  public void onDisconnect(net.minecraft.network.DisconnectionDetails);
+  private void removePlayerFromWorld();
+  public void ackBlockChangesUpTo(int);
+  public void handleSetCarriedItem(net.minecraft.network.protocol.game.ServerboundSetCarriedItemPacket);
+  public void handleChat(net.minecraft.network.protocol.game.ServerboundChatPacket);
+  public void handleChatCommand(net.minecraft.network.protocol.game.ServerboundChatCommandPacket);
+  private void performUnsignedChatCommand(java.lang.String);
+  public void handleSignedChatCommand(net.minecraft.network.protocol.game.ServerboundChatCommandSignedPacket);
+  private void performSignedChatCommand(net.minecraft.network.protocol.game.ServerboundChatCommandSignedPacket, net.minecraft.network.chat.LastSeenMessages);
+  private void handleMessageDecodeFailure(net.minecraft.network.chat.SignedMessageChain$DecodeException);
+  private <S> java.util.Map<java.lang.String, net.minecraft.network.chat.PlayerChatMessage> collectSignedArguments(net.minecraft.network.protocol.game.ServerboundChatCommandSignedPacket, net.minecraft.network.chat.SignableCommand<S>, net.minecraft.network.chat.LastSeenMessages) throws net.minecraft.network.chat.SignedMessageChain$DecodeException;
+  private <S> java.util.Map<java.lang.String, net.minecraft.network.chat.PlayerChatMessage> collectUnsignedArguments(java.util.List<net.minecraft.network.chat.SignableCommand$Argument<S>>) throws net.minecraft.network.chat.SignedMessageChain$DecodeException;
+  private static <S> net.minecraft.network.chat.SignedMessageChain$DecodeException createSignedArgumentMismatchException(java.lang.String, java.util.List<net.minecraft.commands.arguments.ArgumentSignatures$Entry>, java.util.List<net.minecraft.network.chat.SignableCommand$Argument<S>>);
+  private com.mojang.brigadier.ParseResults<net.minecraft.commands.CommandSourceStack> parseCommand(java.lang.String);
+  private void tryHandleChat(java.lang.String, boolean, java.lang.Runnable);
+  private java.util.Optional<net.minecraft.network.chat.LastSeenMessages> unpackAndApplyLastSeen(net.minecraft.network.chat.LastSeenMessages$Update);
+  private static boolean isChatMessageIllegal(java.lang.String);
+  private net.minecraft.network.chat.PlayerChatMessage getSignedMessage(net.minecraft.network.protocol.game.ServerboundChatPacket, net.minecraft.network.chat.LastSeenMessages) throws net.minecraft.network.chat.SignedMessageChain$DecodeException;
+  private void broadcastChatMessage(net.minecraft.network.chat.PlayerChatMessage);
+  private void detectRateSpam(net.minecraft.util.TickThrottler);
+  private void detectCommandRateSpam();
+  private void detectChatRateSpam();
+  public void handleChatAck(net.minecraft.network.protocol.game.ServerboundChatAckPacket);
+  public void handleAnimate(net.minecraft.network.protocol.game.ServerboundSwingPacket);
+  public void handlePlayerCommand(net.minecraft.network.protocol.game.ServerboundPlayerCommandPacket);
+  public void sendPlayerChatMessage(net.minecraft.network.chat.PlayerChatMessage, net.minecraft.network.chat.ChatType$Bound);
+  public void sendDisguisedChatMessage(net.minecraft.network.chat.Component, net.minecraft.network.chat.ChatType$Bound);
+  public java.net.SocketAddress getRemoteAddress();
+  public void switchToConfig();
+  public void handlePingRequest(net.minecraft.network.protocol.ping.ServerboundPingRequestPacket);
+  public void handleAttack(net.minecraft.network.protocol.game.ServerboundAttackPacket);
+  public void handleInteract(net.minecraft.network.protocol.game.ServerboundInteractPacket);
+  public void handleSpectatorAction(net.minecraft.network.protocol.game.ServerboundSpectatorActionPacket);
+  public void handleClientCommand(net.minecraft.network.protocol.game.ServerboundClientCommandPacket);
+  private void sendGameRuleValues();
+  private static <T> void addGameRuleValue(net.minecraft.world.level.gamerules.GameRules, java.util.Map<net.minecraft.resources.ResourceKey<net.minecraft.world.level.gamerules.GameRule<?>>, java.lang.String>, net.minecraft.world.level.gamerules.GameRule<T>);
+  public void handleContainerClose(net.minecraft.network.protocol.game.ServerboundContainerClosePacket);
+  public void handleContainerClick(net.minecraft.network.protocol.game.ServerboundContainerClickPacket);
+  public void handlePlaceRecipe(net.minecraft.network.protocol.game.ServerboundPlaceRecipePacket);
+  public void handleContainerButtonClick(net.minecraft.network.protocol.game.ServerboundContainerButtonClickPacket);
+  public void handleSetCreativeModeSlot(net.minecraft.network.protocol.game.ServerboundSetCreativeModeSlotPacket);
+  public void handleSignUpdate(net.minecraft.network.protocol.game.ServerboundSignUpdatePacket);
+  private void updateSignText(net.minecraft.network.protocol.game.ServerboundSignUpdatePacket, java.util.List<net.minecraft.server.network.FilteredText>);
+  public void handlePlayerAbilities(net.minecraft.network.protocol.game.ServerboundPlayerAbilitiesPacket);
+  public void handleClientInformation(net.minecraft.network.protocol.common.ServerboundClientInformationPacket);
+  public void handleChangeDifficulty(net.minecraft.network.protocol.game.ServerboundChangeDifficultyPacket);
+  public void handleChangeGameMode(net.minecraft.network.protocol.game.ServerboundChangeGameModePacket);
+  public void handleLockDifficulty(net.minecraft.network.protocol.game.ServerboundLockDifficultyPacket);
+  public void handleChatSessionUpdate(net.minecraft.network.protocol.game.ServerboundChatSessionUpdatePacket);
+  public void handleConfigurationAcknowledged(net.minecraft.network.protocol.game.ServerboundConfigurationAcknowledgedPacket);
+  public void handleChunkBatchReceived(net.minecraft.network.protocol.game.ServerboundChunkBatchReceivedPacket);
+  public void handleDebugSubscriptionRequest(net.minecraft.network.protocol.game.ServerboundDebugSubscriptionRequestPacket);
+  private void resetPlayerChatState(net.minecraft.network.chat.RemoteChatSession);
+  public void handleCustomPayload(net.minecraft.network.protocol.common.ServerboundCustomPayloadPacket);
+  public void handleClientTickEnd(net.minecraft.network.protocol.game.ServerboundClientTickEndPacket);
+  private void handlePlayerKnownMovement(net.minecraft.world.phys.Vec3);
+  public boolean hasInfiniteMaterials();
+  public net.minecraft.server.level.ServerPlayer getPlayer();
+  public boolean hasClientLoaded();
+  public void tickClientLoadTimeout();
+  private void markClientLoaded();
+  public void markClientUnloadedAfterDeath();
+  private void restartClientLoadTimerAfterRespawn();
+  private void lambda$resetPlayerChatState$0(net.minecraft.network.chat.RemoteChatSession);
+  private void lambda$handleSignUpdate$0(net.minecraft.network.protocol.game.ServerboundSignUpdatePacket, java.util.List);
+  private static void lambda$addGameRuleValue$0(java.util.Map, net.minecraft.world.level.gamerules.GameRule, net.minecraft.world.level.gamerules.GameRules, net.minecraft.resources.ResourceKey);
+  private static void lambda$sendGameRuleValues$0(net.minecraft.world.level.gamerules.GameRules, java.util.Map, net.minecraft.world.level.gamerules.GameRule);
+  private net.minecraft.commands.CommandSourceStack lambda$performSignedChatCommand$0(net.minecraft.commands.CommandSigningContext, net.minecraft.commands.CommandSourceStack);
+  private void lambda$handleSignedChatCommand$0(net.minecraft.network.protocol.game.ServerboundChatCommandSignedPacket, java.util.Optional);
+  private void lambda$handleChatCommand$0(net.minecraft.network.protocol.game.ServerboundChatCommandPacket);
+  private void lambda$handleChat$0(net.minecraft.network.protocol.game.ServerboundChatPacket, java.util.Optional);
+  private void lambda$handleChat$1(net.minecraft.network.chat.PlayerChatMessage, net.minecraft.network.chat.Component, net.minecraft.server.network.FilteredText);
+  private net.minecraft.server.network.Filterable lambda$signBook$0(net.minecraft.server.network.FilteredText);
+  private void lambda$handleEditBook$1(int, java.util.List);
+  private void lambda$handleEditBook$0(int, java.util.List);
+  private java.util.Optional lambda$handleTestInstanceBlockAction$0(net.minecraft.resources.ResourceKey);
+  private static void lambda$broadcastGameRuleChangeToOperators$1(net.minecraft.network.chat.Component, net.minecraft.server.level.ServerPlayer);
+  private static boolean lambda$broadcastGameRuleChangeToOperators$0(net.minecraft.server.players.PlayerList, net.minecraft.server.level.ServerPlayer);
+  private void lambda$setGameRuleValue$0(net.minecraft.world.level.gamerules.GameRules, net.minecraft.world.level.gamerules.GameRule, java.lang.Object);
+  private void lambda$handleCustomCommandSuggestions$0(net.minecraft.network.protocol.game.ServerboundCommandSuggestionPacket, com.mojang.brigadier.suggestion.Suggestions);
+  private java.lang.Object lambda$filterTextPacket$0(java.lang.Object);
+  static {};
+}
+Compiled from "EventLoopGroupHolder.java"
+public abstract class net.minecraft.server.network.EventLoopGroupHolder {
+  private static final net.minecraft.server.network.EventLoopGroupHolder NIO;
+  private static final net.minecraft.server.network.EventLoopGroupHolder EPOLL;
+  private static final net.minecraft.server.network.EventLoopGroupHolder KQUEUE;
+  private static final net.minecraft.server.network.EventLoopGroupHolder LOCAL;
+  private final java.lang.String type;
+  private final java.lang.Class<? extends io.netty.channel.Channel> channelCls;
+  private final java.lang.Class<? extends io.netty.channel.ServerChannel> serverChannelCls;
+  private volatile io.netty.channel.EventLoopGroup group;
+  public static net.minecraft.server.network.EventLoopGroupHolder remote(boolean);
+  public static net.minecraft.server.network.EventLoopGroupHolder local();
+  private net.minecraft.server.network.EventLoopGroupHolder(java.lang.String, java.lang.Class<? extends io.netty.channel.Channel>, java.lang.Class<? extends io.netty.channel.ServerChannel>);
+  private java.util.concurrent.ThreadFactory createThreadFactory();
+  protected abstract io.netty.channel.IoHandlerFactory ioHandlerFactory();
+  private io.netty.channel.EventLoopGroup createEventLoopGroup();
+  public io.netty.channel.EventLoopGroup eventLoopGroup();
+  public java.lang.Class<? extends io.netty.channel.Channel> channelCls();
+  public java.lang.Class<? extends io.netty.channel.ServerChannel> serverChannelCls();
+  static {};
+}
+Compiled from "PlayerChunkSender.java"
+public class net.minecraft.server.network.PlayerChunkSender {
+  private static final org.slf4j.Logger LOGGER;
+  public static final float MIN_CHUNKS_PER_TICK;
+  public static final float MAX_CHUNKS_PER_TICK;
+  private static final float START_CHUNKS_PER_TICK;
+  private static final int MAX_UNACKNOWLEDGED_BATCHES;
+  private final it.unimi.dsi.fastutil.longs.LongSet pendingChunks;
+  private final boolean memoryConnection;
+  private float desiredChunksPerTick;
+  private float batchQuota;
+  private int unacknowledgedBatches;
+  private int maxUnacknowledgedBatches;
+  public net.minecraft.server.network.PlayerChunkSender(boolean);
+  public void markChunkPendingToSend(net.minecraft.world.level.chunk.LevelChunk);
+  public void dropChunk(net.minecraft.server.level.ServerPlayer, net.minecraft.world.level.ChunkPos);
+  public void sendNextChunks(net.minecraft.server.level.ServerPlayer);
+  private static void sendChunk(net.minecraft.server.network.ServerGamePacketListenerImpl, net.minecraft.server.level.ServerLevel, net.minecraft.world.level.chunk.LevelChunk);
+  private java.util.List<net.minecraft.world.level.chunk.LevelChunk> collectChunksToSend(net.minecraft.server.level.ChunkMap, net.minecraft.world.level.ChunkPos);
+  public void onChunkBatchReceivedByClient(float);
+  public boolean isPending(long);
+  private static int lambda$collectChunksToSend$0(net.minecraft.world.level.ChunkPos, net.minecraft.world.level.chunk.LevelChunk);
+  static {};
+}
+Compiled from "ServerConnectionListener.java"
+class net.minecraft.server.network.ServerConnectionListener$3 extends io.netty.channel.ChannelInitializer<io.netty.channel.Channel> {
+  final java.util.UUID val$profileId;
+  final net.minecraft.server.network.ServerConnectionListener this$0;
+  net.minecraft.server.network.ServerConnectionListener$3(net.minecraft.server.network.ServerConnectionListener, java.util.UUID);
+  protected void initChannel(io.netty.channel.Channel);
+}
+Compiled from "ServerCommonPacketListenerImpl.java"
+public abstract class net.minecraft.server.network.ServerCommonPacketListenerImpl implements net.minecraft.network.protocol.common.ServerCommonPacketListener {
+  private static final org.slf4j.Logger LOGGER;
+  public static final int LATENCY_CHECK_INTERVAL;
+  private static final int CLOSED_LISTENER_TIMEOUT;
+  private static final net.minecraft.network.chat.Component TIMEOUT_DISCONNECTION_MESSAGE;
+  static final net.minecraft.network.chat.Component DISCONNECT_UNEXPECTED_QUERY;
+  protected final net.minecraft.server.MinecraftServer server;
+  protected final net.minecraft.network.Connection connection;
+  private final boolean transferred;
+  private long keepAliveTime;
+  private boolean keepAlivePending;
+  private long keepAliveChallenge;
+  private long closedListenerTime;
+  private boolean closed;
+  private int latency;
+  private volatile boolean suspendFlushingOnServerThread;
+  public net.minecraft.server.network.ServerCommonPacketListenerImpl(net.minecraft.server.MinecraftServer, net.minecraft.network.Connection, net.minecraft.server.network.CommonListenerCookie);
+  private void close();
+  public void onDisconnect(net.minecraft.network.DisconnectionDetails);
+  public void onPacketError(net.minecraft.network.protocol.Packet, java.lang.Exception) throws net.minecraft.ReportedException;
+  public void handleKeepAlive(net.minecraft.network.protocol.common.ServerboundKeepAlivePacket);
+  public void handlePong(net.minecraft.network.protocol.common.ServerboundPongPacket);
+  public void handleCustomPayload(net.minecraft.network.protocol.common.ServerboundCustomPayloadPacket);
+  public void handleCustomClickAction(net.minecraft.network.protocol.common.ServerboundCustomClickActionPacket);
+  public void handleResourcePackResponse(net.minecraft.network.protocol.common.ServerboundResourcePackPacket);
+  public void handleCookieResponse(net.minecraft.network.protocol.cookie.ServerboundCookieResponsePacket);
+  protected void keepConnectionAlive();
+  private boolean checkIfClosed(long);
+  public void suspendFlushing();
+  public void resumeFlushing();
+  public void send(net.minecraft.network.protocol.Packet<?>);
+  public void send(net.minecraft.network.protocol.Packet<?>, io.netty.channel.ChannelFutureListener);
+  public void disconnect(net.minecraft.network.chat.Component);
+  public void disconnect(net.minecraft.network.DisconnectionDetails);
+  protected boolean isSingleplayerOwner();
+  protected abstract com.mojang.authlib.GameProfile playerProfile();
+  public com.mojang.authlib.GameProfile getOwner();
+  public int latency();
+  protected net.minecraft.server.network.CommonListenerCookie createCookie(net.minecraft.server.level.ClientInformation);
+  private void lambda$disconnect$0(net.minecraft.network.DisconnectionDetails);
+  private static java.lang.String lambda$send$0(net.minecraft.network.protocol.Packet) throws java.lang.Exception;
+  static {};
+}
+Compiled from "ServerTextFilter.java"
+public class net.minecraft.server.network.ServerTextFilter$RequestFailedException extends java.lang.RuntimeException {
+  protected net.minecraft.server.network.ServerTextFilter$RequestFailedException(java.lang.String);
+}
+Compiled from "ServerStatusPacketListenerImpl.java"
+public class net.minecraft.server.network.ServerStatusPacketListenerImpl implements net.minecraft.network.protocol.status.ServerStatusPacketListener {
+  private static final net.minecraft.network.chat.Component DISCONNECT_REASON;
+  private final net.minecraft.network.protocol.status.ServerStatus status;
+  private final net.minecraft.network.Connection connection;
+  private boolean hasRequestedStatus;
+  public net.minecraft.server.network.ServerStatusPacketListenerImpl(net.minecraft.network.protocol.status.ServerStatus, net.minecraft.network.Connection);
+  public void onDisconnect(net.minecraft.network.DisconnectionDetails);
+  public boolean isAcceptingMessages();
+  public void handleStatusRequest(net.minecraft.network.protocol.status.ServerboundStatusRequestPacket);
+  public void handlePingRequest(net.minecraft.network.protocol.ping.ServerboundPingRequestPacket);
+  static {};
+}
+Compiled from "LegacyProtocolUtils.java"
+public class net.minecraft.server.network.LegacyProtocolUtils {
+  public static final int CUSTOM_PAYLOAD_PACKET_ID;
+  public static final java.lang.String CUSTOM_PAYLOAD_PACKET_PING_CHANNEL;
+  public static final int GET_INFO_PACKET_ID;
+  public static final int GET_INFO_PACKET_VERSION_1;
+  public static final int DISCONNECT_PACKET_ID;
+  public static final int FAKE_PROTOCOL_VERSION;
+  public net.minecraft.server.network.LegacyProtocolUtils();
+  public static void writeLegacyString(io.netty.buffer.ByteBuf, java.lang.String);
+  public static java.lang.String readLegacyString(io.netty.buffer.ByteBuf);
+}
+Compiled from "ServerLoginPacketListenerImpl.java"
+final class net.minecraft.server.network.ServerLoginPacketListenerImpl$State extends java.lang.Enum<net.minecraft.server.network.ServerLoginPacketListenerImpl$State> {
+  public static final net.minecraft.server.network.ServerLoginPacketListenerImpl$State HELLO;
+  public static final net.minecraft.server.network.ServerLoginPacketListenerImpl$State KEY;
+  public static final net.minecraft.server.network.ServerLoginPacketListenerImpl$State AUTHENTICATING;
+  public static final net.minecraft.server.network.ServerLoginPacketListenerImpl$State NEGOTIATING;
+  public static final net.minecraft.server.network.ServerLoginPacketListenerImpl$State VERIFYING;
+  public static final net.minecraft.server.network.ServerLoginPacketListenerImpl$State WAITING_FOR_DUPE_DISCONNECT;
+  public static final net.minecraft.server.network.ServerLoginPacketListenerImpl$State PROTOCOL_SWITCHING;
+  public static final net.minecraft.server.network.ServerLoginPacketListenerImpl$State ACCEPTED;
+  private static final net.minecraft.server.network.ServerLoginPacketListenerImpl$State[] $VALUES;
+  public static net.minecraft.server.network.ServerLoginPacketListenerImpl$State[] values();
+  public static net.minecraft.server.network.ServerLoginPacketListenerImpl$State valueOf(java.lang.String);
+  private net.minecraft.server.network.ServerLoginPacketListenerImpl$State();
+  private static net.minecraft.server.network.ServerLoginPacketListenerImpl$State[] $values();
+  static {};
+}
+Compiled from "CommonListenerCookie.java"
+public final class net.minecraft.server.network.CommonListenerCookie extends java.lang.Record {
+  private final com.mojang.authlib.GameProfile gameProfile;
+  private final int latency;
+  private final net.minecraft.server.level.ClientInformation clientInformation;
+  private final boolean transferred;
+  public net.minecraft.server.network.CommonListenerCookie(com.mojang.authlib.GameProfile, int, net.minecraft.server.level.ClientInformation, boolean);
+  public static net.minecraft.server.network.CommonListenerCookie createInitial(com.mojang.authlib.GameProfile, boolean);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public com.mojang.authlib.GameProfile gameProfile();
+  public int latency();
+  public net.minecraft.server.level.ClientInformation clientInformation();
+  public boolean transferred();
+}
+Compiled from "PlayerSafetyServiceTextFilter.java"
+public class net.minecraft.server.network.PlayerSafetyServiceTextFilter extends net.minecraft.server.network.ServerTextFilter {
+  private final com.microsoft.aad.msal4j.ConfidentialClientApplication client;
+  private final com.microsoft.aad.msal4j.ClientCredentialParameters clientParameters;
+  private final java.util.Set<java.lang.String> fullyFilteredEvents;
+  private final int connectionReadTimeoutMs;
+  private net.minecraft.server.network.PlayerSafetyServiceTextFilter(java.net.URL, net.minecraft.server.network.ServerTextFilter$MessageEncoder, net.minecraft.server.network.ServerTextFilter$IgnoreStrategy, java.util.concurrent.ExecutorService, com.microsoft.aad.msal4j.ConfidentialClientApplication, com.microsoft.aad.msal4j.ClientCredentialParameters, java.util.Set<java.lang.String>, int);
+  public static net.minecraft.server.network.ServerTextFilter createTextFilterFromConfig(java.lang.String);
+  private com.microsoft.aad.msal4j.IAuthenticationResult aquireIAuthenticationResult();
+  protected void setAuthorizationProperty(java.net.HttpURLConnection);
+  protected net.minecraft.server.network.FilteredText filterText(java.lang.String, net.minecraft.server.network.ServerTextFilter$IgnoreStrategy, com.google.gson.JsonObject);
+  protected int connectionReadTimeout();
+  private static com.google.gson.JsonObject lambda$createTextFilterFromConfig$1(java.lang.String, java.lang.String, com.mojang.authlib.GameProfile, java.lang.String);
+  private static void lambda$createTextFilterFromConfig$0(java.util.Set, com.google.gson.JsonElement);
+}
+Compiled from "LegacyTextFilter.java"
+class net.minecraft.server.network.LegacyTextFilter$1 extends net.minecraft.server.network.ServerTextFilter$PlayerContext {
+  final net.minecraft.server.network.LegacyTextFilter this$0;
+  net.minecraft.server.network.LegacyTextFilter$1(net.minecraft.server.network.LegacyTextFilter, com.mojang.authlib.GameProfile);
+  public void join();
+  public void leave();
+}
+Compiled from "ServerConfigurationPacketListenerImpl.java"
+public class net.minecraft.server.network.ServerConfigurationPacketListenerImpl extends net.minecraft.server.network.ServerCommonPacketListenerImpl implements net.minecraft.network.protocol.configuration.ServerConfigurationPacketListener,net.minecraft.network.TickablePacketListener {
+  private static final org.slf4j.Logger LOGGER;
+  private static final net.minecraft.network.chat.Component DISCONNECT_REASON_INVALID_DATA;
+  private static final net.minecraft.network.chat.Component DISCONNECT_REASON_CONFIGURATION_ERROR;
+  private final com.mojang.authlib.GameProfile gameProfile;
+  private final java.util.Queue<net.minecraft.server.network.ConfigurationTask> configurationTasks;
+  private net.minecraft.server.network.ConfigurationTask currentTask;
+  private net.minecraft.server.level.ClientInformation clientInformation;
+  private net.minecraft.server.network.config.SynchronizeRegistriesTask synchronizeRegistriesTask;
+  private net.minecraft.server.network.config.PrepareSpawnTask prepareSpawnTask;
+  public net.minecraft.server.network.ServerConfigurationPacketListenerImpl(net.minecraft.server.MinecraftServer, net.minecraft.network.Connection, net.minecraft.server.network.CommonListenerCookie);
+  protected com.mojang.authlib.GameProfile playerProfile();
+  public void onDisconnect(net.minecraft.network.DisconnectionDetails);
+  public boolean isAcceptingMessages();
+  public void startConfiguration();
+  public void returnToWorld();
+  private void addOptionalTasks();
+  public void handleClientInformation(net.minecraft.network.protocol.common.ServerboundClientInformationPacket);
+  public void handleResourcePackResponse(net.minecraft.network.protocol.common.ServerboundResourcePackPacket);
+  public void handleSelectKnownPacks(net.minecraft.network.protocol.configuration.ServerboundSelectKnownPacks);
+  public void handleAcceptCodeOfConduct(net.minecraft.network.protocol.configuration.ServerboundAcceptCodeOfConductPacket);
+  public void handleConfigurationFinished(net.minecraft.network.protocol.configuration.ServerboundFinishConfigurationPacket);
+  public void tick();
+  private void startNextTask();
+  private void finishCurrentTask(net.minecraft.server.network.ConfigurationTask$Type);
+  private void lambda$addOptionalTasks$1(net.minecraft.server.MinecraftServer$ServerResourcePackInfo);
+  private java.lang.String lambda$addOptionalTasks$0(java.util.Map);
+  private static java.util.stream.Stream lambda$startConfiguration$0(net.minecraft.server.packs.PackResources);
+  static {};
+}
+Compiled from "Filterable.java"
+public final class net.minecraft.server.network.Filterable<T> extends java.lang.Record {
+  private final T raw;
+  private final java.util.Optional<T> filtered;
+  public net.minecraft.server.network.Filterable(T, java.util.Optional<T>);
+  public static <T> com.mojang.serialization.Codec<net.minecraft.server.network.Filterable<T>> codec(com.mojang.serialization.Codec<T>);
+  public static <B extends io.netty.buffer.ByteBuf, T> net.minecraft.network.codec.StreamCodec<B, net.minecraft.server.network.Filterable<T>> streamCodec(net.minecraft.network.codec.StreamCodec<B, T>);
+  public static <T> net.minecraft.server.network.Filterable<T> passThrough(T);
+  public static net.minecraft.server.network.Filterable<java.lang.String> from(net.minecraft.server.network.FilteredText);
+  public T get(boolean);
+  public <U> net.minecraft.server.network.Filterable<U> map(java.util.function.Function<T, U>);
+  public <U> java.util.Optional<net.minecraft.server.network.Filterable<U>> resolve(java.util.function.Function<T, java.util.Optional<U>>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public T raw();
+  public java.util.Optional<T> filtered();
+  private static com.mojang.datafixers.kinds.App lambda$codec$0(com.mojang.serialization.Codec, com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+}
+Compiled from "LegacyTextFilter.java"
+public class net.minecraft.server.network.LegacyTextFilter extends net.minecraft.server.network.ServerTextFilter {
+  private static final java.lang.String ENDPOINT;
+  private final java.net.URL joinEndpoint;
+  private final net.minecraft.server.network.LegacyTextFilter$JoinOrLeaveEncoder joinEncoder;
+  private final java.net.URL leaveEndpoint;
+  private final net.minecraft.server.network.LegacyTextFilter$JoinOrLeaveEncoder leaveEncoder;
+  private final java.lang.String authKey;
+  private net.minecraft.server.network.LegacyTextFilter(java.net.URL, net.minecraft.server.network.ServerTextFilter$MessageEncoder, java.net.URL, net.minecraft.server.network.LegacyTextFilter$JoinOrLeaveEncoder, java.net.URL, net.minecraft.server.network.LegacyTextFilter$JoinOrLeaveEncoder, java.lang.String, net.minecraft.server.network.ServerTextFilter$IgnoreStrategy, java.util.concurrent.ExecutorService);
+  public static net.minecraft.server.network.ServerTextFilter createTextFilterFromConfig(java.lang.String);
+  public net.minecraft.server.network.TextFilter createContext(com.mojang.authlib.GameProfile);
+  private void processJoinOrLeave(com.mojang.authlib.GameProfile, java.net.URL, net.minecraft.server.network.LegacyTextFilter$JoinOrLeaveEncoder, java.util.concurrent.Executor);
+  private void processRequest(com.google.gson.JsonObject, java.net.URL) throws java.io.IOException;
+  protected void setAuthorizationProperty(java.net.HttpURLConnection);
+  protected net.minecraft.server.network.FilteredText filterText(java.lang.String, net.minecraft.server.network.ServerTextFilter$IgnoreStrategy, com.google.gson.JsonObject);
+  private void lambda$processJoinOrLeave$0(net.minecraft.server.network.LegacyTextFilter$JoinOrLeaveEncoder, com.mojang.authlib.GameProfile, java.net.URL);
+  private static com.google.gson.JsonObject lambda$createTextFilterFromConfig$2(java.lang.String, java.lang.String, java.lang.String, com.mojang.authlib.GameProfile, java.lang.String);
+  private static com.google.gson.JsonObject lambda$createTextFilterFromConfig$1(int, java.lang.String, java.lang.String, com.mojang.authlib.GameProfile, java.lang.String);
+  private static com.google.gson.JsonObject lambda$createTextFilterFromConfig$0(java.lang.String, java.lang.String, com.mojang.authlib.GameProfile);
+}
+Compiled from "TextFilter.java"
+public interface net.minecraft.server.network.TextFilter {
+  public static final net.minecraft.server.network.TextFilter DUMMY;
+  public default void join();
+  public default void leave();
+  public abstract java.util.concurrent.CompletableFuture<net.minecraft.server.network.FilteredText> processStreamMessage(java.lang.String);
+  public abstract java.util.concurrent.CompletableFuture<java.util.List<net.minecraft.server.network.FilteredText>> processMessageBundle(java.util.List<java.lang.String>);
+  static {};
+}
+Compiled from "FilteredText.java"
+public final class net.minecraft.server.network.FilteredText extends java.lang.Record {
+  private final java.lang.String raw;
+  private final net.minecraft.network.chat.FilterMask mask;
+  public static final net.minecraft.server.network.FilteredText EMPTY;
+  public net.minecraft.server.network.FilteredText(java.lang.String, net.minecraft.network.chat.FilterMask);
+  public static net.minecraft.server.network.FilteredText passThrough(java.lang.String);
+  public static net.minecraft.server.network.FilteredText fullyFiltered(java.lang.String);
+  public java.lang.String filtered();
+  public java.lang.String filteredOrEmpty();
+  public boolean isFiltered();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String raw();
+  public net.minecraft.network.chat.FilterMask mask();
+  static {};
+}
+Compiled from "ServerGamePacketListenerImpl.java"
+class net.minecraft.server.network.ServerGamePacketListenerImpl$1 {
+  static final int[] $SwitchMap$net$minecraft$world$level$block$entity$CommandBlockEntity$Mode;
+  static final int[] $SwitchMap$net$minecraft$network$protocol$game$ServerboundPlayerActionPacket$Action;
+  static final int[] $SwitchMap$net$minecraft$network$protocol$game$ServerboundPlayerCommandPacket$Action;
+  static final int[] $SwitchMap$net$minecraft$network$protocol$game$ServerboundClientCommandPacket$Action;
+  static {};
+}
+Compiled from "ServerConnectionListener.java"
+class net.minecraft.server.network.ServerConnectionListener$LatencySimulator extends io.netty.channel.ChannelInboundHandlerAdapter {
+  private static final io.netty.util.Timer TIMER;
+  private final int delay;
+  private final int jitter;
+  private final java.util.List<net.minecraft.server.network.ServerConnectionListener$LatencySimulator$DelayedMessage> queuedMessages;
+  public net.minecraft.server.network.ServerConnectionListener$LatencySimulator(int, int);
+  public void channelRead(io.netty.channel.ChannelHandlerContext, java.lang.Object);
+  private void delayDownstream(io.netty.channel.ChannelHandlerContext, java.lang.Object);
+  private void onTimeout(io.netty.util.Timeout);
+  static {};
+}
+Compiled from "ServerConnectionListener.java"
+class net.minecraft.server.network.ServerConnectionListener$2 extends io.netty.channel.ChannelInitializer<io.netty.channel.Channel> {
+  final net.minecraft.server.network.ServerConnectionListener this$0;
+  net.minecraft.server.network.ServerConnectionListener$2(net.minecraft.server.network.ServerConnectionListener);
+  protected void initChannel(io.netty.channel.Channel);
+}
+Compiled from "ServerConnectionListener.java"
+final class net.minecraft.server.network.ServerConnectionListener$LatencySimulator$DelayedMessage extends java.lang.Record {
+  private final io.netty.channel.ChannelHandlerContext ctx;
+  private final java.lang.Object msg;
+  private net.minecraft.server.network.ServerConnectionListener$LatencySimulator$DelayedMessage(io.netty.channel.ChannelHandlerContext, java.lang.Object);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public io.netty.channel.ChannelHandlerContext ctx();
+  public java.lang.Object msg();
+}
+Compiled from "ServerTextFilter.java"
+public class net.minecraft.server.network.ServerTextFilter$PlayerContext implements net.minecraft.server.network.TextFilter {
+  protected final com.mojang.authlib.GameProfile profile;
+  protected final java.util.concurrent.Executor streamExecutor;
+  final net.minecraft.server.network.ServerTextFilter this$0;
+  protected net.minecraft.server.network.ServerTextFilter$PlayerContext(net.minecraft.server.network.ServerTextFilter, com.mojang.authlib.GameProfile);
+  public java.util.concurrent.CompletableFuture<java.util.List<net.minecraft.server.network.FilteredText>> processMessageBundle(java.util.List<java.lang.String>);
+  public java.util.concurrent.CompletableFuture<net.minecraft.server.network.FilteredText> processStreamMessage(java.lang.String);
+  private static java.util.List lambda$processMessageBundle$1(java.lang.Throwable);
+  private java.util.concurrent.CompletableFuture lambda$processMessageBundle$0(java.lang.String);
+}
+Compiled from "ServerTextFilter.java"
+public abstract class net.minecraft.server.network.ServerTextFilter implements java.lang.AutoCloseable {
+  protected static final org.slf4j.Logger LOGGER;
+  private static final java.util.concurrent.atomic.AtomicInteger WORKER_COUNT;
+  private static final java.util.concurrent.ThreadFactory THREAD_FACTORY;
+  private final java.net.URL chatEndpoint;
+  private final net.minecraft.server.network.ServerTextFilter$MessageEncoder chatEncoder;
+  private final net.minecraft.server.network.ServerTextFilter$IgnoreStrategy chatIgnoreStrategy;
+  private final java.util.concurrent.ExecutorService workerPool;
+  protected static java.util.concurrent.ExecutorService createWorkerPool(int);
+  protected net.minecraft.server.network.ServerTextFilter(java.net.URL, net.minecraft.server.network.ServerTextFilter$MessageEncoder, net.minecraft.server.network.ServerTextFilter$IgnoreStrategy, java.util.concurrent.ExecutorService);
+  protected static java.net.URL getEndpoint(java.net.URI, com.google.gson.JsonObject, java.lang.String, java.lang.String) throws java.net.MalformedURLException;
+  protected static java.lang.String getEndpointFromConfig(com.google.gson.JsonObject, java.lang.String, java.lang.String);
+  public static net.minecraft.server.network.ServerTextFilter createFromConfig(net.minecraft.server.dedicated.DedicatedServerProperties);
+  protected java.util.concurrent.CompletableFuture<net.minecraft.server.network.FilteredText> requestMessageProcessing(com.mojang.authlib.GameProfile, java.lang.String, net.minecraft.server.network.ServerTextFilter$IgnoreStrategy, java.util.concurrent.Executor);
+  protected abstract net.minecraft.server.network.FilteredText filterText(java.lang.String, net.minecraft.server.network.ServerTextFilter$IgnoreStrategy, com.google.gson.JsonObject);
+  protected net.minecraft.network.chat.FilterMask parseMask(java.lang.String, com.google.gson.JsonArray, net.minecraft.server.network.ServerTextFilter$IgnoreStrategy);
+  public void close();
+  protected void drainStream(java.io.InputStream) throws java.io.IOException;
+  private com.google.gson.JsonObject processRequestResponse(com.google.gson.JsonObject, java.net.URL) throws java.io.IOException;
+  protected java.net.HttpURLConnection makeRequest(com.google.gson.JsonObject, java.net.URL) throws java.io.IOException;
+  protected abstract void setAuthorizationProperty(java.net.HttpURLConnection);
+  protected int connectionReadTimeout();
+  protected java.net.HttpURLConnection getURLConnection(java.net.URL) throws java.io.IOException;
+  public net.minecraft.server.network.TextFilter createContext(com.mojang.authlib.GameProfile);
+  private net.minecraft.server.network.FilteredText lambda$requestMessageProcessing$0(com.mojang.authlib.GameProfile, java.lang.String, net.minecraft.server.network.ServerTextFilter$IgnoreStrategy);
+  private static java.lang.Thread lambda$static$0(java.lang.Runnable);
+  static {};
+}
+Compiled from "MemoryServerHandshakePacketListenerImpl.java"
+public class net.minecraft.server.network.MemoryServerHandshakePacketListenerImpl implements net.minecraft.network.protocol.handshake.ServerHandshakePacketListener {
+  private final net.minecraft.server.MinecraftServer server;
+  private final net.minecraft.network.Connection connection;
+  public net.minecraft.server.network.MemoryServerHandshakePacketListenerImpl(net.minecraft.server.MinecraftServer, net.minecraft.network.Connection);
+  public void handleIntention(net.minecraft.network.protocol.handshake.ClientIntentionPacket);
+  public void onDisconnect(net.minecraft.network.DisconnectionDetails);
+  public boolean isAcceptingMessages();
+}
+Compiled from "LegacyQueryHandler.java"
+public class net.minecraft.server.network.LegacyQueryHandler extends io.netty.channel.ChannelInboundHandlerAdapter {
+  private static final org.slf4j.Logger LOGGER;
+  private final net.minecraft.server.ServerInfo server;
+  public net.minecraft.server.network.LegacyQueryHandler(net.minecraft.server.ServerInfo);
+  public void channelRead(io.netty.channel.ChannelHandlerContext, java.lang.Object);
+  private static boolean readCustomPayloadPacket(io.netty.buffer.ByteBuf);
+  private static java.lang.String createVersion0Response(net.minecraft.server.ServerInfo);
+  private static java.lang.String createVersion1Response(net.minecraft.server.ServerInfo);
+  private static void sendFlushAndClose(io.netty.channel.ChannelHandlerContext, io.netty.buffer.ByteBuf);
+  private static io.netty.buffer.ByteBuf createLegacyDisconnectPacket(io.netty.buffer.ByteBufAllocator, java.lang.String);
+  static {};
+}
+Compiled from "LegacyTextFilter.java"
+interface net.minecraft.server.network.LegacyTextFilter$JoinOrLeaveEncoder {
+  public abstract com.google.gson.JsonObject encode(com.mojang.authlib.GameProfile);
+}
+Compiled from "ServerTextFilter.java"
+public interface net.minecraft.server.network.ServerTextFilter$IgnoreStrategy {
+  public static final net.minecraft.server.network.ServerTextFilter$IgnoreStrategy NEVER_IGNORE;
+  public static final net.minecraft.server.network.ServerTextFilter$IgnoreStrategy IGNORE_FULLY_FILTERED;
+  public static net.minecraft.server.network.ServerTextFilter$IgnoreStrategy ignoreOverThreshold(int);
+  public static net.minecraft.server.network.ServerTextFilter$IgnoreStrategy select(int);
+  public abstract boolean shouldIgnore(java.lang.String, int);
+  private static boolean lambda$ignoreOverThreshold$0(int, java.lang.String, int);
+  private static boolean lambda$static$1(java.lang.String, int);
+  private static boolean lambda$static$0(java.lang.String, int);
+  static {};
+}
+Compiled from "ServerLoginPacketListenerImpl.java"
+class net.minecraft.server.network.ServerLoginPacketListenerImpl$1 extends java.lang.Thread {
+  final java.lang.String val$digest;
+  final net.minecraft.server.network.ServerLoginPacketListenerImpl this$0;
+  net.minecraft.server.network.ServerLoginPacketListenerImpl$1(net.minecraft.server.network.ServerLoginPacketListenerImpl, java.lang.String, java.lang.String);
+  public void run();
+  private java.net.InetAddress getAddress();
+}
+Compiled from "ServerHandshakePacketListenerImpl.java"
+public class net.minecraft.server.network.ServerHandshakePacketListenerImpl implements net.minecraft.network.protocol.handshake.ServerHandshakePacketListener {
+  private static final net.minecraft.network.chat.Component IGNORE_STATUS_REASON;
+  private final net.minecraft.server.MinecraftServer server;
+  private final net.minecraft.network.Connection connection;
+  public net.minecraft.server.network.ServerHandshakePacketListenerImpl(net.minecraft.server.MinecraftServer, net.minecraft.network.Connection);
+  public void handleIntention(net.minecraft.network.protocol.handshake.ClientIntentionPacket);
+  private void beginLogin(net.minecraft.network.protocol.handshake.ClientIntentionPacket, boolean);
+  public void onDisconnect(net.minecraft.network.DisconnectionDetails);
+  public boolean isAcceptingMessages();
+  static {};
+}
+Compiled from "ServerLoginPacketListenerImpl.java"
+public class net.minecraft.server.network.ServerLoginPacketListenerImpl implements net.minecraft.network.protocol.login.ServerLoginPacketListener,net.minecraft.network.TickablePacketListener {
+  private static final java.util.concurrent.atomic.AtomicInteger UNIQUE_THREAD_ID;
+  private static final org.slf4j.Logger LOGGER;
+  private static final int MAX_TICKS_BEFORE_LOGIN;
+  private final byte[] challenge;
+  private final net.minecraft.server.MinecraftServer server;
+  private final net.minecraft.network.Connection connection;
+  private final net.minecraft.server.notifications.ServerActivityMonitor serverActivityMonitor;
+  private volatile net.minecraft.server.network.ServerLoginPacketListenerImpl$State state;
+  private int tick;
+  private java.lang.String requestedUsername;
+  private com.mojang.authlib.GameProfile authenticatedProfile;
+  private final java.lang.String serverId;
+  private final boolean transferred;
+  public net.minecraft.server.network.ServerLoginPacketListenerImpl(net.minecraft.server.MinecraftServer, net.minecraft.network.Connection, boolean);
+  public void tick();
+  public boolean isAcceptingMessages();
+  public void disconnect(net.minecraft.network.chat.Component);
+  private boolean isPlayerAlreadyInWorld(com.mojang.authlib.GameProfile);
+  public void onDisconnect(net.minecraft.network.DisconnectionDetails);
+  public java.lang.String getUserName();
+  public void handleHello(net.minecraft.network.protocol.login.ServerboundHelloPacket);
+  private void startClientVerification(com.mojang.authlib.GameProfile);
+  private void verifyLoginAndFinishConnectionSetup(com.mojang.authlib.GameProfile);
+  private void finishLoginAndWaitForClient(com.mojang.authlib.GameProfile);
+  public void handleKey(net.minecraft.network.protocol.login.ServerboundKeyPacket);
+  public void handleCustomQueryPacket(net.minecraft.network.protocol.login.ServerboundCustomQueryAnswerPacket);
+  public void handleLoginAcknowledgement(net.minecraft.network.protocol.login.ServerboundLoginAcknowledgedPacket);
+  public void fillListenerSpecificCrashDetails(net.minecraft.CrashReport, net.minecraft.CrashReportCategory);
+  public void handleCookieResponse(net.minecraft.network.protocol.cookie.ServerboundCookieResponsePacket);
+  private java.lang.String lambda$fillListenerSpecificCrashDetails$0() throws java.lang.Exception;
+  private void lambda$verifyLoginAndFinishConnectionSetup$0();
+  static {};
+}
+Compiled from "EventLoopGroupHolder.java"
+class net.minecraft.server.network.EventLoopGroupHolder$2 extends net.minecraft.server.network.EventLoopGroupHolder {
+  net.minecraft.server.network.EventLoopGroupHolder$2(java.lang.String, java.lang.Class, java.lang.Class);
+  protected io.netty.channel.IoHandlerFactory ioHandlerFactory();
+}
+Compiled from "ServerPlayerConnection.java"
+public interface net.minecraft.server.network.ServerPlayerConnection {
+  public abstract net.minecraft.server.level.ServerPlayer getPlayer();
+  public abstract void send(net.minecraft.network.protocol.Packet<?>);
+}
+Compiled from "EventLoopGroupHolder.java"
+class net.minecraft.server.network.EventLoopGroupHolder$3 extends net.minecraft.server.network.EventLoopGroupHolder {
+  net.minecraft.server.network.EventLoopGroupHolder$3(java.lang.String, java.lang.Class, java.lang.Class);
+  protected io.netty.channel.IoHandlerFactory ioHandlerFactory();
+}
+Compiled from "package-info.java"
+interface net.minecraft.server.network.package-info {
+}
+Compiled from "ServerConnectionListener.java"
+public class net.minecraft.server.network.ServerConnectionListener {
+  private static final org.slf4j.Logger LOGGER;
+  private final net.minecraft.server.MinecraftServer server;
+  public volatile boolean running;
+  private volatile java.util.UUID sessionId;
+  private final java.util.List<io.netty.channel.ChannelFuture> channels;
+  private final java.util.List<net.minecraft.network.Connection> connections;
+  public net.minecraft.server.network.ServerConnectionListener(net.minecraft.server.MinecraftServer);
+  public void startTcpServerListener(java.net.InetAddress, int) throws java.io.IOException;
+  public java.net.SocketAddress startMemoryChannel();
+  public void acceptChannel(io.netty.channel.Channel, java.util.UUID);
+  public void stop();
+  public void stopTcpServerListener();
+  public void tick();
+  public net.minecraft.server.MinecraftServer getServer();
+  public java.util.List<net.minecraft.network.Connection> getConnections();
+  public java.util.UUID getSessionId();
+  private static void lambda$tick$0(net.minecraft.network.Connection, net.minecraft.network.chat.Component);
+  static {};
+}
+Compiled from "EventLoopGroupHolder.java"
+class net.minecraft.server.network.EventLoopGroupHolder$4 extends net.minecraft.server.network.EventLoopGroupHolder {
+  net.minecraft.server.network.EventLoopGroupHolder$4(java.lang.String, java.lang.Class, java.lang.Class);
+  protected io.netty.channel.IoHandlerFactory ioHandlerFactory();
+}
+Compiled from "ConfigurationTask.java"
+public final class net.minecraft.server.network.ConfigurationTask$Type extends java.lang.Record {
+  private final java.lang.String id;
+  public net.minecraft.server.network.ConfigurationTask$Type(java.lang.String);
+  public java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String id();
+}
+Compiled from "EventLoopGroupHolder.java"
+class net.minecraft.server.network.EventLoopGroupHolder$1 extends net.minecraft.server.network.EventLoopGroupHolder {
+  net.minecraft.server.network.EventLoopGroupHolder$1(java.lang.String, java.lang.Class, java.lang.Class);
+  protected io.netty.channel.IoHandlerFactory ioHandlerFactory();
+}
+Compiled from "ServerConnectionListener.java"
+class net.minecraft.server.network.ServerConnectionListener$1 extends io.netty.channel.ChannelInitializer<io.netty.channel.Channel> {
+  final net.minecraft.server.network.ServerConnectionListener this$0;
+  net.minecraft.server.network.ServerConnectionListener$1(net.minecraft.server.network.ServerConnectionListener);
+  protected void initChannel(io.netty.channel.Channel);
+}
+Compiled from "ConfigurationTask.java"
+public interface net.minecraft.server.network.ConfigurationTask {
+  public abstract void start(java.util.function.Consumer<net.minecraft.network.protocol.Packet<?>>);
+  public default boolean tick();
+  public abstract net.minecraft.server.network.ConfigurationTask$Type type();
+}
+Compiled from "ServerTextFilter.java"
+public interface net.minecraft.server.network.ServerTextFilter$MessageEncoder {
+  public abstract com.google.gson.JsonObject encode(com.mojang.authlib.GameProfile, java.lang.String);
+}

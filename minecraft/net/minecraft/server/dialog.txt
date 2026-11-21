@@ -1,0 +1,236 @@
+Compiled from "ServerLinksDialog.java"
+public final class net.minecraft.server.dialog.ServerLinksDialog extends java.lang.Record implements net.minecraft.server.dialog.ButtonListDialog {
+  private final net.minecraft.server.dialog.CommonDialogData common;
+  private final java.util.Optional<net.minecraft.server.dialog.ActionButton> exitAction;
+  private final int columns;
+  private final int buttonWidth;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.server.dialog.ServerLinksDialog> MAP_CODEC;
+  public net.minecraft.server.dialog.ServerLinksDialog(net.minecraft.server.dialog.CommonDialogData, java.util.Optional<net.minecraft.server.dialog.ActionButton>, int, int);
+  public com.mojang.serialization.MapCodec<net.minecraft.server.dialog.ServerLinksDialog> codec();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.dialog.CommonDialogData common();
+  public java.util.Optional<net.minecraft.server.dialog.ActionButton> exitAction();
+  public int columns();
+  public int buttonWidth();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "DialogAction.java"
+public final class net.minecraft.server.dialog.DialogAction extends java.lang.Enum<net.minecraft.server.dialog.DialogAction> implements net.minecraft.util.StringRepresentable {
+  public static final net.minecraft.server.dialog.DialogAction CLOSE;
+  public static final net.minecraft.server.dialog.DialogAction NONE;
+  public static final net.minecraft.server.dialog.DialogAction WAIT_FOR_RESPONSE;
+  public static final java.util.function.IntFunction<net.minecraft.server.dialog.DialogAction> BY_ID;
+  public static final com.mojang.serialization.Codec<net.minecraft.server.dialog.DialogAction> CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, net.minecraft.server.dialog.DialogAction> STREAM_CODEC;
+  private final int id;
+  private final java.lang.String name;
+  private static final net.minecraft.server.dialog.DialogAction[] $VALUES;
+  public static net.minecraft.server.dialog.DialogAction[] values();
+  public static net.minecraft.server.dialog.DialogAction valueOf(java.lang.String);
+  private net.minecraft.server.dialog.DialogAction(int, java.lang.String);
+  public java.lang.String getSerializedName();
+  public boolean willUnpause();
+  private static net.minecraft.server.dialog.DialogAction[] $values();
+  private static int lambda$static$1(net.minecraft.server.dialog.DialogAction);
+  private static int lambda$static$0(net.minecraft.server.dialog.DialogAction);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.server.dialog.package-info {
+}
+Compiled from "Dialogs.java"
+public class net.minecraft.server.dialog.Dialogs {
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.server.dialog.Dialog> SERVER_LINKS;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.server.dialog.Dialog> CUSTOM_OPTIONS;
+  public static final net.minecraft.resources.ResourceKey<net.minecraft.server.dialog.Dialog> QUICK_ACTIONS;
+  public static final int BIG_BUTTON_WIDTH;
+  private static final net.minecraft.server.dialog.ActionButton DEFAULT_BACK_BUTTON;
+  public net.minecraft.server.dialog.Dialogs();
+  private static net.minecraft.resources.ResourceKey<net.minecraft.server.dialog.Dialog> create(java.lang.String);
+  public static void bootstrap(net.minecraft.data.worldgen.BootstrapContext<net.minecraft.server.dialog.Dialog>);
+  static {};
+}
+Compiled from "Dialog.java"
+public interface net.minecraft.server.dialog.Dialog {
+  public static final com.mojang.serialization.Codec<java.lang.Integer> WIDTH_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.server.dialog.Dialog> DIRECT_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.core.Holder<net.minecraft.server.dialog.Dialog>> CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.core.HolderSet<net.minecraft.server.dialog.Dialog>> LIST_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<net.minecraft.network.RegistryFriendlyByteBuf, net.minecraft.core.Holder<net.minecraft.server.dialog.Dialog>> STREAM_CODEC;
+  public static final net.minecraft.network.codec.StreamCodec<io.netty.buffer.ByteBuf, net.minecraft.server.dialog.Dialog> CONTEXT_FREE_STREAM_CODEC;
+  public abstract net.minecraft.server.dialog.CommonDialogData common();
+  public abstract com.mojang.serialization.MapCodec<? extends net.minecraft.server.dialog.Dialog> codec();
+  public abstract java.util.Optional<net.minecraft.server.dialog.action.Action> onCancel();
+  private static com.mojang.serialization.MapCodec lambda$static$0(com.mojang.serialization.MapCodec);
+  static {};
+}
+Compiled from "MultiActionDialog.java"
+public final class net.minecraft.server.dialog.MultiActionDialog extends java.lang.Record implements net.minecraft.server.dialog.ButtonListDialog {
+  private final net.minecraft.server.dialog.CommonDialogData common;
+  private final java.util.List<net.minecraft.server.dialog.ActionButton> actions;
+  private final java.util.Optional<net.minecraft.server.dialog.ActionButton> exitAction;
+  private final int columns;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.server.dialog.MultiActionDialog> MAP_CODEC;
+  public net.minecraft.server.dialog.MultiActionDialog(net.minecraft.server.dialog.CommonDialogData, java.util.List<net.minecraft.server.dialog.ActionButton>, java.util.Optional<net.minecraft.server.dialog.ActionButton>, int);
+  public com.mojang.serialization.MapCodec<net.minecraft.server.dialog.MultiActionDialog> codec();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.dialog.CommonDialogData common();
+  public java.util.List<net.minecraft.server.dialog.ActionButton> actions();
+  public java.util.Optional<net.minecraft.server.dialog.ActionButton> exitAction();
+  public int columns();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "CommonButtonData.java"
+public final class net.minecraft.server.dialog.CommonButtonData extends java.lang.Record {
+  private final net.minecraft.network.chat.Component label;
+  private final java.util.Optional<net.minecraft.network.chat.Component> tooltip;
+  private final int width;
+  public static final int DEFAULT_WIDTH;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.server.dialog.CommonButtonData> MAP_CODEC;
+  public net.minecraft.server.dialog.CommonButtonData(net.minecraft.network.chat.Component, int);
+  public net.minecraft.server.dialog.CommonButtonData(net.minecraft.network.chat.Component, java.util.Optional<net.minecraft.network.chat.Component>, int);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.network.chat.Component label();
+  public java.util.Optional<net.minecraft.network.chat.Component> tooltip();
+  public int width();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "CommonDialogData.java"
+public final class net.minecraft.server.dialog.CommonDialogData extends java.lang.Record {
+  private final net.minecraft.network.chat.Component title;
+  private final java.util.Optional<net.minecraft.network.chat.Component> externalTitle;
+  private final boolean canCloseWithEscape;
+  private final boolean pause;
+  private final net.minecraft.server.dialog.DialogAction afterAction;
+  private final java.util.List<net.minecraft.server.dialog.body.DialogBody> body;
+  private final java.util.List<net.minecraft.server.dialog.Input> inputs;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.server.dialog.CommonDialogData> MAP_CODEC;
+  public net.minecraft.server.dialog.CommonDialogData(net.minecraft.network.chat.Component, java.util.Optional<net.minecraft.network.chat.Component>, boolean, boolean, net.minecraft.server.dialog.DialogAction, java.util.List<net.minecraft.server.dialog.body.DialogBody>, java.util.List<net.minecraft.server.dialog.Input>);
+  public net.minecraft.network.chat.Component computeExternalTitle();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.network.chat.Component title();
+  public java.util.Optional<net.minecraft.network.chat.Component> externalTitle();
+  public boolean canCloseWithEscape();
+  public boolean pause();
+  public net.minecraft.server.dialog.DialogAction afterAction();
+  public java.util.List<net.minecraft.server.dialog.body.DialogBody> body();
+  public java.util.List<net.minecraft.server.dialog.Input> inputs();
+  private static com.mojang.serialization.DataResult lambda$static$1(net.minecraft.server.dialog.CommonDialogData);
+  private static java.lang.String lambda$static$2();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "ActionButton.java"
+public final class net.minecraft.server.dialog.ActionButton extends java.lang.Record {
+  private final net.minecraft.server.dialog.CommonButtonData button;
+  private final java.util.Optional<net.minecraft.server.dialog.action.Action> action;
+  public static final com.mojang.serialization.Codec<net.minecraft.server.dialog.ActionButton> CODEC;
+  public net.minecraft.server.dialog.ActionButton(net.minecraft.server.dialog.CommonButtonData, java.util.Optional<net.minecraft.server.dialog.action.Action>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.dialog.CommonButtonData button();
+  public java.util.Optional<net.minecraft.server.dialog.action.Action> action();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "DialogTypes.java"
+public class net.minecraft.server.dialog.DialogTypes {
+  public net.minecraft.server.dialog.DialogTypes();
+  public static com.mojang.serialization.MapCodec<? extends net.minecraft.server.dialog.Dialog> bootstrap(net.minecraft.core.Registry<com.mojang.serialization.MapCodec<? extends net.minecraft.server.dialog.Dialog>>);
+}
+Compiled from "SimpleDialog.java"
+public interface net.minecraft.server.dialog.SimpleDialog extends net.minecraft.server.dialog.Dialog {
+  public abstract com.mojang.serialization.MapCodec<? extends net.minecraft.server.dialog.SimpleDialog> codec();
+  public abstract java.util.List<net.minecraft.server.dialog.ActionButton> mainActions();
+}
+Compiled from "Input.java"
+public final class net.minecraft.server.dialog.Input extends java.lang.Record {
+  private final java.lang.String key;
+  private final net.minecraft.server.dialog.input.InputControl control;
+  public static final com.mojang.serialization.Codec<net.minecraft.server.dialog.Input> CODEC;
+  public net.minecraft.server.dialog.Input(java.lang.String, net.minecraft.server.dialog.input.InputControl);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String key();
+  public net.minecraft.server.dialog.input.InputControl control();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "NoticeDialog.java"
+public final class net.minecraft.server.dialog.NoticeDialog extends java.lang.Record implements net.minecraft.server.dialog.SimpleDialog {
+  private final net.minecraft.server.dialog.CommonDialogData common;
+  private final net.minecraft.server.dialog.ActionButton action;
+  public static final net.minecraft.server.dialog.ActionButton DEFAULT_ACTION;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.server.dialog.NoticeDialog> MAP_CODEC;
+  public net.minecraft.server.dialog.NoticeDialog(net.minecraft.server.dialog.CommonDialogData, net.minecraft.server.dialog.ActionButton);
+  public com.mojang.serialization.MapCodec<net.minecraft.server.dialog.NoticeDialog> codec();
+  public java.util.Optional<net.minecraft.server.dialog.action.Action> onCancel();
+  public java.util.List<net.minecraft.server.dialog.ActionButton> mainActions();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.dialog.CommonDialogData common();
+  public net.minecraft.server.dialog.ActionButton action();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "ButtonListDialog.java"
+public interface net.minecraft.server.dialog.ButtonListDialog extends net.minecraft.server.dialog.Dialog {
+  public abstract com.mojang.serialization.MapCodec<? extends net.minecraft.server.dialog.ButtonListDialog> codec();
+  public abstract int columns();
+  public abstract java.util.Optional<net.minecraft.server.dialog.ActionButton> exitAction();
+  public default java.util.Optional<net.minecraft.server.dialog.action.Action> onCancel();
+}
+Compiled from "ConfirmationDialog.java"
+public final class net.minecraft.server.dialog.ConfirmationDialog extends java.lang.Record implements net.minecraft.server.dialog.SimpleDialog {
+  private final net.minecraft.server.dialog.CommonDialogData common;
+  private final net.minecraft.server.dialog.ActionButton yesButton;
+  private final net.minecraft.server.dialog.ActionButton noButton;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.server.dialog.ConfirmationDialog> MAP_CODEC;
+  public net.minecraft.server.dialog.ConfirmationDialog(net.minecraft.server.dialog.CommonDialogData, net.minecraft.server.dialog.ActionButton, net.minecraft.server.dialog.ActionButton);
+  public com.mojang.serialization.MapCodec<net.minecraft.server.dialog.ConfirmationDialog> codec();
+  public java.util.Optional<net.minecraft.server.dialog.action.Action> onCancel();
+  public java.util.List<net.minecraft.server.dialog.ActionButton> mainActions();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.dialog.CommonDialogData common();
+  public net.minecraft.server.dialog.ActionButton yesButton();
+  public net.minecraft.server.dialog.ActionButton noButton();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "DialogListDialog.java"
+public final class net.minecraft.server.dialog.DialogListDialog extends java.lang.Record implements net.minecraft.server.dialog.ButtonListDialog {
+  private final net.minecraft.server.dialog.CommonDialogData common;
+  private final net.minecraft.core.HolderSet<net.minecraft.server.dialog.Dialog> dialogs;
+  private final java.util.Optional<net.minecraft.server.dialog.ActionButton> exitAction;
+  private final int columns;
+  private final int buttonWidth;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.server.dialog.DialogListDialog> MAP_CODEC;
+  public net.minecraft.server.dialog.DialogListDialog(net.minecraft.server.dialog.CommonDialogData, net.minecraft.core.HolderSet<net.minecraft.server.dialog.Dialog>, java.util.Optional<net.minecraft.server.dialog.ActionButton>, int, int);
+  public com.mojang.serialization.MapCodec<net.minecraft.server.dialog.DialogListDialog> codec();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.server.dialog.CommonDialogData common();
+  public net.minecraft.core.HolderSet<net.minecraft.server.dialog.Dialog> dialogs();
+  public java.util.Optional<net.minecraft.server.dialog.ActionButton> exitAction();
+  public int columns();
+  public int buttonWidth();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}

@@ -1,0 +1,61 @@
+Compiled from "ServerMessageDecoratorEvent.java"
+public final class net.fabricmc.fabric.api.message.v1.ServerMessageDecoratorEvent {
+  public static final net.minecraft.resources.Identifier CONTENT_PHASE;
+  public static final net.minecraft.resources.Identifier STYLING_PHASE;
+  public static final net.fabricmc.fabric.api.event.Event<net.minecraft.network.chat.ChatDecorator> EVENT;
+  private net.fabricmc.fabric.api.message.v1.ServerMessageDecoratorEvent();
+  private static <T extends net.minecraft.network.chat.Component> T handle(T, net.minecraft.network.chat.ChatDecorator);
+  private static net.minecraft.network.chat.ChatDecorator lambda$static$0(net.minecraft.network.chat.ChatDecorator[]);
+  private static net.minecraft.network.chat.Component lambda$static$1(net.minecraft.network.chat.ChatDecorator[], net.minecraft.server.level.ServerPlayer, net.minecraft.network.chat.Component);
+  static {};
+}
+Compiled from "ServerMessageEvents.java"
+public interface net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowChatMessage {
+  public abstract boolean allowChatMessage(net.minecraft.network.chat.PlayerChatMessage, net.minecraft.server.level.ServerPlayer, net.minecraft.network.chat.ChatType$Bound);
+}
+Compiled from "ServerMessageEvents.java"
+public interface net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowCommandMessage {
+  public abstract boolean allowCommandMessage(net.minecraft.network.chat.PlayerChatMessage, net.minecraft.commands.CommandSourceStack, net.minecraft.network.chat.ChatType$Bound);
+}
+Compiled from "ServerMessageEvents.java"
+public interface net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowGameMessage {
+  public abstract boolean allowGameMessage(net.minecraft.server.MinecraftServer, net.minecraft.network.chat.Component, boolean);
+}
+Compiled from "ServerMessageEvents.java"
+public interface net.fabricmc.fabric.api.message.v1.ServerMessageEvents$ChatMessage {
+  public abstract void onChatMessage(net.minecraft.network.chat.PlayerChatMessage, net.minecraft.server.level.ServerPlayer, net.minecraft.network.chat.ChatType$Bound);
+}
+Compiled from "ServerMessageEvents.java"
+public interface net.fabricmc.fabric.api.message.v1.ServerMessageEvents$CommandMessage {
+  public abstract void onCommandMessage(net.minecraft.network.chat.PlayerChatMessage, net.minecraft.commands.CommandSourceStack, net.minecraft.network.chat.ChatType$Bound);
+}
+Compiled from "ServerMessageEvents.java"
+public interface net.fabricmc.fabric.api.message.v1.ServerMessageEvents$GameMessage {
+  public abstract void onGameMessage(net.minecraft.server.MinecraftServer, net.minecraft.network.chat.Component, boolean);
+}
+Compiled from "ServerMessageEvents.java"
+public final class net.fabricmc.fabric.api.message.v1.ServerMessageEvents {
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowChatMessage> ALLOW_CHAT_MESSAGE;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowGameMessage> ALLOW_GAME_MESSAGE;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowCommandMessage> ALLOW_COMMAND_MESSAGE;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.message.v1.ServerMessageEvents$ChatMessage> CHAT_MESSAGE;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.message.v1.ServerMessageEvents$GameMessage> GAME_MESSAGE;
+  public static final net.fabricmc.fabric.api.event.Event<net.fabricmc.fabric.api.message.v1.ServerMessageEvents$CommandMessage> COMMAND_MESSAGE;
+  private net.fabricmc.fabric.api.message.v1.ServerMessageEvents();
+  private static net.fabricmc.fabric.api.message.v1.ServerMessageEvents$CommandMessage lambda$static$10(net.fabricmc.fabric.api.message.v1.ServerMessageEvents$CommandMessage[]);
+  private static void lambda$static$11(net.fabricmc.fabric.api.message.v1.ServerMessageEvents$CommandMessage[], net.minecraft.network.chat.PlayerChatMessage, net.minecraft.commands.CommandSourceStack, net.minecraft.network.chat.ChatType$Bound);
+  private static net.fabricmc.fabric.api.message.v1.ServerMessageEvents$GameMessage lambda$static$8(net.fabricmc.fabric.api.message.v1.ServerMessageEvents$GameMessage[]);
+  private static void lambda$static$9(net.fabricmc.fabric.api.message.v1.ServerMessageEvents$GameMessage[], net.minecraft.server.MinecraftServer, net.minecraft.network.chat.Component, boolean);
+  private static net.fabricmc.fabric.api.message.v1.ServerMessageEvents$ChatMessage lambda$static$6(net.fabricmc.fabric.api.message.v1.ServerMessageEvents$ChatMessage[]);
+  private static void lambda$static$7(net.fabricmc.fabric.api.message.v1.ServerMessageEvents$ChatMessage[], net.minecraft.network.chat.PlayerChatMessage, net.minecraft.server.level.ServerPlayer, net.minecraft.network.chat.ChatType$Bound);
+  private static net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowCommandMessage lambda$static$4(net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowCommandMessage[]);
+  private static boolean lambda$static$5(net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowCommandMessage[], net.minecraft.network.chat.PlayerChatMessage, net.minecraft.commands.CommandSourceStack, net.minecraft.network.chat.ChatType$Bound);
+  private static net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowGameMessage lambda$static$2(net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowGameMessage[]);
+  private static boolean lambda$static$3(net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowGameMessage[], net.minecraft.server.MinecraftServer, net.minecraft.network.chat.Component, boolean);
+  private static net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowChatMessage lambda$static$0(net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowChatMessage[]);
+  private static boolean lambda$static$1(net.fabricmc.fabric.api.message.v1.ServerMessageEvents$AllowChatMessage[], net.minecraft.network.chat.PlayerChatMessage, net.minecraft.server.level.ServerPlayer, net.minecraft.network.chat.ChatType$Bound);
+  static {};
+}
+Compiled from "package-info.java"
+interface net.fabricmc.fabric.api.message.v1.package-info {
+}

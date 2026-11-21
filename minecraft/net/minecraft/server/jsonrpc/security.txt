@@ -1,0 +1,63 @@
+Compiled from "JsonRpcSslContextProvider.java"
+public class net.minecraft.server.jsonrpc.security.JsonRpcSslContextProvider {
+  private static final java.lang.String PASSWORD_ENV_VARIABLE_KEY;
+  private static final java.lang.String PASSWORD_SYSTEM_PROPERTY_KEY;
+  private static final org.slf4j.Logger log;
+  public net.minecraft.server.jsonrpc.security.JsonRpcSslContextProvider();
+  public static io.netty.handler.ssl.SslContext createFrom(java.lang.String, java.lang.String) throws java.lang.Exception;
+  private static java.lang.String getKeystorePassword(java.lang.String);
+  private static io.netty.handler.ssl.SslContext loadKeystoreFromPath(java.io.File, java.lang.String) throws java.lang.Exception;
+  public static void printInstructions();
+  static {};
+}
+Compiled from "SecurityConfig.java"
+public final class net.minecraft.server.jsonrpc.security.SecurityConfig extends java.lang.Record {
+  private final java.lang.String secretKey;
+  private static final java.lang.String SECRET_KEY_CHARS;
+  public net.minecraft.server.jsonrpc.security.SecurityConfig(java.lang.String);
+  public static boolean isValid(java.lang.String);
+  public static java.lang.String generateSecretKey();
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.lang.String secretKey();
+}
+Compiled from "AuthenticationHandler.java"
+public class net.minecraft.server.jsonrpc.security.AuthenticationHandler extends io.netty.channel.ChannelDuplexHandler {
+  private final org.slf4j.Logger LOGGER;
+  private static final io.netty.util.AttributeKey<java.lang.Boolean> AUTHENTICATED_KEY;
+  private static final io.netty.util.AttributeKey<java.lang.Boolean> ATTR_WEBSOCKET_ALLOWED;
+  private static final java.lang.String SUBPROTOCOL_VALUE;
+  private static final java.lang.String SUBPROTOCOL_HEADER_PREFIX;
+  public static final java.lang.String BEARER_PREFIX;
+  private final net.minecraft.server.jsonrpc.security.SecurityConfig securityConfig;
+  private final java.util.Set<java.lang.String> allowedOrigins;
+  public net.minecraft.server.jsonrpc.security.AuthenticationHandler(net.minecraft.server.jsonrpc.security.SecurityConfig, java.lang.String);
+  public void channelRead(io.netty.channel.ChannelHandlerContext, java.lang.Object) throws java.lang.Exception;
+  public void write(io.netty.channel.ChannelHandlerContext, java.lang.Object, io.netty.channel.ChannelPromise) throws java.lang.Exception;
+  private net.minecraft.server.jsonrpc.security.AuthenticationHandler$SecurityCheckResult performSecurityChecks(io.netty.handler.codec.http.HttpRequest);
+  private boolean isAllowedOriginHeader(io.netty.handler.codec.http.HttpRequest);
+  private java.lang.String parseTokenInAuthorizationHeader(io.netty.handler.codec.http.HttpRequest);
+  private java.lang.String parseTokenInSecWebsocketProtocolHeader(io.netty.handler.codec.http.HttpRequest);
+  public boolean isValidApiKey(java.lang.String);
+  private java.lang.String getClientIp(io.netty.channel.ChannelHandlerContext);
+  private void sendUnauthorizedResponse(io.netty.channel.ChannelHandlerContext, java.lang.String);
+  private static void lambda$sendUnauthorizedResponse$0(io.netty.channel.ChannelHandlerContext, io.netty.util.concurrent.Future) throws java.lang.Exception;
+  static {};
+}
+Compiled from "package-info.java"
+interface net.minecraft.server.jsonrpc.security.package-info {
+}
+Compiled from "AuthenticationHandler.java"
+class net.minecraft.server.jsonrpc.security.AuthenticationHandler$SecurityCheckResult {
+  private final boolean allowed;
+  private final java.lang.String reason;
+  private final boolean tokenSentInSecWebsocketProtocol;
+  private net.minecraft.server.jsonrpc.security.AuthenticationHandler$SecurityCheckResult(boolean, java.lang.String, boolean);
+  public static net.minecraft.server.jsonrpc.security.AuthenticationHandler$SecurityCheckResult allowed();
+  public static net.minecraft.server.jsonrpc.security.AuthenticationHandler$SecurityCheckResult allowed(boolean);
+  public static net.minecraft.server.jsonrpc.security.AuthenticationHandler$SecurityCheckResult denied(java.lang.String);
+  public boolean isAllowed();
+  public java.lang.String getReason();
+  public boolean isTokenSentInSecWebsocketProtocol();
+}

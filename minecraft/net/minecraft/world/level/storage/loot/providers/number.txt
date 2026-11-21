@@ -1,0 +1,165 @@
+Compiled from "package-info.java"
+interface net.minecraft.world.level.storage.loot.providers.number.package-info {
+}
+Compiled from "StorageValue.java"
+public final class net.minecraft.world.level.storage.loot.providers.number.StorageValue extends java.lang.Record implements net.minecraft.world.level.storage.loot.providers.number.NumberProvider {
+  private final net.minecraft.resources.Identifier storage;
+  private final net.minecraft.commands.arguments.NbtPathArgument$NbtPath path;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.StorageValue> MAP_CODEC;
+  public net.minecraft.world.level.storage.loot.providers.number.StorageValue(net.minecraft.resources.Identifier, net.minecraft.commands.arguments.NbtPathArgument$NbtPath);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.StorageValue> codec();
+  private java.lang.Number getNumericTag(net.minecraft.world.level.storage.loot.LootContext, java.lang.Number);
+  public float getFloat(net.minecraft.world.level.storage.loot.LootContext);
+  public int getInt(net.minecraft.world.level.storage.loot.LootContext);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.resources.Identifier storage();
+  public net.minecraft.commands.arguments.NbtPathArgument$NbtPath path();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "NumberProviders.java"
+public class net.minecraft.world.level.storage.loot.providers.number.NumberProviders {
+  private static final com.mojang.serialization.Codec<net.minecraft.world.level.storage.loot.providers.number.NumberProvider> TYPED_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.storage.loot.providers.number.NumberProvider> CODEC;
+  public net.minecraft.world.level.storage.loot.providers.number.NumberProviders();
+  public static com.mojang.serialization.MapCodec<? extends net.minecraft.world.level.storage.loot.providers.number.NumberProvider> bootstrap(net.minecraft.core.Registry<com.mojang.serialization.MapCodec<? extends net.minecraft.world.level.storage.loot.providers.number.NumberProvider>>);
+  private static com.mojang.serialization.Codec lambda$static$1();
+  private static com.mojang.datafixers.util.Either lambda$static$2(net.minecraft.world.level.storage.loot.providers.number.NumberProvider);
+  private static com.mojang.serialization.MapCodec lambda$static$0(com.mojang.serialization.MapCodec);
+  static {};
+}
+Compiled from "EnchantmentLevelProvider.java"
+public final class net.minecraft.world.level.storage.loot.providers.number.EnchantmentLevelProvider extends java.lang.Record implements net.minecraft.world.level.storage.loot.providers.number.NumberProvider {
+  private final net.minecraft.world.item.enchantment.LevelBasedValue amount;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.EnchantmentLevelProvider> MAP_CODEC;
+  public net.minecraft.world.level.storage.loot.providers.number.EnchantmentLevelProvider(net.minecraft.world.item.enchantment.LevelBasedValue);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.EnchantmentLevelProvider> codec();
+  public float getFloat(net.minecraft.world.level.storage.loot.LootContext);
+  public static net.minecraft.world.level.storage.loot.providers.number.EnchantmentLevelProvider forEnchantmentLevel(net.minecraft.world.item.enchantment.LevelBasedValue);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.item.enchantment.LevelBasedValue amount();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "BinomialDistributionGenerator.java"
+public final class net.minecraft.world.level.storage.loot.providers.number.BinomialDistributionGenerator extends java.lang.Record implements net.minecraft.world.level.storage.loot.providers.number.NumberProvider {
+  private final net.minecraft.world.level.storage.loot.providers.number.NumberProvider n;
+  private final net.minecraft.world.level.storage.loot.providers.number.NumberProvider p;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.BinomialDistributionGenerator> MAP_CODEC;
+  public net.minecraft.world.level.storage.loot.providers.number.BinomialDistributionGenerator(net.minecraft.world.level.storage.loot.providers.number.NumberProvider, net.minecraft.world.level.storage.loot.providers.number.NumberProvider);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.BinomialDistributionGenerator> codec();
+  public int getInt(net.minecraft.world.level.storage.loot.LootContext);
+  public float getFloat(net.minecraft.world.level.storage.loot.LootContext);
+  public static net.minecraft.world.level.storage.loot.providers.number.BinomialDistributionGenerator binomial(int, float);
+  public void validate(net.minecraft.world.level.storage.loot.ValidationContext);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.storage.loot.providers.number.NumberProvider n();
+  public net.minecraft.world.level.storage.loot.providers.number.NumberProvider p();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "ScoreboardValue.java"
+public final class net.minecraft.world.level.storage.loot.providers.number.ScoreboardValue extends java.lang.Record implements net.minecraft.world.level.storage.loot.providers.number.NumberProvider {
+  private final net.minecraft.world.level.storage.loot.providers.score.ScoreboardNameProvider target;
+  private final java.lang.String score;
+  private final float scale;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.ScoreboardValue> MAP_CODEC;
+  public net.minecraft.world.level.storage.loot.providers.number.ScoreboardValue(net.minecraft.world.level.storage.loot.providers.score.ScoreboardNameProvider, java.lang.String, float);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.ScoreboardValue> codec();
+  public void validate(net.minecraft.world.level.storage.loot.ValidationContext);
+  public static net.minecraft.world.level.storage.loot.providers.number.ScoreboardValue fromScoreboard(net.minecraft.world.level.storage.loot.LootContext$EntityTarget, java.lang.String);
+  public static net.minecraft.world.level.storage.loot.providers.number.ScoreboardValue fromScoreboard(net.minecraft.world.level.storage.loot.LootContext$EntityTarget, java.lang.String, float);
+  public float getFloat(net.minecraft.world.level.storage.loot.LootContext);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.storage.loot.providers.score.ScoreboardNameProvider target();
+  public java.lang.String score();
+  public float scale();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "Sum.java"
+public final class net.minecraft.world.level.storage.loot.providers.number.Sum extends java.lang.Record implements net.minecraft.world.level.storage.loot.providers.number.NumberProvider {
+  private final java.util.List<net.minecraft.world.level.storage.loot.providers.number.NumberProvider> summands;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.Sum> MAP_CODEC;
+  public net.minecraft.world.level.storage.loot.providers.number.Sum(java.util.List<net.minecraft.world.level.storage.loot.providers.number.NumberProvider>);
+  public static net.minecraft.world.level.storage.loot.providers.number.Sum sum(net.minecraft.world.level.storage.loot.providers.number.NumberProvider...);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.Sum> codec();
+  public int getInt(net.minecraft.world.level.storage.loot.LootContext);
+  public float getFloat(net.minecraft.world.level.storage.loot.LootContext);
+  public void validate(net.minecraft.world.level.storage.loot.ValidationContext);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public java.util.List<net.minecraft.world.level.storage.loot.providers.number.NumberProvider> summands();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "NumberProvider.java"
+public interface net.minecraft.world.level.storage.loot.providers.number.NumberProvider extends net.minecraft.world.level.storage.loot.LootContextUser {
+  public abstract float getFloat(net.minecraft.world.level.storage.loot.LootContext);
+  public default int getInt(net.minecraft.world.level.storage.loot.LootContext);
+  public abstract com.mojang.serialization.MapCodec<? extends net.minecraft.world.level.storage.loot.providers.number.NumberProvider> codec();
+}
+Compiled from "ConstantValue.java"
+public final class net.minecraft.world.level.storage.loot.providers.number.ConstantValue extends java.lang.Record implements net.minecraft.world.level.storage.loot.providers.number.NumberProvider {
+  private final float value;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.ConstantValue> MAP_CODEC;
+  public static final com.mojang.serialization.Codec<net.minecraft.world.level.storage.loot.providers.number.ConstantValue> INLINE_CODEC;
+  public net.minecraft.world.level.storage.loot.providers.number.ConstantValue(float);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.ConstantValue> codec();
+  public float getFloat(net.minecraft.world.level.storage.loot.LootContext);
+  public static net.minecraft.world.level.storage.loot.providers.number.ConstantValue exactly(float);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public float value();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "UniformGenerator.java"
+public final class net.minecraft.world.level.storage.loot.providers.number.UniformGenerator extends java.lang.Record implements net.minecraft.world.level.storage.loot.providers.number.NumberProvider {
+  private final net.minecraft.world.level.storage.loot.providers.number.NumberProvider min;
+  private final net.minecraft.world.level.storage.loot.providers.number.NumberProvider max;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.UniformGenerator> MAP_CODEC;
+  public net.minecraft.world.level.storage.loot.providers.number.UniformGenerator(net.minecraft.world.level.storage.loot.providers.number.NumberProvider, net.minecraft.world.level.storage.loot.providers.number.NumberProvider);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.UniformGenerator> codec();
+  public static net.minecraft.world.level.storage.loot.providers.number.UniformGenerator between(float, float);
+  public int getInt(net.minecraft.world.level.storage.loot.LootContext);
+  public float getFloat(net.minecraft.world.level.storage.loot.LootContext);
+  public void validate(net.minecraft.world.level.storage.loot.ValidationContext);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.level.storage.loot.providers.number.NumberProvider min();
+  public net.minecraft.world.level.storage.loot.providers.number.NumberProvider max();
+  private static com.mojang.datafixers.kinds.App lambda$static$0(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  static {};
+}
+Compiled from "EnvironmentAttributeValue.java"
+public final class net.minecraft.world.level.storage.loot.providers.number.EnvironmentAttributeValue extends java.lang.Record implements net.minecraft.world.level.storage.loot.providers.number.NumberProvider {
+  private final net.minecraft.world.attribute.EnvironmentAttribute<?> attribute;
+  private static final com.mojang.serialization.Codec<net.minecraft.world.attribute.EnvironmentAttribute<?>> ATTRIBUTE_CODEC;
+  public static final com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.EnvironmentAttributeValue> MAP_CODEC;
+  public net.minecraft.world.level.storage.loot.providers.number.EnvironmentAttributeValue(net.minecraft.world.attribute.EnvironmentAttribute<?>);
+  public com.mojang.serialization.MapCodec<net.minecraft.world.level.storage.loot.providers.number.EnvironmentAttributeValue> codec();
+  public float getFloat(net.minecraft.world.level.storage.loot.LootContext);
+  private static <Value> float getAsFloat(net.minecraft.world.level.storage.loot.LootContext, net.minecraft.world.attribute.EnvironmentAttribute<Value>);
+  public java.util.Set<net.minecraft.util.context.ContextKey<?>> getReferencedContextParams();
+  public static net.minecraft.world.level.storage.loot.providers.number.EnvironmentAttributeValue forEnvironmentAttribute(net.minecraft.world.attribute.EnvironmentAttribute<?>);
+  public final java.lang.String toString();
+  public final int hashCode();
+  public final boolean equals(java.lang.Object);
+  public net.minecraft.world.attribute.EnvironmentAttribute<?> attribute();
+  private static com.mojang.datafixers.kinds.App lambda$static$2(com.mojang.serialization.codecs.RecordCodecBuilder$Instance);
+  private static com.mojang.serialization.DataResult lambda$static$0(net.minecraft.world.attribute.EnvironmentAttribute);
+  private static java.lang.String lambda$static$1(net.minecraft.world.attribute.EnvironmentAttribute);
+  static {};
+}

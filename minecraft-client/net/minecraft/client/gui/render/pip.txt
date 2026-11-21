@@ -1,0 +1,90 @@
+Compiled from "GuiBannerResultRenderer.java"
+public class net.minecraft.client.gui.render.pip.GuiBannerResultRenderer extends net.minecraft.client.gui.render.pip.PictureInPictureRenderer<net.minecraft.client.renderer.state.gui.pip.GuiBannerResultRenderState> {
+  private final net.minecraft.client.resources.model.sprite.SpriteGetter sprites;
+  public net.minecraft.client.gui.render.pip.GuiBannerResultRenderer(net.minecraft.client.resources.model.sprite.SpriteGetter);
+  public java.lang.Class<net.minecraft.client.renderer.state.gui.pip.GuiBannerResultRenderState> getRenderStateClass();
+  protected void renderToTexture(net.minecraft.client.renderer.state.gui.pip.GuiBannerResultRenderState, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector);
+  protected java.lang.String getTextureLabel();
+  protected void renderToTexture(net.minecraft.client.renderer.state.gui.pip.PictureInPictureRenderState, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector);
+}
+Compiled from "GuiBookModelRenderer.java"
+public class net.minecraft.client.gui.render.pip.GuiBookModelRenderer extends net.minecraft.client.gui.render.pip.PictureInPictureRenderer<net.minecraft.client.renderer.state.gui.pip.GuiBookModelRenderState> {
+  public net.minecraft.client.gui.render.pip.GuiBookModelRenderer();
+  public java.lang.Class<net.minecraft.client.renderer.state.gui.pip.GuiBookModelRenderState> getRenderStateClass();
+  protected void renderToTexture(net.minecraft.client.renderer.state.gui.pip.GuiBookModelRenderState, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector);
+  protected float getTranslateY(int, int);
+  protected java.lang.String getTextureLabel();
+  protected void renderToTexture(net.minecraft.client.renderer.state.gui.pip.PictureInPictureRenderState, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector);
+}
+Compiled from "GuiEntityRenderer.java"
+public class net.minecraft.client.gui.render.pip.GuiEntityRenderer extends net.minecraft.client.gui.render.pip.PictureInPictureRenderer<net.minecraft.client.renderer.state.gui.pip.GuiEntityRenderState> {
+  private final net.minecraft.client.renderer.entity.EntityRenderDispatcher entityRenderDispatcher;
+  public net.minecraft.client.gui.render.pip.GuiEntityRenderer(net.minecraft.client.renderer.entity.EntityRenderDispatcher);
+  public java.lang.Class<net.minecraft.client.renderer.state.gui.pip.GuiEntityRenderState> getRenderStateClass();
+  protected void renderToTexture(net.minecraft.client.renderer.state.gui.pip.GuiEntityRenderState, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector);
+  protected float getTranslateY(int, int);
+  protected java.lang.String getTextureLabel();
+  protected void renderToTexture(net.minecraft.client.renderer.state.gui.pip.PictureInPictureRenderState, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector);
+}
+Compiled from "GuiProfilerChartRenderer.java"
+public class net.minecraft.client.gui.render.pip.GuiProfilerChartRenderer extends net.minecraft.client.gui.render.pip.PictureInPictureRenderer<net.minecraft.client.renderer.state.gui.pip.GuiProfilerChartRenderState> {
+  public net.minecraft.client.gui.render.pip.GuiProfilerChartRenderer();
+  public java.lang.Class<net.minecraft.client.renderer.state.gui.pip.GuiProfilerChartRenderState> getRenderStateClass();
+  protected void renderToTexture(net.minecraft.client.renderer.state.gui.pip.GuiProfilerChartRenderState, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector);
+  protected float getTranslateY(int, int);
+  protected java.lang.String getTextureLabel();
+  protected void renderToTexture(net.minecraft.client.renderer.state.gui.pip.PictureInPictureRenderState, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector);
+  private static void lambda$renderToTexture$1(int, double, double, int, com.mojang.blaze3d.vertex.PoseStack$Pose, com.mojang.blaze3d.vertex.VertexConsumer);
+  private static void lambda$renderToTexture$0(int, int, double, double, com.mojang.blaze3d.vertex.PoseStack$Pose, com.mojang.blaze3d.vertex.VertexConsumer);
+}
+Compiled from "GuiSkinRenderer.java"
+public class net.minecraft.client.gui.render.pip.GuiSkinRenderer extends net.minecraft.client.gui.render.pip.PictureInPictureRenderer<net.minecraft.client.renderer.state.gui.pip.GuiSkinRenderState> {
+  public net.minecraft.client.gui.render.pip.GuiSkinRenderer();
+  public java.lang.Class<net.minecraft.client.renderer.state.gui.pip.GuiSkinRenderState> getRenderStateClass();
+  protected void renderToTexture(net.minecraft.client.renderer.state.gui.pip.GuiSkinRenderState, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector);
+  protected java.lang.String getTextureLabel();
+  protected void renderToTexture(net.minecraft.client.renderer.state.gui.pip.PictureInPictureRenderState, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector);
+}
+Compiled from "OversizedItemRenderer.java"
+public class net.minecraft.client.gui.render.pip.OversizedItemRenderer extends net.minecraft.client.gui.render.pip.PictureInPictureRenderer<net.minecraft.client.renderer.state.gui.pip.OversizedItemRenderState> {
+  private boolean usedOnThisFrame;
+  private java.lang.Object modelOnTextureIdentity;
+  public net.minecraft.client.gui.render.pip.OversizedItemRenderer();
+  public boolean usedOnThisFrame();
+  public void resetUsedOnThisFrame();
+  public void invalidateTexture();
+  public java.lang.Class<net.minecraft.client.renderer.state.gui.pip.OversizedItemRenderState> getRenderStateClass();
+  protected void renderToTexture(net.minecraft.client.renderer.state.gui.pip.OversizedItemRenderState, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector);
+  public void blitTexture(net.minecraft.client.renderer.state.gui.pip.OversizedItemRenderState, net.minecraft.client.renderer.state.gui.GuiRenderState);
+  public boolean textureIsReadyToBlit(net.minecraft.client.renderer.state.gui.pip.OversizedItemRenderState);
+  protected float getTranslateY(int, int);
+  protected java.lang.String getTextureLabel();
+  protected void renderToTexture(net.minecraft.client.renderer.state.gui.pip.PictureInPictureRenderState, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector);
+  public boolean textureIsReadyToBlit(net.minecraft.client.renderer.state.gui.pip.PictureInPictureRenderState);
+  public void blitTexture(net.minecraft.client.renderer.state.gui.pip.PictureInPictureRenderState, net.minecraft.client.renderer.state.gui.GuiRenderState);
+}
+Compiled from "PictureInPictureRenderer.java"
+public abstract class net.minecraft.client.gui.render.pip.PictureInPictureRenderer<T extends net.minecraft.client.renderer.state.gui.pip.PictureInPictureRenderState> implements java.lang.AutoCloseable {
+  private com.mojang.blaze3d.textures.GpuTexture texture;
+  private com.mojang.blaze3d.textures.GpuTextureView textureView;
+  private com.mojang.blaze3d.textures.GpuTexture depthTexture;
+  private com.mojang.blaze3d.textures.GpuTextureView depthTextureView;
+  private final net.minecraft.client.renderer.Projection projection;
+  private final net.minecraft.client.renderer.ProjectionMatrixBuffer projectionMatrixBuffer;
+  private final net.minecraft.client.renderer.SubmitNodeStorage submitNodeStorage;
+  public net.minecraft.client.gui.render.pip.PictureInPictureRenderer();
+  public void prepare(T, net.minecraft.client.renderer.state.gui.GuiRenderState, net.minecraft.client.renderer.feature.FeatureRenderDispatcher, int);
+  protected void blitTexture(T, net.minecraft.client.renderer.state.gui.GuiRenderState);
+  private void prepareTexturesAndProjection(boolean, int, int);
+  protected boolean textureIsReadyToBlit(T);
+  protected float getTranslateY(int, int);
+  public void close();
+  public abstract java.lang.Class<T> getRenderStateClass();
+  protected abstract void renderToTexture(T, com.mojang.blaze3d.vertex.PoseStack, net.minecraft.client.renderer.SubmitNodeCollector);
+  protected abstract java.lang.String getTextureLabel();
+  private java.lang.String lambda$prepareTexturesAndProjection$1();
+  private java.lang.String lambda$prepareTexturesAndProjection$0();
+}
+Compiled from "package-info.java"
+interface net.minecraft.client.gui.render.pip.package-info {
+}
