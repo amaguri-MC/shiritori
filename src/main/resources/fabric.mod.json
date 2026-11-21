@@ -1,0 +1,25 @@
+{
+	"schemaVersion": 1,
+	"id": "shiritori",
+	"version": "${version}",
+	"name": "Shiritori Survival",
+	"description": "しりとりしながらエンドラ討伐",
+	"authors": ["amaguri-MC"],
+	"license": "All-Rights-Reserved",
+	"icon": "assets/shiritori/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": ["amaguri.shiritori.ShiritoriMod"],
+		"client": ["amaguri.shiritori.client.ShiritoriClient"]
+	},
+	"mixins": [
+		"shiritori.mixins.json",
+		{"config": "shiritori.client.mixins.json", "environment": "client"}
+	],
+	"depends": {
+		"fabricloader": ">=0.20.1",
+		"minecraft": "~26.2",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
+}

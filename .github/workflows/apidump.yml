@@ -1,0 +1,29 @@
+name: apidump
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  dump:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-java@v5
+        with:
+          java-version: '25'
+          distribution: 'microsoft'
+      - run: chmod +x ./gradlew
+      - name: resolve deps and assets
+        run: |
+          ./gradlew help dependencies > /dev/null
+          ./gradlew downloadAssets || true
+      - name: dump
+        run: python3 .github/scripts/apidump.py /tmp/dump
+      - name: push apidump branch
+        run: |
+          set -e
+          cd /tmp/dump
+          git init -q -b apidump
+          git config user.name ci; git config user.email ci@example.com
+          git add -A; git commit -qm "apidump"
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" apidump
