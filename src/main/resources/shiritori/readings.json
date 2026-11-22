@@ -1,0 +1,8186 @@
+{
+"block.minecraft.acacia_button": {
+"name": "アカシアのボタン",
+"reading": "あかしあのぼたん"
+},
+"block.minecraft.acacia_door": {
+"name": "アカシアのドア",
+"reading": "あかしあのどあ"
+},
+"block.minecraft.acacia_fence": {
+"name": "アカシアのフェンス",
+"reading": "あかしあのふぇんす"
+},
+"block.minecraft.acacia_fence_gate": {
+"name": "アカシアのフェンスゲート",
+"reading": "あかしあのふぇんすげーと"
+},
+"block.minecraft.acacia_hanging_sign": {
+"name": "アカシアの吊り看板",
+"reading": "あかしあのつりかんばん"
+},
+"block.minecraft.acacia_leaves": {
+"name": "アカシアの葉",
+"reading": "あかしあのは"
+},
+"block.minecraft.acacia_log": {
+"name": "アカシアの原木",
+"reading": "あかしあのげんぼく"
+},
+"block.minecraft.acacia_planks": {
+"name": "アカシアの板材",
+"reading": "あかしあのいたざい"
+},
+"block.minecraft.acacia_pressure_plate": {
+"name": "アカシアの感圧板",
+"reading": "あかしあのかんあつばん"
+},
+"block.minecraft.acacia_sapling": {
+"name": "アカシアの苗木",
+"reading": "あかしあのなえぎ"
+},
+"block.minecraft.acacia_shelf": {
+"name": "アカシアの棚",
+"reading": "あかしあのたな"
+},
+"block.minecraft.acacia_sign": {
+"name": "アカシアの看板",
+"reading": "あかしあのかんばん"
+},
+"block.minecraft.acacia_slab": {
+"name": "アカシアのハーフブロック",
+"reading": "あかしあのはーふぶろっく"
+},
+"block.minecraft.acacia_stairs": {
+"name": "アカシアの階段",
+"reading": "あかしあのかいだん"
+},
+"block.minecraft.acacia_trapdoor": {
+"name": "アカシアのトラップドア",
+"reading": "あかしあのとらっぷどあ"
+},
+"block.minecraft.acacia_wall_hanging_sign": {
+"name": "壁に付けられたアカシアの吊り看板",
+"reading": "かべにつけられたあかしあのつりかんばん"
+},
+"block.minecraft.acacia_wall_sign": {
+"name": "壁に付けられたアカシアの看板",
+"reading": "かべにつけられたあかしあのかんばん"
+},
+"block.minecraft.acacia_wood": {
+"name": "アカシアの木",
+"reading": "あかしあのき"
+},
+"block.minecraft.activator_rail": {
+"name": "アクティベーターレール",
+"reading": "あくてぃべーたーれーる"
+},
+"block.minecraft.air": {
+"name": "空気",
+"reading": "くうき"
+},
+"block.minecraft.allium": {
+"name": "アリウム",
+"reading": "ありうむ"
+},
+"block.minecraft.amethyst_block": {
+"name": "アメジストブロック",
+"reading": "あめじすとぶろっく"
+},
+"block.minecraft.amethyst_cluster": {
+"name": "アメジストの塊",
+"reading": "あめじすとのかたまり"
+},
+"block.minecraft.ancient_debris": {
+"name": "古代の残骸",
+"reading": "こだいのざんがい"
+},
+"block.minecraft.andesite": {
+"name": "安山岩",
+"reading": "あんざんがん"
+},
+"block.minecraft.andesite_slab": {
+"name": "安山岩のハーフブロック",
+"reading": "あんざんがんのはーふぶろっく"
+},
+"block.minecraft.andesite_stairs": {
+"name": "安山岩の階段",
+"reading": "あんざんがんのかいだん"
+},
+"block.minecraft.andesite_wall": {
+"name": "安山岩の塀",
+"reading": "あんざんがんのへい"
+},
+"block.minecraft.anvil": {
+"name": "金床",
+"reading": "かなとこ"
+},
+"block.minecraft.attached_melon_stem": {
+"name": "実がなったスイカの茎",
+"reading": "みがなったすいかのくき"
+},
+"block.minecraft.attached_pumpkin_stem": {
+"name": "実がなったカボチャの茎",
+"reading": "みがなったかぼちゃのくき"
+},
+"block.minecraft.azalea": {
+"name": "ツツジ",
+"reading": "つつじ"
+},
+"block.minecraft.azalea_leaves": {
+"name": "ツツジの葉",
+"reading": "つつじのは"
+},
+"block.minecraft.azure_bluet": {
+"name": "ヒナソウ",
+"reading": "ひなそう"
+},
+"block.minecraft.bamboo": {
+"name": "竹",
+"reading": "たけ"
+},
+"block.minecraft.bamboo_block": {
+"name": "竹ブロック",
+"reading": "たけぶろっく"
+},
+"block.minecraft.bamboo_button": {
+"name": "竹のボタン",
+"reading": "たけのぼたん"
+},
+"block.minecraft.bamboo_door": {
+"name": "竹のドア",
+"reading": "たけのどあ"
+},
+"block.minecraft.bamboo_fence": {
+"name": "竹のフェンス",
+"reading": "たけのふぇんす"
+},
+"block.minecraft.bamboo_fence_gate": {
+"name": "竹のフェンスゲート",
+"reading": "たけのふぇんすげーと"
+},
+"block.minecraft.bamboo_hanging_sign": {
+"name": "竹の吊り看板",
+"reading": "たけのつりかんばん"
+},
+"block.minecraft.bamboo_mosaic": {
+"name": "竹細工",
+"reading": "たけざいく"
+},
+"block.minecraft.bamboo_mosaic_slab": {
+"name": "竹細工のハーフブロック",
+"reading": "たけざいくのはーふぶろっく"
+},
+"block.minecraft.bamboo_mosaic_stairs": {
+"name": "竹細工の階段",
+"reading": "たけざいくのかいだん"
+},
+"block.minecraft.bamboo_planks": {
+"name": "竹の板材",
+"reading": "たけのいたざい"
+},
+"block.minecraft.bamboo_pressure_plate": {
+"name": "竹の感圧板",
+"reading": "たけのかんあつばん"
+},
+"block.minecraft.bamboo_sapling": {
+"name": "タケノコ",
+"reading": "たけのこ"
+},
+"block.minecraft.bamboo_shelf": {
+"name": "竹の棚",
+"reading": "たけのたな"
+},
+"block.minecraft.bamboo_sign": {
+"name": "竹の看板",
+"reading": "たけのかんばん"
+},
+"block.minecraft.bamboo_slab": {
+"name": "竹のハーフブロック",
+"reading": "たけのはーふぶろっく"
+},
+"block.minecraft.bamboo_stairs": {
+"name": "竹の階段",
+"reading": "たけのかいだん"
+},
+"block.minecraft.bamboo_trapdoor": {
+"name": "竹のトラップドア",
+"reading": "たけのとらっぷどあ"
+},
+"block.minecraft.bamboo_wall_hanging_sign": {
+"name": "壁に付けられた竹の吊り看板",
+"reading": "かべにつけられたたけのつりかんばん"
+},
+"block.minecraft.bamboo_wall_sign": {
+"name": "壁に付けられた竹の看板",
+"reading": "かべにつけられたたけのかんばん"
+},
+"block.minecraft.barrel": {
+"name": "樽",
+"reading": "たる"
+},
+"block.minecraft.barrier": {
+"name": "バリアブロック",
+"reading": "ばりあぶろっく"
+},
+"block.minecraft.basalt": {
+"name": "玄武岩",
+"reading": "げんぶがん"
+},
+"block.minecraft.beacon": {
+"name": "ビーコン",
+"reading": "びーこん"
+},
+"block.minecraft.bedrock": {
+"name": "岩盤",
+"reading": "がんばん"
+},
+"block.minecraft.bee_nest": {
+"name": "ミツバチの巣",
+"reading": "みつばちのす"
+},
+"block.minecraft.beehive": {
+"name": "養蜂箱",
+"reading": "ようほうばこ"
+},
+"block.minecraft.beetroots": {
+"name": "ビートルート",
+"reading": "びーとるーと"
+},
+"block.minecraft.bell": {
+"name": "鐘",
+"reading": "かね"
+},
+"block.minecraft.big_dripleaf": {
+"name": "大きなドリップリーフ",
+"reading": "おおきなどりっぷりーふ"
+},
+"block.minecraft.big_dripleaf_stem": {
+"name": "大きなドリップリーフの茎",
+"reading": "おおきなどりっぷりーふのくき"
+},
+"block.minecraft.birch_button": {
+"name": "シラカバのボタン",
+"reading": "しらかばのぼたん"
+},
+"block.minecraft.birch_door": {
+"name": "シラカバのドア",
+"reading": "しらかばのどあ"
+},
+"block.minecraft.birch_fence": {
+"name": "シラカバのフェンス",
+"reading": "しらかばのふぇんす"
+},
+"block.minecraft.birch_fence_gate": {
+"name": "シラカバのフェンスゲート",
+"reading": "しらかばのふぇんすげーと"
+},
+"block.minecraft.birch_hanging_sign": {
+"name": "シラカバの吊り看板",
+"reading": "しらかばのつりかんばん"
+},
+"block.minecraft.birch_leaves": {
+"name": "シラカバの葉",
+"reading": "しらかばのは"
+},
+"block.minecraft.birch_log": {
+"name": "シラカバの原木",
+"reading": "しらかばのげんぼく"
+},
+"block.minecraft.birch_planks": {
+"name": "シラカバの板材",
+"reading": "しらかばのいたざい"
+},
+"block.minecraft.birch_pressure_plate": {
+"name": "シラカバの感圧板",
+"reading": "しらかばのかんあつばん"
+},
+"block.minecraft.birch_sapling": {
+"name": "シラカバの苗木",
+"reading": "しらかばのなえぎ"
+},
+"block.minecraft.birch_shelf": {
+"name": "シラカバの棚",
+"reading": "しらかばのたな"
+},
+"block.minecraft.birch_sign": {
+"name": "シラカバの看板",
+"reading": "しらかばのかんばん"
+},
+"block.minecraft.birch_slab": {
+"name": "シラカバのハーフブロック",
+"reading": "しらかばのはーふぶろっく"
+},
+"block.minecraft.birch_stairs": {
+"name": "シラカバの階段",
+"reading": "しらかばのかいだん"
+},
+"block.minecraft.birch_trapdoor": {
+"name": "シラカバのトラップドア",
+"reading": "しらかばのとらっぷどあ"
+},
+"block.minecraft.birch_wall_hanging_sign": {
+"name": "壁に付けられたシラカバの吊り看板",
+"reading": "かべにつけられたしらかばのつりかんばん"
+},
+"block.minecraft.birch_wall_sign": {
+"name": "壁に付けられたシラカバの看板",
+"reading": "かべにつけられたしらかばのかんばん"
+},
+"block.minecraft.birch_wood": {
+"name": "シラカバの木",
+"reading": "しらかばのき"
+},
+"block.minecraft.black_banner": {
+"name": "黒色の旗",
+"reading": "くろいろのはた"
+},
+"block.minecraft.black_bed": {
+"name": "黒色のベッド",
+"reading": "くろいろのべっど"
+},
+"block.minecraft.black_candle": {
+"name": "黒色のろうそく",
+"reading": "くろいろのろうそく"
+},
+"block.minecraft.black_candle_cake": {
+"name": "黒色のろうそくが立てられたケーキ",
+"reading": "くろいろのろうそくがたてられたけーき"
+},
+"block.minecraft.black_carpet": {
+"name": "黒色のカーペット",
+"reading": "くろいろのかーぺっと"
+},
+"block.minecraft.black_concrete": {
+"name": "黒色のコンクリート",
+"reading": "くろいろのこんくりーと"
+},
+"block.minecraft.black_concrete_powder": {
+"name": "黒色のコンクリートパウダー",
+"reading": "くろいろのこんくりーとぱうだー"
+},
+"block.minecraft.black_concrete_slab": {
+"name": "黒色のコンクリートのハーフブロック",
+"reading": "くろいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.black_concrete_stairs": {
+"name": "黒色のコンクリートの階段",
+"reading": "くろいろのこんくりーとのかいだん"
+},
+"block.minecraft.black_glazed_terracotta": {
+"name": "黒色の彩釉テラコッタ",
+"reading": "くろいろのさいゆうてらこった"
+},
+"block.minecraft.black_shulker_box": {
+"name": "黒色のシュルカーボックス",
+"reading": "くろいろのしゅるかーぼっくす"
+},
+"block.minecraft.black_stained_glass": {
+"name": "黒色の色付きガラス",
+"reading": "くろいろのいろつきがらす"
+},
+"block.minecraft.black_stained_glass_pane": {
+"name": "黒色の色付きガラス板",
+"reading": "くろいろのいろつきがらすばん"
+},
+"block.minecraft.black_terracotta": {
+"name": "黒色のテラコッタ",
+"reading": "くろいろのてらこった"
+},
+"block.minecraft.black_wool": {
+"name": "黒色の羊毛",
+"reading": "くろいろのようもう"
+},
+"block.minecraft.black_wool_slab": {
+"name": "黒色の羊毛のハーフブロック",
+"reading": "くろいろのようもうのはーふぶろっく"
+},
+"block.minecraft.black_wool_stairs": {
+"name": "黒色の羊毛の階段",
+"reading": "くろいろのようもうのかいだん"
+},
+"block.minecraft.blackstone": {
+"name": "ブラックストーン",
+"reading": "ぶらっくすとーん"
+},
+"block.minecraft.blackstone_slab": {
+"name": "ブラックストーンのハーフブロック",
+"reading": "ぶらっくすとーんのはーふぶろっく"
+},
+"block.minecraft.blackstone_stairs": {
+"name": "ブラックストーンの階段",
+"reading": "ぶらっくすとーんのかいだん"
+},
+"block.minecraft.blackstone_wall": {
+"name": "ブラックストーンの塀",
+"reading": "ぶらっくすとーんのへい"
+},
+"block.minecraft.blast_furnace": {
+"name": "溶鉱炉",
+"reading": "ようこうろ"
+},
+"block.minecraft.blue_banner": {
+"name": "青色の旗",
+"reading": "あおいろのはた"
+},
+"block.minecraft.blue_bed": {
+"name": "青色のベッド",
+"reading": "あおいろのべっど"
+},
+"block.minecraft.blue_candle": {
+"name": "青色のろうそく",
+"reading": "あおいろのろうそく"
+},
+"block.minecraft.blue_candle_cake": {
+"name": "青色のろうそくが立てられたケーキ",
+"reading": "あおいろのろうそくがたてられたけーき"
+},
+"block.minecraft.blue_carpet": {
+"name": "青色のカーペット",
+"reading": "あおいろのかーぺっと"
+},
+"block.minecraft.blue_concrete": {
+"name": "青色のコンクリート",
+"reading": "あおいろのこんくりーと"
+},
+"block.minecraft.blue_concrete_powder": {
+"name": "青色のコンクリートパウダー",
+"reading": "あおいろのこんくりーとぱうだー"
+},
+"block.minecraft.blue_concrete_slab": {
+"name": "青色のコンクリートのハーフブロック",
+"reading": "あおいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.blue_concrete_stairs": {
+"name": "青色のコンクリートの階段",
+"reading": "あおいろのこんくりーとのかいだん"
+},
+"block.minecraft.blue_glazed_terracotta": {
+"name": "青色の彩釉テラコッタ",
+"reading": "あおいろのさいゆうてらこった"
+},
+"block.minecraft.blue_ice": {
+"name": "青氷",
+"reading": "あおごおり"
+},
+"block.minecraft.blue_orchid": {
+"name": "ヒスイラン",
+"reading": "ひすいらん"
+},
+"block.minecraft.blue_shulker_box": {
+"name": "青色のシュルカーボックス",
+"reading": "あおいろのしゅるかーぼっくす"
+},
+"block.minecraft.blue_stained_glass": {
+"name": "青色の色付きガラス",
+"reading": "あおいろのいろつきがらす"
+},
+"block.minecraft.blue_stained_glass_pane": {
+"name": "青色の色付きガラス板",
+"reading": "あおいろのいろつきがらすばん"
+},
+"block.minecraft.blue_terracotta": {
+"name": "青色のテラコッタ",
+"reading": "あおいろのてらこった"
+},
+"block.minecraft.blue_wool": {
+"name": "青色の羊毛",
+"reading": "あおいろのようもう"
+},
+"block.minecraft.blue_wool_slab": {
+"name": "青色の羊毛のハーフブロック",
+"reading": "あおいろのようもうのはーふぶろっく"
+},
+"block.minecraft.blue_wool_stairs": {
+"name": "青色の羊毛の階段",
+"reading": "あおいろのようもうのかいだん"
+},
+"block.minecraft.bone_block": {
+"name": "骨ブロック",
+"reading": "ほねぶろっく"
+},
+"block.minecraft.bookshelf": {
+"name": "本棚",
+"reading": "ほんだな"
+},
+"block.minecraft.brain_coral": {
+"name": "ノウサンゴ",
+"reading": "のうさんご"
+},
+"block.minecraft.brain_coral_block": {
+"name": "ノウサンゴブロック",
+"reading": "のうさんごぶろっく"
+},
+"block.minecraft.brain_coral_fan": {
+"name": "ノウウチワサンゴ",
+"reading": "のううちわさんご"
+},
+"block.minecraft.brain_coral_wall_fan": {
+"name": "壁付きのノウウチワサンゴ",
+"reading": "かべつきののううちわさんご"
+},
+"block.minecraft.brewing_stand": {
+"name": "醸造台",
+"reading": "じょうぞうだい"
+},
+"block.minecraft.brick_slab": {
+"name": "レンガのハーフブロック",
+"reading": "れんがのはーふぶろっく"
+},
+"block.minecraft.brick_stairs": {
+"name": "レンガの階段",
+"reading": "れんがのかいだん"
+},
+"block.minecraft.brick_wall": {
+"name": "レンガの塀",
+"reading": "れんがのへい"
+},
+"block.minecraft.bricks": {
+"name": "レンガ",
+"reading": "れんが"
+},
+"block.minecraft.brittle_ice": {
+"name": "脆い氷",
+"reading": "もろいこおり"
+},
+"block.minecraft.brown_banner": {
+"name": "茶色の旗",
+"reading": "ちゃいろのはた"
+},
+"block.minecraft.brown_bed": {
+"name": "茶色のベッド",
+"reading": "ちゃいろのべっど"
+},
+"block.minecraft.brown_candle": {
+"name": "茶色のろうそく",
+"reading": "ちゃいろのろうそく"
+},
+"block.minecraft.brown_candle_cake": {
+"name": "茶色のろうそくが立てられたケーキ",
+"reading": "ちゃいろのろうそくがたてられたけーき"
+},
+"block.minecraft.brown_carpet": {
+"name": "茶色のカーペット",
+"reading": "ちゃいろのかーぺっと"
+},
+"block.minecraft.brown_concrete": {
+"name": "茶色のコンクリート",
+"reading": "ちゃいろのこんくりーと"
+},
+"block.minecraft.brown_concrete_powder": {
+"name": "茶色のコンクリートパウダー",
+"reading": "ちゃいろのこんくりーとぱうだー"
+},
+"block.minecraft.brown_concrete_slab": {
+"name": "茶色のコンクリートのハーフブロック",
+"reading": "ちゃいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.brown_concrete_stairs": {
+"name": "茶色のコンクリートの階段",
+"reading": "ちゃいろのこんくりーとのかいだん"
+},
+"block.minecraft.brown_glazed_terracotta": {
+"name": "茶色の彩釉テラコッタ",
+"reading": "ちゃいろのさいゆうてらこった"
+},
+"block.minecraft.brown_mushroom": {
+"name": "茶色のキノコ",
+"reading": "ちゃいろのきのこ"
+},
+"block.minecraft.brown_mushroom_block": {
+"name": "茶色のキノコブロック",
+"reading": "ちゃいろのきのこぶろっく"
+},
+"block.minecraft.brown_shulker_box": {
+"name": "茶色のシュルカーボックス",
+"reading": "ちゃいろのしゅるかーぼっくす"
+},
+"block.minecraft.brown_stained_glass": {
+"name": "茶色の色付きガラス",
+"reading": "ちゃいろのいろつきがらす"
+},
+"block.minecraft.brown_stained_glass_pane": {
+"name": "茶色の色付きガラス板",
+"reading": "ちゃいろのいろつきがらすばん"
+},
+"block.minecraft.brown_terracotta": {
+"name": "茶色のテラコッタ",
+"reading": "ちゃいろのてらこった"
+},
+"block.minecraft.brown_wool": {
+"name": "茶色の羊毛",
+"reading": "ちゃいろのようもう"
+},
+"block.minecraft.brown_wool_slab": {
+"name": "茶色の羊毛のハーフブロック",
+"reading": "ちゃいろのようもうのはーふぶろっく"
+},
+"block.minecraft.brown_wool_stairs": {
+"name": "茶色の羊毛の階段",
+"reading": "ちゃいろのようもうのかいだん"
+},
+"block.minecraft.bubble_column": {
+"name": "気泡柱",
+"reading": "きほうちゅう"
+},
+"block.minecraft.bubble_coral": {
+"name": "ミズタマサンゴ",
+"reading": "みずたまさんご"
+},
+"block.minecraft.bubble_coral_block": {
+"name": "ミズタマサンゴブロック",
+"reading": "みずたまさんごぶろっく"
+},
+"block.minecraft.bubble_coral_fan": {
+"name": "ミズタマウチワサンゴ",
+"reading": "みずたまうちわさんご"
+},
+"block.minecraft.bubble_coral_wall_fan": {
+"name": "壁付きのミズタマウチワサンゴ",
+"reading": "かべつきのみずたまうちわさんご"
+},
+"block.minecraft.budding_amethyst": {
+"name": "芽生えたアメジスト",
+"reading": "めばえたあめじすと"
+},
+"block.minecraft.bush": {
+"name": "茂み",
+"reading": "しげみ"
+},
+"block.minecraft.cactus": {
+"name": "サボテン",
+"reading": "さぼてん"
+},
+"block.minecraft.cactus_flower": {
+"name": "サボテンの花",
+"reading": "さぼてんのはな"
+},
+"block.minecraft.cake": {
+"name": "ケーキ",
+"reading": "けーき"
+},
+"block.minecraft.calcite": {
+"name": "方解石",
+"reading": "ほうかいせき"
+},
+"block.minecraft.calcite_pillar": {
+"name": "方解石の柱",
+"reading": "ほうかいせきのはしら"
+},
+"block.minecraft.calcite_slab": {
+"name": "方解石のハーフブロック",
+"reading": "ほうかいせきのはーふぶろっく"
+},
+"block.minecraft.calcite_stairs": {
+"name": "方解石の階段",
+"reading": "ほうかいせきのかいだん"
+},
+"block.minecraft.calcite_wall": {
+"name": "方解石の塀",
+"reading": "ほうかいせきのへい"
+},
+"block.minecraft.calibrated_sculk_sensor": {
+"name": "調律されたスカルクセンサー",
+"reading": "ちょうりつされたすかるくせんさー"
+},
+"block.minecraft.campfire": {
+"name": "焚き火",
+"reading": "たきび"
+},
+"block.minecraft.candle": {
+"name": "ろうそく",
+"reading": "ろうそく"
+},
+"block.minecraft.candle_cake": {
+"name": "ろうそくが立てられたケーキ",
+"reading": "ろうそくがたてられたけーき"
+},
+"block.minecraft.carrots": {
+"name": "ニンジン",
+"reading": "にんじん"
+},
+"block.minecraft.cartography_table": {
+"name": "製図台",
+"reading": "せいずだい"
+},
+"block.minecraft.carved_pumpkin": {
+"name": "くり抜かれたカボチャ",
+"reading": "くりぬかれたかぼちゃ"
+},
+"block.minecraft.cauldron": {
+"name": "大釜",
+"reading": "おおがま"
+},
+"block.minecraft.cave_air": {
+"name": "洞窟の空気",
+"reading": "どうくつのくうき"
+},
+"block.minecraft.cave_vines": {
+"name": "洞窟のツタ",
+"reading": "どうくつのつた"
+},
+"block.minecraft.cave_vines_plant": {
+"name": "洞窟のツタのつる",
+"reading": "どうくつのつたのつる"
+},
+"block.minecraft.chain": {
+"name": "鉄の鎖",
+"reading": "てつのくさり"
+},
+"block.minecraft.chain_command_block": {
+"name": "チェーンコマンドブロック",
+"reading": "ちぇーんこまんどぶろっく"
+},
+"block.minecraft.cherry_button": {
+"name": "サクラのボタン",
+"reading": "さくらのぼたん"
+},
+"block.minecraft.cherry_door": {
+"name": "サクラのドア",
+"reading": "さくらのどあ"
+},
+"block.minecraft.cherry_fence": {
+"name": "サクラのフェンス",
+"reading": "さくらのふぇんす"
+},
+"block.minecraft.cherry_fence_gate": {
+"name": "サクラのフェンスゲート",
+"reading": "さくらのふぇんすげーと"
+},
+"block.minecraft.cherry_hanging_sign": {
+"name": "サクラの吊り看板",
+"reading": "さくらのつりかんばん"
+},
+"block.minecraft.cherry_leaves": {
+"name": "サクラの葉",
+"reading": "さくらのは"
+},
+"block.minecraft.cherry_log": {
+"name": "サクラの原木",
+"reading": "さくらのげんぼく"
+},
+"block.minecraft.cherry_planks": {
+"name": "サクラの板材",
+"reading": "さくらのいたざい"
+},
+"block.minecraft.cherry_pressure_plate": {
+"name": "サクラの感圧板",
+"reading": "さくらのかんあつばん"
+},
+"block.minecraft.cherry_sapling": {
+"name": "サクラの苗木",
+"reading": "さくらのなえぎ"
+},
+"block.minecraft.cherry_shelf": {
+"name": "サクラの棚",
+"reading": "さくらのたな"
+},
+"block.minecraft.cherry_sign": {
+"name": "サクラの看板",
+"reading": "さくらのかんばん"
+},
+"block.minecraft.cherry_slab": {
+"name": "サクラのハーフブロック",
+"reading": "さくらのはーふぶろっく"
+},
+"block.minecraft.cherry_stairs": {
+"name": "サクラの階段",
+"reading": "さくらのかいだん"
+},
+"block.minecraft.cherry_trapdoor": {
+"name": "サクラのトラップドア",
+"reading": "さくらのとらっぷどあ"
+},
+"block.minecraft.cherry_wall_hanging_sign": {
+"name": "壁に付けられたサクラの吊り看板",
+"reading": "かべにつけられたさくらのつりかんばん"
+},
+"block.minecraft.cherry_wall_sign": {
+"name": "壁に付けられたサクラの看板",
+"reading": "かべにつけられたさくらのかんばん"
+},
+"block.minecraft.cherry_wood": {
+"name": "サクラの木",
+"reading": "さくらのき"
+},
+"block.minecraft.chest": {
+"name": "チェスト",
+"reading": "ちぇすと"
+},
+"block.minecraft.chipped_anvil": {
+"name": "欠けた金床",
+"reading": "かけたかなとこ"
+},
+"block.minecraft.chiseled_bookshelf": {
+"name": "模様入りの本棚",
+"reading": "もよういりのほんだな"
+},
+"block.minecraft.chiseled_cinnabar": {
+"name": "模様入りの辰砂",
+"reading": "もよういりのしんしゃ"
+},
+"block.minecraft.chiseled_copper": {
+"name": "模様入りの銅",
+"reading": "もよういりのどう"
+},
+"block.minecraft.chiseled_deepslate": {
+"name": "模様入りの深層岩",
+"reading": "もよういりのしんそうがん"
+},
+"block.minecraft.chiseled_nether_bricks": {
+"name": "模様入りのネザーレンガ",
+"reading": "もよういりのねざーれんが"
+},
+"block.minecraft.chiseled_packed_ice": {
+"name": "模様入りの氷塊",
+"reading": "もよういりのひょうかい"
+},
+"block.minecraft.chiseled_polished_blackstone": {
+"name": "模様入りの磨かれたブラックストーン",
+"reading": "もよういりのみがかれたぶらっくすとーん"
+},
+"block.minecraft.chiseled_quartz_block": {
+"name": "模様入りのクォーツブロック",
+"reading": "もよういりのくぉーつぶろっく"
+},
+"block.minecraft.chiseled_red_sandstone": {
+"name": "模様入りの赤い砂岩",
+"reading": "もよういりのあかいさがん"
+},
+"block.minecraft.chiseled_resin_bricks": {
+"name": "模様入りの樹脂レンガ",
+"reading": "もよういりのじゅしれんが"
+},
+"block.minecraft.chiseled_sandstone": {
+"name": "模様入りの砂岩",
+"reading": "もよういりのさがん"
+},
+"block.minecraft.chiseled_soulshale": {
+"name": "模様入りのソウルシェール",
+"reading": "もよういりのそうるしぇーる"
+},
+"block.minecraft.chiseled_stone_bricks": {
+"name": "模様入りの石レンガ",
+"reading": "もよういりのいしれんが"
+},
+"block.minecraft.chiseled_sulfur": {
+"name": "模様入りの硫黄",
+"reading": "もよういりのいおう"
+},
+"block.minecraft.chiseled_tuff": {
+"name": "模様入りの凝灰岩",
+"reading": "もよういりのぎょうかいがん"
+},
+"block.minecraft.chiseled_tuff_bricks": {
+"name": "模様入りの凝灰岩レンガ",
+"reading": "もよういりのぎょうかいがんれんが"
+},
+"block.minecraft.chorus_flower": {
+"name": "コーラスフラワー",
+"reading": "こーらすふらわー"
+},
+"block.minecraft.chorus_plant": {
+"name": "コーラスプラント",
+"reading": "こーらすぷらんと"
+},
+"block.minecraft.cinnabar": {
+"name": "辰砂",
+"reading": "しんしゃ"
+},
+"block.minecraft.cinnabar_brick_slab": {
+"name": "辰砂レンガのハーフブロック",
+"reading": "しんしゃれんがのはーふぶろっく"
+},
+"block.minecraft.cinnabar_brick_stairs": {
+"name": "辰砂レンガの階段",
+"reading": "しんしゃれんがのかいだん"
+},
+"block.minecraft.cinnabar_brick_wall": {
+"name": "辰砂レンガの塀",
+"reading": "しんしゃれんがのへい"
+},
+"block.minecraft.cinnabar_bricks": {
+"name": "辰砂レンガ",
+"reading": "しんしゃれんが"
+},
+"block.minecraft.cinnabar_slab": {
+"name": "辰砂のハーフブロック",
+"reading": "しんしゃのはーふぶろっく"
+},
+"block.minecraft.cinnabar_stairs": {
+"name": "辰砂の階段",
+"reading": "しんしゃのかいだん"
+},
+"block.minecraft.cinnabar_wall": {
+"name": "辰砂の塀",
+"reading": "しんしゃのへい"
+},
+"block.minecraft.clay": {
+"name": "粘土",
+"reading": "ねんど"
+},
+"block.minecraft.closed_eyeblossom": {
+"name": "閉じたヒトミソウ",
+"reading": "とじたひとみそう"
+},
+"block.minecraft.coal_block": {
+"name": "石炭ブロック",
+"reading": "せきたんぶろっく"
+},
+"block.minecraft.coal_ore": {
+"name": "石炭鉱石",
+"reading": "せきたんこうせき"
+},
+"block.minecraft.coarse_dirt": {
+"name": "粗い土",
+"reading": "あらいつち"
+},
+"block.minecraft.cobbled_deepslate": {
+"name": "深層岩の丸石",
+"reading": "しんそうがんのまるいし"
+},
+"block.minecraft.cobbled_deepslate_slab": {
+"name": "深層岩の丸石のハーフブロック",
+"reading": "しんそうがんのまるいしのはーふぶろっく"
+},
+"block.minecraft.cobbled_deepslate_stairs": {
+"name": "深層岩の丸石の階段",
+"reading": "しんそうがんのまるいしのかいだん"
+},
+"block.minecraft.cobbled_deepslate_wall": {
+"name": "深層岩の丸石の塀",
+"reading": "しんそうがんのまるいしのへい"
+},
+"block.minecraft.cobblestone": {
+"name": "丸石",
+"reading": "まるいし"
+},
+"block.minecraft.cobblestone_slab": {
+"name": "丸石のハーフブロック",
+"reading": "まるいしのはーふぶろっく"
+},
+"block.minecraft.cobblestone_stairs": {
+"name": "丸石の階段",
+"reading": "まるいしのかいだん"
+},
+"block.minecraft.cobblestone_wall": {
+"name": "丸石の塀",
+"reading": "まるいしのへい"
+},
+"block.minecraft.cobweb": {
+"name": "クモの巣",
+"reading": "くものす"
+},
+"block.minecraft.cocoa": {
+"name": "カカオの実",
+"reading": "かかおのみ"
+},
+"block.minecraft.command_block": {
+"name": "コマンドブロック",
+"reading": "こまんどぶろっく"
+},
+"block.minecraft.comparator": {
+"name": "レッドストーンコンパレーター",
+"reading": "れっどすとーんこんぱれーたー"
+},
+"block.minecraft.composter": {
+"name": "コンポスター",
+"reading": "こんぽすたー"
+},
+"block.minecraft.conduit": {
+"name": "コンジット",
+"reading": "こんじっと"
+},
+"block.minecraft.copper_bars": {
+"name": "銅格子",
+"reading": "どうこうし"
+},
+"block.minecraft.copper_block": {
+"name": "銅ブロック",
+"reading": "どうぶろっく"
+},
+"block.minecraft.copper_bulb": {
+"name": "銅の電球",
+"reading": "どうのでんきゅう"
+},
+"block.minecraft.copper_chain": {
+"name": "銅の鎖",
+"reading": "どうのくさり"
+},
+"block.minecraft.copper_chest": {
+"name": "銅のチェスト",
+"reading": "どうのちぇすと"
+},
+"block.minecraft.copper_door": {
+"name": "銅のドア",
+"reading": "どうのどあ"
+},
+"block.minecraft.copper_golem_statue": {
+"name": "カッパーゴーレムの像",
+"reading": "かっぱーごーれむのぞう"
+},
+"block.minecraft.copper_grate": {
+"name": "銅の金網",
+"reading": "どうのかなあみ"
+},
+"block.minecraft.copper_lantern": {
+"name": "銅のランタン",
+"reading": "どうのらんたん"
+},
+"block.minecraft.copper_ore": {
+"name": "銅鉱石",
+"reading": "どうこうせき"
+},
+"block.minecraft.copper_torch": {
+"name": "銅の松明",
+"reading": "どうのたいまつ"
+},
+"block.minecraft.copper_trapdoor": {
+"name": "銅のトラップドア",
+"reading": "どうのとらっぷどあ"
+},
+"block.minecraft.copper_wall_torch": {
+"name": "壁に付けられた銅の松明",
+"reading": "かべにつけられたどうのたいまつ"
+},
+"block.minecraft.cornflower": {
+"name": "ヤグルマギク",
+"reading": "やぐるまぎく"
+},
+"block.minecraft.cracked_deepslate_bricks": {
+"name": "ひび割れた深層岩レンガ",
+"reading": "ひびわれたしんそうがんれんが"
+},
+"block.minecraft.cracked_deepslate_tiles": {
+"name": "ひび割れた深層岩タイル",
+"reading": "ひびわれたしんそうがんたいる"
+},
+"block.minecraft.cracked_nether_bricks": {
+"name": "ひび割れたネザーレンガ",
+"reading": "ひびわれたねざーれんが"
+},
+"block.minecraft.cracked_polished_blackstone_bricks": {
+"name": "ひび割れた磨かれたブラックストーンレンガ",
+"reading": "ひびわれたみがかれたぶらっくすとーんれんが"
+},
+"block.minecraft.cracked_stone_bricks": {
+"name": "ひび割れた石レンガ",
+"reading": "ひびわれたいしれんが"
+},
+"block.minecraft.crafter": {
+"name": "自動作業台",
+"reading": "じどうさぎょうだい"
+},
+"block.minecraft.crafting_table": {
+"name": "作業台",
+"reading": "さぎょうだい"
+},
+"block.minecraft.creaking_heart": {
+"name": "クリーキングの心臓",
+"reading": "くりーきんぐのしんぞう"
+},
+"block.minecraft.creeper_head": {
+"name": "クリーパーの頭",
+"reading": "くりーぱーのあたま"
+},
+"block.minecraft.creeper_wall_head": {
+"name": "壁に付けられたクリーパーの頭",
+"reading": "かべにつけられたくりーぱーのあたま"
+},
+"block.minecraft.crimson_button": {
+"name": "真紅のボタン",
+"reading": "しんくのぼたん"
+},
+"block.minecraft.crimson_door": {
+"name": "真紅のドア",
+"reading": "しんくのどあ"
+},
+"block.minecraft.crimson_fence": {
+"name": "真紅のフェンス",
+"reading": "しんくのふぇんす"
+},
+"block.minecraft.crimson_fence_gate": {
+"name": "真紅のフェンスゲート",
+"reading": "しんくのふぇんすげーと"
+},
+"block.minecraft.crimson_fungus": {
+"name": "真紅のキノコ",
+"reading": "しんくのきのこ"
+},
+"block.minecraft.crimson_hanging_sign": {
+"name": "真紅の吊り看板",
+"reading": "しんくのつりかんばん"
+},
+"block.minecraft.crimson_hyphae": {
+"name": "真紅の菌糸",
+"reading": "しんくのきんし"
+},
+"block.minecraft.crimson_nylium": {
+"name": "真紅のナイリウム",
+"reading": "しんくのないりうむ"
+},
+"block.minecraft.crimson_planks": {
+"name": "真紅の板材",
+"reading": "しんくのいたざい"
+},
+"block.minecraft.crimson_pressure_plate": {
+"name": "真紅の感圧板",
+"reading": "しんくのかんあつばん"
+},
+"block.minecraft.crimson_roots": {
+"name": "真紅の根",
+"reading": "しんくのね"
+},
+"block.minecraft.crimson_shelf": {
+"name": "真紅の棚",
+"reading": "しんくのたな"
+},
+"block.minecraft.crimson_sign": {
+"name": "真紅の看板",
+"reading": "しんくのかんばん"
+},
+"block.minecraft.crimson_slab": {
+"name": "真紅のハーフブロック",
+"reading": "しんくのはーふぶろっく"
+},
+"block.minecraft.crimson_stairs": {
+"name": "真紅の階段",
+"reading": "しんくのかいだん"
+},
+"block.minecraft.crimson_stem": {
+"name": "真紅の幹",
+"reading": "しんくのみき"
+},
+"block.minecraft.crimson_trapdoor": {
+"name": "真紅のトラップドア",
+"reading": "しんくのとらっぷどあ"
+},
+"block.minecraft.crimson_wall_hanging_sign": {
+"name": "壁に付けられた真紅の吊り看板",
+"reading": "かべにつけられたしんくのつりかんばん"
+},
+"block.minecraft.crimson_wall_sign": {
+"name": "壁に付けられた真紅の看板",
+"reading": "かべにつけられたしんくのかんばん"
+},
+"block.minecraft.crying_obsidian": {
+"name": "泣く黒曜石",
+"reading": "なくこくようせき"
+},
+"block.minecraft.cut_copper": {
+"name": "切り込み入りの銅",
+"reading": "きりこみいりのどう"
+},
+"block.minecraft.cut_copper_slab": {
+"name": "切り込み入りの銅のハーフブロック",
+"reading": "きりこみいりのどうのはーふぶろっく"
+},
+"block.minecraft.cut_copper_stairs": {
+"name": "切り込み入りの銅の階段",
+"reading": "きりこみいりのどうのかいだん"
+},
+"block.minecraft.cut_red_sandstone": {
+"name": "研がれた赤い砂岩",
+"reading": "とがれたあかいさがん"
+},
+"block.minecraft.cut_red_sandstone_slab": {
+"name": "研がれた赤い砂岩のハーフブロック",
+"reading": "とがれたあかいさがんのはーふぶろっく"
+},
+"block.minecraft.cut_sandstone": {
+"name": "研がれた砂岩",
+"reading": "とがれたさがん"
+},
+"block.minecraft.cut_sandstone_slab": {
+"name": "研がれた砂岩のハーフブロック",
+"reading": "とがれたさがんのはーふぶろっく"
+},
+"block.minecraft.cyan_banner": {
+"name": "青緑色の旗",
+"reading": "あおみどりいろのはた"
+},
+"block.minecraft.cyan_bed": {
+"name": "青緑色のベッド",
+"reading": "あおみどりいろのべっど"
+},
+"block.minecraft.cyan_candle": {
+"name": "青緑色のろうそく",
+"reading": "あおみどりいろのろうそく"
+},
+"block.minecraft.cyan_candle_cake": {
+"name": "青緑色のろうそくが立てられたケーキ",
+"reading": "あおみどりいろのろうそくがたてられたけーき"
+},
+"block.minecraft.cyan_carpet": {
+"name": "青緑色のカーペット",
+"reading": "あおみどりいろのかーぺっと"
+},
+"block.minecraft.cyan_concrete": {
+"name": "青緑色のコンクリート",
+"reading": "あおみどりいろのこんくりーと"
+},
+"block.minecraft.cyan_concrete_powder": {
+"name": "青緑色のコンクリートパウダー",
+"reading": "あおみどりいろのこんくりーとぱうだー"
+},
+"block.minecraft.cyan_concrete_slab": {
+"name": "青緑色のコンクリートのハーフブロック",
+"reading": "あおみどりいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.cyan_concrete_stairs": {
+"name": "青緑色のコンクリートの階段",
+"reading": "あおみどりいろのこんくりーとのかいだん"
+},
+"block.minecraft.cyan_glazed_terracotta": {
+"name": "青緑色の彩釉テラコッタ",
+"reading": "あおみどりいろのさいゆうてらこった"
+},
+"block.minecraft.cyan_shulker_box": {
+"name": "青緑色のシュルカーボックス",
+"reading": "あおみどりいろのしゅるかーぼっくす"
+},
+"block.minecraft.cyan_stained_glass": {
+"name": "青緑色の色付きガラス",
+"reading": "あおみどりいろのいろつきがらす"
+},
+"block.minecraft.cyan_stained_glass_pane": {
+"name": "青緑色の色付きガラス板",
+"reading": "あおみどりいろのいろつきがらすばん"
+},
+"block.minecraft.cyan_terracotta": {
+"name": "青緑色のテラコッタ",
+"reading": "あおみどりいろのてらこった"
+},
+"block.minecraft.cyan_wool": {
+"name": "青緑色の羊毛",
+"reading": "あおみどりいろのようもう"
+},
+"block.minecraft.cyan_wool_slab": {
+"name": "青緑色の羊毛のハーフブロック",
+"reading": "あおみどりいろのようもうのはーふぶろっく"
+},
+"block.minecraft.cyan_wool_stairs": {
+"name": "青緑色の羊毛の階段",
+"reading": "あおみどりいろのようもうのかいだん"
+},
+"block.minecraft.damaged_anvil": {
+"name": "壊れかけの金床",
+"reading": "こわれかけのかなとこ"
+},
+"block.minecraft.dandelion": {
+"name": "タンポポ",
+"reading": "たんぽぽ"
+},
+"block.minecraft.dark_oak_button": {
+"name": "ダークオークのボタン",
+"reading": "だーくおーくのぼたん"
+},
+"block.minecraft.dark_oak_door": {
+"name": "ダークオークのドア",
+"reading": "だーくおーくのどあ"
+},
+"block.minecraft.dark_oak_fence": {
+"name": "ダークオークのフェンス",
+"reading": "だーくおーくのふぇんす"
+},
+"block.minecraft.dark_oak_fence_gate": {
+"name": "ダークオークのフェンスゲート",
+"reading": "だーくおーくのふぇんすげーと"
+},
+"block.minecraft.dark_oak_hanging_sign": {
+"name": "ダークオークの吊り看板",
+"reading": "だーくおーくのつりかんばん"
+},
+"block.minecraft.dark_oak_leaves": {
+"name": "ダークオークの葉",
+"reading": "だーくおーくのは"
+},
+"block.minecraft.dark_oak_log": {
+"name": "ダークオークの原木",
+"reading": "だーくおーくのげんぼく"
+},
+"block.minecraft.dark_oak_planks": {
+"name": "ダークオークの板材",
+"reading": "だーくおーくのいたざい"
+},
+"block.minecraft.dark_oak_pressure_plate": {
+"name": "ダークオークの感圧板",
+"reading": "だーくおーくのかんあつばん"
+},
+"block.minecraft.dark_oak_sapling": {
+"name": "ダークオークの苗木",
+"reading": "だーくおーくのなえぎ"
+},
+"block.minecraft.dark_oak_shelf": {
+"name": "ダークオークの棚",
+"reading": "だーくおーくのたな"
+},
+"block.minecraft.dark_oak_sign": {
+"name": "ダークオークの看板",
+"reading": "だーくおーくのかんばん"
+},
+"block.minecraft.dark_oak_slab": {
+"name": "ダークオークのハーフブロック",
+"reading": "だーくおーくのはーふぶろっく"
+},
+"block.minecraft.dark_oak_stairs": {
+"name": "ダークオークの階段",
+"reading": "だーくおーくのかいだん"
+},
+"block.minecraft.dark_oak_trapdoor": {
+"name": "ダークオークのトラップドア",
+"reading": "だーくおーくのとらっぷどあ"
+},
+"block.minecraft.dark_oak_wall_hanging_sign": {
+"name": "壁に付けられたダークオークの吊り看板",
+"reading": "かべにつけられただーくおーくのつりかんばん"
+},
+"block.minecraft.dark_oak_wall_sign": {
+"name": "壁に付けられたダークオークの看板",
+"reading": "かべにつけられただーくおーくのかんばん"
+},
+"block.minecraft.dark_oak_wood": {
+"name": "ダークオークの木",
+"reading": "だーくおーくのき"
+},
+"block.minecraft.dark_prismarine": {
+"name": "ダークプリズマリン",
+"reading": "だーくぷりずまりん"
+},
+"block.minecraft.dark_prismarine_slab": {
+"name": "ダークプリズマリンのハーフブロック",
+"reading": "だーくぷりずまりんのはーふぶろっく"
+},
+"block.minecraft.dark_prismarine_stairs": {
+"name": "ダークプリズマリンの階段",
+"reading": "だーくぷりずまりんのかいだん"
+},
+"block.minecraft.daylight_detector": {
+"name": "日照センサー",
+"reading": "にっしょうせんさー"
+},
+"block.minecraft.dead_brain_coral": {
+"name": "死んだノウサンゴ",
+"reading": "しんだのうさんご"
+},
+"block.minecraft.dead_brain_coral_block": {
+"name": "死んだノウサンゴブロック",
+"reading": "しんだのうさんごぶろっく"
+},
+"block.minecraft.dead_brain_coral_fan": {
+"name": "死んだノウウチワサンゴ",
+"reading": "しんだのううちわさんご"
+},
+"block.minecraft.dead_brain_coral_wall_fan": {
+"name": "壁付きの死んだノウウチワサンゴ",
+"reading": "かべつきのしんだのううちわさんご"
+},
+"block.minecraft.dead_bubble_coral": {
+"name": "死んだミズタマサンゴ",
+"reading": "しんだみずたまさんご"
+},
+"block.minecraft.dead_bubble_coral_block": {
+"name": "死んだミズタマサンゴブロック",
+"reading": "しんだみずたまさんごぶろっく"
+},
+"block.minecraft.dead_bubble_coral_fan": {
+"name": "死んだミズタマウチワサンゴ",
+"reading": "しんだみずたまうちわさんご"
+},
+"block.minecraft.dead_bubble_coral_wall_fan": {
+"name": "壁付きの死んだミズタマウチワサンゴ",
+"reading": "かべつきのしんだみずたまうちわさんご"
+},
+"block.minecraft.dead_bush": {
+"name": "枯れ木",
+"reading": "かれき"
+},
+"block.minecraft.dead_fire_coral": {
+"name": "死んだミレポラサンゴ",
+"reading": "しんだみれぽらさんご"
+},
+"block.minecraft.dead_fire_coral_block": {
+"name": "死んだミレポラサンゴブロック",
+"reading": "しんだみれぽらさんごぶろっく"
+},
+"block.minecraft.dead_fire_coral_fan": {
+"name": "死んだミレポラウチワサンゴ",
+"reading": "しんだみれぽらうちわさんご"
+},
+"block.minecraft.dead_fire_coral_wall_fan": {
+"name": "壁付きの死んだミレポラウチワサンゴ",
+"reading": "かべつきのしんだみれぽらうちわさんご"
+},
+"block.minecraft.dead_horn_coral": {
+"name": "死んだシカツノサンゴ",
+"reading": "しんだしかつのさんご"
+},
+"block.minecraft.dead_horn_coral_block": {
+"name": "死んだシカツノサンゴブロック",
+"reading": "しんだしかつのさんごぶろっく"
+},
+"block.minecraft.dead_horn_coral_fan": {
+"name": "死んだシカツノウチワサンゴ",
+"reading": "しんだしかつのうちわさんご"
+},
+"block.minecraft.dead_horn_coral_wall_fan": {
+"name": "壁付きの死んだシカツノウチワサンゴ",
+"reading": "かべつきのしんだしかつのうちわさんご"
+},
+"block.minecraft.dead_tube_coral": {
+"name": "死んだクダサンゴ",
+"reading": "しんだくださんご"
+},
+"block.minecraft.dead_tube_coral_block": {
+"name": "死んだクダサンゴブロック",
+"reading": "しんだくださんごぶろっく"
+},
+"block.minecraft.dead_tube_coral_fan": {
+"name": "死んだクダウチワサンゴ",
+"reading": "しんだくだうちわさんご"
+},
+"block.minecraft.dead_tube_coral_wall_fan": {
+"name": "壁付きの死んだクダウチワサンゴ",
+"reading": "かべつきのしんだくだうちわさんご"
+},
+"block.minecraft.decorated_pot": {
+"name": "飾り壺",
+"reading": "かざりつぼ"
+},
+"block.minecraft.deepslate": {
+"name": "深層岩",
+"reading": "しんそうがん"
+},
+"block.minecraft.deepslate_brick_slab": {
+"name": "深層岩レンガのハーフブロック",
+"reading": "しんそうがんれんがのはーふぶろっく"
+},
+"block.minecraft.deepslate_brick_stairs": {
+"name": "深層岩レンガの階段",
+"reading": "しんそうがんれんがのかいだん"
+},
+"block.minecraft.deepslate_brick_wall": {
+"name": "深層岩レンガの塀",
+"reading": "しんそうがんれんがのへい"
+},
+"block.minecraft.deepslate_bricks": {
+"name": "深層岩レンガ",
+"reading": "しんそうがんれんが"
+},
+"block.minecraft.deepslate_coal_ore": {
+"name": "深層石炭鉱石",
+"reading": "しんそうせきたんこうせき"
+},
+"block.minecraft.deepslate_copper_ore": {
+"name": "深層銅鉱石",
+"reading": "しんそうどうこうせき"
+},
+"block.minecraft.deepslate_diamond_ore": {
+"name": "深層ダイヤモンド鉱石",
+"reading": "しんそうだいやもんどこうせき"
+},
+"block.minecraft.deepslate_emerald_ore": {
+"name": "深層エメラルド鉱石",
+"reading": "しんそうえめらるどこうせき"
+},
+"block.minecraft.deepslate_gold_ore": {
+"name": "深層金鉱石",
+"reading": "しんそうきんこうせき"
+},
+"block.minecraft.deepslate_iron_ore": {
+"name": "深層鉄鉱石",
+"reading": "しんそうてつこうせき"
+},
+"block.minecraft.deepslate_lapis_ore": {
+"name": "深層ラピスラズリ鉱石",
+"reading": "しんそうらぴすらずりこうせき"
+},
+"block.minecraft.deepslate_redstone_ore": {
+"name": "深層レッドストーン鉱石",
+"reading": "しんそうれっどすとーんこうせき"
+},
+"block.minecraft.deepslate_tile_slab": {
+"name": "深層岩タイルのハーフブロック",
+"reading": "しんそうがんたいるのはーふぶろっく"
+},
+"block.minecraft.deepslate_tile_stairs": {
+"name": "深層岩タイルの階段",
+"reading": "しんそうがんたいるのかいだん"
+},
+"block.minecraft.deepslate_tile_wall": {
+"name": "深層岩タイルの塀",
+"reading": "しんそうがんたいるのへい"
+},
+"block.minecraft.deepslate_tiles": {
+"name": "深層岩タイル",
+"reading": "しんそうがんたいる"
+},
+"block.minecraft.detector_rail": {
+"name": "ディテクターレール",
+"reading": "でぃてくたーれーる"
+},
+"block.minecraft.diamond_block": {
+"name": "ダイヤモンドブロック",
+"reading": "だいやもんどぶろっく"
+},
+"block.minecraft.diamond_ore": {
+"name": "ダイヤモンド鉱石",
+"reading": "だいやもんどこうせき"
+},
+"block.minecraft.diorite": {
+"name": "閃緑岩",
+"reading": "せんりょくがん"
+},
+"block.minecraft.diorite_slab": {
+"name": "閃緑岩のハーフブロック",
+"reading": "せんりょくがんのはーふぶろっく"
+},
+"block.minecraft.diorite_stairs": {
+"name": "閃緑岩の階段",
+"reading": "せんりょくがんのかいだん"
+},
+"block.minecraft.diorite_wall": {
+"name": "閃緑岩の塀",
+"reading": "せんりょくがんのへい"
+},
+"block.minecraft.dirt": {
+"name": "土",
+"reading": "つち"
+},
+"block.minecraft.dirt_path": {
+"name": "土の道",
+"reading": "つちのみち"
+},
+"block.minecraft.dispenser": {
+"name": "ディスペンサー",
+"reading": "でぃすぺんさー"
+},
+"block.minecraft.dragon_egg": {
+"name": "ドラゴンの卵",
+"reading": "どらごんのたまご"
+},
+"block.minecraft.dragon_head": {
+"name": "ドラゴンの頭",
+"reading": "どらごんのあたま"
+},
+"block.minecraft.dragon_wall_head": {
+"name": "壁に付けられたドラゴンの頭",
+"reading": "かべにつけられたどらごんのあたま"
+},
+"block.minecraft.dried_ghast": {
+"name": "乾燥したガスト",
+"reading": "かんそうしたがすと"
+},
+"block.minecraft.dried_kelp_block": {
+"name": "乾燥した昆布ブロック",
+"reading": "かんそうしたこんぶぶろっく"
+},
+"block.minecraft.dripstone_block": {
+"name": "鍾乳石ブロック",
+"reading": "しょうにゅうせきぶろっく"
+},
+"block.minecraft.dropper": {
+"name": "ドロッパー",
+"reading": "どろっぱー"
+},
+"block.minecraft.emerald_block": {
+"name": "エメラルドブロック",
+"reading": "えめらるどぶろっく"
+},
+"block.minecraft.emerald_ore": {
+"name": "エメラルド鉱石",
+"reading": "えめらるどこうせき"
+},
+"block.minecraft.enchanting_table": {
+"name": "エンチャントテーブル",
+"reading": "えんちゃんとてーぶる"
+},
+"block.minecraft.end_gateway": {
+"name": "エンドゲートウェイ",
+"reading": "えんどげーとうぇい"
+},
+"block.minecraft.end_portal": {
+"name": "エンドポータル",
+"reading": "えんどぽーたる"
+},
+"block.minecraft.end_portal_frame": {
+"name": "エンドポータルフレーム",
+"reading": "えんどぽーたるふれーむ"
+},
+"block.minecraft.end_rod": {
+"name": "エンドロッド",
+"reading": "えんどろっど"
+},
+"block.minecraft.end_stone": {
+"name": "エンドストーン",
+"reading": "えんどすとーん"
+},
+"block.minecraft.end_stone_brick_slab": {
+"name": "エンドストーンレンガのハーフブロック",
+"reading": "えんどすとーんれんがのはーふぶろっく"
+},
+"block.minecraft.end_stone_brick_stairs": {
+"name": "エンドストーンレンガの階段",
+"reading": "えんどすとーんれんがのかいだん"
+},
+"block.minecraft.end_stone_brick_wall": {
+"name": "エンドストーンレンガの塀",
+"reading": "えんどすとーんれんがのへい"
+},
+"block.minecraft.end_stone_bricks": {
+"name": "エンドストーンレンガ",
+"reading": "えんどすとーんれんが"
+},
+"block.minecraft.ender_chest": {
+"name": "エンダーチェスト",
+"reading": "えんだーちぇすと"
+},
+"block.minecraft.exposed_chiseled_copper": {
+"name": "風化した模様入りの銅",
+"reading": "ふうかしたもよういりのどう"
+},
+"block.minecraft.exposed_copper": {
+"name": "風化した銅",
+"reading": "ふうかしたどう"
+},
+"block.minecraft.exposed_copper_bars": {
+"name": "風化した銅格子",
+"reading": "ふうかしたどうこうし"
+},
+"block.minecraft.exposed_copper_bulb": {
+"name": "風化した銅の電球",
+"reading": "ふうかしたどうのでんきゅう"
+},
+"block.minecraft.exposed_copper_chain": {
+"name": "風化した銅の鎖",
+"reading": "ふうかしたどうのくさり"
+},
+"block.minecraft.exposed_copper_chest": {
+"name": "風化した銅のチェスト",
+"reading": "ふうかしたどうのちぇすと"
+},
+"block.minecraft.exposed_copper_door": {
+"name": "風化した銅のドア",
+"reading": "ふうかしたどうのどあ"
+},
+"block.minecraft.exposed_copper_golem_statue": {
+"name": "風化したカッパーゴーレムの像",
+"reading": "ふうかしたかっぱーごーれむのぞう"
+},
+"block.minecraft.exposed_copper_grate": {
+"name": "風化した銅の金網",
+"reading": "ふうかしたどうのかなあみ"
+},
+"block.minecraft.exposed_copper_lantern": {
+"name": "風化した銅のランタン",
+"reading": "ふうかしたどうのらんたん"
+},
+"block.minecraft.exposed_copper_trapdoor": {
+"name": "風化した銅のトラップドア",
+"reading": "ふうかしたどうのとらっぷどあ"
+},
+"block.minecraft.exposed_cut_copper": {
+"name": "風化した切り込み入りの銅",
+"reading": "ふうかしたきりこみいりのどう"
+},
+"block.minecraft.exposed_cut_copper_slab": {
+"name": "風化した切り込み入りの銅のハーフブロック",
+"reading": "ふうかしたきりこみいりのどうのはーふぶろっく"
+},
+"block.minecraft.exposed_cut_copper_stairs": {
+"name": "風化した切り込み入りの銅の階段",
+"reading": "ふうかしたきりこみいりのどうのかいだん"
+},
+"block.minecraft.exposed_lightning_rod": {
+"name": "風化した避雷針",
+"reading": "ふうかしたひらいしん"
+},
+"block.minecraft.farmland": {
+"name": "耕地",
+"reading": "こうち"
+},
+"block.minecraft.fern": {
+"name": "シダ",
+"reading": "しだ"
+},
+"block.minecraft.fire": {
+"name": "炎",
+"reading": "ほのお"
+},
+"block.minecraft.fire_coral": {
+"name": "ミレポラサンゴ",
+"reading": "みれぽらさんご"
+},
+"block.minecraft.fire_coral_block": {
+"name": "ミレポラサンゴブロック",
+"reading": "みれぽらさんごぶろっく"
+},
+"block.minecraft.fire_coral_fan": {
+"name": "ミレポラウチワサンゴ",
+"reading": "みれぽらうちわさんご"
+},
+"block.minecraft.fire_coral_wall_fan": {
+"name": "壁付きのミレポラウチワサンゴ",
+"reading": "かべつきのみれぽらうちわさんご"
+},
+"block.minecraft.firefly_bush": {
+"name": "ホタルの茂み",
+"reading": "ほたるのしげみ"
+},
+"block.minecraft.fletching_table": {
+"name": "矢細工台",
+"reading": "やざいくだい"
+},
+"block.minecraft.flower_pot": {
+"name": "植木鉢",
+"reading": "うえきばち"
+},
+"block.minecraft.flowering_azalea": {
+"name": "開花したツツジ",
+"reading": "かいかしたつつじ"
+},
+"block.minecraft.flowering_azalea_leaves": {
+"name": "開花したツツジの葉",
+"reading": "かいかしたつつじのは"
+},
+"block.minecraft.frogspawn": {
+"name": "カエルの卵",
+"reading": "かえるのたまご"
+},
+"block.minecraft.frosted_ice": {
+"name": "薄氷",
+"reading": "うすごおり"
+},
+"block.minecraft.furnace": {
+"name": "かまど",
+"reading": "かまど"
+},
+"block.minecraft.gilded_blackstone": {
+"name": "きらめくブラックストーン",
+"reading": "きらめくぶらっくすとーん"
+},
+"block.minecraft.glass": {
+"name": "ガラス",
+"reading": "がらす"
+},
+"block.minecraft.glass_pane": {
+"name": "ガラス板",
+"reading": "がらすいた"
+},
+"block.minecraft.glow_lichen": {
+"name": "ヒカリゴケ",
+"reading": "ひかりごけ"
+},
+"block.minecraft.glowstone": {
+"name": "グロウストーン",
+"reading": "ぐろうすとーん"
+},
+"block.minecraft.gold_block": {
+"name": "金ブロック",
+"reading": "きんぶろっく"
+},
+"block.minecraft.gold_ore": {
+"name": "金鉱石",
+"reading": "きんこうせき"
+},
+"block.minecraft.golden_dandelion": {
+"name": "金のタンポポ",
+"reading": "きんのたんぽぽ"
+},
+"block.minecraft.granite": {
+"name": "花崗岩",
+"reading": "かこうがん"
+},
+"block.minecraft.granite_slab": {
+"name": "花崗岩のハーフブロック",
+"reading": "かこうがんのはーふぶろっく"
+},
+"block.minecraft.granite_stairs": {
+"name": "花崗岩の階段",
+"reading": "かこうがんのかいだん"
+},
+"block.minecraft.granite_wall": {
+"name": "花崗岩の塀",
+"reading": "かこうがんのへい"
+},
+"block.minecraft.grass": {
+"name": "草",
+"reading": "くさ"
+},
+"block.minecraft.grass_block": {
+"name": "草ブロック",
+"reading": "くさぶろっく"
+},
+"block.minecraft.gravel": {
+"name": "砂利",
+"reading": "じゃり"
+},
+"block.minecraft.gray_banner": {
+"name": "灰色の旗",
+"reading": "はいいろのはた"
+},
+"block.minecraft.gray_bed": {
+"name": "灰色のベッド",
+"reading": "はいいろのべっど"
+},
+"block.minecraft.gray_candle": {
+"name": "灰色のろうそく",
+"reading": "はいいろのろうそく"
+},
+"block.minecraft.gray_candle_cake": {
+"name": "灰色のろうそくが立てられたケーキ",
+"reading": "はいいろのろうそくがたてられたけーき"
+},
+"block.minecraft.gray_carpet": {
+"name": "灰色のカーペット",
+"reading": "はいいろのかーぺっと"
+},
+"block.minecraft.gray_concrete": {
+"name": "灰色のコンクリート",
+"reading": "はいいろのこんくりーと"
+},
+"block.minecraft.gray_concrete_powder": {
+"name": "灰色のコンクリートパウダー",
+"reading": "はいいろのこんくりーとぱうだー"
+},
+"block.minecraft.gray_concrete_slab": {
+"name": "灰色のコンクリートのハーフブロック",
+"reading": "はいいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.gray_concrete_stairs": {
+"name": "灰色のコンクリートの階段",
+"reading": "はいいろのこんくりーとのかいだん"
+},
+"block.minecraft.gray_glazed_terracotta": {
+"name": "灰色の彩釉テラコッタ",
+"reading": "はいいろのさいゆうてらこった"
+},
+"block.minecraft.gray_shulker_box": {
+"name": "灰色のシュルカーボックス",
+"reading": "はいいろのしゅるかーぼっくす"
+},
+"block.minecraft.gray_stained_glass": {
+"name": "灰色の色付きガラス",
+"reading": "はいいろのいろつきがらす"
+},
+"block.minecraft.gray_stained_glass_pane": {
+"name": "灰色の色付きガラス板",
+"reading": "はいいろのいろつきがらすいた"
+},
+"block.minecraft.gray_terracotta": {
+"name": "灰色のテラコッタ",
+"reading": "はいいろのてらこった"
+},
+"block.minecraft.gray_wool": {
+"name": "灰色の羊毛",
+"reading": "はいいろのようもう"
+},
+"block.minecraft.gray_wool_slab": {
+"name": "灰色の羊毛のハーフブロック",
+"reading": "はいいろのようもうのはーふぶろっく"
+},
+"block.minecraft.gray_wool_stairs": {
+"name": "灰色の羊毛の階段",
+"reading": "はいいろのようもうのかいだん"
+},
+"block.minecraft.green_banner": {
+"name": "緑色の旗",
+"reading": "みどりいろのはた"
+},
+"block.minecraft.green_bed": {
+"name": "緑色のベッド",
+"reading": "みどりいろのべっど"
+},
+"block.minecraft.green_candle": {
+"name": "緑色のろうそく",
+"reading": "みどりいろのろうそく"
+},
+"block.minecraft.green_candle_cake": {
+"name": "緑色のろうそくが立てられたケーキ",
+"reading": "みどりいろのろうそくがたてられたけーき"
+},
+"block.minecraft.green_carpet": {
+"name": "緑色のカーペット",
+"reading": "みどりいろのかーぺっと"
+},
+"block.minecraft.green_concrete": {
+"name": "緑色のコンクリート",
+"reading": "みどりいろのこんくりーと"
+},
+"block.minecraft.green_concrete_powder": {
+"name": "緑色のコンクリートパウダー",
+"reading": "みどりいろのこんくりーとぱうだー"
+},
+"block.minecraft.green_concrete_slab": {
+"name": "緑色のコンクリートのハーフブロック",
+"reading": "みどりいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.green_concrete_stairs": {
+"name": "緑色のコンクリートの階段",
+"reading": "みどりいろのこんくりーとのかいだん"
+},
+"block.minecraft.green_glazed_terracotta": {
+"name": "緑色の彩釉テラコッタ",
+"reading": "みどりいろのさいゆうてらこった"
+},
+"block.minecraft.green_shulker_box": {
+"name": "緑色のシュルカーボックス",
+"reading": "みどりいろのしゅるかーぼっくす"
+},
+"block.minecraft.green_stained_glass": {
+"name": "緑色の色付きガラス",
+"reading": "みどりいろのいろつきがらす"
+},
+"block.minecraft.green_stained_glass_pane": {
+"name": "緑色の色付きガラス板",
+"reading": "みどりいろのいろつきがらすばん"
+},
+"block.minecraft.green_terracotta": {
+"name": "緑色のテラコッタ",
+"reading": "みどりいろのてらこった"
+},
+"block.minecraft.green_wool": {
+"name": "緑色の羊毛",
+"reading": "みどりいろのようもう"
+},
+"block.minecraft.green_wool_slab": {
+"name": "緑色の羊毛のハーフブロック",
+"reading": "みどりいろのようもうのはーふぶろっく"
+},
+"block.minecraft.green_wool_stairs": {
+"name": "緑色の羊毛の階段",
+"reading": "みどりいろのようもうのかいだん"
+},
+"block.minecraft.grindstone": {
+"name": "砥石",
+"reading": "といし"
+},
+"block.minecraft.hanging_roots": {
+"name": "垂れ根",
+"reading": "たれね"
+},
+"block.minecraft.hay_block": {
+"name": "干草の俵",
+"reading": "ほしくさのたわら"
+},
+"block.minecraft.heavy_core": {
+"name": "ヘビーコア",
+"reading": "へびーこあ"
+},
+"block.minecraft.heavy_weighted_pressure_plate": {
+"name": "重量用感圧板",
+"reading": "じゅうりょうようかんあつばん"
+},
+"block.minecraft.honey_block": {
+"name": "ハチミツブロック",
+"reading": "はちみつぶろっく"
+},
+"block.minecraft.honeycomb_block": {
+"name": "ハニカムブロック",
+"reading": "はにかむぶろっく"
+},
+"block.minecraft.hopper": {
+"name": "ホッパー",
+"reading": "ほっぱー"
+},
+"block.minecraft.horn_coral": {
+"name": "シカツノサンゴ",
+"reading": "しかつのさんご"
+},
+"block.minecraft.horn_coral_block": {
+"name": "シカツノサンゴブロック",
+"reading": "しかつのさんごぶろっく"
+},
+"block.minecraft.horn_coral_fan": {
+"name": "シカツノウチワサンゴ",
+"reading": "しかつのうちわさんご"
+},
+"block.minecraft.horn_coral_wall_fan": {
+"name": "壁付きのシカツノウチワサンゴ",
+"reading": "かべつきのしかつのうちわさんご"
+},
+"block.minecraft.ice": {
+"name": "氷",
+"reading": "こおり"
+},
+"block.minecraft.ice_crystal": {
+"name": "氷晶",
+"reading": "ひょうしょう"
+},
+"block.minecraft.icicle": {
+"name": "つらら",
+"reading": "つらら"
+},
+"block.minecraft.infested_chiseled_stone_bricks": {
+"name": "模様入りの虫食い石レンガ",
+"reading": "もよういりのむしくいいしれんが"
+},
+"block.minecraft.infested_cobblestone": {
+"name": "虫食い丸石",
+"reading": "むしくいまるいし"
+},
+"block.minecraft.infested_cracked_stone_bricks": {
+"name": "ひび割れた虫食い石レンガ",
+"reading": "ひびわれたむしくいいしれんが"
+},
+"block.minecraft.infested_deepslate": {
+"name": "虫食い深層岩",
+"reading": "むしくいしんそうがん"
+},
+"block.minecraft.infested_mossy_stone_bricks": {
+"name": "苔むした虫食い石レンガ",
+"reading": "こけむしたむしくいいしれんが"
+},
+"block.minecraft.infested_stone": {
+"name": "虫食い石",
+"reading": "むしくいいし"
+},
+"block.minecraft.infested_stone_bricks": {
+"name": "虫食い石レンガ",
+"reading": "むしくいいしれんが"
+},
+"block.minecraft.iron_bars": {
+"name": "鉄格子",
+"reading": "てつごうし"
+},
+"block.minecraft.iron_block": {
+"name": "鉄ブロック",
+"reading": "てつぶろっく"
+},
+"block.minecraft.iron_chain": {
+"name": "鉄の鎖",
+"reading": "てつのくさり"
+},
+"block.minecraft.iron_door": {
+"name": "鉄のドア",
+"reading": "てつのどあ"
+},
+"block.minecraft.iron_ore": {
+"name": "鉄鉱石",
+"reading": "てつこうせき"
+},
+"block.minecraft.iron_trapdoor": {
+"name": "鉄のトラップドア",
+"reading": "てつのとらっぷどあ"
+},
+"block.minecraft.jack_o_lantern": {
+"name": "ジャック・オ・ランタン",
+"reading": "じゃっくおらんたん"
+},
+"block.minecraft.jigsaw": {
+"name": "ジグソーブロック",
+"reading": "じぐそーぶろっく"
+},
+"block.minecraft.jukebox": {
+"name": "ジュークボックス",
+"reading": "じゅーくぼっくす"
+},
+"block.minecraft.jungle_button": {
+"name": "ジャングルのボタン",
+"reading": "じゃんぐるのぼたん"
+},
+"block.minecraft.jungle_door": {
+"name": "ジャングルのドア",
+"reading": "じゃんぐるのどあ"
+},
+"block.minecraft.jungle_fence": {
+"name": "ジャングルのフェンス",
+"reading": "じゃんぐるのふぇんす"
+},
+"block.minecraft.jungle_fence_gate": {
+"name": "ジャングルのフェンスゲート",
+"reading": "じゃんぐるのふぇんすげーと"
+},
+"block.minecraft.jungle_hanging_sign": {
+"name": "ジャングルの吊り看板",
+"reading": "じゃんぐるのつりかんばん"
+},
+"block.minecraft.jungle_leaves": {
+"name": "ジャングルの葉",
+"reading": "じゃんぐるのは"
+},
+"block.minecraft.jungle_log": {
+"name": "ジャングルの原木",
+"reading": "じゃんぐるのげんぼく"
+},
+"block.minecraft.jungle_planks": {
+"name": "ジャングルの板材",
+"reading": "じゃんぐるのいたざい"
+},
+"block.minecraft.jungle_pressure_plate": {
+"name": "ジャングルの感圧板",
+"reading": "じゃんぐるのかんあつばん"
+},
+"block.minecraft.jungle_sapling": {
+"name": "ジャングルの苗木",
+"reading": "じゃんぐるのなえぎ"
+},
+"block.minecraft.jungle_shelf": {
+"name": "ジャングルの棚",
+"reading": "じゃんぐるのたな"
+},
+"block.minecraft.jungle_sign": {
+"name": "ジャングルの看板",
+"reading": "じゃんぐるのかんばん"
+},
+"block.minecraft.jungle_slab": {
+"name": "ジャングルのハーフブロック",
+"reading": "じゃんぐるのはーふぶろっく"
+},
+"block.minecraft.jungle_stairs": {
+"name": "ジャングルの階段",
+"reading": "じゃんぐるのかいだん"
+},
+"block.minecraft.jungle_trapdoor": {
+"name": "ジャングルのトラップドア",
+"reading": "じゃんぐるのとらっぷどあ"
+},
+"block.minecraft.jungle_wall_hanging_sign": {
+"name": "壁に付けられたジャングルの吊り看板",
+"reading": "かべにつけられたじゃんぐるのつりかんばん"
+},
+"block.minecraft.jungle_wall_sign": {
+"name": "壁に付けられたジャングルの看板",
+"reading": "かべにつけられたじゃんぐるのかんばん"
+},
+"block.minecraft.jungle_wood": {
+"name": "ジャングルの木",
+"reading": "じゃんぐるのき"
+},
+"block.minecraft.kelp": {
+"name": "コンブ",
+"reading": "こんぶ"
+},
+"block.minecraft.kelp_plant": {
+"name": "コンブの茎",
+"reading": "こんぶのくき"
+},
+"block.minecraft.ladder": {
+"name": "はしご",
+"reading": "はしご"
+},
+"block.minecraft.lantern": {
+"name": "ランタン",
+"reading": "らんたん"
+},
+"block.minecraft.lapis_block": {
+"name": "ラピスラズリブロック",
+"reading": "らぴすらずりぶろっく"
+},
+"block.minecraft.lapis_ore": {
+"name": "ラピスラズリ鉱石",
+"reading": "らぴすらずりこうせき"
+},
+"block.minecraft.large_amethyst_bud": {
+"name": "大きなアメジストの芽",
+"reading": "おおきなあめじすとのめ"
+},
+"block.minecraft.large_fern": {
+"name": "大きなシダ",
+"reading": "おおきなしだ"
+},
+"block.minecraft.lava": {
+"name": "溶岩",
+"reading": "ようがん"
+},
+"block.minecraft.lava_cauldron": {
+"name": "溶岩入りの大釜",
+"reading": "ようがんいりのおおがま"
+},
+"block.minecraft.leaf_litter": {
+"name": "落ち葉",
+"reading": "おちば"
+},
+"block.minecraft.lectern": {
+"name": "書見台",
+"reading": "しょけんだい"
+},
+"block.minecraft.lever": {
+"name": "レバー",
+"reading": "ればー"
+},
+"block.minecraft.light": {
+"name": "ライトブロック",
+"reading": "らいとぶろっく"
+},
+"block.minecraft.light_blue_banner": {
+"name": "空色の旗",
+"reading": "そらいろのはた"
+},
+"block.minecraft.light_blue_bed": {
+"name": "空色のベッド",
+"reading": "そらいろのべっど"
+},
+"block.minecraft.light_blue_candle": {
+"name": "空色のろうそく",
+"reading": "そらいろのろうそく"
+},
+"block.minecraft.light_blue_candle_cake": {
+"name": "空色のろうそくが立てられたケーキ",
+"reading": "そらいろのろうそくがたてられたけーき"
+},
+"block.minecraft.light_blue_carpet": {
+"name": "空色のカーペット",
+"reading": "そらいろのかーぺっと"
+},
+"block.minecraft.light_blue_concrete": {
+"name": "空色のコンクリート",
+"reading": "そらいろのこんくりーと"
+},
+"block.minecraft.light_blue_concrete_powder": {
+"name": "空色のコンクリートパウダー",
+"reading": "そらいろのこんくりーとぱうだー"
+},
+"block.minecraft.light_blue_concrete_slab": {
+"name": "空色のコンクリートのハーフブロック",
+"reading": "そらいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.light_blue_concrete_stairs": {
+"name": "空色のコンクリートの階段",
+"reading": "そらいろのこんくりーとのかいだん"
+},
+"block.minecraft.light_blue_glazed_terracotta": {
+"name": "空色の彩釉テラコッタ",
+"reading": "そらいろのさいゆうてらこった"
+},
+"block.minecraft.light_blue_shulker_box": {
+"name": "空色のシュルカーボックス",
+"reading": "そらいろのしゅるかーぼっくす"
+},
+"block.minecraft.light_blue_stained_glass": {
+"name": "空色の色付きガラス",
+"reading": "そらいろのいろつきがらす"
+},
+"block.minecraft.light_blue_stained_glass_pane": {
+"name": "空色の色付きガラス板",
+"reading": "そらいろのいろつきがらすばん"
+},
+"block.minecraft.light_blue_terracotta": {
+"name": "空色のテラコッタ",
+"reading": "そらいろのてらこった"
+},
+"block.minecraft.light_blue_wool": {
+"name": "空色の羊毛",
+"reading": "そらいろのようもう"
+},
+"block.minecraft.light_blue_wool_slab": {
+"name": "空色の羊毛のハーフブロック",
+"reading": "そらいろのようもうのはーふぶろっく"
+},
+"block.minecraft.light_blue_wool_stairs": {
+"name": "空色の羊毛の階段",
+"reading": "そらいろのようもうのかいだん"
+},
+"block.minecraft.light_gray_banner": {
+"name": "薄灰色の旗",
+"reading": "うすはいいろのはた"
+},
+"block.minecraft.light_gray_bed": {
+"name": "薄灰色のベッド",
+"reading": "うすはいいろのべっど"
+},
+"block.minecraft.light_gray_candle": {
+"name": "薄灰色のろうそく",
+"reading": "うすはいいろのろうそく"
+},
+"block.minecraft.light_gray_candle_cake": {
+"name": "薄灰色のろうそくが立てられたケーキ",
+"reading": "うすはいいろのろうそくがたてられたけーき"
+},
+"block.minecraft.light_gray_carpet": {
+"name": "薄灰色のカーペット",
+"reading": "うすはいいろのかーぺっと"
+},
+"block.minecraft.light_gray_concrete": {
+"name": "薄灰色のコンクリート",
+"reading": "うすはいいろのこんくりーと"
+},
+"block.minecraft.light_gray_concrete_powder": {
+"name": "薄灰色のコンクリートパウダー",
+"reading": "うすはいいろのこんくりーとぱうだー"
+},
+"block.minecraft.light_gray_concrete_slab": {
+"name": "薄灰色のコンクリートのハーフブロック",
+"reading": "うすはいいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.light_gray_concrete_stairs": {
+"name": "薄灰色のコンクリートの階段",
+"reading": "うすはいいろのこんくりーとのかいだん"
+},
+"block.minecraft.light_gray_glazed_terracotta": {
+"name": "薄灰色の彩釉テラコッタ",
+"reading": "うすはいいろのさいゆうてらこった"
+},
+"block.minecraft.light_gray_shulker_box": {
+"name": "薄灰色のシュルカーボックス",
+"reading": "うすはいいろのしゅるかーぼっくす"
+},
+"block.minecraft.light_gray_stained_glass": {
+"name": "薄灰色の色付きガラス",
+"reading": "うすはいいろのいろつきがらす"
+},
+"block.minecraft.light_gray_stained_glass_pane": {
+"name": "薄灰色の色付きガラス板",
+"reading": "うすはいいろのいろつきがらすばん"
+},
+"block.minecraft.light_gray_terracotta": {
+"name": "薄灰色のテラコッタ",
+"reading": "うすはいいろのてらこった"
+},
+"block.minecraft.light_gray_wool": {
+"name": "薄灰色の羊毛",
+"reading": "うすはいいろのようもう"
+},
+"block.minecraft.light_gray_wool_slab": {
+"name": "薄灰色の羊毛のハーフブロック",
+"reading": "うすはいいろのようもうのはーふぶろっく"
+},
+"block.minecraft.light_gray_wool_stairs": {
+"name": "薄灰色の羊毛の階段",
+"reading": "うすはいいろのようもうのかいだん"
+},
+"block.minecraft.light_weighted_pressure_plate": {
+"name": "軽量用感圧板",
+"reading": "けいりょうようかんあつばん"
+},
+"block.minecraft.lightning_rod": {
+"name": "避雷針",
+"reading": "ひらいしん"
+},
+"block.minecraft.lilac": {
+"name": "ライラック",
+"reading": "らいらっく"
+},
+"block.minecraft.lily_of_the_valley": {
+"name": "スズラン",
+"reading": "すずらん"
+},
+"block.minecraft.lily_pad": {
+"name": "スイレンの葉",
+"reading": "すいれんのは"
+},
+"block.minecraft.lime_banner": {
+"name": "黄緑色の旗",
+"reading": "きみどりいろのはた"
+},
+"block.minecraft.lime_bed": {
+"name": "黄緑色のベッド",
+"reading": "きみどりいろのべっど"
+},
+"block.minecraft.lime_candle": {
+"name": "黄緑色のろうそく",
+"reading": "きみどりいろのろうそく"
+},
+"block.minecraft.lime_candle_cake": {
+"name": "黄緑色のろうそくが立てられたケーキ",
+"reading": "きみどりいろのろうそくがたてられたけーき"
+},
+"block.minecraft.lime_carpet": {
+"name": "黄緑色のカーペット",
+"reading": "きみどりいろのかーぺっと"
+},
+"block.minecraft.lime_concrete": {
+"name": "黄緑色のコンクリート",
+"reading": "きみどりいろのこんくりーと"
+},
+"block.minecraft.lime_concrete_powder": {
+"name": "黄緑色のコンクリートパウダー",
+"reading": "きみどりいろのこんくりーとぱうだー"
+},
+"block.minecraft.lime_concrete_slab": {
+"name": "黄緑色のコンクリートのハーフブロック",
+"reading": "きみどりいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.lime_concrete_stairs": {
+"name": "黄緑色のコンクリートの階段",
+"reading": "きみどりいろのこんくりーとのかいだん"
+},
+"block.minecraft.lime_glazed_terracotta": {
+"name": "黄緑色の彩釉テラコッタ",
+"reading": "きみどりいろのさいゆうてらこった"
+},
+"block.minecraft.lime_shulker_box": {
+"name": "黄緑色のシュルカーボックス",
+"reading": "きみどりいろのしゅるかーぼっくす"
+},
+"block.minecraft.lime_stained_glass": {
+"name": "黄緑色の色付きガラス",
+"reading": "きみどりいろのいろつきがらす"
+},
+"block.minecraft.lime_stained_glass_pane": {
+"name": "黄緑色の色付きガラス板",
+"reading": "きみどりいろのいろつきがらすばん"
+},
+"block.minecraft.lime_terracotta": {
+"name": "黄緑色のテラコッタ",
+"reading": "きみどりいろのてらこった"
+},
+"block.minecraft.lime_wool": {
+"name": "黄緑色の羊毛",
+"reading": "きみどりいろのようもう"
+},
+"block.minecraft.lime_wool_slab": {
+"name": "黄緑色の羊毛のハーフブロック",
+"reading": "きみどりいろのようもうのはーふぶろっく"
+},
+"block.minecraft.lime_wool_stairs": {
+"name": "黄緑色の羊毛の階段",
+"reading": "きみどりいろのようもうのかいだん"
+},
+"block.minecraft.lodestone": {
+"name": "ロードストーン",
+"reading": "ろーどすとーん"
+},
+"block.minecraft.loom": {
+"name": "機織り機",
+"reading": "はたおりき"
+},
+"block.minecraft.magenta_banner": {
+"name": "赤紫色の旗",
+"reading": "あかむらさきいろのはた"
+},
+"block.minecraft.magenta_bed": {
+"name": "赤紫色のベッド",
+"reading": "あかむらさきいろのべっど"
+},
+"block.minecraft.magenta_candle": {
+"name": "赤紫色のろうそく",
+"reading": "あかむらさきいろのろうそく"
+},
+"block.minecraft.magenta_candle_cake": {
+"name": "赤紫色のろうそくが立てられたケーキ",
+"reading": "あかむらさきいろのろうそくがたてられたけーき"
+},
+"block.minecraft.magenta_carpet": {
+"name": "赤紫色のカーペット",
+"reading": "あかむらさきいろのかーぺっと"
+},
+"block.minecraft.magenta_concrete": {
+"name": "赤紫色のコンクリート",
+"reading": "あかむらさきいろのこんくりーと"
+},
+"block.minecraft.magenta_concrete_powder": {
+"name": "赤紫色のコンクリートパウダー",
+"reading": "あかむらさきいろのこんくりーとぱうだー"
+},
+"block.minecraft.magenta_concrete_slab": {
+"name": "赤紫色のコンクリートのハーフブロック",
+"reading": "あかむらさきいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.magenta_concrete_stairs": {
+"name": "赤紫色のコンクリートの階段",
+"reading": "あかむらさきいろのこんくりーとのかいだん"
+},
+"block.minecraft.magenta_glazed_terracotta": {
+"name": "赤紫色の彩釉テラコッタ",
+"reading": "あかむらさきいろのさいゆうてらこった"
+},
+"block.minecraft.magenta_shulker_box": {
+"name": "赤紫色のシュルカーボックス",
+"reading": "あかむらさきいろのしゅるかーぼっくす"
+},
+"block.minecraft.magenta_stained_glass": {
+"name": "赤紫色の色付きガラス",
+"reading": "あかむらさきいろのいろつきがらす"
+},
+"block.minecraft.magenta_stained_glass_pane": {
+"name": "赤紫色の色付きガラス板",
+"reading": "あかむらさきいろのいろつきがらすばん"
+},
+"block.minecraft.magenta_terracotta": {
+"name": "赤紫色のテラコッタ",
+"reading": "あかむらさきいろのてらこった"
+},
+"block.minecraft.magenta_wool": {
+"name": "赤紫色の羊毛",
+"reading": "あかむらさきいろのようもう"
+},
+"block.minecraft.magenta_wool_slab": {
+"name": "赤紫色の羊毛のハーフブロック",
+"reading": "あかむらさきいろのようもうのはーふぶろっく"
+},
+"block.minecraft.magenta_wool_stairs": {
+"name": "赤紫色の羊毛の階段",
+"reading": "あかむらさきいろのようもうのかいだん"
+},
+"block.minecraft.magma_block": {
+"name": "マグマブロック",
+"reading": "まぐまぶろっく"
+},
+"block.minecraft.mangrove_button": {
+"name": "マングローブのボタン",
+"reading": "まんぐろーぶのぼたん"
+},
+"block.minecraft.mangrove_door": {
+"name": "マングローブのドア",
+"reading": "まんぐろーぶのどあ"
+},
+"block.minecraft.mangrove_fence": {
+"name": "マングローブのフェンス",
+"reading": "まんぐろーぶのふぇんす"
+},
+"block.minecraft.mangrove_fence_gate": {
+"name": "マングローブのフェンスゲート",
+"reading": "まんぐろーぶのふぇんすげーと"
+},
+"block.minecraft.mangrove_hanging_sign": {
+"name": "マングローブの吊り看板",
+"reading": "まんぐろーぶのつりかんばん"
+},
+"block.minecraft.mangrove_leaves": {
+"name": "マングローブの葉",
+"reading": "まんぐろーぶのは"
+},
+"block.minecraft.mangrove_log": {
+"name": "マングローブの原木",
+"reading": "まんぐろーぶのげんぼく"
+},
+"block.minecraft.mangrove_planks": {
+"name": "マングローブの板材",
+"reading": "まんぐろーぶのいたざい"
+},
+"block.minecraft.mangrove_pressure_plate": {
+"name": "マングローブの感圧板",
+"reading": "まんぐろーぶのかんあつばん"
+},
+"block.minecraft.mangrove_propagule": {
+"name": "マングローブの芽",
+"reading": "まんぐろーぶのめ"
+},
+"block.minecraft.mangrove_roots": {
+"name": "マングローブの根",
+"reading": "まんぐろーぶのね"
+},
+"block.minecraft.mangrove_shelf": {
+"name": "マングローブの棚",
+"reading": "まんぐろーぶのたな"
+},
+"block.minecraft.mangrove_sign": {
+"name": "マングローブの看板",
+"reading": "まんぐろーぶのかんばん"
+},
+"block.minecraft.mangrove_slab": {
+"name": "マングローブのハーフブロック",
+"reading": "まんぐろーぶのはーふぶろっく"
+},
+"block.minecraft.mangrove_stairs": {
+"name": "マングローブの階段",
+"reading": "まんぐろーぶのかいだん"
+},
+"block.minecraft.mangrove_trapdoor": {
+"name": "マングローブのトラップドア",
+"reading": "まんぐろーぶのとらっぷどあ"
+},
+"block.minecraft.mangrove_wall_hanging_sign": {
+"name": "壁に付けられたマングローブの吊り看板",
+"reading": "かべにつけられたまんぐろーぶのつりかんばん"
+},
+"block.minecraft.mangrove_wall_sign": {
+"name": "壁に付けられたマングローブの看板",
+"reading": "かべにつけられたまんぐろーぶのかんばん"
+},
+"block.minecraft.mangrove_wood": {
+"name": "マングローブの木",
+"reading": "まんぐろーぶのき"
+},
+"block.minecraft.medium_amethyst_bud": {
+"name": "中くらいのアメジストの芽",
+"reading": "なかくらいのあめじすとのめ"
+},
+"block.minecraft.melon": {
+"name": "スイカ",
+"reading": "すいか"
+},
+"block.minecraft.melon_stem": {
+"name": "スイカの茎",
+"reading": "すいかのくき"
+},
+"block.minecraft.moss_block": {
+"name": "苔ブロック",
+"reading": "こけぶろっく"
+},
+"block.minecraft.moss_carpet": {
+"name": "苔のカーペット",
+"reading": "こけのかーぺっと"
+},
+"block.minecraft.mossy_cobblestone": {
+"name": "苔むした丸石",
+"reading": "こけむしたまるいし"
+},
+"block.minecraft.mossy_cobblestone_slab": {
+"name": "苔むした丸石のハーフブロック",
+"reading": "こけむしたまるいしのはーふぶろっく"
+},
+"block.minecraft.mossy_cobblestone_stairs": {
+"name": "苔むした丸石の階段",
+"reading": "こけむしたまるいしのかいだん"
+},
+"block.minecraft.mossy_cobblestone_wall": {
+"name": "苔むした丸石の塀",
+"reading": "こけむしたまるいしのへい"
+},
+"block.minecraft.mossy_stone_brick_slab": {
+"name": "苔むした石レンガのハーフブロック",
+"reading": "こけむしたいしれんがのはーふぶろっく"
+},
+"block.minecraft.mossy_stone_brick_stairs": {
+"name": "苔むした石レンガの階段",
+"reading": "こけむしたいしれんがのかいだん"
+},
+"block.minecraft.mossy_stone_brick_wall": {
+"name": "苔むした石レンガの塀",
+"reading": "こけむしたいしれんがのへい"
+},
+"block.minecraft.mossy_stone_bricks": {
+"name": "苔むした石レンガ",
+"reading": "こけむしたいしれんが"
+},
+"block.minecraft.moving_piston": {
+"name": "作動中のピストン",
+"reading": "さどうちゅうのぴすとん"
+},
+"block.minecraft.mud": {
+"name": "泥",
+"reading": "どろ"
+},
+"block.minecraft.mud_brick_slab": {
+"name": "泥レンガのハーフブロック",
+"reading": "どろれんがのはーふぶろっく"
+},
+"block.minecraft.mud_brick_stairs": {
+"name": "泥レンガの階段",
+"reading": "どろれんがのかいだん"
+},
+"block.minecraft.mud_brick_wall": {
+"name": "泥レンガの塀",
+"reading": "どろれんがのへい"
+},
+"block.minecraft.mud_bricks": {
+"name": "泥レンガ",
+"reading": "どろれんが"
+},
+"block.minecraft.muddy_mangrove_roots": {
+"name": "泥だらけのマングローブの根",
+"reading": "どろだらけのまんぐろーぶのね"
+},
+"block.minecraft.mushroom_stem": {
+"name": "キノコの柄",
+"reading": "きのこのえ"
+},
+"block.minecraft.mycelium": {
+"name": "菌糸",
+"reading": "きんし"
+},
+"block.minecraft.nether_brick_fence": {
+"name": "ネザーレンガのフェンス",
+"reading": "ねざーれんがのふぇんす"
+},
+"block.minecraft.nether_brick_slab": {
+"name": "ネザーレンガのハーフブロック",
+"reading": "ねざーれんがのはーふぶろっく"
+},
+"block.minecraft.nether_brick_stairs": {
+"name": "ネザーレンガの階段",
+"reading": "ねざーれんがのかいだん"
+},
+"block.minecraft.nether_brick_wall": {
+"name": "ネザーレンガの塀",
+"reading": "ねざーれんがのへい"
+},
+"block.minecraft.nether_bricks": {
+"name": "ネザーレンガ",
+"reading": "ねざーれんが"
+},
+"block.minecraft.nether_gold_ore": {
+"name": "ネザー金鉱石",
+"reading": "ねざーきんこうせき"
+},
+"block.minecraft.nether_portal": {
+"name": "ネザーポータル",
+"reading": "ねざーぽーたる"
+},
+"block.minecraft.nether_quartz_ore": {
+"name": "ネザークォーツ鉱石",
+"reading": "ねざーくぉーつこうせき"
+},
+"block.minecraft.nether_sprouts": {
+"name": "ネザースプラウト",
+"reading": "ねざーすぷらうと"
+},
+"block.minecraft.nether_wart": {
+"name": "ネザーウォート",
+"reading": "ねざーうぉーと"
+},
+"block.minecraft.nether_wart_block": {
+"name": "ネザーウォートブロック",
+"reading": "ねざーうぉーとぶろっく"
+},
+"block.minecraft.netherite_block": {
+"name": "ネザライトブロック",
+"reading": "ねざらいとぶろっく"
+},
+"block.minecraft.netherrack": {
+"name": "ネザーラック",
+"reading": "ねざーらっく"
+},
+"block.minecraft.note_block": {
+"name": "音符ブロック",
+"reading": "おんぷぶろっく"
+},
+"block.minecraft.oak_button": {
+"name": "オークのボタン",
+"reading": "おーくのぼたん"
+},
+"block.minecraft.oak_door": {
+"name": "オークのドア",
+"reading": "おーくのどあ"
+},
+"block.minecraft.oak_fence": {
+"name": "オークのフェンス",
+"reading": "おーくのふぇんす"
+},
+"block.minecraft.oak_fence_gate": {
+"name": "オークのフェンスゲート",
+"reading": "おーくのふぇんすげーと"
+},
+"block.minecraft.oak_hanging_sign": {
+"name": "オークの吊り看板",
+"reading": "おーくのつりかんばん"
+},
+"block.minecraft.oak_leaves": {
+"name": "オークの葉",
+"reading": "おーくのは"
+},
+"block.minecraft.oak_log": {
+"name": "オークの原木",
+"reading": "おーくのげんぼく"
+},
+"block.minecraft.oak_planks": {
+"name": "オークの板材",
+"reading": "おーくのいたざい"
+},
+"block.minecraft.oak_pressure_plate": {
+"name": "オークの感圧板",
+"reading": "おーくのかんあつばん"
+},
+"block.minecraft.oak_sapling": {
+"name": "オークの苗木",
+"reading": "おーくのなえぎ"
+},
+"block.minecraft.oak_shelf": {
+"name": "オークの棚",
+"reading": "おーくのたな"
+},
+"block.minecraft.oak_sign": {
+"name": "オークの看板",
+"reading": "おーくのかんばん"
+},
+"block.minecraft.oak_slab": {
+"name": "オークのハーフブロック",
+"reading": "おーくのはーふぶろっく"
+},
+"block.minecraft.oak_stairs": {
+"name": "オークの階段",
+"reading": "おーくのかいだん"
+},
+"block.minecraft.oak_trapdoor": {
+"name": "オークのトラップドア",
+"reading": "おーくのとらっぷどあ"
+},
+"block.minecraft.oak_wall_hanging_sign": {
+"name": "壁に付けられたオークの吊り看板",
+"reading": "かべにつけられたおーくのつりかんばん"
+},
+"block.minecraft.oak_wall_sign": {
+"name": "壁に付けられたオークの看板",
+"reading": "かべにつけられたおーくのかんばん"
+},
+"block.minecraft.oak_wood": {
+"name": "オークの木",
+"reading": "おーくのき"
+},
+"block.minecraft.observer": {
+"name": "オブザーバー",
+"reading": "おぶざーばー"
+},
+"block.minecraft.obsidian": {
+"name": "黒曜石",
+"reading": "こくようせき"
+},
+"block.minecraft.ochre_froglight": {
+"name": "黄土色のフロッグライト",
+"reading": "おうどいろのふろっぐらいと"
+},
+"block.minecraft.ominous_banner": {
+"name": "不吉な旗",
+"reading": "ふきつなはた"
+},
+"block.minecraft.open_eyeblossom": {
+"name": "開いたヒトミソウ",
+"reading": "ひらいたひとみそう"
+},
+"block.minecraft.orange_banner": {
+"name": "橙色の旗",
+"reading": "だいだいいろのはた"
+},
+"block.minecraft.orange_bed": {
+"name": "橙色のベッド",
+"reading": "だいだいいろのべっど"
+},
+"block.minecraft.orange_candle": {
+"name": "橙色のろうそく",
+"reading": "だいだいいろのろうそく"
+},
+"block.minecraft.orange_candle_cake": {
+"name": "橙色のろうそくが立てられたケーキ",
+"reading": "だいだいいろのろうそくがたてられたけーき"
+},
+"block.minecraft.orange_carpet": {
+"name": "橙色のカーペット",
+"reading": "だいだいいろのかーぺっと"
+},
+"block.minecraft.orange_concrete": {
+"name": "橙色のコンクリート",
+"reading": "だいだいいろのこんくりーと"
+},
+"block.minecraft.orange_concrete_powder": {
+"name": "橙色のコンクリートパウダー",
+"reading": "だいだいいろのこんくりーとぱうだー"
+},
+"block.minecraft.orange_concrete_slab": {
+"name": "橙色のコンクリートのハーフブロック",
+"reading": "だいだいいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.orange_concrete_stairs": {
+"name": "橙色のコンクリートの階段",
+"reading": "だいだいいろのこんくりーとのかいだん"
+},
+"block.minecraft.orange_glazed_terracotta": {
+"name": "橙色の彩釉テラコッタ",
+"reading": "だいだいいろのさいゆうてらこった"
+},
+"block.minecraft.orange_poplar_leaves": {
+"name": "橙色のポプラの葉",
+"reading": "だいだいいろのぽぷらのは"
+},
+"block.minecraft.orange_shulker_box": {
+"name": "橙色のシュルカーボックス",
+"reading": "だいだいいろのしゅるかーぼっくす"
+},
+"block.minecraft.orange_stained_glass": {
+"name": "橙色の色付きガラス",
+"reading": "だいだいいろのいろつきがらす"
+},
+"block.minecraft.orange_stained_glass_pane": {
+"name": "橙色の色付きガラス板",
+"reading": "だいだいいろのいろつきがらすいた"
+},
+"block.minecraft.orange_terracotta": {
+"name": "橙色のテラコッタ",
+"reading": "だいだいいろのてらこった"
+},
+"block.minecraft.orange_tulip": {
+"name": "橙色のチューリップ",
+"reading": "だいだいいろのちゅーりっぷ"
+},
+"block.minecraft.orange_wool": {
+"name": "橙色の羊毛",
+"reading": "だいだいいろのようもう"
+},
+"block.minecraft.orange_wool_slab": {
+"name": "橙色の羊毛のハーフブロック",
+"reading": "だいだいいろのようもうのはーふぶろっく"
+},
+"block.minecraft.orange_wool_stairs": {
+"name": "橙色の羊毛の階段",
+"reading": "だいだいいろのようもうのかいだん"
+},
+"block.minecraft.oxeye_daisy": {
+"name": "フランスギク",
+"reading": "ふらんすぎく"
+},
+"block.minecraft.oxidized_chiseled_copper": {
+"name": "酸化した模様入りの銅",
+"reading": "さんかしたもよういりのどう"
+},
+"block.minecraft.oxidized_copper": {
+"name": "酸化した銅",
+"reading": "さんかしたどう"
+},
+"block.minecraft.oxidized_copper_bars": {
+"name": "酸化した銅格子",
+"reading": "さんかしたどうこうし"
+},
+"block.minecraft.oxidized_copper_bulb": {
+"name": "酸化した銅の電球",
+"reading": "さんかしたどうのでんきゅう"
+},
+"block.minecraft.oxidized_copper_chain": {
+"name": "酸化した銅の鎖",
+"reading": "さんかしたどうのくさり"
+},
+"block.minecraft.oxidized_copper_chest": {
+"name": "酸化した銅のチェスト",
+"reading": "さんかしたどうのちぇすと"
+},
+"block.minecraft.oxidized_copper_door": {
+"name": "酸化した銅のドア",
+"reading": "さんかしたどうのどあ"
+},
+"block.minecraft.oxidized_copper_golem_statue": {
+"name": "酸化したカッパーゴーレムの像",
+"reading": "さんかしたかっぱーごーれむのぞう"
+},
+"block.minecraft.oxidized_copper_grate": {
+"name": "酸化した銅の金網",
+"reading": "さんかしたどうのかなあみ"
+},
+"block.minecraft.oxidized_copper_lantern": {
+"name": "酸化した銅のランタン",
+"reading": "さんかしたどうのらんたん"
+},
+"block.minecraft.oxidized_copper_trapdoor": {
+"name": "酸化した銅のトラップドア",
+"reading": "さんかしたどうのとらっぷどあ"
+},
+"block.minecraft.oxidized_cut_copper": {
+"name": "酸化した切り込み入りの銅",
+"reading": "さんかしたきりこみいりのどう"
+},
+"block.minecraft.oxidized_cut_copper_slab": {
+"name": "酸化した切り込み入りの銅のハーフブロック",
+"reading": "さんかしたきりこみいりのどうのはーふぶろっく"
+},
+"block.minecraft.oxidized_cut_copper_stairs": {
+"name": "酸化した切り込み入りの銅の階段",
+"reading": "さんかしたきりこみいりのどうのかいだん"
+},
+"block.minecraft.oxidized_lightning_rod": {
+"name": "酸化した避雷針",
+"reading": "さんかしたひらいしん"
+},
+"block.minecraft.packed_ice": {
+"name": "氷塊",
+"reading": "ひょうかい"
+},
+"block.minecraft.packed_ice_brick_slab": {
+"name": "氷塊レンガのハーフブロック",
+"reading": "ひょうかいれんがのはーふぶろっく"
+},
+"block.minecraft.packed_ice_brick_stairs": {
+"name": "氷塊レンガの階段",
+"reading": "ひょうかいれんがのかいだん"
+},
+"block.minecraft.packed_ice_brick_wall": {
+"name": "氷塊レンガの塀",
+"reading": "ひょうかいれんがのへい"
+},
+"block.minecraft.packed_ice_bricks": {
+"name": "氷塊レンガ",
+"reading": "ひょうかいれんが"
+},
+"block.minecraft.packed_mud": {
+"name": "固めた泥",
+"reading": "かためたどろ"
+},
+"block.minecraft.pale_hanging_moss": {
+"name": "色あせた垂れ苔",
+"reading": "いろあせたたれごけ"
+},
+"block.minecraft.pale_moss_block": {
+"name": "色あせた苔ブロック",
+"reading": "いろあせたこけぶろっく"
+},
+"block.minecraft.pale_moss_carpet": {
+"name": "色あせた苔のカーペット",
+"reading": "いろあせたこけのかーぺっと"
+},
+"block.minecraft.pale_oak_button": {
+"name": "ペールオークのボタン",
+"reading": "ぺーるおーくのぼたん"
+},
+"block.minecraft.pale_oak_door": {
+"name": "ペールオークのドア",
+"reading": "ぺーるおーくのどあ"
+},
+"block.minecraft.pale_oak_fence": {
+"name": "ペールオークのフェンス",
+"reading": "ぺーるおーくのふぇんす"
+},
+"block.minecraft.pale_oak_fence_gate": {
+"name": "ペールオークのフェンスゲート",
+"reading": "ぺーるおーくのふぇんすげーと"
+},
+"block.minecraft.pale_oak_hanging_sign": {
+"name": "ペールオークの吊り看板",
+"reading": "ぺーるおーくのつりかんばん"
+},
+"block.minecraft.pale_oak_leaves": {
+"name": "ペールオークの葉",
+"reading": "ぺーるおーくのは"
+},
+"block.minecraft.pale_oak_log": {
+"name": "ペールオークの原木",
+"reading": "ぺーるおーくのげんぼく"
+},
+"block.minecraft.pale_oak_planks": {
+"name": "ペールオークの板材",
+"reading": "ぺーるおーくのいたざい"
+},
+"block.minecraft.pale_oak_pressure_plate": {
+"name": "ペールオークの感圧板",
+"reading": "ぺーるおーくのかんあつばん"
+},
+"block.minecraft.pale_oak_sapling": {
+"name": "ペールオークの苗木",
+"reading": "ぺーるおーくのなえぎ"
+},
+"block.minecraft.pale_oak_shelf": {
+"name": "ペールオークの棚",
+"reading": "ぺーるおーくのたな"
+},
+"block.minecraft.pale_oak_sign": {
+"name": "ペールオークの看板",
+"reading": "ぺーるおーくのかんばん"
+},
+"block.minecraft.pale_oak_slab": {
+"name": "ペールオークのハーフブロック",
+"reading": "ぺーるおーくのはーふぶろっく"
+},
+"block.minecraft.pale_oak_stairs": {
+"name": "ペールオークの階段",
+"reading": "ぺーるおーくのかいだん"
+},
+"block.minecraft.pale_oak_trapdoor": {
+"name": "ペールオークのトラップドア",
+"reading": "ぺーるおーくのとらっぷどあ"
+},
+"block.minecraft.pale_oak_wall_hanging_sign": {
+"name": "壁に付けられたペールオークの吊り看板",
+"reading": "かべにつけられたぺーるおーくのつりかんばん"
+},
+"block.minecraft.pale_oak_wall_sign": {
+"name": "壁に付けられたペールオークの看板",
+"reading": "かべにつけられたぺーるおーくのかんばん"
+},
+"block.minecraft.pale_oak_wood": {
+"name": "ペールオークの木",
+"reading": "ぺーるおーくのき"
+},
+"block.minecraft.pearlescent_froglight": {
+"name": "真珠色のフロッグライト",
+"reading": "しんじゅいろのふろっぐらいと"
+},
+"block.minecraft.peony": {
+"name": "ボタン",
+"reading": "ぼたん"
+},
+"block.minecraft.petrified_oak_slab": {
+"name": "石化したオークのハーフブロック",
+"reading": "せっかしたおーくのはーふぶろっく"
+},
+"block.minecraft.piglin_head": {
+"name": "ピグリンの頭",
+"reading": "ぴぐりんのあたま"
+},
+"block.minecraft.piglin_wall_head": {
+"name": "壁に付けられたピグリンの頭",
+"reading": "かべにつけられたぴぐりんのあたま"
+},
+"block.minecraft.pink_banner": {
+"name": "桃色の旗",
+"reading": "ももいろのはた"
+},
+"block.minecraft.pink_bed": {
+"name": "桃色のベッド",
+"reading": "ももいろのべっど"
+},
+"block.minecraft.pink_candle": {
+"name": "桃色のろうそく",
+"reading": "ももいろのろうそく"
+},
+"block.minecraft.pink_candle_cake": {
+"name": "桃色のろうそくが立てられたケーキ",
+"reading": "ももいろのろうそくがたてられたけーき"
+},
+"block.minecraft.pink_carpet": {
+"name": "桃色のカーペット",
+"reading": "ももいろのかーぺっと"
+},
+"block.minecraft.pink_concrete": {
+"name": "桃色のコンクリート",
+"reading": "ももいろのこんくりーと"
+},
+"block.minecraft.pink_concrete_powder": {
+"name": "桃色のコンクリートパウダー",
+"reading": "ももいろのこんくりーとぱうだー"
+},
+"block.minecraft.pink_concrete_slab": {
+"name": "桃色のコンクリートのハーフブロック",
+"reading": "ももいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.pink_concrete_stairs": {
+"name": "桃色のコンクリートの階段",
+"reading": "ももいろのこんくりーとのかいだん"
+},
+"block.minecraft.pink_glazed_terracotta": {
+"name": "桃色の彩釉テラコッタ",
+"reading": "ももいろのさいゆうてらこった"
+},
+"block.minecraft.pink_petals": {
+"name": "桜色の花びら",
+"reading": "さくらいろのはなびら"
+},
+"block.minecraft.pink_shulker_box": {
+"name": "桃色のシュルカーボックス",
+"reading": "ももいろのしゅるかーぼっくす"
+},
+"block.minecraft.pink_stained_glass": {
+"name": "桃色の色付きガラス",
+"reading": "ももいろのいろつきがらす"
+},
+"block.minecraft.pink_stained_glass_pane": {
+"name": "桃色の色付きガラス板",
+"reading": "ももいろのいろつきがらすいた"
+},
+"block.minecraft.pink_terracotta": {
+"name": "桃色のテラコッタ",
+"reading": "ももいろのてらこった"
+},
+"block.minecraft.pink_tulip": {
+"name": "桃色のチューリップ",
+"reading": "ももいろのちゅーりっぷ"
+},
+"block.minecraft.pink_wool": {
+"name": "桃色の羊毛",
+"reading": "ももいろのようもう"
+},
+"block.minecraft.pink_wool_slab": {
+"name": "桃色の羊毛のハーフブロック",
+"reading": "ももいろのようもうのはーふぶろっく"
+},
+"block.minecraft.pink_wool_stairs": {
+"name": "桃色の羊毛の階段",
+"reading": "ももいろのようもうのかいだん"
+},
+"block.minecraft.piston": {
+"name": "ピストン",
+"reading": "ぴすとん"
+},
+"block.minecraft.piston_head": {
+"name": "ピストンヘッド",
+"reading": "ぴすとんへっど"
+},
+"block.minecraft.pitcher_crop": {
+"name": "ウツボカズラ",
+"reading": "うつぼかずら"
+},
+"block.minecraft.pitcher_plant": {
+"name": "ウツボカズラ",
+"reading": "うつぼかずら"
+},
+"block.minecraft.player_head": {
+"name": "プレイヤーの頭",
+"reading": "ぷれいやーのあたま"
+},
+"block.minecraft.player_wall_head": {
+"name": "壁に付けられたプレイヤーの頭",
+"reading": "かべにつけられたぷれいやーのあたま"
+},
+"block.minecraft.podzol": {
+"name": "ポドゾル",
+"reading": "ぽどぞる"
+},
+"block.minecraft.pointed_dripstone": {
+"name": "鍾乳石",
+"reading": "しょうにゅうせき"
+},
+"block.minecraft.polished_andesite": {
+"name": "磨かれた安山岩",
+"reading": "みがかれたあんざんがん"
+},
+"block.minecraft.polished_andesite_slab": {
+"name": "磨かれた安山岩のハーフブロック",
+"reading": "みがかれたあんざんがんのはーふぶろっく"
+},
+"block.minecraft.polished_andesite_stairs": {
+"name": "磨かれた安山岩の階段",
+"reading": "みがかれたあんざんがんのかいだん"
+},
+"block.minecraft.polished_basalt": {
+"name": "磨かれた玄武岩",
+"reading": "みがかれたげんぶがん"
+},
+"block.minecraft.polished_blackstone": {
+"name": "磨かれたブラックストーン",
+"reading": "みがかれたぶらっくすとーん"
+},
+"block.minecraft.polished_blackstone_brick_slab": {
+"name": "磨かれたブラックストーンレンガのハーフブロック",
+"reading": "みがかれたぶらっくすとーんれんがのはーふぶろっく"
+},
+"block.minecraft.polished_blackstone_brick_stairs": {
+"name": "磨かれたブラックストーンレンガの階段",
+"reading": "みがかれたぶらっくすとーんれんがのかいだん"
+},
+"block.minecraft.polished_blackstone_brick_wall": {
+"name": "磨かれたブラックストーンレンガの塀",
+"reading": "みがかれたぶらっくすとーんれんがのへい"
+},
+"block.minecraft.polished_blackstone_bricks": {
+"name": "磨かれたブラックストーンレンガ",
+"reading": "みがかれたぶらっくすとーんれんが"
+},
+"block.minecraft.polished_blackstone_button": {
+"name": "磨かれたブラックストーンのボタン",
+"reading": "みがかれたぶらっくすとーんのぼたん"
+},
+"block.minecraft.polished_blackstone_pressure_plate": {
+"name": "磨かれたブラックストーンの感圧板",
+"reading": "みがかれたぶらっくすとーんのかんあつばん"
+},
+"block.minecraft.polished_blackstone_slab": {
+"name": "磨かれたブラックストーンのハーフブロック",
+"reading": "みがかれたぶらっくすとーんのはーふぶろっく"
+},
+"block.minecraft.polished_blackstone_stairs": {
+"name": "磨かれたブラックストーンの階段",
+"reading": "みがかれたぶらっくすとーんのかいだん"
+},
+"block.minecraft.polished_blackstone_wall": {
+"name": "磨かれたブラックストーンの塀",
+"reading": "みがかれたぶらっくすとーんのへい"
+},
+"block.minecraft.polished_calcite": {
+"name": "磨かれた方解石",
+"reading": "みがかれたほうかいせき"
+},
+"block.minecraft.polished_calcite_brick_slab": {
+"name": "磨かれた方解石レンガのハーフブロック",
+"reading": "みがかれたほうかいせきれんがのはーふぶろっく"
+},
+"block.minecraft.polished_calcite_brick_stairs": {
+"name": "磨かれた方解石レンガの階段",
+"reading": "みがかれたほうかいせきれんがのかいだん"
+},
+"block.minecraft.polished_calcite_brick_wall": {
+"name": "磨かれた方解石レンガの塀",
+"reading": "みがかれたほうかいせきれんがのへい"
+},
+"block.minecraft.polished_calcite_bricks": {
+"name": "磨かれた方解石レンガ",
+"reading": "みがかれたほうかいせきれんが"
+},
+"block.minecraft.polished_calcite_slab": {
+"name": "磨かれた方解石のハーフブロック",
+"reading": "みがかれたほうかいせきのはーふぶろっく"
+},
+"block.minecraft.polished_calcite_stairs": {
+"name": "磨かれた方解石の階段",
+"reading": "みがかれたほうかいせきのかいだん"
+},
+"block.minecraft.polished_calcite_wall": {
+"name": "磨かれた方解石の塀",
+"reading": "みがかれたほうかいせきのへい"
+},
+"block.minecraft.polished_cinnabar": {
+"name": "磨かれた辰砂",
+"reading": "みがかれたしんしゃ"
+},
+"block.minecraft.polished_cinnabar_slab": {
+"name": "磨かれた辰砂のハーフブロック",
+"reading": "みがかれたしんしゃのはーふぶろっく"
+},
+"block.minecraft.polished_cinnabar_stairs": {
+"name": "磨かれた辰砂の階段",
+"reading": "みがかれたしんしゃのかいだん"
+},
+"block.minecraft.polished_cinnabar_wall": {
+"name": "磨かれた辰砂の塀",
+"reading": "みがかれたしんしゃのへい"
+},
+"block.minecraft.polished_deepslate": {
+"name": "磨かれた深層岩",
+"reading": "みがかれたしんそうがん"
+},
+"block.minecraft.polished_deepslate_slab": {
+"name": "磨かれた深層岩のハーフブロック",
+"reading": "みがかれたしんそうがんのはーふぶろっく"
+},
+"block.minecraft.polished_deepslate_stairs": {
+"name": "磨かれた深層岩の階段",
+"reading": "みがかれたしんそうがんのかいだん"
+},
+"block.minecraft.polished_deepslate_wall": {
+"name": "磨かれた深層岩の塀",
+"reading": "みがかれたしんそうがんのへい"
+},
+"block.minecraft.polished_diorite": {
+"name": "磨かれた閃緑岩",
+"reading": "みがかれたせんりょくがん"
+},
+"block.minecraft.polished_diorite_slab": {
+"name": "磨かれた閃緑岩のハーフブロック",
+"reading": "みがかれたせんりょくがんのはーふぶろっく"
+},
+"block.minecraft.polished_diorite_stairs": {
+"name": "磨かれた閃緑岩の階段",
+"reading": "みがかれたせんりょくがんのかいだん"
+},
+"block.minecraft.polished_granite": {
+"name": "磨かれた花崗岩",
+"reading": "みがかれたかこうがん"
+},
+"block.minecraft.polished_granite_slab": {
+"name": "磨かれた花崗岩のハーフブロック",
+"reading": "みがかれたかこうがんのはーふぶろっく"
+},
+"block.minecraft.polished_granite_stairs": {
+"name": "磨かれた花崗岩の階段",
+"reading": "みがかれたかこうがんのかいだん"
+},
+"block.minecraft.polished_sulfur": {
+"name": "磨かれた硫黄",
+"reading": "みがかれたいおう"
+},
+"block.minecraft.polished_sulfur_slab": {
+"name": "磨かれた硫黄のハーフブロック",
+"reading": "みがかれたいおうのはーふぶろっく"
+},
+"block.minecraft.polished_sulfur_stairs": {
+"name": "磨かれた硫黄の階段",
+"reading": "みがかれたいおうのかいだん"
+},
+"block.minecraft.polished_sulfur_wall": {
+"name": "磨かれた硫黄の塀",
+"reading": "みがかれたいおうのへい"
+},
+"block.minecraft.polished_tuff": {
+"name": "磨かれた凝灰岩",
+"reading": "みがかれたぎょうかいがん"
+},
+"block.minecraft.polished_tuff_slab": {
+"name": "磨かれた凝灰岩のハーフブロック",
+"reading": "みがかれたぎょうかいがんのはーふぶろっく"
+},
+"block.minecraft.polished_tuff_stairs": {
+"name": "磨かれた凝灰岩の階段",
+"reading": "みがかれたぎょうかいがんのかいだん"
+},
+"block.minecraft.polished_tuff_wall": {
+"name": "磨かれた凝灰岩の塀",
+"reading": "みがかれたぎょうかいがんのへい"
+},
+"block.minecraft.poplar_button": {
+"name": "ポプラのボタン",
+"reading": "ぽぷらのぼたん"
+},
+"block.minecraft.poplar_door": {
+"name": "ポプラのドア",
+"reading": "ぽぷらのどあ"
+},
+"block.minecraft.poplar_fence": {
+"name": "ポプラのフェンス",
+"reading": "ぽぷらのふぇんす"
+},
+"block.minecraft.poplar_fence_gate": {
+"name": "ポプラのフェンスゲート",
+"reading": "ぽぷらのふぇんすげーと"
+},
+"block.minecraft.poplar_hanging_sign": {
+"name": "ポプラの吊り看板",
+"reading": "ぽぷらのつりかんばん"
+},
+"block.minecraft.poplar_leaves": {
+"name": "ポプラの葉",
+"reading": "ぽぷらのは"
+},
+"block.minecraft.poplar_log": {
+"name": "ポプラの原木",
+"reading": "ぽぷらのげんぼく"
+},
+"block.minecraft.poplar_planks": {
+"name": "ポプラの板材",
+"reading": "ぽぷらのいたざい"
+},
+"block.minecraft.poplar_pressure_plate": {
+"name": "ポプラの感圧板",
+"reading": "ぽぷらのかんあつばん"
+},
+"block.minecraft.poplar_sapling": {
+"name": "ポプラの苗木",
+"reading": "ぽぷらのなえぎ"
+},
+"block.minecraft.poplar_shelf": {
+"name": "ポプラの棚",
+"reading": "ぽぷらのたな"
+},
+"block.minecraft.poplar_sign": {
+"name": "ポプラの看板",
+"reading": "ぽぷらのかんばん"
+},
+"block.minecraft.poplar_slab": {
+"name": "ポプラのハーフブロック",
+"reading": "ぽぷらのはーふぶろっく"
+},
+"block.minecraft.poplar_stairs": {
+"name": "ポプラの階段",
+"reading": "ぽぷらのかいだん"
+},
+"block.minecraft.poplar_trapdoor": {
+"name": "ポプラのトラップドア",
+"reading": "ぽぷらのとらっぷどあ"
+},
+"block.minecraft.poplar_wall_hanging_sign": {
+"name": "壁に付けられたポプラの吊り看板",
+"reading": "かべにつけられたぽぷらのつりかんばん"
+},
+"block.minecraft.poplar_wall_sign": {
+"name": "壁に付けられたポプラの看板",
+"reading": "かべにつけられたぽぷらのかんばん"
+},
+"block.minecraft.poplar_wood": {
+"name": "ポプラの木",
+"reading": "ぽぷらのき"
+},
+"block.minecraft.poppy": {
+"name": "ポピー",
+"reading": "ぽぴー"
+},
+"block.minecraft.potatoes": {
+"name": "ジャガイモ",
+"reading": "じゃがいも"
+},
+"block.minecraft.potent_sulfur": {
+"name": "強力な硫黄",
+"reading": "きょうりょくないおう"
+},
+"block.minecraft.potted_acacia_sapling": {
+"name": "アカシアの苗木入り植木鉢",
+"reading": "あかしあのなえぎいりうえきばち"
+},
+"block.minecraft.potted_allium": {
+"name": "アリウム入り植木鉢",
+"reading": "ありうむいりうえきばち"
+},
+"block.minecraft.potted_azalea_bush": {
+"name": "ツツジ入り植木鉢",
+"reading": "つつじいりうえきばち"
+},
+"block.minecraft.potted_azure_bluet": {
+"name": "ヒナソウ入り植木鉢",
+"reading": "ひなそういりうえきばち"
+},
+"block.minecraft.potted_bamboo": {
+"name": "竹入り植木鉢",
+"reading": "たけいりうえきばち"
+},
+"block.minecraft.potted_birch_sapling": {
+"name": "シラカバの苗木入り植木鉢",
+"reading": "しらかばのなえぎいりうえきばち"
+},
+"block.minecraft.potted_blue_orchid": {
+"name": "ヒスイラン入り植木鉢",
+"reading": "ひすいらんいりうえきばち"
+},
+"block.minecraft.potted_brown_mushroom": {
+"name": "茶色のキノコ入り植木鉢",
+"reading": "ちゃいろのきのこいりうえきばち"
+},
+"block.minecraft.potted_cactus": {
+"name": "サボテン入り植木鉢",
+"reading": "さぼてんいりうえきばち"
+},
+"block.minecraft.potted_cherry_sapling": {
+"name": "サクラの苗木入り植木鉢",
+"reading": "さくらのなえぎいりうえきばち"
+},
+"block.minecraft.potted_closed_eyeblossom": {
+"name": "閉じたヒトミソウ入り植木鉢",
+"reading": "とじたひとみそういりうえきばち"
+},
+"block.minecraft.potted_cornflower": {
+"name": "ヤグルマギク入り植木鉢",
+"reading": "やぐるまぎくいりうえきばち"
+},
+"block.minecraft.potted_crimson_fungus": {
+"name": "真紅のキノコ入り植木鉢",
+"reading": "しんくのきのこいりうえきばち"
+},
+"block.minecraft.potted_crimson_roots": {
+"name": "真紅の根入り植木鉢",
+"reading": "しんくのねいりうえきばち"
+},
+"block.minecraft.potted_dandelion": {
+"name": "タンポポ入り植木鉢",
+"reading": "たんぽぽいりうえきばち"
+},
+"block.minecraft.potted_dark_oak_sapling": {
+"name": "ダークオークの苗木入り植木鉢",
+"reading": "だーくおーくのなえぎいりうえきばち"
+},
+"block.minecraft.potted_dead_bush": {
+"name": "枯れ木入り植木鉢",
+"reading": "かれきいりうえきばち"
+},
+"block.minecraft.potted_fern": {
+"name": "シダ入り植木鉢",
+"reading": "しだいりうえきばち"
+},
+"block.minecraft.potted_flowering_azalea_bush": {
+"name": "開花したツツジ入り植木鉢",
+"reading": "かいかしたつつじいりうえきばち"
+},
+"block.minecraft.potted_golden_dandelion": {
+"name": "金のタンポポ入り植木鉢",
+"reading": "きんのたんぽぽいりうえきばち"
+},
+"block.minecraft.potted_jungle_sapling": {
+"name": "ジャングルの苗木入り植木鉢",
+"reading": "じゃんぐるのなえぎいりうえきばち"
+},
+"block.minecraft.potted_lily_of_the_valley": {
+"name": "スズラン入り植木鉢",
+"reading": "すずらんいりうえきばち"
+},
+"block.minecraft.potted_mangrove_propagule": {
+"name": "マングローブの芽入り植木鉢",
+"reading": "まんぐろーぶのめいりうえきばち"
+},
+"block.minecraft.potted_oak_sapling": {
+"name": "オークの苗木入り植木鉢",
+"reading": "おーくのなえぎいりうえきばち"
+},
+"block.minecraft.potted_open_eyeblossom": {
+"name": "開いたヒトミソウ入り植木鉢",
+"reading": "ひらいたひとみそういりうえきばち"
+},
+"block.minecraft.potted_orange_tulip": {
+"name": "橙色のチューリップ入り植木鉢",
+"reading": "だいだいいろのちゅーりっぷいりうえきばち"
+},
+"block.minecraft.potted_oxeye_daisy": {
+"name": "フランスギク入り植木鉢",
+"reading": "ふらんすぎくいりうえきばち"
+},
+"block.minecraft.potted_pale_oak_sapling": {
+"name": "ペールオークの苗木入り植木鉢",
+"reading": "ぺーるおーくのなえぎいりうえきばち"
+},
+"block.minecraft.potted_pink_tulip": {
+"name": "桃色のチューリップ入り植木鉢",
+"reading": "ももいろのちゅーりっぷいりうえきばち"
+},
+"block.minecraft.potted_poplar_sapling": {
+"name": "ポプラの苗木入り植木鉢",
+"reading": "ぽぷらのなえぎいりうえきばち"
+},
+"block.minecraft.potted_poppy": {
+"name": "ポピー入り植木鉢",
+"reading": "ぽぴーいりうえきばち"
+},
+"block.minecraft.potted_red_mushroom": {
+"name": "赤色のキノコ入り植木鉢",
+"reading": "あかいろのきのこいりうえきばち"
+},
+"block.minecraft.potted_red_tulip": {
+"name": "赤色のチューリップ入り植木鉢",
+"reading": "あかいろのちゅーりっぷいりうえきばち"
+},
+"block.minecraft.potted_spruce_sapling": {
+"name": "トウヒの苗木入り植木鉢",
+"reading": "とうひのなえぎいりうえきばち"
+},
+"block.minecraft.potted_torchflower": {
+"name": "トーチフラワー入り植木鉢",
+"reading": "とーちふらわーいりうえきばち"
+},
+"block.minecraft.potted_warped_fungus": {
+"name": "歪んだキノコ入り植木鉢",
+"reading": "ゆがんだきのこいりうえきばち"
+},
+"block.minecraft.potted_warped_roots": {
+"name": "歪んだ根入り植木鉢",
+"reading": "ゆがんだねいりうえきばち"
+},
+"block.minecraft.potted_white_tulip": {
+"name": "白色のチューリップ入り植木鉢",
+"reading": "しろいろのちゅーりっぷいりうえきばち"
+},
+"block.minecraft.potted_wither_rose": {
+"name": "ウィザーローズ入り植木鉢",
+"reading": "うぃざーろーずいりうえきばち"
+},
+"block.minecraft.powder_snow": {
+"name": "粉雪",
+"reading": "こなゆき"
+},
+"block.minecraft.powder_snow_cauldron": {
+"name": "粉雪入りの大釜",
+"reading": "こなゆきいりのおおがま"
+},
+"block.minecraft.powered_rail": {
+"name": "パワードレール",
+"reading": "ぱわーどれーる"
+},
+"block.minecraft.prismarine": {
+"name": "プリズマリン",
+"reading": "ぷりずまりん"
+},
+"block.minecraft.prismarine_brick_slab": {
+"name": "プリズマリンレンガのハーフブロック",
+"reading": "ぷりずまりんれんがのはーふぶろっく"
+},
+"block.minecraft.prismarine_brick_stairs": {
+"name": "プリズマリンレンガの階段",
+"reading": "ぷりずまりんれんがのかいだん"
+},
+"block.minecraft.prismarine_bricks": {
+"name": "プリズマリンレンガ",
+"reading": "ぷりずまりんれんが"
+},
+"block.minecraft.prismarine_slab": {
+"name": "プリズマリンのハーフブロック",
+"reading": "ぷりずまりんのはーふぶろっく"
+},
+"block.minecraft.prismarine_stairs": {
+"name": "プリズマリンの階段",
+"reading": "ぷりずまりんのかいだん"
+},
+"block.minecraft.prismarine_wall": {
+"name": "プリズマリンの塀",
+"reading": "ぷりずまりんのへい"
+},
+"block.minecraft.pumpkin": {
+"name": "カボチャ",
+"reading": "かぼちゃ"
+},
+"block.minecraft.pumpkin_stem": {
+"name": "カボチャの茎",
+"reading": "かぼちゃのくき"
+},
+"block.minecraft.purple_banner": {
+"name": "紫色の旗",
+"reading": "むらさきいろのはた"
+},
+"block.minecraft.purple_bed": {
+"name": "紫色のベッド",
+"reading": "むらさきいろのべっど"
+},
+"block.minecraft.purple_candle": {
+"name": "紫色のろうそく",
+"reading": "むらさきいろのろうそく"
+},
+"block.minecraft.purple_candle_cake": {
+"name": "紫色のろうそくが立てられたケーキ",
+"reading": "むらさきいろのろうそくがたてられたけーき"
+},
+"block.minecraft.purple_carpet": {
+"name": "紫色のカーペット",
+"reading": "むらさきいろのかーぺっと"
+},
+"block.minecraft.purple_concrete": {
+"name": "紫色のコンクリート",
+"reading": "むらさきいろのこんくりーと"
+},
+"block.minecraft.purple_concrete_powder": {
+"name": "紫色のコンクリートパウダー",
+"reading": "むらさきいろのこんくりーとぱうだー"
+},
+"block.minecraft.purple_concrete_slab": {
+"name": "紫色のコンクリートのハーフブロック",
+"reading": "むらさきいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.purple_concrete_stairs": {
+"name": "紫色のコンクリートの階段",
+"reading": "むらさきいろのこんくりーとのかいだん"
+},
+"block.minecraft.purple_glazed_terracotta": {
+"name": "紫色の彩釉テラコッタ",
+"reading": "むらさきいろのさいゆうてらこった"
+},
+"block.minecraft.purple_shulker_box": {
+"name": "紫色のシュルカーボックス",
+"reading": "むらさきいろのしゅるかーぼっくす"
+},
+"block.minecraft.purple_stained_glass": {
+"name": "紫色の色付きガラス",
+"reading": "むらさきいろのいろつきがらす"
+},
+"block.minecraft.purple_stained_glass_pane": {
+"name": "紫色の色付きガラス板",
+"reading": "むらさきいろのいろつきがらすばん"
+},
+"block.minecraft.purple_terracotta": {
+"name": "紫色のテラコッタ",
+"reading": "むらさきいろのてらこった"
+},
+"block.minecraft.purple_wool": {
+"name": "紫色の羊毛",
+"reading": "むらさきいろのようもう"
+},
+"block.minecraft.purple_wool_slab": {
+"name": "紫色の羊毛のハーフブロック",
+"reading": "むらさきいろのようもうのはーふぶろっく"
+},
+"block.minecraft.purple_wool_stairs": {
+"name": "紫色の羊毛の階段",
+"reading": "むらさきいろのようもうのかいだん"
+},
+"block.minecraft.purpur_block": {
+"name": "プルプァブロック",
+"reading": "ぷるぷぁぶろっく"
+},
+"block.minecraft.purpur_pillar": {
+"name": "プルプァの柱",
+"reading": "ぷるぷぁのはしら"
+},
+"block.minecraft.purpur_slab": {
+"name": "プルプァのハーフブロック",
+"reading": "ぷるぷぁのはーふぶろっく"
+},
+"block.minecraft.purpur_stairs": {
+"name": "プルプァの階段",
+"reading": "ぷるぷぁのかいだん"
+},
+"block.minecraft.quartz_block": {
+"name": "クォーツブロック",
+"reading": "くぉーつぶろっく"
+},
+"block.minecraft.quartz_bricks": {
+"name": "クォーツレンガ",
+"reading": "くぉーつれんが"
+},
+"block.minecraft.quartz_pillar": {
+"name": "クォーツの柱",
+"reading": "くぉーつのはしら"
+},
+"block.minecraft.quartz_slab": {
+"name": "クォーツのハーフブロック",
+"reading": "くぉーつのはーふぶろっく"
+},
+"block.minecraft.quartz_stairs": {
+"name": "クォーツの階段",
+"reading": "くぉーつのかいだん"
+},
+"block.minecraft.rail": {
+"name": "レール",
+"reading": "れーる"
+},
+"block.minecraft.raw_copper_block": {
+"name": "銅の原石ブロック",
+"reading": "どうのげんせきぶろっく"
+},
+"block.minecraft.raw_gold_block": {
+"name": "金の原石ブロック",
+"reading": "きんのげんせきぶろっく"
+},
+"block.minecraft.raw_iron_block": {
+"name": "鉄の原石ブロック",
+"reading": "てつのげんせきぶろっく"
+},
+"block.minecraft.red_banner": {
+"name": "赤色の旗",
+"reading": "あかいろのはた"
+},
+"block.minecraft.red_bed": {
+"name": "赤色のベッド",
+"reading": "あかいろのべっど"
+},
+"block.minecraft.red_candle": {
+"name": "赤色のろうそく",
+"reading": "あかいろのろうそく"
+},
+"block.minecraft.red_candle_cake": {
+"name": "赤色のろうそくが立てられたケーキ",
+"reading": "あかいろのろうそくがたてられたけーき"
+},
+"block.minecraft.red_carpet": {
+"name": "赤色のカーペット",
+"reading": "あかいろのかーぺっと"
+},
+"block.minecraft.red_concrete": {
+"name": "赤色のコンクリート",
+"reading": "あかいろのこんくりーと"
+},
+"block.minecraft.red_concrete_powder": {
+"name": "赤色のコンクリートパウダー",
+"reading": "あかいろのこんくりーとぱうだー"
+},
+"block.minecraft.red_concrete_slab": {
+"name": "赤色のコンクリートのハーフブロック",
+"reading": "あかいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.red_concrete_stairs": {
+"name": "赤色のコンクリートの階段",
+"reading": "あかいろのこんくりーとのかいだん"
+},
+"block.minecraft.red_glazed_terracotta": {
+"name": "赤色の彩釉テラコッタ",
+"reading": "あかいろのさいゆうてらこった"
+},
+"block.minecraft.red_mushroom": {
+"name": "赤色のキノコ",
+"reading": "あかいろのきのこ"
+},
+"block.minecraft.red_mushroom_block": {
+"name": "赤色のキノコブロック",
+"reading": "あかいろのきのこぶろっく"
+},
+"block.minecraft.red_nether_brick_slab": {
+"name": "赤いネザーレンガのハーフブロック",
+"reading": "あかいねざーれんがのはーふぶろっく"
+},
+"block.minecraft.red_nether_brick_stairs": {
+"name": "赤いネザーレンガの階段",
+"reading": "あかいねざーれんがのかいだん"
+},
+"block.minecraft.red_nether_brick_wall": {
+"name": "赤いネザーレンガの塀",
+"reading": "あかいねざーれんがのへい"
+},
+"block.minecraft.red_nether_bricks": {
+"name": "赤いネザーレンガ",
+"reading": "あかいねざーれんが"
+},
+"block.minecraft.red_poplar_leaves": {
+"name": "赤色のポプラの葉",
+"reading": "あかいろのぽぷらのは"
+},
+"block.minecraft.red_sand": {
+"name": "赤い砂",
+"reading": "あかいすな"
+},
+"block.minecraft.red_sandstone": {
+"name": "赤い砂岩",
+"reading": "あかいさがん"
+},
+"block.minecraft.red_sandstone_slab": {
+"name": "赤い砂岩のハーフブロック",
+"reading": "あかいさがんのはーふぶろっく"
+},
+"block.minecraft.red_sandstone_stairs": {
+"name": "赤い砂岩の階段",
+"reading": "あかいさがんのかいだん"
+},
+"block.minecraft.red_sandstone_wall": {
+"name": "赤い砂岩の塀",
+"reading": "あかいさがんのへい"
+},
+"block.minecraft.red_shrub": {
+"name": "赤色の低木",
+"reading": "あかいろのていぼく"
+},
+"block.minecraft.red_shulker_box": {
+"name": "赤色のシュルカーボックス",
+"reading": "あかいろのしゅるかーぼっくす"
+},
+"block.minecraft.red_stained_glass": {
+"name": "赤色の色付きガラス",
+"reading": "あかいろのいろつきがらす"
+},
+"block.minecraft.red_stained_glass_pane": {
+"name": "赤色の色付きガラス板",
+"reading": "あかいろのいろつきがらすばん"
+},
+"block.minecraft.red_terracotta": {
+"name": "赤色のテラコッタ",
+"reading": "あかいろのてらこった"
+},
+"block.minecraft.red_tulip": {
+"name": "赤色のチューリップ",
+"reading": "あかいろのちゅーりっぷ"
+},
+"block.minecraft.red_wool": {
+"name": "赤色の羊毛",
+"reading": "あかいろのようもう"
+},
+"block.minecraft.red_wool_slab": {
+"name": "赤色の羊毛のハーフブロック",
+"reading": "あかいろのようもうのはーふぶろっく"
+},
+"block.minecraft.red_wool_stairs": {
+"name": "赤色の羊毛の階段",
+"reading": "あかいろのようもうのかいだん"
+},
+"block.minecraft.redstone_block": {
+"name": "レッドストーンブロック",
+"reading": "れっどすとーんぶろっく"
+},
+"block.minecraft.redstone_lamp": {
+"name": "レッドストーンランプ",
+"reading": "れっどすとーんらんぷ"
+},
+"block.minecraft.redstone_ore": {
+"name": "レッドストーン鉱石",
+"reading": "れっどすとーんこうせき"
+},
+"block.minecraft.redstone_torch": {
+"name": "レッドストーントーチ",
+"reading": "れっどすとーんとーち"
+},
+"block.minecraft.redstone_wall_torch": {
+"name": "壁に付けられたレッドストーントーチ",
+"reading": "かべにつけられたれっどすとーんとーち"
+},
+"block.minecraft.redstone_wire": {
+"name": "レッドストーンワイヤー",
+"reading": "れっどすとーんわいやー"
+},
+"block.minecraft.reinforced_deepslate": {
+"name": "強化された深層岩",
+"reading": "きょうかされたしんそうがん"
+},
+"block.minecraft.repeater": {
+"name": "レッドストーンリピーター",
+"reading": "れっどすとーんりぴーたー"
+},
+"block.minecraft.repeating_command_block": {
+"name": "リピートコマンドブロック",
+"reading": "りぴーとこまんどぶろっく"
+},
+"block.minecraft.resin_block": {
+"name": "樹脂ブロック",
+"reading": "じゅしぶろっく"
+},
+"block.minecraft.resin_brick_slab": {
+"name": "樹脂レンガのハーフブロック",
+"reading": "じゅしれんがのはーふぶろっく"
+},
+"block.minecraft.resin_brick_stairs": {
+"name": "樹脂レンガの階段",
+"reading": "じゅしれんがのかいだん"
+},
+"block.minecraft.resin_brick_wall": {
+"name": "樹脂レンガの塀",
+"reading": "じゅしれんがのへい"
+},
+"block.minecraft.resin_bricks": {
+"name": "樹脂レンガ",
+"reading": "じゅしれんが"
+},
+"block.minecraft.resin_clump": {
+"name": "樹脂の塊",
+"reading": "じゅしのかたまり"
+},
+"block.minecraft.respawn_anchor": {
+"name": "リスポーンアンカー",
+"reading": "りすぽーんあんかー"
+},
+"block.minecraft.rooted_dirt": {
+"name": "根付いた土",
+"reading": "ねづいたつち"
+},
+"block.minecraft.rose_bush": {
+"name": "バラの低木",
+"reading": "ばらのていぼく"
+},
+"block.minecraft.sand": {
+"name": "砂",
+"reading": "すな"
+},
+"block.minecraft.sandstone": {
+"name": "砂岩",
+"reading": "さがん"
+},
+"block.minecraft.sandstone_slab": {
+"name": "砂岩のハーフブロック",
+"reading": "さがんのはーふぶろっく"
+},
+"block.minecraft.sandstone_stairs": {
+"name": "砂岩の階段",
+"reading": "さがんのかいだん"
+},
+"block.minecraft.sandstone_wall": {
+"name": "砂岩の塀",
+"reading": "さがんのへい"
+},
+"block.minecraft.scaffolding": {
+"name": "足場",
+"reading": "あしば"
+},
+"block.minecraft.sculk": {
+"name": "スカルク",
+"reading": "すかるく"
+},
+"block.minecraft.sculk_catalyst": {
+"name": "スカルクカタリスト",
+"reading": "すかるくかたりすと"
+},
+"block.minecraft.sculk_sensor": {
+"name": "スカルクセンサー",
+"reading": "すかるくせんさー"
+},
+"block.minecraft.sculk_shrieker": {
+"name": "スカルクシュリーカー",
+"reading": "すかるくしゅりーかー"
+},
+"block.minecraft.sculk_vein": {
+"name": "スカルクヴェイン",
+"reading": "すかるくゔぇいん"
+},
+"block.minecraft.sea_lantern": {
+"name": "シーランタン",
+"reading": "しーらんたん"
+},
+"block.minecraft.sea_pickle": {
+"name": "シーピクルス",
+"reading": "しーぴくるす"
+},
+"block.minecraft.seagrass": {
+"name": "海草",
+"reading": "かいそう"
+},
+"block.minecraft.set_spawn": {
+"name": "リスポーン地点が設定されました",
+"reading": "りすぽーんちてんがせっていされました"
+},
+"block.minecraft.shelf_mushroom": {
+"name": "サルノコシカケ",
+"reading": "さるのこしかけ"
+},
+"block.minecraft.short_dry_grass": {
+"name": "背の低い枯れ草",
+"reading": "せのひくいかれくさ"
+},
+"block.minecraft.short_grass": {
+"name": "背の低い草",
+"reading": "せのひくいくさ"
+},
+"block.minecraft.shroomlight": {
+"name": "シュルームライト",
+"reading": "しゅるーむらいと"
+},
+"block.minecraft.shulker_box": {
+"name": "シュルカーボックス",
+"reading": "しゅるかーぼっくす"
+},
+"block.minecraft.skeleton_skull": {
+"name": "スケルトンの頭蓋骨",
+"reading": "すけるとんのずがいこつ"
+},
+"block.minecraft.skeleton_wall_skull": {
+"name": "壁に付けられたスケルトンの頭蓋骨",
+"reading": "かべにつけられたすけるとんのずがいこつ"
+},
+"block.minecraft.slime_block": {
+"name": "スライムブロック",
+"reading": "すらいむぶろっく"
+},
+"block.minecraft.small_amethyst_bud": {
+"name": "小さなアメジストの芽",
+"reading": "ちいさなあめじすとのめ"
+},
+"block.minecraft.small_dripleaf": {
+"name": "小さなドリップリーフ",
+"reading": "ちいさなどりっぷりーふ"
+},
+"block.minecraft.smithing_table": {
+"name": "鍛冶台",
+"reading": "かじだい"
+},
+"block.minecraft.smoker": {
+"name": "燻製器",
+"reading": "くんせいき"
+},
+"block.minecraft.smooth_basalt": {
+"name": "滑らかな玄武岩",
+"reading": "なめらかなげんぶがん"
+},
+"block.minecraft.smooth_quartz": {
+"name": "滑らかなクォーツブロック",
+"reading": "なめらかなくぉーつぶろっく"
+},
+"block.minecraft.smooth_quartz_slab": {
+"name": "滑らかなクォーツのハーフブロック",
+"reading": "なめらかなくぉーつのはーふぶろっく"
+},
+"block.minecraft.smooth_quartz_stairs": {
+"name": "滑らかなクォーツの階段",
+"reading": "なめらかなくぉーつのかいだん"
+},
+"block.minecraft.smooth_red_sandstone": {
+"name": "滑らかな赤い砂岩",
+"reading": "なめらかなあかいさがん"
+},
+"block.minecraft.smooth_red_sandstone_slab": {
+"name": "滑らかな赤い砂岩のハーフブロック",
+"reading": "なめらかなあかいさがんのはーふぶろっく"
+},
+"block.minecraft.smooth_red_sandstone_stairs": {
+"name": "滑らかな赤い砂岩の階段",
+"reading": "なめらかなあかいさがんのかいだん"
+},
+"block.minecraft.smooth_sandstone": {
+"name": "滑らかな砂岩",
+"reading": "なめらかなさがん"
+},
+"block.minecraft.smooth_sandstone_slab": {
+"name": "滑らかな砂岩のハーフブロック",
+"reading": "なめらかなさがんのはーふぶろっく"
+},
+"block.minecraft.smooth_sandstone_stairs": {
+"name": "滑らかな砂岩の階段",
+"reading": "なめらかなさがんのかいだん"
+},
+"block.minecraft.smooth_stone": {
+"name": "滑らかな石",
+"reading": "なめらかないし"
+},
+"block.minecraft.smooth_stone_slab": {
+"name": "滑らかな石のハーフブロック",
+"reading": "なめらかないしのはーふぶろっく"
+},
+"block.minecraft.sniffer_egg": {
+"name": "スニッファーの卵",
+"reading": "すにっふぁーのたまご"
+},
+"block.minecraft.snow": {
+"name": "雪",
+"reading": "ゆき"
+},
+"block.minecraft.snow_block": {
+"name": "雪ブロック",
+"reading": "ゆきぶろっく"
+},
+"block.minecraft.snow_brick_slab": {
+"name": "雪レンガのハーフブロック",
+"reading": "ゆきれんがのはーふぶろっく"
+},
+"block.minecraft.snow_brick_stairs": {
+"name": "雪レンガの階段",
+"reading": "ゆきれんがのかいだん"
+},
+"block.minecraft.snow_brick_wall": {
+"name": "雪レンガの塀",
+"reading": "ゆきれんがのへい"
+},
+"block.minecraft.snow_bricks": {
+"name": "雪レンガ",
+"reading": "ゆきれんが"
+},
+"block.minecraft.soul_campfire": {
+"name": "魂の焚き火",
+"reading": "たましいのたきび"
+},
+"block.minecraft.soul_fire": {
+"name": "魂の炎",
+"reading": "たましいのほのお"
+},
+"block.minecraft.soul_lantern": {
+"name": "魂のランタン",
+"reading": "たましいのらんたん"
+},
+"block.minecraft.soul_sand": {
+"name": "ソウルサンド",
+"reading": "そうるさんど"
+},
+"block.minecraft.soul_soil": {
+"name": "ソウルソイル",
+"reading": "そうるそいる"
+},
+"block.minecraft.soul_torch": {
+"name": "魂の松明",
+"reading": "たましいのたいまつ"
+},
+"block.minecraft.soul_wall_torch": {
+"name": "壁に付けられた魂の松明",
+"reading": "かべにつけられたたましいのたいまつ"
+},
+"block.minecraft.spawner": {
+"name": "モンスタースポナー",
+"reading": "もんすたーすぽなー"
+},
+"block.minecraft.sponge": {
+"name": "スポンジ",
+"reading": "すぽんじ"
+},
+"block.minecraft.spore_blossom": {
+"name": "胞子の花",
+"reading": "ほうしのはな"
+},
+"block.minecraft.spruce_button": {
+"name": "トウヒのボタン",
+"reading": "とうひのぼたん"
+},
+"block.minecraft.spruce_door": {
+"name": "トウヒのドア",
+"reading": "とうひのどあ"
+},
+"block.minecraft.spruce_fence": {
+"name": "トウヒのフェンス",
+"reading": "とうひのふぇんす"
+},
+"block.minecraft.spruce_fence_gate": {
+"name": "トウヒのフェンスゲート",
+"reading": "とうひのふぇんすげーと"
+},
+"block.minecraft.spruce_hanging_sign": {
+"name": "トウヒの吊り看板",
+"reading": "とうひのつりかんばん"
+},
+"block.minecraft.spruce_leaves": {
+"name": "トウヒの葉",
+"reading": "とうひのは"
+},
+"block.minecraft.spruce_log": {
+"name": "トウヒの原木",
+"reading": "とうひのげんぼく"
+},
+"block.minecraft.spruce_planks": {
+"name": "トウヒの板材",
+"reading": "とうひのいたざい"
+},
+"block.minecraft.spruce_pressure_plate": {
+"name": "トウヒの感圧板",
+"reading": "とうひのかんあつばん"
+},
+"block.minecraft.spruce_sapling": {
+"name": "トウヒの苗木",
+"reading": "とうひのなえぎ"
+},
+"block.minecraft.spruce_shelf": {
+"name": "トウヒの棚",
+"reading": "とうひのたな"
+},
+"block.minecraft.spruce_sign": {
+"name": "トウヒの看板",
+"reading": "とうひのかんばん"
+},
+"block.minecraft.spruce_slab": {
+"name": "トウヒのハーフブロック",
+"reading": "とうひのはーふぶろっく"
+},
+"block.minecraft.spruce_stairs": {
+"name": "トウヒの階段",
+"reading": "とうひのかいだん"
+},
+"block.minecraft.spruce_trapdoor": {
+"name": "トウヒのトラップドア",
+"reading": "とうひのとらっぷどあ"
+},
+"block.minecraft.spruce_wall_hanging_sign": {
+"name": "壁に付けられたトウヒの吊り看板",
+"reading": "かべにつけられたとうひのつりかんばん"
+},
+"block.minecraft.spruce_wall_sign": {
+"name": "壁に付けられたトウヒの看板",
+"reading": "かべにつけられたとうひのかんばん"
+},
+"block.minecraft.spruce_wood": {
+"name": "トウヒの木",
+"reading": "とうひのき"
+},
+"block.minecraft.sticky_piston": {
+"name": "粘着ピストン",
+"reading": "ねんちゃくぴすとん"
+},
+"block.minecraft.stone": {
+"name": "石",
+"reading": "いし"
+},
+"block.minecraft.stone_brick_slab": {
+"name": "石レンガのハーフブロック",
+"reading": "いしれんがのはーふぶろっく"
+},
+"block.minecraft.stone_brick_stairs": {
+"name": "石レンガの階段",
+"reading": "いしれんがのかいだん"
+},
+"block.minecraft.stone_brick_wall": {
+"name": "石レンガの塀",
+"reading": "いしれんがのへい"
+},
+"block.minecraft.stone_bricks": {
+"name": "石レンガ",
+"reading": "いしれんが"
+},
+"block.minecraft.stone_button": {
+"name": "石のボタン",
+"reading": "いしのぼたん"
+},
+"block.minecraft.stone_pressure_plate": {
+"name": "石の感圧板",
+"reading": "いしのかんあつばん"
+},
+"block.minecraft.stone_slab": {
+"name": "石のハーフブロック",
+"reading": "いしのはーふぶろっく"
+},
+"block.minecraft.stone_stairs": {
+"name": "石の階段",
+"reading": "いしのかいだん"
+},
+"block.minecraft.stonecutter": {
+"name": "石切台",
+"reading": "いしきりだい"
+},
+"block.minecraft.straw_bed": {
+"name": "藁のベッド",
+"reading": "わらのべっど"
+},
+"block.minecraft.stripped_acacia_log": {
+"name": "樹皮を剥いだアカシアの原木",
+"reading": "じゅひをはいだあかしあのげんぼく"
+},
+"block.minecraft.stripped_acacia_wood": {
+"name": "樹皮を剥いだアカシアの木",
+"reading": "じゅひをはいだあかしあのき"
+},
+"block.minecraft.stripped_bamboo_block": {
+"name": "表皮を剥いだ竹ブロック",
+"reading": "ひょうひをはいだたけぶろっく"
+},
+"block.minecraft.stripped_birch_log": {
+"name": "樹皮を剥いだシラカバの原木",
+"reading": "じゅひをはいだしらかばのげんぼく"
+},
+"block.minecraft.stripped_birch_wood": {
+"name": "樹皮を剥いだシラカバの木",
+"reading": "じゅひをはいだしらかばのき"
+},
+"block.minecraft.stripped_cherry_log": {
+"name": "樹皮を剥いだサクラの原木",
+"reading": "じゅひをはいださくらのげんぼく"
+},
+"block.minecraft.stripped_cherry_wood": {
+"name": "樹皮を剥いだサクラの木",
+"reading": "じゅひをはいださくらのき"
+},
+"block.minecraft.stripped_crimson_hyphae": {
+"name": "表皮を剥いだ真紅の菌糸",
+"reading": "ひょうひをはいだしんくのきんし"
+},
+"block.minecraft.stripped_crimson_stem": {
+"name": "表皮を剥いだ真紅の幹",
+"reading": "ひょうひをはいだしんくのみき"
+},
+"block.minecraft.stripped_dark_oak_log": {
+"name": "樹皮を剥いだダークオークの原木",
+"reading": "じゅひをはいだだーくおーくのげんぼく"
+},
+"block.minecraft.stripped_dark_oak_wood": {
+"name": "樹皮を剥いだダークオークの木",
+"reading": "じゅひをはいだだーくおーくのき"
+},
+"block.minecraft.stripped_jungle_log": {
+"name": "樹皮を剥いだジャングルの原木",
+"reading": "じゅひをはいだじゃんぐるのげんぼく"
+},
+"block.minecraft.stripped_jungle_wood": {
+"name": "樹皮を剥いだジャングルの木",
+"reading": "じゅひをはいだじゃんぐるのき"
+},
+"block.minecraft.stripped_mangrove_log": {
+"name": "樹皮を剥いだマングローブの原木",
+"reading": "じゅひをはいだまんぐろーぶのげんぼく"
+},
+"block.minecraft.stripped_mangrove_wood": {
+"name": "樹皮を剥いだマングローブの木",
+"reading": "じゅひをはいだまんぐろーぶのき"
+},
+"block.minecraft.stripped_oak_log": {
+"name": "樹皮を剥いだオークの原木",
+"reading": "じゅひをはいだおーくのげんぼく"
+},
+"block.minecraft.stripped_oak_wood": {
+"name": "樹皮を剥いだオークの木",
+"reading": "じゅひをはいだおーくのき"
+},
+"block.minecraft.stripped_pale_oak_log": {
+"name": "樹皮を剥いだペールオークの原木",
+"reading": "じゅひをはいだぺーるおーくのげんぼく"
+},
+"block.minecraft.stripped_pale_oak_wood": {
+"name": "樹皮を剥いだペールオークの木",
+"reading": "じゅひをはいだぺーるおーくのき"
+},
+"block.minecraft.stripped_poplar_log": {
+"name": "樹皮を剥いだポプラの原木",
+"reading": "じゅひをはいだぽぷらのげんぼく"
+},
+"block.minecraft.stripped_poplar_wood": {
+"name": "樹皮を剥いだポプラの木",
+"reading": "じゅひをはいだぽぷらのき"
+},
+"block.minecraft.stripped_spruce_log": {
+"name": "樹皮を剥いだトウヒの原木",
+"reading": "じゅひをはいだとうひのげんぼく"
+},
+"block.minecraft.stripped_spruce_wood": {
+"name": "樹皮を剥いだトウヒの木",
+"reading": "じゅひをはいだとうひのき"
+},
+"block.minecraft.stripped_warped_hyphae": {
+"name": "表皮を剥いだ歪んだ菌糸",
+"reading": "ひょうひをはいだゆがんだきんし"
+},
+"block.minecraft.stripped_warped_stem": {
+"name": "表皮を剥いだ歪んだ幹",
+"reading": "ひょうひをはいだゆがんだみき"
+},
+"block.minecraft.structure_block": {
+"name": "ストラクチャーブロック",
+"reading": "すとらくちゃーぶろっく"
+},
+"block.minecraft.structure_void": {
+"name": "ストラクチャーヴォイド",
+"reading": "すとらくちゃーゔぉいど"
+},
+"block.minecraft.sugar_cane": {
+"name": "サトウキビ",
+"reading": "さとうきび"
+},
+"block.minecraft.sulfur": {
+"name": "硫黄",
+"reading": "いおう"
+},
+"block.minecraft.sulfur_brick_slab": {
+"name": "硫黄レンガのハーフブロック",
+"reading": "いおうれんがのはーふぶろっく"
+},
+"block.minecraft.sulfur_brick_stairs": {
+"name": "硫黄レンガの階段",
+"reading": "いおうれんがのかいだん"
+},
+"block.minecraft.sulfur_brick_wall": {
+"name": "硫黄レンガの塀",
+"reading": "いおうれんがのへい"
+},
+"block.minecraft.sulfur_bricks": {
+"name": "硫黄レンガ",
+"reading": "いおうれんが"
+},
+"block.minecraft.sulfur_slab": {
+"name": "硫黄のハーフブロック",
+"reading": "いおうのはーふぶろっく"
+},
+"block.minecraft.sulfur_spike": {
+"name": "尖った硫黄",
+"reading": "とがったいおう"
+},
+"block.minecraft.sulfur_stairs": {
+"name": "硫黄の階段",
+"reading": "いおうのかいだん"
+},
+"block.minecraft.sulfur_wall": {
+"name": "硫黄の塀",
+"reading": "いおうのへい"
+},
+"block.minecraft.sunflower": {
+"name": "ヒマワリ",
+"reading": "ひまわり"
+},
+"block.minecraft.suspicious_gravel": {
+"name": "怪しげな砂利",
+"reading": "あやしげなじゃり"
+},
+"block.minecraft.suspicious_sand": {
+"name": "怪しげな砂",
+"reading": "あやしげなすな"
+},
+"block.minecraft.sweet_berry_bush": {
+"name": "スイートベリーの低木",
+"reading": "すいーとべりーのていぼく"
+},
+"block.minecraft.tall_dry_grass": {
+"name": "背の高い枯れ草",
+"reading": "せのたかいかれくさ"
+},
+"block.minecraft.tall_grass": {
+"name": "背の高い草",
+"reading": "せのたかいくさ"
+},
+"block.minecraft.tall_seagrass": {
+"name": "背の高い海草",
+"reading": "せのたかいかいそう"
+},
+"block.minecraft.target": {
+"name": "的",
+"reading": "まと"
+},
+"block.minecraft.terracotta": {
+"name": "テラコッタ",
+"reading": "てらこった"
+},
+"block.minecraft.test_block": {
+"name": "テストブロック",
+"reading": "てすとぶろっく"
+},
+"block.minecraft.test_instance_block": {
+"name": "テストインスタンスブロック",
+"reading": "てすといんすたんすぶろっく"
+},
+"block.minecraft.tinted_glass": {
+"name": "遮光ガラス",
+"reading": "しゃこうがらす"
+},
+"block.minecraft.tnt": {
+"name": "TNT",
+"reading": "てぃーえぬてぃー"
+},
+"block.minecraft.torch": {
+"name": "松明",
+"reading": "たいまつ"
+},
+"block.minecraft.torchflower": {
+"name": "トーチフラワー",
+"reading": "とーちふらわー"
+},
+"block.minecraft.torchflower_crop": {
+"name": "トーチフラワー",
+"reading": "とーちふらわー"
+},
+"block.minecraft.trapped_chest": {
+"name": "トラップチェスト",
+"reading": "とらっぷちぇすと"
+},
+"block.minecraft.trial_spawner": {
+"name": "試練のスポナー",
+"reading": "しれんのすぽなー"
+},
+"block.minecraft.tripwire": {
+"name": "トリップワイヤー",
+"reading": "とりっぷわいやー"
+},
+"block.minecraft.tripwire_hook": {
+"name": "トリップワイヤーフック",
+"reading": "とりっぷわいやーふっく"
+},
+"block.minecraft.tube_coral": {
+"name": "クダサンゴ",
+"reading": "くださんご"
+},
+"block.minecraft.tube_coral_block": {
+"name": "クダサンゴブロック",
+"reading": "くださんごぶろっく"
+},
+"block.minecraft.tube_coral_fan": {
+"name": "クダウチワサンゴ",
+"reading": "くだうちわさんご"
+},
+"block.minecraft.tube_coral_wall_fan": {
+"name": "壁付きのクダウチワサンゴ",
+"reading": "かべつきのくだうちわさんご"
+},
+"block.minecraft.tuff": {
+"name": "凝灰岩",
+"reading": "ぎょうかいがん"
+},
+"block.minecraft.tuff_brick_slab": {
+"name": "凝灰岩レンガのハーフブロック",
+"reading": "ぎょうかいがんれんがのはーふぶろっく"
+},
+"block.minecraft.tuff_brick_stairs": {
+"name": "凝灰岩レンガの階段",
+"reading": "ぎょうかいがんれんがのかいだん"
+},
+"block.minecraft.tuff_brick_wall": {
+"name": "凝灰岩レンガの塀",
+"reading": "ぎょうかいがんれんがのへい"
+},
+"block.minecraft.tuff_bricks": {
+"name": "凝灰岩レンガ",
+"reading": "ぎょうかいがんれんが"
+},
+"block.minecraft.tuff_slab": {
+"name": "凝灰岩のハーフブロック",
+"reading": "ぎょうかいがんのはーふぶろっく"
+},
+"block.minecraft.tuff_stairs": {
+"name": "凝灰岩の階段",
+"reading": "ぎょうかいがんのかいだん"
+},
+"block.minecraft.tuff_wall": {
+"name": "凝灰岩の塀",
+"reading": "ぎょうかいがんのへい"
+},
+"block.minecraft.turtle_egg": {
+"name": "カメの卵",
+"reading": "かめのたまご"
+},
+"block.minecraft.twisting_vines": {
+"name": "ねじれツタ",
+"reading": "ねじれつた"
+},
+"block.minecraft.twisting_vines_plant": {
+"name": "ねじれツタのつる",
+"reading": "ねじれつたのつる"
+},
+"block.minecraft.vault": {
+"name": "宝物庫",
+"reading": "ほうもつこ"
+},
+"block.minecraft.verdant_froglight": {
+"name": "新緑色のフロッグライト",
+"reading": "しんりょくしょくのふろっぐらいと"
+},
+"block.minecraft.vine": {
+"name": "ツタ",
+"reading": "つた"
+},
+"block.minecraft.void_air": {
+"name": "奈落の空気",
+"reading": "ならくのくうき"
+},
+"block.minecraft.wall_torch": {
+"name": "壁に付けられた松明",
+"reading": "かべにつけられたたいまつ"
+},
+"block.minecraft.warped_button": {
+"name": "歪んだボタン",
+"reading": "ゆがんだぼたん"
+},
+"block.minecraft.warped_door": {
+"name": "歪んだドア",
+"reading": "ゆがんだどあ"
+},
+"block.minecraft.warped_fence": {
+"name": "歪んだフェンス",
+"reading": "ゆがんだふぇんす"
+},
+"block.minecraft.warped_fence_gate": {
+"name": "歪んだフェンスゲート",
+"reading": "ゆがんだふぇんすげーと"
+},
+"block.minecraft.warped_fungus": {
+"name": "歪んだキノコ",
+"reading": "ゆがんだきのこ"
+},
+"block.minecraft.warped_hanging_sign": {
+"name": "歪んだ吊り看板",
+"reading": "ゆがんだつりかんばん"
+},
+"block.minecraft.warped_hyphae": {
+"name": "歪んだ菌糸",
+"reading": "ゆがんだきんし"
+},
+"block.minecraft.warped_nylium": {
+"name": "歪んだナイリウム",
+"reading": "ゆがんだないりうむ"
+},
+"block.minecraft.warped_planks": {
+"name": "歪んだ板材",
+"reading": "ゆがんだいたざい"
+},
+"block.minecraft.warped_pressure_plate": {
+"name": "歪んだ感圧板",
+"reading": "ゆがんだかんあつばん"
+},
+"block.minecraft.warped_roots": {
+"name": "歪んだ根",
+"reading": "ゆがんだね"
+},
+"block.minecraft.warped_shelf": {
+"name": "歪んだ棚",
+"reading": "ゆがんだたな"
+},
+"block.minecraft.warped_sign": {
+"name": "歪んだ看板",
+"reading": "ゆがんだかんばん"
+},
+"block.minecraft.warped_slab": {
+"name": "歪んだハーフブロック",
+"reading": "ゆがんだはーふぶろっく"
+},
+"block.minecraft.warped_stairs": {
+"name": "歪んだ階段",
+"reading": "ゆがんだかいだん"
+},
+"block.minecraft.warped_stem": {
+"name": "歪んだ幹",
+"reading": "ゆがんだみき"
+},
+"block.minecraft.warped_trapdoor": {
+"name": "歪んだトラップドア",
+"reading": "ゆがんだとらっぷどあ"
+},
+"block.minecraft.warped_wall_hanging_sign": {
+"name": "壁に付けられた歪んだ吊り看板",
+"reading": "かべにつけられたゆがんだつりかんばん"
+},
+"block.minecraft.warped_wall_sign": {
+"name": "壁に付けられた歪んだ看板",
+"reading": "かべにつけられたゆがんだかんばん"
+},
+"block.minecraft.warped_wart_block": {
+"name": "歪んだウォートブロック",
+"reading": "ゆがんだうぉーとぶろっく"
+},
+"block.minecraft.water": {
+"name": "水",
+"reading": "みず"
+},
+"block.minecraft.water_cauldron": {
+"name": "水入りの大釜",
+"reading": "みずいりのおおがま"
+},
+"block.minecraft.waxed_chiseled_copper": {
+"name": "錆止めされた模様入りの銅",
+"reading": "さびどめされたもよういりのどう"
+},
+"block.minecraft.waxed_copper_bars": {
+"name": "錆止めされた銅格子",
+"reading": "さびどめされたどうこうし"
+},
+"block.minecraft.waxed_copper_block": {
+"name": "錆止めされた銅ブロック",
+"reading": "さびどめされたどうぶろっく"
+},
+"block.minecraft.waxed_copper_bulb": {
+"name": "錆止めされた銅の電球",
+"reading": "さびどめされたどうのでんきゅう"
+},
+"block.minecraft.waxed_copper_chain": {
+"name": "錆止めされた銅の鎖",
+"reading": "さびどめされたどうのくさり"
+},
+"block.minecraft.waxed_copper_chest": {
+"name": "錆止めされた銅のチェスト",
+"reading": "さびどめされたどうのちぇすと"
+},
+"block.minecraft.waxed_copper_door": {
+"name": "錆止めされた銅のドア",
+"reading": "さびどめされたどうのどあ"
+},
+"block.minecraft.waxed_copper_golem_statue": {
+"name": "錆止めされたカッパーゴーレムの像",
+"reading": "さびどめされたかっぱーごーれむのぞう"
+},
+"block.minecraft.waxed_copper_grate": {
+"name": "錆止めされた銅の金網",
+"reading": "さびどめされたどうのかなあみ"
+},
+"block.minecraft.waxed_copper_lantern": {
+"name": "錆止めされた銅のランタン",
+"reading": "さびどめされたどうのらんたん"
+},
+"block.minecraft.waxed_copper_trapdoor": {
+"name": "錆止めされた銅のトラップドア",
+"reading": "さびどめされたどうのとらっぷどあ"
+},
+"block.minecraft.waxed_cut_copper": {
+"name": "錆止めされた切り込み入りの銅",
+"reading": "さびどめされたきりこみいりのどう"
+},
+"block.minecraft.waxed_cut_copper_slab": {
+"name": "錆止めされた切り込み入りの銅のハーフブロック",
+"reading": "さびどめされたきりこみいりのどうのはーふぶろっく"
+},
+"block.minecraft.waxed_cut_copper_stairs": {
+"name": "錆止めされた切り込み入りの銅の階段",
+"reading": "さびどめされたきりこみいりのどうのかいだん"
+},
+"block.minecraft.waxed_exposed_chiseled_copper": {
+"name": "錆止めされた風化した模様入りの銅",
+"reading": "さびどめされたふうかしたもよういりのどう"
+},
+"block.minecraft.waxed_exposed_copper": {
+"name": "錆止めされた風化した銅",
+"reading": "さびどめされたふうかしたどう"
+},
+"block.minecraft.waxed_exposed_copper_bars": {
+"name": "錆止めされた風化した銅格子",
+"reading": "さびどめされたふうかしたどうこうし"
+},
+"block.minecraft.waxed_exposed_copper_bulb": {
+"name": "錆止めされた風化した銅の電球",
+"reading": "さびどめされたふうかしたどうのでんきゅう"
+},
+"block.minecraft.waxed_exposed_copper_chain": {
+"name": "錆止めされた風化した銅の鎖",
+"reading": "さびどめされたふうかしたどうのくさり"
+},
+"block.minecraft.waxed_exposed_copper_chest": {
+"name": "錆止めされた風化した銅のチェスト",
+"reading": "さびどめされたふうかしたどうのちぇすと"
+},
+"block.minecraft.waxed_exposed_copper_door": {
+"name": "錆止めされた風化した銅のドア",
+"reading": "さびどめされたふうかしたどうのどあ"
+},
+"block.minecraft.waxed_exposed_copper_golem_statue": {
+"name": "錆止めされた風化したカッパーゴーレムの像",
+"reading": "さびどめされたふうかしたかっぱーごーれむのぞう"
+},
+"block.minecraft.waxed_exposed_copper_grate": {
+"name": "錆止めされた風化した銅の金網",
+"reading": "さびどめされたふうかしたどうのかなあみ"
+},
+"block.minecraft.waxed_exposed_copper_lantern": {
+"name": "錆止めされた風化した銅のランタン",
+"reading": "さびどめされたふうかしたどうのらんたん"
+},
+"block.minecraft.waxed_exposed_copper_trapdoor": {
+"name": "錆止めされた風化した銅のトラップドア",
+"reading": "さびどめされたふうかしたどうのとらっぷどあ"
+},
+"block.minecraft.waxed_exposed_cut_copper": {
+"name": "錆止めされた風化した切り込み入りの銅",
+"reading": "さびどめされたふうかしたきりこみいりのどう"
+},
+"block.minecraft.waxed_exposed_cut_copper_slab": {
+"name": "錆止めされた風化した切り込み入りの銅のハーフブロック",
+"reading": "さびどめされたふうかしたきりこみいりのどうのはーふぶろっく"
+},
+"block.minecraft.waxed_exposed_cut_copper_stairs": {
+"name": "錆止めされた風化した切り込み入りの銅の階段",
+"reading": "さびどめされたふうかしたきりこみいりのどうのかいだん"
+},
+"block.minecraft.waxed_exposed_lightning_rod": {
+"name": "錆止めされた風化した避雷針",
+"reading": "さびどめされたふうかしたひらいしん"
+},
+"block.minecraft.waxed_lightning_rod": {
+"name": "錆止めされた避雷針",
+"reading": "さびどめされたひらいしん"
+},
+"block.minecraft.waxed_oxidized_chiseled_copper": {
+"name": "錆止めされた酸化した模様入りの銅",
+"reading": "さびどめされたさんかしたもよういりのどう"
+},
+"block.minecraft.waxed_oxidized_copper": {
+"name": "錆止めされた酸化した銅",
+"reading": "さびどめされたさんかしたどう"
+},
+"block.minecraft.waxed_oxidized_copper_bars": {
+"name": "錆止めされた酸化した銅格子",
+"reading": "さびどめされたさんかしたどうこうし"
+},
+"block.minecraft.waxed_oxidized_copper_bulb": {
+"name": "錆止めされた酸化した銅の電球",
+"reading": "さびどめされたさんかしたどうのでんきゅう"
+},
+"block.minecraft.waxed_oxidized_copper_chain": {
+"name": "錆止めされた酸化した銅の鎖",
+"reading": "さびどめされたさんかしたどうのくさり"
+},
+"block.minecraft.waxed_oxidized_copper_chest": {
+"name": "錆止めされた酸化した銅のチェスト",
+"reading": "さびどめされたさんかしたどうのちぇすと"
+},
+"block.minecraft.waxed_oxidized_copper_door": {
+"name": "錆止めされた酸化した銅のドア",
+"reading": "さびどめされたさんかしたどうのどあ"
+},
+"block.minecraft.waxed_oxidized_copper_golem_statue": {
+"name": "錆止めされた酸化したカッパーゴーレムの像",
+"reading": "さびどめされたさんかしたかっぱーごーれむのぞう"
+},
+"block.minecraft.waxed_oxidized_copper_grate": {
+"name": "錆止めされた酸化した銅の金網",
+"reading": "さびどめされたさんかしたどうのかなあみ"
+},
+"block.minecraft.waxed_oxidized_copper_lantern": {
+"name": "錆止めされた酸化した銅のランタン",
+"reading": "さびどめされたさんかしたどうのらんたん"
+},
+"block.minecraft.waxed_oxidized_copper_trapdoor": {
+"name": "錆止めされた酸化した銅のトラップドア",
+"reading": "さびどめされたさんかしたどうのとらっぷどあ"
+},
+"block.minecraft.waxed_oxidized_cut_copper": {
+"name": "錆止めされた酸化した切り込み入りの銅",
+"reading": "さびどめされたさんかしたきりこみいりのどう"
+},
+"block.minecraft.waxed_oxidized_cut_copper_slab": {
+"name": "錆止めされた酸化した切り込み入りの銅のハーフブロック",
+"reading": "さびどめされたさんかしたきりこみいりのどうのはーふぶろっく"
+},
+"block.minecraft.waxed_oxidized_cut_copper_stairs": {
+"name": "錆止めされた酸化した切り込み入りの銅の階段",
+"reading": "さびどめされたさんかしたきりこみいりのどうのかいだん"
+},
+"block.minecraft.waxed_oxidized_lightning_rod": {
+"name": "錆止めされた酸化した避雷針",
+"reading": "さびどめされたさんかしたひらいしん"
+},
+"block.minecraft.waxed_weathered_chiseled_copper": {
+"name": "錆止めされた錆びた模様入りの銅",
+"reading": "さびどめされたさびたもよういりのどう"
+},
+"block.minecraft.waxed_weathered_copper": {
+"name": "錆止めされた錆びた銅",
+"reading": "さびどめされたさびたどう"
+},
+"block.minecraft.waxed_weathered_copper_bars": {
+"name": "錆止めされた錆びた銅格子",
+"reading": "さびどめされたさびたどうこうし"
+},
+"block.minecraft.waxed_weathered_copper_bulb": {
+"name": "錆止めされた錆びた銅の電球",
+"reading": "さびどめされたさびたどうのでんきゅう"
+},
+"block.minecraft.waxed_weathered_copper_chain": {
+"name": "錆止めされた錆びた銅の鎖",
+"reading": "さびどめされたさびたどうのくさり"
+},
+"block.minecraft.waxed_weathered_copper_chest": {
+"name": "錆止めされた錆びた銅のチェスト",
+"reading": "さびどめされたさびたどうのちぇすと"
+},
+"block.minecraft.waxed_weathered_copper_door": {
+"name": "錆止めされた錆びた銅のドア",
+"reading": "さびどめされたさびたどうのどあ"
+},
+"block.minecraft.waxed_weathered_copper_golem_statue": {
+"name": "錆止めされた錆びたカッパーゴーレムの像",
+"reading": "さびどめされたさびたかっぱーごーれむのぞう"
+},
+"block.minecraft.waxed_weathered_copper_grate": {
+"name": "錆止めされた錆びた銅の金網",
+"reading": "さびどめされたさびたどうのかなあみ"
+},
+"block.minecraft.waxed_weathered_copper_lantern": {
+"name": "錆止めされた錆びた銅のランタン",
+"reading": "さびどめされたさびたどうのらんたん"
+},
+"block.minecraft.waxed_weathered_copper_trapdoor": {
+"name": "錆止めされた錆びた銅のトラップドア",
+"reading": "さびどめされたさびたどうのとらっぷどあ"
+},
+"block.minecraft.waxed_weathered_cut_copper": {
+"name": "錆止めされた錆びた切り込み入りの銅",
+"reading": "さびどめされたさびたきりこみいりのどう"
+},
+"block.minecraft.waxed_weathered_cut_copper_slab": {
+"name": "錆止めされた錆びた切り込み入りの銅のハーフブロック",
+"reading": "さびどめされたさびたきりこみいりのどうのはーふぶろっく"
+},
+"block.minecraft.waxed_weathered_cut_copper_stairs": {
+"name": "錆止めされた錆びた切り込み入りの銅の階段",
+"reading": "さびどめされたさびたきりこみいりのどうのかいだん"
+},
+"block.minecraft.waxed_weathered_lightning_rod": {
+"name": "錆止めされた錆びた避雷針",
+"reading": "さびどめされたさびたひらいしん"
+},
+"block.minecraft.weathered_chiseled_copper": {
+"name": "錆びた模様入りの銅",
+"reading": "さびたもよういりのどう"
+},
+"block.minecraft.weathered_copper": {
+"name": "錆びた銅",
+"reading": "さびたどう"
+},
+"block.minecraft.weathered_copper_bars": {
+"name": "錆びた銅格子",
+"reading": "さびたどうこうし"
+},
+"block.minecraft.weathered_copper_bulb": {
+"name": "錆びた銅の電球",
+"reading": "さびたどうのでんきゅう"
+},
+"block.minecraft.weathered_copper_chain": {
+"name": "錆びた銅の鎖",
+"reading": "さびたどうのくさり"
+},
+"block.minecraft.weathered_copper_chest": {
+"name": "錆びた銅のチェスト",
+"reading": "さびたどうのちぇすと"
+},
+"block.minecraft.weathered_copper_door": {
+"name": "錆びた銅のドア",
+"reading": "さびたどうのどあ"
+},
+"block.minecraft.weathered_copper_golem_statue": {
+"name": "錆びたカッパーゴーレムの像",
+"reading": "さびたかっぱーごーれむのぞう"
+},
+"block.minecraft.weathered_copper_grate": {
+"name": "錆びた銅の金網",
+"reading": "さびたどうのかなあみ"
+},
+"block.minecraft.weathered_copper_lantern": {
+"name": "錆びた銅のランタン",
+"reading": "さびたどうのらんたん"
+},
+"block.minecraft.weathered_copper_trapdoor": {
+"name": "錆びた銅のトラップドア",
+"reading": "さびたどうのとらっぷどあ"
+},
+"block.minecraft.weathered_cut_copper": {
+"name": "錆びた切り込み入りの銅",
+"reading": "さびたきりこみいりのどう"
+},
+"block.minecraft.weathered_cut_copper_slab": {
+"name": "錆びた切り込み入りの銅のハーフブロック",
+"reading": "さびたきりこみいりのどうのはーふぶろっく"
+},
+"block.minecraft.weathered_cut_copper_stairs": {
+"name": "錆びた切り込み入りの銅の階段",
+"reading": "さびたきりこみいりのどうのかいだん"
+},
+"block.minecraft.weathered_lightning_rod": {
+"name": "錆びた避雷針",
+"reading": "さびたひらいしん"
+},
+"block.minecraft.weeping_vines": {
+"name": "しだれツタ",
+"reading": "しだれつた"
+},
+"block.minecraft.weeping_vines_plant": {
+"name": "しだれツタのつる",
+"reading": "しだれつたのつる"
+},
+"block.minecraft.wet_sponge": {
+"name": "濡れたスポンジ",
+"reading": "ぬれたすぽんじ"
+},
+"block.minecraft.wheat": {
+"name": "小麦",
+"reading": "こむぎ"
+},
+"block.minecraft.white_banner": {
+"name": "白色の旗",
+"reading": "しろいろのはた"
+},
+"block.minecraft.white_bed": {
+"name": "白色のベッド",
+"reading": "しろいろのべっど"
+},
+"block.minecraft.white_candle": {
+"name": "白色のろうそく",
+"reading": "しろいろのろうそく"
+},
+"block.minecraft.white_candle_cake": {
+"name": "白色のろうそくが立てられたケーキ",
+"reading": "しろいろのろうそくがたてられたけーき"
+},
+"block.minecraft.white_carpet": {
+"name": "白色のカーペット",
+"reading": "しろいろのかーぺっと"
+},
+"block.minecraft.white_concrete": {
+"name": "白色のコンクリート",
+"reading": "しろいろのこんくりーと"
+},
+"block.minecraft.white_concrete_powder": {
+"name": "白色のコンクリートパウダー",
+"reading": "しろいろのこんくりーとぱうだー"
+},
+"block.minecraft.white_concrete_slab": {
+"name": "白色のコンクリートのハーフブロック",
+"reading": "しろいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.white_concrete_stairs": {
+"name": "白色のコンクリートの階段",
+"reading": "しろいろのこんくりーとのかいだん"
+},
+"block.minecraft.white_glazed_terracotta": {
+"name": "白色の彩釉テラコッタ",
+"reading": "しろいろのさいゆうてらこった"
+},
+"block.minecraft.white_shulker_box": {
+"name": "白色のシュルカーボックス",
+"reading": "しろいろのしゅるかーぼっくす"
+},
+"block.minecraft.white_stained_glass": {
+"name": "白色の色付きガラス",
+"reading": "しろいろのいろつきがらす"
+},
+"block.minecraft.white_stained_glass_pane": {
+"name": "白色の色付きガラス板",
+"reading": "しろいろのいろつきがらすいた"
+},
+"block.minecraft.white_terracotta": {
+"name": "白色のテラコッタ",
+"reading": "しろいろのてらこった"
+},
+"block.minecraft.white_tulip": {
+"name": "白色のチューリップ",
+"reading": "しろいろのちゅーりっぷ"
+},
+"block.minecraft.white_wool": {
+"name": "白色の羊毛",
+"reading": "しろいろのようもう"
+},
+"block.minecraft.white_wool_slab": {
+"name": "白色の羊毛のハーフブロック",
+"reading": "しろいろのようもうのはーふぶろっく"
+},
+"block.minecraft.white_wool_stairs": {
+"name": "白色の羊毛の階段",
+"reading": "しろいろのようもうのかいだん"
+},
+"block.minecraft.wildflowers": {
+"name": "野花",
+"reading": "のばな"
+},
+"block.minecraft.wither_rose": {
+"name": "ウィザーローズ",
+"reading": "うぃざーろーず"
+},
+"block.minecraft.wither_skeleton_skull": {
+"name": "ウィザースケルトンの頭蓋骨",
+"reading": "うぃざーすけるとんのずがいこつ"
+},
+"block.minecraft.wither_skeleton_wall_skull": {
+"name": "壁に付けられたウィザースケルトンの頭蓋骨",
+"reading": "かべにつけられたうぃざーすけるとんのずがいこつ"
+},
+"block.minecraft.yellow_banner": {
+"name": "黄色の旗",
+"reading": "きいろのはた"
+},
+"block.minecraft.yellow_bed": {
+"name": "黄色のベッド",
+"reading": "きいろのべっど"
+},
+"block.minecraft.yellow_candle": {
+"name": "黄色のろうそく",
+"reading": "きいろのろうそく"
+},
+"block.minecraft.yellow_candle_cake": {
+"name": "黄色のろうそくが立てられたケーキ",
+"reading": "きいろのろうそくがたてられたけーき"
+},
+"block.minecraft.yellow_carpet": {
+"name": "黄色のカーペット",
+"reading": "きいろのかーぺっと"
+},
+"block.minecraft.yellow_concrete": {
+"name": "黄色のコンクリート",
+"reading": "きいろのこんくりーと"
+},
+"block.minecraft.yellow_concrete_powder": {
+"name": "黄色のコンクリートパウダー",
+"reading": "きいろのこんくりーとぱうだー"
+},
+"block.minecraft.yellow_concrete_slab": {
+"name": "黄色のコンクリートのハーフブロック",
+"reading": "きいろのこんくりーとのはーふぶろっく"
+},
+"block.minecraft.yellow_concrete_stairs": {
+"name": "黄色のコンクリートの階段",
+"reading": "きいろのこんくりーとのかいだん"
+},
+"block.minecraft.yellow_glazed_terracotta": {
+"name": "黄色の彩釉テラコッタ",
+"reading": "きいろのさいゆうてらこった"
+},
+"block.minecraft.yellow_poplar_leaves": {
+"name": "黄色のポプラの葉",
+"reading": "きいろのぽぷらのは"
+},
+"block.minecraft.yellow_shulker_box": {
+"name": "黄色のシュルカーボックス",
+"reading": "きいろのしゅるかーぼっくす"
+},
+"block.minecraft.yellow_stained_glass": {
+"name": "黄色の色付きガラス",
+"reading": "きいろのいろつきがらす"
+},
+"block.minecraft.yellow_stained_glass_pane": {
+"name": "黄色の色付きガラス板",
+"reading": "きいろのいろつきがらすばん"
+},
+"block.minecraft.yellow_terracotta": {
+"name": "黄色のテラコッタ",
+"reading": "きいろのてらこった"
+},
+"block.minecraft.yellow_wool": {
+"name": "黄色の羊毛",
+"reading": "きいろのようもう"
+},
+"block.minecraft.yellow_wool_slab": {
+"name": "黄色の羊毛のハーフブロック",
+"reading": "きいろのようもうのはーふぶろっく"
+},
+"block.minecraft.yellow_wool_stairs": {
+"name": "黄色の羊毛の階段",
+"reading": "きいろのようもうのかいだん"
+},
+"block.minecraft.zombie_head": {
+"name": "ゾンビの頭",
+"reading": "ぞんびのあたま"
+},
+"block.minecraft.zombie_wall_head": {
+"name": "壁に付けられたゾンビの頭",
+"reading": "かべにつけられたぞんびのあたま"
+},
+"entity.minecraft.acacia_boat": {
+"name": "アカシアのボート",
+"reading": "あかしあのぼーと"
+},
+"entity.minecraft.acacia_chest_boat": {
+"name": "チェスト付きのアカシアのボート",
+"reading": "ちぇすとつきのあかしあのぼーと"
+},
+"entity.minecraft.allay": {
+"name": "アレイ",
+"reading": "あれい"
+},
+"entity.minecraft.area_effect_cloud": {
+"name": "エリアエフェクトクラウド",
+"reading": "えりあえふぇくとくらうど"
+},
+"entity.minecraft.armadillo": {
+"name": "アルマジロ",
+"reading": "あるまじろ"
+},
+"entity.minecraft.armor_stand": {
+"name": "防具立て",
+"reading": "ぼうぐたて"
+},
+"entity.minecraft.arrow": {
+"name": "矢",
+"reading": "や"
+},
+"entity.minecraft.axolotl": {
+"name": "ウーパールーパー",
+"reading": "うーぱーるーぱー"
+},
+"entity.minecraft.bamboo_chest_raft": {
+"name": "チェスト付きの竹のイカダ",
+"reading": "ちぇすとつきのたけのいかだ"
+},
+"entity.minecraft.bamboo_raft": {
+"name": "竹のイカダ",
+"reading": "たけのいかだ"
+},
+"entity.minecraft.bat": {
+"name": "コウモリ",
+"reading": "こうもり"
+},
+"entity.minecraft.bee": {
+"name": "ミツバチ",
+"reading": "みつばち"
+},
+"entity.minecraft.birch_boat": {
+"name": "シラカバのボート",
+"reading": "しらかばのぼーと"
+},
+"entity.minecraft.birch_chest_boat": {
+"name": "チェスト付きのシラカバのボート",
+"reading": "ちぇすとつきのしらかばのぼーと"
+},
+"entity.minecraft.blaze": {
+"name": "ブレイズ",
+"reading": "ぶれいず"
+},
+"entity.minecraft.block_display": {
+"name": "ブロック表示エンティティ",
+"reading": "ぶろっくひょうじえんてぃてぃ"
+},
+"entity.minecraft.boat": {
+"name": "ボート",
+"reading": "ぼーと"
+},
+"entity.minecraft.bogged": {
+"name": "ボグド",
+"reading": "ぼぐど"
+},
+"entity.minecraft.breeze": {
+"name": "ブリーズ",
+"reading": "ぶりーず"
+},
+"entity.minecraft.breeze_wind_charge": {
+"name": "ウィンドチャージ",
+"reading": "うぃんどちゃーじ"
+},
+"entity.minecraft.camel": {
+"name": "ラクダ",
+"reading": "らくだ"
+},
+"entity.minecraft.camel_husk": {
+"name": "ラクダハスク",
+"reading": "らくだはすく"
+},
+"entity.minecraft.cat": {
+"name": "ネコ",
+"reading": "ねこ"
+},
+"entity.minecraft.cave_spider": {
+"name": "洞窟グモ",
+"reading": "どうくつぐも"
+},
+"entity.minecraft.cherry_boat": {
+"name": "サクラのボート",
+"reading": "さくらのぼーと"
+},
+"entity.minecraft.cherry_chest_boat": {
+"name": "チェスト付きのサクラのボート",
+"reading": "ちぇすとつきのさくらのぼーと"
+},
+"entity.minecraft.chest_boat": {
+"name": "チェスト付きのボート",
+"reading": "ちぇすとつきのぼーと"
+},
+"entity.minecraft.chest_minecart": {
+"name": "チェスト付きのトロッコ",
+"reading": "ちぇすとつきのとろっこ"
+},
+"entity.minecraft.chicken": {
+"name": "ニワトリ",
+"reading": "にわとり"
+},
+"entity.minecraft.cod": {
+"name": "タラ",
+"reading": "たら"
+},
+"entity.minecraft.command_block_minecart": {
+"name": "コマンドブロック付きのトロッコ",
+"reading": "こまんどぶろっくつきのとろっこ"
+},
+"entity.minecraft.copper_golem": {
+"name": "カッパーゴーレム",
+"reading": "かっぱーごーれむ"
+},
+"entity.minecraft.cow": {
+"name": "ウシ",
+"reading": "うし"
+},
+"entity.minecraft.creaking": {
+"name": "クリーキング",
+"reading": "くりーきんぐ"
+},
+"entity.minecraft.creaking_transient": {
+"name": "クリーキング",
+"reading": "くりーきんぐ"
+},
+"entity.minecraft.creeper": {
+"name": "クリーパー",
+"reading": "くりーぱー"
+},
+"entity.minecraft.cushion": {
+"name": "クッション",
+"reading": "くっしょん"
+},
+"entity.minecraft.dark_oak_boat": {
+"name": "ダークオークのボート",
+"reading": "だーくおーくのぼーと"
+},
+"entity.minecraft.dark_oak_chest_boat": {
+"name": "チェスト付きのダークオークのボート",
+"reading": "ちぇすとつきのだーくおーくのぼーと"
+},
+"entity.minecraft.dolphin": {
+"name": "イルカ",
+"reading": "いるか"
+},
+"entity.minecraft.donkey": {
+"name": "ロバ",
+"reading": "ろば"
+},
+"entity.minecraft.dragon_fireball": {
+"name": "ドラゴンの火の玉",
+"reading": "どらごんのひのたま"
+},
+"entity.minecraft.drowned": {
+"name": "ドラウンド",
+"reading": "どらうんど"
+},
+"entity.minecraft.egg": {
+"name": "投げられた卵",
+"reading": "なげられたたまご"
+},
+"entity.minecraft.elder_guardian": {
+"name": "エルダーガーディアン",
+"reading": "えるだーがーでぃあん"
+},
+"entity.minecraft.end_crystal": {
+"name": "エンドクリスタル",
+"reading": "えんどくりすたる"
+},
+"entity.minecraft.ender_dragon": {
+"name": "エンダードラゴン",
+"reading": "えんだーどらごん"
+},
+"entity.minecraft.ender_pearl": {
+"name": "投げられたエンダーパール",
+"reading": "なげられたえんだーぱーる"
+},
+"entity.minecraft.enderman": {
+"name": "エンダーマン",
+"reading": "えんだーまん"
+},
+"entity.minecraft.endermite": {
+"name": "エンダーマイト",
+"reading": "えんだーまいと"
+},
+"entity.minecraft.evoker": {
+"name": "エヴォーカー",
+"reading": "えゔぉーかー"
+},
+"entity.minecraft.evoker_fangs": {
+"name": "エヴォーカーの牙",
+"reading": "えゔぉーかーのきば"
+},
+"entity.minecraft.experience_bottle": {
+"name": "投げられたエンチャントの瓶",
+"reading": "なげられたえんちゃんとのびん"
+},
+"entity.minecraft.experience_orb": {
+"name": "経験値オーブ",
+"reading": "けいけんちおーぶ"
+},
+"entity.minecraft.eye_of_ender": {
+"name": "エンダーアイ",
+"reading": "えんだーあい"
+},
+"entity.minecraft.falling_block": {
+"name": "落下中のブロック",
+"reading": "らっかちゅうのぶろっく"
+},
+"entity.minecraft.falling_block_type": {
+"name": "落下中の%s",
+"reading": "らっかちゅうの"
+},
+"entity.minecraft.fireball": {
+"name": "火の玉",
+"reading": "ひのたま"
+},
+"entity.minecraft.firework_rocket": {
+"name": "ロケット花火",
+"reading": "ろけっとはなび"
+},
+"entity.minecraft.fishing_bobber": {
+"name": "浮き",
+"reading": "うき"
+},
+"entity.minecraft.fox": {
+"name": "キツネ",
+"reading": "きつね"
+},
+"entity.minecraft.frog": {
+"name": "カエル",
+"reading": "かえる"
+},
+"entity.minecraft.frostbite": {
+"name": "フロストバイト",
+"reading": "ふろすとばいと"
+},
+"entity.minecraft.furnace_minecart": {
+"name": "かまど付きのトロッコ",
+"reading": "かまどつきのとろっこ"
+},
+"entity.minecraft.ghast": {
+"name": "ガスト",
+"reading": "がすと"
+},
+"entity.minecraft.giant": {
+"name": "ジャイアント",
+"reading": "じゃいあんと"
+},
+"entity.minecraft.glow_item_frame": {
+"name": "輝く額縁",
+"reading": "かがやくがくぶち"
+},
+"entity.minecraft.glow_squid": {
+"name": "ヒカリイカ",
+"reading": "ひかりいか"
+},
+"entity.minecraft.goat": {
+"name": "ヤギ",
+"reading": "やぎ"
+},
+"entity.minecraft.guardian": {
+"name": "ガーディアン",
+"reading": "がーでぃあん"
+},
+"entity.minecraft.happy_ghast": {
+"name": "ハッピーガスト",
+"reading": "はっぴーがすと"
+},
+"entity.minecraft.hoglin": {
+"name": "ホグリン",
+"reading": "ほぐりん"
+},
+"entity.minecraft.hopper_minecart": {
+"name": "ホッパー付きのトロッコ",
+"reading": "ほっぱーつきのとろっこ"
+},
+"entity.minecraft.horse": {
+"name": "ウマ",
+"reading": "うま"
+},
+"entity.minecraft.husk": {
+"name": "ハスク",
+"reading": "はすく"
+},
+"entity.minecraft.ice_ball": {
+"name": "氷玉",
+"reading": "こおりだま"
+},
+"entity.minecraft.illusioner": {
+"name": "イリュージョナー",
+"reading": "いりゅーじょなー"
+},
+"entity.minecraft.interaction": {
+"name": "操作記録エンティティ",
+"reading": "そうさきろくえんてぃてぃ"
+},
+"entity.minecraft.iron_golem": {
+"name": "アイアンゴーレム",
+"reading": "あいあんごーれむ"
+},
+"entity.minecraft.item": {
+"name": "アイテム",
+"reading": "あいてむ"
+},
+"entity.minecraft.item_display": {
+"name": "アイテム表示エンティティ",
+"reading": "あいてむひょうじえんてぃてぃ"
+},
+"entity.minecraft.item_frame": {
+"name": "額縁",
+"reading": "がくぶち"
+},
+"entity.minecraft.jungle_boat": {
+"name": "ジャングルのボート",
+"reading": "じゃんぐるのぼーと"
+},
+"entity.minecraft.jungle_chest_boat": {
+"name": "チェスト付きのジャングルのボート",
+"reading": "ちぇすとつきのじゃんぐるのぼーと"
+},
+"entity.minecraft.killer_bunny": {
+"name": "殺人ウサギ",
+"reading": "さつじんうさぎ"
+},
+"entity.minecraft.leash_knot": {
+"name": "リードの結び目",
+"reading": "りーどのむすびめ"
+},
+"entity.minecraft.lightning_bolt": {
+"name": "雷",
+"reading": "かみなり"
+},
+"entity.minecraft.lingering_potion": {
+"name": "残留ポーション",
+"reading": "ざんりゅうぽーしょん"
+},
+"entity.minecraft.llama": {
+"name": "ラマ",
+"reading": "らま"
+},
+"entity.minecraft.llama_spit": {
+"name": "ラマの唾",
+"reading": "らまのつば"
+},
+"entity.minecraft.magma_cube": {
+"name": "マグマキューブ",
+"reading": "まぐまきゅーぶ"
+},
+"entity.minecraft.mangrove_boat": {
+"name": "マングローブのボート",
+"reading": "まんぐろーぶのぼーと"
+},
+"entity.minecraft.mangrove_chest_boat": {
+"name": "チェスト付きのマングローブのボート",
+"reading": "ちぇすとつきのまんぐろーぶのぼーと"
+},
+"entity.minecraft.mannequin": {
+"name": "マネキン",
+"reading": "まねきん"
+},
+"entity.minecraft.marker": {
+"name": "マーカー",
+"reading": "まーかー"
+},
+"entity.minecraft.minecart": {
+"name": "トロッコ",
+"reading": "とろっこ"
+},
+"entity.minecraft.mooshroom": {
+"name": "ムーシュルーム",
+"reading": "むーしゅるーむ"
+},
+"entity.minecraft.mule": {
+"name": "ラバ",
+"reading": "らば"
+},
+"entity.minecraft.nautilus": {
+"name": "オウムガイ",
+"reading": "おうむがい"
+},
+"entity.minecraft.oak_boat": {
+"name": "オークのボート",
+"reading": "おーくのぼーと"
+},
+"entity.minecraft.oak_chest_boat": {
+"name": "チェスト付きのオークのボート",
+"reading": "ちぇすとつきのおーくのぼーと"
+},
+"entity.minecraft.ocelot": {
+"name": "ヤマネコ",
+"reading": "やまねこ"
+},
+"entity.minecraft.ominous_item_spawner": {
+"name": "不吉なアイテムスポナー",
+"reading": "ふきつなあいてむすぽなー"
+},
+"entity.minecraft.painting": {
+"name": "絵画",
+"reading": "かいが"
+},
+"entity.minecraft.pale_oak_boat": {
+"name": "ペールオークのボート",
+"reading": "ぺーるおーくのぼーと"
+},
+"entity.minecraft.pale_oak_chest_boat": {
+"name": "チェスト付きのペールオークのボート",
+"reading": "ちぇすとつきのぺーるおーくのぼーと"
+},
+"entity.minecraft.panda": {
+"name": "パンダ",
+"reading": "ぱんだ"
+},
+"entity.minecraft.parched": {
+"name": "パーチド",
+"reading": "ぱーちど"
+},
+"entity.minecraft.parrot": {
+"name": "オウム",
+"reading": "おうむ"
+},
+"entity.minecraft.phantom": {
+"name": "ファントム",
+"reading": "ふぁんとむ"
+},
+"entity.minecraft.pig": {
+"name": "ブタ",
+"reading": "ぶた"
+},
+"entity.minecraft.piglin": {
+"name": "ピグリン",
+"reading": "ぴぐりん"
+},
+"entity.minecraft.piglin_brute": {
+"name": "ピグリンブルート",
+"reading": "ぴぐりんぶるーと"
+},
+"entity.minecraft.pillager": {
+"name": "ピリジャー",
+"reading": "ぴりじゃー"
+},
+"entity.minecraft.player": {
+"name": "プレイヤー",
+"reading": "ぷれいやー"
+},
+"entity.minecraft.polar_bear": {
+"name": "シロクマ",
+"reading": "しろくま"
+},
+"entity.minecraft.poplar_boat": {
+"name": "ポプラのボート",
+"reading": "ぽぷらのぼーと"
+},
+"entity.minecraft.poplar_chest_boat": {
+"name": "チェスト付きのポプラのボート",
+"reading": "ちぇすとつきのぽぷらのぼーと"
+},
+"entity.minecraft.potion": {
+"name": "ポーション",
+"reading": "ぽーしょん"
+},
+"entity.minecraft.pufferfish": {
+"name": "フグ",
+"reading": "ふぐ"
+},
+"entity.minecraft.rabbit": {
+"name": "ウサギ",
+"reading": "うさぎ"
+},
+"entity.minecraft.ravager": {
+"name": "ラヴェジャー",
+"reading": "らゔぇじゃー"
+},
+"entity.minecraft.salmon": {
+"name": "サケ",
+"reading": "さけ"
+},
+"entity.minecraft.sheep": {
+"name": "ヒツジ",
+"reading": "ひつじ"
+},
+"entity.minecraft.shulker": {
+"name": "シュルカー",
+"reading": "しゅるかー"
+},
+"entity.minecraft.shulker_bullet": {
+"name": "シュルカーの弾",
+"reading": "しゅるかーのたま"
+},
+"entity.minecraft.silverfish": {
+"name": "シルバーフィッシュ",
+"reading": "しるばーふぃっしゅ"
+},
+"entity.minecraft.skeleton": {
+"name": "スケルトン",
+"reading": "すけるとん"
+},
+"entity.minecraft.skeleton_horse": {
+"name": "スケルトンホース",
+"reading": "すけるとんほーす"
+},
+"entity.minecraft.slime": {
+"name": "スライム",
+"reading": "すらいむ"
+},
+"entity.minecraft.small_fireball": {
+"name": "小さな火の玉",
+"reading": "ちいさなひのたま"
+},
+"entity.minecraft.sniffer": {
+"name": "スニッファー",
+"reading": "すにっふぁー"
+},
+"entity.minecraft.snow_golem": {
+"name": "スノウゴーレム",
+"reading": "すのうごーれむ"
+},
+"entity.minecraft.snowball": {
+"name": "雪玉",
+"reading": "ゆきだま"
+},
+"entity.minecraft.spawner_minecart": {
+"name": "モンスタースポナー付きのトロッコ",
+"reading": "もんすたーすぽなーつきのとろっこ"
+},
+"entity.minecraft.spectral_arrow": {
+"name": "光の矢",
+"reading": "ひかりのや"
+},
+"entity.minecraft.spider": {
+"name": "クモ",
+"reading": "くも"
+},
+"entity.minecraft.splash_potion": {
+"name": "スプラッシュポーション",
+"reading": "すぷらっしゅぽーしょん"
+},
+"entity.minecraft.spruce_boat": {
+"name": "トウヒのボート",
+"reading": "とうひのぼーと"
+},
+"entity.minecraft.spruce_chest_boat": {
+"name": "チェスト付きのトウヒのボート",
+"reading": "ちぇすとつきのとうひのぼーと"
+},
+"entity.minecraft.squid": {
+"name": "イカ",
+"reading": "いか"
+},
+"entity.minecraft.stray": {
+"name": "ストレイ",
+"reading": "すとれい"
+},
+"entity.minecraft.strider": {
+"name": "ストライダー",
+"reading": "すとらいだー"
+},
+"entity.minecraft.sulfur_cube": {
+"name": "サルファーキューブ",
+"reading": "さるふぁーきゅーぶ"
+},
+"entity.minecraft.tadpole": {
+"name": "オタマジャクシ",
+"reading": "おたまじゃくし"
+},
+"entity.minecraft.text_display": {
+"name": "テキスト表示エンティティ",
+"reading": "てきすとひょうじえんてぃてぃ"
+},
+"entity.minecraft.tnt": {
+"name": "着火されたTNT",
+"reading": "ちゃっかされたてぃーえぬてぃー"
+},
+"entity.minecraft.tnt_minecart": {
+"name": "TNT付きのトロッコ",
+"reading": "てぃーえぬてぃーつきのとろっこ"
+},
+"entity.minecraft.trader_llama": {
+"name": "商人のラマ",
+"reading": "しょうにんのらま"
+},
+"entity.minecraft.trident": {
+"name": "トライデント",
+"reading": "とらいでんと"
+},
+"entity.minecraft.tropical_fish": {
+"name": "熱帯魚",
+"reading": "ねったいぎょ"
+},
+"entity.minecraft.turtle": {
+"name": "カメ",
+"reading": "かめ"
+},
+"entity.minecraft.vex": {
+"name": "ヴェックス",
+"reading": "ゔぇっくす"
+},
+"entity.minecraft.villager": {
+"name": "村人",
+"reading": "むらびと"
+},
+"entity.minecraft.vindicator": {
+"name": "ヴィンディケーター",
+"reading": "ゔぃんでぃけーたー"
+},
+"entity.minecraft.wandering_trader": {
+"name": "行商人",
+"reading": "ぎょうしょうにん"
+},
+"entity.minecraft.warden": {
+"name": "ウォーデン",
+"reading": "うぉーでん"
+},
+"entity.minecraft.wind_charge": {
+"name": "ウィンドチャージ",
+"reading": "うぃんどちゃーじ"
+},
+"entity.minecraft.witch": {
+"name": "ウィッチ",
+"reading": "うぃっち"
+},
+"entity.minecraft.wither": {
+"name": "ウィザー",
+"reading": "うぃざー"
+},
+"entity.minecraft.wither_skeleton": {
+"name": "ウィザースケルトン",
+"reading": "うぃざーすけるとん"
+},
+"entity.minecraft.wither_skull": {
+"name": "ウィザーの頭蓋骨",
+"reading": "うぃざーのずがいこつ"
+},
+"entity.minecraft.wolf": {
+"name": "オオカミ",
+"reading": "おおかみ"
+},
+"entity.minecraft.zoglin": {
+"name": "ゾグリン",
+"reading": "ぞぐりん"
+},
+"entity.minecraft.zombie": {
+"name": "ゾンビ",
+"reading": "ぞんび"
+},
+"entity.minecraft.zombie_horse": {
+"name": "ゾンビホース",
+"reading": "ぞんびほーす"
+},
+"entity.minecraft.zombie_nautilus": {
+"name": "ゾンビオウムガイ",
+"reading": "ぞんびおうむがい"
+},
+"entity.minecraft.zombie_villager": {
+"name": "村人ゾンビ",
+"reading": "むらびとぞんび"
+},
+"entity.minecraft.zombified_piglin": {
+"name": "ゾンビピグリン",
+"reading": "ぞんびぴぐりん"
+},
+"item.minecraft.abandoned_camp_map": {
+"name": "放棄されたキャンプの地図",
+"reading": "ほうきされたきゃんぷのちず"
+},
+"item.minecraft.abandoned_campsite_map": {
+"name": "放棄されたキャンプの地図",
+"reading": "ほうきされたきゃんぷのちず"
+},
+"item.minecraft.acacia_boat": {
+"name": "アカシアのボート",
+"reading": "あかしあのぼーと"
+},
+"item.minecraft.acacia_chest_boat": {
+"name": "チェスト付きのアカシアのボート",
+"reading": "ちぇすとつきのあかしあのぼーと"
+},
+"item.minecraft.allay_spawn_egg": {
+"name": "アレイのスポーンエッグ",
+"reading": "あれいのすぽーんえっぐ"
+},
+"item.minecraft.amethyst_shard": {
+"name": "アメジストの欠片",
+"reading": "あめじすとのかけら"
+},
+"item.minecraft.ancient_city_map": {
+"name": "古代都市の地図",
+"reading": "こだいとしのちず"
+},
+"item.minecraft.angler_pottery_shard": {
+"name": "釣り人の壺の欠片",
+"reading": "つりびとのつぼのかけら"
+},
+"item.minecraft.angler_pottery_sherd": {
+"name": "釣り人の壺の欠片",
+"reading": "つりびとのつぼのかけら"
+},
+"item.minecraft.apple": {
+"name": "リンゴ",
+"reading": "りんご"
+},
+"item.minecraft.archer_pottery_shard": {
+"name": "射手の壺の欠片",
+"reading": "いてのつぼのかけら"
+},
+"item.minecraft.archer_pottery_sherd": {
+"name": "射手の壺の欠片",
+"reading": "いてのつぼのかけら"
+},
+"item.minecraft.armadillo_scute": {
+"name": "アルマジロのウロコ",
+"reading": "あるまじろのうろこ"
+},
+"item.minecraft.armadillo_spawn_egg": {
+"name": "アルマジロのスポーンエッグ",
+"reading": "あるまじろのすぽーんえっぐ"
+},
+"item.minecraft.armor_stand": {
+"name": "防具立て",
+"reading": "ぼうぐたて"
+},
+"item.minecraft.arms_up_pottery_shard": {
+"name": "両腕を上げた人の壺の欠片",
+"reading": "りょううでをあげたひとのつぼのかけら"
+},
+"item.minecraft.arms_up_pottery_sherd": {
+"name": "両腕を上げた人の壺の欠片",
+"reading": "りょううでをあげたひとのつぼのかけら"
+},
+"item.minecraft.arrow": {
+"name": "矢",
+"reading": "や"
+},
+"item.minecraft.axolotl_bucket": {
+"name": "ウーパールーパー入りバケツ",
+"reading": "うーぱーるーぱーいりばけつ"
+},
+"item.minecraft.axolotl_spawn_egg": {
+"name": "ウーパールーパーのスポーンエッグ",
+"reading": "うーぱーるーぱーのすぽーんえっぐ"
+},
+"item.minecraft.baked_potato": {
+"name": "ベイクドポテト",
+"reading": "べいくどぽてと"
+},
+"item.minecraft.bamboo_chest_raft": {
+"name": "チェスト付きの竹のイカダ",
+"reading": "ちぇすとつきのたけのいかだ"
+},
+"item.minecraft.bamboo_raft": {
+"name": "竹のイカダ",
+"reading": "たけのいかだ"
+},
+"item.minecraft.bat_spawn_egg": {
+"name": "コウモリのスポーンエッグ",
+"reading": "こうもりのすぽーんえっぐ"
+},
+"item.minecraft.bee_spawn_egg": {
+"name": "ミツバチのスポーンエッグ",
+"reading": "みつばちのすぽーんえっぐ"
+},
+"item.minecraft.beef": {
+"name": "生の牛肉",
+"reading": "なまのぎゅうにく"
+},
+"item.minecraft.beetroot": {
+"name": "ビートルート",
+"reading": "びーとるーと"
+},
+"item.minecraft.beetroot_seeds": {
+"name": "ビートルートの種",
+"reading": "びーとるーとのたね"
+},
+"item.minecraft.beetroot_soup": {
+"name": "ビートルートスープ",
+"reading": "びーとるーとすーぷ"
+},
+"item.minecraft.birch_boat": {
+"name": "シラカバのボート",
+"reading": "しらかばのぼーと"
+},
+"item.minecraft.birch_chest_boat": {
+"name": "チェスト付きのシラカバのボート",
+"reading": "ちぇすとつきのしらかばのぼーと"
+},
+"item.minecraft.black_bundle": {
+"name": "黒色のバンドル",
+"reading": "くろいろのばんどる"
+},
+"item.minecraft.black_cushion": {
+"name": "黒色のクッション",
+"reading": "くろいろのくっしょん"
+},
+"item.minecraft.black_dye": {
+"name": "黒色の染料",
+"reading": "くろいろのせんりょう"
+},
+"item.minecraft.black_harness": {
+"name": "黒色のハーネス",
+"reading": "くろいろのはーねす"
+},
+"item.minecraft.blade_pottery_shard": {
+"name": "剣の壺の欠片",
+"reading": "けんのつぼのかけら"
+},
+"item.minecraft.blade_pottery_sherd": {
+"name": "剣の壺の欠片",
+"reading": "けんのつぼのかけら"
+},
+"item.minecraft.blaze_powder": {
+"name": "ブレイズパウダー",
+"reading": "ぶれいずぱうだー"
+},
+"item.minecraft.blaze_rod": {
+"name": "ブレイズロッド",
+"reading": "ぶれいずろっど"
+},
+"item.minecraft.blaze_spawn_egg": {
+"name": "ブレイズのスポーンエッグ",
+"reading": "ぶれいずのすぽーんえっぐ"
+},
+"item.minecraft.blue_bundle": {
+"name": "青色のバンドル",
+"reading": "あおいろのばんどる"
+},
+"item.minecraft.blue_cushion": {
+"name": "青色のクッション",
+"reading": "あおいろのくっしょん"
+},
+"item.minecraft.blue_dye": {
+"name": "青色の染料",
+"reading": "あおいろのせんりょう"
+},
+"item.minecraft.blue_egg": {
+"name": "青色の卵",
+"reading": "あおいろのたまご"
+},
+"item.minecraft.blue_harness": {
+"name": "青色のハーネス",
+"reading": "あおいろのはーねす"
+},
+"item.minecraft.bogged_spawn_egg": {
+"name": "ボグドのスポーンエッグ",
+"reading": "ぼぐどのすぽーんえっぐ"
+},
+"item.minecraft.bolt_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.bone": {
+"name": "骨",
+"reading": "ほね"
+},
+"item.minecraft.bone_meal": {
+"name": "骨粉",
+"reading": "こっぷん"
+},
+"item.minecraft.book": {
+"name": "本",
+"reading": "ほん"
+},
+"item.minecraft.bordure_indented_banner_pattern": {
+"name": "山形波の縁取りの旗の模様",
+"reading": "やまがたなみのふちどりのはたのもよう"
+},
+"item.minecraft.bow": {
+"name": "弓",
+"reading": "ゆみ"
+},
+"item.minecraft.bowl": {
+"name": "ボウル",
+"reading": "ぼうる"
+},
+"item.minecraft.bread": {
+"name": "パン",
+"reading": "ぱん"
+},
+"item.minecraft.breeze_rod": {
+"name": "ブリーズロッド",
+"reading": "ぶりーずろっど"
+},
+"item.minecraft.breeze_spawn_egg": {
+"name": "ブリーズのスポーンエッグ",
+"reading": "ぶりーずのすぽーんえっぐ"
+},
+"item.minecraft.brewer_pottery_shard": {
+"name": "醸造家の壺の欠片",
+"reading": "じょうぞうかのつぼのかけら"
+},
+"item.minecraft.brewer_pottery_sherd": {
+"name": "醸造家の壺の欠片",
+"reading": "じょうぞうかのつぼのかけら"
+},
+"item.minecraft.brewing_stand": {
+"name": "醸造台",
+"reading": "じょうぞうだい"
+},
+"item.minecraft.brick": {
+"name": "レンガ",
+"reading": "れんが"
+},
+"item.minecraft.brown_bundle": {
+"name": "茶色のバンドル",
+"reading": "ちゃいろのばんどる"
+},
+"item.minecraft.brown_cushion": {
+"name": "茶色のクッション",
+"reading": "ちゃいろのくっしょん"
+},
+"item.minecraft.brown_dye": {
+"name": "茶色の染料",
+"reading": "ちゃいろのせんりょう"
+},
+"item.minecraft.brown_egg": {
+"name": "茶色の卵",
+"reading": "ちゃいろのたまご"
+},
+"item.minecraft.brown_harness": {
+"name": "茶色のハーネス",
+"reading": "ちゃいろのはーねす"
+},
+"item.minecraft.brush": {
+"name": "ブラシ",
+"reading": "ぶらし"
+},
+"item.minecraft.bucket": {
+"name": "バケツ",
+"reading": "ばけつ"
+},
+"item.minecraft.bundle": {
+"name": "バンドル",
+"reading": "ばんどる"
+},
+"item.minecraft.buried_ancient_city_map": {
+"name": "埋もれた古代都市の地図",
+"reading": "うもれたこだいとしのちず"
+},
+"item.minecraft.buried_mineshaft_map": {
+"name": "埋もれた廃坑の地図",
+"reading": "うもれたはいこうのちず"
+},
+"item.minecraft.buried_treasure_map": {
+"name": "埋もれた宝の地図",
+"reading": "うもれたたからのちず"
+},
+"item.minecraft.buried_trial_chambers_map": {
+"name": "埋もれた試練の間の地図",
+"reading": "うもれたしれんのまのちず"
+},
+"item.minecraft.burn_pottery_shard": {
+"name": "炎の壺の欠片",
+"reading": "ほのおのつぼのかけら"
+},
+"item.minecraft.burn_pottery_sherd": {
+"name": "炎の壺の欠片",
+"reading": "ほのおのつぼのかけら"
+},
+"item.minecraft.camel_husk_spawn_egg": {
+"name": "ラクダハスクのスポーンエッグ",
+"reading": "らくだはすくのすぽーんえっぐ"
+},
+"item.minecraft.camel_spawn_egg": {
+"name": "ラクダのスポーンエッグ",
+"reading": "らくだのすぽーんえっぐ"
+},
+"item.minecraft.carrot": {
+"name": "ニンジン",
+"reading": "にんじん"
+},
+"item.minecraft.carrot_on_a_stick": {
+"name": "ニンジン付きの棒",
+"reading": "にんじんつきのぼう"
+},
+"item.minecraft.cat_spawn_egg": {
+"name": "ネコのスポーンエッグ",
+"reading": "ねこのすぽーんえっぐ"
+},
+"item.minecraft.cauldron": {
+"name": "大釜",
+"reading": "おおがま"
+},
+"item.minecraft.cave_spider_spawn_egg": {
+"name": "洞窟グモのスポーンエッグ",
+"reading": "どうくつぐものすぽーんえっぐ"
+},
+"item.minecraft.chainmail_boots": {
+"name": "チェーンのブーツ",
+"reading": "ちぇーんのぶーつ"
+},
+"item.minecraft.chainmail_chestplate": {
+"name": "チェーンのチェストプレート",
+"reading": "ちぇーんのちぇすとぷれーと"
+},
+"item.minecraft.chainmail_helmet": {
+"name": "チェーンのヘルメット",
+"reading": "ちぇーんのへるめっと"
+},
+"item.minecraft.chainmail_leggings": {
+"name": "チェーンのレギンス",
+"reading": "ちぇーんのれぎんす"
+},
+"item.minecraft.charcoal": {
+"name": "木炭",
+"reading": "もくたん"
+},
+"item.minecraft.cherry_boat": {
+"name": "サクラのボート",
+"reading": "さくらのぼーと"
+},
+"item.minecraft.cherry_chest_boat": {
+"name": "チェスト付きのサクラのボート",
+"reading": "ちぇすとつきのさくらのぼーと"
+},
+"item.minecraft.chest_minecart": {
+"name": "チェスト付きのトロッコ",
+"reading": "ちぇすとつきのとろっこ"
+},
+"item.minecraft.chicken": {
+"name": "生の鶏肉",
+"reading": "なまのとりにく"
+},
+"item.minecraft.chicken_spawn_egg": {
+"name": "ニワトリのスポーンエッグ",
+"reading": "にわとりのすぽーんえっぐ"
+},
+"item.minecraft.chorus_fruit": {
+"name": "コーラスフルーツ",
+"reading": "こーらすふるーつ"
+},
+"item.minecraft.clay_ball": {
+"name": "粘土玉",
+"reading": "ねんどだま"
+},
+"item.minecraft.clock": {
+"name": "時計",
+"reading": "とけい"
+},
+"item.minecraft.coal": {
+"name": "石炭",
+"reading": "せきたん"
+},
+"item.minecraft.coast_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.cocoa_beans": {
+"name": "カカオ豆",
+"reading": "かかおまめ"
+},
+"item.minecraft.cod": {
+"name": "生鱈",
+"reading": "なまだら"
+},
+"item.minecraft.cod_bucket": {
+"name": "タラ入りバケツ",
+"reading": "たらいりばけつ"
+},
+"item.minecraft.cod_spawn_egg": {
+"name": "タラのスポーンエッグ",
+"reading": "たらのすぽーんえっぐ"
+},
+"item.minecraft.command_block_minecart": {
+"name": "コマンドブロック付きのトロッコ",
+"reading": "こまんどぶろっくつきのとろっこ"
+},
+"item.minecraft.compass": {
+"name": "コンパス",
+"reading": "こんぱす"
+},
+"item.minecraft.cooked_beef": {
+"name": "ステーキ",
+"reading": "すてーき"
+},
+"item.minecraft.cooked_chicken": {
+"name": "焼き鳥",
+"reading": "やきとり"
+},
+"item.minecraft.cooked_cod": {
+"name": "焼き鱈",
+"reading": "やきたら"
+},
+"item.minecraft.cooked_mutton": {
+"name": "焼き羊肉",
+"reading": "やきようにく"
+},
+"item.minecraft.cooked_porkchop": {
+"name": "焼き豚",
+"reading": "やきぶた"
+},
+"item.minecraft.cooked_rabbit": {
+"name": "焼き兎肉",
+"reading": "やきうさぎにく"
+},
+"item.minecraft.cooked_salmon": {
+"name": "焼き鮭",
+"reading": "やきさけ"
+},
+"item.minecraft.cookie": {
+"name": "クッキー",
+"reading": "くっきー"
+},
+"item.minecraft.copper_axe": {
+"name": "銅の斧",
+"reading": "どうのおの"
+},
+"item.minecraft.copper_boots": {
+"name": "銅のブーツ",
+"reading": "どうのぶーつ"
+},
+"item.minecraft.copper_chestplate": {
+"name": "銅のチェストプレート",
+"reading": "どうのちぇすとぷれーと"
+},
+"item.minecraft.copper_golem_spawn_egg": {
+"name": "カッパーゴーレムのスポーンエッグ",
+"reading": "かっぱーごーれむのすぽーんえっぐ"
+},
+"item.minecraft.copper_helmet": {
+"name": "銅のヘルメット",
+"reading": "どうのへるめっと"
+},
+"item.minecraft.copper_hoe": {
+"name": "銅のクワ",
+"reading": "どうのくわ"
+},
+"item.minecraft.copper_horse_armor": {
+"name": "銅の馬鎧",
+"reading": "どうのうまよろい"
+},
+"item.minecraft.copper_ingot": {
+"name": "銅インゴット",
+"reading": "どういんごっと"
+},
+"item.minecraft.copper_leggings": {
+"name": "銅のレギンス",
+"reading": "どうのれぎんす"
+},
+"item.minecraft.copper_nautilus_armor": {
+"name": "銅のオウムガイの鎧",
+"reading": "どうのおうむがいのよろい"
+},
+"item.minecraft.copper_nugget": {
+"name": "銅塊",
+"reading": "どうかい"
+},
+"item.minecraft.copper_pickaxe": {
+"name": "銅のツルハシ",
+"reading": "どうのつるはし"
+},
+"item.minecraft.copper_shovel": {
+"name": "銅のシャベル",
+"reading": "どうのしゃべる"
+},
+"item.minecraft.copper_spear": {
+"name": "銅の槍",
+"reading": "どうのやり"
+},
+"item.minecraft.copper_sword": {
+"name": "銅の剣",
+"reading": "どうのけん"
+},
+"item.minecraft.cow_spawn_egg": {
+"name": "ウシのスポーンエッグ",
+"reading": "うしのすぽーんえっぐ"
+},
+"item.minecraft.creaking_spawn_egg": {
+"name": "クリーキングのスポーンエッグ",
+"reading": "くりーきんぐのすぽーんえっぐ"
+},
+"item.minecraft.creeper_banner_pattern": {
+"name": "旗の模様",
+"reading": "はたのもよう"
+},
+"item.minecraft.creeper_spawn_egg": {
+"name": "クリーパーのスポーンエッグ",
+"reading": "くりーぱーのすぽーんえっぐ"
+},
+"item.minecraft.crossbow": {
+"name": "クロスボウ",
+"reading": "くろすぼう"
+},
+"item.minecraft.cyan_bundle": {
+"name": "青緑色のバンドル",
+"reading": "あおみどりいろのばんどる"
+},
+"item.minecraft.cyan_cushion": {
+"name": "青緑色のクッション",
+"reading": "あおみどりいろのくっしょん"
+},
+"item.minecraft.cyan_dye": {
+"name": "青緑色の染料",
+"reading": "あおみどりいろのせんりょう"
+},
+"item.minecraft.cyan_harness": {
+"name": "青緑色のハーネス",
+"reading": "あおみどりいろのはーねす"
+},
+"item.minecraft.danger_pottery_shard": {
+"name": "脅威の壺の欠片",
+"reading": "きょういのつぼのかけら"
+},
+"item.minecraft.danger_pottery_sherd": {
+"name": "脅威の壺の欠片",
+"reading": "きょういのつぼのかけら"
+},
+"item.minecraft.dark_oak_boat": {
+"name": "ダークオークのボート",
+"reading": "だーくおーくのぼーと"
+},
+"item.minecraft.dark_oak_chest_boat": {
+"name": "チェスト付きのダークオークのボート",
+"reading": "ちぇすとつきのだーくおーくのぼーと"
+},
+"item.minecraft.debug_stick": {
+"name": "デバッグ棒",
+"reading": "でばっぐぼう"
+},
+"item.minecraft.desert_pyramid_map": {
+"name": "砂漠の寺院の地図",
+"reading": "さばくのじいんのちず"
+},
+"item.minecraft.desert_village_map": {
+"name": "砂漠の村の地図",
+"reading": "さばくのむらのちず"
+},
+"item.minecraft.diamond": {
+"name": "ダイヤモンド",
+"reading": "だいやもんど"
+},
+"item.minecraft.diamond_axe": {
+"name": "ダイヤモンドの斧",
+"reading": "だいやもんどのおの"
+},
+"item.minecraft.diamond_boots": {
+"name": "ダイヤモンドのブーツ",
+"reading": "だいやもんどのぶーつ"
+},
+"item.minecraft.diamond_chestplate": {
+"name": "ダイヤモンドのチェストプレート",
+"reading": "だいやもんどのちぇすとぷれーと"
+},
+"item.minecraft.diamond_helmet": {
+"name": "ダイヤモンドのヘルメット",
+"reading": "だいやもんどのへるめっと"
+},
+"item.minecraft.diamond_hoe": {
+"name": "ダイヤモンドのクワ",
+"reading": "だいやもんどのくわ"
+},
+"item.minecraft.diamond_horse_armor": {
+"name": "ダイヤモンドの馬鎧",
+"reading": "だいやもんどのうまよろい"
+},
+"item.minecraft.diamond_leggings": {
+"name": "ダイヤモンドのレギンス",
+"reading": "だいやもんどのれぎんす"
+},
+"item.minecraft.diamond_nautilus_armor": {
+"name": "ダイヤモンドのオウムガイの鎧",
+"reading": "だいやもんどのおうむがいのよろい"
+},
+"item.minecraft.diamond_pickaxe": {
+"name": "ダイヤモンドのツルハシ",
+"reading": "だいやもんどのつるはし"
+},
+"item.minecraft.diamond_shovel": {
+"name": "ダイヤモンドのシャベル",
+"reading": "だいやもんどのしゃべる"
+},
+"item.minecraft.diamond_spear": {
+"name": "ダイヤモンドの槍",
+"reading": "だいやもんどのやり"
+},
+"item.minecraft.diamond_sword": {
+"name": "ダイヤモンドの剣",
+"reading": "だいやもんどのけん"
+},
+"item.minecraft.disc_fragment_5": {
+"name": "レコードの破片",
+"reading": "れこーどのはへん"
+},
+"item.minecraft.dolphin_spawn_egg": {
+"name": "イルカのスポーンエッグ",
+"reading": "いるかのすぽーんえっぐ"
+},
+"item.minecraft.donkey_spawn_egg": {
+"name": "ロバのスポーンエッグ",
+"reading": "ろばのすぽーんえっぐ"
+},
+"item.minecraft.dragon_breath": {
+"name": "ドラゴンブレス",
+"reading": "どらごんぶれす"
+},
+"item.minecraft.dried_kelp": {
+"name": "乾燥した昆布",
+"reading": "かんそうしたこんぶ"
+},
+"item.minecraft.drowned_spawn_egg": {
+"name": "ドラウンドのスポーンエッグ",
+"reading": "どらうんどのすぽーんえっぐ"
+},
+"item.minecraft.dune_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.echo_shard": {
+"name": "残響の欠片",
+"reading": "ざんきょうのかけら"
+},
+"item.minecraft.egg": {
+"name": "卵",
+"reading": "たまご"
+},
+"item.minecraft.elder_guardian_spawn_egg": {
+"name": "エルダーガーディアンのスポーンエッグ",
+"reading": "えるだーがーでぃあんのすぽーんえっぐ"
+},
+"item.minecraft.elytra": {
+"name": "エリトラ",
+"reading": "えりとら"
+},
+"item.minecraft.emerald": {
+"name": "エメラルド",
+"reading": "えめらるど"
+},
+"item.minecraft.enchanted_book": {
+"name": "エンチャントの本",
+"reading": "えんちゃんとのほん"
+},
+"item.minecraft.enchanted_golden_apple": {
+"name": "エンチャントされた金のリンゴ",
+"reading": "えんちゃんとされたきんのりんご"
+},
+"item.minecraft.end_crystal": {
+"name": "エンドクリスタル",
+"reading": "えんどくりすたる"
+},
+"item.minecraft.ender_dragon_spawn_egg": {
+"name": "エンダードラゴンのスポーンエッグ",
+"reading": "えんだーどらごんのすぽーんえっぐ"
+},
+"item.minecraft.ender_eye": {
+"name": "エンダーアイ",
+"reading": "えんだーあい"
+},
+"item.minecraft.ender_pearl": {
+"name": "エンダーパール",
+"reading": "えんだーぱーる"
+},
+"item.minecraft.enderman_spawn_egg": {
+"name": "エンダーマンのスポーンエッグ",
+"reading": "えんだーまんのすぽーんえっぐ"
+},
+"item.minecraft.endermite_spawn_egg": {
+"name": "エンダーマイトのスポーンエッグ",
+"reading": "えんだーまいとのすぽーんえっぐ"
+},
+"item.minecraft.evoker_spawn_egg": {
+"name": "エヴォーカーのスポーンエッグ",
+"reading": "えゔぉーかーのすぽーんえっぐ"
+},
+"item.minecraft.experience_bottle": {
+"name": "エンチャントの瓶",
+"reading": "えんちゃんとのびん"
+},
+"item.minecraft.explorer_pottery_shard": {
+"name": "探検家の壺の欠片",
+"reading": "たんけんかのつぼのかけら"
+},
+"item.minecraft.explorer_pottery_sherd": {
+"name": "探検家の壺の欠片",
+"reading": "たんけんかのつぼのかけら"
+},
+"item.minecraft.eye_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.feather": {
+"name": "羽根",
+"reading": "はね"
+},
+"item.minecraft.fermented_spider_eye": {
+"name": "発酵したクモの目",
+"reading": "はっこうしたくものめ"
+},
+"item.minecraft.field_masoned_banner_pattern": {
+"name": "レンガの旗の模様",
+"reading": "れんがのはたのもよう"
+},
+"item.minecraft.filled_map": {
+"name": "地図",
+"reading": "ちず"
+},
+"item.minecraft.fire_charge": {
+"name": "ファイヤーチャージ",
+"reading": "ふぁいやーちゃーじ"
+},
+"item.minecraft.firework_rocket": {
+"name": "ロケット花火",
+"reading": "ろけっとはなび"
+},
+"item.minecraft.firework_star": {
+"name": "花火の星",
+"reading": "はなびのほし"
+},
+"item.minecraft.fishing_rod": {
+"name": "釣竿",
+"reading": "つりざお"
+},
+"item.minecraft.flint": {
+"name": "火打石",
+"reading": "ひうちいし"
+},
+"item.minecraft.flint_and_steel": {
+"name": "火打石と打ち金",
+"reading": "ひうちいしとうちがね"
+},
+"item.minecraft.flow_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.flow_banner_pattern": {
+"name": "旗の模様",
+"reading": "はたのもよう"
+},
+"item.minecraft.flow_pottery_sherd": {
+"name": "渦巻きの壺の欠片",
+"reading": "うずまきのつぼのかけら"
+},
+"item.minecraft.flower_banner_pattern": {
+"name": "旗の模様",
+"reading": "はたのもよう"
+},
+"item.minecraft.flower_pot": {
+"name": "植木鉢",
+"reading": "うえきばち"
+},
+"item.minecraft.fox_spawn_egg": {
+"name": "キツネのスポーンエッグ",
+"reading": "きつねのすぽーんえっぐ"
+},
+"item.minecraft.friend_pottery_shard": {
+"name": "友の壺の欠片",
+"reading": "とものつぼのかけら"
+},
+"item.minecraft.friend_pottery_sherd": {
+"name": "友の壺の欠片",
+"reading": "とものつぼのかけら"
+},
+"item.minecraft.frog_spawn_egg": {
+"name": "カエルのスポーンエッグ",
+"reading": "かえるのすぽーんえっぐ"
+},
+"item.minecraft.frostbite_spawn_egg": {
+"name": "フロストバイトのスポーンエッグ",
+"reading": "ふろすとばいとのすぽーんえっぐ"
+},
+"item.minecraft.furnace_minecart": {
+"name": "かまど付きのトロッコ",
+"reading": "かまどつきのとろっこ"
+},
+"item.minecraft.ghast_spawn_egg": {
+"name": "ガストのスポーンエッグ",
+"reading": "がすとのすぽーんえっぐ"
+},
+"item.minecraft.ghast_tear": {
+"name": "ガストの涙",
+"reading": "がすとのなみだ"
+},
+"item.minecraft.glass_bottle": {
+"name": "ガラス瓶",
+"reading": "がらすびん"
+},
+"item.minecraft.glistering_melon_slice": {
+"name": "きらめくスイカの薄切り",
+"reading": "きらめくすいかのうすぎり"
+},
+"item.minecraft.globe_banner_pattern": {
+"name": "旗の模様",
+"reading": "はたのもよう"
+},
+"item.minecraft.glow_berries": {
+"name": "グロウベリー",
+"reading": "ぐろうべりー"
+},
+"item.minecraft.glow_ink_sac": {
+"name": "輝くイカスミ",
+"reading": "かがやくいかすみ"
+},
+"item.minecraft.glow_item_frame": {
+"name": "輝く額縁",
+"reading": "かがやくがくぶち"
+},
+"item.minecraft.glow_squid_spawn_egg": {
+"name": "ヒカリイカのスポーンエッグ",
+"reading": "ひかりいかのすぽーんえっぐ"
+},
+"item.minecraft.glowstone_dust": {
+"name": "グロウストーンダスト",
+"reading": "ぐろうすとーんだすと"
+},
+"item.minecraft.goat_horn": {
+"name": "ヤギの角笛",
+"reading": "やぎのつのぶえ"
+},
+"item.minecraft.goat_spawn_egg": {
+"name": "ヤギのスポーンエッグ",
+"reading": "やぎのすぽーんえっぐ"
+},
+"item.minecraft.gold_ingot": {
+"name": "金インゴット",
+"reading": "きんいんごっと"
+},
+"item.minecraft.gold_nugget": {
+"name": "金塊",
+"reading": "きんかい"
+},
+"item.minecraft.golden_apple": {
+"name": "金のリンゴ",
+"reading": "きんのりんご"
+},
+"item.minecraft.golden_axe": {
+"name": "金の斧",
+"reading": "きんのおの"
+},
+"item.minecraft.golden_boots": {
+"name": "金のブーツ",
+"reading": "きんのぶーつ"
+},
+"item.minecraft.golden_carrot": {
+"name": "金のニンジン",
+"reading": "きんのにんじん"
+},
+"item.minecraft.golden_chestplate": {
+"name": "金のチェストプレート",
+"reading": "きんのちぇすとぷれーと"
+},
+"item.minecraft.golden_helmet": {
+"name": "金のヘルメット",
+"reading": "きんのへるめっと"
+},
+"item.minecraft.golden_hoe": {
+"name": "金のクワ",
+"reading": "きんのくわ"
+},
+"item.minecraft.golden_horse_armor": {
+"name": "金の馬鎧",
+"reading": "きんのうまよろい"
+},
+"item.minecraft.golden_leggings": {
+"name": "金のレギンス",
+"reading": "きんのれぎんす"
+},
+"item.minecraft.golden_nautilus_armor": {
+"name": "金のオウムガイの鎧",
+"reading": "きんのおうむがいのよろい"
+},
+"item.minecraft.golden_pickaxe": {
+"name": "金のツルハシ",
+"reading": "きんのつるはし"
+},
+"item.minecraft.golden_shovel": {
+"name": "金のシャベル",
+"reading": "きんのしゃべる"
+},
+"item.minecraft.golden_spear": {
+"name": "金の槍",
+"reading": "きんのやり"
+},
+"item.minecraft.golden_sword": {
+"name": "金の剣",
+"reading": "きんのけん"
+},
+"item.minecraft.gray_bundle": {
+"name": "灰色のバンドル",
+"reading": "はいいろのばんどる"
+},
+"item.minecraft.gray_cushion": {
+"name": "灰色のクッション",
+"reading": "はいいろのくっしょん"
+},
+"item.minecraft.gray_dye": {
+"name": "灰色の染料",
+"reading": "はいいろのせんりょう"
+},
+"item.minecraft.gray_harness": {
+"name": "灰色のハーネス",
+"reading": "はいいろのはーねす"
+},
+"item.minecraft.green_bundle": {
+"name": "緑色のバンドル",
+"reading": "みどりいろのばんどる"
+},
+"item.minecraft.green_cushion": {
+"name": "緑色のクッション",
+"reading": "みどりいろのくっしょん"
+},
+"item.minecraft.green_dye": {
+"name": "緑色の染料",
+"reading": "みどりいろのせんりょう"
+},
+"item.minecraft.green_harness": {
+"name": "緑色のハーネス",
+"reading": "みどりいろのはーねす"
+},
+"item.minecraft.guardian_spawn_egg": {
+"name": "ガーディアンのスポーンエッグ",
+"reading": "がーでぃあんのすぽーんえっぐ"
+},
+"item.minecraft.gunpowder": {
+"name": "火薬",
+"reading": "かやく"
+},
+"item.minecraft.guster_banner_pattern": {
+"name": "旗の模様",
+"reading": "はたのもよう"
+},
+"item.minecraft.guster_pottery_sherd": {
+"name": "風巻く者の壺の欠片",
+"reading": "かぜまくもののつぼのかけら"
+},
+"item.minecraft.happy_ghast_spawn_egg": {
+"name": "ハッピーガストのスポーンエッグ",
+"reading": "はっぴーがすとのすぽーんえっぐ"
+},
+"item.minecraft.harness": {
+"name": "ハーネス",
+"reading": "はーねす"
+},
+"item.minecraft.heart_of_the_sea": {
+"name": "海洋の心",
+"reading": "かいようのこころ"
+},
+"item.minecraft.heart_pottery_shard": {
+"name": "心の壺の欠片",
+"reading": "こころのつぼのかけら"
+},
+"item.minecraft.heart_pottery_sherd": {
+"name": "心の壺の欠片",
+"reading": "こころのつぼのかけら"
+},
+"item.minecraft.heartbreak_pottery_shard": {
+"name": "傷心の壺の欠片",
+"reading": "しょうしんのつぼのかけら"
+},
+"item.minecraft.heartbreak_pottery_sherd": {
+"name": "傷心の壺の欠片",
+"reading": "しょうしんのつぼのかけら"
+},
+"item.minecraft.hoglin_spawn_egg": {
+"name": "ホグリンのスポーンエッグ",
+"reading": "ほぐりんのすぽーんえっぐ"
+},
+"item.minecraft.honey_bottle": {
+"name": "ハチミツ入りの瓶",
+"reading": "はちみついりのびん"
+},
+"item.minecraft.honeycomb": {
+"name": "ハニカム",
+"reading": "はにかむ"
+},
+"item.minecraft.hopper_minecart": {
+"name": "ホッパー付きのトロッコ",
+"reading": "ほっぱーつきのとろっこ"
+},
+"item.minecraft.horse_spawn_egg": {
+"name": "ウマのスポーンエッグ",
+"reading": "うまのすぽーんえっぐ"
+},
+"item.minecraft.host_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.howl_pottery_shard": {
+"name": "遠吠えの壺の欠片",
+"reading": "とおぼえのつぼのかけら"
+},
+"item.minecraft.howl_pottery_sherd": {
+"name": "遠吠えの壺の欠片",
+"reading": "とおぼえのつぼのかけら"
+},
+"item.minecraft.husk_spawn_egg": {
+"name": "ハスクのスポーンエッグ",
+"reading": "はすくのすぽーんえっぐ"
+},
+"item.minecraft.ice_ball": {
+"name": "氷玉",
+"reading": "こおりだま"
+},
+"item.minecraft.ink_sac": {
+"name": "イカスミ",
+"reading": "いかすみ"
+},
+"item.minecraft.iron_axe": {
+"name": "鉄の斧",
+"reading": "てつのおの"
+},
+"item.minecraft.iron_boots": {
+"name": "鉄のブーツ",
+"reading": "てつのぶーつ"
+},
+"item.minecraft.iron_chestplate": {
+"name": "鉄のチェストプレート",
+"reading": "てつのちぇすとぷれーと"
+},
+"item.minecraft.iron_golem_spawn_egg": {
+"name": "アイアンゴーレムのスポーンエッグ",
+"reading": "あいあんごーれむのすぽーんえっぐ"
+},
+"item.minecraft.iron_helmet": {
+"name": "鉄のヘルメット",
+"reading": "てつのへるめっと"
+},
+"item.minecraft.iron_hoe": {
+"name": "鉄のクワ",
+"reading": "てつのくわ"
+},
+"item.minecraft.iron_horse_armor": {
+"name": "鉄の馬鎧",
+"reading": "てつのうまよろい"
+},
+"item.minecraft.iron_ingot": {
+"name": "鉄インゴット",
+"reading": "てついんごっと"
+},
+"item.minecraft.iron_leggings": {
+"name": "鉄のレギンス",
+"reading": "てつのれぎんす"
+},
+"item.minecraft.iron_nautilus_armor": {
+"name": "鉄のオウムガイの鎧",
+"reading": "てつのおうむがいのよろい"
+},
+"item.minecraft.iron_nugget": {
+"name": "鉄塊",
+"reading": "てっかい"
+},
+"item.minecraft.iron_pickaxe": {
+"name": "鉄のツルハシ",
+"reading": "てつのつるはし"
+},
+"item.minecraft.iron_shovel": {
+"name": "鉄のシャベル",
+"reading": "てつのしゃべる"
+},
+"item.minecraft.iron_spear": {
+"name": "鉄の槍",
+"reading": "てつのやり"
+},
+"item.minecraft.iron_sword": {
+"name": "鉄の剣",
+"reading": "てつのけん"
+},
+"item.minecraft.item_frame": {
+"name": "額縁",
+"reading": "がくぶち"
+},
+"item.minecraft.jungle_boat": {
+"name": "ジャングルのボート",
+"reading": "じゃんぐるのぼーと"
+},
+"item.minecraft.jungle_chest_boat": {
+"name": "チェスト付きのジャングルのボート",
+"reading": "ちぇすとつきのじゃんぐるのぼーと"
+},
+"item.minecraft.jungle_explorer_map": {
+"name": "ジャングル探検家の地図",
+"reading": "じゃんぐるたんけんかのちず"
+},
+"item.minecraft.jungle_pyramid_map": {
+"name": "ジャングルの寺院の地図",
+"reading": "じゃんぐるのじいんのちず"
+},
+"item.minecraft.knowledge_book": {
+"name": "知恵の本",
+"reading": "ちえのほん"
+},
+"item.minecraft.lapis_lazuli": {
+"name": "ラピスラズリ",
+"reading": "らぴすらずり"
+},
+"item.minecraft.lava_bucket": {
+"name": "溶岩入りバケツ",
+"reading": "ようがんいりばけつ"
+},
+"item.minecraft.lead": {
+"name": "リード",
+"reading": "りーど"
+},
+"item.minecraft.leather": {
+"name": "革",
+"reading": "かわ"
+},
+"item.minecraft.leather_boots": {
+"name": "革のブーツ",
+"reading": "かわのぶーつ"
+},
+"item.minecraft.leather_chestplate": {
+"name": "革の上着",
+"reading": "かわのうわぎ"
+},
+"item.minecraft.leather_helmet": {
+"name": "革の帽子",
+"reading": "かわのぼうし"
+},
+"item.minecraft.leather_horse_armor": {
+"name": "革の馬鎧",
+"reading": "かわのうまよろい"
+},
+"item.minecraft.leather_leggings": {
+"name": "革のズボン",
+"reading": "かわのずぼん"
+},
+"item.minecraft.light_blue_bundle": {
+"name": "空色のバンドル",
+"reading": "そらいろのばんどる"
+},
+"item.minecraft.light_blue_cushion": {
+"name": "空色のクッション",
+"reading": "そらいろのくっしょん"
+},
+"item.minecraft.light_blue_dye": {
+"name": "空色の染料",
+"reading": "そらいろのせんりょう"
+},
+"item.minecraft.light_blue_harness": {
+"name": "空色のハーネス",
+"reading": "そらいろのはーねす"
+},
+"item.minecraft.light_gray_bundle": {
+"name": "薄灰色のバンドル",
+"reading": "うすはいいろのばんどる"
+},
+"item.minecraft.light_gray_cushion": {
+"name": "薄灰色のクッション",
+"reading": "うすはいいろのくっしょん"
+},
+"item.minecraft.light_gray_dye": {
+"name": "薄灰色の染料",
+"reading": "うすはいいろのせんりょう"
+},
+"item.minecraft.light_gray_harness": {
+"name": "薄灰色のハーネス",
+"reading": "うすはいいろのはーねす"
+},
+"item.minecraft.lime_bundle": {
+"name": "黄緑色のバンドル",
+"reading": "きみどりいろのばんどる"
+},
+"item.minecraft.lime_cushion": {
+"name": "黄緑色のクッション",
+"reading": "きみどりいろのくっしょん"
+},
+"item.minecraft.lime_dye": {
+"name": "黄緑色の染料",
+"reading": "きみどりいろのせんりょう"
+},
+"item.minecraft.lime_harness": {
+"name": "黄緑色のハーネス",
+"reading": "きみどりいろのはーねす"
+},
+"item.minecraft.lingering_potion": {
+"name": "残留ポーション",
+"reading": "ざんりゅうぽーしょん"
+},
+"item.minecraft.llama_spawn_egg": {
+"name": "ラマのスポーンエッグ",
+"reading": "らまのすぽーんえっぐ"
+},
+"item.minecraft.lodestone_compass": {
+"name": "ロードストーンコンパス",
+"reading": "ろーどすとーんこんぱす"
+},
+"item.minecraft.mace": {
+"name": "メイス",
+"reading": "めいす"
+},
+"item.minecraft.magenta_bundle": {
+"name": "赤紫色のバンドル",
+"reading": "あかむらさきいろのばんどる"
+},
+"item.minecraft.magenta_cushion": {
+"name": "赤紫色のクッション",
+"reading": "あかむらさきいろのくっしょん"
+},
+"item.minecraft.magenta_dye": {
+"name": "赤紫色の染料",
+"reading": "あかむらさきいろのせんりょう"
+},
+"item.minecraft.magenta_harness": {
+"name": "赤紫色のハーネス",
+"reading": "あかむらさきいろのはーねす"
+},
+"item.minecraft.magma_cream": {
+"name": "マグマクリーム",
+"reading": "まぐまくりーむ"
+},
+"item.minecraft.magma_cube_spawn_egg": {
+"name": "マグマキューブのスポーンエッグ",
+"reading": "まぐまきゅーぶのすぽーんえっぐ"
+},
+"item.minecraft.mangrove_boat": {
+"name": "マングローブのボート",
+"reading": "まんぐろーぶのぼーと"
+},
+"item.minecraft.mangrove_chest_boat": {
+"name": "チェスト付きのマングローブのボート",
+"reading": "ちぇすとつきのまんぐろーぶのぼーと"
+},
+"item.minecraft.map": {
+"name": "白紙の地図",
+"reading": "はくしのちず"
+},
+"item.minecraft.melon_seeds": {
+"name": "スイカの種",
+"reading": "すいかのたね"
+},
+"item.minecraft.melon_slice": {
+"name": "スイカの薄切り",
+"reading": "すいかのうすぎり"
+},
+"item.minecraft.milk_bucket": {
+"name": "ミルク入りバケツ",
+"reading": "みるくいりばけつ"
+},
+"item.minecraft.minecart": {
+"name": "トロッコ",
+"reading": "とろっこ"
+},
+"item.minecraft.miner_pottery_shard": {
+"name": "鉱夫の壺の欠片",
+"reading": "こうふのつぼのかけら"
+},
+"item.minecraft.miner_pottery_sherd": {
+"name": "鉱夫の壺の欠片",
+"reading": "こうふのつぼのかけら"
+},
+"item.minecraft.mineshaft_map": {
+"name": "廃坑の地図",
+"reading": "はいこうのちず"
+},
+"item.minecraft.mojang_banner_pattern": {
+"name": "旗の模様",
+"reading": "はたのもよう"
+},
+"item.minecraft.mooshroom_spawn_egg": {
+"name": "ムーシュルームのスポーンエッグ",
+"reading": "むーしゅるーむのすぽーんえっぐ"
+},
+"item.minecraft.mourner_pottery_shard": {
+"name": "哀悼者の壺の欠片",
+"reading": "あいとうしゃのつぼのかけら"
+},
+"item.minecraft.mourner_pottery_sherd": {
+"name": "哀悼者の壺の欠片",
+"reading": "あいとうしゃのつぼのかけら"
+},
+"item.minecraft.mule_spawn_egg": {
+"name": "ラバのスポーンエッグ",
+"reading": "らばのすぽーんえっぐ"
+},
+"item.minecraft.mushroom_stew": {
+"name": "キノコシチュー",
+"reading": "きのこしちゅー"
+},
+"item.minecraft.music_disc_11": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_13": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_5": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_blocks": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_bounce": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_cat": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_chirp": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_creator": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_creator_music_box": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_far": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_flurry": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_lava_chicken": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_mall": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_mellohi": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_otherside": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_pigstep": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_precipice": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_relic": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_stal": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_strad": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_tears": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_wait": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.music_disc_ward": {
+"name": "レコード",
+"reading": "れこーど"
+},
+"item.minecraft.mutton": {
+"name": "生の羊肉",
+"reading": "なまのようにく"
+},
+"item.minecraft.name_tag": {
+"name": "名札",
+"reading": "なふだ"
+},
+"item.minecraft.nautilus_shell": {
+"name": "オウムガイの殻",
+"reading": "おうむがいのから"
+},
+"item.minecraft.nautilus_spawn_egg": {
+"name": "オウムガイのスポーンエッグ",
+"reading": "おうむがいのすぽーんえっぐ"
+},
+"item.minecraft.nether_brick": {
+"name": "ネザーレンガ",
+"reading": "ねざーれんが"
+},
+"item.minecraft.nether_star": {
+"name": "ネザースター",
+"reading": "ねざーすたー"
+},
+"item.minecraft.nether_wart": {
+"name": "ネザーウォート",
+"reading": "ねざーうぉーと"
+},
+"item.minecraft.netherite_axe": {
+"name": "ネザライトの斧",
+"reading": "ねざらいとのおの"
+},
+"item.minecraft.netherite_boots": {
+"name": "ネザライトのブーツ",
+"reading": "ねざらいとのぶーつ"
+},
+"item.minecraft.netherite_chestplate": {
+"name": "ネザライトのチェストプレート",
+"reading": "ねざらいとのちぇすとぷれーと"
+},
+"item.minecraft.netherite_helmet": {
+"name": "ネザライトのヘルメット",
+"reading": "ねざらいとのへるめっと"
+},
+"item.minecraft.netherite_hoe": {
+"name": "ネザライトのクワ",
+"reading": "ねざらいとのくわ"
+},
+"item.minecraft.netherite_horse_armor": {
+"name": "ネザライトの馬鎧",
+"reading": "ねざらいとのうまよろい"
+},
+"item.minecraft.netherite_ingot": {
+"name": "ネザライトインゴット",
+"reading": "ねざらいといんごっと"
+},
+"item.minecraft.netherite_leggings": {
+"name": "ネザライトのレギンス",
+"reading": "ねざらいとのれぎんす"
+},
+"item.minecraft.netherite_nautilus_armor": {
+"name": "ネザライトのオウムガイの鎧",
+"reading": "ねざらいとのおうむがいのよろい"
+},
+"item.minecraft.netherite_pickaxe": {
+"name": "ネザライトのツルハシ",
+"reading": "ねざらいとのつるはし"
+},
+"item.minecraft.netherite_scrap": {
+"name": "ネザライトの欠片",
+"reading": "ねざらいとのかけら"
+},
+"item.minecraft.netherite_shovel": {
+"name": "ネザライトのシャベル",
+"reading": "ねざらいとのしゃべる"
+},
+"item.minecraft.netherite_spear": {
+"name": "ネザライトの槍",
+"reading": "ねざらいとのやり"
+},
+"item.minecraft.netherite_sword": {
+"name": "ネザライトの剣",
+"reading": "ねざらいとのけん"
+},
+"item.minecraft.netherite_upgrade_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.oak_boat": {
+"name": "オークのボート",
+"reading": "おーくのぼーと"
+},
+"item.minecraft.oak_chest_boat": {
+"name": "チェスト付きのオークのボート",
+"reading": "ちぇすとつきのおーくのぼーと"
+},
+"item.minecraft.ocean_explorer_map": {
+"name": "海洋探検家の地図",
+"reading": "かいようたんけんかのちず"
+},
+"item.minecraft.ocean_monument_map": {
+"name": "海底神殿の地図",
+"reading": "かいていしんでんのちず"
+},
+"item.minecraft.ocelot_spawn_egg": {
+"name": "ヤマネコのスポーンエッグ",
+"reading": "やまねこのすぽーんえっぐ"
+},
+"item.minecraft.ominous_bottle": {
+"name": "不吉な瓶",
+"reading": "ふきつなびん"
+},
+"item.minecraft.ominous_trial_key": {
+"name": "不吉な試練の鍵",
+"reading": "ふきつなしれんのかぎ"
+},
+"item.minecraft.orange_bundle": {
+"name": "橙色のバンドル",
+"reading": "だいだいいろのばんどる"
+},
+"item.minecraft.orange_cushion": {
+"name": "橙色のクッション",
+"reading": "だいだいいろのくっしょん"
+},
+"item.minecraft.orange_dye": {
+"name": "橙色の染料",
+"reading": "だいだいいろのせんりょう"
+},
+"item.minecraft.orange_harness": {
+"name": "橙色のハーネス",
+"reading": "だいだいいろのはーねす"
+},
+"item.minecraft.painting": {
+"name": "絵画",
+"reading": "かいが"
+},
+"item.minecraft.pale_oak_boat": {
+"name": "ペールオークのボート",
+"reading": "ぺーるおーくのぼーと"
+},
+"item.minecraft.pale_oak_chest_boat": {
+"name": "チェスト付きのペールオークのボート",
+"reading": "ちぇすとつきのぺーるおーくのぼーと"
+},
+"item.minecraft.panda_spawn_egg": {
+"name": "パンダのスポーンエッグ",
+"reading": "ぱんだのすぽーんえっぐ"
+},
+"item.minecraft.paper": {
+"name": "紙",
+"reading": "かみ"
+},
+"item.minecraft.parched_spawn_egg": {
+"name": "パーチドのスポーンエッグ",
+"reading": "ぱーちどのすぽーんえっぐ"
+},
+"item.minecraft.parrot_spawn_egg": {
+"name": "オウムのスポーンエッグ",
+"reading": "おうむのすぽーんえっぐ"
+},
+"item.minecraft.phantom_membrane": {
+"name": "ファントムの皮膜",
+"reading": "ふぁんとむのひまく"
+},
+"item.minecraft.phantom_spawn_egg": {
+"name": "ファントムのスポーンエッグ",
+"reading": "ふぁんとむのすぽーんえっぐ"
+},
+"item.minecraft.pig_spawn_egg": {
+"name": "ブタのスポーンエッグ",
+"reading": "ぶたのすぽーんえっぐ"
+},
+"item.minecraft.piglin_banner_pattern": {
+"name": "旗の模様",
+"reading": "はたのもよう"
+},
+"item.minecraft.piglin_brute_spawn_egg": {
+"name": "ピグリンブルートのスポーンエッグ",
+"reading": "ぴぐりんぶるーとのすぽーんえっぐ"
+},
+"item.minecraft.piglin_spawn_egg": {
+"name": "ピグリンのスポーンエッグ",
+"reading": "ぴぐりんのすぽーんえっぐ"
+},
+"item.minecraft.pillager_spawn_egg": {
+"name": "ピリジャーのスポーンエッグ",
+"reading": "ぴりじゃーのすぽーんえっぐ"
+},
+"item.minecraft.pink_bundle": {
+"name": "桃色のバンドル",
+"reading": "ももいろのばんどる"
+},
+"item.minecraft.pink_cushion": {
+"name": "桃色のクッション",
+"reading": "ももいろのくっしょん"
+},
+"item.minecraft.pink_dye": {
+"name": "桃色の染料",
+"reading": "ももいろのせんりょう"
+},
+"item.minecraft.pink_harness": {
+"name": "桃色のハーネス",
+"reading": "ももいろのはーねす"
+},
+"item.minecraft.pitcher_plant": {
+"name": "ウツボカズラ",
+"reading": "うつぼかずら"
+},
+"item.minecraft.pitcher_pod": {
+"name": "ウツボカズラのさや",
+"reading": "うつぼかずらのさや"
+},
+"item.minecraft.plains_village_map": {
+"name": "平原の村の地図",
+"reading": "へいげんのむらのちず"
+},
+"item.minecraft.plenty_pottery_shard": {
+"name": "富の壺の欠片",
+"reading": "とみのつぼのかけら"
+},
+"item.minecraft.plenty_pottery_sherd": {
+"name": "富の壺の欠片",
+"reading": "とみのつぼのかけら"
+},
+"item.minecraft.poisonous_potato": {
+"name": "青くなったジャガイモ",
+"reading": "あおくなったじゃがいも"
+},
+"item.minecraft.polar_bear_spawn_egg": {
+"name": "シロクマのスポーンエッグ",
+"reading": "しろくまのすぽーんえっぐ"
+},
+"item.minecraft.poplar_boat": {
+"name": "ポプラのボート",
+"reading": "ぽぷらのぼーと"
+},
+"item.minecraft.poplar_chest_boat": {
+"name": "チェスト付きのポプラのボート",
+"reading": "ちぇすとつきのぽぷらのぼーと"
+},
+"item.minecraft.popped_chorus_fruit": {
+"name": "焼いたコーラスフルーツ",
+"reading": "やいたこーらすふるーつ"
+},
+"item.minecraft.porkchop": {
+"name": "生の豚肉",
+"reading": "なまのぶたにく"
+},
+"item.minecraft.potato": {
+"name": "ジャガイモ",
+"reading": "じゃがいも"
+},
+"item.minecraft.potion": {
+"name": "ポーション",
+"reading": "ぽーしょん"
+},
+"item.minecraft.pottery_shard_archer": {
+"name": "射手の壺の欠片",
+"reading": "いてのつぼのかけら"
+},
+"item.minecraft.pottery_shard_arms_up": {
+"name": "両腕を上げた人の壺の欠片",
+"reading": "りょううでをあげたひとのつぼのかけら"
+},
+"item.minecraft.pottery_shard_prize": {
+"name": "宝物の壺の欠片",
+"reading": "たからもののつぼのかけら"
+},
+"item.minecraft.pottery_shard_skull": {
+"name": "頭蓋骨の壺の欠片",
+"reading": "ずがいこつのつぼのかけら"
+},
+"item.minecraft.powder_snow_bucket": {
+"name": "粉雪入りバケツ",
+"reading": "こなゆきいりばけつ"
+},
+"item.minecraft.prismarine_crystals": {
+"name": "プリズマリンクリスタル",
+"reading": "ぷりずまりんくりすたる"
+},
+"item.minecraft.prismarine_shard": {
+"name": "プリズマリンの欠片",
+"reading": "ぷりずまりんのかけら"
+},
+"item.minecraft.prize_pottery_shard": {
+"name": "宝物の壺の欠片",
+"reading": "たからもののつぼのかけら"
+},
+"item.minecraft.prize_pottery_sherd": {
+"name": "宝物の壺の欠片",
+"reading": "たからもののつぼのかけら"
+},
+"item.minecraft.pufferfish": {
+"name": "フグ",
+"reading": "ふぐ"
+},
+"item.minecraft.pufferfish_bucket": {
+"name": "フグ入りバケツ",
+"reading": "ふぐいりばけつ"
+},
+"item.minecraft.pufferfish_spawn_egg": {
+"name": "フグのスポーンエッグ",
+"reading": "ふぐのすぽーんえっぐ"
+},
+"item.minecraft.pumpkin_pie": {
+"name": "パンプキンパイ",
+"reading": "ぱんぷきんぱい"
+},
+"item.minecraft.pumpkin_seeds": {
+"name": "カボチャの種",
+"reading": "かぼちゃのたね"
+},
+"item.minecraft.purple_bundle": {
+"name": "紫色のバンドル",
+"reading": "むらさきいろのばんどる"
+},
+"item.minecraft.purple_cushion": {
+"name": "紫色のクッション",
+"reading": "むらさきいろのくっしょん"
+},
+"item.minecraft.purple_dye": {
+"name": "紫色の染料",
+"reading": "むらさきいろのせんりょう"
+},
+"item.minecraft.purple_harness": {
+"name": "紫色のハーネス",
+"reading": "むらさきいろのはーねす"
+},
+"item.minecraft.quartz": {
+"name": "ネザークォーツ",
+"reading": "ねざーくぉーつ"
+},
+"item.minecraft.rabbit": {
+"name": "生の兎肉",
+"reading": "なまのうさぎにく"
+},
+"item.minecraft.rabbit_foot": {
+"name": "ウサギの足",
+"reading": "うさぎのあし"
+},
+"item.minecraft.rabbit_hide": {
+"name": "ウサギの皮",
+"reading": "うさぎのかわ"
+},
+"item.minecraft.rabbit_spawn_egg": {
+"name": "ウサギのスポーンエッグ",
+"reading": "うさぎのすぽーんえっぐ"
+},
+"item.minecraft.rabbit_stew": {
+"name": "ウサギシチュー",
+"reading": "うさぎしちゅー"
+},
+"item.minecraft.raiser_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.ravager_spawn_egg": {
+"name": "ラヴェジャーのスポーンエッグ",
+"reading": "らゔぇじゃーのすぽーんえっぐ"
+},
+"item.minecraft.raw_copper": {
+"name": "銅の原石",
+"reading": "どうのげんせき"
+},
+"item.minecraft.raw_gold": {
+"name": "金の原石",
+"reading": "きんのげんせき"
+},
+"item.minecraft.raw_iron": {
+"name": "鉄の原石",
+"reading": "てつのげんせき"
+},
+"item.minecraft.recovery_compass": {
+"name": "リカバリーコンパス",
+"reading": "りかばりーこんぱす"
+},
+"item.minecraft.red_bundle": {
+"name": "赤色のバンドル",
+"reading": "あかいろのばんどる"
+},
+"item.minecraft.red_cushion": {
+"name": "赤色のクッション",
+"reading": "あかいろのくっしょん"
+},
+"item.minecraft.red_dye": {
+"name": "赤色の染料",
+"reading": "あかいろのせんりょう"
+},
+"item.minecraft.red_harness": {
+"name": "赤色のハーネス",
+"reading": "あかいろのはーねす"
+},
+"item.minecraft.redstone": {
+"name": "レッドストーンダスト",
+"reading": "れっどすとーんだすと"
+},
+"item.minecraft.resin_brick": {
+"name": "樹脂レンガ",
+"reading": "じゅしれんが"
+},
+"item.minecraft.resin_clump": {
+"name": "樹脂の塊",
+"reading": "じゅしのかたまり"
+},
+"item.minecraft.rib_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.rotten_flesh": {
+"name": "腐った肉",
+"reading": "くさったにく"
+},
+"item.minecraft.saddle": {
+"name": "鞍",
+"reading": "くら"
+},
+"item.minecraft.salmon": {
+"name": "生鮭",
+"reading": "なまざけ"
+},
+"item.minecraft.salmon_bucket": {
+"name": "サケ入りバケツ",
+"reading": "さけいりばけつ"
+},
+"item.minecraft.salmon_spawn_egg": {
+"name": "サケのスポーンエッグ",
+"reading": "さけのすぽーんえっぐ"
+},
+"item.minecraft.savanna_village_map": {
+"name": "サバンナの村の地図",
+"reading": "さばんなのむらのちず"
+},
+"item.minecraft.scrape_pottery_sherd": {
+"name": "斧の壺の欠片",
+"reading": "おののつぼのかけら"
+},
+"item.minecraft.scute": {
+"name": "カメのウロコ",
+"reading": "かめのうろこ"
+},
+"item.minecraft.sentry_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.shaper_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.sheaf_pottery_shard": {
+"name": "麦束の壺の欠片",
+"reading": "むぎたばのつぼのかけら"
+},
+"item.minecraft.sheaf_pottery_sherd": {
+"name": "麦束の壺の欠片",
+"reading": "むぎたばのつぼのかけら"
+},
+"item.minecraft.shears": {
+"name": "ハサミ",
+"reading": "はさみ"
+},
+"item.minecraft.sheep_spawn_egg": {
+"name": "ヒツジのスポーンエッグ",
+"reading": "ひつじのすぽーんえっぐ"
+},
+"item.minecraft.shelter_pottery_shard": {
+"name": "木陰の壺の欠片",
+"reading": "こかげのつぼのかけら"
+},
+"item.minecraft.shelter_pottery_sherd": {
+"name": "木陰の壺の欠片",
+"reading": "こかげのつぼのかけら"
+},
+"item.minecraft.shield": {
+"name": "盾",
+"reading": "たて"
+},
+"item.minecraft.shulker_shell": {
+"name": "シュルカーの殻",
+"reading": "しゅるかーのから"
+},
+"item.minecraft.shulker_spawn_egg": {
+"name": "シュルカーのスポーンエッグ",
+"reading": "しゅるかーのすぽーんえっぐ"
+},
+"item.minecraft.sign": {
+"name": "看板",
+"reading": "かんばん"
+},
+"item.minecraft.silence_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.silverfish_spawn_egg": {
+"name": "シルバーフィッシュのスポーンエッグ",
+"reading": "しるばーふぃっしゅのすぽーんえっぐ"
+},
+"item.minecraft.skeleton_horse_spawn_egg": {
+"name": "スケルトンホースのスポーンエッグ",
+"reading": "すけるとんほーすのすぽーんえっぐ"
+},
+"item.minecraft.skeleton_spawn_egg": {
+"name": "スケルトンのスポーンエッグ",
+"reading": "すけるとんのすぽーんえっぐ"
+},
+"item.minecraft.skull_banner_pattern": {
+"name": "旗の模様",
+"reading": "はたのもよう"
+},
+"item.minecraft.skull_pottery_shard": {
+"name": "頭蓋骨の壺の欠片",
+"reading": "ずがいこつのつぼのかけら"
+},
+"item.minecraft.skull_pottery_sherd": {
+"name": "頭蓋骨の壺の欠片",
+"reading": "ずがいこつのつぼのかけら"
+},
+"item.minecraft.slime_ball": {
+"name": "スライムボール",
+"reading": "すらいむぼーる"
+},
+"item.minecraft.slime_spawn_egg": {
+"name": "スライムのスポーンエッグ",
+"reading": "すらいむのすぽーんえっぐ"
+},
+"item.minecraft.smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.sniffer_spawn_egg": {
+"name": "スニッファーのスポーンエッグ",
+"reading": "すにっふぁーのすぽーんえっぐ"
+},
+"item.minecraft.snort_pottery_shard": {
+"name": "鼻を鳴らす動物の壺の欠片",
+"reading": "はなをならすどうぶつのつぼのかけら"
+},
+"item.minecraft.snort_pottery_sherd": {
+"name": "鼻を鳴らす動物の壺の欠片",
+"reading": "はなをならすどうぶつのつぼのかけら"
+},
+"item.minecraft.snout_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.snow_golem_spawn_egg": {
+"name": "スノウゴーレムのスポーンエッグ",
+"reading": "すのうごーれむのすぽーんえっぐ"
+},
+"item.minecraft.snowball": {
+"name": "雪玉",
+"reading": "ゆきだま"
+},
+"item.minecraft.snowy_village_map": {
+"name": "雪原の村の地図",
+"reading": "せつげんのむらのちず"
+},
+"item.minecraft.spectral_arrow": {
+"name": "光の矢",
+"reading": "ひかりのや"
+},
+"item.minecraft.spider_eye": {
+"name": "クモの目",
+"reading": "くものめ"
+},
+"item.minecraft.spider_spawn_egg": {
+"name": "クモのスポーンエッグ",
+"reading": "くものすぽーんえっぐ"
+},
+"item.minecraft.spire_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.splash_potion": {
+"name": "スプラッシュポーション",
+"reading": "すぷらっしゅぽーしょん"
+},
+"item.minecraft.spruce_boat": {
+"name": "トウヒのボート",
+"reading": "とうひのぼーと"
+},
+"item.minecraft.spruce_chest_boat": {
+"name": "チェスト付きのトウヒのボート",
+"reading": "ちぇすとつきのとうひのぼーと"
+},
+"item.minecraft.spyglass": {
+"name": "望遠鏡",
+"reading": "ぼうえんきょう"
+},
+"item.minecraft.squid_spawn_egg": {
+"name": "イカのスポーンエッグ",
+"reading": "いかのすぽーんえっぐ"
+},
+"item.minecraft.stick": {
+"name": "棒",
+"reading": "ぼう"
+},
+"item.minecraft.stone_axe": {
+"name": "石の斧",
+"reading": "いしのおの"
+},
+"item.minecraft.stone_hoe": {
+"name": "石のクワ",
+"reading": "いしのくわ"
+},
+"item.minecraft.stone_pickaxe": {
+"name": "石のツルハシ",
+"reading": "いしのつるはし"
+},
+"item.minecraft.stone_shovel": {
+"name": "石のシャベル",
+"reading": "いしのしゃべる"
+},
+"item.minecraft.stone_spear": {
+"name": "石の槍",
+"reading": "いしのやり"
+},
+"item.minecraft.stone_sword": {
+"name": "石の剣",
+"reading": "いしのけん"
+},
+"item.minecraft.straw_bed": {
+"name": "藁のベッド",
+"reading": "わらのべっど"
+},
+"item.minecraft.stray_spawn_egg": {
+"name": "ストレイのスポーンエッグ",
+"reading": "すとれいのすぽーんえっぐ"
+},
+"item.minecraft.strider_spawn_egg": {
+"name": "ストライダーのスポーンエッグ",
+"reading": "すとらいだーのすぽーんえっぐ"
+},
+"item.minecraft.string": {
+"name": "糸",
+"reading": "いと"
+},
+"item.minecraft.sugar": {
+"name": "砂糖",
+"reading": "すなとう"
+},
+"item.minecraft.sulfur_cube_bucket": {
+"name": "サルファーキューブ入りバケツ",
+"reading": "さるふぁーきゅーぶいりばけつ"
+},
+"item.minecraft.sulfur_cube_spawn_egg": {
+"name": "サルファーキューブのスポーンエッグ",
+"reading": "さるふぁーきゅーぶのすぽーんえっぐ"
+},
+"item.minecraft.suspicious_stew": {
+"name": "怪しげなシチュー",
+"reading": "あやしげなしちゅー"
+},
+"item.minecraft.swamp_explorer_map": {
+"name": "沼地探検家の地図",
+"reading": "ぬまちたんけんかのちず"
+},
+"item.minecraft.swamp_hut_map": {
+"name": "沼地の小屋の地図",
+"reading": "ぬまちのこやのちず"
+},
+"item.minecraft.sweet_berries": {
+"name": "スイートベリー",
+"reading": "すいーとべりー"
+},
+"item.minecraft.tadpole_bucket": {
+"name": "オタマジャクシ入りバケツ",
+"reading": "おたまじゃくしいりばけつ"
+},
+"item.minecraft.tadpole_spawn_egg": {
+"name": "オタマジャクシのスポーンエッグ",
+"reading": "おたまじゃくしのすぽーんえっぐ"
+},
+"item.minecraft.taiga_village_map": {
+"name": "タイガの村の地図",
+"reading": "たいがのむらのちず"
+},
+"item.minecraft.tide_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.tipped_arrow": {
+"name": "効能付きの矢",
+"reading": "こうのうつきのや"
+},
+"item.minecraft.tnt_minecart": {
+"name": "TNT付きのトロッコ",
+"reading": "てぃーえぬてぃーつきのとろっこ"
+},
+"item.minecraft.torchflower_seeds": {
+"name": "トーチフラワーの種",
+"reading": "とーちふらわーのたね"
+},
+"item.minecraft.totem_of_undying": {
+"name": "不死のトーテム",
+"reading": "ふしのとーてむ"
+},
+"item.minecraft.trader_llama_spawn_egg": {
+"name": "商人のラマのスポーンエッグ",
+"reading": "しょうにんのらまのすぽーんえっぐ"
+},
+"item.minecraft.trial_explorer_map": {
+"name": "試練の間の地図",
+"reading": "しれんのまのちず"
+},
+"item.minecraft.trial_key": {
+"name": "試練の鍵",
+"reading": "しれんのかぎ"
+},
+"item.minecraft.trident": {
+"name": "トライデント",
+"reading": "とらいでんと"
+},
+"item.minecraft.tropical_fish": {
+"name": "熱帯魚",
+"reading": "ねったいぎょ"
+},
+"item.minecraft.tropical_fish_bucket": {
+"name": "熱帯魚入りバケツ",
+"reading": "ねったいぎょいりばけつ"
+},
+"item.minecraft.tropical_fish_spawn_egg": {
+"name": "熱帯魚のスポーンエッグ",
+"reading": "ねったいぎょのすぽーんえっぐ"
+},
+"item.minecraft.turtle_helmet": {
+"name": "カメの甲羅",
+"reading": "かめのこうら"
+},
+"item.minecraft.turtle_scute": {
+"name": "カメのウロコ",
+"reading": "かめのうろこ"
+},
+"item.minecraft.turtle_spawn_egg": {
+"name": "カメのスポーンエッグ",
+"reading": "かめのすぽーんえっぐ"
+},
+"item.minecraft.vex_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.vex_spawn_egg": {
+"name": "ヴェックスのスポーンエッグ",
+"reading": "ゔぇっくすのすぽーんえっぐ"
+},
+"item.minecraft.villager_spawn_egg": {
+"name": "村人のスポーンエッグ",
+"reading": "むらびとのすぽーんえっぐ"
+},
+"item.minecraft.vindicator_spawn_egg": {
+"name": "ヴィンディケーターのスポーンエッグ",
+"reading": "ゔぃんでぃけーたーのすぽーんえっぐ"
+},
+"item.minecraft.wandering_trader_spawn_egg": {
+"name": "行商人のスポーンエッグ",
+"reading": "ぎょうしょうにんのすぽーんえっぐ"
+},
+"item.minecraft.ward_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.warden_spawn_egg": {
+"name": "ウォーデンのスポーンエッグ",
+"reading": "うぉーでんのすぽーんえっぐ"
+},
+"item.minecraft.warm_ocean_ruins_map": {
+"name": "暖かい海底遺跡の地図",
+"reading": "あたたかいかいていいせきのちず"
+},
+"item.minecraft.warped_fungus_on_a_stick": {
+"name": "歪んだキノコ付きの棒",
+"reading": "ゆがんだきのこつきのぼう"
+},
+"item.minecraft.water_bucket": {
+"name": "水入りバケツ",
+"reading": "みずいりばけつ"
+},
+"item.minecraft.wayfinder_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.wheat": {
+"name": "小麦",
+"reading": "こむぎ"
+},
+"item.minecraft.wheat_seeds": {
+"name": "小麦の種",
+"reading": "こむぎのたね"
+},
+"item.minecraft.white_bundle": {
+"name": "白色のバンドル",
+"reading": "しろいろのばんどる"
+},
+"item.minecraft.white_cushion": {
+"name": "白色のクッション",
+"reading": "しろいろのくっしょん"
+},
+"item.minecraft.white_dye": {
+"name": "白色の染料",
+"reading": "しろいろのせんりょう"
+},
+"item.minecraft.white_harness": {
+"name": "白色のハーネス",
+"reading": "しろいろのはーねす"
+},
+"item.minecraft.wild_armor_trim_smithing_template": {
+"name": "鍛冶型",
+"reading": "かじがた"
+},
+"item.minecraft.wind_charge": {
+"name": "ウィンドチャージ",
+"reading": "うぃんどちゃーじ"
+},
+"item.minecraft.witch_spawn_egg": {
+"name": "ウィッチのスポーンエッグ",
+"reading": "うぃっちのすぽーんえっぐ"
+},
+"item.minecraft.wither_skeleton_spawn_egg": {
+"name": "ウィザースケルトンのスポーンエッグ",
+"reading": "うぃざーすけるとんのすぽーんえっぐ"
+},
+"item.minecraft.wither_spawn_egg": {
+"name": "ウィザーのスポーンエッグ",
+"reading": "うぃざーのすぽーんえっぐ"
+},
+"item.minecraft.wolf_armor": {
+"name": "オオカミの鎧",
+"reading": "おおかみのよろい"
+},
+"item.minecraft.wolf_spawn_egg": {
+"name": "オオカミのスポーンエッグ",
+"reading": "おおかみのすぽーんえっぐ"
+},
+"item.minecraft.wooden_axe": {
+"name": "木の斧",
+"reading": "きのおの"
+},
+"item.minecraft.wooden_hoe": {
+"name": "木のクワ",
+"reading": "きのくわ"
+},
+"item.minecraft.wooden_pickaxe": {
+"name": "木のツルハシ",
+"reading": "きのつるはし"
+},
+"item.minecraft.wooden_shovel": {
+"name": "木のシャベル",
+"reading": "きのしゃべる"
+},
+"item.minecraft.wooden_spear": {
+"name": "木の槍",
+"reading": "きのやり"
+},
+"item.minecraft.wooden_sword": {
+"name": "木の剣",
+"reading": "きのけん"
+},
+"item.minecraft.woodland_explorer_map": {
+"name": "森林探検家の地図",
+"reading": "しんりんたんけんかのちず"
+},
+"item.minecraft.woodland_mansion_map": {
+"name": "森の洋館の地図",
+"reading": "もりのようかんのちず"
+},
+"item.minecraft.writable_book": {
+"name": "本と羽根ペン",
+"reading": "ほんとはねぺん"
+},
+"item.minecraft.written_book": {
+"name": "記入済みの本",
+"reading": "きにゅうずみのほん"
+},
+"item.minecraft.yellow_bundle": {
+"name": "黄色のバンドル",
+"reading": "きいろのばんどる"
+},
+"item.minecraft.yellow_cushion": {
+"name": "黄色のクッション",
+"reading": "きいろのくっしょん"
+},
+"item.minecraft.yellow_dye": {
+"name": "黄色の染料",
+"reading": "きいろのせんりょう"
+},
+"item.minecraft.yellow_harness": {
+"name": "黄色のハーネス",
+"reading": "きいろのはーねす"
+},
+"item.minecraft.zoglin_spawn_egg": {
+"name": "ゾグリンのスポーンエッグ",
+"reading": "ぞぐりんのすぽーんえっぐ"
+},
+"item.minecraft.zombie_horse_spawn_egg": {
+"name": "ゾンビホースのスポーンエッグ",
+"reading": "ぞんびほーすのすぽーんえっぐ"
+},
+"item.minecraft.zombie_nautilus_spawn_egg": {
+"name": "ゾンビオウムガイのスポーンエッグ",
+"reading": "ぞんびおうむがいのすぽーんえっぐ"
+},
+"item.minecraft.zombie_spawn_egg": {
+"name": "ゾンビのスポーンエッグ",
+"reading": "ぞんびのすぽーんえっぐ"
+},
+"item.minecraft.zombie_villager_spawn_egg": {
+"name": "村人ゾンビのスポーンエッグ",
+"reading": "むらびとぞんびのすぽーんえっぐ"
+},
+"item.minecraft.zombified_piglin_spawn_egg": {
+"name": "ゾンビピグリンのスポーンエッグ",
+"reading": "ぞんびぴぐりんのすぽーんえっぐ"
+}
+}

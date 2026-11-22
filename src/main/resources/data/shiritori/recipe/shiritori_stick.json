@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "equipment",
+	"ingredients": [
+		"minecraft:stick",
+		"minecraft:paper"
+	],
+	"result": {
+		"id": "shiritori:shiritori_stick"
+	}
+}
