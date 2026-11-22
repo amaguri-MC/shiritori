@@ -113,7 +113,7 @@ public class ShiritoriMod implements ModInitializer {
 		if (player.getMainHandItem().getItem() != ModItems.SHIRITORI_STICK) return;
 		if (entity instanceof Player) return;
 		EntityType<?> type = entity.getType();
-		if (type == EntityType.ENDER_DRAGON) return; // ドラゴンは関門側が登録する
+		if (type == net.minecraft.world.entity.EntityTypes.ENDER_DRAGON) return; // ドラゴンは関門側が登録する
 		ShiritoriService.submitWord(player, type.getDescriptionId(), ShiritoriService.mobIcon(type));
 	}
 
